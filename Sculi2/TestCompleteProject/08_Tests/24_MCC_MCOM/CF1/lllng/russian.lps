@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Russian / Russisch
+%?language	rus
+
+%section: SCREEN
+/TSoilFlowAuger	(Производит-ть, шнек) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Производит-ть, шнек)
+/TSoilFlowCase	(Производит-ть, труба) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Производит-ть, труба)
+/TSoilFlow	(Производительность) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Производительность)
+/TSnumbOfPumps	(Количество насосов) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Количество насосов)
+/TSclampJawPress	(Давление зажимных цанг) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Давление зажимных цанг)
+/TSexcAutoTime	(Время перест-ки эксцентрика) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Время перест-ки эксцентрика)
+/TSramWeight	(Вес копра) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Вес копра)
+/TSblowsPerDepthStep	(Удары / шаг по глубине) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Удары / шаг по глубине)
+/TSnumbPuPuCylinder	(Кол-во выталк. и тянущ.цил-ров) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Кол-во выталк. и тянущ.цил-ров)
+/TSaugerLength	(Длина шнека) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Длина шнека)
+/TSconcVolPerImp	(Кол-во бетона/имп.) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Кол-во бетона/имп.)
+/TSscalConcPresSens	(Диап.датчика давл.бетона) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Диап.датчика давл.бетона)
+/TSscalConcPresDisp	(Масшт.,инд-ция давл.бет.) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Масшт.,инд-ция давл.бет.)
+/TSpileDiameter	(Диаметр сваи) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Диаметр сваи)
+/TSmaxPressAuger	(макс. давление для шнека) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (макс. давление для шнека)
+/TSmaxPressCase	(макс. давление для трубы) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (макс. давление для трубы)
+/TSmaxPressure	(макс. давление) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (макс. давление)
+/TSoilFlowAuger1	(Производит-ность,шнек 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Производит-ность,шнек 1)
+/TSoilFlowAuger2	(Производит-ность,шнек 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Производит-ность,шнек 2)
+/TSoilFlowAuger3	(Производит-ность,шнек 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Производит-ность,шнек 3)
+/TSnumbOfAugers	(Число шнеков) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Число шнеков)
+/TSoilFlowOscil	(Произв.насоса обсад.маш.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Произв.насоса обсад.маш.)
+/TSoilFlowGrabOpen	(производ.,грейфер откр.) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (производ.,грейфер откр.)
+/TSoilFlowGrabClose	(производ.,грейфер закр.) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (производ.,грейфер закр.)
+/TSmaxPressGrabOpen	(макс.давл.,грейфер откр.) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (макс.давл.,грейфер откр.)
+/TSmaxPressGrabClose	(макс.давл.,грейфер закр.) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (макс.давл.,грейфер закр.)
+/TSminOilFlow	(мин. Производительность) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (мин. Производительность)
+/TSoilFlowOscil2	(Произв.насоса обсад.маш.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Произв.насоса обсад.маш.2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

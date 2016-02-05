@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{9558F98B-0291-4D6D-B607-AA0D5B7A9DF5}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{66F32D5F-A5DB-420E-9CB4-3DB7CADE2692}">
+				<Data Description="Runs the &quot;Setup_Sculi_1_46&quot; tested application." TestedApp="Setup_Sculi_1_47">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="Count" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="IgnoreRunning" DefVarType="11" DefValueType="7" DefValueValue="False" VarType="11" ValueType="7" ValueValue="False" />
+						<Parameter Name="Timeout" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{6A1B4CEE-4FB8-46E2-BFBD-403C84342301}">
+				<Data Description="Delays the test execution for the specified time period.">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="ms" DefVarType="3" VarType="3" ValueType="1" ValueValue="5000" />
+						<Parameter Name="Str" DefVarType="8" DefValueType="6" DefValueValue="" VarType="8" ValueType="6" ValueValue="" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;setup_sculi_1.472*&quot;, 2)[&quot;UIAObject&quot;](&quot;Setup_SCULi&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Weiter &gt;" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;setup_sculi_1.472*&quot;, 2)[&quot;UIAObject&quot;](&quot;Setup_SCULi&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Ich akzeptiere die Vereinbarung" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;setup_sculi_1.472*&quot;, 2)[&quot;UIAObject&quot;](&quot;Setup_SCULi&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Weiter &gt;" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;setup_sculi_1.472*&quot;, 2)[&quot;UIAObject&quot;](&quot;Setup_SCULi&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Teleservice PME Installation" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;setup_sculi_1.472*&quot;, 2)[&quot;UIAObject&quot;](&quot;Setup_SCULi&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Weiter &gt;" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;setup_sculi_1.472*&quot;, 2)[&quot;UIAObject&quot;](&quot;Setup_SCULi&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Weiter &gt;" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{6A1B4CEE-4FB8-46E2-BFBD-403C84342301}">
+				<Data Description="Delays the test execution for the specified time period.">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="ms" DefVarType="3" VarType="3" ValueType="1" ValueValue="200000" />
+						<Parameter Name="Str" DefVarType="8" DefValueType="6" DefValueValue="" VarType="8" ValueType="6" ValueValue="" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{66F32D5F-A5DB-420E-9CB4-3DB7CADE2692}">
+				<Data Description="Runs the &quot;SCULi1&quot; tested application." TestedApp="SCULi1">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="Count" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="IgnoreRunning" DefVarType="11" DefValueType="7" DefValueValue="False" VarType="11" ValueType="7" ValueValue="False" />
+						<Parameter Name="Timeout" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{6A1B4CEE-4FB8-46E2-BFBD-403C84342301}">
+				<Data Description="Delays the test execution for the specified time period.">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="ms" DefVarType="3" VarType="3" ValueType="1" ValueValue="5000" />
+						<Parameter Name="Str" DefVarType="8" DefValueType="6" DefValueValue="" VarType="8" ValueType="6" ValueValue="" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Help" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{FC0DF733-E97F-46DD-8307-EA4DFF891298}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;UIAObject&quot;](&quot;Help&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Name" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="[&quot;VCLObject&quot;](&quot;TStandardMenuItem_13&quot;)" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="findChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;AboutForm&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Description" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="1.47*" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{CAAA7522-FB54-4521-BF2F-29D327FC9341}">
+				<Data Description="Terminates the process." Action="Terminate">
+					<ObjectSyntax LangId="{90813F19-086D-4670-83BC-DB51386DC224}" Code="Sys[&quot;Process&quot;](&quot;SCULi&quot;);" />
+				</Data>
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{A9C02B18-BD40-453D-978C-D2093344B2AA}" />
+	<Parameters Key="{1F34B807-14AD-4F88-87E6-8FBEDA560A1C}" />
+</Root>

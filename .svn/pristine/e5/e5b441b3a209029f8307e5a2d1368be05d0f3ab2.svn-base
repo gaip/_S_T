@@ -1,0 +1,3723 @@
+<?xml version="1.0"?>
+<Groups Liuip="PME1.ID::::::EMT01::::">
+	<Group>
+		<GroupLocale Lang="eng">
+			<Name>Protocol</Name>
+		</GroupLocale>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Automatic Offset</Name>
+			</GroupLocale>
+				<Item Identity="IRSensBoomCylB190"/>
+				<Item Identity="QRSumStickY419"/>
+				<Item Identity="QRSumBoomY420"/>
+				<Item Identity="QRStickRegY421"/>
+				<Item Identity="QRTravelStraightY415"/>
+				<Item Identity="QROptionTransferringY416"/>
+				<Item Identity="QRCut1Y417"/>
+				<Item Identity="QRCut2Y418"/>
+				<Item Identity="QREL1Y51"/>
+				<Item Identity="QREL2Y52"/>
+				<Item Identity="QRLRY50"/>
+				<Item Identity="QRStickByPassY450"/>
+				<Item Identity="CXOffSetZeroSensor"/>
+				<Item Identity="CXAutomaticOffSet"/>
+				<Item Identity="CXAutoOffsetLMSSensor"/>
+				<Item Identity="CDAutomaticOffSetNoEV"/>
+				<Item Identity="CDOffSetStepDuration"/>
+				<Item Identity="MXAutoOffSetCurrEVValid"/>
+				<Item Identity="MXAutoOffSetCurrEVErr"/>
+				<Item Identity="MRAutoOffSetDeltaMin"/>
+				<Item Identity="MRAutoOffSetDeltaMax"/>
+				<Item Identity="LROffSetDeltaPress"/>
+				<Item Identity="LXOffSetSetZeroSensor"/>
+				<Item Identity="LRLimitMoveStickAngleGradient"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Offset Parameters</Name>
+					</GroupLocale>
+					<Item Identity="CRValvesCtrlDeltaMinEL1"/>
+					<Item Identity="CRValvesCtrlDeltaMaxEL1"/>
+					<Item Identity="CRValvesCtrlDeltaMinEL2"/>
+					<Item Identity="CRValvesCtrlDeltaMaxEL2"/>
+					<Item Identity="CRValvesCtrlDeltaMinCut1"/>
+					<Item Identity="CRValvesCtrlDeltaMaxCut1"/>
+					<Item Identity="CRValvesCtrlDeltaMinCut2"/>
+					<Item Identity="CRValvesCtrlDeltaMaxCut2"/>
+					<Item Identity="CRValvesCtrlDeltaMinSumBoom"/>
+					<Item Identity="CRValvesCtrlDeltaMaxSumBoom"/>
+					<Item Identity="CRValvesCtrlDeltaMinSumStick"/>
+					<Item Identity="CRValvesCtrlDeltaMaxSumStick"/>
+					<Item Identity="CRValvesCtrlDeltaMinStickReg"/>
+					<Item Identity="CRValvesCtrlDeltaMaxStickReg"/>
+					<Item Identity="CRValvesCtrlDeltaMinStrTravel"/>
+					<Item Identity="CRValvesCtrlDeltaMaxStrTravel"/>
+					<Item Identity="CRValvesCtrlDeltaMinOptTransf"/>
+					<Item Identity="CRValvesCtrlDeltaMaxOptTransf"/>
+					<Item Identity="CRValvesCtrlDeltaMinStickByp"/>
+					<Item Identity="CRValvesCtrlDeltaMaxStickByp"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Functional Check</Name>
+			</GroupLocale>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor</Name>
+					</GroupLocale>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Sensor Boom</Name>
+						</GroupLocale>
+					<Item Identity="IRSensBoomUpB163"/>
+					<Item Identity="IRSensBoomDownB164"/>
+					<Item Identity="LRPosCtrlPresSensorBoomDown"/>
+					<Item Identity="LRPosCtrlPresSensorBoomUp"/>
+					<Item Identity="LRSensBoomDownB164Psi"/>
+					<Item Identity="LRSensBoomUpB163Psi"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Sensor Stick</Name>
+						</GroupLocale>
+					<Item Identity="IRSensStickOutB202"/>
+					<Item Identity="IRSensStickOutB161"/>
+					<Item Identity="IRSensStickInB162"/>
+					<Item Identity="LRPosCtrlPresSensorArmOutward"/>
+					<Item Identity="LRPosCtrlPresSensorArmInward"/>
+					<Item Identity="LRSensStickOutB161Psi"/>
+					<Item Identity="LRSensStickInB162Psi"/>
+					<Item Identity="LRPresSensStickOutB202"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Sensor Shovel</Name>
+						</GroupLocale>
+					<Item Identity="IRSensShovelOutB165"/>
+					<Item Identity="IRSensShovelInB166"/>
+					<Item Identity="LRPosCtrlPresSensorShovelOutward"/>
+					<Item Identity="LRPosCtrlPresSensorShovelInward"/>
+					<Item Identity="LRSensShovelOutB165Psi"/>
+					<Item Identity="LRSensShovelInB166Psi"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Sensor Translation</Name>
+						</GroupLocale>
+					<Item Identity="IRSensPdlLBackwardB170"/>
+					<Item Identity="IRSensPdlRForwardB171"/>
+					<Item Identity="IRSensPdlLForwardB169"/>
+					<Item Identity="IRSensPdlRBackwardB174"/>
+					<Item Identity="LRPosCtrlPresSensorPedalLeftBackward"/>
+					<Item Identity="LRPosCtrlPresSensorPedalLeftForward"/>
+					<Item Identity="LRPosCtrlPresSensorPedalRightForward"/>
+					<Item Identity="LRPosCtrlPresSensorPedalRightBackward"/>
+					<Item Identity="LRSensPdlLBackwardB170Psi"/>
+					<Item Identity="LRSensPdlLForwardB169Psi"/>
+					<Item Identity="LRSensPdlRForwardB171Psi"/>
+					<Item Identity="LRSensPdlRBackwardB174Psi"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Sensor Option</Name>
+						</GroupLocale>
+					<Item Identity="IRDblPdlLElecR"/>
+					<Item Identity="IRDblPdlLElecL"/>
+					<Item Identity="IRDblPdlRElecR"/>
+					<Item Identity="IRDblPdlRElecL"/>
+					<Item Identity="IRAHSLPdlLB172_2"/>
+					<Item Identity="IRAHSLPdlRB172_1"/>
+					<Item Identity="LRPosCtrlPedalAHSLeft"/>
+					<Item Identity="LRPosCtrlPedalAHSRight"/>
+					<Item Identity="LRSensAHSPdlB172Psi"/>
+					<Item Identity="LRSensAHSPdlRB173Psi"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Sensor Swing</Name>
+						</GroupLocale>
+					<Item Identity="IRSensSwingRB168"/>
+					<Item Identity="IRSensSwingLB167"/>
+					<Item Identity="LRPosCtrlPresSensorSwingLeft"/>
+					<Item Identity="LRPosCtrlPresSensorSwingRight"/>
+					<Item Identity="LRSensSwingLB167Psi"/>
+					<Item Identity="LRSensSwingRB168Psi"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Sensor Hp Pump</Name>
+						</GroupLocale>
+					<Item Identity="IRSensPumpB159"/>
+					<Item Identity="IRSensPumpB160"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Sensor HP Boom</Name>
+						</GroupLocale>
+					<Item Identity="IRSensBoomCylB190"/>
+					<Item Identity="LRPosCtrlBoomCylB190"/>
+					<Item Identity="LRSensBoomCylB190Psi"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Sensor HP Stick</Name>
+						</GroupLocale>
+					<Item Identity="IRSensStickCylB189"/>
+					<Item Identity="LRPosCtrlStickCylB189"/>
+					<Item Identity="LRSensStickCylB189Psi"/>
+				</Group>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Actor</Name>
+					</GroupLocale>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Y416</Name>
+						</GroupLocale>
+					<Item Identity="QROptionTransferringY416"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Y420</Name>
+						</GroupLocale>
+					<Item Identity="QRSumBoomY420"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Y419</Name>
+						</GroupLocale>
+					<Item Identity="QRSumStickY419"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+				</Group>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>LR</Name>
+			</GroupLocale>
+				<Item Identity="QRLRY50"/>
+				<Item Identity="CXCheckLR"/>
+				<Item Identity="CDCheckLRMode"/>
+				<Item Identity="LRPosCtrlHydrOilTemp"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>EV1/EV2</Name>
+			</GroupLocale>
+				<Item Identity="CXSetPumpY51AndY52"/>
+				<Item Identity="CRValvesCtrlDeltaMinEL1"/>
+				<Item Identity="CRValvesCtrlDeltaMaxEL1"/>
+				<Item Identity="CRValvesCtrlDeltaMinEL2"/>
+				<Item Identity="CRValvesCtrlDeltaMaxEL2"/>
+				<Item Identity="CDSetPumpY51AndY52Mode"/>
+				<Item Identity="LRPosCtrlHydrOilTemp"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Pump1</Name>
+			</GroupLocale>
+				<Item Identity="CXSetPump1"/>
+				<Item Identity="CDSetPump1Mode"/>
+				<Item Identity="CRSetPumpSetAdjustY50"/>
+				<Item Identity="CRSetPumpSetAdjustY51"/>
+				<Item Identity="LRPosCtrlHydrOilTemp"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Pump2</Name>
+			</GroupLocale>
+				<Item Identity="CXSetPump2"/>
+				<Item Identity="CDSetPump2Mode"/>
+				<Item Identity="CRSetPumpSetAdjustY50"/>
+				<Item Identity="CRSetPumpSetAdjustY52"/>
+				<Item Identity="LRPosCtrlHydrOilTemp"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Fan</Name>
+			</GroupLocale>
+				<Item Identity="QRFanY347"/>
+				<Item Identity="CXSetFan"/>
+				<Item Identity="CDSetFanSelectMode"/>
+				<Item Identity="CRCoolACFanNeedTier3B"/>
+				<Item Identity="CRCoolFanMaxSpeedCurrentTier3B"/>
+				<Item Identity="CRCoolFanMaxSpeedCurrentTropicTier3B"/>
+				<Item Identity="LRPosCtrlHydrOilTemp"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Reversible Fan</Name>
+					</GroupLocale>
+					<Item Identity="CRCoolFanReversibleCurrent"/>
+					<Item Identity="CRCoolFanReversibleCurrentTropic"/>
+					<Item Identity="CRCoolDurationCleaning"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Power Test</Name>
+			</GroupLocale>
+				<Item Identity="IREngActSpeed"/>
+				<Item Identity="CXSetPowerTest"/>
+				<Item Identity="LRPosCtrlHydrOilTemp"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Check Pumps</Name>
+			</GroupLocale>
+				<Item Identity="QREngSpeedSelect"/>
+				<Item Identity="QRSumStickY419"/>
+				<Item Identity="QRSumBoomY420"/>
+				<Item Identity="QRStickRegY421"/>
+				<Item Identity="QRTravelStraightY415"/>
+				<Item Identity="QROptionTransferringY416"/>
+				<Item Identity="QRCut1Y417"/>
+				<Item Identity="QRCut2Y418"/>
+				<Item Identity="QREL1Y51"/>
+				<Item Identity="QREL2Y52"/>
+				<Item Identity="QRLRY50"/>
+				<Item Identity="QRStickByPassY450"/>
+				<Item Identity="CXCheckPumpsActive"/>
+				<Item Identity="CDCheckPumpsMode"/>
+				<Item Identity="CRCheckPumpsY50"/>
+				<Item Identity="CRCheckPumpsY51"/>
+				<Item Identity="CRCheckPumpsY52"/>
+				<Item Identity="CRCheckPumpsEngSpeed"/>
+				<Item Identity="CREngSpeedMax"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>AHS11/Toolctrl</Name>
+			</GroupLocale>
+				<Item Identity="QREL2Y52"/>
+				<Item Identity="QRToolCtrlOutputY414_1"/>
+				<Item Identity="CXSetToolCtrl"/>
+				<Item Identity="CDSetToolCtrlMode"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 01</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.1"/>
+					<Item Identity="CXTcTool01OutCylProtActive"/>
+					<Item Identity="CXTcTool01OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool01ToolPriorManage"/>
+					<Item Identity="CRTcTool01FlowRate1"/>
+					<Item Identity="CRTcTool01FlowRate2"/>
+					<Item Identity="CRTcTool01Pressure1"/>
+					<Item Identity="CDTool01CodingKey"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 02</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.2"/>
+					<Item Identity="CXTcTool02OutCylProtActive"/>
+					<Item Identity="CXTcTool02OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool02ToolPriorManage"/>
+					<Item Identity="CRTcTool02FlowRate1"/>
+					<Item Identity="CRTcTool02FlowRate2"/>
+					<Item Identity="CRTcTool02Pressure1"/>
+					<Item Identity="CDTool02CodingKey"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 03</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.3"/>
+					<Item Identity="CXTcTool03OutCylProtActive"/>
+					<Item Identity="CXTcTool03OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool03ToolPriorManage"/>
+					<Item Identity="CRTcTool03FlowRate1"/>
+					<Item Identity="CRTcTool03FlowRate2"/>
+					<Item Identity="CRTcTool03Pressure1"/>
+					<Item Identity="CDTool03CodingKey"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 04</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.4"/>
+					<Item Identity="CXTcTool04OutCylProtActive"/>
+					<Item Identity="CXTcTool04OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool04ToolPriorManage"/>
+					<Item Identity="CRTcTool04FlowRate1"/>
+					<Item Identity="CRTcTool04FlowRate2"/>
+					<Item Identity="CRTcTool04Pressure1"/>
+					<Item Identity="CDTool04CodingKey"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 05</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.5"/>
+					<Item Identity="CXTcTool05OutCylProtActive"/>
+					<Item Identity="CXTcTool05OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool05ToolPriorManage"/>
+					<Item Identity="CRTcTool05FlowRate1"/>
+					<Item Identity="CRTcTool05FlowRate2"/>
+					<Item Identity="CRTcTool05Pressure1"/>
+					<Item Identity="CDTool05CodingKey"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 06</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.6"/>
+					<Item Identity="CXTcTool06OutCylProtActive"/>
+					<Item Identity="CXTcTool06OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool06ToolPriorManage"/>
+					<Item Identity="CRTcTool06FlowRate1"/>
+					<Item Identity="CRTcTool06FlowRate2"/>
+					<Item Identity="CRTcTool06Pressure1"/>
+					<Item Identity="CDTool06CodingKey"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 07</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.7"/>
+					<Item Identity="CXTcTool07OutCylProtActive"/>
+					<Item Identity="CXTcTool07OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool07ToolPriorManage"/>
+					<Item Identity="CRTcTool07FlowRate1"/>
+					<Item Identity="CRTcTool07FlowRate2"/>
+					<Item Identity="CRTcTool07Pressure1"/>
+					<Item Identity="CDTool07CodingKey"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 08</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.8"/>
+					<Item Identity="CXTcTool08OutCylProtActive"/>
+					<Item Identity="CXTcTool08OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool08ToolPriorManage"/>
+					<Item Identity="CRTcTool08FlowRate1"/>
+					<Item Identity="CRTcTool08FlowRate2"/>
+					<Item Identity="CRTcTool08Pressure1"/>
+					<Item Identity="CDTool08CodingKey"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 09</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.9"/>
+					<Item Identity="CXTcTool09OutCylProtActive"/>
+					<Item Identity="CXTcTool09OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool09ToolPriorManage"/>
+					<Item Identity="CRTcTool09FlowRate1"/>
+					<Item Identity="CRTcTool09FlowRate2"/>
+					<Item Identity="CRTcTool09Pressure1"/>
+					<Item Identity="CDTool09CodingKey"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool 10</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.10"/>
+					<Item Identity="CXTcTool10OutCylProtActive"/>
+					<Item Identity="CXTcTool10OutFlowDivActive"/>
+					<Item Identity="CXToolCtrlTool10ToolPriorManage"/>
+					<Item Identity="CRTcTool10FlowRate1"/>
+					<Item Identity="CRTcTool10FlowRate2"/>
+					<Item Identity="CRTcTool10Pressure1"/>
+					<Item Identity="CDTool10CodingKey"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>AHS12</Name>
+			</GroupLocale>
+				<Item Identity="CRTcAHS2FlowRate1"/>
+				<Item Identity="CRTcAHS2FlowRate2"/>
+				<Item Identity="CRTcAHS2Pressure1"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>AHS13</Name>
+			</GroupLocale>
+				<Item Identity="CRTcAHS3FlowRate1"/>
+				<Item Identity="CRTcAHS3FlowRate2"/>
+				<Item Identity="CRTcAHS3Pressure1"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>OLW</Name>
+			</GroupLocale>
+				<Item Identity="IRSensBoomCylB190"/>
+				<Item Identity="IROverloadWarningB21"/>
+				<Item Identity="CROLWPressSensMean"/>
+				<Item Identity="LROLWSensBoomCyl"/>
+		</Group>
+	</Group>
+	<Group>
+		<GroupLocale Lang="eng">
+			<Name>Hydraulic Machine</Name>
+		</GroupLocale>
+			<Item Identity="IRSensBoomCylB190"/>
+			<Item Identity="IRSensStickOutB202"/>
+			<Item Identity="IRDblPdlLElecR"/>
+			<Item Identity="IRDblPdlLElecL"/>
+			<Item Identity="IRDblPdlRElecR"/>
+			<Item Identity="IRDblPdlRElecL"/>
+			<Item Identity="IROverloadWarningB21"/>
+			<Item Identity="IRHydrOilLevelB14"/>
+			<Item Identity="IRSensStickCylB189"/>
+			<Item Identity="IRHydrOilTempB8"/>
+			<Item Identity="IRSensPdlLBackwardB170"/>
+			<Item Identity="IRSensPdlRForwardB171"/>
+			<Item Identity="IRAHSLPdlLB172_2"/>
+			<Item Identity="IRAHSLPdlRB172_1"/>
+			<Item Identity="IRSensStickOutB161"/>
+			<Item Identity="IRSensStickInB162"/>
+			<Item Identity="IRSensBoomUpB163"/>
+			<Item Identity="IRSensSwingRB168"/>
+			<Item Identity="IRSensBoomDownB164"/>
+			<Item Identity="IRSensShovelOutB165"/>
+			<Item Identity="IRSensShovelInB166"/>
+			<Item Identity="IRSensSwingLB167"/>
+			<Item Identity="IRSensPdlLForwardB169"/>
+			<Item Identity="IRSensPumpB159"/>
+			<Item Identity="IRSensPumpB160"/>
+			<Item Identity="IRSensPdlRBackwardB174"/>
+			<Item Identity="QXSwingBrakeY7"/>
+			<Item Identity="QXCtrlCircSupplyY3"/>
+			<Item Identity="QRSumStickY419"/>
+			<Item Identity="QRSumBoomY420"/>
+			<Item Identity="QRStickRegY421"/>
+			<Item Identity="QRJsRYmY444"/>
+			<Item Identity="QRTravelStraightY415"/>
+			<Item Identity="QROptionTransferringY416"/>
+			<Item Identity="QRCut1Y417"/>
+			<Item Identity="QRCut2Y418"/>
+			<Item Identity="QREL1Y51"/>
+			<Item Identity="QREL2Y52"/>
+			<Item Identity="QRLRY50"/>
+			<Item Identity="QRTravelSpeedY24"/>
+			<Group>
+			<GroupLocale Lang="fre">
+				<Name>Actor</Name>
+			</GroupLocale>
+				<Item Identity="QXSwingBrakeY7"/>
+				<Item Identity="QXCtrlCircSupplyY3"/>
+				<Item Identity="QRSumStickY419"/>
+				<Item Identity="QRSumBoomY420"/>
+				<Item Identity="QRStickRegY421"/>
+				<Item Identity="QRJsRYmY444"/>
+				<Item Identity="QRTravelStraightY415"/>
+				<Item Identity="QROptionTransferringY416"/>
+				<Item Identity="QRCut1Y417"/>
+				<Item Identity="QRCut2Y418"/>
+				<Item Identity="QREL1Y51"/>
+				<Item Identity="QREL2Y52"/>
+				<Item Identity="QRLRY50"/>
+				<Item Identity="QRTravelSpeedY24"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Proportional Bloc</Name>
+					</GroupLocale>
+					<Item Identity="QRSumStickY419"/>
+					<Item Identity="QRSumBoomY420"/>
+					<Item Identity="QRStickRegY421"/>
+					<Item Identity="QRJsRYmY444"/>
+					<Item Identity="QRTravelStraightY415"/>
+					<Item Identity="QROptionTransferringY416"/>
+					<Item Identity="QRCut1Y417"/>
+					<Item Identity="QRCut2Y418"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Servo Bloc</Name>
+					</GroupLocale>
+					<Item Identity="QXSwingBrakeY7"/>
+					<Item Identity="QXCtrlCircSupplyY3"/>
+					<Item Identity="QREL1Y51"/>
+					<Item Identity="QREL2Y52"/>
+					<Item Identity="QRLRY50"/>
+					<Item Identity="QRTravelSpeedY24"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Sensor </Name>
+			</GroupLocale>
+				<Item Identity="IRSensBoomCylB190"/>
+				<Item Identity="IRSensStickOutB202"/>
+				<Item Identity="IRDblPdlLElecR"/>
+				<Item Identity="IRDblPdlLElecL"/>
+				<Item Identity="IRDblPdlRElecR"/>
+				<Item Identity="IRDblPdlRElecL"/>
+				<Item Identity="IROverloadWarningB21"/>
+				<Item Identity="IRHydrOilLevelB14"/>
+				<Item Identity="IRSensStickCylB189"/>
+				<Item Identity="IRHydrOilTempB8"/>
+				<Item Identity="IDRotatingSpeedB53"/>
+				<Item Identity="IRSensPdlLBackwardB170"/>
+				<Item Identity="IRSensPdlRForwardB171"/>
+				<Item Identity="IRAHSLPdlLB172_2"/>
+				<Item Identity="IRAHSLPdlRB172_1"/>
+				<Item Identity="IRSensStickOutB161"/>
+				<Item Identity="IRSensStickInB162"/>
+				<Item Identity="IRSensBoomUpB163"/>
+				<Item Identity="IRSensSwingRB168"/>
+				<Item Identity="IRSensBoomDownB164"/>
+				<Item Identity="IRSensShovelOutB165"/>
+				<Item Identity="IRSensShovelInB166"/>
+				<Item Identity="IRSensSwingLB167"/>
+				<Item Identity="IRSensPdlLForwardB169"/>
+				<Item Identity="IRSensPumpB159"/>
+				<Item Identity="IRSensPumpB160"/>
+				<Item Identity="IRSensPdlRBackwardB174"/>
+				<Item Identity="LRPosCtrlBoomCylB190"/>
+				<Item Identity="LRPosCtrlPresSensorPump1"/>
+				<Item Identity="LRPosCtrlPresSensorPump2"/>
+				<Item Identity="LRPosCtrlStickCylB189"/>
+				<Item Identity="LRPosCtrlPresSensorBoomDown"/>
+				<Item Identity="LRPosCtrlPresSensorShovelOutward"/>
+				<Item Identity="LRPosCtrlPresSensorShovelInward"/>
+				<Item Identity="LRPosCtrlPresSensorSwingLeft"/>
+				<Item Identity="LRPosCtrlPresSensorArmOutward"/>
+				<Item Identity="LRPosCtrlPresSensorArmInward"/>
+				<Item Identity="LRPosCtrlPresSensorBoomUp"/>
+				<Item Identity="LRPosCtrlPresSensorSwingRight"/>
+				<Item Identity="LRPosCtrlPedalAHSLeft"/>
+				<Item Identity="LRPosCtrlPedalAHSRight"/>
+				<Item Identity="LRPosCtrlPresSensorPedalLeftBackward"/>
+				<Item Identity="LRPosCtrlPresSensorPedalLeftForward"/>
+				<Item Identity="LRPosCtrlPresSensorPedalRightForward"/>
+				<Item Identity="LRPosCtrlPresSensorPedalRightBackward"/>
+				<Item Identity="LRSensBoomCylB190Psi"/>
+				<Item Identity="LRSensPumpB159Psi"/>
+				<Item Identity="LRSensPumpB160Psi"/>
+				<Item Identity="LRSensStickCylB189Psi"/>
+				<Item Identity="LRSensBoomDownB164Psi"/>
+				<Item Identity="LRSensShovelOutB165Psi"/>
+				<Item Identity="LRSensShovelInB166Psi"/>
+				<Item Identity="LRSensSwingLB167Psi"/>
+				<Item Identity="LRSensStickOutB161Psi"/>
+				<Item Identity="LRSensStickInB162Psi"/>
+				<Item Identity="LRSensBoomUpB163Psi"/>
+				<Item Identity="LRSensSwingRB168Psi"/>
+				<Item Identity="LRSensAHSPdlB172Psi"/>
+				<Item Identity="LRSensAHSPdlRB173Psi"/>
+				<Item Identity="LRSensPdlLBackwardB170Psi"/>
+				<Item Identity="LRSensPdlLForwardB169Psi"/>
+				<Item Identity="LRSensPdlRForwardB171Psi"/>
+				<Item Identity="LRSensPdlRBackwardB174Psi"/>
+				<Item Identity="LRSensStickByPassB198Psi"/>
+				<Item Identity="LRPresSensStickOutB202"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor Boom</Name>
+					</GroupLocale>
+					<Item Identity="IRSensBoomUpB163"/>
+					<Item Identity="IRSensBoomDownB164"/>
+					<Item Identity="LRPosCtrlPresSensorBoomDown"/>
+					<Item Identity="LRPosCtrlPresSensorBoomUp"/>
+					<Item Identity="LRSensBoomDownB164Psi"/>
+					<Item Identity="LRSensBoomUpB163Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor Stick</Name>
+					</GroupLocale>
+					<Item Identity="IRSensStickOutB202"/>
+					<Item Identity="IRSensStickOutB161"/>
+					<Item Identity="IRSensStickInB162"/>
+					<Item Identity="LRPosCtrlPresSensorArmOutward"/>
+					<Item Identity="LRPosCtrlPresSensorArmInward"/>
+					<Item Identity="LRSensStickOutB161Psi"/>
+					<Item Identity="LRSensStickInB162Psi"/>
+					<Item Identity="LRPresSensStickOutB202"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor Shovel</Name>
+					</GroupLocale>
+					<Item Identity="IRSensShovelOutB165"/>
+					<Item Identity="IRSensShovelInB166"/>
+					<Item Identity="LRPosCtrlPresSensorShovelOutward"/>
+					<Item Identity="LRPosCtrlPresSensorShovelInward"/>
+					<Item Identity="LRSensShovelOutB165Psi"/>
+					<Item Identity="LRSensShovelInB166Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor Translation</Name>
+					</GroupLocale>
+					<Item Identity="IRSensPdlLBackwardB170"/>
+					<Item Identity="IRSensPdlRForwardB171"/>
+					<Item Identity="IRSensPdlLForwardB169"/>
+					<Item Identity="IRSensPdlRBackwardB174"/>
+					<Item Identity="LRPosCtrlPresSensorPedalLeftBackward"/>
+					<Item Identity="LRPosCtrlPresSensorPedalLeftForward"/>
+					<Item Identity="LRPosCtrlPresSensorPedalRightForward"/>
+					<Item Identity="LRPosCtrlPresSensorPedalRightBackward"/>
+					<Item Identity="LRSensPdlLBackwardB170Psi"/>
+					<Item Identity="LRSensPdlLForwardB169Psi"/>
+					<Item Identity="LRSensPdlRForwardB171Psi"/>
+					<Item Identity="LRSensPdlRBackwardB174Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor Option</Name>
+					</GroupLocale>
+					<Item Identity="IRDblPdlLElecR"/>
+					<Item Identity="IRDblPdlLElecL"/>
+					<Item Identity="IRDblPdlRElecR"/>
+					<Item Identity="IRDblPdlRElecL"/>
+					<Item Identity="IRAHSLPdlLB172_2"/>
+					<Item Identity="IRAHSLPdlRB172_1"/>
+					<Item Identity="LRPosCtrlPedalAHSLeft"/>
+					<Item Identity="LRPosCtrlPedalAHSRight"/>
+					<Item Identity="LRSensAHSPdlB172Psi"/>
+					<Item Identity="LRSensAHSPdlRB173Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor Swing</Name>
+					</GroupLocale>
+					<Item Identity="IDRotatingSpeedB53"/>
+					<Item Identity="IRSensSwingRB168"/>
+					<Item Identity="IRSensSwingLB167"/>
+					<Item Identity="LRPosCtrlPresSensorSwingLeft"/>
+					<Item Identity="LRPosCtrlPresSensorSwingRight"/>
+					<Item Identity="LRSensSwingLB167Psi"/>
+					<Item Identity="LRSensSwingRB168Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor Hp Pump</Name>
+					</GroupLocale>
+					<Item Identity="IRSensPumpB159"/>
+					<Item Identity="IRSensPumpB160"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor HP Boom</Name>
+					</GroupLocale>
+					<Item Identity="IRSensBoomCylB190"/>
+					<Item Identity="LRPosCtrlBoomCylB190"/>
+					<Item Identity="LRSensBoomCylB190Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor HP Stick</Name>
+					</GroupLocale>
+					<Item Identity="IRSensStickCylB189"/>
+					<Item Identity="LRPosCtrlStickCylB189"/>
+					<Item Identity="LRSensStickCylB189Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Sensor Supervising</Name>
+					</GroupLocale>
+					<Item Identity="IRHydrOilLevelB14"/>
+					<Item Identity="IRHydrOilTempB8"/>
+					<Item Identity="IDRotatingSpeedB53"/>
+			</Group>
+		</Group>
+	</Group>
+	<Group>
+		<GroupLocale Lang="eng">
+			<Name>Hardware</Name>
+		</GroupLocale>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Output A51</Name>
+			</GroupLocale>
+				<Item Identity="QXSwingBrakeY7"/>
+				<Item Identity="QXCtrlCircSupplyY3"/>
+				<Item Identity="QXSafetyValvePY369"/>
+				<Item Identity="QXGreasePump"/>
+				<Item Identity="QRSumStickY419"/>
+				<Item Identity="QRSumBoomY420"/>
+				<Item Identity="QRStickRegY421"/>
+				<Item Identity="QRJsRYmY444"/>
+				<Item Identity="QRTravelStraightY415"/>
+				<Item Identity="QROptionTransferringY416"/>
+				<Item Identity="QRCut1Y417"/>
+				<Item Identity="QRCut2Y418"/>
+				<Item Identity="QREL1Y51"/>
+				<Item Identity="QREL2Y52"/>
+				<Item Identity="QRLRY50"/>
+				<Item Identity="QRFanY347"/>
+				<Item Identity="QRBuzzerH10"/>
+				<Item Identity="QRTravelSpeedY24"/>
+				<Item Identity="QRCompSetValveY20"/>
+				<Item Identity="QRJsLYmY442"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>OD04 (13)</Name>
+					</GroupLocale>
+					<Item Identity="QXSwingBrakeY7"/>
+					<Item Identity="QXCtrlCircSupplyY3"/>
+					<Item Identity="QXSafetyValvePY369"/>
+					<Item Identity="QXGreasePump"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>OA16 (21)</Name>
+					</GroupLocale>
+					<Item Identity="QRSumStickY419"/>
+					<Item Identity="QRSumBoomY420"/>
+					<Item Identity="QRStickRegY421"/>
+					<Item Identity="QRJsRYmY444"/>
+					<Item Identity="QRTravelStraightY415"/>
+					<Item Identity="QROptionTransferringY416"/>
+					<Item Identity="QRCut1Y417"/>
+					<Item Identity="QRCut2Y418"/>
+					<Item Identity="QREL1Y51"/>
+					<Item Identity="QREL2Y52"/>
+					<Item Identity="QRLRY50"/>
+					<Item Identity="QRFanY347"/>
+					<Item Identity="QRBuzzerH10"/>
+					<Item Identity="QRTravelSpeedY24"/>
+					<Item Identity="QRCompSetValveY20"/>
+					<Item Identity="QRJsLYmY442"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Output A59</Name>
+			</GroupLocale>
+				<Item Identity="QXQChangeEnabling2Y129"/>
+				<Item Identity="QXReserve2A59"/>
+				<Item Identity="QXReserve3A59"/>
+				<Item Identity="QXReserve4A59"/>
+				<Item Identity="QROptionAO1A59"/>
+				<Item Identity="QRTransCtrlAHSY461"/>
+				<Item Identity="QROptionAO3A59"/>
+				<Item Identity="QROptionAO4A59"/>
+				<Item Identity="QROptionAO5A59"/>
+				<Item Identity="QROptionAO6A59"/>
+				<Item Identity="QROptionAO7A59"/>
+				<Item Identity="QRReserve8A59"/>
+				<Item Identity="QRReserve9A59"/>
+				<Item Identity="QRReserve10A59"/>
+				<Item Identity="QRReserve11A59"/>
+				<Item Identity="QRReserve12A59"/>
+				<Item Identity="QRReserve13A59"/>
+				<Item Identity="QRReserve14A59"/>
+				<Item Identity="QRReserve15A59"/>
+				<Item Identity="QRReserve16A59"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>OD04 (15)</Name>
+					</GroupLocale>
+					<Item Identity="QXQChangeEnabling2Y129"/>
+					<Item Identity="QXReserve2A59"/>
+					<Item Identity="QXReserve3A59"/>
+					<Item Identity="QXReserve4A59"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>OA16 (23)</Name>
+					</GroupLocale>
+					<Item Identity="QROptionAO1A59"/>
+					<Item Identity="QRTransCtrlAHSY461"/>
+					<Item Identity="QROptionAO3A59"/>
+					<Item Identity="QROptionAO4A59"/>
+					<Item Identity="QROptionAO5A59"/>
+					<Item Identity="QROptionAO6A59"/>
+					<Item Identity="QROptionAO7A59"/>
+					<Item Identity="QRReserve8A59"/>
+					<Item Identity="QRReserve9A59"/>
+					<Item Identity="QRReserve10A59"/>
+					<Item Identity="QRReserve11A59"/>
+					<Item Identity="QRReserve12A59"/>
+					<Item Identity="QRReserve13A59"/>
+					<Item Identity="QRReserve14A59"/>
+					<Item Identity="QRReserve15A59"/>
+					<Item Identity="QRReserve16A59"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Input A52</Name>
+			</GroupLocale>
+				<Item Identity="IRSafety"/>
+				<Item Identity="IRQChangeB26_1"/>
+				<Item Identity="IROverloadWarningB21"/>
+				<Item Identity="IRSensB55_1_2"/>
+				<Item Identity="IRSensB55_2_2"/>
+				<Item Identity="IRSensBoomUpB203"/>
+				<Item Identity="IRACExtPresSwitchB44"/>
+				<Item Identity="IRCoolLevelB3"/>
+				<Item Identity="IRHydrOilLevelB14"/>
+				<Item Identity="IRChargePressMaxB356"/>
+				<Item Identity="IRGreasingB5"/>
+				<Item Identity="IRSensB55_1_1"/>
+				<Item Identity="IRSensB55_2_1"/>
+				<Item Identity="IRGreaseLowLevelB50"/>
+				<Item Identity="IRMeasureKL15A52"/>
+				<Item Identity="IRSensStickCylB189"/>
+				<Item Identity="IRFuelLevelB39"/>
+				<Item Identity="IRHydrOilTempB8"/>
+				<Item Identity="IDRotatingSpeedB53"/>
+				<Item Identity="IDReserveF2A52"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IA16 (47)</Name>
+					</GroupLocale>
+					<Item Identity="IRSafety"/>
+					<Item Identity="IRQChangeB26_1"/>
+					<Item Identity="IROverloadWarningB21"/>
+					<Item Identity="IRSensB55_1_2"/>
+					<Item Identity="IRSensB55_2_2"/>
+					<Item Identity="IRSensBoomUpB203"/>
+					<Item Identity="IRACExtPresSwitchB44"/>
+					<Item Identity="IRCoolLevelB3"/>
+					<Item Identity="IRHydrOilLevelB14"/>
+					<Item Identity="IRChargePressMaxB356"/>
+					<Item Identity="IRGreasingB5"/>
+					<Item Identity="IRSensB55_1_1"/>
+					<Item Identity="IRSensB55_2_1"/>
+					<Item Identity="IRGreaseLowLevelB50"/>
+					<Item Identity="IRMeasureKL15A52"/>
+					<Item Identity="IRSensStickCylB189"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IR02 (83)</Name>
+					</GroupLocale>
+					<Item Identity="IRFuelLevelB39"/>
+					<Item Identity="IRHydrOilTempB8"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IF02 (55)</Name>
+					</GroupLocale>
+					<Item Identity="IDRotatingSpeedB53"/>
+					<Item Identity="IDReserveF2A52"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Input A53</Name>
+			</GroupLocale>
+				<Item Identity="IRSensPdlLBackwardB170"/>
+				<Item Identity="IRSensPdlRForwardB171"/>
+				<Item Identity="IRAHSLPdlLB172_2"/>
+				<Item Identity="IRAHSLPdlRB172_1"/>
+				<Item Identity="IRSensStickOutB161"/>
+				<Item Identity="IRSensStickInB162"/>
+				<Item Identity="IRSensBoomUpB163"/>
+				<Item Identity="IRSensSwingRB168"/>
+				<Item Identity="IRSensBoomDownB164"/>
+				<Item Identity="IRSensShovelOutB165"/>
+				<Item Identity="IRSensShovelInB166"/>
+				<Item Identity="IRSensSwingLB167"/>
+				<Item Identity="IRSensPdlLForwardB169"/>
+				<Item Identity="IRSensPumpB159"/>
+				<Item Identity="IRSensPumpB160"/>
+				<Item Identity="IRSensPdlRBackwardB174"/>
+				<Item Identity="IREngStopS2_2"/>
+				<Item Identity="IRReserveW2A53"/>
+				<Item Identity="IDReserveF1A51"/>
+				<Item Identity="IDMotorSpeedB12"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IA16 (46)</Name>
+					</GroupLocale>
+					<Item Identity="IRSensPdlLBackwardB170"/>
+					<Item Identity="IRSensPdlRForwardB171"/>
+					<Item Identity="IRAHSLPdlLB172_2"/>
+					<Item Identity="IRAHSLPdlRB172_1"/>
+					<Item Identity="IRSensStickOutB161"/>
+					<Item Identity="IRSensStickInB162"/>
+					<Item Identity="IRSensBoomUpB163"/>
+					<Item Identity="IRSensSwingRB168"/>
+					<Item Identity="IRSensBoomDownB164"/>
+					<Item Identity="IRSensShovelOutB165"/>
+					<Item Identity="IRSensShovelInB166"/>
+					<Item Identity="IRSensSwingLB167"/>
+					<Item Identity="IRSensPdlLForwardB169"/>
+					<Item Identity="IRSensPumpB159"/>
+					<Item Identity="IRSensPumpB160"/>
+					<Item Identity="IRSensPdlRBackwardB174"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IR02 (82)</Name>
+					</GroupLocale>
+					<Item Identity="IREngStopS2_2"/>
+					<Item Identity="IRReserveW2A53"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IF02 (54)</Name>
+					</GroupLocale>
+					<Item Identity="IDReserveF1A51"/>
+					<Item Identity="IDMotorSpeedB12"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Output A54</Name>
+			</GroupLocale>
+				<Item Identity="QXSafetyValveMY370"/>
+				<Item Identity="QXTravelAlarmH33"/>
+				<Item Identity="QXSafetyShutDown"/>
+				<Item Identity="QXQChangeEnablingY28"/>
+				<Item Identity="QRTransCtrlAHSY189_2"/>
+				<Item Identity="QRJsLYpY441"/>
+				<Item Identity="QRTransCtrlAHSY189_1"/>
+				<Item Identity="QRJsRYpY443"/>
+				<Item Identity="QRStickByPassY450"/>
+				<Item Identity="QRJsRXpY445"/>
+				<Item Identity="QRJsRXmY446"/>
+				<Item Identity="QRDampingY459"/>
+				<Item Identity="QRCylShutDownY21_1"/>
+				<Item Identity="QRCylShutDownY21_2"/>
+				<Item Identity="QRJsLXmY23"/>
+				<Item Identity="QRJsLXpY22"/>
+				<Item Identity="QRToolCtrlOutputY414_1"/>
+				<Item Identity="QRToolCtrlOutputY414_2"/>
+				<Item Identity="QRFanReversibleY356"/>
+				<Item Identity="QRFanReversibleY357"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>OD04 (14)</Name>
+					</GroupLocale>
+					<Item Identity="QXSafetyValveMY370"/>
+					<Item Identity="QXTravelAlarmH33"/>
+					<Item Identity="QXSafetyShutDown"/>
+					<Item Identity="QXQChangeEnablingY28"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>OA16 (22)</Name>
+					</GroupLocale>
+					<Item Identity="QRTransCtrlAHSY189_2"/>
+					<Item Identity="QRJsLYpY441"/>
+					<Item Identity="QRTransCtrlAHSY189_1"/>
+					<Item Identity="QRJsRYpY443"/>
+					<Item Identity="QRStickByPassY450"/>
+					<Item Identity="QRJsRXpY445"/>
+					<Item Identity="QRJsRXmY446"/>
+					<Item Identity="QRDampingY459"/>
+					<Item Identity="QRCylShutDownY21_1"/>
+					<Item Identity="QRCylShutDownY21_2"/>
+					<Item Identity="QRJsLXmY23"/>
+					<Item Identity="QRJsLXpY22"/>
+					<Item Identity="QRToolCtrlOutputY414_1"/>
+					<Item Identity="QRToolCtrlOutputY414_2"/>
+					<Item Identity="QRFanReversibleY356"/>
+					<Item Identity="QRFanReversibleY357"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Input A164</Name>
+			</GroupLocale>
+				<Item Identity="IRJsLXm"/>
+				<Item Identity="IRJsLYm"/>
+				<Item Identity="IRJsRXm"/>
+				<Item Identity="IRJsRYm"/>
+				<Item Identity="IRTransCtrlB354"/>
+				<Item Identity="IRSafetyLeverLockS7_1"/>
+				<Item Identity="IRSensAHSPdlRB173"/>
+				<Item Identity="IRCab1"/>
+				<Item Identity="IRMeasureKL15A164"/>
+				<Item Identity="IRSensStickByPassB198"/>
+				<Item Identity="IRSensStickOutB202"/>
+				<Item Identity="IRSensPdlWholeB40"/>
+				<Item Identity="IRPotArmrestB501Dig"/>
+				<Item Identity="IRSwingBrake2S57_2"/>
+				<Item Identity="IRSwingBrake1S57_1"/>
+				<Item Identity="IR5VSens"/>
+				<Item Identity="IRBtConfirm1S497"/>
+				<Item Identity="IRReserveW2A164"/>
+				<Item Identity="IDPotArmrestB501Freq1"/>
+				<Item Identity="IDPotArmrestB501Freq2"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IA16 (45)</Name>
+					</GroupLocale>
+					<Item Identity="IRJsLXm"/>
+					<Item Identity="IRJsLYm"/>
+					<Item Identity="IRJsRXm"/>
+					<Item Identity="IRJsRYm"/>
+					<Item Identity="IRTransCtrlB354"/>
+					<Item Identity="IRSafetyLeverLockS7_1"/>
+					<Item Identity="IRSensAHSPdlRB173"/>
+					<Item Identity="IRCab1"/>
+					<Item Identity="IRMeasureKL15A164"/>
+					<Item Identity="IRSensStickByPassB198"/>
+					<Item Identity="IRSensStickOutB202"/>
+					<Item Identity="IRSensPdlWholeB40"/>
+					<Item Identity="IRPotArmrestB501Dig"/>
+					<Item Identity="IRSwingBrake2S57_2"/>
+					<Item Identity="IRSwingBrake1S57_1"/>
+					<Item Identity="IR5VSens"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IR02 (53)</Name>
+					</GroupLocale>
+					<Item Identity="IRBtConfirm1S497"/>
+					<Item Identity="IRReserveW2A164"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IF02 (81)</Name>
+					</GroupLocale>
+					<Item Identity="IDPotArmrestB501Freq1"/>
+					<Item Identity="IDPotArmrestB501Freq2"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Input A165</Name>
+			</GroupLocale>
+				<Item Identity="IRSensJsRB19R"/>
+				<Item Identity="IRSensJsLB19L"/>
+				<Item Identity="IRCab2"/>
+				<Item Identity="IRSensBoomCylB190"/>
+				<Item Identity="IRBtEnablingUpS55_2"/>
+				<Item Identity="IRJsLXp"/>
+				<Item Identity="IRBtEnablingDownS55_1"/>
+				<Item Identity="IRJsLBtRS5R"/>
+				<Item Identity="IRJsRXp"/>
+				<Item Identity="IRJsRYpBtS6M"/>
+				<Item Identity="IRJsRBtLS6L"/>
+				<Item Identity="IRJsRBtRS6R"/>
+				<Item Identity="IRJsLYpBtS5M"/>
+				<Item Identity="IRJsLBtLS5L"/>
+				<Item Identity="IRPotArmrestB500Dig"/>
+				<Item Identity="IRQChangeSensSupB318"/>
+				<Item Identity="IRBtConfirm2S497"/>
+				<Item Identity="IRReserveW2A165"/>
+				<Item Identity="IDPotArmrestB500Freq1"/>
+				<Item Identity="IDPotArmrestB500Freq2"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IA16 (46)</Name>
+					</GroupLocale>
+					<Item Identity="IRSensJsRB19R"/>
+					<Item Identity="IRSensJsLB19L"/>
+					<Item Identity="IRCab2"/>
+					<Item Identity="IRSensBoomCylB190"/>
+					<Item Identity="IRBtEnablingUpS55_2"/>
+					<Item Identity="IRJsLXp"/>
+					<Item Identity="IRBtEnablingDownS55_1"/>
+					<Item Identity="IRJsLBtRS5R"/>
+					<Item Identity="IRJsRXp"/>
+					<Item Identity="IRJsRYpBtS6M"/>
+					<Item Identity="IRJsRBtLS6L"/>
+					<Item Identity="IRJsRBtRS6R"/>
+					<Item Identity="IRJsLYpBtS5M"/>
+					<Item Identity="IRJsLBtLS5L"/>
+					<Item Identity="IRPotArmrestB500Dig"/>
+					<Item Identity="IRQChangeSensSupB318"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IR02 (54)</Name>
+					</GroupLocale>
+					<Item Identity="IRBtConfirm2S497"/>
+					<Item Identity="IRReserveW2A165"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IF02 (82)</Name>
+					</GroupLocale>
+					<Item Identity="IDPotArmrestB500Freq1"/>
+					<Item Identity="IDPotArmrestB500Freq2"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Input A173</Name>
+			</GroupLocale>
+				<Item Identity="IROptionAI1A173"/>
+				<Item Identity="IROptionAI2A173"/>
+				<Item Identity="IROptionAI3A173"/>
+				<Item Identity="IROptionAI4A173"/>
+				<Item Identity="IRReserveAI5A173"/>
+				<Item Identity="IRReserveAI6A173"/>
+				<Item Identity="IRReserveAI7A173"/>
+				<Item Identity="IRReserveAI8A173"/>
+				<Item Identity="IROptionAI9A173"/>
+				<Item Identity="IROptionAI10A173"/>
+				<Item Identity="IRReserveAI11A173"/>
+				<Item Identity="IRReserveAI12A173"/>
+				<Item Identity="IRReserveAI13A173"/>
+				<Item Identity="IRReserveAI14A173"/>
+				<Item Identity="IRReserveAI15A173"/>
+				<Item Identity="IRReserveAI16A173"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>IA16 (45)</Name>
+					</GroupLocale>
+					<Item Identity="IROptionAI1A173"/>
+					<Item Identity="IROptionAI2A173"/>
+					<Item Identity="IROptionAI3A173"/>
+					<Item Identity="IROptionAI4A173"/>
+					<Item Identity="IRReserveAI5A173"/>
+					<Item Identity="IRReserveAI6A173"/>
+					<Item Identity="IRReserveAI7A173"/>
+					<Item Identity="IRReserveAI8A173"/>
+					<Item Identity="IROptionAI9A173"/>
+					<Item Identity="IROptionAI10A173"/>
+					<Item Identity="IRReserveAI11A173"/>
+					<Item Identity="IRReserveAI12A173"/>
+					<Item Identity="IRReserveAI13A173"/>
+					<Item Identity="IRReserveAI14A173"/>
+					<Item Identity="IRReserveAI15A173"/>
+					<Item Identity="IRReserveAI16A173"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Keyboard A168 (97)</Name>
+			</GroupLocale>
+				<Item Identity="IXBt1A168"/>
+				<Item Identity="IXBt2A168"/>
+				<Item Identity="IXBt3A168"/>
+				<Item Identity="IXBt4A168"/>
+				<Item Identity="IXBt5A168"/>
+				<Item Identity="IXBt6A168"/>
+				<Item Identity="IXBt7A168"/>
+				<Item Identity="IXBt8A168"/>
+				<Item Identity="IXBt9A168"/>
+				<Item Identity="IXBt10A168"/>
+				<Item Identity="IXBt11A168"/>
+				<Item Identity="IXBt12A168"/>
+				<Item Identity="IXBt13A168"/>
+				<Item Identity="IXBt14A168"/>
+				<Item Identity="IXBt15A168"/>
+				<Item Identity="IXBt16A168"/>
+				<Item Identity="IXBt17A168"/>
+				<Item Identity="IXBt18A168"/>
+				<Item Identity="IXBt19A168"/>
+				<Item Identity="IXBt20A168"/>
+				<Item Identity="IXBt21A168"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Keyboard A169 (94)</Name>
+			</GroupLocale>
+				<Item Identity="IXBt1A169"/>
+				<Item Identity="IXBt2A169"/>
+				<Item Identity="IXBt3A169"/>
+				<Item Identity="IXBt4A169"/>
+				<Item Identity="IXBt5A169"/>
+				<Item Identity="IXBt6A169"/>
+				<Item Identity="IXWashingLevel"/>
+				<Item Identity="QXLightFront"/>
+				<Item Identity="QXLightBack"/>
+				<Item Identity="QXLightEquip"/>
+				<Item Identity="QXWWasherFront"/>
+				<Item Identity="QXWashingFront"/>
+				<Item Identity="QXWWasherTop"/>
+				<Item Identity="QXWashingTop"/>
+				<Item Identity="QXOutput8A169"/>
+				<Item Identity="QXOutput9A169"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Keyboard A170 (96)</Name>
+			</GroupLocale>
+				<Item Identity="IXBt1A170"/>
+				<Item Identity="IXBt2A170"/>
+				<Item Identity="IXBt3A170"/>
+				<Item Identity="IXBt4A170"/>
+				<Item Identity="IXBt5A170"/>
+				<Item Identity="IXBt6A170"/>
+				<Item Identity="QXReserve1A170"/>
+				<Item Identity="QXRotBeaconE9"/>
+				<Item Identity="QXLightUppercar"/>
+				<Item Identity="QXFuelPreHeatR8"/>
+				<Item Identity="QXReserve5A170"/>
+				<Item Identity="QXMagneticSystem"/>
+				<Item Identity="QXCylProtecY175"/>
+				<Item Identity="QXFlowDividerY93"/>
+				<Item Identity="QXReserve9A170"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Keyboard A171 (95)</Name>
+			</GroupLocale>
+				<Item Identity="IXBt1A171"/>
+				<Item Identity="IXBt2A171"/>
+				<Item Identity="IXBt3A171"/>
+				<Item Identity="IXBt4A171"/>
+				<Item Identity="IXBt5A171"/>
+				<Item Identity="IXBt6A171"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Keyboard A172 (93)</Name>
+			</GroupLocale>
+				<Item Identity="IXBt1A172"/>
+				<Item Identity="IXBt2A172"/>
+				<Item Identity="IXBt3A172"/>
+				<Item Identity="IXBt4A172"/>
+				<Item Identity="IXBt5A172"/>
+				<Item Identity="IXBt6A172"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Motor A700 (91)(92)</Name>
+			</GroupLocale>
+				<Item Identity="IXEng1Starter"/>
+				<Item Identity="IXEng1Alternator"/>
+				<Item Identity="IXEng1Running"/>
+				<Item Identity="IXEng1StartLock"/>
+				<Item Identity="IXEng1AsynchError"/>
+				<Item Identity="IXEng1PowerRedCR"/>
+				<Item Identity="IXEng1PowerRedTemp"/>
+				<Item Identity="IXEng1PowerRedHigh"/>
+				<Item Identity="IXEng1PreheatBit0"/>
+				<Item Identity="IXEng1PreheatBit1"/>
+				<Item Identity="IXEng1Brake"/>
+				<Item Identity="IXEng1MaxFanSpeed"/>
+				<Item Identity="IXEng1MinFanSpeed"/>
+				<Item Identity="IXEng1RequireStop"/>
+				<Item Identity="IXEng1DemSpeMinOk"/>
+				<Item Identity="IXEng1DemSpeMaxOk"/>
+				<Item Identity="IXEng1CoolWatTempW"/>
+				<Item Identity="IXEng1CoolWatTempE"/>
+				<Item Identity="IXEng1ChaAirTempW"/>
+				<Item Identity="IXEng1ChaAirTempE"/>
+				<Item Identity="IXEng1FuelTempW"/>
+				<Item Identity="IXEng1FuelTempE"/>
+				<Item Identity="IXEng1WaterInFuel"/>
+				<Item Identity="IXEng1Reserve24"/>
+				<Item Identity="IXEng1HydrOilTempW"/>
+				<Item Identity="IXEng1HydrOilTempE"/>
+				<Item Identity="IXEng1LubOilPresW"/>
+				<Item Identity="IXEng1LubOilPresE"/>
+				<Item Identity="IXEng1FuelPresLoW"/>
+				<Item Identity="IXEng1FuelPresLoE"/>
+				<Item Identity="IXEng1AirFilterW"/>
+				<Item Identity="IXEng1AirFilterE"/>
+				<Item Identity="IXEng1CR1PressLoW"/>
+				<Item Identity="IXEng1CR1PressLoE"/>
+				<Item Identity="IXEng1CR2PressLoW"/>
+				<Item Identity="IXEng1CR2PressLoE"/>
+				<Item Identity="IXEng1ReservePressSensLowE"/>
+				<Item Identity="IXEng1ReservePressSensLowW"/>
+				<Item Identity="IXEng1OilLevelWarningLow"/>
+				<Item Identity="IXEng1OilLevelSafetyLow"/>
+				<Item Identity="IXEng1CoolWatLevE"/>
+				<Item Identity="IXEng1VoltageHigh"/>
+				<Item Identity="IXEng1VoltageLow"/>
+				<Item Identity="IXEng1SpeedHighW"/>
+				<Item Identity="IXEng1SpeedHighE"/>
+				<Item Identity="IXEng1FuelPresHiW"/>
+				<Item Identity="IXEng1FuelPresHiE"/>
+				<Item Identity="IXEng1Reserve48"/>
+				<Item Identity="IXEng1EmergStopStart"/>
+				<Item Identity="IXEng1EmergStopSpSen"/>
+				<Item Identity="IXEng1EmergStopInjec"/>
+				<Item Identity="IXEng1EmergStopEDC"/>
+				<Item Identity="IXEng1Reserve53"/>
+				<Item Identity="IXEng1Reserve54"/>
+				<Item Identity="IXEng1Reserve55"/>
+				<Item Identity="IXEng1ECUTimeout"/>
+				<Item Identity="QXEng1Start"/>
+				<Item Identity="QXEng1Enable"/>
+				<Item Identity="QXEng1ForcedNeutr"/>
+				<Item Identity="QXEng1CANfanSpeed"/>
+				<Item Identity="QXEng1Bleeding"/>
+				<Item Identity="QXEng1ReglerType"/>
+				<Item Identity="QXEng1WorkingMode"/>
+				<Item Identity="QXEng1DemMinEngSpeed"/>
+				<Item Identity="QXEng1DemMaxEngSpeed"/>
+				<Item Identity="IREngActSpeed"/>
+				<Item Identity="IREngActTorque"/>
+				<Item Identity="IREngMaxTorque"/>
+				<Item Identity="IREngDemThrottle"/>
+				<Item Identity="IREngBattVoltage"/>
+				<Item Identity="IREngChaAirTemp"/>
+				<Item Identity="IREngCoolWatTemp"/>
+				<Item Identity="IREngHyrdOilTemp"/>
+				<Item Identity="IREngLubOilPress"/>
+				<Item Identity="IREngChaAirPress"/>
+				<Item Identity="IREngFuelCons"/>
+				<Item Identity="IREngReserve12"/>
+				<Item Identity="IREngReserve13"/>
+				<Item Identity="QREngSpeedSelect"/>
+				<Item Identity="QREngTorqueSelect"/>
+				<Item Identity="QREngFanControl"/>
+				<Item Identity="LREngChaAirTempF"/>
+				<Item Identity="LREngCoolWatTempF"/>
+				<Item Identity="LRHydOilTempF"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Motor A700 (92)(93)</Name>
+			</GroupLocale>
+				<Item Identity="IREngActSpeed"/>
+				<Item Identity="IREngActTorque"/>
+				<Item Identity="IREngMaxTorque"/>
+				<Item Identity="IREngDemThrottle"/>
+				<Item Identity="IREngBattVoltage"/>
+				<Item Identity="IREngChaAirTemp"/>
+				<Item Identity="IREngCoolWatTemp"/>
+				<Item Identity="IREngHyrdOilTemp"/>
+				<Item Identity="IREngLubOilPress"/>
+				<Item Identity="IREngChaAirPress"/>
+				<Item Identity="IREngFuelCons"/>
+				<Item Identity="IREngReserve12"/>
+				<Item Identity="IREngReserve13"/>
+				<Item Identity="QREngSpeedSelect"/>
+				<Item Identity="QREngTorqueSelect"/>
+				<Item Identity="QREngFanControl"/>
+				<Item Identity="IXEng2Starter"/>
+				<Item Identity="IXEng2Alternator"/>
+				<Item Identity="IXEng2Running"/>
+				<Item Identity="IXEng2ExhaustBrake"/>
+				<Item Identity="IXEng2StartLock"/>
+				<Item Identity="IXEng2Reserve6"/>
+				<Item Identity="IXEng2PowerRedProblem"/>
+				<Item Identity="IXEng2PowerRedAltitude"/>
+				<Item Identity="IXEng2Preheat"/>
+				<Item Identity="IXEng2StartPrepared"/>
+				<Item Identity="IXEng2Postheat"/>
+				<Item Identity="IXEng2Reserve12"/>
+				<Item Identity="IXEng2StateDO3"/>
+				<Item Identity="IXEng2StateDO4"/>
+				<Item Identity="IXEng2DemSpeMinOk"/>
+				<Item Identity="IXEng2DemSpeMaxOk"/>
+				<Item Identity="IXEng2CoolWatTempW"/>
+				<Item Identity="IXEng2CoolWatTempE"/>
+				<Item Identity="IXEng2ChaAirTempW"/>
+				<Item Identity="IXEng2ChaAirTempE"/>
+				<Item Identity="IXEng2FuelTempW"/>
+				<Item Identity="IXEng2FuelTempE"/>
+				<Item Identity="IXEng2WaterInFuel"/>
+				<Item Identity="IXEng2Reserve24"/>
+				<Item Identity="IXEng2HydrOilTempW"/>
+				<Item Identity="IXEng2HydrOilTempE"/>
+				<Item Identity="IXEng2LubOilPresW"/>
+				<Item Identity="IXEng2LubOilPresE"/>
+				<Item Identity="IXEng2FuelPresLoW"/>
+				<Item Identity="IXEng2FuelPresLoE"/>
+				<Item Identity="IXEng2AirFilterW"/>
+				<Item Identity="IXEng2AirFilterE"/>
+				<Item Identity="IXEng2CRPressLoW"/>
+				<Item Identity="IXEng2CRPressLoE"/>
+				<Item Identity="IXEng2CoolWatLevW"/>
+				<Item Identity="IXEng2CoolWatLevE"/>
+				<Item Identity="IXEng2PvgTempW"/>
+				<Item Identity="IXEng2PvgTempE"/>
+				<Item Identity="IXEng2LubOilLevW"/>
+				<Item Identity="IXEng2LubOilLevE"/>
+				<Item Identity="IXEng2SpeedHighW"/>
+				<Item Identity="IXEng2SpeedHighE"/>
+				<Item Identity="IXEng2LubOilLevMonitoring"/>
+				<Item Identity="IXEng2Reserve44"/>
+				<Item Identity="IXEng2Reserve45"/>
+				<Item Identity="IXEng2Reserve46"/>
+				<Item Identity="IXEng2Reserve47"/>
+				<Item Identity="IXEng2Reserve48"/>
+				<Item Identity="IXEng2EmergStopForce"/>
+				<Item Identity="IXEng2EmergStopRequest"/>
+				<Item Identity="IXEng2EmergStopCommend"/>
+				<Item Identity="IXEng2AsyncInfo"/>
+				<Item Identity="IXEng2MILWarning"/>
+				<Item Identity="IXEng2MILError"/>
+				<Item Identity="IXEng2Reserve55"/>
+				<Item Identity="IXEng2Reserve56"/>
+				<Item Identity="IXEng2Reserve57"/>
+				<Item Identity="IXEng2Reserve58"/>
+				<Item Identity="IXEng2Reserve59"/>
+				<Item Identity="IXEng2Reserve60"/>
+				<Item Identity="IXEng2Reserve61"/>
+				<Item Identity="IXEng2Reserve62"/>
+				<Item Identity="IXEng2Reserve63"/>
+				<Item Identity="IXEng2Reserve64"/>
+				<Item Identity="QXEng2Start"/>
+				<Item Identity="QXEng2InjectionOff"/>
+				<Item Identity="QXEng2Enable"/>
+				<Item Identity="QXEng2PedalFree"/>
+				<Item Identity="QXEng2Reserve5"/>
+				<Item Identity="QXEng2BrakeReq"/>
+				<Item Identity="QXEng2BrakeLock"/>
+				<Item Identity="QXEng2CANfanSpeed"/>
+				<Item Identity="QXEng2SwitchDO3"/>
+				<Item Identity="QXEng2SwitchDO4"/>
+				<Item Identity="QXEng2Reserve11"/>
+				<Item Identity="QXEng2Reserve12"/>
+				<Item Identity="QXEng2ReglerType"/>
+				<Item Identity="QXEng2WorkingMode"/>
+				<Item Identity="QXEng2DemMinEngSpeed"/>
+				<Item Identity="QXEng2DemMaxEngSpeed"/>
+				<Item Identity="QXEng2Reserve17"/>
+				<Item Identity="QXEng2Reserve18"/>
+				<Item Identity="QXEng2Reserve19"/>
+				<Item Identity="QXEng2Reserve20"/>
+				<Item Identity="QXEng2Reserve21"/>
+				<Item Identity="QXEng2Reserve22"/>
+				<Item Identity="QXEng2Reserve23"/>
+				<Item Identity="QXEng2Reserve24"/>
+				<Item Identity="LREngChaAirTempF"/>
+				<Item Identity="LREngCoolWatTempF"/>
+				<Item Identity="LRHydOilTempF"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>AGN (94)</Name>
+			</GroupLocale>
+				<Item Identity="IXAgnReserve1"/>
+				<Item Identity="IXAgnReserve2"/>
+				<Item Identity="IXAgnHEST"/>
+				<Item Identity="IXAgnAdBlueWarningLevel"/>
+				<Item Identity="IXAgnAdBlueSafetyLevel"/>
+				<Item Identity="IXAgnServiceRegenerationRequest"/>
+				<Item Identity="IXAgnReserve7"/>
+				<Item Identity="IXAgnReserve8"/>
+				<Item Identity="IDAgnMode"/>
+				<Item Identity="IRAgnSootLoadLevel"/>
+				<Item Identity="IRAgnReserve11"/>
+				<Item Identity="IRAgnEngTorqueRequest"/>
+				<Item Identity="IRAgnRemainingTimeRegEnd"/>
+				<Item Identity="IRAgnAdBlueLevel"/>
+				<Item Identity="IRAgnReserve15"/>
+				<Item Identity="QXAgnDPFRegenerationEnable"/>
+				<Item Identity="QXAgnDPFRegenerationInitiate"/>
+				<Item Identity="QXAgnDPFServiceRegenerationStart"/>
+		</Group>
+	</Group>
+	<Group>
+		<GroupLocale Lang="eng">
+			<Name>Functions</Name>
+		</GroupLocale>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Activation Option </Name>
+			</GroupLocale>
+				<Item Identity="CXadOLW"/>
+				<Item Identity="CXadCentrGrease"/>
+				<Item Identity="CXadTravAl"/>
+				<Item Identity="CXadRotDr"/>
+				<Item Identity="CXadQChangeWorkTool"/>
+				<Item Identity="CXadToolCtrlAHS11"/>
+				<Item Identity="CXadTransCtrlAHSToTiltBucket"/>
+				<Item Identity="CXadEnableAC"/>
+				<Item Identity="CXadWWasherTop"/>
+				<Item Identity="CXadWWasherBack"/>
+				<Item Identity="CXadFuelPreHeat"/>
+				<Item Identity="CXadLightUppercar"/>
+				<Item Identity="CXadCylShDownBoom"/>
+				<Item Identity="CXadCylShDownBoomAll"/>
+				<Item Identity="CXadCylShDownStickAll"/>
+				<Item Identity="CXadCylShDownStick"/>
+				<Item Identity="CXadLightRotBeacon"/>
+				<Item Identity="CXadRadioMute"/>
+				<Item Identity="CXadCamera"/>
+				<Item Identity="CXadLightBack"/>
+				<Item Identity="CXadToolCtrlAHS12"/>
+				<Item Identity="CXadToolCtrl"/>
+				<Item Identity="CXadCoolReversible"/>
+				<Item Identity="CXadCoolTropicMode"/>
+				<Item Identity="CXadTcCylProtec"/>
+				<Item Identity="CXadLightFrontDown"/>
+				<Item Identity="CXadToolCtrlFlowDivider"/>
+				<Item Identity="CXadToolCtrlRedFlowLgEquip"/>
+				<Item Identity="CXadEngStopAfterRun"/>
+				<Item Identity="CXadJsLPropX"/>
+				<Item Identity="CXadJsLPropY"/>
+				<Item Identity="CXadJsRPropX"/>
+				<Item Identity="CXadJsRPropY"/>
+				<Item Identity="CXadToolCtrlAHS11ToJsRX"/>
+				<Item Identity="CXadFloatPosition"/>
+				<Item Identity="CXadTransCtrlJsLToRBt"/>
+				<Item Identity="CXadToolPriorManage"/>
+				<Item Identity="CXadMowingBucket"/>
+				<Item Identity="CXadAutoEngStop"/>
+				<Item Identity="CXadLightRotBeaconAuto"/>
+				<Item Identity="CXadSwingBrakeManu"/>
+				<Item Identity="CXadQChangeWorkTool2"/>
+				<Item Identity="CXadJsSensCapacitifOff"/>
+				<Item Identity="CXadTransCtrlBoomHeightToSide"/>
+				<Item Identity="CXadTransCtrlBtS55Enab"/>
+				<Item Identity="CXadTransCtrlBtS57Enab"/>
+				<Item Identity="CXadRotStick"/>
+				<Item Identity="CXadLidatPeriodicUpdate"/>
+				<Item Identity="CXadTransCtrlAHSToJsRX"/>
+				<Item Identity="CXadAdjCab"/>
+				<Item Identity="CXadHarvesterControl"/>
+				<Item Identity="CXadLightForceIfEngOn"/>
+				<Item Identity="CXadQChangeWorkToolSWA"/>
+				<Item Identity="CXadQChangeWorkToolSWA2"/>
+				<Item Identity="CXadQChangeWorkToolMH"/>
+				<Item Identity="CXadQChangeWorkToolMH2"/>
+				<Item Identity="CXadQChangeSensSup"/>
+				<Item Identity="CXadEquipmentControl"/>
+				<Item Identity="CXadAGN"/>
+				<Item Identity="CXadCylShDownOff"/>
+				<Item Identity="CXadRadioRemoteControl"/>
+				<Item Identity="CXadCoolReversibleAuto"/>
+				<Item Identity="CXadRotBeaconForcedIfTravAl"/>
+				<Item Identity="CXadHarvesterControl2"/>
+				<Item Identity="CXadMagneticSystem"/>
+				<Item Identity="CXadDozerBlade"/>
+				<Item Identity="CXadConfigUnitsMenu"/>
+				<Item Identity="CXadQChangeBoomSWA"/>
+				<Item Identity="CXadToolManageExtern"/>
+				<Item Identity="CXadTeleserviceAccess"/>
+				<Item Identity="CXadToolCtrlAHS12Elec"/>
+				<Item Identity="CXadEndStopStickIn"/>
+				<Item Identity="CXadEndStopStickOut"/>
+				<Item Identity="CXadEndStopBoomUp"/>
+				<Item Identity="CXadEndStopBoomDown"/>
+				<Item Identity="CXadCylShDownStickIn"/>
+				<Item Identity="CXadCylShDownStickOut"/>
+				<Item Identity="CXadCylShDownBoomDown"/>
+				<Item Identity="CXadCylShDownBoomUp"/>
+				<Item Identity="CXadChipper"/>
+				<Item Identity="CXadLimitTravelSpeed"/>
+				<Item Identity="CXadToolManagement"/>
+				<Item Identity="CXadRotDr25cm3"/>
+				<Item Identity="CXadCumulAHS11Shovel"/>
+				<Item Identity="CXadTelescope"/>
+				<Item Identity="CXadPdlRAHS1"/>
+				<Item Identity="CXadTravStraight"/>
+				<Item Identity="CXadLiebherrCameraUsed"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Adjust Cabine</Name>
+			</GroupLocale>
+				<Item Identity="IRJsRYpBtS6M"/>
+				<Item Identity="IRJsRYm"/>
+				<Item Identity="IR5VSens"/>
+				<Item Identity="QXSafetyValvePY369"/>
+				<Item Identity="QRJsRYmY444"/>
+				<Item Identity="QXSafetyValveMY370"/>
+				<Item Identity="QRJsRYpY443"/>
+				<Item Identity="CXadJsRPropY"/>
+				<Item Identity="CXadAdjCab"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Air Condition</Name>
+			</GroupLocale>
+				<Item Identity="IRACExtPresSwitchB44"/>
+				<Item Identity="QRCompSetValveY20"/>
+				<Item Identity="IXacReserve1"/>
+				<Item Identity="IXacReserve2"/>
+				<Item Identity="IXacReserve3"/>
+				<Item Identity="IXacReserve4"/>
+				<Item Identity="IXacReserve5"/>
+				<Item Identity="IXacStaRecycle"/>
+				<Item Identity="IXacStaCompressor"/>
+				<Item Identity="IXacStaPressSwitch"/>
+				<Item Identity="IXacFeatureAutomatic"/>
+				<Item Identity="IXacFeaturePureHeater"/>
+				<Item Identity="IXacFeatureHeater"/>
+				<Item Identity="IXacFeatureDustFilter"/>
+				<Item Identity="IXacReserve6"/>
+				<Item Identity="IXacReserve7"/>
+				<Item Identity="IXacReserve8"/>
+				<Item Identity="IXacReserve9"/>
+				<Item Identity="IRacCabinTemp"/>
+				<Item Identity="IRacBlowerSpeed"/>
+				<Item Identity="IRacOutTemp"/>
+				<Item Identity="IRacWaterValve"/>
+				<Item Identity="IRacCondTemp"/>
+				<Item Identity="IRacRatioWaterValve"/>
+				<Item Identity="IRacHeadFlap"/>
+				<Item Identity="IRacFootFlap"/>
+				<Item Identity="IRacMiddleFlap"/>
+				<Item Identity="IRacFlap5"/>
+				<Item Identity="IRacRecycleFlap"/>
+				<Item Identity="IDacMode"/>
+				<Item Identity="QXacEngState"/>
+				<Item Identity="QXacCondensFan"/>
+				<Item Identity="QXacDustFilter"/>
+				<Item Identity="QXacPressSwitch"/>
+				<Item Identity="QXacSelectWaterValve"/>
+				<Item Identity="QXacAirRecycle"/>
+				<Item Identity="QXacClimCompressorTest"/>
+				<Item Identity="QXacCondensFanExt"/>
+				<Item Identity="QXacExternCompressorSwitch"/>
+				<Item Identity="QXacReserve1"/>
+				<Item Identity="QXacReserve2"/>
+				<Item Identity="QXacReserve3"/>
+				<Item Identity="QXacReserve4"/>
+				<Item Identity="QXacReserve5"/>
+				<Item Identity="QXacReserve6"/>
+				<Item Identity="QXacReserve7"/>
+				<Item Identity="QRacTemp"/>
+				<Item Identity="QRacBlowerSpeed"/>
+				<Item Identity="QRacCoolantTemp"/>
+				<Item Identity="QRacWaterValve"/>
+				<Item Identity="QRacHeadFlap"/>
+				<Item Identity="QRacFootFlap"/>
+				<Item Identity="QRacMiddleFlap"/>
+				<Item Identity="QRacFlap5"/>
+				<Item Identity="QRacRecycleFlap"/>
+				<Item Identity="QDacMode"/>
+				<Item Identity="QDacControlSelection"/>
+				<Item Identity="QDacFlapSelection"/>
+				<Item Identity="CXadEnableAC"/>
+				<Item Identity="CXacTeachmode"/>
+				<Item Identity="LRacCabinTempF"/>
+				<Item Identity="LRacOutTempF"/>
+				<Item Identity="LRacCondTempF"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Diag. Air Conditionning</Name>
+					</GroupLocale>
+					<Item Identity="QRCompSetValveY20"/>
+					<Item Identity="IRacBlowerSpeed"/>
+					<Item Identity="IRacRatioWaterValve"/>
+					<Item Identity="IRacHeadFlap"/>
+					<Item Identity="IRacFootFlap"/>
+					<Item Identity="IRacMiddleFlap"/>
+					<Item Identity="CXacTestmode"/>
+					<Item Identity="CXacTestPreSw"/>
+					<Item Identity="CXacTestEngState"/>
+					<Item Identity="CXacTestCondFan"/>
+					<Item Identity="CXacTestDustFilt"/>
+					<Item Identity="CXacTestCircul"/>
+					<Item Identity="CXacTestCompress"/>
+					<Item Identity="CXacTeachmode"/>
+					<Item Identity="CDacTestBlower"/>
+					<Item Identity="CDacTestCoolTemp"/>
+					<Item Identity="CDacTestWaterValve"/>
+					<Item Identity="CDacTestRearFlap"/>
+					<Item Identity="CDacTestFootFlap"/>
+					<Item Identity="CDacTestFrontFlap"/>
+					<Item Identity="CDacTestFlap5"/>
+					<Item Identity="CDacTestTemperature"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>AutomaticIdling</Name>
+			</GroupLocale>
+				<Item Identity="CXadAutoEngStop"/>
+				<Item Identity="CDAutoIdIntervalEngStop"/>
+				<Item Identity="MXAutoIdling"/>
+				<Item Identity="LDAutoIdInEngSpeedStep"/>
+				<Item Identity="LXAutoIdJsLXm"/>
+				<Item Identity="LXAutoIdJsLXp"/>
+				<Item Identity="LXAutoIdJsLYm"/>
+				<Item Identity="LXAutoIdJsLYpBt"/>
+				<Item Identity="LXAutoIdJsRXm"/>
+				<Item Identity="LXAutoIdJsRXp"/>
+				<Item Identity="LXAutoIdJsRYm"/>
+				<Item Identity="LXAutoIdJsRYpBt"/>
+				<Item Identity="LDAutoIdOutEngSpeedStep"/>
+				<Item Identity="LXAutoIdBtAutoId"/>
+				<Item Identity="LXAutoIdJsLBtR"/>
+				<Item Identity="LXAutoIdLEDAutoId"/>
+				<Item Identity="LXAutoIdMagneticSystem"/>
+				<Item Identity="LXAutoIdSensAHSPdlL"/>
+				<Item Identity="LXAutoIdSensAHSPdlR"/>
+				<Item Identity="LXAutoIdSensBoomUp"/>
+				<Item Identity="LXAutoIdSensBoomDown"/>
+				<Item Identity="LXAutoIdSensStickIn"/>
+				<Item Identity="LXAutoIdSensStickOut"/>
+				<Item Identity="LXAutoIdSensJsL"/>
+				<Item Identity="LXAutoIdSensJsR"/>
+				<Item Identity="LXAutoIdSensPdlLBackward"/>
+				<Item Identity="LXAutoIdSensPdlLForward"/>
+				<Item Identity="LXAutoIdSensPdlRBackward"/>
+				<Item Identity="LXAutoIdSensPdlRForward"/>
+				<Item Identity="LXAutoIdSensShovelIn"/>
+				<Item Identity="LXAutoIdSensShovelOut"/>
+				<Item Identity="LXAutoIdSensStateDelayed"/>
+				<Item Identity="LXAutoIdSensSwingL"/>
+				<Item Identity="LXAutoIdSensSwingR"/>
+				<Item Identity="LXAutoIdJsLBtL"/>
+				<Item Identity="LXAutoIdJsRBtL"/>
+				<Item Identity="LXAutoIdJsRBtR"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>CheckValves</Name>
+			</GroupLocale>
+				<Item Identity="CXCheckValvesActive"/>
+				<Item Identity="CRValvesCtrlCurrentMinStrTravel"/>
+				<Item Identity="CRValvesCtrlCurrentMaxStrTravel"/>
+				<Item Identity="CRValvesCtrlCurrentMinCut1"/>
+				<Item Identity="CRValvesCtrlCurrentMaxCut1"/>
+				<Item Identity="CRValvesCtrlCurrentMinCut2"/>
+				<Item Identity="CRValvesCtrlCurrentMaxCut2"/>
+				<Item Identity="CRValvesCtrlCurrentMinOptTransf"/>
+				<Item Identity="CRValvesCtrlCurrentMaxOptTransf"/>
+				<Item Identity="CRValvesCtrlCurrentMinStickReg"/>
+				<Item Identity="CRValvesCtrlCurrentMaxStickReg"/>
+				<Item Identity="CRValvesCtrlCurrentMinSumStick"/>
+				<Item Identity="CRValvesCtrlCurrentMaxSumStick"/>
+				<Item Identity="CRValvesCtrlCurrentMinSumBoom"/>
+				<Item Identity="CRValvesCtrlCurrentMaxSumBoom"/>
+				<Item Identity="CDCheckValvesSelect"/>
+				<Item Identity="CDCheckValvesMode"/>
+				<Item Identity="CRValvesCtrlCurrentMinStickByp"/>
+				<Item Identity="CRValvesCtrlCurrentMaxStickByp"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Y415</Name>
+					</GroupLocale>
+					<Item Identity="QRTravelStraightY415"/>
+					<Item Identity="CXCheckValvesActive"/>
+					<Item Identity="CRValvesCtrlCurrentMinStrTravel"/>
+					<Item Identity="CRValvesCtrlCurrentMaxStrTravel"/>
+					<Item Identity="CDCheckValvesSelect"/>
+					<Item Identity="CDCheckValvesMode"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Y416</Name>
+					</GroupLocale>
+					<Item Identity="QROptionTransferringY416"/>
+					<Item Identity="CXCheckValvesActive"/>
+					<Item Identity="CRValvesCtrlCurrentMinOptTransf"/>
+					<Item Identity="CRValvesCtrlCurrentMaxOptTransf"/>
+					<Item Identity="CDCheckValvesSelect"/>
+					<Item Identity="CDCheckValvesMode"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Y417</Name>
+					</GroupLocale>
+					<Item Identity="QRCut1Y417"/>
+					<Item Identity="CXCheckValvesActive"/>
+					<Item Identity="CRValvesCtrlCurrentMinCut1"/>
+					<Item Identity="CRValvesCtrlCurrentMaxCut1"/>
+					<Item Identity="CDCheckValvesSelect"/>
+					<Item Identity="CDCheckValvesMode"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Y418</Name>
+					</GroupLocale>
+					<Item Identity="QRCut2Y418"/>
+					<Item Identity="CXCheckValvesActive"/>
+					<Item Identity="CRValvesCtrlCurrentMinCut2"/>
+					<Item Identity="CRValvesCtrlCurrentMaxCut2"/>
+					<Item Identity="CDCheckValvesSelect"/>
+					<Item Identity="CDCheckValvesMode"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Y419</Name>
+					</GroupLocale>
+					<Item Identity="QRSumStickY419"/>
+					<Item Identity="CXCheckValvesActive"/>
+					<Item Identity="CRValvesCtrlCurrentMinSumStick"/>
+					<Item Identity="CRValvesCtrlCurrentMaxSumStick"/>
+					<Item Identity="CDCheckValvesSelect"/>
+					<Item Identity="CDCheckValvesMode"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Y420</Name>
+					</GroupLocale>
+					<Item Identity="QRSumBoomY420"/>
+					<Item Identity="CXCheckValvesActive"/>
+					<Item Identity="CRValvesCtrlCurrentMinSumBoom"/>
+					<Item Identity="CRValvesCtrlCurrentMaxSumBoom"/>
+					<Item Identity="CDCheckValvesSelect"/>
+					<Item Identity="CDCheckValvesMode"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Y421</Name>
+					</GroupLocale>
+					<Item Identity="QRStickRegY421"/>
+					<Item Identity="CXCheckValvesActive"/>
+					<Item Identity="CRValvesCtrlCurrentMinStickReg"/>
+					<Item Identity="CRValvesCtrlCurrentMaxStickReg"/>
+					<Item Identity="CDCheckValvesSelect"/>
+					<Item Identity="CDCheckValvesMode"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Y450</Name>
+					</GroupLocale>
+					<Item Identity="QRStickByPassY450"/>
+					<Item Identity="CXCheckValvesActive"/>
+					<Item Identity="CDCheckValvesSelect"/>
+					<Item Identity="CDCheckValvesMode"/>
+					<Item Identity="CRValvesCtrlCurrentMinStickByp"/>
+					<Item Identity="CRValvesCtrlCurrentMaxStickByp"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Chipper</Name>
+			</GroupLocale>
+				<Item Identity="IRBtConfirm2S497"/>
+				<Item Identity="IRSwingBrake2S57_2"/>
+				<Item Identity="IRSwingBrake1S57_1"/>
+				<Item Identity="IRBtConfirm1S497"/>
+				<Item Identity="QROptionAO1A59"/>
+				<Item Identity="QROptionAO5A59"/>
+				<Item Identity="QROptionAO6A59"/>
+				<Item Identity="CXadChipper"/>
+				<Item Identity="MXChipper"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>CylinderShutDownBoomStick (Inductive)</Name>
+			</GroupLocale>
+				<Item Identity="IRBtEnablingUpS55_2"/>
+				<Item Identity="IRBtEnablingDownS55_1"/>
+				<Item Identity="IRBtConfirm2S497"/>
+				<Item Identity="IRBtConfirm1S497"/>
+				<Item Identity="IRSensB55_1_2"/>
+				<Item Identity="IRSensB55_2_2"/>
+				<Item Identity="IRSensB55_1_1"/>
+				<Item Identity="IRSensB55_2_1"/>
+				<Item Identity="QRCylShutDownY21_1"/>
+				<Item Identity="QRCylShutDownY21_2"/>
+				<Item Identity="CXadCylShDownBoom"/>
+				<Item Identity="CXadCylShDownBoomAll"/>
+				<Item Identity="CXadCylShDownStickAll"/>
+				<Item Identity="CXadCylShDownStick"/>
+				<Item Identity="CXadCylShDownOff"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>CylinderShutDownBoomStick (Angular)</Name>
+			</GroupLocale>
+				<Item Identity="IRBtEnablingUpS55_2"/>
+				<Item Identity="IRBtEnablingDownS55_1"/>
+				<Item Identity="IRBtConfirm2S497"/>
+				<Item Identity="IRBtConfirm1S497"/>
+				<Item Identity="IRSensB55_1_2"/>
+				<Item Identity="IRSensB55_2_2"/>
+				<Item Identity="IRSensB55_1_1"/>
+				<Item Identity="IRSensB55_2_1"/>
+				<Item Identity="QRDampingY459"/>
+				<Item Identity="QRCylShutDownY21_1"/>
+				<Item Identity="QRCylShutDownY21_2"/>
+				<Item Identity="CXadCylShDownOff"/>
+				<Item Identity="CXadCylShDownStickIn"/>
+				<Item Identity="CXadCylShDownStickOut"/>
+				<Item Identity="CXadCylShDownBoomDown"/>
+				<Item Identity="CXadCylShDownBoomUp"/>
+				<Item Identity="CXCylProtecChangeTrackAngleStick"/>
+				<Item Identity="CXCylCutOffBoomUserAdjustEnable"/>
+				<Item Identity="CXSetStickCylSens"/>
+				<Item Identity="CXCylCutOffStickUserAdjustEnable"/>
+				<Item Identity="CXSetBoomCylSens"/>
+				<Item Identity="CXCylProtecChangeTrackAngleBoom"/>
+				<Item Identity="CRCylProtecStickInEnd"/>
+				<Item Identity="CRCylCutOffMaxLimitBoomUpEnd"/>
+				<Item Identity="CRCylCutOffMaxLimitBoomDownEnd"/>
+				<Item Identity="CRCylProtecBoomUpEnd"/>
+				<Item Identity="CRCylProtecBoomDownEnd"/>
+				<Item Identity="CRCylCutOffMaxLimitStickOutEnd"/>
+				<Item Identity="CRCylCutOffMaxLimitStickInEnd"/>
+				<Item Identity="CRCylProtecStickOutEnd"/>
+				<Item Identity="CXCylProtecSaveStickIn"/>
+				<Item Identity="CXCylProtecSaveStickOut"/>
+				<Item Identity="CXCylProtecSaveBoomDown"/>
+				<Item Identity="CXCylProtecSaveBoomUp"/>
+				<Item Identity="LRAngleStickAbsolut"/>
+				<Item Identity="LRAngleBoomAbsolut"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Dozer Blade</Name>
+			</GroupLocale>
+				<Item Identity="IRJsLYpBtS5M"/>
+				<Item Identity="IRJsLYm"/>
+				<Item Identity="QRJsLYmY442"/>
+				<Item Identity="QRJsLYpY441"/>
+				<Item Identity="CXadDozerBlade"/>
+				<Item Identity="CRBladeLUTX1Perc"/>
+				<Item Identity="CRBladeLUTX3Perc"/>
+				<Item Identity="CRBladeLUTX4Perc"/>
+				<Item Identity="CRBladeLUTY2Yp"/>
+				<Item Identity="CRBladeLUTY3Yp"/>
+				<Item Identity="CRBladeLUTY4Yp"/>
+				<Item Identity="CRBladeLUTY5Yp"/>
+				<Item Identity="CRBladeLUTY2Ym"/>
+				<Item Identity="CRBladeLUTY3Ym"/>
+				<Item Identity="CRBladeLUTY4Ym"/>
+				<Item Identity="CRBladeLUTY5Ym"/>
+				<Item Identity="CRBladeRampUpYp"/>
+				<Item Identity="CRBladeRampDown1Yp"/>
+				<Item Identity="CRBladePercRampDynYp"/>
+				<Item Identity="CRBladeRampDynLimitYp"/>
+				<Item Identity="CRBladeRampDown2Yp"/>
+				<Item Identity="CRBladeRampUpYm"/>
+				<Item Identity="CRBladeRampDown1Ym"/>
+				<Item Identity="CRBladePercRampDynYm"/>
+				<Item Identity="CRBladeRampDynLimitYm"/>
+				<Item Identity="CRBladeRampDown2Ym"/>
+				<Item Identity="CDBladeLUT2DYp"/>
+				<Item Identity="CDBladeLUT2DYm"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>DrivingLight</Name>
+			</GroupLocale>
+				<Item Identity="QXLightFront"/>
+				<Item Identity="QXLightBack"/>
+				<Item Identity="QXLightEquip"/>
+				<Item Identity="QXLightUppercar"/>
+				<Item Identity="CXadLightUppercar"/>
+				<Item Identity="CXadLightBack"/>
+				<Item Identity="CXadLightFrontDown"/>
+				<Item Identity="MXLightFront"/>
+				<Item Identity="MXLightBack"/>
+				<Item Identity="MXLightEquip"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>End Stop</Name>
+			</GroupLocale>
+				<Item Identity="IRBtEnablingUpS55_2"/>
+				<Item Identity="IRBtEnablingDownS55_1"/>
+				<Item Identity="IRSensB55_1_2"/>
+				<Item Identity="IRSensB55_2_2"/>
+				<Item Identity="IRSensB55_1_1"/>
+				<Item Identity="IRSensB55_2_1"/>
+				<Item Identity="QRDampingY459"/>
+				<Item Identity="CXadEndStopStickIn"/>
+				<Item Identity="CXadEndStopStickOut"/>
+				<Item Identity="CXadEndStopBoomUp"/>
+				<Item Identity="CXadEndStopBoomDown"/>
+				<Item Identity="CXCylProtecChangeTrackAngleStick"/>
+				<Item Identity="CXSetStickCylSens"/>
+				<Item Identity="CXSetBoomCylSens"/>
+				<Item Identity="CXCylProtecChangeTrackAngleBoom"/>
+				<Item Identity="CRCylProtecStickInEnd"/>
+				<Item Identity="CRCylProtecBoomUpEnd"/>
+				<Item Identity="CRCylProtecBoomDownEnd"/>
+				<Item Identity="CRCylProtecStickOutEnd"/>
+				<Item Identity="CXCylProtecSaveStickIn"/>
+				<Item Identity="CXCylProtecSaveStickOut"/>
+				<Item Identity="CXCylProtecSaveBoomDown"/>
+				<Item Identity="CXCylProtecSaveBoomUp"/>
+				<Item Identity="LRAngleStickAbsolut"/>
+				<Item Identity="LRAngleBoomAbsolut"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Setting Dynamique</Name>
+					</GroupLocale>
+					<Item Identity="CRLimitMoveStickDynSpeedMinDown"/>
+					<Item Identity="CRLimitMoveStickDynSpeedMaxDown"/>
+					<Item Identity="CRLimitMoveStickDynOffsetMinDown"/>
+					<Item Identity="CRLimitMoveStickDynOffsetMaxDown"/>
+					<Item Identity="LRLimitMoveStickAngleGradient"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Engine control Tier3A</Name>
+			</GroupLocale>
+				<Item Identity="IXEng1Starter"/>
+				<Item Identity="IXEng1Alternator"/>
+				<Item Identity="IXEng1Running"/>
+				<Item Identity="IXEng1StartLock"/>
+				<Item Identity="IXEng1AsynchError"/>
+				<Item Identity="IXEng1PowerRedCR"/>
+				<Item Identity="IXEng1PowerRedTemp"/>
+				<Item Identity="IXEng1PowerRedHigh"/>
+				<Item Identity="IXEng1PreheatBit0"/>
+				<Item Identity="IXEng1PreheatBit1"/>
+				<Item Identity="IXEng1Brake"/>
+				<Item Identity="IXEng1MaxFanSpeed"/>
+				<Item Identity="IXEng1MinFanSpeed"/>
+				<Item Identity="IXEng1RequireStop"/>
+				<Item Identity="IXEng1DemSpeMinOk"/>
+				<Item Identity="IXEng1DemSpeMaxOk"/>
+				<Item Identity="IXEng1CoolWatTempW"/>
+				<Item Identity="IXEng1CoolWatTempE"/>
+				<Item Identity="IXEng1ChaAirTempW"/>
+				<Item Identity="IXEng1ChaAirTempE"/>
+				<Item Identity="IXEng1FuelTempW"/>
+				<Item Identity="IXEng1FuelTempE"/>
+				<Item Identity="IXEng1WaterInFuel"/>
+				<Item Identity="IXEng1Reserve24"/>
+				<Item Identity="IXEng1HydrOilTempW"/>
+				<Item Identity="IXEng1HydrOilTempE"/>
+				<Item Identity="IXEng1LubOilPresW"/>
+				<Item Identity="IXEng1LubOilPresE"/>
+				<Item Identity="IXEng1FuelPresLoW"/>
+				<Item Identity="IXEng1FuelPresLoE"/>
+				<Item Identity="IXEng1AirFilterW"/>
+				<Item Identity="IXEng1AirFilterE"/>
+				<Item Identity="IXEng1CR1PressLoW"/>
+				<Item Identity="IXEng1CR1PressLoE"/>
+				<Item Identity="IXEng1CR2PressLoW"/>
+				<Item Identity="IXEng1CR2PressLoE"/>
+				<Item Identity="IXEng1ReservePressSensLowE"/>
+				<Item Identity="IXEng1ReservePressSensLowW"/>
+				<Item Identity="IXEng1OilLevelWarningLow"/>
+				<Item Identity="IXEng1OilLevelSafetyLow"/>
+				<Item Identity="IXEng1CoolWatLevE"/>
+				<Item Identity="IXEng1VoltageHigh"/>
+				<Item Identity="IXEng1VoltageLow"/>
+				<Item Identity="IXEng1SpeedHighW"/>
+				<Item Identity="IXEng1SpeedHighE"/>
+				<Item Identity="IXEng1FuelPresHiW"/>
+				<Item Identity="IXEng1FuelPresHiE"/>
+				<Item Identity="IXEng1Reserve48"/>
+				<Item Identity="IXEng1EmergStopStart"/>
+				<Item Identity="IXEng1EmergStopSpSen"/>
+				<Item Identity="IXEng1EmergStopInjec"/>
+				<Item Identity="IXEng1EmergStopEDC"/>
+				<Item Identity="IXEng1Reserve53"/>
+				<Item Identity="IXEng1Reserve54"/>
+				<Item Identity="IXEng1Reserve55"/>
+				<Item Identity="IXEng1ECUTimeout"/>
+				<Item Identity="QXEng1Start"/>
+				<Item Identity="QXEng1Enable"/>
+				<Item Identity="QXEng1ForcedNeutr"/>
+				<Item Identity="QXEng1CANfanSpeed"/>
+				<Item Identity="QXEng1Bleeding"/>
+				<Item Identity="QXEng1ReglerType"/>
+				<Item Identity="QXEng1WorkingMode"/>
+				<Item Identity="QXEng1DemMinEngSpeed"/>
+				<Item Identity="QXEng1DemMaxEngSpeed"/>
+				<Item Identity="IREngActSpeed"/>
+				<Item Identity="IREngActTorque"/>
+				<Item Identity="IREngMaxTorque"/>
+				<Item Identity="IREngDemThrottle"/>
+				<Item Identity="IREngBattVoltage"/>
+				<Item Identity="IREngChaAirTemp"/>
+				<Item Identity="IREngCoolWatTemp"/>
+				<Item Identity="IREngHyrdOilTemp"/>
+				<Item Identity="IREngLubOilPress"/>
+				<Item Identity="IREngChaAirPress"/>
+				<Item Identity="IREngFuelCons"/>
+				<Item Identity="IREngReserve12"/>
+				<Item Identity="IREngReserve13"/>
+				<Item Identity="QREngSpeedSelect"/>
+				<Item Identity="QREngTorqueSelect"/>
+				<Item Identity="QREngFanControl"/>
+				<Item Identity="LREngChaAirTempF"/>
+				<Item Identity="LREngCoolWatTempF"/>
+				<Item Identity="LRHydOilTempF"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Engine control Tier3B</Name>
+			</GroupLocale>
+				<Item Identity="IREngActSpeed"/>
+				<Item Identity="IREngActTorque"/>
+				<Item Identity="IREngMaxTorque"/>
+				<Item Identity="IREngDemThrottle"/>
+				<Item Identity="IREngBattVoltage"/>
+				<Item Identity="IREngChaAirTemp"/>
+				<Item Identity="IREngCoolWatTemp"/>
+				<Item Identity="IREngHyrdOilTemp"/>
+				<Item Identity="IREngLubOilPress"/>
+				<Item Identity="IREngChaAirPress"/>
+				<Item Identity="IREngFuelCons"/>
+				<Item Identity="IREngReserve12"/>
+				<Item Identity="IREngReserve13"/>
+				<Item Identity="QREngSpeedSelect"/>
+				<Item Identity="QREngTorqueSelect"/>
+				<Item Identity="QREngFanControl"/>
+				<Item Identity="IXEng2Starter"/>
+				<Item Identity="IXEng2Alternator"/>
+				<Item Identity="IXEng2Running"/>
+				<Item Identity="IXEng2ExhaustBrake"/>
+				<Item Identity="IXEng2StartLock"/>
+				<Item Identity="IXEng2Reserve6"/>
+				<Item Identity="IXEng2PowerRedProblem"/>
+				<Item Identity="IXEng2PowerRedAltitude"/>
+				<Item Identity="IXEng2Preheat"/>
+				<Item Identity="IXEng2StartPrepared"/>
+				<Item Identity="IXEng2Postheat"/>
+				<Item Identity="IXEng2Reserve12"/>
+				<Item Identity="IXEng2StateDO3"/>
+				<Item Identity="IXEng2StateDO4"/>
+				<Item Identity="IXEng2DemSpeMinOk"/>
+				<Item Identity="IXEng2DemSpeMaxOk"/>
+				<Item Identity="IXEng2CoolWatTempW"/>
+				<Item Identity="IXEng2CoolWatTempE"/>
+				<Item Identity="IXEng2ChaAirTempW"/>
+				<Item Identity="IXEng2ChaAirTempE"/>
+				<Item Identity="IXEng2FuelTempW"/>
+				<Item Identity="IXEng2FuelTempE"/>
+				<Item Identity="IXEng2WaterInFuel"/>
+				<Item Identity="IXEng2Reserve24"/>
+				<Item Identity="IXEng2HydrOilTempW"/>
+				<Item Identity="IXEng2HydrOilTempE"/>
+				<Item Identity="IXEng2LubOilPresW"/>
+				<Item Identity="IXEng2LubOilPresE"/>
+				<Item Identity="IXEng2FuelPresLoW"/>
+				<Item Identity="IXEng2FuelPresLoE"/>
+				<Item Identity="IXEng2AirFilterW"/>
+				<Item Identity="IXEng2AirFilterE"/>
+				<Item Identity="IXEng2CRPressLoW"/>
+				<Item Identity="IXEng2CRPressLoE"/>
+				<Item Identity="IXEng2CoolWatLevW"/>
+				<Item Identity="IXEng2CoolWatLevE"/>
+				<Item Identity="IXEng2PvgTempW"/>
+				<Item Identity="IXEng2PvgTempE"/>
+				<Item Identity="IXEng2LubOilLevW"/>
+				<Item Identity="IXEng2LubOilLevE"/>
+				<Item Identity="IXEng2SpeedHighW"/>
+				<Item Identity="IXEng2SpeedHighE"/>
+				<Item Identity="IXEng2LubOilLevMonitoring"/>
+				<Item Identity="IXEng2Reserve44"/>
+				<Item Identity="IXEng2Reserve45"/>
+				<Item Identity="IXEng2Reserve46"/>
+				<Item Identity="IXEng2Reserve47"/>
+				<Item Identity="IXEng2Reserve48"/>
+				<Item Identity="IXEng2EmergStopForce"/>
+				<Item Identity="IXEng2EmergStopRequest"/>
+				<Item Identity="IXEng2EmergStopCommend"/>
+				<Item Identity="IXEng2AsyncInfo"/>
+				<Item Identity="IXEng2MILWarning"/>
+				<Item Identity="IXEng2MILError"/>
+				<Item Identity="IXEng2Reserve55"/>
+				<Item Identity="IXEng2Reserve56"/>
+				<Item Identity="IXEng2Reserve57"/>
+				<Item Identity="IXEng2Reserve58"/>
+				<Item Identity="IXEng2Reserve59"/>
+				<Item Identity="IXEng2Reserve60"/>
+				<Item Identity="IXEng2Reserve61"/>
+				<Item Identity="IXEng2Reserve62"/>
+				<Item Identity="IXEng2Reserve63"/>
+				<Item Identity="IXEng2Reserve64"/>
+				<Item Identity="QXEng2Start"/>
+				<Item Identity="QXEng2InjectionOff"/>
+				<Item Identity="QXEng2Enable"/>
+				<Item Identity="QXEng2PedalFree"/>
+				<Item Identity="QXEng2Reserve5"/>
+				<Item Identity="QXEng2BrakeReq"/>
+				<Item Identity="QXEng2BrakeLock"/>
+				<Item Identity="QXEng2CANfanSpeed"/>
+				<Item Identity="QXEng2SwitchDO3"/>
+				<Item Identity="QXEng2SwitchDO4"/>
+				<Item Identity="QXEng2Reserve11"/>
+				<Item Identity="QXEng2Reserve12"/>
+				<Item Identity="QXEng2ReglerType"/>
+				<Item Identity="QXEng2WorkingMode"/>
+				<Item Identity="QXEng2DemMinEngSpeed"/>
+				<Item Identity="QXEng2DemMaxEngSpeed"/>
+				<Item Identity="QXEng2Reserve17"/>
+				<Item Identity="QXEng2Reserve18"/>
+				<Item Identity="QXEng2Reserve19"/>
+				<Item Identity="QXEng2Reserve20"/>
+				<Item Identity="QXEng2Reserve21"/>
+				<Item Identity="QXEng2Reserve22"/>
+				<Item Identity="QXEng2Reserve23"/>
+				<Item Identity="QXEng2Reserve24"/>
+				<Item Identity="IXAgnReserve1"/>
+				<Item Identity="IXAgnReserve2"/>
+				<Item Identity="IXAgnHEST"/>
+				<Item Identity="IXAgnAdBlueWarningLevel"/>
+				<Item Identity="IXAgnAdBlueSafetyLevel"/>
+				<Item Identity="IXAgnServiceRegenerationRequest"/>
+				<Item Identity="IXAgnReserve7"/>
+				<Item Identity="IXAgnReserve8"/>
+				<Item Identity="IDAgnMode"/>
+				<Item Identity="IRAgnSootLoadLevel"/>
+				<Item Identity="IRAgnReserve11"/>
+				<Item Identity="IRAgnEngTorqueRequest"/>
+				<Item Identity="IRAgnRemainingTimeRegEnd"/>
+				<Item Identity="IRAgnAdBlueLevel"/>
+				<Item Identity="IRAgnReserve15"/>
+				<Item Identity="QXAgnDPFRegenerationEnable"/>
+				<Item Identity="QXAgnDPFRegenerationInitiate"/>
+				<Item Identity="QXAgnDPFServiceRegenerationStart"/>
+				<Item Identity="CXadAGN"/>
+				<Item Identity="LREngChaAirTempF"/>
+				<Item Identity="LREngCoolWatTempF"/>
+				<Item Identity="LRHydOilTempF"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Equipment Control</Name>
+			</GroupLocale>
+				<Item Identity="CXadEquipmentControl"/>
+				<Item Identity="CDEquipCodingKey1"/>
+				<Item Identity="CDEquipCodingKey2"/>
+				<Item Identity="CDEquipCodingKey3"/>
+				<Item Identity="MDEquipCodingKey"/>
+				<Item Identity="MDIndexEquipCodingKey"/>
+				<Item Identity="MDEquipCodingKeyReq"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>FanControl</Name>
+			</GroupLocale>
+				<Item Identity="IREngChaAirTemp"/>
+				<Item Identity="IREngCoolWatTemp"/>
+				<Item Identity="IRHydrOilTempB8"/>
+				<Item Identity="QRFanY347"/>
+				<Item Identity="QRFanReversibleY356"/>
+				<Item Identity="QRFanReversibleY357"/>
+				<Item Identity="IXacStaCompressor"/>
+				<Item Identity="CXadCoolReversible"/>
+				<Item Identity="CXadCoolTropicMode"/>
+				<Item Identity="CXadCoolReversibleAuto"/>
+				<Item Identity="CXCoolFanRampAgn"/>
+				<Item Identity="CDCoolReversiblePeriod"/>
+				<Item Identity="CRCoolFanRampAgn"/>
+				<Item Identity="CRCoolRegenSpeedLow"/>
+				<Item Identity="CRCoolRegenSpeedHigh"/>
+				<Item Identity="CRCoolRegenTempHigh"/>
+				<Item Identity="CRCoolRegenSpeedLowTropic"/>
+				<Item Identity="CRCoolRegenSpeedHighTropic"/>
+				<Item Identity="CRCoolRegenTempHighTropic"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>FuelPreHeat</Name>
+			</GroupLocale>
+				<Item Identity="QXFuelPreHeatR8"/>
+				<Item Identity="CXadFuelPreHeat"/>
+				<Item Identity="MXFuelPreHeat"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Greasing</Name>
+			</GroupLocale>
+				<Item Identity="IRGreasingB5"/>
+				<Item Identity="IRGreaseLowLevelB50"/>
+				<Item Identity="QXGreasePump"/>
+				<Item Identity="CXadCentrGrease"/>
+				<Item Identity="CXGreaseTimerReset"/>
+				<Item Identity="CXGreaseErrorTimerReset"/>
+				<Item Identity="CDGreaseHTcyc"/>
+				<Item Identity="CDGreaseHcnt"/>
+				<Item Identity="CDGreaseNTcyc"/>
+				<Item Identity="CDGreaseNcnt"/>
+				<Item Identity="CDGreaseLTcyc"/>
+				<Item Identity="CDGreaseLcnt"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Diag. Greasing</Name>
+					</GroupLocale>
+					<Item Identity="LDGreaseCycleRemTime"/>
+					<Item Identity="LDGreaseAutoTotalTime"/>
+					<Item Identity="LDGreaseErrorTime_1"/>
+					<Item Identity="LDGreaseTotalRuns"/>
+					<Item Identity="LDGreaseActualRuns"/>
+					<Item Identity="LDGreaseResumeCycle"/>
+					<Item Identity="LRGreaseTotalTime"/>
+					<Item Identity="LDGreaseMode"/>
+					<Item Identity="LDGreaseTotalCycleReq"/>
+					<Item Identity="LXGreaseErrorStrokes"/>
+					<Item Identity="LXGreaseErrorClock"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>HarvesterControl</Name>
+			</GroupLocale>
+				<Item Identity="IROptionAI1A173"/>
+				<Item Identity="IROptionAI2A173"/>
+				<Item Identity="QROptionAO1A59"/>
+				<Item Identity="QRTransCtrlAHSY461"/>
+				<Item Identity="QROptionAO5A59"/>
+				<Item Identity="QROptionAO6A59"/>
+				<Item Identity="IXOptionAO1A59Ov"/>
+				<Item Identity="IXOptionAO1A59Vo"/>
+				<Item Identity="IXTransCtrlAHSY461Ov"/>
+				<Item Identity="IXTransCtrlAHSY461Vo"/>
+				<Item Identity="IXOptionAO5A59Ov"/>
+				<Item Identity="IXOptionAO5A59Vo"/>
+				<Item Identity="IXOptionAO6A59Ov"/>
+				<Item Identity="IXOptionAO6A59Vo"/>
+				<Item Identity="QXReserve1A172"/>
+				<Item Identity="CXadHarvesterControl"/>
+				<Item Identity="CXadHarvesterControl2"/>
+				<Item Identity="CRHarvCtrlCurrentCtrlPhase1"/>
+				<Item Identity="CRHarvCtrlCurrentCtrlPhase2"/>
+				<Item Identity="CRHarvCtrlCurrentEnactive"/>
+				<Item Identity="CDHarvCtrlDelayEV2Off"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>HighSpeedGear</Name>
+			</GroupLocale>
+				<Item Identity="QRTravelSpeedY24"/>
+				<Item Identity="MXTravelSpeed"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Horn</Name>
+			</GroupLocale>
+				<Item Identity="IRJsLYpBtS5M"/>
+				<Item Identity="IRJsLBtLS5L"/>
+				<Item Identity="QXOutput9A169"/>
+				<Item Identity="QXReserve5A170"/>
+				<Item Identity="LXHornHorn"/>
+				<Item Identity="LXHornJsLXmBt"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>LiDAT</Name>
+			</GroupLocale>
+				<Item Identity="CXadLidatPeriodicUpdate"/>
+				<Item Identity="CXadTeleserviceAccess"/>
+				<Item Identity="CXFuelConsResetSum"/>
+				<Item Identity="CXLidatManualTrigger"/>
+				<Item Identity="CDLidatPeriodicUpdateTime"/>
+				<Item Identity="CDLidatTriggerFrequency"/>
+				<Item Identity="MWmaInfFuel"/>
+				<Item Identity="MDmaFuelConsSum"/>
+				<Item Identity="MDmaInfOpTime"/>
+				<Item Identity="MDServHydrRemT"/>
+				<Item Identity="MDServEngRemT"/>
+				<Item Identity="MDServGearRemT"/>
+				<Item Identity="MRmaTransFastT"/>
+				<Item Identity="MRmaTransSlowT"/>
+				<Item Identity="MRmaModePT"/>
+				<Item Identity="MRmaModeET"/>
+				<Item Identity="MRmaModeST"/>
+				<Item Identity="MRmaModePPT"/>
+				<Item Identity="MRmaJoysSensT"/>
+				<Item Identity="MRmaEngSpLowT"/>
+				<Item Identity="MRmaEngSpHighT"/>
+				<Item Identity="MRmaSlewGearT"/>
+				<Item Identity="MRmaAHST"/>
+				<Item Identity="MRmaModeNOTT"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>LR_Management</Name>
+			</GroupLocale>
+				<Item Identity="IREngActSpeed"/>
+				<Item Identity="IREngActTorque"/>
+				<Item Identity="QREngSpeedSelect"/>
+				<Item Identity="QRLRY50"/>
+				<Item Identity="CXadAGN"/>
+				<Item Identity="CXLrSpeedFuehrungActiv"/>
+				<Item Identity="CXLrPstFuehrungActiv"/>
+				<Item Identity="CXLrTurboFuehrungActiv"/>
+				<Item Identity="CXLrGlrActive"/>
+				<Item Identity="CXLrInvConv"/>
+				<Item Identity="CXLrPowerFuehrungActiv"/>
+				<Item Identity="CRLrModeEMaxPowerCurrent"/>
+				<Item Identity="CRLrModePMaxPowerCurrent"/>
+				<Item Identity="CRLrModeSMaxPowerCurrent"/>
+				<Item Identity="CRLrTempLimitPower"/>
+				<Item Identity="CRLrMinPowerCurrent"/>
+				<Item Identity="CRLrSpeedOffset"/>
+				<Item Identity="CRLrSpeedFuehrungDeltaMin"/>
+				<Item Identity="CRLrSpeedFuehrungDeltaMax"/>
+				<Item Identity="CRLrSpeedFuehrungRedMin"/>
+				<Item Identity="CRLrSpeedFuehrungRedMax"/>
+				<Item Identity="CRLrTurboFuehrungPressMin"/>
+				<Item Identity="CRLrTurboFuehrungPressMax"/>
+				<Item Identity="CRLrTurboFuehrungRedMin"/>
+				<Item Identity="CRLrTurboFuehrungRedMax"/>
+				<Item Identity="CRLrTurboFuehrungRamp"/>
+				<Item Identity="CRLrRampPowerIncUp"/>
+				<Item Identity="CRLrRampPowerIncDown"/>
+				<Item Identity="CRLrRampPowerIncChange"/>
+				<Item Identity="CRLrRampPowerDec"/>
+				<Item Identity="CRLrGlrKiPos"/>
+				<Item Identity="CRLrGlrKiNeg"/>
+				<Item Identity="CRLrGlrKiPosBand"/>
+				<Item Identity="CRLrGlrKiNegBand"/>
+				<Item Identity="CRLrGlrKiNegMin"/>
+				<Item Identity="CRLrGlrKiFill"/>
+				<Item Identity="CRLrGlrKiPosMin"/>
+				<Item Identity="CRLrGlrKd"/>
+				<Item Identity="CRLrGlrKpPosFalling"/>
+				<Item Identity="CRLrGlrKpNegFalling"/>
+				<Item Identity="CRLrGlrKpNegRising"/>
+				<Item Identity="CRLrGlrKpPosRising"/>
+				<Item Identity="CRLrGlrKpNegBand"/>
+				<Item Identity="CRLrGlrKpNegFallingMin"/>
+				<Item Identity="CRLrGlrKpNegRisingMin"/>
+				<Item Identity="CRLrGlrSurcharge"/>
+				<Item Identity="CRLrGlrEngSpeedMin"/>
+				<Item Identity="CDLrPstFuehrungCurveIdx"/>
+				<Item Identity="CRLrPowerFuehrungRedMin"/>
+				<Item Identity="CRLrPowerFuehrungRedMax"/>
+				<Item Identity="CRLrPowerFuehrungTorqueMin"/>
+				<Item Identity="CRLrPowerFuehrungTorqueMax"/>
+				<Item Identity="CDLrFuehrungMode"/>
+				<Item Identity="CRLrModeEMaxPowerCurrentFAP"/>
+				<Item Identity="CRLrModePMaxPowerCurrentFAP"/>
+				<Item Identity="CRLrModeSMaxPowerCurrentFAP"/>
+				<Item Identity="CRLrTempLimitPowerFAP"/>
+				<Item Identity="CRLrMinPowerCurrentFAP"/>
+				<Item Identity="CRLrSpeedOffsetFAP"/>
+				<Item Identity="CRLrSpeedFuehrungDeltaMinFAP"/>
+				<Item Identity="CRLrSpeedFuehrungDeltaMaxFAP"/>
+				<Item Identity="CRLrSpeedFuehrungRedMinFAP"/>
+				<Item Identity="CRLrSpeedFuehrungRedMaxFAP"/>
+				<Item Identity="CRLrTurboFuehrungPressMinFAP"/>
+				<Item Identity="CRLrTurboFuehrungPressMaxFAP"/>
+				<Item Identity="CRLrTurboFuehrungRedMinFAP"/>
+				<Item Identity="CRLrTurboFuehrungRedMaxFAP"/>
+				<Item Identity="CRLrTurboFuehrungRampFAP"/>
+				<Item Identity="CRLrRampPowerIncUpFAP"/>
+				<Item Identity="CRLrRampPowerIncDownFAP"/>
+				<Item Identity="CRLrRampPowerIncChangeFAP"/>
+				<Item Identity="CRLrRampPowerDecFAP"/>
+				<Item Identity="CRLrGlrKiPosFAP"/>
+				<Item Identity="CRLrGlrKiNegFAP"/>
+				<Item Identity="CRLrGlrKiPosBandFAP"/>
+				<Item Identity="CRLrGlrKiNegBandFAP"/>
+				<Item Identity="CRLrGlrKiNegMinFAP"/>
+				<Item Identity="CRLrGlrKiFillFAP"/>
+				<Item Identity="CRLrGlrKiPosMinFAP"/>
+				<Item Identity="CRLrGlrKdFAP"/>
+				<Item Identity="CRLrGlrKpPosFallingFAP"/>
+				<Item Identity="CRLrGlrKpNegFallingFAP"/>
+				<Item Identity="CRLrGlrKpNegRisingFAP"/>
+				<Item Identity="CRLrGlrKpPosRisingFAP"/>
+				<Item Identity="CRLrGlrKpNegBandFAP"/>
+				<Item Identity="CRLrGlrKpNegFallingMinFAP"/>
+				<Item Identity="CRLrGlrKpNegRisingMinFAP"/>
+				<Item Identity="CRLrGlrSurchargeFAP"/>
+				<Item Identity="CRLrGlrEngSpeedMinFAP"/>
+				<Item Identity="CDLrPstFuehrungCurveIdxFAP"/>
+				<Item Identity="CRLrPowerFuehrungRedMinFAP"/>
+				<Item Identity="CRLrPowerFuehrungRedMaxFAP"/>
+				<Item Identity="CRLrPowerFuehrungTorqueMinFAP"/>
+				<Item Identity="CRLrPowerFuehrungTorqueMaxFAP"/>
+				<Item Identity="CDLrFuehrungModeFAP"/>
+				<Item Identity="LRPosCtrlHydrOilTemp"/>
+				<Item Identity="LRPosCtrlPstMaxPercent"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>MagneticSystem</Name>
+			</GroupLocale>
+				<Item Identity="IRJsRBtLS6L"/>
+				<Item Identity="QROptionAO5A59"/>
+				<Item Identity="QXMagneticSystem"/>
+				<Item Identity="CXadMagneticSystem"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>OLW</Name>
+			</GroupLocale>
+				<Item Identity="IRSensBoomCylB190"/>
+				<Item Identity="IRBtConfirm2S497"/>
+				<Item Identity="IRBtConfirm1S497"/>
+				<Item Identity="IROverloadWarningB21"/>
+				<Item Identity="CXadOLW"/>
+				<Item Identity="CROLWPressSensMean"/>
+				<Item Identity="MXOLW"/>
+				<Item Identity="LROLWSensBoomCyl"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>PositiveControl</Name>
+			</GroupLocale>
+				<Item Identity="QXEng1ReglerType"/>
+				<Item Identity="IREngActSpeed"/>
+				<Item Identity="IREngActTorque"/>
+				<Item Identity="IRSensBoomCylB190"/>
+				<Item Identity="IRSensAHSPdlRB173"/>
+				<Item Identity="IRSensStickOutB202"/>
+				<Item Identity="IRDblPdlLElecR"/>
+				<Item Identity="IRDblPdlLElecL"/>
+				<Item Identity="IRDblPdlRElecR"/>
+				<Item Identity="IRDblPdlRElecL"/>
+				<Item Identity="IRSensStickCylB189"/>
+				<Item Identity="IDRotatingSpeedB53"/>
+				<Item Identity="IRSensPdlLBackwardB170"/>
+				<Item Identity="IRSensPdlRForwardB171"/>
+				<Item Identity="IRAHSLPdlLB172_2"/>
+				<Item Identity="IRAHSLPdlRB172_1"/>
+				<Item Identity="IRSensStickOutB161"/>
+				<Item Identity="IRSensStickInB162"/>
+				<Item Identity="IRSensBoomUpB163"/>
+				<Item Identity="IRSensSwingRB168"/>
+				<Item Identity="IRSensBoomDownB164"/>
+				<Item Identity="IRSensShovelOutB165"/>
+				<Item Identity="IRSensShovelInB166"/>
+				<Item Identity="IRSensSwingLB167"/>
+				<Item Identity="IRSensPdlLForwardB169"/>
+				<Item Identity="IRSensPumpB159"/>
+				<Item Identity="IRSensPumpB160"/>
+				<Item Identity="IRSensPdlRBackwardB174"/>
+				<Item Identity="QRSumStickY419"/>
+				<Item Identity="QRSumBoomY420"/>
+				<Item Identity="QRStickRegY421"/>
+				<Item Identity="QRTravelStraightY415"/>
+				<Item Identity="QROptionTransferringY416"/>
+				<Item Identity="QRCut1Y417"/>
+				<Item Identity="QRCut2Y418"/>
+				<Item Identity="QREL1Y51"/>
+				<Item Identity="QREL2Y52"/>
+				<Item Identity="LRPosCtrlBoomCylB190"/>
+				<Item Identity="LRPosCtrlPresSensorPump1"/>
+				<Item Identity="LRPosCtrlPresSensorPump2"/>
+				<Item Identity="LRPosCtrlStickCylB189"/>
+				<Item Identity="LRPosCtrlPresSensorBoomDown"/>
+				<Item Identity="LRPosCtrlPresSensorShovelOutward"/>
+				<Item Identity="LRPosCtrlPresSensorShovelInward"/>
+				<Item Identity="LRPosCtrlPresSensorSwingLeft"/>
+				<Item Identity="LRPosCtrlPresSensorArmOutward"/>
+				<Item Identity="LRPosCtrlPresSensorArmInward"/>
+				<Item Identity="LRPosCtrlPresSensorBoomUp"/>
+				<Item Identity="LRPosCtrlPresSensorSwingRight"/>
+				<Item Identity="LRPosCtrlPedalAHSLeft"/>
+				<Item Identity="LRPosCtrlPedalAHSRight"/>
+				<Item Identity="LRPosCtrlPresSensorPedalLeftBackward"/>
+				<Item Identity="LRPosCtrlPresSensorPedalLeftForward"/>
+				<Item Identity="LRPosCtrlPresSensorPedalRightForward"/>
+				<Item Identity="LRPosCtrlPresSensorPedalRightBackward"/>
+				<Item Identity="LRPosCtrlEngSpeedOrder"/>
+				<Item Identity="LRPosCtrlEngSpeed"/>
+				<Item Identity="LRPosCtrlHydrOilTemp"/>
+				<Item Identity="LRPosCtrlTurboPressure"/>
+				<Item Identity="LRPosCtrlFanCurrent"/>
+				<Item Identity="LRPosCtrlRotationSpeedB53"/>
+				<Item Identity="LDPosCtrlMode"/>
+				<Item Identity="LRPosCtrlEngSpeedAdaptated"/>
+				<Item Identity="LRPosCtrlEngTorqueAdaptated"/>
+				<Item Identity="LXPosCtrlFastTransActiv_2"/>
+				<Item Identity="LRSensStickByPassB198"/>
+				<Item Identity="LRSensBoomCylB190Psi"/>
+				<Item Identity="LRSensPumpB159Psi"/>
+				<Item Identity="LRSensPumpB160Psi"/>
+				<Item Identity="LRSensStickCylB189Psi"/>
+				<Item Identity="LRSensBoomDownB164Psi"/>
+				<Item Identity="LRSensShovelOutB165Psi"/>
+				<Item Identity="LRSensShovelInB166Psi"/>
+				<Item Identity="LRSensSwingLB167Psi"/>
+				<Item Identity="LRSensStickOutB161Psi"/>
+				<Item Identity="LRSensStickInB162Psi"/>
+				<Item Identity="LRSensBoomUpB163Psi"/>
+				<Item Identity="LRSensSwingRB168Psi"/>
+				<Item Identity="LRSensAHSPdlB172Psi"/>
+				<Item Identity="LRSensAHSPdlRB173Psi"/>
+				<Item Identity="LRSensPdlLBackwardB170Psi"/>
+				<Item Identity="LRSensPdlLForwardB169Psi"/>
+				<Item Identity="LRSensPdlRForwardB171Psi"/>
+				<Item Identity="LRSensPdlRBackwardB174Psi"/>
+				<Item Identity="LRSensStickByPassB198Psi"/>
+				<Item Identity="LRPresSensStickOutB202"/>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Boom</Name>
+					</GroupLocale>
+					<Item Identity="IRSensBoomCylB190"/>
+					<Item Identity="IRSensBoomUpB163"/>
+					<Item Identity="IRSensBoomDownB164"/>
+					<Item Identity="IRSensPumpB159"/>
+					<Item Identity="IRSensPumpB160"/>
+					<Item Identity="QRSumBoomY420"/>
+					<Item Identity="QRCut2Y418"/>
+					<Item Identity="QREL1Y51"/>
+					<Item Identity="QREL2Y52"/>
+					<Item Identity="LRPosCtrlBoomCylB190"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRPosCtrlPresSensorBoomDown"/>
+					<Item Identity="LRPosCtrlPresSensorBoomUp"/>
+					<Item Identity="LRPosCtrlHydrOilTemp"/>
+					<Item Identity="LRSensBoomCylB190Psi"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+					<Item Identity="LRSensBoomDownB164Psi"/>
+					<Item Identity="LRSensBoomUpB163Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Stick</Name>
+					</GroupLocale>
+					<Item Identity="IRSensStickOutB202"/>
+					<Item Identity="IRSensStickCylB189"/>
+					<Item Identity="IRSensStickOutB161"/>
+					<Item Identity="IRSensStickInB162"/>
+					<Item Identity="IRSensPumpB159"/>
+					<Item Identity="IRSensPumpB160"/>
+					<Item Identity="QRSumStickY419"/>
+					<Item Identity="QRStickRegY421"/>
+					<Item Identity="QRCut1Y417"/>
+					<Item Identity="QREL1Y51"/>
+					<Item Identity="QREL2Y52"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRPosCtrlStickCylB189"/>
+					<Item Identity="LRPosCtrlPresSensorArmOutward"/>
+					<Item Identity="LRPosCtrlPresSensorArmInward"/>
+					<Item Identity="LRPosCtrlHydrOilTemp"/>
+					<Item Identity="LRSensStickByPassB198"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+					<Item Identity="LRSensStickCylB189Psi"/>
+					<Item Identity="LRSensStickOutB161Psi"/>
+					<Item Identity="LRSensStickInB162Psi"/>
+					<Item Identity="LRSensStickByPassB198Psi"/>
+					<Item Identity="LRPresSensStickOutB202"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>shovel</Name>
+					</GroupLocale>
+					<Item Identity="IRSensShovelOutB165"/>
+					<Item Identity="IRSensShovelInB166"/>
+					<Item Identity="IRSensPumpB159"/>
+					<Item Identity="IRSensPumpB160"/>
+					<Item Identity="QRCut2Y418"/>
+					<Item Identity="QREL2Y52"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRPosCtrlPresSensorShovelOutward"/>
+					<Item Identity="LRPosCtrlPresSensorShovelInward"/>
+					<Item Identity="LRPosCtrlHydrOilTemp"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+					<Item Identity="LRSensShovelOutB165Psi"/>
+					<Item Identity="LRSensShovelInB166Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Translation</Name>
+					</GroupLocale>
+					<Item Identity="IRSensPdlLBackwardB170"/>
+					<Item Identity="IRSensPdlRForwardB171"/>
+					<Item Identity="IRSensPdlLForwardB169"/>
+					<Item Identity="IRSensPumpB159"/>
+					<Item Identity="IRSensPumpB160"/>
+					<Item Identity="IRSensPdlRBackwardB174"/>
+					<Item Identity="QRTravelStraightY415"/>
+					<Item Identity="QRCut1Y417"/>
+					<Item Identity="QRCut2Y418"/>
+					<Item Identity="QREL1Y51"/>
+					<Item Identity="QREL2Y52"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRPosCtrlPresSensorPedalLeftBackward"/>
+					<Item Identity="LRPosCtrlPresSensorPedalLeftForward"/>
+					<Item Identity="LRPosCtrlPresSensorPedalRightForward"/>
+					<Item Identity="LRPosCtrlPresSensorPedalRightBackward"/>
+					<Item Identity="LRPosCtrlHydrOilTemp"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+					<Item Identity="LRSensPdlLBackwardB170Psi"/>
+					<Item Identity="LRSensPdlLForwardB169Psi"/>
+					<Item Identity="LRSensPdlRForwardB171Psi"/>
+					<Item Identity="LRSensPdlRBackwardB174Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Option</Name>
+					</GroupLocale>
+					<Item Identity="IRSensAHSPdlRB173"/>
+					<Item Identity="IRDblPdlLElecR"/>
+					<Item Identity="IRDblPdlLElecL"/>
+					<Item Identity="IRDblPdlRElecR"/>
+					<Item Identity="IRDblPdlRElecL"/>
+					<Item Identity="IRAHSLPdlLB172_2"/>
+					<Item Identity="IRAHSLPdlRB172_1"/>
+					<Item Identity="IRSensPumpB159"/>
+					<Item Identity="IRSensPumpB160"/>
+					<Item Identity="QROptionTransferringY416"/>
+					<Item Identity="QREL2Y52"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRPosCtrlPedalAHSLeft"/>
+					<Item Identity="LRPosCtrlPedalAHSRight"/>
+					<Item Identity="LRPosCtrlHydrOilTemp"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+					<Item Identity="LRSensAHSPdlB172Psi"/>
+					<Item Identity="LRSensAHSPdlRB173Psi"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Swing</Name>
+					</GroupLocale>
+					<Item Identity="IDRotatingSpeedB53"/>
+					<Item Identity="IRSensSwingRB168"/>
+					<Item Identity="IRSensSwingLB167"/>
+					<Item Identity="IRSensPumpB159"/>
+					<Item Identity="IRSensPumpB160"/>
+					<Item Identity="QRCut1Y417"/>
+					<Item Identity="QREL1Y51"/>
+					<Item Identity="LRPosCtrlPresSensorPump1"/>
+					<Item Identity="LRPosCtrlPresSensorPump2"/>
+					<Item Identity="LRPosCtrlPresSensorSwingLeft"/>
+					<Item Identity="LRPosCtrlPresSensorSwingRight"/>
+					<Item Identity="LRPosCtrlHydrOilTemp"/>
+					<Item Identity="LRSensPumpB159Psi"/>
+					<Item Identity="LRSensPumpB160Psi"/>
+					<Item Identity="LRSensSwingLB167Psi"/>
+					<Item Identity="LRSensSwingRB168Psi"/>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>QuickChange</Name>
+			</GroupLocale>
+				<Item Identity="IRJsLXp"/>
+				<Item Identity="IRQChangeSensSupB318"/>
+				<Item Identity="IRBtConfirm2S497"/>
+				<Item Identity="IRJsLXm"/>
+				<Item Identity="IRBtConfirm1S497"/>
+				<Item Identity="IRQChangeB26_1"/>
+				<Item Identity="IROptionAI3A173"/>
+				<Item Identity="IROptionAI9A173"/>
+				<Item Identity="QXQChangeEnablingY28"/>
+				<Item Identity="QRJsLXmY23"/>
+				<Item Identity="QRJsLXpY22"/>
+				<Item Identity="QXQChangeEnabling2Y129"/>
+				<Item Identity="CXadRotDr"/>
+				<Item Identity="CXadQChangeWorkTool"/>
+				<Item Identity="CXadQChangeWorkTool2"/>
+				<Item Identity="CXadQChangeSensSup"/>
+				<Item Identity="CXadRotDr25cm3"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>QuickChange2</Name>
+			</GroupLocale>
+				<Item Identity="IRJsLXp"/>
+				<Item Identity="IRQChangeSensSupB318"/>
+				<Item Identity="IRBtConfirm2S497"/>
+				<Item Identity="IRJsLXm"/>
+				<Item Identity="IRBtConfirm1S497"/>
+				<Item Identity="IRQChangeB26_1"/>
+				<Item Identity="IROptionAI3A173"/>
+				<Item Identity="IROptionAI9A173"/>
+				<Item Identity="QXQChangeEnablingY28"/>
+				<Item Identity="QRJsLXmY23"/>
+				<Item Identity="QRJsLXpY22"/>
+				<Item Identity="QXQChangeEnabling2Y129"/>
+				<Item Identity="CXadRotDr"/>
+				<Item Identity="CXadQChangeWorkToolSWA"/>
+				<Item Identity="CXadQChangeWorkToolSWA2"/>
+				<Item Identity="CXadQChangeWorkToolMH"/>
+				<Item Identity="CXadQChangeWorkToolMH2"/>
+				<Item Identity="CXadQChangeSensSup"/>
+				<Item Identity="CXadRotDr25cm3"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>QuickChangeBoom</Name>
+			</GroupLocale>
+				<Item Identity="IRJsLXp"/>
+				<Item Identity="IRBtConfirm2S497"/>
+				<Item Identity="IRJsLXm"/>
+				<Item Identity="IRBtConfirm1S497"/>
+				<Item Identity="IROptionAI4A173"/>
+				<Item Identity="IROptionAI10A173"/>
+				<Item Identity="QRJsLXmY23"/>
+				<Item Identity="QRJsLXpY22"/>
+				<Item Identity="QXReserve2A59"/>
+				<Item Identity="CXadRotDr"/>
+				<Item Identity="CXadQChangeBoomSWA"/>
+				<Item Identity="CXadRotDr25cm3"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>RotaryDrive</Name>
+			</GroupLocale>
+				<Item Identity="IRJsLXp"/>
+				<Item Identity="IRJsLBtRS5R"/>
+				<Item Identity="IRJsLBtLS5L"/>
+				<Item Identity="IRJsLXm"/>
+				<Item Identity="IR5VSens"/>
+				<Item Identity="IRReserveAI16A173"/>
+				<Item Identity="QXSafetyValvePY369"/>
+				<Item Identity="QXSafetyValveMY370"/>
+				<Item Identity="QXSafetyShutDown"/>
+				<Item Identity="QRJsLXmY23"/>
+				<Item Identity="QRJsLXpY22"/>
+				<Item Identity="CXadRotDr"/>
+				<Item Identity="CXadJsLPropX"/>
+				<Item Identity="CXadRotDr25cm3"/>
+				<Item Identity="MXRotDrActiveKey"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>RotatingBeacon</Name>
+			</GroupLocale>
+				<Item Identity="QXRotBeaconE9"/>
+				<Item Identity="CXadLightRotBeacon"/>
+				<Item Identity="CXadLightRotBeaconAuto"/>
+				<Item Identity="CXadRotBeaconForcedIfTravAl"/>
+				<Item Identity="MXRotBeacon"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>RotatingStick</Name>
+			</GroupLocale>
+				<Item Identity="IRAHSLPdlRB172_1"/>
+				<Item Identity="QROptionAO3A59"/>
+				<Item Identity="QROptionAO4A59"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>SafetyLever</Name>
+			</GroupLocale>
+				<Item Identity="IRSafetyLeverLockS7_1"/>
+				<Item Identity="IRReserveAI6A173"/>
+				<Item Identity="QXCtrlCircSupplyY3"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>SlewingGearBrake</Name>
+			</GroupLocale>
+				<Item Identity="IRSafetyLeverLockS7_1"/>
+				<Item Identity="IRSwingBrake2S57_2"/>
+				<Item Identity="IRSwingBrake1S57_1"/>
+				<Item Identity="IDRotatingSpeedB53"/>
+				<Item Identity="IRSensSwingRB168"/>
+				<Item Identity="IRSensSwingLB167"/>
+				<Item Identity="IRReserveAI6A173"/>
+				<Item Identity="IRReserveAI14A173"/>
+				<Item Identity="IRReserveAI15A173"/>
+				<Item Identity="QXSwingBrakeY7"/>
+				<Item Identity="CXadSwingBrakeManu"/>
+				<Item Identity="MXSwingBrake"/>
+				<Item Identity="LXSwingBrakeSensSwingL"/>
+				<Item Identity="LXSwingBrakeSensSwingR"/>
+				<Item Identity="LXSwingBrakeSwingBrake"/>
+				<Item Identity="LRSwingBrakeRotatingSpeed"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Telescope</Name>
+			</GroupLocale>
+				<Item Identity="IRBtEnablingUpS55_2"/>
+				<Item Identity="IRBtEnablingDownS55_1"/>
+				<Item Identity="IRSwingBrake2S57_2"/>
+				<Item Identity="IRSwingBrake1S57_1"/>
+				<Item Identity="IRSensB55_1_2"/>
+				<Item Identity="IRSensB55_2_2"/>
+				<Item Identity="IRSensB55_1_1"/>
+				<Item Identity="IRSensB55_2_1"/>
+				<Item Identity="IRAHSLPdlRB172_1"/>
+				<Item Identity="QRCylShutDownY21_1"/>
+				<Item Identity="QRCylShutDownY21_2"/>
+				<Item Identity="QROptionAO3A59"/>
+				<Item Identity="CXadTelescope"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>Tool Control Extern</Name>
+			</GroupLocale>
+				<Item Identity="CXadToolManageExtern"/>
+				<Item Identity="IXToolManageWorkErr"/>
+				<Item Identity="IDToolManageIndexRequest"/>
+				<Item Identity="IDToolManageIndexSelected"/>
+				<Item Identity="IDToolManageMaxIndex"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>AHS11</Name>
+			</GroupLocale>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>ToolControl</Name>
+					</GroupLocale>
+					<Item Identity="database.ToolControl.ToolName.1"/>
+					<Item Identity="database.ToolControl.ToolName.2"/>
+					<Item Identity="database.ToolControl.ToolName.3"/>
+					<Item Identity="database.ToolControl.ToolName.4"/>
+					<Item Identity="database.ToolControl.ToolName.5"/>
+					<Item Identity="database.ToolControl.ToolName.6"/>
+					<Item Identity="database.ToolControl.ToolName.7"/>
+					<Item Identity="database.ToolControl.ToolName.8"/>
+					<Item Identity="database.ToolControl.ToolName.9"/>
+					<Item Identity="database.ToolControl.ToolName.10"/>
+					<Item Identity="IRSensAHSPdlRB173"/>
+					<Item Identity="IRDblPdlLElecR"/>
+					<Item Identity="IRDblPdlLElecL"/>
+					<Item Identity="IRDblPdlRElecR"/>
+					<Item Identity="IRDblPdlRElecL"/>
+					<Item Identity="IRAHSLPdlLB172_2"/>
+					<Item Identity="IRAHSLPdlRB172_1"/>
+					<Item Identity="QREL1Y51"/>
+					<Item Identity="QREL2Y52"/>
+					<Item Identity="QRToolCtrlOutputY414_1"/>
+					<Item Identity="CXadToolCtrlAHS11"/>
+					<Item Identity="CXadToolCtrlAHS12"/>
+					<Item Identity="CXadToolCtrl"/>
+					<Item Identity="CRTcAHS2FlowRate1"/>
+					<Item Identity="CRTcAHS2FlowRate2"/>
+					<Item Identity="CRTcAHS2Pressure1"/>
+					<Item Identity="CRTcTool01FlowRate1"/>
+					<Item Identity="CRTcTool01FlowRate2"/>
+					<Item Identity="CRTcTool01Pressure1"/>
+					<Item Identity="CRTcTool02FlowRate1"/>
+					<Item Identity="CRTcTool02FlowRate2"/>
+					<Item Identity="CRTcTool02Pressure1"/>
+					<Item Identity="CRTcTool03FlowRate1"/>
+					<Item Identity="CRTcTool03FlowRate2"/>
+					<Item Identity="CRTcTool03Pressure1"/>
+					<Item Identity="CRTcTool04FlowRate1"/>
+					<Item Identity="CRTcTool04FlowRate2"/>
+					<Item Identity="CRTcTool04Pressure1"/>
+					<Item Identity="CRTcTool05FlowRate1"/>
+					<Item Identity="CRTcTool05FlowRate2"/>
+					<Item Identity="CRTcTool05Pressure1"/>
+					<Item Identity="CRTcTool06FlowRate1"/>
+					<Item Identity="CRTcTool06FlowRate2"/>
+					<Item Identity="CRTcTool06Pressure1"/>
+					<Item Identity="CRTcTool07FlowRate1"/>
+					<Item Identity="CRTcTool07FlowRate2"/>
+					<Item Identity="CRTcTool07Pressure1"/>
+					<Item Identity="CRTcTool08FlowRate1"/>
+					<Item Identity="CRTcTool08FlowRate2"/>
+					<Item Identity="CRTcTool08Pressure1"/>
+					<Item Identity="CRTcTool09FlowRate1"/>
+					<Item Identity="CRTcTool09FlowRate2"/>
+					<Item Identity="CRTcTool09Pressure1"/>
+					<Item Identity="CRTcTool10FlowRate1"/>
+					<Item Identity="CRTcTool10FlowRate2"/>
+					<Item Identity="CRTcTool10Pressure1"/>
+					<Item Identity="CRTcTool01FlowRate3"/>
+					<Item Identity="CRTcTool02FlowRate3"/>
+					<Item Identity="CRTcTool03FlowRate3"/>
+					<Item Identity="CRTcTool04FlowRate3"/>
+					<Item Identity="CRTcTool05FlowRate3"/>
+					<Item Identity="CRTcTool06FlowRate3"/>
+					<Item Identity="CRTcTool07FlowRate3"/>
+					<Item Identity="CRTcTool08FlowRate3"/>
+					<Item Identity="CRTcTool09FlowRate3"/>
+					<Item Identity="CRTcTool10FlowRate3"/>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>CylinderProtec</Name>
+						</GroupLocale>
+					<Item Identity="QXCylProtecY175"/>
+					<Item Identity="CXadTcCylProtec"/>
+					<Item Identity="CXTcTool01OutCylProtActive"/>
+					<Item Identity="CXTcTool02OutCylProtActive"/>
+					<Item Identity="CXTcTool03OutCylProtActive"/>
+					<Item Identity="CXTcTool04OutCylProtActive"/>
+					<Item Identity="CXTcTool05OutCylProtActive"/>
+					<Item Identity="CXTcTool06OutCylProtActive"/>
+					<Item Identity="CXTcTool07OutCylProtActive"/>
+					<Item Identity="CXTcTool08OutCylProtActive"/>
+					<Item Identity="CXTcTool09OutCylProtActive"/>
+					<Item Identity="CXTcTool10OutCylProtActive"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>FlowDivider</Name>
+						</GroupLocale>
+					<Item Identity="CXadToolCtrlFlowDivider"/>
+					<Item Identity="CXTcTool01OutFlowDivActive"/>
+					<Item Identity="CXTcTool02OutFlowDivActive"/>
+					<Item Identity="CXTcTool03OutFlowDivActive"/>
+					<Item Identity="CXTcTool04OutFlowDivActive"/>
+					<Item Identity="CXTcTool05OutFlowDivActive"/>
+					<Item Identity="CXTcTool06OutFlowDivActive"/>
+					<Item Identity="CXTcTool07OutFlowDivActive"/>
+					<Item Identity="CXTcTool08OutFlowDivActive"/>
+					<Item Identity="CXTcTool09OutFlowDivActive"/>
+					<Item Identity="CXTcTool10OutFlowDivActive"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>ToolPriorityManagement</Name>
+						</GroupLocale>
+					<Item Identity="CRTcToolPriorManageFlowRate1Lim"/>
+					<Item Identity="CRTcToolPriorManageFlowRate2Lim"/>
+					<Item Identity="CRTcToolPriorManagePressure1Lim"/>
+				</Group>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>ProportionalDriving</Name>
+					</GroupLocale>
+					<Item Identity="IRJsRXp"/>
+					<Item Identity="IRJsRXm"/>
+					<Item Identity="IR5VSens"/>
+					<Item Identity="IRDblPdlLElecR"/>
+					<Item Identity="IRDblPdlLElecL"/>
+					<Item Identity="IRAHSLPdlRB172_1"/>
+					<Item Identity="IROptionAI3A173"/>
+					<Item Identity="IRReserveAI16A173"/>
+					<Item Identity="QXSafetyValvePY369"/>
+					<Item Identity="QXSafetyValveMY370"/>
+					<Item Identity="QRJsRXpY445"/>
+					<Item Identity="QRJsRXmY446"/>
+					<Item Identity="CXadJsRPropX"/>
+					<Item Identity="CXadToolCtrlAHS11ToJsRX"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>TransferringControlAHS11</Name>
+					</GroupLocale>
+					<Item Identity="IRDblPdlLElecR"/>
+					<Item Identity="IRDblPdlLElecL"/>
+					<Item Identity="IRAHSLPdlRB172_1"/>
+					<Item Identity="QRTransCtrlAHSY189_2"/>
+					<Item Identity="QRTransCtrlAHSY189_1"/>
+					<Item Identity="CXadTransCtrlAHSToTiltBucket"/>
+			</Group>
+				<Group>
+					<GroupLocale Lang="eng">
+						<Name>Tool Management</Name>
+					</GroupLocale>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Parameters</Name>
+						</GroupLocale>
+					<Item Identity="CXadToolManagement"/>
+					<Item Identity="CXIpcCmdRead"/>
+					<Item Identity="CXIpcCmdWrite"/>
+					<Item Identity="CXIpcCmdCopyTotal"/>
+					<Item Identity="CXIpcCmdPastTotal"/>
+					<Item Identity="CDOperatorMode"/>
+					<Item Identity="LDPficIndexCounter"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Tool Setting</Name>
+						</GroupLocale>
+					<Item Identity="MDIpcToolMgtFixcode"/>
+					<Item Identity="MDIpcToolMgtOilNumber"/>
+					<Item Identity="MDIpcToolMgtSerialNo"/>
+					<Item Identity="MDIpcToolMgtNameChar1"/>
+					<Item Identity="MDIpcToolMgtNameChar2"/>
+					<Item Identity="MDIpcToolMgtNameChar3"/>
+					<Item Identity="MDIpcToolMgtNameChar4"/>
+					<Item Identity="MDIpcToolMgtNameChar5"/>
+					<Item Identity="MDIpcToolMgtNameChar6"/>
+					<Item Identity="MDIpcToolMgtNameChar7"/>
+					<Item Identity="MDIpcToolMgtNameChar8"/>
+					<Item Identity="MDIpcToolMgtNameChar9"/>
+					<Item Identity="MDIpcToolMgtNameChar10"/>
+					<Item Identity="MDIpcToolMgtNameChar11"/>
+					<Item Identity="MDIpcToolMgtNameChar12"/>
+					<Item Identity="MDIpcToolMgtWorkHourTotal"/>
+					<Item Identity="MDIpcToolMgtWorkHourMode1"/>
+					<Item Identity="MDIpcToolMgtNextService"/>
+					<Item Identity="MDIpcToolMgtMinPressureA"/>
+					<Item Identity="MDIpcToolMgtMaxPressureA"/>
+					<Item Identity="MDIpcToolMgtMinFlowRateA"/>
+					<Item Identity="MDIpcToolMgtMaxFlowRateA"/>
+					<Item Identity="MDIpcToolMgtGravityCenterX"/>
+					<Item Identity="MDIpcToolMgtGravityCenterY"/>
+					<Item Identity="MDIpcToolMgtWeight"/>
+					<Item Identity="MDIpcToolMgtVolume"/>
+					<Item Identity="MDIpcToolMgtLength"/>
+					<Item Identity="MDIpcToolMgtWidth"/>
+					<Item Identity="MDIpcToolMgtHeight"/>
+					<Item Identity="MDIpcToolMgtRadius"/>
+					<Item Identity="MDIpcToolMgtVectorX"/>
+					<Item Identity="MDIpcToolMgtVectorY"/>
+					<Item Identity="MDIpcToolMgtServiceInterval"/>
+				</Group>
+					<Group>
+						<GroupLocale Lang="eng">
+							<Name>Machine Setting</Name>
+						</GroupLocale>
+					<Item Identity="MDMachineHydOilTypeCode"/>
+				</Group>
+			</Group>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>TravelAlarm</Name>
+			</GroupLocale>
+				<Item Identity="IRJsRBtRS6R"/>
+				<Item Identity="CXadTravAl"/>
+				<Item Identity="LRTravAlSensPdlLBackward"/>
+				<Item Identity="LRTravAlSensPdlLForward"/>
+				<Item Identity="LRTravAlSensPdlRBackward"/>
+				<Item Identity="LRTravAlSensPdlRForward"/>
+				<Item Identity="LRTravAlSensPdlWhole"/>
+		</Group>
+			<Group>
+			<GroupLocale Lang="eng">
+				<Name>WindscreenWasher</Name>
+			</GroupLocale>
+				<Item Identity="IXWashingLevel"/>
+				<Item Identity="QXWWasherFront"/>
+				<Item Identity="QXWashingFront"/>
+				<Item Identity="QXWWasherTop"/>
+				<Item Identity="QXWashingTop"/>
+				<Item Identity="QXOutput8A169"/>
+				<Item Identity="QXOutput9A169"/>
+				<Item Identity="CXadWWasherTop"/>
+				<Item Identity="CXadWWasherBack"/>
+				<Item Identity="MDWWasherModeFront"/>
+				<Item Identity="MDWWasherModeTop"/>
+				<Item Identity="MDWWasherModeBack"/>
+		</Group>
+	</Group>
+	<Group>
+		<GroupLocale Lang="eng">
+			<Name>Param Machine</Name>
+		</GroupLocale>
+			<Item Identity="database.ToolControl.ToolName.1"/>
+			<Item Identity="database.ToolControl.ToolName.2"/>
+			<Item Identity="database.ToolControl.ToolName.3"/>
+			<Item Identity="database.ToolControl.ToolName.4"/>
+			<Item Identity="database.ToolControl.ToolName.5"/>
+			<Item Identity="database.ToolControl.ToolName.6"/>
+			<Item Identity="database.ToolControl.ToolName.7"/>
+			<Item Identity="database.ToolControl.ToolName.8"/>
+			<Item Identity="database.ToolControl.ToolName.9"/>
+			<Item Identity="database.ToolControl.ToolName.10"/>
+			<Item Identity="CXadOLW"/>
+			<Item Identity="CXadCentrGrease"/>
+			<Item Identity="CXadTravAl"/>
+			<Item Identity="CXadRotDr"/>
+			<Item Identity="CXadQChangeWorkTool"/>
+			<Item Identity="CXadToolCtrlAHS11"/>
+			<Item Identity="CXadTransCtrlAHSToTiltBucket"/>
+			<Item Identity="CXadEnableAC"/>
+			<Item Identity="CXadWWasherTop"/>
+			<Item Identity="CXadWWasherBack"/>
+			<Item Identity="CXadFuelPreHeat"/>
+			<Item Identity="CXadLightUppercar"/>
+			<Item Identity="CXadCylShDownBoom"/>
+			<Item Identity="CXadCylShDownBoomAll"/>
+			<Item Identity="CXadCylShDownStickAll"/>
+			<Item Identity="CXadCylShDownStick"/>
+			<Item Identity="CXadLightRotBeacon"/>
+			<Item Identity="CXadRadioMute"/>
+			<Item Identity="CXadCamera"/>
+			<Item Identity="CXadLightBack"/>
+			<Item Identity="CXadToolCtrlAHS12"/>
+			<Item Identity="CXadToolCtrl"/>
+			<Item Identity="CXadCoolReversible"/>
+			<Item Identity="CXadCoolTropicMode"/>
+			<Item Identity="CXadTcCylProtec"/>
+			<Item Identity="CXadLightFrontDown"/>
+			<Item Identity="CXNewHardware"/>
+			<Item Identity="CXadToolCtrlFlowDivider"/>
+			<Item Identity="CXadToolCtrlRedFlowLgEquip"/>
+			<Item Identity="CXadEngStopAfterRun"/>
+			<Item Identity="CXadJsLPropX"/>
+			<Item Identity="CXadJsLPropY"/>
+			<Item Identity="CXadJsRPropX"/>
+			<Item Identity="CXadJsRPropY"/>
+			<Item Identity="CXadToolCtrlAHS11ToJsRX"/>
+			<Item Identity="CXadFloatPosition"/>
+			<Item Identity="CXadTransCtrlJsLToRBt"/>
+			<Item Identity="CXadToolPriorManage"/>
+			<Item Identity="CXadMowingBucket"/>
+			<Item Identity="CXadAutoEngStop"/>
+			<Item Identity="CXadLightRotBeaconAuto"/>
+			<Item Identity="CXadSwingBrakeManu"/>
+			<Item Identity="CXadQChangeWorkTool2"/>
+			<Item Identity="CXadJsSensCapacitifOff"/>
+			<Item Identity="CXadTransCtrlBoomHeightToSide"/>
+			<Item Identity="CXadTransCtrlBtS55Enab"/>
+			<Item Identity="CXadTransCtrlBtS57Enab"/>
+			<Item Identity="CXadRotStick"/>
+			<Item Identity="CXadLidatPeriodicUpdate"/>
+			<Item Identity="CXadTransCtrlAHSToJsRX"/>
+			<Item Identity="CXadAdjCab"/>
+			<Item Identity="CXadHarvesterControl"/>
+			<Item Identity="CXadLightForceIfEngOn"/>
+			<Item Identity="CXadQChangeWorkToolSWA"/>
+			<Item Identity="CXadQChangeWorkToolSWA2"/>
+			<Item Identity="CXadQChangeWorkToolMH"/>
+			<Item Identity="CXadQChangeWorkToolMH2"/>
+			<Item Identity="CXadQChangeSensSup"/>
+			<Item Identity="CXadEquipmentControl"/>
+			<Item Identity="CXadAGN"/>
+			<Item Identity="CXadCylShDownOff"/>
+			<Item Identity="CXadRadioRemoteControl"/>
+			<Item Identity="CXadCoolReversibleAuto"/>
+			<Item Identity="CXadRotBeaconForcedIfTravAl"/>
+			<Item Identity="CXadHarvesterControl2"/>
+			<Item Identity="CXadMagneticSystem"/>
+			<Item Identity="CXadDozerBlade"/>
+			<Item Identity="CXadConfigUnitsMenu"/>
+			<Item Identity="CXadQChangeBoomSWA"/>
+			<Item Identity="CXadToolManageExtern"/>
+			<Item Identity="CXadTeleserviceAccess"/>
+			<Item Identity="CXadToolCtrlAHS12Elec"/>
+			<Item Identity="CXadEndStopStickIn"/>
+			<Item Identity="CXadEndStopStickOut"/>
+			<Item Identity="CXadEndStopBoomUp"/>
+			<Item Identity="CXadEndStopBoomDown"/>
+			<Item Identity="CXadCylShDownStickIn"/>
+			<Item Identity="CXadCylShDownStickOut"/>
+			<Item Identity="CXadCylShDownBoomDown"/>
+			<Item Identity="CXadCylShDownBoomUp"/>
+			<Item Identity="CXadChipper"/>
+			<Item Identity="CXadLimitTravelSpeed"/>
+			<Item Identity="CXadToolManagement"/>
+			<Item Identity="CXadRotDr25cm3"/>
+			<Item Identity="CXadCumulAHS11Shovel"/>
+			<Item Identity="CXadTelescope"/>
+			<Item Identity="CXadPdlRAHS1"/>
+			<Item Identity="CXadTravStraight"/>
+			<Item Identity="CXTcTool01OutCylProtActive"/>
+			<Item Identity="CXTcTool01OutFlowDivActive"/>
+			<Item Identity="CXTcTool02OutCylProtActive"/>
+			<Item Identity="CXTcTool02OutFlowDivActive"/>
+			<Item Identity="CXTcTool03OutCylProtActive"/>
+			<Item Identity="CXTcTool03OutFlowDivActive"/>
+			<Item Identity="CXTcTool04OutCylProtActive"/>
+			<Item Identity="CXTcTool04OutFlowDivActive"/>
+			<Item Identity="CXTcTool05OutCylProtActive"/>
+			<Item Identity="CXTcTool05OutFlowDivActive"/>
+			<Item Identity="CXTcTool06OutCylProtActive"/>
+			<Item Identity="CXTcTool06OutFlowDivActive"/>
+			<Item Identity="CXTcTool07OutCylProtActive"/>
+			<Item Identity="CXTcTool07OutFlowDivActive"/>
+			<Item Identity="CXTcTool08OutCylProtActive"/>
+			<Item Identity="CXTcTool08OutFlowDivActive"/>
+			<Item Identity="CXTcTool09OutCylProtActive"/>
+			<Item Identity="CXTcTool09OutFlowDivActive"/>
+			<Item Identity="CXTcTool10OutCylProtActive"/>
+			<Item Identity="CXTcTool10OutFlowDivActive"/>
+			<Item Identity="CXToolCtrlTool01ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool02ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool03ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool04ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool05ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool06ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool07ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool08ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool09ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool10ToolPriorManage"/>
+			<Item Identity="CXadLiebherrCameraUsed"/>
+			<Item Identity="CXadNewKeyboard"/>
+			<Item Identity="CXEngBoostActivation"/>
+			<Item Identity="CXPosCtrlOptionValveY354"/>
+			<Item Identity="CXPosCtrlSumNew"/>
+			<Item Identity="CDGreaseHTcyc"/>
+			<Item Identity="CDGreaseHcnt"/>
+			<Item Identity="CDGreaseNTcyc"/>
+			<Item Identity="CDGreaseNcnt"/>
+			<Item Identity="CDGreaseLTcyc"/>
+			<Item Identity="CDGreaseLcnt"/>
+			<Item Identity="CDservHydInterv"/>
+			<Item Identity="CDservHydUnblock"/>
+			<Item Identity="CDservEngInterv"/>
+			<Item Identity="CDservEngUnblock"/>
+			<Item Identity="CDservAxleInterv"/>
+			<Item Identity="CDservAxlUnblock"/>
+			<Item Identity="CDmachinSpecType"/>
+			<Item Identity="CDmachinSerialNr"/>
+			<Item Identity="CRTcMaxFlowRate1"/>
+			<Item Identity="CRTcMaxFlowRate2"/>
+			<Item Identity="CRTcAHS2FlowRate1"/>
+			<Item Identity="CRTcAHS2FlowRate2"/>
+			<Item Identity="CRTcAHS2Pressure1"/>
+			<Item Identity="CRTcAHS2Pressure2"/>
+			<Item Identity="CRTcAHS3FlowRate1"/>
+			<Item Identity="CRTcAHS3FlowRate2"/>
+			<Item Identity="CRTcAHS3Pressure1"/>
+			<Item Identity="CRTcAHS3Pressure2"/>
+			<Item Identity="CRTcTool01FlowRate1"/>
+			<Item Identity="CRTcTool01FlowRate2"/>
+			<Item Identity="CRTcTool01Pressure1"/>
+			<Item Identity="CRTcTool01Pressure2"/>
+			<Item Identity="CRTcTool02FlowRate1"/>
+			<Item Identity="CRTcTool02FlowRate2"/>
+			<Item Identity="CRTcTool02Pressure1"/>
+			<Item Identity="CRTcTool02Pressure2"/>
+			<Item Identity="CRTcTool03FlowRate1"/>
+			<Item Identity="CRTcTool03FlowRate2"/>
+			<Item Identity="CRTcTool03Pressure1"/>
+			<Item Identity="CRTcTool03Pressure2"/>
+			<Item Identity="CRTcTool04FlowRate1"/>
+			<Item Identity="CRTcTool04FlowRate2"/>
+			<Item Identity="CRTcTool04Pressure1"/>
+			<Item Identity="CRTcTool04Pressure2"/>
+			<Item Identity="CRTcTool05FlowRate1"/>
+			<Item Identity="CRTcTool05FlowRate2"/>
+			<Item Identity="CRTcTool05Pressure1"/>
+			<Item Identity="CRTcTool05Pressure2"/>
+			<Item Identity="CRTcTool06FlowRate1"/>
+			<Item Identity="CRTcTool06FlowRate2"/>
+			<Item Identity="CRTcTool06Pressure1"/>
+			<Item Identity="CRTcTool06Pressure2"/>
+			<Item Identity="CRTcTool07FlowRate1"/>
+			<Item Identity="CRTcTool07FlowRate2"/>
+			<Item Identity="CRTcTool07Pressure1"/>
+			<Item Identity="CRTcTool07Pressure2"/>
+			<Item Identity="CRTcTool08FlowRate1"/>
+			<Item Identity="CRTcTool08FlowRate2"/>
+			<Item Identity="CRTcTool08Pressure1"/>
+			<Item Identity="CRTcTool08Pressure2"/>
+			<Item Identity="CRTcTool09FlowRate1"/>
+			<Item Identity="CRTcTool09FlowRate2"/>
+			<Item Identity="CRTcTool09Pressure1"/>
+			<Item Identity="CRTcTool09Pressure2"/>
+			<Item Identity="CRTcTool10FlowRate1"/>
+			<Item Identity="CRTcTool10FlowRate2"/>
+			<Item Identity="CRTcTool10Pressure1"/>
+			<Item Identity="CRTcTool10Pressure2"/>
+			<Item Identity="CDmachinCodingKey"/>
+			<Item Identity="CDEquipCodingKey"/>
+			<Item Identity="CRCoolACFanNeed"/>
+			<Item Identity="CRCoolFanMaxSpeedCurrent"/>
+			<Item Identity="CRCoolFanMaxSpeedCurrentTropic"/>
+			<Item Identity="CRCoolFanReversibleCurrent"/>
+			<Item Identity="CRCoolFanReversibleCurrentTropic"/>
+			<Item Identity="CRValvesCtrlDeltaMinEL1"/>
+			<Item Identity="CRValvesCtrlDeltaMaxEL1"/>
+			<Item Identity="CRValvesCtrlDeltaMinEL2"/>
+			<Item Identity="CRValvesCtrlDeltaMaxEL2"/>
+			<Item Identity="CRValvesCtrlDeltaMinCut1"/>
+			<Item Identity="CRValvesCtrlDeltaMaxCut1"/>
+			<Item Identity="CRValvesCtrlDeltaMinCut2"/>
+			<Item Identity="CRValvesCtrlDeltaMaxCut2"/>
+			<Item Identity="CRValvesCtrlDeltaMinSumBoom"/>
+			<Item Identity="CRValvesCtrlDeltaMaxSumBoom"/>
+			<Item Identity="CRValvesCtrlDeltaMinSumStick"/>
+			<Item Identity="CRValvesCtrlDeltaMaxSumStick"/>
+			<Item Identity="CRValvesCtrlDeltaMinStickReg"/>
+			<Item Identity="CRValvesCtrlDeltaMaxStickReg"/>
+			<Item Identity="CRValvesCtrlDeltaMinStrTravel"/>
+			<Item Identity="CRValvesCtrlDeltaMaxStrTravel"/>
+			<Item Identity="CRValvesCtrlDeltaMinOptTransf"/>
+			<Item Identity="CRValvesCtrlDeltaMaxOptTransf"/>
+			<Item Identity="CROLWPressSensMean"/>
+			<Item Identity="CRTcTool01FlowRate3"/>
+			<Item Identity="CRTcTool02FlowRate3"/>
+			<Item Identity="CRTcTool03FlowRate3"/>
+			<Item Identity="CRTcTool04FlowRate3"/>
+			<Item Identity="CRTcTool05FlowRate3"/>
+			<Item Identity="CRTcTool06FlowRate3"/>
+			<Item Identity="CRTcTool07FlowRate3"/>
+			<Item Identity="CRTcTool08FlowRate3"/>
+			<Item Identity="CRTcTool09FlowRate3"/>
+			<Item Identity="CRTcTool10FlowRate3"/>
+			<Item Identity="CRCoolFanMinSpeedCurrent"/>
+			<Item Identity="CDEquipCodingKey1"/>
+			<Item Identity="CDEquipCodingKey2"/>
+			<Item Identity="CDEquipCodingKey3"/>
+			<Item Identity="CDSoftCheckIndex"/>
+			<Item Identity="CDSoftCheckIdent"/>
+			<Item Identity="CRValvesCtrlDeltaMinStickByp"/>
+			<Item Identity="CRValvesCtrlDeltaMaxStickByp"/>
+			<Item Identity="CDTool01CodingKey"/>
+			<Item Identity="CDTool02CodingKey"/>
+			<Item Identity="CDTool03CodingKey"/>
+			<Item Identity="CDTool04CodingKey"/>
+			<Item Identity="CDTool05CodingKey"/>
+			<Item Identity="CDTool06CodingKey"/>
+			<Item Identity="CDTool07CodingKey"/>
+			<Item Identity="CDTool08CodingKey"/>
+			<Item Identity="CDTool09CodingKey"/>
+			<Item Identity="CDTool10CodingKey"/>
+			<Item Identity="CRCoolACFanNeedTier3B"/>
+			<Item Identity="CRCoolFanMaxSpeedCurrentTier3B"/>
+			<Item Identity="CRCoolFanMaxSpeedCurrentTropicTier3B"/>
+	</Group>
+	<Group>
+		<GroupLocale Lang="eng">
+			<Name>Machine Setting</Name>
+		</GroupLocale>
+			<Item Identity="database.ToolControl.ToolName.1"/>
+			<Item Identity="database.ToolControl.ToolName.2"/>
+			<Item Identity="database.ToolControl.ToolName.3"/>
+			<Item Identity="database.ToolControl.ToolName.4"/>
+			<Item Identity="database.ToolControl.ToolName.5"/>
+			<Item Identity="database.ToolControl.ToolName.6"/>
+			<Item Identity="database.ToolControl.ToolName.7"/>
+			<Item Identity="database.ToolControl.ToolName.8"/>
+			<Item Identity="database.ToolControl.ToolName.9"/>
+			<Item Identity="database.ToolControl.ToolName.10"/>
+			<Item Identity="CXadOLW"/>
+			<Item Identity="CXadCentrGrease"/>
+			<Item Identity="CXadTravAl"/>
+			<Item Identity="CXadRotDr"/>
+			<Item Identity="CXadQChangeWorkTool"/>
+			<Item Identity="CXadToolCtrlAHS11"/>
+			<Item Identity="CXadTransCtrlAHSToTiltBucket"/>
+			<Item Identity="CXadEnableAC"/>
+			<Item Identity="CXadWWasherTop"/>
+			<Item Identity="CXadWWasherBack"/>
+			<Item Identity="CXadFuelPreHeat"/>
+			<Item Identity="CXadLightUppercar"/>
+			<Item Identity="CXadCylShDownBoom"/>
+			<Item Identity="CXadCylShDownBoomAll"/>
+			<Item Identity="CXadCylShDownStickAll"/>
+			<Item Identity="CXadCylShDownStick"/>
+			<Item Identity="CXadLightRotBeacon"/>
+			<Item Identity="CXadRadioMute"/>
+			<Item Identity="CXadCamera"/>
+			<Item Identity="CXadLightBack"/>
+			<Item Identity="CXadToolCtrlAHS12"/>
+			<Item Identity="CXadToolCtrl"/>
+			<Item Identity="CXadCoolReversible"/>
+			<Item Identity="CXadCoolTropicMode"/>
+			<Item Identity="CXadTcCylProtec"/>
+			<Item Identity="CXadLightFrontDown"/>
+			<Item Identity="CXNewHardware"/>
+			<Item Identity="CXadToolCtrlFlowDivider"/>
+			<Item Identity="CXadToolCtrlRedFlowLgEquip"/>
+			<Item Identity="CXadEngStopAfterRun"/>
+			<Item Identity="CXadJsLPropX"/>
+			<Item Identity="CXadJsLPropY"/>
+			<Item Identity="CXadJsRPropX"/>
+			<Item Identity="CXadJsRPropY"/>
+			<Item Identity="CXadToolCtrlAHS11ToJsRX"/>
+			<Item Identity="CXadFloatPosition"/>
+			<Item Identity="CXadTransCtrlJsLToRBt"/>
+			<Item Identity="CXadToolPriorManage"/>
+			<Item Identity="CXadMowingBucket"/>
+			<Item Identity="CXadAutoEngStop"/>
+			<Item Identity="CXadLightRotBeaconAuto"/>
+			<Item Identity="CXadSwingBrakeManu"/>
+			<Item Identity="CXadQChangeWorkTool2"/>
+			<Item Identity="CXadJsSensCapacitifOff"/>
+			<Item Identity="CXadTransCtrlBoomHeightToSide"/>
+			<Item Identity="CXadTransCtrlBtS55Enab"/>
+			<Item Identity="CXadTransCtrlBtS57Enab"/>
+			<Item Identity="CXadRotStick"/>
+			<Item Identity="CXadLidatPeriodicUpdate"/>
+			<Item Identity="CXadTransCtrlAHSToJsRX"/>
+			<Item Identity="CXadAdjCab"/>
+			<Item Identity="CXadHarvesterControl"/>
+			<Item Identity="CXadLightForceIfEngOn"/>
+			<Item Identity="CXadQChangeWorkToolSWA"/>
+			<Item Identity="CXadQChangeWorkToolSWA2"/>
+			<Item Identity="CXadQChangeWorkToolMH"/>
+			<Item Identity="CXadQChangeWorkToolMH2"/>
+			<Item Identity="CXadQChangeSensSup"/>
+			<Item Identity="CXadEquipmentControl"/>
+			<Item Identity="CXadAGN"/>
+			<Item Identity="CXadCylShDownOff"/>
+			<Item Identity="CXadRadioRemoteControl"/>
+			<Item Identity="CXadCoolReversibleAuto"/>
+			<Item Identity="CXadRotBeaconForcedIfTravAl"/>
+			<Item Identity="CXadHarvesterControl2"/>
+			<Item Identity="CXadMagneticSystem"/>
+			<Item Identity="CXadDozerBlade"/>
+			<Item Identity="CXadConfigUnitsMenu"/>
+			<Item Identity="CXadQChangeBoomSWA"/>
+			<Item Identity="CXadToolManageExtern"/>
+			<Item Identity="CXadTeleserviceAccess"/>
+			<Item Identity="CXadToolCtrlAHS12Elec"/>
+			<Item Identity="CXadEndStopStickIn"/>
+			<Item Identity="CXadEndStopStickOut"/>
+			<Item Identity="CXadEndStopBoomUp"/>
+			<Item Identity="CXadEndStopBoomDown"/>
+			<Item Identity="CXadCylShDownStickIn"/>
+			<Item Identity="CXadCylShDownStickOut"/>
+			<Item Identity="CXadCylShDownBoomDown"/>
+			<Item Identity="CXadCylShDownBoomUp"/>
+			<Item Identity="CXadChipper"/>
+			<Item Identity="CXadLimitTravelSpeed"/>
+			<Item Identity="CXadToolManagement"/>
+			<Item Identity="CXadRotDr25cm3"/>
+			<Item Identity="CXadCumulAHS11Shovel"/>
+			<Item Identity="CXadTelescope"/>
+			<Item Identity="CXadPdlRAHS1"/>
+			<Item Identity="CXadTravStraight"/>
+			<Item Identity="CXTcTool01OutCylProtActive"/>
+			<Item Identity="CXTcTool01OutFlowDivActive"/>
+			<Item Identity="CXTcTool02OutCylProtActive"/>
+			<Item Identity="CXTcTool02OutFlowDivActive"/>
+			<Item Identity="CXTcTool03OutCylProtActive"/>
+			<Item Identity="CXTcTool03OutFlowDivActive"/>
+			<Item Identity="CXTcTool04OutCylProtActive"/>
+			<Item Identity="CXTcTool04OutFlowDivActive"/>
+			<Item Identity="CXTcTool05OutCylProtActive"/>
+			<Item Identity="CXTcTool05OutFlowDivActive"/>
+			<Item Identity="CXTcTool06OutCylProtActive"/>
+			<Item Identity="CXTcTool06OutFlowDivActive"/>
+			<Item Identity="CXTcTool07OutCylProtActive"/>
+			<Item Identity="CXTcTool07OutFlowDivActive"/>
+			<Item Identity="CXTcTool08OutCylProtActive"/>
+			<Item Identity="CXTcTool08OutFlowDivActive"/>
+			<Item Identity="CXTcTool09OutCylProtActive"/>
+			<Item Identity="CXTcTool09OutFlowDivActive"/>
+			<Item Identity="CXTcTool10OutCylProtActive"/>
+			<Item Identity="CXTcTool10OutFlowDivActive"/>
+			<Item Identity="CXToolCtrlTool01ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool02ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool03ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool04ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool05ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool06ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool07ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool08ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool09ToolPriorManage"/>
+			<Item Identity="CXToolCtrlTool10ToolPriorManage"/>
+			<Item Identity="CXadLiebherrCameraUsed"/>
+			<Item Identity="CXadNewKeyboard"/>
+			<Item Identity="CXEngBoostActivation"/>
+			<Item Identity="CXPosCtrlOptionValveY354"/>
+			<Item Identity="CXPosCtrlSumNew"/>
+			<Item Identity="CDGreaseHTcyc"/>
+			<Item Identity="CDGreaseHcnt"/>
+			<Item Identity="CDGreaseNTcyc"/>
+			<Item Identity="CDGreaseNcnt"/>
+			<Item Identity="CDGreaseLTcyc"/>
+			<Item Identity="CDGreaseLcnt"/>
+			<Item Identity="CDservHydInterv"/>
+			<Item Identity="CDservHydUnblock"/>
+			<Item Identity="CDservEngInterv"/>
+			<Item Identity="CDservEngUnblock"/>
+			<Item Identity="CDservAxleInterv"/>
+			<Item Identity="CDservAxlUnblock"/>
+			<Item Identity="CDmachinSpecType"/>
+			<Item Identity="CDmachinSerialNr"/>
+			<Item Identity="CRTcMaxFlowRate1"/>
+			<Item Identity="CRTcMaxFlowRate2"/>
+			<Item Identity="CRTcAHS2FlowRate1"/>
+			<Item Identity="CRTcAHS2FlowRate2"/>
+			<Item Identity="CRTcAHS2Pressure1"/>
+			<Item Identity="CRTcAHS2Pressure2"/>
+			<Item Identity="CRTcAHS3FlowRate1"/>
+			<Item Identity="CRTcAHS3FlowRate2"/>
+			<Item Identity="CRTcAHS3Pressure1"/>
+			<Item Identity="CRTcAHS3Pressure2"/>
+			<Item Identity="CRTcTool01FlowRate1"/>
+			<Item Identity="CRTcTool01FlowRate2"/>
+			<Item Identity="CRTcTool01Pressure1"/>
+			<Item Identity="CRTcTool01Pressure2"/>
+			<Item Identity="CRTcTool02FlowRate1"/>
+			<Item Identity="CRTcTool02FlowRate2"/>
+			<Item Identity="CRTcTool02Pressure1"/>
+			<Item Identity="CRTcTool02Pressure2"/>
+			<Item Identity="CRTcTool03FlowRate1"/>
+			<Item Identity="CRTcTool03FlowRate2"/>
+			<Item Identity="CRTcTool03Pressure1"/>
+			<Item Identity="CRTcTool03Pressure2"/>
+			<Item Identity="CRTcTool04FlowRate1"/>
+			<Item Identity="CRTcTool04FlowRate2"/>
+			<Item Identity="CRTcTool04Pressure1"/>
+			<Item Identity="CRTcTool04Pressure2"/>
+			<Item Identity="CRTcTool05FlowRate1"/>
+			<Item Identity="CRTcTool05FlowRate2"/>
+			<Item Identity="CRTcTool05Pressure1"/>
+			<Item Identity="CRTcTool05Pressure2"/>
+			<Item Identity="CRTcTool06FlowRate1"/>
+			<Item Identity="CRTcTool06FlowRate2"/>
+			<Item Identity="CRTcTool06Pressure1"/>
+			<Item Identity="CRTcTool06Pressure2"/>
+			<Item Identity="CRTcTool07FlowRate1"/>
+			<Item Identity="CRTcTool07FlowRate2"/>
+			<Item Identity="CRTcTool07Pressure1"/>
+			<Item Identity="CRTcTool07Pressure2"/>
+			<Item Identity="CRTcTool08FlowRate1"/>
+			<Item Identity="CRTcTool08FlowRate2"/>
+			<Item Identity="CRTcTool08Pressure1"/>
+			<Item Identity="CRTcTool08Pressure2"/>
+			<Item Identity="CRTcTool09FlowRate1"/>
+			<Item Identity="CRTcTool09FlowRate2"/>
+			<Item Identity="CRTcTool09Pressure1"/>
+			<Item Identity="CRTcTool09Pressure2"/>
+			<Item Identity="CRTcTool10FlowRate1"/>
+			<Item Identity="CRTcTool10FlowRate2"/>
+			<Item Identity="CRTcTool10Pressure1"/>
+			<Item Identity="CRTcTool10Pressure2"/>
+			<Item Identity="CDEquipCodingKey"/>
+			<Item Identity="CRValvesCtrlDeltaMinEL1"/>
+			<Item Identity="CRValvesCtrlDeltaMaxEL1"/>
+			<Item Identity="CRValvesCtrlDeltaMinEL2"/>
+			<Item Identity="CRValvesCtrlDeltaMaxEL2"/>
+			<Item Identity="CRValvesCtrlDeltaMinCut1"/>
+			<Item Identity="CRValvesCtrlDeltaMaxCut1"/>
+			<Item Identity="CRValvesCtrlDeltaMinCut2"/>
+			<Item Identity="CRValvesCtrlDeltaMaxCut2"/>
+			<Item Identity="CRValvesCtrlDeltaMinSumBoom"/>
+			<Item Identity="CRValvesCtrlDeltaMaxSumBoom"/>
+			<Item Identity="CRValvesCtrlDeltaMinSumStick"/>
+			<Item Identity="CRValvesCtrlDeltaMaxSumStick"/>
+			<Item Identity="CRValvesCtrlDeltaMinStickReg"/>
+			<Item Identity="CRValvesCtrlDeltaMaxStickReg"/>
+			<Item Identity="CRValvesCtrlDeltaMinStrTravel"/>
+			<Item Identity="CRValvesCtrlDeltaMaxStrTravel"/>
+			<Item Identity="CRValvesCtrlDeltaMinOptTransf"/>
+			<Item Identity="CRValvesCtrlDeltaMaxOptTransf"/>
+			<Item Identity="CROLWPressSensMean"/>
+			<Item Identity="CRTcTool01FlowRate3"/>
+			<Item Identity="CRTcTool02FlowRate3"/>
+			<Item Identity="CRTcTool03FlowRate3"/>
+			<Item Identity="CRTcTool04FlowRate3"/>
+			<Item Identity="CRTcTool05FlowRate3"/>
+			<Item Identity="CRTcTool06FlowRate3"/>
+			<Item Identity="CRTcTool07FlowRate3"/>
+			<Item Identity="CRTcTool08FlowRate3"/>
+			<Item Identity="CRTcTool09FlowRate3"/>
+			<Item Identity="CRTcTool10FlowRate3"/>
+			<Item Identity="CDEquipCodingKey1"/>
+			<Item Identity="CDEquipCodingKey2"/>
+			<Item Identity="CDEquipCodingKey3"/>
+			<Item Identity="CDSoftCheckIndex"/>
+			<Item Identity="CDSoftCheckIdent"/>
+			<Item Identity="CDTool01CodingKey"/>
+			<Item Identity="CDTool02CodingKey"/>
+			<Item Identity="CDTool03CodingKey"/>
+			<Item Identity="CDTool04CodingKey"/>
+			<Item Identity="CDTool05CodingKey"/>
+			<Item Identity="CDTool06CodingKey"/>
+			<Item Identity="CDTool07CodingKey"/>
+			<Item Identity="CDTool08CodingKey"/>
+			<Item Identity="CDTool09CodingKey"/>
+			<Item Identity="CDTool10CodingKey"/>
+	</Group>
+	<Group>
+		<GroupLocale Lang="eng">
+			<Name>Machine Identification</Name>
+		</GroupLocale>
+			<Item Identity="CDmachinSpecType"/>
+			<Item Identity="CDmachinSerialNr"/>
+			<Item Identity="CDmachinCodingKey"/>
+			<Item Identity="CDEquipCodingKey"/>
+			<Item Identity="CDEquipCodingKey1"/>
+			<Item Identity="CDEquipCodingKey2"/>
+			<Item Identity="CDEquipCodingKey3"/>
+	</Group>
+	<Group>
+		<GroupLocale Lang="eng">
+			<Name>Software Identification</Name>
+		</GroupLocale>
+			<Item Identity="CDSoftCheckIndex"/>
+			<Item Identity="CDSoftCheckIdent"/>
+	</Group>
+	<Group>
+		<GroupLocale Lang="eng">
+			<Name>Timer </Name>
+		</GroupLocale>
+			<Item Identity="CXTmResetAllTm"/>
+			<Item Identity="CXserviceTimerReset"/>
+			<Item Identity="CXGreaseTimerReset"/>
+			<Item Identity="CXTmSetHourMeter"/>
+			<Item Identity="CXTmSetModeP"/>
+			<Item Identity="CXTmSetModeE"/>
+			<Item Identity="CXTmSetModeS"/>
+			<Item Identity="CXTmSetModePPlus"/>
+			<Item Identity="CXTmSetEngSpeedHigh"/>
+			<Item Identity="CXTmSetEngSpeedLow"/>
+			<Item Identity="CXTmSetSlewingGear"/>
+			<Item Identity="CXTmSetAHS"/>
+			<Item Identity="CXTmSetSensorControl"/>
+			<Item Identity="CXTmSetCreeperSpeed"/>
+			<Item Identity="CXTmSetHighSpeed"/>
+			<Item Identity="CXTmSetDayHourMeter"/>
+			<Item Identity="CDTmSetHourMeterValue"/>
+			<Item Identity="CDTmSetValue"/>
+			<Item Identity="CDTmSetDayHourMeterValue"/>
+			<Item Identity="LDTmHourMeter"/>
+			<Item Identity="LDTmDayHourMeter"/>
+			<Item Identity="LDTmTimeSensorControl"/>
+			<Item Identity="LDTmTimeModeP"/>
+			<Item Identity="LDTmTimeModeE"/>
+			<Item Identity="LDTmTimeModeS"/>
+			<Item Identity="LDTmTimeCreeperSpeed"/>
+			<Item Identity="LDTmTimeHighSpeed"/>
+			<Item Identity="LDTmTimeEngineSpeedLow"/>
+			<Item Identity="LDTmTimeEngineSpeedHigh"/>
+			<Item Identity="LDTmTimeAHS"/>
+			<Item Identity="LDTmTimeModePP"/>
+			<Item Identity="LDTmTimeHWchannel1"/>
+			<Item Identity="LDTmTimeSlewingGear"/>
+	</Group>
+</Groups>

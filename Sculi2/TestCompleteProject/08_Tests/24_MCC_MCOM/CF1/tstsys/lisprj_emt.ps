@@ -1,0 +1,1397 @@
+%!PS
+%?head
+
+%?Lisual_ver	1.181
+
+languagelevel 3 lt {
+(PS Language Level 3 required) quit
+} if
+
+product (Litronic Monitor) ne
+product (PME1 Display) ne and
+product (PME1 Monitor5) ne and
+product (PME1 Mining Monitor) ne and
+{
+1 1 scale
+/mousedown false def
+/mouseup false def
+/keypressed false def
+} if
+(store_currentpage) 0 setsysparam
+
+
+%?projecthead
+%?date	2011-08-05
+%?proj_name	lisprj
+%?proj_ver	00001
+%?proj_info	testsysNG
+%?bbox	0 0 800 480
+
+%?library llsystem
+(llsystem.ps) run
+%?library llfar012
+(llfar012.ps) run
+%?library llfar016
+(llfar016.ps) run
+%?library llfar020
+(llfar020.ps) run
+%?library llbasic
+(llbasic.ps) run
+%?library llfstd
+(llfstd.ps) run
+%?library lltstpar
+(lltstpar.ps) run
+
+%Global Variable List
+
+/_V0000	0 def	%?brief  %?use STC %?type DINT
+/systemmonitor.core-voltage	   0.00 def	%?brief systemmonitor.core-voltage %?use GLO %?type REAL %?dflt    0.00
+/systemmonitor.power-supply-voltage	   0.00 def	%?brief systemmonitor.power-supply-voltage %?use GLO %?type REAL %?dflt    0.00
+/systemmonitor.3.3V-logic-voltage	   0.00 def	%?brief systemmonitor.3.3V-logic-voltage %?use GLO %?type REAL %?dflt    0.00
+/systemmonitor.5V-logic-voltage	   0.00 def	%?brief systemmonitor.5V-logic-voltage %?use GLO %?type REAL %?dflt    0.00
+/systemmonitor.CPU-battery-voltage	   0.00 def	%?brief systemmonitor.CPU-battery-voltage %?use GLO %?type REAL %?dflt    0.00
+/systemmonitor.board-temperature	   0.00 def	%?brief systemmonitor.board-temperature %?use GLO %?type REAL %?dflt    0.00
+/systemmonitor.DDR-SDRAM-voltage	   0.00 def	%?brief systemmonitor.DDR-SDRAM-voltage %?use MEM %?type REAL %?dflt    0.00
+/SZ10.5	() def	%?brief version of inner core %?use MEM %?type STRI %?dflt 
+/SZ10.6	() def	%?brief version of outer core %?use MEM %?type STRI %?dflt 
+/lan3.link	0 def	%?brief link status of lan3 %?use MEM %?type DINT %?dflt 0
+/lan2.link	0 def	%?brief link status of lan2 %?use MEM %?type DINT %?dflt 0
+/lan1.link	0 def	%?brief link status of lan1 %?use MEM %?type DINT %?dflt 0
+/cantime.rx_calc_max	3000 def	%?brief cantime.rx_calc_max %?use GLO %?type DINT %?dflt 3000
+/cantime.tx_calc_max	8000 def	%?brief cantime.tx_calc_max %?use GLO %?type DINT %?dflt 8000
+/cantime.msec_spare_proz_measured	19 def	%?brief cantime.msec_spare_proz_measured %?use GLO %?type DINT %?dflt 19
+/sc_rts.0.interval_measured	25000 def	%?brief sc_rts.0.interval_measured %?use GLO %?type DINT %?dflt 25000
+/sc_rts.0.duration_measured	2200 def	%?brief sc_rts.0.duration_measured %?use GLO %?type DINT %?dflt 2200
+/_V0001	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0002	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0003	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0004	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0005	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0006	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0007	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0008	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0009	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0010	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0011	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0012	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0013	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0014	   0.00 def	%?brief  %?use STC %?type REAL
+/can_line_blink	true def	%?brief blink_can1 %?use MEM %?type BOOL %?dflt true
+/module_scale_max	20500.00 def	%?brief module_scale_max %?use MEM %?type REAL %?dflt 20500.00
+/boot.ident	() def	%?brief boot identnumber %?use GLO %?type STRI %?dflt 
+/boot.ident_index	() def	%?brief boot identnumber index %?use GLO %?type STRI %?dflt 
+/boot.state	() def	%?brief boot project state %?use GLO %?type STRI %?dflt 
+/boot.environment	() def	%?brief boot environment %?use GLO %?type STRI %?dflt 
+/boot.target	() def	%?brief boot target %?use GLO %?type STRI %?dflt 
+/boot.machineserial	() def	%?brief boot.machineserial %?use GLO %?type STRI %?dflt 
+/sysstate.state	0 def	%?brief sysstate.state %?use GLO %?type DINT %?dflt 0
+/modem.signal_quality	   0.00 def	%?brief modem.signal_quality %?use MEM %?type REAL %?dflt    0.00
+/version.inner	() def	%?brief version.inner %?use GLO %?type STRI %?dflt 
+/version.outer	() def	%?brief version.outer %?use GLO %?type STRI %?dflt 
+/version.application	() def	%?brief version.application %?use GLO %?type STRI %?dflt 
+/keyboard_test	0 def	%?brief keyboard_test %?use MEM %?type DINT %?dflt 0
+/board.identnumber_index	(unknown index) def	%?brief board info identnumber index %?use MEM %?type STRI %?dflt unknown index
+/board.identnumber	(unknown ident) def	%?brief board info identnumber %?use MEM %?type STRI %?dflt unknown ident
+/board.serial_no	(unknown serial) def	%?brief board info serial number %?use MEM %?type STRI %?dflt unknown serial
+/page_idx_submenu	0 def	%?brief page_idx_submenu %?use MEM %?type DINT %?dflt 0
+
+%?page
+%?fn	page0
+%?brief	page0
+%?bbox	0 0 800 480
+/page0 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	110 170 translate 
+	0 rotate 
+	1 1 scale 
+	(main) 
+	_V0000 
+	GeneralFunctions 
+	/_V0000 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	110 165 translate 
+	0 rotate 
+	1 1 scale 
+	800 480 640 400 80 true 0 0 0 0 0 
+	GeneralDefinition 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	menu
+%?brief	menu
+%?bbox	0 0 800 480
+/menu {
+	
+	page_idx 100 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/page_idx 7 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx 10 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		720 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/page_idx 10 store 
+			/_currentpage (help) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx 9 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			%?usercode_beg
+			(testsys_master_start) 0 setsysparam 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx 8 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		560 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/page_idx 8 store 
+			/_currentpage (level) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx 4 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/page_idx 4 store 
+			/_currentpage (language) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx 3 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/page_idx 3 store 
+			/_currentpage (international) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx 100 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/page_idx 6 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx 5 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/page_idx 5 store 
+			/_currentpage (can) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx 2 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/page_idx 2 store 
+			/page_idx_submenu 0 store 
+			/_currentpage (main) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx 1 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/page_idx 1 store 
+			%?usercode_beg
+			(start_project) (home) setsysparam 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	page_idx 
+	baPageLine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 150 5 translate 
+	0 rotate 
+	0.12 0.12 scale 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	163 -2 translate 
+	0 rotate 
+	0.95 0.95 scale 
+	true false 
+	baClock002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	3 0 translate 
+	0 rotate 
+	0.95 0.95 scale 
+	tsMain001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	643 0 translate 
+	0 rotate 
+	0.95 0.95 scale 
+	tsGeneral010 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	760 40 translate 
+	0 rotate 
+	1 1 scale 
+	(?) 
+	FSbigFatFont 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	245 0 translate 
+	0 rotate 
+	1 1 scale 
+	tpLanguageSel 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	560 -5 translate 
+	0 rotate 
+	0.95 0.95 scale 
+	tsKey001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	325 -5 translate 
+	0 rotate 
+	1 1 scale 
+	tsCanBus 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 -2 translate 
+	0 rotate 
+	1 1 scale 
+	tsMaster 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	submenu
+%?brief	submenu
+%?bbox	0 0 800 480
+/submenu {
+	
+	page_idx_submenu 4 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		720 320 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton009 {	
+			/page_idx_submenu 4 store 
+			/page_idx 0 store 
+			/_currentpage (service) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx_submenu 3 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		720 240 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton009 {	
+			/page_idx_submenu 3 store 
+			/page_idx 0 store 
+			/_currentpage (process_info) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx_submenu 2 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		720 160 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton009 {	
+			/page_idx_submenu 2 store 
+			/page_idx 0 store 
+			/_currentpage (sw_info) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	page_idx_submenu 1 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		720 80 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton009 {	
+			/page_idx_submenu 1 store 
+			/page_idx 0 store 
+			/_currentpage (hw_info) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	720 80 translate 
+	0 rotate 
+	1 1 scale 
+	page_idx_submenu 4 
+	baPageLine004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	765 135 translate 
+	0 rotate 
+	1 1 scale 
+	(hw) 0 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	765 105 translate 
+	0 rotate 
+	1 1 scale 
+	(info) 0 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	765 215 translate 
+	0 rotate 
+	1 1 scale 
+	(sw) 0 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	765 185 translate 
+	0 rotate 
+	1 1 scale 
+	(info) 0 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	765 295 translate 
+	0 rotate 
+	1 1 scale 
+	(process) 0 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	765 265 translate 
+	0 rotate 
+	1 1 scale 
+	(info) 0 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	765 375 translate 
+	0 rotate 
+	1 1 scale 
+	(machine) 0 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	765 345 translate 
+	0 rotate 
+	1 1 scale 
+	(data) 0 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	main
+%?brief	testsys_Main
+%?bbox	0 0 800 480
+/main {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	580 660 translate 
+	0 rotate 
+	1 1 scale 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	125 85 translate 
+	0 rotate 
+	0.80 0.80 scale 
+	0 0 0 
+	canquality.1.quality_current canquality.2.quality_current canquality.3.quality_current 
+	canquality.4.quality_current canquality.1.quality_overall canquality.2.quality_overall canquality.3.quality_overall 
+	canquality.4.quality_overall canquality.1.not_connected canquality.2.not_connected canquality.3.not_connected 
+	canquality.4.not_connected boot.ident boot.ident_index boot.state 
+	boot.environment boot.target boot.machineserial sysstate.state 
+	tpMaster4 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	85 450 translate 
+	0 rotate 
+	1 1 scale 
+	(SCOTTI) 
+	FSbigFatFont 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 100 translate 
+	0 rotate 
+	1 1 scale 
+	(submenu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	messages
+%?brief	2
+%?bbox	0 0 800 480
+/messages {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	5 false false 0 
+	baMessage001 
+	/_unused exch store 
+	/_unused exch store 
+	/_unused exch store 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	can
+%?brief	can
+%?bbox	0 0 800 480
+/can {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	635 390 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		/canline_idx 4 store 
+		/page_idx 0 store 
+		/_currentpage (canline) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	460 390 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		/canline_idx 3 store 
+		/page_idx 0 store 
+		/_currentpage (canline) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	290 390 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		/canline_idx 2 store 
+		/page_idx 0 store 
+		/_currentpage (canline) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	120 390 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		/canline_idx 1 store 
+		/page_idx 0 store 
+		/_currentpage (canline) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 60 translate 
+	0 rotate 
+	1 1 scale 
+	tpCanLineInfo 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	120 60 translate 
+	0 rotate 
+	1 1 scale 
+	1 
+	tpCanInfoLineX 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	290 60 translate 
+	0 rotate 
+	1 1 scale 
+	2 
+	tpCanInfoLineX 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	460 60 translate 
+	0 rotate 
+	1 1 scale 
+	3 
+	tpCanInfoLineX 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	635 60 translate 
+	0 rotate 
+	1 1 scale 
+	4 
+	tpCanInfoLineX 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	international
+%?brief	international
+%?bbox	0 0 800 480
+/international {
+	
+	/page_idx 3 store 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	500 -120 translate 
+	0 rotate 
+	1 1 scale 
+	false 
+	tpTimeSettings 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-45 85 translate 
+	0 rotate 
+	0.80 0.80 scale 
+	tpTimezoneSetting 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	tpTimeCorrection 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	canline
+%?brief	can line info
+%?bbox	0 0 800 480
+/canline {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	idOrigin 0 translate 
+	0 rotate 
+	1 1 scale 
+	canline_idx 
+	tpCanlineModules 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	615 60 translate 
+	0 rotate 
+	1 1 scale 
+	canline_idx 
+	tpCanInfoLineX 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	505 60 translate 
+	0 rotate 
+	1 1 scale 
+	tpCanLineInfo 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Red 70 120 translate 
+	0 rotate 
+	1 1 scale 
+	(timeout) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	White 320 120 translate 
+	0 rotate 
+	1 1 scale 
+	(forced) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	canmodule_nr 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		390 -60 translate 
+		0 rotate 
+		1 1 scale 
+		canline_idx canmodule_idx 
+		tpModuleShowIO 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Red 35 115 translate 
+	0 rotate 
+	0.25 0.25 scale 
+	tstsym_cross 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Blue 290 115 translate 
+	0 rotate 
+	0.25 0.25 scale 
+	tstsym_ok 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	card
+%?brief	card content
+%?bbox	0 0 800 480
+/card {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	40 440 translate 
+	0 rotate 
+	1 1 scale 
+	(card: CF) 3 2 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	150 432 translate 
+	0 rotate 
+	1 1 scale 
+	card_idx 3 () false false 3 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	tpCardInfo 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	hw_info
+%?brief	hw_info
+%?bbox	0 0 800 480
+/hw_info {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	300 -20 translate 
+	0 rotate 
+	1 1 scale 
+	board.identnumber board.identnumber_index board.serial_no 
+	tpBoardInfo 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 140 translate 
+	0 rotate 
+	1 1 scale 
+	systemmonitor.core-voltage systemmonitor.power-supply-voltage systemmonitor.3.3V-logic-voltage 
+	systemmonitor.5V-logic-voltage systemmonitor.CPU-battery-voltage systemmonitor.board-temperature _V0001 
+	_V0002 _V0003 _V0004 _V0005 
+	_V0006 _V0007 _V0008 _V0009 
+	_V0010 _V0011 _V0012 _V0013 
+	_V0014 
+	tpVoltages 
+	/_V0001 exch store 
+	/_V0002 exch store 
+	/_V0003 exch store 
+	/_V0004 exch store 
+	/_V0005 exch store 
+	/_V0006 exch store 
+	/_V0007 exch store 
+	/_V0008 exch store 
+	/_V0009 exch store 
+	/_V0010 exch store 
+	/_V0011 exch store 
+	/_V0012 exch store 
+	/_V0013 exch store 
+	/_V0014 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 80 translate 
+	0 rotate 
+	1 1 scale 
+	(submenu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	sw_info
+%?brief	sw_info
+%?bbox	0 0 800 480
+/sw_info {
+	
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		720 80 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/_currentpage (task_info) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	760 140 translate 
+	0 rotate 
+	1 1 scale 
+	(system) 1 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	760 110 translate 
+	0 rotate 
+	1 1 scale 
+	(tasks) 1 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 -110 translate 
+	0 rotate 
+	1 1 scale 
+	boot.ident boot.ident_index boot.state 
+	boot.environment boot.target version.outer version.inner 
+	version.application 
+	tpVersions 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 720 80 translate 
+	0 rotate 
+	1 1 scale 
+	80 80 0 
+	tpElementSelected 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	180 100 translate 
+	0 rotate 
+	1 1 scale 
+	(submenu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	process_info
+%?brief	process_info
+%?bbox	0 0 800 480
+/process_info {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-10 -140 translate 
+	0 rotate 
+	1 1 scale 
+	cantime.rx_calc_max cantime.tx_calc_max cantime.msec_spare_proz_measured 
+	sc_rts.0.duration_measured sc_rts.0.interval_measured 
+	tpProcess 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 100 translate 
+	0 rotate 
+	1 1 scale 
+	(submenu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	task_info
+%?brief	task_information
+%?bbox	0 0 800 480
+/task_info {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 -100 translate 
+	0 rotate 
+	1 1 scale 
+	tpSystemTasks 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	language
+%?brief	language
+%?bbox	0 0 800 480
+/language {
+	
+	/page_idx 4 store 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	tpLanguage 
+	setcolor 
+	setmatrix_nlw 
+	MXLanguageChanged true eq {	
+		MXLanguageChanged true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Blue 0 80 translate 
+		0 rotate 
+		1 1 scale 
+		tsIgnitionOff 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+} def
+
+
+%?page
+%?fn	modem
+%?brief	modem
+%?bbox	0 0 800 480
+/modem {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-10 -200 translate 
+	0 rotate 
+	1 1 scale 
+	tpModem 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	module_dynamic
+%?brief	module_dynamic
+%?bbox	0 0 800 480
+/module_dynamic {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 -110 translate 
+	0 rotate 
+	1 1 scale 
+	canline_idx canmodule_idx 
+	tpModuleShowIO 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	level
+%?brief	level
+%?bbox	0 0 800 480
+/level {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 320 translate 
+	0 rotate 
+	1 1 scale 
+	tpLevel 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	help
+%?brief	help
+%?bbox	0 0 800 480
+/help {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 160 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		%?usercode_beg
+		(testsys_master_start) 0 setsysparam 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 320 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		%?usercode_beg
+		(start_project) (home) setsysparam 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	15 10 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 320 translate 
+	0 rotate 
+	1 1 scale 
+	tsMain001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 370 translate 
+	0 rotate 
+	1 1 scale 
+	(switch to main page of machine visualisation) 0 3 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 160 translate 
+	0 rotate 
+	1 1 scale 
+	tsGeneral010 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 200 320 translate 
+	0 rotate 
+	1 1 scale 
+	480 80 0 
+	tpElementSelected 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 200 160 translate 
+	0 rotate 
+	1 1 scale 
+	480 80 0 
+	tpElementSelected 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 210 translate 
+	0 rotate 
+	1 1 scale 
+	(switch to text based testsystem) 0 3 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	200 440 translate 
+	0 rotate 
+	1 1 scale 
+	(Service Control Tool and Technical Information System) 0 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 440 translate 
+	0 rotate 
+	1 1 scale 
+	(SCOTTI) 0 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	service
+%?brief	service
+%?bbox	0 0 800 480
+/service {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 70 translate 
+	0 rotate 
+	1 1 scale 
+	tpSystemfile_Service 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 90 translate 
+	0 rotate 
+	1 1 scale 
+	(submenu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?main
+
+fontinit
+colorinit
+1 setlinecap
+/_currentpage (page0) store
+(reload_currentpage) 0 setsysparam
+initmatrix
+{
+
+mousedown
+{
+/_myposd exch store
+/_mxposd exch store
+/_mdown true store
+/_mstatus true store
+}
+{
+/_mdown false store
+} ifelse
+
+mouseup
+{
+/_myposd exch store
+/_mxposd exch store
+/_mup true store
+/_mstatus false store
+}
+{
+/_mup false store
+} ifelse
+
+keypressed
+{
+/_keycode exch store
+/_keyhit true store
+}
+{
+/_keyhit false store
+} ifelse
+
+erasepage
+page0
+_currentpage display
+copypage
+} loop
+

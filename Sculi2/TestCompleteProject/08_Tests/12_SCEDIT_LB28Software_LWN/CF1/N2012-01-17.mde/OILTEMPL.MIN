@@ -1,0 +1,6 @@
+hydraulic oil temperature lower minimum in [°C]
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:29
+date-time	hydraulic oil temperature lower minimum in [°C]	cooling water temperature of the engine in [°C]	present engine speed in [rpm]	diesel engine exploitation (utilization of the engine) in [%]
+	%MD1.53	%MD1.2	%MD1.4	%MD1.62
+	MDz6JoySignal	MDcoolWaterTemp	MDpresenEngSpeed	MDz3JoySignal

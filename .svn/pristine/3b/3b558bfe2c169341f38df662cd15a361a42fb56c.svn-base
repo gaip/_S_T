@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Lithuanian / Litauisch
+%?language	lit
+
+%section: SCREEN
+/TSoilFlowAuger	(Sraigto tiekimo kiekis) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Sraigto tiekimo kiekis)
+/TSoilFlowCase	(Vamzdžių tiekimo kiekis) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Vamzdžių tiekimo kiekis)
+/TSoilFlow	(Tiekimo kiekis) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Tiekimo kiekis)
+/TSnumbOfPumps	(Siurblių skaičius) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Siurblių skaičius)
+/TSclampJawPress	(Replių slėgis) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Replių slėgis)
+/TSexcAutoTime	(Ekscentriko reguliavimo laikas) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Ekscentriko reguliavimo laikas)
+/TSramWeight	(Šliaužiklio svoris) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Šliaužiklio svoris)
+/TSblowsPerDepthStep	(Smūgiai/gylis) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Smūgiai/gylis)
+/TSnumbPuPuCylinder	(Stūmimo ir traukimo cil. kiekis) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Stūmimo ir traukimo cil. kiekis)
+/TSaugerLength	(Sraigto ilgis) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Sraigto ilgis)
+/TSconcVolPerImp	(Betono kiekis / impulsas) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Betono kiekis / impulsas)
+/TSscalConcPresSens	(Bet. slėgio jut. matav. diap.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Bet. slėgio jut. matav. diap.)
+/TSscalConcPresDisp	(Betono slėgio rodmens skalė) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Betono slėgio rodmens skalė)
+/TSpileDiameter	(Stulpelio skersmuo) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Stulpelio skersmuo)
+/TSmaxPressAuger	(maks. sraigto slėgis) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (maks. sraigto slėgis)
+/TSmaxPressCase	(maks. vamzdžio slėgis) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (maks. vamzdžio slėgis)
+/TSmaxPressure	(maks. slėgis) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (maks. slėgis)
+/TSoilFlowAuger1	(Sraigto 1 tiekimo kiekis) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Sraigto 1 tiekimo kiekis)
+/TSoilFlowAuger2	(Sraigto 2 tiekimo kiekis) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Sraigto 2 tiekimo kiekis)
+/TSoilFlowAuger3	(Sraigto 3 tiekimo kiekis) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Sraigto 3 tiekimo kiekis)
+/TSnumbOfAugers	(Sraigtų skaičius) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Sraigtų skaičius)
+/TSoilFlowOscil	(Vamzdyno m. tiek. kiekis) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Vamzdyno m. tiek. kiekis)
+/TSoilFlowGrabOpen	(Tiek.greitis,atidar.griebt.) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Tiek.greitis,atidar.griebt.)
+/TSoilFlowGrabClose	(Tiek.greitis,uždar.griebt.) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Tiek.greitis,uždar.griebt.)
+/TSmaxPressGrabOpen	(Maks.slėgis,atidar.griebt.) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Maks.slėgis,atidar.griebt.)
+/TSmaxPressGrabClose	(Maks.slėgis,uždar.griebt.) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Maks.slėgis,uždar.griebt.)
+/TSminOilFlow	(min. tiekimo kiekis) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. tiekimo kiekis)
+/TSoilFlowOscil2	(Vamzdyno m. tiek. kiekis 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Vamzdyno m. tiek. kiekis 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

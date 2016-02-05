@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="42067.8150322222"/>
+			</Node>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="isinteger" type="B" value="0"/>
+			<Prp name="description" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="color" type="I" value="0"/>
+			<Prp name="columnindex" type="I" value="0"/>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+			<Prp name="length" type="I" value="1"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="date" type="D" value="42067.8150287731"/>
+			<Prp name="stack beginning" type="I" value="1"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;TextObject&quot; method or property of the &quot;UIAObject(&quot;New_FilterSet&quot;, 5)&quot; object that does not exist."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="stacktext" type="S" value="SaveFilterSetName()"/>
+		</Node>
+		<Node name="message 0">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="42067.7731625116"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;panelArbeitsbereich&quot;][&quot;PluginsContextForm&quot;][&quot;CMainPanel&quot;][&quot;Panel3&quot;][&quot;Panel1&quot;][&quot;CPluginTabsPanel&quot;][&quot;CPluginTabsList&quot;][&quot;TNativeVisualPluginPage&quot;][&quot;TVisualPluginWindow&quot;][&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;TextObject&quot;](&quot;Workgroup&quot;)"/>
+					<Prp name="click point x" type="I" value="162"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="189"/>
+					<Prp name="object bottom" type="I" value="292"/>
+					<Prp name="object left" type="I" value="136"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="click point y" type="I" value="285"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object top" type="I" value="279"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="date" type="D" value="42067.8148302546"/>
+			<Prp name="remarks" type="S" value="A click at point (26, 6) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;TextObject&quot;](&quot;Workgroup&quot;)"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 3">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="42067.7732126157"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;panelArbeitsbereich&quot;][&quot;PluginsContextForm&quot;][&quot;CMainPanel&quot;][&quot;Panel3&quot;][&quot;Panel1&quot;][&quot;CPluginTabsPanel&quot;][&quot;CPluginTabsList&quot;][&quot;TNativeVisualPluginPage&quot;][&quot;TVisualPluginWindow&quot;][&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;TextObject&quot;](&quot;New FilterSet&quot;)"/>
+					<Prp name="click point x" type="I" value="204"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="236"/>
+					<Prp name="object bottom" type="I" value="310"/>
+					<Prp name="object left" type="I" value="172"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="click point y" type="I" value="303"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object top" type="I" value="297"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="message" type="S" value="The window was clicked with the right mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="date" type="D" value="42067.8148803125"/>
+			<Prp name="remarks" type="S" value="A click at point (32, 6) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;TextObject&quot;](&quot;New FilterSet&quot;)"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="line no" type="I" value="147"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 1">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="42067.7731924421"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;panelArbeitsbereich&quot;][&quot;PluginsContextForm&quot;][&quot;CMainPanel&quot;][&quot;Panel3&quot;][&quot;Panel1&quot;][&quot;CPluginTabsPanel&quot;][&quot;CPluginTabsList&quot;][&quot;TNativeVisualPluginPage&quot;][&quot;TVisualPluginWindow&quot;][&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;TextObject&quot;](&quot;Workgroup&quot;)"/>
+					<Prp name="click point x" type="I" value="180"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="189"/>
+					<Prp name="object bottom" type="I" value="292"/>
+					<Prp name="object left" type="I" value="136"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="click point y" type="I" value="184"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object top" type="I" value="279"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="date" type="D" value="42067.8148602199"/>
+			<Prp name="remarks" type="S" value="A click at point (11, 11) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;btnAddFilter&quot;)"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="stack end" type="I" value="0"/>
+			<Prp name="message" type="S" value="Unable to find the object UIAObject(&quot;New_FilterSet&quot;, 5). See Additional Information for details."/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="date" type="D" value="42067.8150253472"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{D13F3F80-8F89-47AA-8C3C-1BF211220DBF}"/>
+			<Prp name="unit 1" type="S" value="{8C520BE5-9848-4E9C-904F-5F05A7558776}"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 4">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="42067.7732194676"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;Popup&quot;](&quot;Kontextmenü&quot;)[&quot;TextObject&quot;](&quot;Rename&quot;)"/>
+					<Prp name="click point x" type="I" value="56"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="78"/>
+					<Prp name="object bottom" type="I" value="51"/>
+					<Prp name="object left" type="I" value="35"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="click point y" type="I" value="43"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object top" type="I" value="36"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="date" type="D" value="42067.8148868056"/>
+			<Prp name="remarks" type="S" value="A click at point (21, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;Popup&quot;](&quot;Kontextmenü&quot;)[&quot;TextObject&quot;](&quot;Rename&quot;)"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="stacktext" type="S" value="SaveFilterSetName()"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="stacktext" type="S" value="SaveFilterSetName()"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="stack end" type="I" value="2"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="date" type="D" value="42067.8150322222"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Keys&quot; method or property of the &quot;UIAObject(&quot;New_FilterSet&quot;, 5).TextObject(&quot;New FilterSet&quot;)&quot; object that does not exist."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="message" type="S" value="The object with 'Text' equal to 'New FilterSet' is found"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="date" type="D" value="42067.8148745139"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="line no" type="I" value="85"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Norwegian / Norwegisch
+%?language	nor
+
+%section: SCREEN
+/TSoilFlowAuger	(Transportmengde spiral) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Transportmengde spiral)
+/TSoilFlowCase	(Transportmengde rør) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Transportmengde rør)
+/TSoilFlow	(Transportmengde) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Transportmengde)
+/TSnumbOfPumps	(Pumpeantall) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Pumpeantall)
+/TSclampJawPress	(Klemtangtrykk) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Klemtangtrykk)
+/TSexcAutoTime	(Uvanlig justeringstid) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Uvanlig justeringstid)
+/TSramWeight	(Rammevekt) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Rammevekt)
+/TSblowsPerDepthStep	(Slag/dybdeskritt) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Slag/dybdeskritt)
+/TSnumbPuPuCylinder	(Antall Push & Pull sylindre) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Antall Push & Pull sylindre)
+/TSaugerLength	(Borlengde) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Borlengde)
+/TSconcVolPerImp	(Betongmengde/impuls) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Betongmengde/impuls)
+/TSscalConcPresSens	(Område betongtrykksensor) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Område betongtrykksensor)
+/TSscalConcPresDisp	(Område betongtrykkindikator) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Område betongtrykkindikator)
+/TSpileDiameter	(Stolpediameter) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Stolpediameter)
+/TSmaxPressAuger	(maks. Trykkbor) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (maks. Trykkbor)
+/TSmaxPressCase	(maks. Trykkrør) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (maks. Trykkrør)
+/TSmaxPressure	(maks. Trykk) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (maks. Trykk)
+/TSoilFlowAuger1	(Transportmengde bor 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Transportmengde bor 1)
+/TSoilFlowAuger2	(Transportmengde bor 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Transportmengde bor 2)
+/TSoilFlowAuger3	(Transportmengde bor 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Transportmengde bor 3)
+/TSnumbOfAugers	(Antall bor) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Antall bor)
+/TSoilFlowOscil	(Transp.-meng. sving.-gener.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Transp.-meng. sving.-gener.)
+/TSoilFlowGrabOpen	(Åpne transp.mengde griper) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Åpne transp.mengde griper)
+/TSoilFlowGrabClose	(Transp.mengde Lukk griper) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Transp.mengde Lukk griper)
+/TSmaxPressGrabOpen	(Åpne maks. trykk griper) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Åpne maks. trykk griper)
+/TSmaxPressGrabClose	(Lukk maks. trykk griper) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Lukk maks. trykk griper)
+/TSminOilFlow	(min. transportmengde) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. transportmengde)
+/TSoilFlowOscil2	(Transp.-meng. sving.-gener.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Transp.-meng. sving.-gener.2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

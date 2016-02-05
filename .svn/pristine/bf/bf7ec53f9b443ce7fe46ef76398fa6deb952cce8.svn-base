@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Polish / Polnisch
+%?language	pol
+
+%section: SCREEN
+/TSoilFlowAuger	(Ilość przetłaczana ślimaka) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Ilość przetłaczana ślimaka)
+/TSoilFlowCase	(Ilość przetłaczana rury) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Ilość przetłaczana rury)
+/TSoilFlow	(Ilość przetłaczana) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Ilość przetłaczana)
+/TSnumbOfPumps	(Liczba pomp) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Liczba pomp)
+/TSclampJawPress	(Ciśnienie kleszczy zacisk.) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Ciśnienie kleszczy zacisk.)
+/TSexcAutoTime	(Czas przest. mimośrodu) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Czas przest. mimośrodu)
+/TSramWeight	(Ciężar młota) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Ciężar młota)
+/TSblowsPerDepthStep	(Uderzeń / głębia) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Uderzeń / głębia)
+/TSnumbPuPuCylinder	(Liczba cylindrów Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Liczba cylindrów Push & Pull)
+/TSaugerLength	(Długość ślimaka) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Długość ślimaka)
+/TSconcVolPerImp	(Ilość betonu / impuls) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Ilość betonu / impuls)
+/TSscalConcPresSens	(Zakres pom.czujn.ciśn.betonu) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Zakres pom.czujn.ciśn.betonu)
+/TSscalConcPresDisp	(Skalowanie wsk. ciśn.betonu) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Skalowanie wsk. ciśn.betonu)
+/TSpileDiameter	(Średnica pala) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Średnica pala)
+/TSmaxPressAuger	(maks. ciśnienie ślimaka) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (maks. ciśnienie ślimaka)
+/TSmaxPressCase	(maks. ciśnienie w rurach) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (maks. ciśnienie w rurach)
+/TSmaxPressure	(maks. ciśnienie) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (maks. ciśnienie)
+/TSoilFlowAuger1	(Ilość przetł. ślimaka 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Ilość przetł. ślimaka 1)
+/TSoilFlowAuger2	(Ilość przetł. ślimaka 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Ilość przetł. ślimaka 2)
+/TSoilFlowAuger3	(Ilość przetł. ślimaka 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Ilość przetł. ślimaka 3)
+/TSnumbOfAugers	(Liczba ślimaków) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Liczba ślimaków)
+/TSoilFlowOscil	(Ilość przetł. rur) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Ilość przetł. rur)
+/TSoilFlowGrabOpen	(Przepływ - otw. chwytaka) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Przepływ - otw. chwytaka)
+/TSoilFlowGrabClose	(Przepływ - zam. chwytaka) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Przepływ - zam. chwytaka)
+/TSmaxPressGrabOpen	(Maks. ciśn. otw. chwytaka) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Maks. ciśn. otw. chwytaka)
+/TSmaxPressGrabClose	(Maks. ciśn. zam. chwytaka) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Maks. ciśn. zam. chwytaka)
+/TSminOilFlow	(min. ilość przetłaczana) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. ilość przetłaczana)
+/TSoilFlowOscil2	(Ilość przetł. rur 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Ilość przetł. rur 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

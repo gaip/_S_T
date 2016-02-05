@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="9.0">
+	<TestData Description="" Key="{1DA3A669-F131-40CF-BE17-FACDE5BF80F5}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{5B065688-A7F9-41DE-BA45-BF23B8116C41}">
+				<Data Comment="be carefull to choose the right controller: MCC or EMT" />
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="ClearMonitorCache" Unit="uClearMonitorCache">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="UserName" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="lmbcad0" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="StartSCULi" Unit="uStartSCULi" />
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="GoToPMEMonitor" Unit="uGoToPMEMonitor">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="ConnectionType" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{91E40FC5-34AB-4B37-B86A-789030413699}" Parameter="ConnectionType" />
+						<Parameter Name="MonitorType" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{91E40FC5-34AB-4B37-B86A-789030413699}" Parameter="MonitorType" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{6A1B4CEE-4FB8-46E2-BFBD-403C84342301}">
+				<Data Description="Delays the test execution for the specified time period.">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="ms" DefVarType="3" VarType="3" ValueType="1" ValueValue="120000" />
+						<Parameter Name="Str" DefVarType="8" DefValueType="6" DefValueValue="" VarType="8" ValueType="6" ValueValue="" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="CheckMonitorEmulationConsistent1" Unit="uCheckMonitorEmulationConsistent1">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="aMonitorName" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{91E40FC5-34AB-4B37-B86A-789030413699}" Parameter="MonitorType" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="CloseContext" Unit="uCloseContext" />
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{9A7134EA-5571-4EAC-83F6-99E62263E1FA}" />
+	<Parameters Key="{1E8FBC18-3B46-4934-9118-D78CADF65C91}">
+		<Parameter0 Name="ConnectionType" VarType="8" IsOptional="False" DefValueType="6" DefValueValue="Ethernet" Description="Ethernet or RS232" />
+		<Parameter1 Name="MonitorType" VarType="8" IsOptional="False" DefValueType="6" DefValueValue="Monitor4" Description="Monitor4 or EMT-Display" />
+	</Parameters>
+</Root>

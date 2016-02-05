@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="item 8">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="stacktext" type="S" value="UEC3AllVariableSaved()"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 8">
+			<Prp name="date" type="D" value="42067.7343134028"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (30, 30) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CContextActionsRollout&quot;)[&quot;VCLObject&quot;](&quot;CContextActionsPageScroller&quot;)[&quot;VCLObject&quot;](&quot;CContextActionsPanel&quot;)[&quot;Panel&quot;](&quot;Variables&quot;)"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="date" type="D" value="42067.7341880093"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (70, 12) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;AddressBookForm&quot;)[&quot;VCLObject&quot;](&quot;pnlButtons&quot;)[&quot;VCLObject&quot;](&quot;btnOk&quot;)"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 6">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point y" type="I" value="406"/>
+					<Prp name="object bottom" type="I" value="419"/>
+					<Prp name="object left" type="I" value="443"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;VCLObject&quot;](&quot;AddressFrm&quot;)[&quot;VCLObject&quot;](&quot;pnlButtons&quot;)[&quot;VCLObject&quot;](&quot;btnOk&quot;)"/>
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="click point x" type="I" value="480"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42067.6925132986"/>
+					<Prp name="object top" type="I" value="394"/>
+					<Prp name="object right" type="I" value="518"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="date" type="D" value="42067.7341805787"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (37, 12) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;AddressFrm&quot;)[&quot;VCLObject&quot;](&quot;pnlButtons&quot;)[&quot;VCLObject&quot;](&quot;btnOk&quot;)"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 2" type="S" value="{6566978F-E2E9-48D3-AA38-8A1B9D3C7898}"/>
+			<Prp name="unit 1" type="S" value="{D13F3F80-8F89-47AA-8C3C-1BF211220DBF}"/>
+			<Prp name="unit 0" type="S" value="{BE77AECD-D810-4DFD-AEDD-500718C7D579}"/>
+			<Prp name="unit 3" type="S" value="{EF41D14A-89D2-48A5-99C4-320A8E9F1D12}"/>
+		</Node>
+		<Node name="item 4">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="stacktext" type="S" value="UEC3AllVariableSaved()"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="date" type="D" value="42067.7340710185"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="The process ID is 8756."/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The application &quot;C:\Program Files (x86)\Liebherr\Sculi\SCULi.exe&quot; started."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 14">
+			<Prp name="date" type="D" value="42067.7344551273"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="picture" type="S" value="Picture6.png"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="8"/>
+			<Prp name="message" type="S" value="The test execution was interrupted."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack beginning" type="I" value="8"/>
+		</Node>
+		<Node name="message 4">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point y" type="I" value="110"/>
+					<Prp name="object bottom" type="I" value="120"/>
+					<Prp name="object left" type="I" value="581"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;AddressBookForm&quot;][&quot;pnldataField&quot;][&quot;gboDescription&quot;][&quot;pnlPlugin&quot;][&quot;VCLObject&quot;](&quot;btnConfigure&quot;)"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="click point x" type="I" value="627"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42067.6925014583"/>
+					<Prp name="object top" type="I" value="101"/>
+					<Prp name="object right" type="I" value="674"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="date" type="D" value="42067.7341687731"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (46, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;AddressBookForm&quot;)[&quot;VCLObject&quot;](&quot;pnldataField&quot;)[&quot;VCLObject&quot;](&quot;gboDescription&quot;)[&quot;VCLObject&quot;](&quot;pnlPlugin&quot;)[&quot;VCLObject&quot;](&quot;btnConfigure&quot;)"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="date" type="D" value="42067.7343196875"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="message" type="S" value="The object doesn't exists"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="stacktext" type="S" value="UEC3AllVariableSaved()"/>
+		</Node>
+		<Node name="message 2">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object bottom" type="I" value="97"/>
+					<Prp name="object left" type="I" value="18"/>
+					<Prp name="line #" type="I" value="4"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;AddressBookForm&quot;][&quot;VCLObject&quot;](&quot;pnlTreeData&quot;)[&quot;VCLObject&quot;](&quot;gboAddressBook&quot;)[&quot;VCLObject&quot;](&quot;pnlAddressBook&quot;)[&quot;VCLObject&quot;](&quot;cboAddressBookAlias&quot;)"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42067.6924773843"/>
+					<Prp name="object top" type="I" value="76"/>
+					<Prp name="object right" type="I" value="212"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="date" type="D" value="42067.7341455671"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;AddressBookForm&quot;)[&quot;VCLObject&quot;](&quot;pnlTreeData&quot;)[&quot;VCLObject&quot;](&quot;gboAddressBook&quot;)[&quot;VCLObject&quot;](&quot;pnlAddressBook&quot;)[&quot;VCLObject&quot;](&quot;cboAddressBookAlias&quot;)"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The combo box item 'PME1 address book' was selected."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 1">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point y" type="I" value="105"/>
+					<Prp name="object bottom" type="I" value="134"/>
+					<Prp name="object left" type="I" value="23"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;CGlobalActionsRollout&quot;][&quot;CGlobalActionsPageScroller&quot;][&quot;CGlobalActionsPanel&quot;][&quot;btnactCreatableContexts&quot;]"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="click point x" type="I" value="52"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42067.6924522338"/>
+					<Prp name="object top" type="I" value="76"/>
+					<Prp name="object right" type="I" value="81"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="date" type="D" value="42067.7341199421"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (29, 29) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;CGlobalActionsRollout&quot;][&quot;CGlobalActionsPageScroller&quot;][&quot;CGlobalActionsPanel&quot;][&quot;btnactCreatableContexts&quot;]&#xA;(Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;VCLObject&quot;](&quot;CGlobalActionsRollout&quot;)[&quot;VCLObject&quot;](&quot;CGlobalActionsPageScroller&quot;)[&quot;VCLObject&quot;](&quot;CGlobalActionsPanel&quot;)[&quot;VCLObject&quot;](&quot;btnactCreatableContexts&quot;))"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 12">
+			<Prp name="date" type="D" value="42067.7344481597"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="picture" type="S" value="Picture4.png"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Objekt erforderlich&#xA;Error location:&#xA;Unit: &quot;SCULi_Tests\SCULi_Tests\Script\object&quot;&#xA;Line: 6 Column: 5."/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="6"/>
+			<Prp name="message" type="S" value="Laufzeitfehler in C#Script."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack beginning" type="I" value="5"/>
+		</Node>
+		<Node name="message 11">
+			<Prp name="date" type="D" value="42067.7344445023"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;FindChild&quot; method or property of the &quot;VCLObject(&quot;VariablesSaveForm&quot;)&quot; object that does not exist."/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack beginning" type="I" value="3"/>
+		</Node>
+		<Node name="message 5">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object bottom" type="I" value="99"/>
+					<Prp name="object left" type="I" value="175"/>
+					<Prp name="line #" type="I" value="4"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;VCLObject&quot;](&quot;AddressFrm&quot;)[&quot;VCLObject&quot;](&quot;TntPageControl&quot;)[&quot;VCLObject&quot;](&quot;Rs232Tab&quot;)[&quot;VCLObject&quot;](&quot;CbxRs232ComPort&quot;)"/>
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42067.6925096181"/>
+					<Prp name="object top" type="I" value="78"/>
+					<Prp name="object right" type="I" value="504"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="date" type="D" value="42067.7341776042"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;AddressFrm&quot;)[&quot;VCLObject&quot;](&quot;TntPageControl&quot;)[&quot;VCLObject&quot;](&quot;Rs232Tab&quot;)[&quot;VCLObject&quot;](&quot;CbxRs232ComPort&quot;)"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The combo box item 'COM8' was selected."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 7">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="stacktext" type="S" value="UEC3AllVariableSaved()"/>
+		</Node>
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="42067.7344551273"/>
+			</Node>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="description" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="length" type="I" value="1"/>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+			<Prp name="isinteger" type="B" value="0"/>
+			<Prp name="columnindex" type="I" value="0"/>
+			<Prp name="color" type="I" value="0"/>
+		</Node>
+		<Node name="item 6">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="stacktext" type="S" value="UEC3AllVariableSaved()"/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+		</Node>
+		<Node name="message 10">
+			<Prp name="date" type="D" value="42067.7344410185"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="2"/>
+			<Prp name="message" type="S" value="Unable to find the object VCLObject(&quot;VariablesSaveForm&quot;). See Additional Information for details."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+		</Node>
+		<Node name="message 3">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point y" type="I" value="158"/>
+					<Prp name="object bottom" type="I" value="371"/>
+					<Prp name="object left" type="I" value="18"/>
+					<Prp name="line #" type="I" value="4"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;AddressBookForm&quot;][&quot;VCLObject&quot;](&quot;pnlTreeData&quot;)[&quot;VCLObject&quot;](&quot;gboAddresses&quot;)[&quot;VCLObject&quot;](&quot;pnlAddress&quot;)[&quot;VCLObject&quot;](&quot;tvwAddresses&quot;)"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="click point x" type="I" value="98"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42067.6924836806"/>
+					<Prp name="object top" type="I" value="149"/>
+					<Prp name="object right" type="I" value="212"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="date" type="D" value="42067.7341515509"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;AddressBookForm&quot;)[&quot;VCLObject&quot;](&quot;pnlTreeData&quot;)[&quot;VCLObject&quot;](&quot;gboAddresses&quot;)[&quot;VCLObject&quot;](&quot;pnlAddress&quot;)[&quot;VCLObject&quot;](&quot;tvwAddresses&quot;)"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The tree node 'PME1 Controller RS232' was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="stacktext" type="S" value="UEC3AllVariableSaved()"/>
+		</Node>
+		<Node name="message 13">
+			<Prp name="date" type="D" value="42067.7344516435"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="picture" type="S" value="Picture5.png"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="An exception occurred while executing the script routine"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="7"/>
+			<Prp name="message" type="S" value="Exception"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack beginning" type="I" value="7"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+		</Node>
+		<Node name="item 5">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

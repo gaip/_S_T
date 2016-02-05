@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="item 8">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="OutputVariableUnforced()"/>
+			<Prp name="line no" type="I" value="12"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="42067.8108815162"/>
+			</Node>
+			<Prp name="length" type="I" value="1"/>
+			<Prp name="isinteger" type="B" value="0"/>
+			<Prp name="description" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="color" type="I" value="0"/>
+			<Prp name="columnindex" type="I" value="0"/>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+			<Prp name="line no" type="I" value="8"/>
+		</Node>
+		<Node name="message 3">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="407"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="152"/>
+					<Prp name="datetime" type="D" value="42067.7691347106"/>
+					<Prp name="object bottom" type="I" value="173"/>
+					<Prp name="line #" type="I" value="8"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object left" type="I" value="337"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;panelArbeitsbereich&quot;][&quot;PluginsContextForm&quot;][&quot;CMainPanel&quot;][&quot;Panel3&quot;][&quot;Panel1&quot;][&quot;CPluginTabsPanel&quot;][&quot;CPluginTabsList&quot;][&quot;TNativeVisualPluginPage&quot;][&quot;TVisualPluginWindow&quot;][&quot;MasterPanel&quot;][&quot;VCLObject&quot;](&quot;pnVarPanels&quot;)[&quot;VCLObject&quot;](&quot;Panel0&quot;)[&quot;VCLObject&quot;](&quot;MainVarPanel&quot;)[&quot;VCLObject&quot;](&quot;ColumnsFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;CBAddress&quot;)"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+				</Node>
+			</Node>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="remarks" type="S" value="'^a[Del][Enter]' was sent as a keyboard input to a window:&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Variable editor&quot;)[&quot;VCLObject&quot;](&quot;MasterPanel&quot;)[&quot;VCLObject&quot;](&quot;pnVarPanels&quot;)[&quot;VCLObject&quot;](&quot;Panel0&quot;)[&quot;VCLObject&quot;](&quot;MainVarPanel&quot;)[&quot;VCLObject&quot;](&quot;ColumnsFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;CBAddress&quot;)"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="42067.8108033796"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="OutputVariableUnforced()"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{D13F3F80-8F89-47AA-8C3C-1BF211220DBF}"/>
+			<Prp name="unit 1" type="S" value="{B7598478-5BB2-40F9-AEFB-161BBBAAF777}"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+			<Prp name="line no" type="I" value="8"/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="OutputVariableUnforced()"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="message" type="S" value="Cannot obtain the window with the window class 'TCustomActionPopupMenuEx', window caption '' and index 1. See Additional Information for details."/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The window with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2203&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="42067.810878206"/>
+			<Prp name="stack beginning" type="I" value="8"/>
+			<Prp name="picture" type="S" value="Picture5.png"/>
+			<Prp name="stack end" type="I" value="8"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="message" type="S" value="The object doesn't exists"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="42067.8107908681"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="stack end" type="I" value="3"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="message" type="S" value="The test execution was interrupted."/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="42067.8108815162"/>
+			<Prp name="stack beginning" type="I" value="9"/>
+			<Prp name="picture" type="S" value="Picture6.png"/>
+			<Prp name="stack end" type="I" value="9"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+		</Node>
+		<Node name="message 5">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="407"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="152"/>
+					<Prp name="datetime" type="D" value="42067.7691460532"/>
+					<Prp name="object bottom" type="I" value="173"/>
+					<Prp name="line #" type="I" value="10"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object left" type="I" value="337"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;panelArbeitsbereich&quot;][&quot;PluginsContextForm&quot;][&quot;CMainPanel&quot;][&quot;Panel3&quot;][&quot;Panel1&quot;][&quot;CPluginTabsPanel&quot;][&quot;CPluginTabsList&quot;][&quot;TNativeVisualPluginPage&quot;][&quot;TVisualPluginWindow&quot;][&quot;MasterPanel&quot;][&quot;VCLObject&quot;](&quot;pnVarPanels&quot;)[&quot;VCLObject&quot;](&quot;Panel0&quot;)[&quot;VCLObject&quot;](&quot;MainVarPanel&quot;)[&quot;VCLObject&quot;](&quot;ColumnsFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;CBAddress&quot;)"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+				</Node>
+			</Node>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="remarks" type="S" value="'4041[Enter]' was sent as a keyboard input to a window:&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Variable editor&quot;)[&quot;VCLObject&quot;](&quot;MasterPanel&quot;)[&quot;VCLObject&quot;](&quot;pnVarPanels&quot;)[&quot;VCLObject&quot;](&quot;Panel0&quot;)[&quot;VCLObject&quot;](&quot;MainVarPanel&quot;)[&quot;VCLObject&quot;](&quot;ColumnsFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;CBAddress&quot;)"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="10"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="42067.8108160995"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+		</Node>
+		<Node name="message 4">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object right" type="I" value="407"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="152"/>
+					<Prp name="datetime" type="D" value="42067.7691404167"/>
+					<Prp name="object bottom" type="I" value="173"/>
+					<Prp name="line #" type="I" value="9"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object left" type="I" value="337"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;panelArbeitsbereich&quot;][&quot;PluginsContextForm&quot;][&quot;CMainPanel&quot;][&quot;Panel3&quot;][&quot;Panel1&quot;][&quot;CPluginTabsPanel&quot;][&quot;CPluginTabsList&quot;][&quot;TNativeVisualPluginPage&quot;][&quot;TVisualPluginWindow&quot;][&quot;MasterPanel&quot;][&quot;VCLObject&quot;](&quot;pnVarPanels&quot;)[&quot;VCLObject&quot;](&quot;Panel0&quot;)[&quot;VCLObject&quot;](&quot;MainVarPanel&quot;)[&quot;VCLObject&quot;](&quot;ColumnsFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;CBAddress&quot;)"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+				</Node>
+			</Node>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="remarks" type="S" value="'4041[Enter]' was sent as a keyboard input to a window:&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Variable editor&quot;)[&quot;VCLObject&quot;](&quot;MasterPanel&quot;)[&quot;VCLObject&quot;](&quot;pnVarPanels&quot;)[&quot;VCLObject&quot;](&quot;Panel0&quot;)[&quot;VCLObject&quot;](&quot;MainVarPanel&quot;)[&quot;VCLObject&quot;](&quot;ColumnsFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;CBAddress&quot;)"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="9"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="42067.810809537"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+		</Node>
+		<Node name="item 9">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="OutputVariableUnforced()"/>
+			<Prp name="line no" type="I" value="12"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="message" type="S" value="The object doesn't exists"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="42067.8107848958"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+		</Node>
+		<Node name="item 5">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="OutputVariableUnforced()"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="item 6">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="clickRRegion"/>
+			<Prp name="line no" type="I" value="124"/>
+		</Node>
+		<Node name="item 7">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="OutputVariableUnforced()"/>
+			<Prp name="line no" type="I" value="11"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="message" type="S" value="The object doesn't exists"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="76"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="42067.8107978125"/>
+			<Prp name="stack beginning" type="I" value="4"/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="stack end" type="I" value="5"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+		</Node>
+		<Node name="item 4">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="keysOnChildObject"/>
+			<Prp name="line no" type="I" value="76"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="message" type="S" value="The region 'greenMark' is NOT found"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="124"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="42067.8108360764"/>
+			<Prp name="stack beginning" type="I" value="6"/>
+			<Prp name="picture" type="S" value="Picture4.png"/>
+			<Prp name="stack end" type="I" value="7"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

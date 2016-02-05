@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child list">
+			<Node name="item0">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="simple">
+							<Prp name="filename" type="S" value="SCULi.exe"/>
+							<Prp name="filepath" type="S" value="C:\Program Files (x86)\Liebherr\Sculi\"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="node name" type="S" value="SCULi1"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{E8329028-D23C-449B-8183-FB6F7AEB7F81}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Node name="item1">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="debug">
+							<Prp name="workfolder" type="S" value="Y:\Public\Sculi\Install\NightlyBuild\1.46x"/>
+						</Node>
+						<Node name="simple">
+							<Prp name="filename" type="S" value="setup_sculi_1.462_1232.exe"/>
+							<Prp name="workfolder" type="S" value="Y:\Public\Sculi\Install\NightlyBuild\1.46x"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="node name" type="S" value="SCULi1_Install_Desktop"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+					<Prp name="userchangename" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{FBA1109F-BFB7-45E5-AFB8-0342FB66888A}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Node name="item2">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="debug">
+							<Prp name="workfolder" type="S" value="\\lmb.liebherr.i\dfs\Public\Sculi\Install\NightlyBuild\1.47x"/>
+						</Node>
+						<Node name="simple">
+							<Prp name="filename" type="S" value="setup_sculi_1.472_15.exe"/>
+							<Prp name="filepath" type="S" value="\\lmb.liebherr.i\dfs\Public\Sculi\Install\NightlyBuild\1.47x\"/>
+							<Prp name="workfolder" type="S" value="\\lmb.liebherr.i\dfs\Public\Sculi\Install\NightlyBuild\1.47x"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="node name" type="S" value="Setup_Sculi_1_47"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+					<Prp name="userchangename" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{6E70A4A4-BE87-4512-8C8B-A547287E9B7E}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Node name="item3">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="simple">
+							<Prp name="filename" type="S" value="AcroRd32.exe"/>
+							<Prp name="filepath" type="S" value="C:\Program Files (x86)\Adobe\Reader 11.0\Reader\"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="node name" type="S" value="AcroRd32"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{010D01C4-7985-4EFC-8181-ADB76EC3C0CE}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Prp name="item count" type="I" value="4"/>
+		</Node>
+		<Node name="config">
+			<Prp name="node name" type="S" value="TestedApps"/>
+		</Node>
+		<Node name="data"/>
+		<Node name="folders">
+			<Node name="folders"/>
+		</Node>
+		<Node name="test data"/>
+		<Prp name="key" type="S" value="{87B6F0C7-A82E-49A6-A2D0-E1969AA4A466}"/>
+		<Prp name="signature" type="S" value="{90D101C8-80C7-48D4-9055-2E451B9BCD75}"/>
+		<Prp name="type" type="S" value="{90D101C8-80C7-48D4-9055-2E451B9BCD75}"/>
+		<Prp name="typename" type="S" value="Tested Applications"/>
+		<Prp name="version" type="I" value="910"/>
+	</Node>
+</Nodes>

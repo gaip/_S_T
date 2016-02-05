@@ -1,0 +1,10 @@
+temperature hydraulic oil tank 1 [°C]
+start time	2013-10-05T10:26:48
+stop time	2013-10-06T07:09:06
+date-time	temperature hydraulic oil tank 1 [°C]	cooling water temperature diesel engine 1 [°C]
+	%MD1.26	%MD1.2
+	MDsgSysPressLe	MDcoolWaterTemp
+2013-10-06T06:54:35	41.00069	103
+2013-10-05T10:26:48	40.99982	103
+2013-10-06T06:47:11	0	0
+2013-10-06T06:47:11	0	0

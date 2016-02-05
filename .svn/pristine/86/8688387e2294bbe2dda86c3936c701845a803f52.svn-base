@@ -1,0 +1,743 @@
+%!PS
+%?head
+
+%?Lisual_ver	1.176
+
+languagelevel 3 lt {
+(PS Language Level 3 required) quit
+} if
+
+product (Litronic Monitor) ne
+product (PME1 Display) ne and
+product (PME1 Monitor5) ne and
+product (PME1 Mining Monitor) ne and
+{
+1 1 scale
+/mousedown false def
+/mouseup false def
+/keypressed false def
+} if
+(store_currentpage) 0 setsysparam
+
+
+%?projecthead
+%?date	2011-03-03
+%?proj_name	lisprj
+%?proj_ver	00140
+%?proj_info	Wizard LHM
+%?bbox	0 0 960 720
+
+%?library llsystem
+(llsystem.ps) run
+%?library llbasic
+(llbasic.ps) run
+%?library llgensym
+(llgensym.ps) run
+%?library llfar012
+(llfar012.ps) run
+%?library llfar016
+(llfar016.ps) run
+%?library llfar020
+(llfar020.ps) run
+%?library llfstd
+(llfstd.ps) run
+%?library llspesym
+(llspesym.ps) run
+%?library llspepar
+(llspepar.ps) run
+
+%Global Variable List
+
+/MXaddLimit	false def	%?brief add limit %?use MEM %?type BOOL %?dflt false
+/MXsubLimit	false def	%?brief sub limit %?use MEM %?type BOOL %?dflt false
+/_V0000	0 def	%?brief  %?use STC %?type DINT
+/_V0001	0 def	%?brief  %?use STC %?type DINT
+/_V0002	0 def	%?brief  %?use STC %?type DINT
+/_V0003	0 def	%?brief  %?use STC %?type DINT
+/_V0004	0 def	%?brief  %?use STC %?type DINT
+/MXsycSpeedGt	false def	%?brief limit greater than %?use MEM %?type BOOL %?dflt false
+/MDsycSpeedLimit	   0.00 def	%?brief syc: speed limit %?use MEM %?type REAL %?dflt    0.00
+/MDsycSpeedLimit2	   0.00 def	%?brief syc: speed limit %?use MEM %?type REAL %?dflt    0.00
+/MDsycSpeedLimit3	   0.00 def	%?brief syc: speed limit %?use MEM %?type REAL %?dflt    0.00
+/MDsycSpeedLimit4	   0.00 def	%?brief syc: speed limit %?use MEM %?type REAL %?dflt    0.00
+/MDsycSpeedLimit1	   0.00 def	%?brief syc: speed limit %?use MEM %?type REAL %?dflt    0.00
+/SDMsycSpeedLimit	   0.00 def	%?brief sycra limit to softing %?use GLO %?type REAL %?dflt    0.00
+/MDpageNumber	1 def	%?brief page Number %?use MEM %?type DINT %?dflt 1
+/SDhgIstSpeed	   0.00 def	%?brief SDVhgIstSpeed %?use GLO %?type REAL %?dflt    0.00
+/SDhgSollSpeed	   0.00 def	%?brief SDVhgSollSpeed %?use GLO %?type REAL %?dflt    0.00
+/SDsgSollSpeed	   0.00 def	%?brief SDVsgSollSpeed %?use GLO %?type REAL %?dflt    0.00
+/SDsgIstSpeed	   0.00 def	%?brief SDVsgIstSpeed %?use GLO %?type REAL %?dflt    0.00
+/SDlgIstSpeed	   0.00 def	%?brief SDVlgIstSpeed %?use GLO %?type REAL %?dflt    0.00
+/SDlgSollSpeed	   0.00 def	%?brief SDVlgSollSpeed %?use GLO %?type REAL %?dflt    0.00
+/SDoutreachA	   0.00 def	%?brief SDoutreachA %?use GLO %?type REAL %?dflt    0.00
+/SDoutreachB	   0.00 def	%?brief SDoutreachB %?use GLO %?type REAL %?dflt    0.00
+/SDdistCraneAB	   0.00 def	%?brief SDdistCraneAB %?use GLO %?type REAL %?dflt    0.00
+/SDangleCraneA	   0.00 def	%?brief SDangleCraneA %?use GLO %?type REAL %?dflt    0.00
+/SDangleCraneB	   0.00 def	%?brief SDangleCraneB %?use GLO %?type REAL %?dflt    0.00
+/SDposUwA	   0.00 def	%?brief SDposUwA %?use GLO %?type REAL %?dflt    0.00
+/SDposUwB	   0.00 def	%?brief SDposUwB %?use GLO %?type REAL %?dflt    0.00
+/SDarethAirSpeed	   0.00 def	%?brief arethmetic mean of the wind speed %?use GLO %?type REAL %?dflt    0.00
+/_V0011	10000 array def	%?brief  %?use STC %?type ARR %?dflt 10000
+/_V0012	10000 array def	%?brief  %?use STC %?type ARR %?dflt 10000
+/_V0013	10000 array def	%?brief  %?use STC %?type ARR %?dflt 10000
+/_V0014	10000 array def	%?brief  %?use STC %?type ARR %?dflt 10000
+/_V0015	10000 array def	%?brief  %?use STC %?type ARR %?dflt 10000
+/_V0016	10000 array def	%?brief  %?use STC %?type ARR %?dflt 10000
+/SXnrsSynTronic	false def	%?brief To transmit the status to the wizard %?use GLO %?type BOOL %?dflt false
+
+%?page
+%?fn	page0
+%?brief	page0
+%?bbox	0 0 960 720
+/page0 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 640 translate 
+	0 rotate 
+	1 1 scale 
+	(main) 
+	_V0004 
+	GeneralFunctions 
+	/_V0004 exch store 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	menu
+%?brief	menu
+%?bbox	0 0 960 720
+/menu {
+	
+	MDpageNumber 2 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDpageNumber 2 store 
+			/_currentpage (air) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	MDpageNumber 3 ne 
+	SXnrsSynTronic and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDpageNumber 3 store 
+			/_currentpage (sycratronic) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MDpageNumber 1 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDpageNumber 1 store 
+			/_currentpage (main) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	MDpageNumber 
+	baPageLine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral043 
+	setcolor 
+	setmatrix_nlw 
+	SXnrsSynTronic true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		ssSycra001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 -4 translate 
+	0 rotate 
+	1 1 scale 
+	CSairSpeed1 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	main
+%?brief	main
+%?bbox	0 0 960 720
+/main {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	490 160 translate 
+	0 rotate 
+	6 6 scale 
+	(WIZARD) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	300 225 translate 
+	0 rotate 
+	4.37 4.37 scale 
+	gsGeneral009 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Yellow 30 520 translate 
+	0 rotate 
+	1.40 1.40 scale 
+	gsLiebherr001 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	sycratronic
+%?brief	sycratronic
+%?bbox	0 0 960 720
+/sycratronic {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 640 translate 
+	0 rotate 
+	1 1 scale 
+	MDsycSpeedLimit 0 100 
+	FUN_LIMIT 
+	/MDsycSpeedLimit exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 640 translate 
+	0 rotate 
+	1 1 scale 
+	MDsycSpeedLimit 1 100 
+	FUN_LIMIT 
+	/MDsycSpeedLimit1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 640 translate 
+	0 rotate 
+	1 1 scale 
+	true 
+	MDsycSpeedLimit 0 
+	spGT001 
+	/MXsycSpeedGt exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 640 translate 
+	0 rotate 
+	1 1 scale 
+	MXsycSpeedGt 100 
+	MDsycSpeedLimit1 
+	FUN_SEL 
+	/SDMsycSpeedLimit exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 640 translate 
+	0 rotate 
+	1 1 scale 
+	SDMsycSpeedLimit 2 
+	FUN_MUL 
+	/MDsycSpeedLimit3 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 640 translate 
+	0 rotate 
+	1 1 scale 
+	MDsycSpeedLimit3 0 100 
+	FUN_LIMIT 
+	/MDsycSpeedLimit3 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 360 translate 
+	0 rotate 
+	1 1 scale 
+	MDsycSpeedLimit false 1 20 1 
+	_V0000 _V0001 
+	baTouchButPart004 
+	/_V0000 exch store 
+	/_V0001 exch store 
+	/MDsycSpeedLimit exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 360 translate 
+	0 rotate 
+	1 1 scale 
+	MDsycSpeedLimit true 1 20 1 
+	_V0002 _V0003 
+	baTouchButPart004 
+	/_V0002 exch store 
+	/_V0003 exch store 
+	/MDsycSpeedLimit exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	700 680 translate 
+	0 rotate 
+	2 2 scale 
+	(sycratronic & dacs) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 640 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 0 960 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	40 400 translate 
+	0 rotate 
+	2 2 scale 
+	(<) 8 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	280 400 translate 
+	0 rotate 
+	2 2 scale 
+	(>) 8 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	210 375 translate 
+	0 rotate 
+	2.33 2.25 scale 
+	SDMsycSpeedLimit 3 (%) false false 7 0.50 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 120 translate 
+	0 rotate 
+	1 1 scale 
+	SDsgSollSpeed 0 
+	MDsycSpeedLimit3 90 100 40 160 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	60 120 translate 
+	0 rotate 
+	1 1 scale 
+	SDsgIstSpeed 0 
+	MDsycSpeedLimit3 90 100 40 160 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	40 320 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	(Soll) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	83 320 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	(Ist) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	60 100 translate 
+	0 rotate 
+	1 1 scale 
+	(SG) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 200 translate 
+	0 rotate 
+	1 1 scale 
+	3 0 0 80 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	75 290 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	MDsycSpeedLimit3 3 (%) false false 7 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	120 120 translate 
+	0 rotate 
+	1 1 scale 
+	SDlgSollSpeed 0 
+	MDsycSpeedLimit3 90 100 40 160 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 120 translate 
+	0 rotate 
+	1 1 scale 
+	SDlgIstSpeed 0 
+	MDsycSpeedLimit3 90 100 40 160 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	140 320 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	(Soll) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	183 320 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	(Ist) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 100 translate 
+	0 rotate 
+	1 1 scale 
+	(LG) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	120 200 translate 
+	0 rotate 
+	1 1 scale 
+	3 0 0 80 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	175 290 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	MDsycSpeedLimit3 3 (%) false false 7 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	220 120 translate 
+	0 rotate 
+	1 1 scale 
+	SDhgSollSpeed 0 
+	MDsycSpeedLimit3 90 100 40 160 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	260 120 translate 
+	0 rotate 
+	1 1 scale 
+	SDhgIstSpeed 0 
+	MDsycSpeedLimit3 90 100 40 160 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 320 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	(Soll) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	283 320 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	(Ist) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	260 100 translate 
+	0 rotate 
+	1 1 scale 
+	(HG) 7 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	220 200 translate 
+	0 rotate 
+	1 1 scale 
+	3 0 0 80 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	275 290 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	MDsycSpeedLimit3 3 (%) false false 7 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Yellow 40 630 translate 
+	0 rotate 
+	0.60 0.60 scale 
+	gsLiebherr001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	680 360 translate 
+	0 rotate 
+	1 1 scale 
+	SDdistCraneAB SDangleCraneA SDangleCraneB 
+	SDoutreachA SDoutreachB SDposUwA SDposUwB 
+	spSycra001 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	pactronic
+%?brief	pactronic
+%?bbox	0 0 960 720
+/pactronic {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	40 630 translate 
+	0 rotate 
+	0.60 0.60 scale 
+	gsLiebherr001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	690 680 translate 
+	0 rotate 
+	1.50 1.50 scale 
+	(pactronic) 8 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 640 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 0 960 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	status
+%?brief	status
+%?bbox	0 0 960 720
+/status {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 580 translate 
+	0 rotate 
+	1 1 scale 
+	gsLiebherr001 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	air
+%?brief	air indication
+%?bbox	0 0 960 720
+/air {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 -40 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 160 translate 
+	0 rotate 
+	1 1 scale 
+	-1 
+	SDarethAirSpeed -1 -1 -1 10 0 40 
+	_V0011 _V0012 _V0013 
+	_V0014 _V0015 _V0016 
+	spTrendDisplay001 
+	/_V0011 exch store 
+	/_V0012 exch store 
+	/_V0013 exch store 
+	/_V0014 exch store 
+	/_V0015 exch store 
+	/_V0016 exch store 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?main
+
+fontinit
+colorinit
+1 setlinecap
+/_currentpage (page0) store
+(reload_currentpage) 0 setsysparam
+initmatrix
+{
+
+mousedown
+{
+/_myposd exch store
+/_mxposd exch store
+/_mdown true store
+/_mstatus true store
+}
+{
+/_mdown false store
+} ifelse
+
+mouseup
+{
+/_myposd exch store
+/_mxposd exch store
+/_mup true store
+/_mstatus false store
+}
+{
+/_mup false store
+} ifelse
+
+keypressed
+{
+/_keycode exch store
+/_keyhit true store
+}
+{
+/_keyhit false store
+} ifelse
+
+erasepage
+page0
+_currentpage display
+copypage
+} loop
+

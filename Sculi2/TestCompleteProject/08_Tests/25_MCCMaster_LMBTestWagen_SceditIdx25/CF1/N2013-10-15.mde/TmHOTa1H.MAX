@@ -1,0 +1,9 @@
+temperature hydraulic oil tank 1 [øC]
+start time	2013-10-15T08:31:18
+stop time	2013-10-15T07:43:20
+date-time	temperature hydraulic oil tank 1 [øC]	cooling water temperature diesel engine 1 [øC]	outside temperature 1 [øC]
+	%MD1.242	%MD1.210	%MD1.252
+	MDpdeDgcHight	MDpdeConcPress	MDpdeDgcCompFt
+2013-10-15T10:59:09	41.14413	103	0
+2013-10-15T08:44:06	41.00069	103	0
+2013-10-15T08:44:06	0	0	0

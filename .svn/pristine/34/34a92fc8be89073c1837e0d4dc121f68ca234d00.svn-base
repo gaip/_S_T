@@ -1,0 +1,8 @@
+!version 00033
+
+#redirection of messages to an application accessible client for displaying service codes on CAN module
+*.error system >bild/LAN3
+*.error system >bild/CAN1
+outer.syscheck.0x43000013-0x43000014.* system >bildnack/*
+
+!crc	0xbeb26dfa

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="folders">
+			<Node name="folders"/>
+		</Node>
+		<Node name="logs">
+			<Node name="log0">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42089.4399727894"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="key" type="S" value="{BD7978C2-7C32-4659-A34C-04CD20E7AAFF}"/>
+				<Prp name="nameofroot" type="S" value="Keyword Test Log [Lidec1Connect]"/>
+				<Prp name="relpath" type="S" value="26_03_2015_10_33_33_647\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log1">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42089.4661988194"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="1"/>
+				<Prp name="key" type="S" value="{A17FC088-81C7-4419-B5BA-CF5A73099F06}"/>
+				<Prp name="nameofroot" type="S" value="Keyword Test Log [Lidec1Connect]"/>
+				<Prp name="relpath" type="S" value="26_03_2015_11_11_19_577\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log2">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42089.4783798264"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="2"/>
+				<Prp name="key" type="S" value="{B732964B-6806-4A10-B9FB-4AF481A4F8E1}"/>
+				<Prp name="nameofroot" type="S" value="Keyword Test Log [LidecSCRVerify]"/>
+				<Prp name="relpath" type="S" value="26_03_2015_11_28_52_16\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log3">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42089.4836312847"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="3"/>
+				<Prp name="key" type="S" value="{9A937FFE-B9EB-4860-A0D2-49E103D9DB59}"/>
+				<Prp name="nameofroot" type="S" value="Keyword Test Log [LidecSCRVerify]"/>
+				<Prp name="relpath" type="S" value="26_03_2015_11_36_25_742\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log4">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42089.4837934838"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="4"/>
+				<Prp name="key" type="S" value="{50574CA3-9DFE-4911-8CED-870653EEF462}"/>
+				<Prp name="nameofroot" type="S" value="Keyword Test Log [LidecSCRVerify]"/>
+				<Prp name="relpath" type="S" value="26_03_2015_11_36_39_755\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{681DCC69-A39F-4C4D-8E7D-B2D9362FAF4F}"/>
+		<Prp name="version" type="S" value="7.0"/>
+	</Node>
+</Nodes>

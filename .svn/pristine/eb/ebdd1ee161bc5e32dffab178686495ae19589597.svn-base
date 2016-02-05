@@ -1,0 +1,14 @@
+spsmon LAN2 /a /r	MXpdeStart	MXpdeStart
+spsmon LAN2 /a /r	MXpdeStop	MXpdeStop
+spsmon LAN2 /a /r	MXpdeGetBreak	MXpdeGetBreak
+spsmon LAN2 /a /r	MDpdeDepth	MDpdeDepth
+spsmon LAN2 /a /r	MDpdeMaxDepth	MDpdeMaxDepth
+spsmon LAN2 /a /r	MDpdeMaxDepthLow	MDpdeMaxDepthLow
+spsmon LAN2 /a /r	MDpdeMaxHeight	MDpdeMaxHeight
+spsmon LAN2 /a /r	MXpdeGetInitOk	MXpdeGetInitOk
+spsmon LAN2 /a /r	MWcountCycleB	MWcountCycleB
+spsmon LAN2 /a /r	MDtstampAct	MDtstampAct
+spsmon LAN2 /b
+spsmon LAN2 /t 75
+
+!crc	0x966af8e5

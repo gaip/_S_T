@@ -1,0 +1,16 @@
+temperature hydraulic oil tank 1 [°C]
+start time	2011-01-21T10:02:26
+stop time	2011-02-08T07:29:00
+date-time	temperature hydraulic oil tank 1 [°C]	cooling water temperature diesel engine 1 [°C]	revolutions diesel engine 1 [rpm]	engine exploitation diesel engine 1 [%]
+	%MD1.53	%MD1.2	%MD1.4	%MD1.62
+	MDz6JoySignal	MDcoolWaterTemp	MDpresenEngSpeed	MDz3JoySignal
+2011-01-26T09:49:21	90.34521	45	900	0
+2011-01-25T14:53:30	51.2832	45	900	0
+2011-01-25T14:53:30	51.18968	45	900	0
+2011-01-25T14:53:30	51.00793	45	900	0
+2011-01-25T14:53:31	50.78729	45	900	0
+2011-01-25T14:53:31	50.56249	45	900	0
+2011-01-25T14:53:31	50.35612	45	900	0
+2011-01-25T14:53:31	50.18112	45	900	0
+2011-01-25T14:53:32	50.01975	45	900	0
+2011-01-25T13:05:38	50.00245	45	900	0

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <xsd:include schemaLocation="odx-xhtml.xsd"/>
+  <xsd:complexType name="MODIFICATION" abstract="false">
+    <xsd:sequence>
+      <xsd:element name="CHANGE" type="xsd:string"/>
+      <xsd:element name="REASON" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+    <!--Class: MODIFICATION-->
+  </xsd:complexType>
+  <xsd:complexType name="MODIFICATIONS">
+    <xsd:sequence>
+      <xsd:element name="MODIFICATION" type="MODIFICATION" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:complexType name="COMPANY-REVISION-INFO" abstract="false">
+    <xsd:sequence>
+      <xsd:element name="COMPANY-DATA-REF" type="ODXLINK"/>
+      <xsd:element name="REVISION-LABEL" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="STATE" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+    <!--Class: COMPANY-REVISION-INFO-->
+  </xsd:complexType>
+  <xsd:complexType name="COMPANY-REVISION-INFOS">
+    <xsd:sequence>
+      <xsd:element name="COMPANY-REVISION-INFO" type="COMPANY-REVISION-INFO" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:complexType name="DOC-REVISION" abstract="false">
+    <xsd:sequence>
+      <xsd:element name="TEAM-MEMBER-REF" type="ODXLINK" minOccurs="0"/>
+      <xsd:element name="REVISION-LABEL" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="STATE" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="DATE" type="xsd:dateTime"/>
+      <xsd:element name="TOOL" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="COMPANY-REVISION-INFOS" type="COMPANY-REVISION-INFOS" minOccurs="0"/>
+      <xsd:element name="MODIFICATIONS" type="MODIFICATIONS" minOccurs="0"/>
+    </xsd:sequence>
+    <!--Class: DOC-REVISION-->
+  </xsd:complexType>
+  <xsd:complexType name="DOC-REVISIONS">
+    <xsd:sequence>
+      <xsd:element name="DOC-REVISION" type="DOC-REVISION" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:complexType name="COMPANY-DOC-INFO" abstract="false">
+    <xsd:sequence>
+      <xsd:element name="COMPANY-DATA-REF" type="ODXLINK"/>
+      <xsd:element name="TEAM-MEMBER-REF" type="ODXLINK" minOccurs="0"/>
+      <xsd:element name="DOC-LABEL" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SDGS" type="SDGS" minOccurs="0"/>
+    </xsd:sequence>
+    <!--Class: COMPANY-DOC-INFO-->
+  </xsd:complexType>
+  <xsd:complexType name="COMPANY-DOC-INFOS">
+    <xsd:sequence>
+      <xsd:element name="COMPANY-DOC-INFO" type="COMPANY-DOC-INFO" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:complexType name="ADMIN-DATA" abstract="false">
+    <xsd:sequence>
+      <xsd:element name="LANGUAGE" minOccurs="0">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:language">
+            <xsd:pattern value="[a-z]{2}(-[A-Z]{2})?"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="COMPANY-DOC-INFOS" type="COMPANY-DOC-INFOS" minOccurs="0"/>
+      <xsd:element name="DOC-REVISIONS" type="DOC-REVISIONS" minOccurs="0"/>
+    </xsd:sequence>
+    <!--Class: ADMIN-DATA-->
+  </xsd:complexType>
+  <xsd:complexType name="SPECIAL-DATA" abstract="true">
+    <!--Class: SPECIAL-DATA-->
+  </xsd:complexType>
+  <xsd:complexType name="SD" abstract="false">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="TI" type="xsd:string" use="optional"/>
+        <xsd:attribute name="SI" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+    <!--Class: SD-->
+  </xsd:complexType>
+  <xsd:complexType name="SDG" abstract="false">
+    <xsd:complexContent>
+      <xsd:extension base="SPECIAL-DATA">
+        <xsd:sequence>
+          <xsd:choice>
+            <xsd:element name="SDG-CAPTION-REF" type="ODXLINK" minOccurs="0"/>
+            <xsd:element name="SDG-CAPTION" type="SDG-CAPTION" minOccurs="0"/>
+          </xsd:choice>
+          <xsd:choice minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="SDG" type="SDG"/>
+            <xsd:element name="SD" type="SD"/>
+          </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute name="SI" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+    <!--Class: SDG-->
+  </xsd:complexType>
+  <xsd:complexType name="SDG-CAPTION" abstract="false">
+    <xsd:sequence>
+      <xsd:group ref="ELEMENT-ID"/>
+    </xsd:sequence>
+    <xsd:attribute name="ID" type="xsd:ID" use="required"/>
+    <xsd:attribute name="OID" type="xsd:string" use="optional"/>
+    <!--Class: SDG-CAPTION-->
+  </xsd:complexType>
+  <xsd:complexType name="SDGS">
+    <xsd:sequence>
+      <xsd:element name="SDG" type="SDG" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:complexType name="XDOC" abstract="false">
+    <xsd:sequence>
+      <xsd:group ref="ELEMENT-ID"/>
+      <xsd:element name="NUMBER" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="STATE" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="DATE" type="xsd:dateTime" minOccurs="0"/>
+      <xsd:element name="PUBLISHER" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="URL" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="POSITION" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+    <!--Class: XDOC-->
+  </xsd:complexType>
+  <xsd:complexType name="RELATED-DOC" abstract="false">
+    <xsd:sequence>
+      <xsd:element name="XDOC" type="XDOC"/>
+      <xsd:element name="DESC" type="DESCRIPTION" minOccurs="0"/>
+    </xsd:sequence>
+    <!--Class: RELATED-DOC-->
+  </xsd:complexType>
+  <xsd:complexType name="RELATED-DOCS">
+    <xsd:sequence>
+      <xsd:element name="RELATED-DOC" type="RELATED-DOC" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:complexType name="COMPANY-SPECIFIC-INFO" abstract="false">
+    <xsd:sequence>
+      <xsd:element name="RELATED-DOCS" type="RELATED-DOCS" minOccurs="0"/>
+      <xsd:element name="SDGS" type="SDGS" minOccurs="0"/>
+    </xsd:sequence>
+    <!--Class: COMPANY-SPECIFIC-INFO-->
+  </xsd:complexType>
+  <xsd:complexType name="TEAM-MEMBER" abstract="false">
+    <xsd:sequence>
+      <xsd:group ref="ELEMENT-ID"/>
+      <xsd:element name="ROLES" type="ROLES" minOccurs="0"/>
+      <xsd:element name="DEPARTMENT" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="ADDRESS" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="ZIP" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="CITY" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="PHONE" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="FAX" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="EMAIL" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="ID" type="xsd:ID" use="required"/>
+    <xsd:attribute name="OID" type="xsd:string" use="optional"/>
+    <!--Class: TEAM-MEMBER-->
+  </xsd:complexType>
+  <xsd:complexType name="TEAM-MEMBERS">
+    <xsd:sequence>
+      <xsd:element name="TEAM-MEMBER" type="TEAM-MEMBER" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:complexType name="ROLES">
+    <xsd:sequence>
+      <xsd:element name="ROLE" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:complexType name="EXTERNAL-DOC" abstract="false">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="HREF" type="xsd:anyURI" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+    <!--Class: EXTERNAL-DOC-->
+  </xsd:complexType>
+  <xsd:complexType name="EXTERNAL-DOCS">
+    <xsd:sequence>
+      <xsd:element name="EXTERNAL-DOC" type="EXTERNAL-DOC" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:complexType name="DESCRIPTION" abstract="false">
+    <xsd:sequence>
+      <xsd:group ref="block" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="EXTERNAL-DOCS" type="EXTERNAL-DOCS" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="TI" type="xsd:string" use="optional"/>
+    <!--Class: DESCRIPTION-->
+  </xsd:complexType>
+  <xsd:complexType name="TEXT" abstract="false">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="TI" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+    <!--Class: TEXT-->
+  </xsd:complexType>
+  <xsd:complexType name="LONG-NAME">
+    <xsd:simpleContent>
+      <xsd:restriction base="TEXT">
+        <xsd:maxLength value="255"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+    <!-- Automatically generated wrapper element type -->
+  </xsd:complexType>
+  <xsd:group name="ELEMENT-ID">
+    <xsd:sequence>
+      <xsd:element name="SHORT-NAME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[a-zA-Z0-9_]{1,128}"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="LONG-NAME" type="LONG-NAME" minOccurs="0"/>
+      <xsd:element name="DESC" type="DESCRIPTION" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="COMPANY-DATA" abstract="false">
+    <xsd:sequence>
+      <xsd:group ref="ELEMENT-ID"/>
+      <xsd:element name="ROLES" type="ROLES" minOccurs="0"/>
+      <xsd:element name="TEAM-MEMBERS" type="TEAM-MEMBERS" minOccurs="0"/>
+      <xsd:element name="COMPANY-SPECIFIC-INFO" type="COMPANY-SPECIFIC-INFO" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="ID" type="xsd:ID" use="required"/>
+    <xsd:attribute name="OID" type="xsd:string" use="optional"/>
+    <!--Class: COMPANY-DATA-->
+  </xsd:complexType>
+  <xsd:complexType name="COMPANY-DATAS">
+    <xsd:sequence>
+      <xsd:element name="COMPANY-DATA" type="COMPANY-DATA" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ODXLINK">
+    <xsd:attribute name="ID-REF" type="xsd:IDREF" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="ABLOCK">
+    <xsd:sequence>
+      <xsd:group ref="ELEMENT-ID"/>
+      <xsd:element name="CATEGORY" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="ADMIN-DATA" type="ADMIN-DATA" minOccurs="0"/>
+      <xsd:element name="SDGS" type="SDGS" minOccurs="0"/>
+      <xsd:element name="FILES" type="FILES" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="UPD" type="UPD-STATUS" default="UNDEFINED"/>
+  </xsd:complexType>
+  <xsd:complexType name="ABLOCKS">
+    <xsd:sequence>
+      <xsd:element name="ABLOCK" type="ABLOCK" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CATALOG">
+    <xsd:sequence>
+      <xsd:element name="SHORT-NAME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[a-zA-Z0-9_]{1,128}"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="COMPANY-DATAS" type="COMPANY-DATAS" minOccurs="0"/>
+      <xsd:element name="ADMIN-DATA" type="ADMIN-DATA" minOccurs="0"/>
+      <xsd:element name="ABLOCKS" type="ABLOCKS" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="F-DTD-VERSION" type="xsd:string" use="required" fixed="ODX-2.2.0"/>
+  </xsd:complexType>
+  <xsd:complexType name="FILE">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="CREATION-DATE" type="xsd:dateTime" use="optional"/>
+        <xsd:attribute name="CREATOR" type="xsd:string" use="optional"/>
+        <xsd:attribute name="MIME-TYPE" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="FILES">
+    <xsd:sequence>
+      <xsd:element name="FILE" type="FILE" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="UPD-STATUS">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NEW"/>
+      <xsd:enumeration value="CHANGED"/>
+      <xsd:enumeration value="UNCHANGED"/>
+      <xsd:enumeration value="UNUSED"/>
+      <xsd:enumeration value="REUSED"/>
+      <xsd:enumeration value="DELETED"/>
+      <xsd:enumeration value="UNDEFINED"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ++++++++++ Definition of the root element: ++++++++++ -->
+  <xsd:element name="CATALOG" type="CATALOG">
+    <xsd:key name="COMPANY-DATAS">
+      <xsd:selector xpath="COMPANY-DATAS/COMPANY-DATA"/>
+      <xsd:field xpath="@ID"/>
+    </xsd:key>
+    <xsd:keyref name="COMPANY-DOC-INFO-COMPANY-DATA" refer="COMPANY-DATAS">
+      <xsd:selector xpath=".//COMPANY-DOC-INFOS/COMPANY-DOC-INFO"/>
+      <xsd:field xpath="COMPANY-DATA-REF/@ID-REF"/>
+    </xsd:keyref>
+    <xsd:keyref name="COMPANY-REVISION-INFO-COMPANY-DATA" refer="COMPANY-DATAS">
+      <xsd:selector xpath=".//DOC-REVISIONS/DOC-REVISION/COMPANY-REVISION-INFOS/COMPANY-REVISION-INFO"/>
+      <xsd:field xpath="COMPANY-DATA-REF/@ID-REF"/>
+    </xsd:keyref>
+    <xsd:key name="TEAM-MEMBERS">
+      <xsd:selector xpath="COMPANY-DATAS/COMPANY-DATA/TEAM-MEMBERS/TEAM-MEMBER"/>
+      <xsd:field xpath="@ID"/>
+    </xsd:key>
+    <xsd:keyref name="COMPANY-DOC-INFO-TEAM-MEMBER" refer="TEAM-MEMBERS">
+      <xsd:selector xpath=".//COMPANY-DOC-INFOS/COMPANY-DOC-INFO"/>
+      <xsd:field xpath="TEAM-MEMBER-REF/@ID-REF"/>
+    </xsd:keyref>
+    <xsd:keyref name="DOC-REVISION-TEAM-MEMBER" refer="TEAM-MEMBERS">
+      <xsd:selector xpath=".//DOC-REVISIONS/DOC-REVISION"/>
+      <xsd:field xpath="TEAM-MEMBER-REF/@ID-REF"/>
+    </xsd:keyref>
+    <xsd:key name="SDG-CAPTIONS">
+      <xsd:selector xpath=".//SDG/SDG-CAPTION"/>
+      <xsd:field xpath="@ID"/>
+    </xsd:key>
+    <xsd:keyref name="SDG-SDG-CAPTION" refer="SDG-CAPTIONS">
+      <xsd:selector xpath=".//SDG/SDG-CAPTION-REF"/>
+      <xsd:field xpath="@ID-REF"/>
+    </xsd:keyref>
+  </xsd:element>
+</xsd:schema>

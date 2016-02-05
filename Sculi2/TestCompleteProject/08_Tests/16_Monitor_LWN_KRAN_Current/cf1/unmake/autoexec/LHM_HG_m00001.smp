@@ -1,0 +1,18 @@
+Trigger options:	
+Trigger variable	%QW1.17.1
+Trigger level	1500
+Trigger edge	rising
+
+Sample options:	
+Scan time [ms]	25
+Number of samples	50000
+Samples after trigger	50000
+automatic save	CF2:\HoistingGear
+minimum space	5000
+maximum space	100000
+
+crc	0xB46A0F3A
+
+Sample Data:	
+Trigger time	2008-08-25T17:12:31																																																																																																											
+Time [ms]	%MD1.1	%MD1.2	%MD1.3	%MD1.4	%MD1.5	%MD1.6	%MD1.7	%QW1.17.1	%QW1.17.2	%QW1.17.3	%QW1.17.4	%QW1.17.5	%QW1.17.7	%QW1.18.1	%QW1.18.13	%QW1.18.14	%QW1.18.16	%QW1.18.2	%QW4.17.1	%QW4.17.2	%QW4.17.3	%QW4.17.4	%QW4.17.5	%QW4.17.7	%QW4.17.9	%QW4.18.1	%QW4.18.13	%QW4.18.14	%QW4.18.15	%QW4.18.16	%QW4.18.2	%QW4.19.1	%QW4.19.2	%QW4.19.3	%QW4.19.4	%QW4.19.5	%QW4.19.7	%QW4.20.13	%QW4.20.14	%MD1.242	%MD1.201	%MD1.239	%MD1.240	%MD1.200	%MD1.208	%MD1.209	%IW1.66.1	%IW1.66.2	%MD1.17	%MD1.258	%MD1.12	%MD1.13	%MD1.27	%MD1.28	%MD1.29	%MD1.213	%MD1.215	%MD1.30	%MD1.31	%MD1.40	%MD1.41	%MD1.214	%MD1.42	%MD1.43	%MD1.10	%MD1.11	%MD1.44	%MD1.45	%MD1.264	%MD1.20	%QX1.9.1	%QX1.9.21	%QX1.9.4	%QX1.9.22	%MD1.19	%MD1.14	%MD1.15	%MD1.250	%IW1.41.15	%IW1.41.16	%IW1.42.4	%IW1.42.5	%IW1.48.1	%IW1.48.2	%IW1.48.3	%IW1.48.4	%IW1.48.5	%IW1.48.6	%IW1.48.7	%IW1.48.8	%IW1.48.9	%IW1.48.10	%IW1.48.11	%IW1.48.12	%IW1.48.13	%IW1.48.14	%IW1.48.15	%IW1.48.16	%MD2.1000	%MD1.592	%MD1.594	%MD1.593	%MD1.595	%MX1.672	%MX1.673	%MD1.271	%IW1.42.1	%IW1.42.2

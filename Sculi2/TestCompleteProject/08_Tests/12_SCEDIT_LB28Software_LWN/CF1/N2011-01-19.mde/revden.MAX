@@ -1,0 +1,9 @@
+engine speed in [rpm]
+start time	2011-01-11T10:02:03
+stop time	2011-01-19T15:42:12
+date-time	engine speed in [rpm]	power diesel engine 1 [kW]	cooling water temperature diesel engine 1 [°C]	charge air pressure in [bar]	charge air temperature diesel engine 1 [°C]	air filter negative pressure diesel engine 1 [mbar]	lub oil pressure diesel engine 1 [bar]	load on the main boom in [to]	load radius main boom in [m]	maximum lifting hight main boom (head hight) in [m]	utilization in [%]	rope speed hg1 in [m/min]	rope speed hg2 in [m/min]	pressure switch travelling gear	operation mode
+	%MD1.4	%MD1.201	%MD1.2	%MD1.5	%MD1.257	%MD1.204	%MD1.3	%MD1.32	%MD1.39	%MD1.41	%MD1.30	%MD1.47	%MD1.48	%IX1.77.37	%MD1.205
+	MDpresenEngSpeed	MD201	MDcoolWaterTemp	MDchargeAirPress	%MD1.257	MDpdeDdProgress	MDlubOilPressure	MDauxJoySignal	MDspeedHigh	MDaccelMedium	MDfawExtAnalSign	MDkeybx25Poti2	MDkeybx25Poti3	IXswitTravelGear	%MD1.205
+2011-01-11T10:02:03	900	0	45	1.5	70	0	4.5	0	0	0	125	0	0	0	2
+2011-01-11T10:02:03	0	0	45	1.5	70	0	4.5	0	0	0	125	0	0	0	2
+2011-01-11T10:02:03	0	0	0	0	0	0	0	0	0	0	125	0	0	0	0

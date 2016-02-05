@@ -1,0 +1,9 @@
+calculated torque input 1 distribution gear 1 [Nm]
+start time	2012-05-02T11:37:47
+stop time	2012-05-02T14:01:18
+date-time	calculated torque input 1 distribution gear 1 [Nm]	revolutions input 1 distribution gear 1 [rpm]	torque axle 1 distribution gear 1 [Nm]	torque axle 2 distribution gear 1 [Nm]	torque axle 3 distribution gear 1 [Nm]	torque axle 4 distribution gear 1 [Nm]	torque axle 5 distribution gear 1 [Nm]	torque axle 6 distribution gear 1 [Nm]	torque axle 7 distribution gear 1 [Nm]	power diesel engine 1 [kW]	power e-motor 1 [kW]	x-direction left joystick 1 [%]	y-direction left joystick 1 [%]	x-direction right joystick 1 [%]	y-direction right joystick 1 [%]
+	%MD1.302	%MD1.366	%MD1.388	%MD1.389	%MD1.390	%MD1.391	%MD1.392	%MD1.393	%MD1.394	%MD1.350	%MD1.351	%MD1.376	%MD1.377	%MD1.378	%MD1.379
+	MDmdeCaTqIn1DG1	MDmdeRvIn1DG1	MDmdeTqAx1DG1	MDmdeTqAx2DG1	MDmdeTqAx3DG1	MDmdeTqAx4DG1	MDmdeTqAx5DG1	MDmdeTqAx6DG1	MDmdeTqAx7DG1	MDmdePwDiEn1	MDmdePwEmot1	MDmdeSgLxJs1	MDmdeSgLyJs1	MDmdeSgRxJs1	MDmdeSgRyJs1
+2012-05-02T11:37:47	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2012-05-02T11:37:47	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2012-05-02T11:37:47	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

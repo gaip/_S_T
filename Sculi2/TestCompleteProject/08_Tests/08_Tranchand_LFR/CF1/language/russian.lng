@@ -1,0 +1,17 @@
+!version	00036
+#
+!font	CP 1251
+#
+# Language File / Sprachtexte File
+# Russian / Russisch
+
+!SHELL
+
+!PDESERV
+
+!PDE
+
+!TESTSYS
+!best-fit-font	cp1251
+
+!LOGGER

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child data"/>
+		<Node name="stack"/>
+		<Node name="item 4">
+			<Prp name="stacktext" type="S" value="clickOnChildObjects"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="date" type="D" value="42403.6295799421"/>
+			<Prp name="remarks" type="S" value="NameMapping.Sys.SCULi.Form_Main.MDIClient.PluginsContextForm.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.Window(&quot;&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).UIAObject(&quot;New_Filter&quot;).TextObject(&quot;New Filter&quot;)"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The action may be performed incorrectly, because the control is not visible."/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="date" type="D" value="42403.6295898843"/>
+			<Prp name="remarks" type="S" value="NameMapping.Sys.SCULi.Form_Main.MDIClient.PluginsContextForm.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.Window(&quot;&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 1)"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The action may be performed incorrectly, because the control is disabled."/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="date" type="D" value="42403.6295932755"/>
+			<Prp name="remarks" type="S" value="The window with the handle 0x000d1b20 does not exist.&#xA;Most likely, this error occurred because the tested object (window or control) or its parent object was deleted or recreated during the method call or before it. For instance, the window could be destroyed or recreated after you stored the object reference to a variable and before you called the object method through this variable.&#xA;If the object is recreated, then to avoid the error, check the object's Exists property before calling the method, and if the object does not exist, obtain a reference to the new object.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 1)"/>
+			<Prp name="picture" type="S" value="Picture4.png"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack beginning" type="I" value="6"/>
+			<Prp name="message" type="S" value="The window was destroyed during method execution."/>
+			<Prp name="stack end" type="I" value="7"/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="stacktext" type="S" value="_2_4_1_MCC_AnalyzerFilterNameRename()"/>
+			<Prp name="line no" type="I" value="14"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="date" type="D" value="42403.6295832407"/>
+			<Prp name="remarks" type="S" value="The window with the handle 0x00132910 does not exist.&#xA;Most likely, this error occurred because the tested object (window or control) or its parent object was deleted or recreated during the method call or before it. For instance, the window could be destroyed or recreated after you stored the object reference to a variable and before you called the object method through this variable.&#xA;If the object is recreated, then to avoid the error, check the object's Exists property before calling the method, and if the object does not exist, obtain a reference to the new object.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).UIAObject(&quot;New_Filter&quot;).TextObject(&quot;New Filter&quot;)"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="message" type="S" value="The window was destroyed during method execution."/>
+			<Prp name="stack end" type="I" value="3"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="date" type="D" value="42403.6295899306"/>
+			<Prp name="remarks" type="S" value="NameMapping.Sys.SCULi.Form_Main.MDIClient.PluginsContextForm.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.Window(&quot;&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 1)"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The action may be performed incorrectly, because the control is not visible."/>
+		</Node>
+		<Node name="item 8">
+			<Prp name="stacktext" type="S" value="_2_4_1_MCC_AnalyzerFilterNameRename()"/>
+			<Prp name="line no" type="I" value="15"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="date" type="D" value="42403.6295852546"/>
+			<Prp name="remarks" type="S" value="NameMapping.Sys.SCULi.Form_Main.MDIClient.PluginsContextForm.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.Window(&quot;&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 2)"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The action may be performed incorrectly, because the control is not visible."/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="date" type="D" value="42403.6295852083"/>
+			<Prp name="remarks" type="S" value="NameMapping.Sys.SCULi.Form_Main.MDIClient.PluginsContextForm.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.Window(&quot;&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 2)"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The action may be performed incorrectly, because the control is disabled."/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="stacktext" type="S" value="clickOnChildObjects"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="item 7">
+			<Prp name="stacktext" type="S" value="_2_4_1_MCC_AnalyzerFilterNameRename()"/>
+			<Prp name="line no" type="I" value="14"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="stacktext" type="S" value="clickOnChildObjects"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="date" type="D" value="42403.6295886458"/>
+			<Prp name="remarks" type="S" value="The window with the handle 0x000d1b20 does not exist.&#xA;Most likely, this error occurred because the tested object (window or control) or its parent object was deleted or recreated during the method call or before it. For instance, the window could be destroyed or recreated after you stored the object reference to a variable and before you called the object method through this variable.&#xA;If the object is recreated, then to avoid the error, check the object's Exists property before calling the method, and if the object does not exist, obtain a reference to the new object.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 2)"/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack beginning" type="I" value="4"/>
+			<Prp name="message" type="S" value="The window was destroyed during method execution."/>
+			<Prp name="stack end" type="I" value="5"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="date" type="D" value="42403.6295798843"/>
+			<Prp name="remarks" type="S" value="NameMapping.Sys.SCULi.Form_Main.MDIClient.PluginsContextForm.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.Window(&quot;&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).UIAObject(&quot;New_Filter&quot;).TextObject(&quot;New Filter&quot;)"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The action may be performed incorrectly, because the control is disabled."/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="stacktext" type="S" value="_2_4_1_MCC_AnalyzerFilterNameRename()"/>
+			<Prp name="line no" type="I" value="14"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 10">
+			<Prp name="date" type="D" value="42403.629600463"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="picture" type="S" value="Picture5.png"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="15"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack beginning" type="I" value="8"/>
+			<Prp name="message" type="S" value="The test execution was interrupted."/>
+			<Prp name="stack end" type="I" value="8"/>
+		</Node>
+		<Node name="item 6">
+			<Prp name="stacktext" type="S" value="clickOnChildObjects"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="42403.629600463"/>
+			</Node>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+			<Prp name="length" type="I" value="1"/>
+			<Prp name="columnindex" type="I" value="0"/>
+			<Prp name="color" type="I" value="0"/>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="description" type="S" value=""/>
+			<Prp name="isinteger" type="B" value="0"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{FDC00FD5-8764-49BF-9D72-65A2BA3AC304}"/>
+			<Prp name="unit 1" type="S" value="{255CC541-96AA-41AB-B147-18889A6415C1}"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="date" type="D" value="42403.6295728241"/>
+			<Prp name="remarks" type="S" value="The window with the handle 0x00132910 does not exist.&#xA;Most likely, this error occurred because the tested object (window or control) or its parent object was deleted or recreated during the method call or before it. For instance, the window could be destroyed or recreated after you stored the object reference to a variable and before you called the object method through this variable.&#xA;If the object is recreated, then to avoid the error, check the object's Exists property before calling the method, and if the object does not exist, obtain a reference to the new object.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).UIAObject(&quot;New_Filter&quot;)"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was destroyed during method execution."/>
+			<Prp name="stack end" type="I" value="1"/>
+		</Node>
+		<Node name="item 5">
+			<Prp name="stacktext" type="S" value="_2_4_1_MCC_AnalyzerFilterNameRename()"/>
+			<Prp name="line no" type="I" value="14"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

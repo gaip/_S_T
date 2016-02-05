@@ -1,0 +1,275 @@
+%MX2.1	0	0	CX2TJoystick	enable double T joystick
+%MX2.2	0	0	CXunits_for_USA	enable US units of measure
+%MX2.3	1	1	CXfawRopeLenMeas	enable crowd winch rope length measuring 
+%MX2.4	1	1	CXfaForceTransm	enable crowd winch force transmitter 
+%MX2.5	0	0	CXfawAutPullCont	enable crowd winch automatic pull control 
+%MX2.6	1	1	CXhg2RopeLenMeas	enable HG 2 rope length measuring
+%MX2.7	1	1	CXhg2ForceTransm	enable HG 2 force transmitter
+%MX2.8	1	1	CXhg2EnFreeWheel	enable HG 2 free wheel
+%MX2.9	0	0	CXhg2EnSlackRope	enable HG 2 slack rope
+%MX2.10	0	0	CXadHg2SynToFaw	enable HG 2 synchron to crowd winch
+%MX2.11	1	1	CXauxPreselect	enable auxiliary winch preselected
+%MX2.12	0	0	CXauxForceTransm	enable auxiliary winch force transmitter
+%MX2.13	1	1	CXadKellyOperat	enable Kelly operation preselected
+%MX2.14	0	0	CXadSMOperat	enable soil mixing operation preselected
+%MX2.15	0	0	CXnoZeroPosGearB	no zero position to switch gear box drilling drive
+%MX2.16	0	0	CXvdwSameDirPoss	enable VdW drilling at same direction possible
+%MX2.17	0	0	CXddTorqueInd	enable drilling drive torque indication
+%MX2.18	1	1	CXtgWarning	enable travelling gear acoustical warning
+%MX2.19	1	1	CXsgWarning	enable slewing gear acoustical warning
+%MX2.21	1	1	CXaddHydraulics	enable additional hydraulics
+%MX2.22	1	1	CXenabZ8Cylinder	enable Z8 cylinder
+%MX2.23	0	0	CXadOilHeating	enable oil heating degree
+%MX2.24	1	1	CXpileGuideCyl	enable pile guide cylinder
+%MX2.25	0	0	CXenaSuppCyl	enable rear support cylinder
+%MX2.26	0	0	CXconcreFlowRate	enable concrete flow rate record
+%MX2.27	0	0	CXjoystVibrHg1	enable joystick vibrator crowd system
+%MX2.28	0	0	CXjoystVibrHg2	enable joystick vibrator hoisting gear 2
+%MX2.29	0	0	CXjoystVibrLg	enable joystick vibrator auxiliary winch
+%MX2.30	0	0	CXjoystVibrSg	enable joystick vibrator slewing gear
+%MX2.31	0	0	CXadRfVibPresel	enbale reinforcement vibrator preselected
+%MX2.32	1	1	CXadHg2LoweLimit	enable hg2 lower limit switch
+%MX2.34	1	1	CXad3LudvPump	enable additional 3rd LUDV Pump
+%MX2.35	0	0	CXadSOBOperat	enable SOB operation preselected
+%MX2.36	0	0	CXadVDWOperat	enable VDW drive operation preselected
+%MX2.37	0	0	CXadHydr2Pump	enable additional hydraulics with 2 pumps
+%MX2.38	0	0	CXadHydrOnKdkZe	enable additional hydr. only when KDK zero
+%MX2.39	1	1	CXauxLockPresX25	enable aux. winch locked preselection on X25
+%MX2.40	1	1	CXselGearShakeDd	enable selection of the gear by shaking drilling drive
+%MW2.1	360	360	CWfawMinCurVlvUp	crowd winch min. current valve up
+%MW2.2	360	360	CWfawMinCurVlvDn	crowd winch min. current valve down
+%MW2.3	720	720	CWfawMaxCurVlvUp	crowd winch max. current valve up
+%MW2.4	710	710	CWfawMaxCurVlvDn	crowd winch max. current valve down
+%MW2.5	430	430	CWfawMinCurPresD	crowd winch press down valve min. current 
+%MW2.6	800	800	CWfawMaxCurPresD	crowd winch press down valve max. current 
+%MW2.7	100	100	CWfawConMinCur	crowd winch pres. control valve min. current 
+%MW2.8	750	750	CWfawConMaxCur	crowd winch pres. control valve max. current 
+%MW2.9	380	380	CWhg2minCurVlvUp	hoisting gear 2 min. current valve up
+%MW2.10	380	380	CWhg2minCurVlvDn	hoisting gear 2 min. current valve down
+%MW2.11	680	680	CWhg2maxCurVlvUp	hoisting gear 2 max. current valve up
+%MW2.12	680	680	CWhg2maxCurVlvDn	hoisting gear 2 max. current valve down
+%MW2.13	430	430	CWhg2minCurVl2Up	hoisting gear 2 min. current valve 2 up
+%MW2.14	430	430	CWhg2minCurVl2Dn	hoisting gear 2 min. current valve 2 down
+%MW2.15	750	750	CWhg2maxCurVl2Up	hoisting gear 2 max. current valve 2 up
+%MW2.16	800	800	CWhg2maxCurVl2Dn	hoisting gear 2 max. current valve 2 down
+%MW2.17	350	350	CWfreWhMinCurVal	hoisting gear 2 free wheel min. current valve
+%MW2.18	730	730	CWfreWhMaxCurVal	hoisting gear 2 free wheel max. current valve
+%MW2.19	0	0	CWfanDrMinCurPum	fan drive minimum current
+%MW2.20	600	600	CWfanDrMaxCurPum	fan drive maximum current
+%MW2.21	360	360	CWauxMinCurVlvUp	auxiliary winch min. current valve up
+%MW2.22	360	360	CWauxMinCurVlvDn	auxiliary winch min. current valve down
+%MW2.23	700	700	CWauxMaxCurVlvUp	auxiliary winch max. current valve up
+%MW2.24	700	700	CWauxMaxCurVlvDn	auxiliary winch max. current valve down
+%MW2.25	300	300	CWsgminCurVlvRi	slewing gear min. current valve right
+%MW2.26	300	300	CWsgminCurVlvLe	slewing gear min. current valve left
+%MW2.27	720	720	CWsgmaxCurVlvRi	slewing gear max. current valve right
+%MW2.28	720	720	CWsgmaxCurVlvLe	slewing gear max. current valve left
+%MW2.29	220	220	CWludv1MinCurPum	LUDV 1 min. current pump
+%MW2.30	750	750	CWludv1MaxCurPum	LUDV 1 max. current pump
+%MW2.31	220	220	CWludv2MinCurPum	LUDV 2 min. current pump
+%MW2.32	750	750	CWludv2MaxCurPum	LUDV 2 max. current pump
+%MW2.33	220	220	CWludv3MinCurPum	LUDV 3 min. current pump
+%MW2.34	750	750	CWludv3MaxCurPum	LUDV 3 max. current pump
+%MW2.37	320	320	CWminCurTgCtrVlv	travelling gear min. current control valve
+%MW2.38	650	650	CWmaxCurTgCtrVlv	travelling gear max. current control valve
+%MW2.39	429	429	CWz2MinCurValvOu	Z2 right min. current valve out
+%MW2.40	660	660	CWz2MaxCurValvOu	Z2 right max. current valve out
+%MW2.41	430	430	CWz2MinCurValvIn	Z2 right min. current valve in
+%MW2.42	632	632	CWz2MaxCurValvIn	Z2 right max. current valve in
+%MW2.43	430	430	CWz4MinCurValvIn	Z4 boom adjusting min. current valve in
+%MW2.44	800	800	CWz4MaxCurValvIn	Z4 boom adjusting max. current valve in
+%MW2.45	430	430	CWz4MinCurValvOu	Z4 boom adjusting min. current valve out
+%MW2.46	680	680	CWz4MaxCurValvOu	Z4 boom adjusting max. current valve out
+%MW2.47	427	427	CWz6MinCurValvOu	Z2 left min. current valve out
+%MW2.48	657	657	CWz6MaxCurValvOu	Z2 left max. current valve out
+%MW2.49	425	425	CWz6MinCurValvIn	Z2 left min. current valve in
+%MW2.50	645	645	CWz6MaxCurValvIn	Z2 left max. current valve in
+%MW2.51	360	360	CWz8MinCurValvOu	Z8 cyl. min. current valve out
+%MW2.52	600	600	CWz8MaxCurValvOu	Z8 cyl. max. current valve out
+%MW2.53	360	360	CWz8MinCurValvIn	Z8 cyl. min. current valve in
+%MW2.54	520	520	CWz8MaxCurValvIn	Z8 cyl. max. current valve in
+%MW2.55	350	350	CWp1MaxValue	ludv pump 1 max. value [l/min]
+%MW2.56	350	350	CWp2MaxValue	ludv pump 2 max. value [l/min]
+%MW2.57	360	360	CWp1MinCurValveB	drilling drive 1 min. current valve right (B side)
+%MW2.58	710	710	CWp1MaxCurValveB	drilling drive 1 max.current valve right (B side)
+%MW2.59	360	360	CWp1MinCurValveA	drilling drive 1 min. current valve left (A side)
+%MW2.60	700	700	CWp1MaxCurValveA	drilling drive 1 max. current valve left (A side)
+%MW2.61	470	470	CWp1cur50liter	drilling drive 1 current for 50l/min
+%MW2.62	535	535	CWp1cur100liter	drilling drive 1 current for 100l/min
+%MW2.63	575	575	CWp1cur150liter	drilling drive 1 current for 150l/min
+%MW2.64	620	620	CWp1cur200liter	drilling drive 1 current for 200l/min
+%MW2.65	650	650	CWp1cur250liter	drilling drive 1 current for 250l/min
+%MW2.66	680	680	CWp1cur300liter	drilling drive 1 current for 300l/min
+%MW2.67	710	710	CWp1cur350liter	drilling drive 1 current for 350l/min
+%MW2.68	360	360	CWp2MinCurValveB	drilling drive 2 min. current valve right (B side)
+%MW2.69	690	690	CWp2MaxCurValveB	drilling drive 2 max. current valve right (B side)
+%MW2.70	360	360	CWp2MinCurValveA	drilling drive 2 min. current valve left (A side)
+%MW2.71	690	690	CWp2MaxCurValveA	drilling drive 2 max. current valve left (A side)
+%MW2.72	450	450	CWp2cur50liter	drilling drive 2 current for 50l/min
+%MW2.73	510	510	CWp2cur100liter	drilling drive 2 current for 100l/min
+%MW2.74	555	555	CWp2cur150liter	drilling drive 2 current for 150l/min
+%MW2.75	585	585	CWp2cur200liter	drilling drive 2 current for 200l/min
+%MW2.76	625	625	CWp2cur250liter	drilling drive 2 current for 250l/min
+%MW2.77	655	655	CWp2cur300liter	drilling drive 2 current for 300l/min
+%MW2.78	690	690	CWp2cur350liter	drilling drive 2 current for 350l/min
+%MW2.79	380	380	CWadHyMinCurSec1	add. hydraulics min. current section 1
+%MW2.80	640	640	CWadHyMaxCurSec1	add. hydraulics max. current section 1
+%MW2.81	440	440	CWp1AdHy50liter	add. hydraulics ludv section p1 current for 50l/min
+%MW2.82	490	490	CWp1AdHy100liter	add. hydraulics ludv section p1 current for 100l/min
+%MW2.83	530	530	CWp1AdHy150liter	add. hydraulics ludv section p1 current for 150l/min
+%MW2.84	560	560	CWp1AdHy200liter	add. hydraulics ludv section p1 current for 200l/min
+%MW2.85	590	590	CWp1AdHy250liter	add. hydraulics ludv section p1 current for 250l/min
+%MW2.86	620	620	CWp1AdHy300liter	add. hydraulics ludv section p1 current for 300l/min
+%MW2.89	50	50	CWp1PresContMin	ludv pump 1 pressure control min. current
+%MW2.90	720	720	CWp1PresContMax	ludv pump 1 pressure control max. current
+%MW2.91	100	100	CWp1ConLudv50bar	ludv pump 1 pressure control current for 50bar
+%MW2.92	220	220	CWp1ConLud100bar	ludv pump 1 pressure control current for 100bar
+%MW2.93	320	320	CWp1ConLud150bar	ludv pump 1 pressure control current for 150bar
+%MW2.94	420	420	CWp1ConLud200bar	ludv pump 1 pressure control current for 200bar
+%MW2.95	520	520	CWp1ConLud250bar	ludv pump 1 pressure control current for 250bar
+%MW2.96	620	620	CWp1ConLud300bar	ludv pump 1 pressure control current for 300bar
+%MW2.97	350	350	CWp1PresMaxBar	ludv pump 1 pressure control max. value [bar]
+%MW2.98	350	350	CWp1Pressure	ludv pump 1 pressure [bar]
+%MW2.99	50	50	CWp2PresContMin	ludv pump 2 pressure control min. current
+%MW2.100	720	720	CWp2PresContMax	ludv pump 2 pressure control max. current
+%MW2.101	100	100	CWp2ConLudv50bar	ludv pump 2 pressure control current for 50bar
+%MW2.102	220	220	CWp2ConLud100bar	ludv pump 2 pressure control current for 100bar
+%MW2.103	320	320	CWp2ConLud150bar	ludv pump 2 pressure control current for 150bar
+%MW2.104	420	420	CWp2ConLud200bar	ludv pump 2 pressure control current for 200bar
+%MW2.105	520	520	CWp2ConLud250bar	ludv pump 2 pressure control current for 250bar
+%MW2.106	620	620	CWp2ConLud300bar	ludv pump 2 pressure control current for 300bar
+%MW2.107	350	350	CWp2PresMaxBar	ludv pump 2 pressure control max. value [bar]
+%MW2.108	350	350	CWp2Pressure	ludv pump 2 pressure [bar]
+%MW2.119	400	400	CWsupMinCurValOu	rear support cyl. min. current valve out
+%MW2.120	740	740	CWsupMaxCurValOu	rear support cyl. max. current valve out
+%MW2.121	400	400	CWsupMinCurValIn	rear support cyl. min. current valve in
+%MW2.122	740	740	CWsupMaxCurValIn	rear support cyl. max. current valve in
+%MW2.123	400	400	CWadRfVibMinCur	add. reinforcement vibrator min. current
+%MW2.124	740	740	CWadRfVibMaxCur	add. reinforcement vibrator max. current
+%MW2.125	300	300	CWadHyMinCurSec2	add. hydraulics min. current section 2
+%MW2.126	650	650	CWadHyMaxCurSec2	add. hydraulics max. current section 2
+%MW2.127	350	350	CWp2AdHy50liter	add. hydraulic ludv section p2 current for 50l/min
+%MW2.128	400	400	CWp2AdHy100liter	add. hydraulic ludv section p2 current for 100l/min
+%MW2.129	450	450	CWp2AdHy150liter	add. hydraulic ludv section p2 current for 150l/min
+%MW2.130	500	500	CWp2AdHy200liter	add. hydraulic ludv section p2 current for 200l/min
+%MW2.131	550	550	CWp2AdHy250liter	add. hydraulic ludv section p2 current for 250l/min
+%MW2.132	600	600	CWp2AdHy300liter	add. hydraulic ludv section p2 current for 300l/min
+%MW2.133	680	680	CWhg2SlRopAuBaTe	HG2 slack rope automatic tension current [mA]
+%MW2.134	8	8	CWminPumpFreq	min. pump frequency conc. vol. pres. sensor [stroke/min]
+%MW2.135	50	50	CWmaxPumpFreq	max. pump frequency conc. vol. pres. sensor [stroke/min]
+%MW2.136	200	200	CWddTrimotMinCur	drilling drive trimot valve min. current [mA]
+%MW2.137	600	600	CWddTrimotMaxCur	drilling drive trimot valve max. current [mA]
+%MD2.1	115545	115545	CDmachinSerialNr	serial number of the machine
+%MD2.2	1034147594	        0.08	CDmaxPower_p_fac	maximum engine power regulator p-factor [0.0 - x.x]
+%MD2.3	1025758986	        0.04	CDmaxPow_i_facUp	maximum engine power regulator i-factor up [0.0 - x.x]
+%MD2.4	1017370378	        0.02	CDmaxPow_i_facDn	maximum engine power regulator i-factor down [0.0 - x.x]
+%MD2.5	0	           0	CDmaxPower_d_fac	maximum engine power regulator d-factor [0.0 - x.x]
+%MD2.6	1120403456	         100	CDfawIntTimeUp	crowd winch integrator time rising signal (% per s)
+%MD2.7	1120403456	         100	CDfawIntTimeDn	crowd winch integrator time falling signal (% per s)
+%MD2.8	1135542272	         350	CDfawMaxPresFSUp	crowd winch maximum pressure fast speed lifting
+%MD2.9	1128792064	         200	CDfawMaxPresFSDn	crowd winch maximum pressure fast speed lowering
+%MD2.10	1149747200	        1086	CDfawNPerBar	crowd winch newton per bar on slide [N/bar]
+%MD2.11	1069547520	         1.5	CDfawContFactor	crowd winch control factor oil motor
+%MD2.12	1065353216	           1	CDfawGearRatio	crowd winch gear ratio to the incrementalsensor
+%MD2.13	1140457472	         500	CDfawImpIncSen	crowd winch impulses per rotation of the incrementalsenor
+%MD2.14	1142292480	         600	CDfawLayer1Diame	crowd winch rope length meas. diameter
+%MD2.15	1073741824	           2	CDfawRopeReeving	crowd winch rope reeving
+%MD2.16	1088421888	           7	CDfawloadMeasCor	crowd winch load measuring correction factor [%]
+%MD2.17	1140457472	         500	CDcwOverloadKN	crowd winch overload [kN]
+%MD2.18	1142931456	         639	CDfawLoMeNPerBar	crowd winch load measuring newton per bar [N\bar]
+%MD2.19	1141473280	         550	CDfaLoadSenScal	crowd winch scale load sensor pull down [kN]
+%MD2.20	1127546880	         181	CDfaLoadSenWrap	crowd winch wrap around factor of load sensor [°] 
+%MD2.21	1120403456	         100	CDhg2IntTimeUp	HG2 integrator time rising signal
+%MD2.22	1120403456	         100	CDhg2IntTimeDn	HG2 integrator time falling signal
+%MD2.24	1065353216	           1	CDhg2GearRatio	HG2 gear ratio to the incrementalsensor
+%MD2.25	1140457472	         500	CDhg2ImpIncSen	HG2 impulses per rotation of the incrementalsesor
+%MD2.26	1144750080	         750	CDhg2Layer1Diame	HG2 rope length meas.: diameter of the layer 1
+%MD2.27	1107820544	          34	CDhg2RopeDiamete	HG2 rope length meas.: diameter of the rope
+%MD2.28	8250	8250	CDhg2ImpLayJu1_2	HG2 impulses to layer change 1 to 2
+%MD2.29	18002	18002	CDhg2ImpLayJu2_3	HG2 impulses to layer change 2 to 3
+%MD2.30	27756	27756	CDhg2ImpLayJu3_4	HG2 impulses to layer change 3 to 4
+%MD2.31	27756	27756	CDhg2ImpLayJu4_5	HG2 impulses to layer change 4 to 5
+%MD2.32	27756	27756	CDhg2ImpLayJu5_6	HG2 impulses to layer change 5 to 6
+%MD2.33	27756	27756	CDhg2ImpLayJu6_7	HG2 impulses to layer change 6 to 7
+%MD2.34	1143930880	         700	CDhg2LoadSenScal	HG2 scale load sensor main winch [kN]
+%MD2.35	1123024896	         120	CDhg2LoadSenWrap	HG2 wrap around factor load sensor [°] 
+%MD2.36	1065353216	           1	CDhg2slackRopeKN	HG2 slack rope limit in [kN]
+%MD2.37	1134231552	         310	CDhg2overloadKN	HG2 overload in [kN]
+%MD2.39	1112014848	          50	CDsgIntTimeUp	slewing gear integrator time up
+%MD2.40	1112014848	          50	CDsgIntTimeDn	slewing gear integrator time down
+%MD2.41	1113325568	          55	CDsgSpeed1Signal	slewing gear analog signal for speed 1 in %
+%MD2.42	1120403456	         100	CDz2IntTimeUp	Z2 right integrator time rising signal (% per s)
+%MD2.43	1120403456	         100	CDz2IntTimeDn	Z2 right integrator time falling signal (% per s)
+%MD2.44	1120403456	         100	CDz4IntTimeUp	Z4 integrator time rising signal (% per s)
+%MD2.45	1120403456	         100	CDz4IntTimeDn	Z4 integrator time falling signal (% per s)
+%MD2.46	1120403456	         100	CDz6IntTimeUp	Z2 left integrator time rising signal (% per s)
+%MD2.47	1120403456	         100	CDz6IntTimeDn	Z2 left integrator time falling signal (% per s)
+%MD2.50	1092616192	          10	CDludvLeakOilSig	LUDV leakoil or pressure comp. signal
+%MD2.51	1120403456	         100	CDauxIntTimeUp	auxiliary winch integrator time up
+%MD2.52	1120403456	         100	CDauxIntTimeDn	auxiliary winch integrator time down
+%MD2.53	1133903872	         300	CDauxLoadSenScal	auxiliary winch scale load sensor [kN]
+%MD2.54	1119092736	          90	CDauxLoadSenWrap	auxiliary winch wrap around factor of load sensor [°] 
+%MD2.55	1135542272	         350	CDddMaxPressure	drilling drive maximum pressure 
+%MD2.56	1135214592	         340	CDddRedPointPres	drilling drive reduc. point for anti-block-syst. [bar]
+%MD2.57	1120403456	         100	CDdd1IntTimeUp	drilling drive 1  integrator time rising signal
+%MD2.58	1120403456	         100	CDdd1IntTimeDn	drilling drive 1  integrator time falling signal
+%MD2.59	1120403456	         100	CDdd2IntTimeUp	drilling drive 2  integrator time rising signal
+%MD2.60	1120403456	         100	CDdd2IntTimeDn	drilling drive 2  integrator time falling signal
+%MD2.61	1117913088	          81	CDddGearRatio	drilling drive gear ratio Kelly/SOB  [imp/turn of dd]
+%MD2.62	1116340224	          69	CDvdw1GearRatio	drilling drive 1 gear ratio VdW [imp/turn of dd]
+%MD2.63	1116340224	          69	CDvdw2GearRatio	drilling drive 2 gear ratio VdW [imp/turn of dd]
+%MD2.64	1116340224	          69	CDsmoGearRatio	drilling drive gear ratio SMO  [imp/turn of dd]
+%MD2.65	1101004800	          20	CDdd1AverageFact	drilling drive 1 average factor speed calculation 
+%MD2.66	1101004800	          20	CDdd2AverageFact	drilling drive 2 average factor speed calculation 
+%MD2.67	0	           0	CDddRedFastSpeed	drilling drive reduction at fast speed operation
+%MD2.68	1133903872	         300	CDddPowFastSpeed	drilling drive maximum power at fast speed [kW]
+%MD2.69	1148846080	        1000	CDddPowLowSpeed	drilling drive maximum power at low speed [kW]
+%MD2.70	1133903872	         300	CDvdw1PowFastSpe	VdW dd1 maximum power at fast speed [kW]
+%MD2.71	1133903872	         300	CDvdw2PowFastSpe	VdW dd2 maximum power at fast speed [kW]
+%MD2.72	1148846080	        1000	CDvdw1PowLowSpe	VdW dd1 maximum power at low speed [kW]
+%MD2.73	1148846080	        1000	CDvdw2PowLowSpe	VdW dd2 maximum power at low speed [kW]
+%MD2.74	1142685696	         624	CDddHiTorqPerBar	drilling drive high torque per bar [Nm/bar]
+%MD2.75	1123680256	         125	CDddLoTorqPerBar	drilling drive low torque per bar [Nm/bar]
+%MD2.76	1065353216	           1	CDddTotEfficienc	drilling drive total efficiency 
+%MD2.77	3248488448	         -20	CDadOilHeatTemp	ad oil heating temperature start heating
+%MD2.78	1133903872	         300	CDadHydP1MaxVal	additional hydraulic ludv P1 maximum value
+%MD2.79	1125515264	         150	CDaddHydMaxPower	additional hydraulic maximum power in [kW]
+%MD2.81	1103626240	          25	CDrfVibIntTimeUp	reinforcement vib. integrator time rising signal (% per s)
+%MD2.82	1103626240	          25	CDrfVibIntTimeDn	reinforcement vib. integrator time falling signal (% per s)
+%MD2.83	1120403456	         100	CDrfVibLimitSig	reinforcement vib. limitation signal
+%MD2.86	103583	103583	CDhg2ImpLayJu7_8	hg 2 impulses to layer change 7 to 8
+%MD2.88	1056964608	         0.5	CDsgStCurDelayTi	sg start current delay time at stopping [s]
+%MD2.89	1056964608	         0.5	CDsgBrakeTime	sg brake close time [s]
+%MD2.90	1101004800	          20	CDhg2FawMinTens	crowd winch minimum tension [%]
+%MD2.91	1120403456	         100	CDhg2FawMaxTens	crowd winch maximum tension [%]
+%MD2.92	1106247680	          30	CDhg2FawMinPress	hg 2 minimum pressure [bar]
+%MD2.93	1133903872	         300	CDhg2FawMaxPress	hg 2 maximum pressure [bar]
+%MD2.94	1114636288	          60	CDhg2FawMaxSpeed	hg2 maximum speed [%]
+%MD2.95	1135542272	         350	CDadHydP2MaxVal	additional hydraulic ludv P2 maximum value
+%MD2.96	1123024896	         120	CDadLeadSuppPres	leader support cylinder: leader supported pressure [bar]
+%MD2.97	1108082688	          35	CDfawMaxTenNoSup	crowd winch maximum tension not supportet [%]
+%MD2.98	1114898432	          61	CDddGearRatioBAT	drilling drive gear ratio BAT [imp/turn of dd]
+%MD2.100	1140457472	         500	CDservInterval	service interval hours
+%MD2.101	1112014848	          50	CDservAcknBef	service hours warning before interval
+%MD2.102	1120403456	         100	CDservAcknAfter	service hours warning after interval
+%MD2.400	1105204347	       28.01	CDmachinSpecType	specific type of the machine
+%MD2.1001	1137180672	         400	CDscaleInput1	scale measuring input 1
+%MD2.1002	1137180672	         400	CDscaleInput2	scale measuring input 2
+%MD2.1003	1137180672	         400	CDscaleInput3	scale measuring input 3
+%MD2.1004	1137180672	         400	CDscaleInput4	scale measuring input 4
+%MD2.1005	1137180672	         400	CDscaleInput5	scale measuring input 5
+%MD2.1006	1137180672	         400	CDscaleInput6	scale measuring input 6
+%MD2.1007	1137180672	         400	CDscaleInput7	scale measuring input 7
+%MD2.1008	1137180672	         400	CDscaleInput8	scale measuring input 8
+%MD2.1009	1137180672	         400	CDscaleInput9	scale measuring input 9
+%MD2.1010	1137180672	         400	CDscaleInput10	scale measuring input 10
+%MD2.1011	1137180672	         400	CDscaleInput11	scale measuring input 11
+%MD2.1012	1137180672	         400	CDscaleInput12	scale measuring input 12
+%MD2.1013	1137180672	         400	CDscaleInput13	scale measuring input 13
+%MD2.1014	1137180672	         400	CDscaleInput14	scale measuring input 14
+%MD2.1015	1137180672	         400	CDscaleInput15	scale measuring input 15
+%MD2.1016	1137180672	         400	CDscaleInput16	scale measuring input 16
+$checksum X	7A2B941E
+$checksum B	FFFFFFFF
+$checksum W	635BDB65
+$checksum D	C690CE81

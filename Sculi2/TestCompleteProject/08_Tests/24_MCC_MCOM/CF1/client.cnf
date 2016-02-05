@@ -1,0 +1,6 @@
+!version	00056
+
+CLIENT LAN2
+TCP-CLIENT 192.168.1.40
+SERVER \x1bLS
+SCRIPT serverscript.scr 0x966af8e5

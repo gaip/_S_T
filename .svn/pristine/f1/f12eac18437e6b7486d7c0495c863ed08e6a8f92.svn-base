@@ -1,0 +1,222 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity" xmlns:local="clr-namespace:PrototypeScreens" xmlns:pc="http://schemas.microsoft.com/prototyping/2010/controls" x:Name="Variable_Editor_Name"
+	mc:Ignorable="d"
+	x:Class="PrototypeScreens.Variable_Editor"
+	Width="1024" Height="768">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="ProjectDataSources.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<Storyboard x:Key="ShowMainShortcut"/>
+			<Storyboard x:Key="UnShowMainShortcut"/>
+			<SolidColorBrush x:Key="ListBorder" Color="#828790"/>
+			<Style x:Key="TreeViewStyle1" TargetType="{x:Type TreeView}">
+			   <Setter Property="FontFamily" Value="./Fonts/BuxtonSketch.ttf#Buxton Sketch"/>
+			   <Setter Property="FontSize" Value="14"/>
+			   <Setter Property="BorderBrush" Value="{StaticResource BaseBorder-Sketch}"/>
+			   <Setter Property="BorderThickness" Value="1"/>
+			   <Setter Property="Padding" Value="1"/>
+			   <Setter Property="Foreground" Value="{StaticResource BaseForeground-Sketch}"/>
+			   <Setter Property="Background" Value="{StaticResource BaseBackground-Sketch}"/>
+			   <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+			   <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+			   <Setter Property="VerticalContentAlignment" Value="Center"/>
+			   <Setter Property="Template">
+			    <Setter.Value>
+			     <ControlTemplate TargetType="TreeView">
+			      <Grid>
+			       <Grid x:Name="Bd" >
+			        <ScrollViewer HorizontalScrollBarVisibility="auto" 
+			         VerticalScrollBarVisibility="auto" >
+			         <ItemsPresenter />
+			        </ScrollViewer>
+			        <pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" x:Name="SketchRectangleSL" 
+			         BorderBrush="{TemplateBinding BorderBrush}" 
+			         ExtensionLength="0" 
+			         ExtensionVariance="0" 
+			         StrokeWidth="2" 
+			         SegmentLength="8" 
+			         SegmentVariance="0.1" 
+			         SegmentOffset="0.12" 
+			         VerticalAlignment="Stretch" 
+			         Height="Auto" 
+			         Background="{x:Null}"/>
+			       </Grid>
+			      </Grid> 
+			     </ControlTemplate>
+			    </Setter.Value>
+			   </Setter>
+			  </Style>
+  		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White" DataContext="{Binding Source={StaticResource VariableDataSource}}">
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="VariableEditorApplicationBar">
+				<VisualStateGroup.Transitions>
+					<VisualTransition GeneratedDuration="0:0:0.5">
+						<VisualTransition.GeneratedEasingFunction>
+							<QuinticEase EasingMode="EaseInOut"/>
+						</VisualTransition.GeneratedEasingFunction>
+					</VisualTransition>
+				</VisualStateGroup.Transitions>
+				<VisualState x:Name="_Default"/>
+				<VisualState x:Name="_Visible">
+					<Storyboard>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="GridBottom">
+							<EasingDoubleKeyFrame KeyTime="0" Value="-61"/>
+						</DoubleAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+						<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<pi:ActivateStateAction TargetState="_Default"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+
+		<Grid>
+			<local:GoBackButton Margin="10" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" >
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Screen_1"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</local:GoBackButton>
+			<TextBlock Margin="75,10,0,0" Style="{DynamicResource TitleLeft-Sketch}" Background="#FF16DA19"><Run Text="Variable "/><Run Language="fr-ch" Text="Viewer"/></TextBlock>
+		</Grid>
+		
+		<Grid Grid.Row="1" DataContext="{Binding Source={StaticResource SampleDataSource}}">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition Width="3*"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="30"/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Grid Name="GridSearch" Grid.Column="1" Width="510" HorizontalAlignment="Left" Margin="10,0,0,0">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="100"/>
+						<ColumnDefinition Width="200"/>
+						<ColumnDefinition Width="100"/>
+						<ColumnDefinition Width="110"/>
+					</Grid.ColumnDefinitions>
+					<TextBox Style="{DynamicResource TextBox-Sketch}" Text="*" d:LayoutOverrides="Height"/>
+					<TextBox Grid.Column="1" Style="{DynamicResource TextBox-Sketch}" Text="*" d:LayoutOverrides="Height"/>
+					<TextBox Grid.Column="2" Style="{DynamicResource TextBox-Sketch}" Text="*" d:LayoutOverrides="Height"/>
+					<TextBox Grid.Column="3" Style="{DynamicResource TextBox-Sketch}" Text="*" d:LayoutOverrides="Height"/>
+					
+					<!--	
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+						<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Grid.ColumnSpan="2" />
+						<TextBlock Margin="10,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Style="{DynamicResource TextBlock-Sketch}" Text="Click here to enter text for searching" FontStyle="Italic"/>
+						<TextBlock Text="" FontSize="32" VerticalAlignment="Center" FontFamily="/Prototype.Screens;component/Fonts/#Segoe UI Symbol" Grid.Column="1"/>
+						-->
+				</Grid>
+				<Grid x:Name="GridDataGrid" Grid.Column="1" Grid.Row="1" Margin="20,4,0,16">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto" MinHeight="628.243"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="100"/>
+							<ColumnDefinition Width="200"/>
+							<ColumnDefinition Width="100"/>
+							<ColumnDefinition Width="348"/>
+					</Grid.ColumnDefinitions>
+					<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Background="#FFBEBEBE" Grid.ColumnSpan="3" Margin="0,0,-110,0"/>
+					<TextBlock Text="Address" Style="{DynamicResource TextBlock-Sketch}"/>
+					<TextBlock Grid.Column="1" Text="Name" Style="{DynamicResource TextBlock-Sketch}"/>
+					<TextBlock Grid.Column="2" Text="Value" Style="{DynamicResource TextBlock-Sketch}"/>
+					<TextBlock Grid.Column="3" Text="Range" Style="{DynamicResource TextBlock-Sketch}" HorizontalAlignment="Left" Width="110"/>
+
+					<Grid Grid.Row="1" Grid.ColumnSpan="3" Width="510" Height="127.316" Margin="0,0,-110,0" VerticalAlignment="Top">
+						<ListBox Style="{DynamicResource ListBox-Sketch}" DataContext="{Binding Source={StaticResource VariableDataSource}}" ItemsSource="{Binding Variables}" ItemTemplate="{DynamicResource DataGridTemplate}" />
+					</Grid>
+					<TextBox Height="167" Margin="43.167,135.316,151.333,0" Grid.Row="1" Style="{DynamicResource Note-Sketch}" TextWrapping="Wrap" Text="Address&#xd;&#xa;Name&#xd;&#xa;Description&#xd;&#xa;Value&#xd;&#xa;Unit&#xd;&#xa;Range&#xd;&#xa;Default value&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;" VerticalAlignment="Top" Grid.ColumnSpan="4" FontSize="16"/>
+					<Image Grid.ColumnSpan="4" Margin="17,0,24,42.845" Source="Image6.png" Stretch="Fill" Height="181" Grid.Row="1" VerticalAlignment="Bottom"/>
+					<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Grid.ColumnSpan="3" Height="50" Margin="8,0,130,247" Grid.Row="1" VerticalAlignment="Bottom" Grid.Column="1" Background="#FF1CDC42" />
+					<TextBlock Margin="0,0,-168,254.437" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Style="{DynamicResource TextBlock-Sketch}" FontStyle="Italic" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"><Run Text="Click here to enter text for searching"/><InlineUIContainer>
+							<TextBlock
+				Text="" FontSize="32" VerticalAlignment="Center" FontFamily="/Prototype.Screens;component/Fonts/#Segoe UI Symbol" Width="32" RenderTransformOrigin="7.447,0.653"/>
+						</InlineUIContainer></TextBlock>
+				</Grid>
+				<Grid Grid.RowSpan="2" Name="GridBottomLeft" Margin="10,0,10,0" Background="#FFBEBEBE">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Grid.RowSpan="2" Background="Transparent"/>
+					<TextBlock Text="Groups" Style="{DynamicResource SubtitleLeft-Sketch}" Background="Transparent" />
+					<TabControl Style="{DynamicResource TabControl-Sketch}" Grid.Row="1" >
+						<TabItem Header="System" Style="{DynamicResource TabItem-Sketch}">
+							<TreeView Style="{DynamicResource TreeViewStyle1}">
+								<TreeViewItem Header="Speed settings" IsExpanded="True">
+									<TreeViewItem Header="Droop"/>
+									<TreeViewItem Header="Speed Range"/>
+								</TreeViewItem>
+								<TreeViewItem Header="Engine monitoring"/>
+								<TreeViewItem Header="Bleeding"/>
+								<TreeViewItem Header="Accelerator"/>
+							</TreeView>
+						</TabItem>
+						<TabItem Header="User" Style="{DynamicResource TabItem-Sketch}">
+							<TreeView Style="{DynamicResource TreeViewStyle1}">
+								<TreeViewItem Header="DPF" IsExpanded="True">
+									<TreeViewItem Header="Service Regeneration"/>
+									<TreeViewItem Header="Purge"/>
+								</TreeViewItem>
+							</TreeView>
+						</TabItem>
+					</TabControl>
+				</Grid>	
+			</Grid>
+			<Grid x:Name="GridBottom" VerticalAlignment="Bottom" Height="70" Margin="0,0,0,-63" RenderTransformOrigin="0.5,0.5">
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<pi:ActivateStateAction TargetState="_Visible"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+				<Grid.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Grid.RenderTransform>
+				<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Background="#FFBEBEBE"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+					<StackPanel Margin="5,0,5,0">
+						<Grid>
+							<pc:SketchCircleUC Height="43"  Style="{DynamicResource Circle-Sketch}" Margin="0,3.5" Width="43"/>
+							<TextBlock Text="" FontFamily="/Prototype.Screens;component/Fonts/#Segoe UI Symbol" Style="{DynamicResource TextBlock-Sketch}" VerticalAlignment="Center" FontSize="26.667" HorizontalAlignment="Center"/>
+						</Grid>
+							<TextBlock Style="{DynamicResource TextBlock-Sketch}" Text="Delete" HorizontalAlignment="Center" VerticalAlignment="Top"/>						
+					</StackPanel>
+					<StackPanel Margin="5,0,5,0">
+						<Grid>
+							<pc:SketchCircleUC Height="43"  Style="{DynamicResource Circle-Sketch}" Margin="0,3.5" Width="43"/>
+							<TextBlock Text="" FontFamily="/Prototype.Screens;component/Fonts/#Segoe UI Symbol" Style="{DynamicResource TextBlock-Sketch}" VerticalAlignment="Center" FontSize="26.667" HorizontalAlignment="Center"/>
+						</Grid>
+							<TextBlock Style="{DynamicResource TextBlock-Sketch}" Text="Save" HorizontalAlignment="Center" VerticalAlignment="Top"/>						
+					</StackPanel>
+				</StackPanel>
+			</Grid>
+		</Grid>
+	</Grid>
+</UserControl>

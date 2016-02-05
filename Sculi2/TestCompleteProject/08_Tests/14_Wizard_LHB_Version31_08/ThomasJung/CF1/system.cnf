@@ -1,0 +1,41 @@
+!version	4.344
+upd_io.cnf	crc1.0x9694A08B	name.include	version.00048
+upd_mon.cnf	crc1.0xB8D34AB4	name.include	version.00055
+tstsys\lisprj.ps	crc1.0xBBEA	name.tstsys\lisprj	version.00165	client.LAN1 server.BILD loader.10446150
+tstsys\lisprj.ps	crc1.0xBBEA	name.tstsys\lisprj	version.00165	client.LAN2 server.BILD loader.10446150
+tstsys\lisprj.ps	crc1.0xBBEA	name.tstsys\lisprj	version.00165	client.LAN3 server.BILD loader.10446150
+tstsys\lisprj_emt.ps	crc1.0x2BBD	name.tstsys\lisprj	version.00165	client.LAN1 server.BILD loader.10278735
+tstsys\lisprj_emt.ps	crc1.0x2BBD	name.tstsys\lisprj	version.00165	client.LAN2 server.BILD loader.10278735
+tstsys\lisprj_emt.ps	crc1.0x2BBD	name.tstsys\lisprj	version.00165	client.LAN3 server.BILD loader.10278735
+tstsys\lisprj_emt.ps	crc1.0x2BBD	name.tstsys\lisprj	version.00165	client.LAN1 server.BILD loader.10426950
+tstsys\lisprj_emt.ps	crc1.0x2BBD	name.tstsys\lisprj	version.00165	client.LAN2 server.BILD loader.10426950
+tstsys\lisprj_emt.ps	crc1.0x2BBD	name.tstsys\lisprj	version.00165	client.LAN3 server.BILD loader.10426950
+tstsys\lisprj_emt.ps	crc1.0x2BBD	name.tstsys\lisprj	version.00165	client.LAN1 server.BILD loader.10499224
+tstsys\lisprj_emt.ps	crc1.0x2BBD	name.tstsys\lisprj	version.00165	client.LAN2 server.BILD loader.10499224
+tstsys\lisprj_emt.ps	crc1.0x2BBD	name.tstsys\lisprj	version.00165	client.LAN3 server.BILD loader.10499224
+tstsys\llbasic.ps	crc1.0xEEB4	name.tstsys\llbasic	version.00028	client.LAN1 server.BILD 
+tstsys\llbasic.ps	crc1.0xEEB4	name.tstsys\llbasic	version.00028	client.LAN2 server.BILD 
+tstsys\llbasic.ps	crc1.0xEEB4	name.tstsys\llbasic	version.00028	client.LAN3 server.BILD 
+tstsys\llfar012.ps	crc1.0x6B8B	name.tstsys\llfar012	version.00002	client.LAN1 server.BILD 
+tstsys\llfar012.ps	crc1.0x6B8B	name.tstsys\llfar012	version.00002	client.LAN2 server.BILD 
+tstsys\llfar012.ps	crc1.0x6B8B	name.tstsys\llfar012	version.00002	client.LAN3 server.BILD 
+tstsys\llfar016.ps	crc1.0x0F18	name.tstsys\llfar016	version.00002	client.LAN1 server.BILD 
+tstsys\llfar016.ps	crc1.0x0F18	name.tstsys\llfar016	version.00002	client.LAN2 server.BILD 
+tstsys\llfar016.ps	crc1.0x0F18	name.tstsys\llfar016	version.00002	client.LAN3 server.BILD 
+tstsys\llfar020.ps	crc1.0x292D	name.tstsys\llfar020	version.00001	client.LAN1 server.BILD 
+tstsys\llfar020.ps	crc1.0x292D	name.tstsys\llfar020	version.00001	client.LAN2 server.BILD 
+tstsys\llfar020.ps	crc1.0x292D	name.tstsys\llfar020	version.00001	client.LAN3 server.BILD 
+tstsys\llfstd.ps	crc1.0xB9ED	name.tstsys\llfstd	version.00004	client.LAN1 server.BILD 
+tstsys\llfstd.ps	crc1.0xB9ED	name.tstsys\llfstd	version.00004	client.LAN2 server.BILD 
+tstsys\llfstd.ps	crc1.0xB9ED	name.tstsys\llfstd	version.00004	client.LAN3 server.BILD 
+tstsys\llsystem.ps	crc1.0x9957	name.tstsys\llsystem	version.00019	client.LAN1 server.BILD 
+tstsys\llsystem.ps	crc1.0x9957	name.tstsys\llsystem	version.00019	client.LAN2 server.BILD 
+tstsys\llsystem.ps	crc1.0x9957	name.tstsys\llsystem	version.00019	client.LAN3 server.BILD 
+tstsys\lltstpar.ps	crc1.0x99C8	name.tstsys\lltstpar	version.00011	client.LAN1 server.BILD 
+tstsys\lltstpar.ps	crc1.0x99C8	name.tstsys\lltstpar	version.00011	client.LAN2 server.BILD 
+tstsys\lltstpar.ps	crc1.0x99C8	name.tstsys\lltstpar	version.00011	client.LAN3 server.BILD 
+tstsys\lltstsym.ps	crc1.0xFEA8	name.tstsys\lltstsym	version.00005	client.LAN1 server.BILD 
+tstsys\lltstsym.ps	crc1.0xFEA8	name.tstsys\lltstsym	version.00005	client.LAN2 server.BILD 
+tstsys\lltstsym.ps	crc1.0xFEA8	name.tstsys\lltstsym	version.00005	client.LAN3 server.BILD 
+
+system.cnf	crc.0x1bfcfc0f

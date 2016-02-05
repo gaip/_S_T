@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="{127d02e8-7ad3-4a98-aed0-80f4156a0337}">
+				<Prp name="relpath" type="S" value="-\CheckPMEPermissions.mds.tcLS"/>
+			</Node>
+			<Node name="{17c8ba9f-4974-4c07-8c9d-ae664503c0ac}">
+				<Prp name="relpath" type="S" value="CheckPMEPermissions\CheckPMEPermissions.mds.tcLS"/>
+			</Node>
+			<Node name="{24b6fa0b-0143-461a-9758-aeb9e9a9428b}">
+				<Prp name="default project" type="S" value="{C99BE853-4797-41A6-A561-B71EA0F8765F}"/>
+			</Node>
+			<Node name="{9cb6d15f-49e4-436b-9871-f8ea5e85ad87}">
+				<Prp name="relpath" type="S" value="CheckPMEPermissions\CheckPMEPermissions.mds.tcLS"/>
+			</Node>
+			<Node name="{9f31f5cd-4c5b-432b-ada1-f1a70d9f1002}">
+				<Prp name="relpath" type="S" value="CheckPMEPermissions\CheckPMEPermissions.mds.tcLS"/>
+			</Node>
+			<Node name="{c99be853-4797-41a6-a561-b71ea0f8765f}">
+				<Prp name="relpath" type="S" value="SCULi\Sculi_Pams_CheckLicense.mds.tcLS"/>
+			</Node>
+			<Node name="logs">
+				<Prp name="key" type="S" value="{98A3F435-8D47-4343-86A6-B717878A62FF}"/>
+				<Prp name="relpath" type="S" value="Log"/>
+			</Node>
+			<Node name="variables"/>
+		</Node>
+		<Prp name="signature" type="S" value="{71078212-FAEB-4856-A901-B237C89E6B5C}"/>
+	</Node>
+</Nodes>

@@ -1,0 +1,24 @@
+!version	00057
+#
+#	message-configuration
+#
+#	date:	06.10.2010
+#	name:	Armin Engstler
+#
+#
+user.=unaware english.msg >prn/COM3 %m
+undefined.error system >bild/*
+lib.error	system >bild/*
+user.error	system >bild/*
+applicat.safety.error	system >bild/*
+outer.syscheck.0x43000013-0x43000014.* system >bildnack/*
+can.application.0x72000064-0x7200010D.* system >bildnack/*
+user.error	english.msg  >prn/system
+user.=debug	system CF2:\login
+!rotate	20	30	0
+!gather 5000
+*.*	english	CF1:\messages.log
+
+
+
+!crc	0x00621f9a

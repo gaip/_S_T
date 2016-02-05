@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Portuguese / Portugiesisch
+%?language	por
+
+%section: SCREEN
+/TSoilFlowAuger	(Capac. descarga rosca) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Capac. descarga rosca)
+/TSoilFlowCase	(Capac. descarga tubo) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Capac. descarga tubo)
+/TSoilFlow	(Capacidade de descarga) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Capacidade de descarga)
+/TSnumbOfPumps	(Número de bombas) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Número de bombas)
+/TSclampJawPress	(Pressão da tensão de aperto) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Pressão da tensão de aperto)
+/TSexcAutoTime	(Tempo regulação excêntrico) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Tempo regulação excêntrico)
+/TSramWeight	(Peso do condutor) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Peso do condutor)
+/TSblowsPerDepthStep	(Batimentos/avanço profundidade) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Batimentos/avanço profundidade)
+/TSnumbPuPuCylinder	(Número de cilindros Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Número de cilindros Push & Pull)
+/TSaugerLength	(Comprimento das roscas) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Comprimento das roscas)
+/TSconcVolPerImp	(Quantidade betão/impulso) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Quantidade betão/impulso)
+/TSscalConcPresSens	(Amp. med. sen. pres. betão) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Amp. med. sen. pres. betão)
+/TSscalConcPresDisp	(Escala indic. pressão betão) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Escala indic. pressão betão)
+/TSpileDiameter	(Diâmetro do esteio) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Diâmetro do esteio)
+/TSmaxPressAuger	(Pressão máxima da rosca) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Pressão máxima da rosca)
+/TSmaxPressCase	(Pressão máxima do tubo) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Pressão máxima do tubo)
+/TSmaxPressure	(Pressão máx.) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Pressão máx.)
+/TSoilFlowAuger1	(Capac. descarga rosca 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Capac. descarga rosca 1)
+/TSoilFlowAuger2	(Capac. descarga rosca 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Capac. descarga rosca 2)
+/TSoilFlowAuger3	(Capac. descarga rosca 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Capac. descarga rosca 3)
+/TSnumbOfAugers	(N.º de roscas) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (N.º de roscas)
+/TSoilFlowOscil	(Capac. descarga máq.tubagem) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Capac. descarga máq.tubagem)
+/TSoilFlowGrabOpen	(Capac. desc. abrir garra) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Capac. desc. abrir garra)
+/TSoilFlowGrabClose	(Capac. desc. fechar garra) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Capac. desc. fechar garra)
+/TSmaxPressGrabOpen	(Pressão máx. abrir garra) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Pressão máx. abrir garra)
+/TSmaxPressGrabClose	(Pressão máx. fechar garra) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Pressão máx. fechar garra)
+/TSminOilFlow	(Capacidade mín. de descarga) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (Capacidade mín. de descarga)
+/TSoilFlowOscil2	(Capac. descarga máq.tubagem 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Capac. descarga máq.tubagem 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{7737B367-CF5D-466F-9B74-E0634A1B89D6}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CContextActionsRollout&quot;).VCLObject(&quot;CContextActionsPageScroller&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Service Card" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginActionsContainer&quot;).VCLObject(&quot;CPluginActionsScroller&quot;).VCLObject(&quot;CPluginActionsPanel&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Save" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{6A1B4CEE-4FB8-46E2-BFBD-403C84342301}">
+				<Data Description="Delays the test execution for the specified time period.">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="ms" DefVarType="3" VarType="3" ValueType="1" ValueValue="60000" />
+						<Parameter Name="Str" DefVarType="8" DefValueType="6" DefValueValue="" VarType="8" ValueType="6" ValueValue="" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="dateiExist" Unit="object">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="file" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="12" ValueType="0" ValueValue="0" />
+					</Parameters>
+				</Data>
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{4E2896D6-73ED-483A-A4C6-173A30E65864}" />
+	<Parameters Key="{C2B9CA0C-DAB5-4770-BF85-56E4E7FDE0D0}" />
+</Root>

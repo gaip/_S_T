@@ -1,0 +1,350 @@
+
+rem ******************** CAN MODULE RÜCKSETZEN *********************
+
+rem can_conf /b 1 250
+
+rem can_conf /r 1 75 ..Kabine
+rem can_conf /s 1 76 ..
+rem can_conf /s 1 65 ..
+rem can_conf /s 1 66 ..
+rem can_conf /s 1 67 ..
+rem can_conf /s 1 68 ..
+
+can_conf /r 1 41 ..Oberwagen
+can_conf /r 1 42 ..
+can_conf /r 1 11
+can_conf /r 1 17 ..
+can_conf /r 1 18 ..
+can_conf /r 1 33 ..
+can_conf /r 1 34 ..
+can_conf /r 1 37
+can_conf /r 1 57 ..
+can_conf /r 1 35 ..
+can_conf /r 1 65 ..
+can_conf /r 1 66 ..
+can_conf /r 1 67 ..
+can_conf /r 1 68 ..
+can_conf /r 1 75 ..
+can_conf /r 1 76 ..
+can_conf /r 1 97 ..
+can_conf /r 1 10 ..
+can_conf /r 1 09 ..
+can_conf /r 4 89 ..
+can_conf /r 4 90 ..
+remcan_conf /r 4 91 ..
+remcan_conf /r 4 92 ..
+can_conf /r 4 85 ..
+can_conf /r 4 86 ..
+ 
+ can_conf /r 2 41 ..Unterwagen
+ can_conf /r 2 17 ..
+ can_conf /r 2 18 ..
+ can_conf /r 2 33 ..
+ can_conf /r 2 09 ..
+ can_conf /r 2 42 ..
+ can_conf /r 2 43 ..
+ can_conf /r 2 19 ..
+
+can_conf /r 4 17
+can_conf /r 4 18
+
+
+rem ***************MODUL 41 *********************
+
+ force %IW1.41.1 17000 .. Hydraulik Ölstand 
+ rem force %IW1.41.2 12000  
+ force %IW1.41.3 10000 ..GeneratorSpannung 
+ force %IW1.41.4 5600 ..Druckgeber Wippwerkspumpe heben
+
+ force %IW1.41.5 5600 ..Druckgeber Haltewinde
+ force %IW1.41.6 5600 ..Druckgeber Schliesswinde 
+ force %IW1.41.7 8000 ..Winkelgeber Drehwerk
+ force %IW1.41.8 12000 .. Dieseltank (Level)
+
+ force %IW1.41.9 5600 ..Druckgeber Drehwerk rechts
+ force %IW1.41.10 12000 ..Druckgeber Wippwerkspumpe senken
+ force %IW1.41.11 4500 ..Generatorstrom
+ rem force %IW1.41.12 10000 ..Hydrauliköltemperatur
+
+ force %IW1.41.13 5600 ..Druckgeber Drehwerk links
+ force %IW1.41.14 16000 ..Sicherheitswinkelgeber (angel sensor)
+ force %IW1.41.15 8000 ..Sicherheitskraftmessachse Haltewinde
+ force %IW1.41.16 8000 ..Sicherheitskraftmessachse Schliesswinde
+
+
+rem ***************MODUL 42 *********************
+
+ force %IW1.42.1 8000 ..Seillängengeber Haltewinde
+ force %IW1.42.2 8000 ..Seillängengeber Schliesswinde
+ force %IW1.42.3 16000 ..Winkelgeber (angel sensor)
+ force %IW1.42.4 8000 ..Kraftmessachse Haltewinde
+
+ force %IW1.42.5 8000 ..Kraftmessachse Schliesswinde
+ force %IW1.42.6 12000 ..
+ force %IW1.42.7 8000 ..Druckgeber Wippzylinder heben TM+4E-B01
+ force %IW1.42.8 12000 .. Aussentemperatur
+
+rem force %IW1.42.9 10000 ..
+rem force %IW1.42.10 12000 ..
+ force %IW1.42.11 6000 ..Windgeschwindigkeit 
+ force %IW1.42.12 12000 ..Druckgeber Wippzylinder senken TM+4E-B02
+
+rem force %IW1.42.13 12000 ..
+rem force %IW1.42.14 12000 ..
+rem force %IW1.42.15 4400 ..Strom E- Motor 1
+rem force %IW1.42.16 4400 ..Strom E- Motor 2 
+
+
+
+rem ***************MODUL 12 *********************
+
+rem force %QX1.12.1 0 hooter continous
+rem force %QX1.12.3.0 hooter intermediate
+
+
+rem ***************MODUL 33 *********************
+
+ force %IX1.33.1 1 ..Speisedruck HW
+ force %IX1.33.2 1 ..Speisedruck SW
+ force %IX1.33.3 1 ..Speisedruck ÖL sauber 
+rem force %IX1.33.4 1 ..Luftfilter 1  verschmutzt 
+ force %IX1.33.5 1 ..Hubwerk Windengetriebe Temperatur nicht über 100 GRAD
+ force %IX1.33.6 1 ..Verteilergetriebe Temperatur nicht über 100 GRAD
+ force %IX1.33.7 1 ..HW Haltewinde oben
+ force %IX1.33.8 1 ..HW Haltewinde unten
+ force %IX1.33.9 1 ..HW Haltewinde slowly oben
+ force %IX1.33.10 1 ..HW Schlieáwinde oben
+ force %IX1.33.11 1 ..HW Schlieáwinde unten
+ force %IX1.33.12 1 ..HW Schlieáwinde slowly oben
+ force %IX1.33.13 1 ..Spitzenendschalter
+ force %IX1.33.14 1 ..Schlappseilsicherung Haltewinde
+ force %IX1.33.15 1 ..Schlappseilsicherung Schlieáwinde
+ force %IX1.33.16 1 ..Phasenüberwachung Generator ok 
+ force %IX1.33.17 1 ..Einstiegshebel
+ force %IX1.33.18 1 ..Generatortemperaturok
+ force %IX1.33.19 1 .. Kühlwasserstand ok
+ force %IX1.33.20 1 .. Hydrauliköltank sauber 
+rem force %IX1.33.21 1 ..Hilfseinspeisung gesteckt 
+ force %IX1.33.22 0 ..Motorschutzschalter Störung
+rem force %IX1.33.23 1 ..Scheinwierfer Turm 
+rem force %IX1.33.24 1 ..Scheinwerfer Ausleger
+rem force %IX1.33.25 1 ..Beleuchtung Aufstieg ein
+ force %IX1.33.26 1 ..Lenkkreisöl sauber 1 
+rem force %IX1.33.27 1 ..
+rem force %IX1.33.28 1 ..
+rem force %IX1.33.29 1 ..
+rem force %IX1.33.30 1 ..
+rem force %IX1.33.31 1 ..
+rem force %IX1.33.32 1 ..
+
+
+rem ***************MODUL 34 *********************
+
+rem force %IX1.34.1 1 ..Überbrückung schlappseil winde
+rem force %IX1.34.2 1 ..
+ force %IX1.34.3 1 ..Zündung ein Turmkabine
+rem force %IX1.34.4 1 ..Modulversorgung Unterwagen 
+rem force %IX1.34.5 1 ..
+ force %IX1.34.6 1 ..Einstiegshebel Geschlossen
+ force %IX1.34.7 1 ..Sicherheitsdruckschalter Radsätze
+ force %IX1.34.8 1 ..Drehwerk 
+ force %IX1.34.9 1 ..Rücklauf Scheibenwischer vorne
+rem force %IX1.34.10 1 .Rücklauf Scheibenwischer hinten 
+rem force %IX1.34.11 1 .Zündung ein Drehbühnenkabine 
+ force %IX1.34.12 1 .Speisedruck Haltewinde Schwerlast
+ force %IX1.34.13 1 .Speisedruck Schliesswinde Schwerlast 
+ force %IX1.34.14 1 .Scheibenwischer oben Rücklauf 
+ force %IX1.34.15 1 .Scheibenwischer vorne Rücklauf
+rem force %IX1.34.16 1 .Can Bus Drehbühnenkabine
+ force %IX1.34.17 1 .Hubwerk Windengetriebe Temparatur 
+rem force %IX1.34.18 1 .Luftfilter 2 verschmutzt
+rem force %IX1.34.19 1 .. PTC E-Motor 1 oder 2 ausgelöst
+rem force %IX1.34.20 1 .. Schliesswinde oberer Nockenendschalter 
+rem force %IX1.34.21 1 ..Opt. Hautschalter E-Motor 1+2 ein
+rem force %IX1.34.22 1 ..
+rem force %IX1.34.23 1 ..Opt. Hauptschalter E-Motor 1+2 ein 
+rem force %IX1.34.24 1 ..
+rem force %IX1.34.25 1 ..Opt. Hauptschalter E-Motor 1+2 ausgelöst
+rem force %IX1.34.26 1 ..Temparaturschalter Aggregatraum <55°C
+ force %IX1.34.27 1 ..Lenkkreisöl sauber 2 
+rem force %IX1.34.28 1 ..
+rem force %IX1.34.29 1 ..
+rem force %IX1.34.30 1 ..
+rem force %IX1.34.31 1 ..Opt. tipping curve 75 % 
+rem force %IX1.34.32 1 ..opt. Magnet bypass operation 
+
+
+rem ***************MODUL 35 *********************
+
+ force %IX1.35.1 1 ..Motorüberwachung Spreader ok
+ force %IX1.35.2 1 ..Stecker Spreader gesteckt 
+ force %IX1.35.3 1 ..Spreader in Position 
+rem force %IX1.35.4 1 ..Twistlock verriegelt 
+ force %IX1.35.5 1 ..Twistlock entriegelt 
+rem force %IX1.35.6 1 ..Opt. Funkfernsteuerung aktiv
+ force %IX1.35.7 1 ..Druckschalter Kabeltrommel ok 
+rem force %IX1.35.8 1 ..Opt. Motorgreifer gesteckt
+ force %IX1.35.9 1 ..Opt. Transformator Motorgreifer 1 ok 
+ force %IX1.35.10 1 .Opt. Rotator gesteckt !
+ force %IX1.35.11 1 .Motorschutzschalter Motorschwenkwerk ok 
+ force %IX1.35.12 1 .Motorschutzschalter Motorgreifer ok
+rem force %IX1.35.13 1 .Opt. Rückmeldung Magneterregung EIN 
+rem force %IX1.35.14 1 .Transformator Motorgreifer 2 ok
+rem force %IX1.35.15 1 .Opt. Magnet ein 
+rem force %IX1.35.16 1 .Opt. Warnung Öl / Wasserwanne Schalter
+rem force %IX1.35.17 1 .Opt. Magnetanlage eingesteckt
+rem force %IX1.35.18 1 .Richtung ws / Magnetanlage Batterie ok
+rem force %IX1.35.19 1 . Richtung sw / Magnetanlage Versorgung ok 
+rem force %IX1.35.20 1 . Opt. Stromversorgung E-
+ force %IX1.35.21 1 .Kein unterer Endschalter Kabeltrommel 
+ force %IX1.35.22 1 .Kein unterer Endschalter Kabeltrommel 
+rem force %IX1.35.23 1 .Opt. E-Motor 1 eingekuppelt 
+rem force %IX1.35.24 1 .Opt. E-Motor 2 eingekuppelt 
+rem force %IX1.35.25 1 .Opt. E-Motor 2 eingekuppelt
+rem force %IX1.35.26 1 .Opt. E-Motor 2 
+rem force %IX1.35.27 1 .Opt. Dieselmotor eingekupplt
+rem force %IX1.35.28 1 .Opt. Dieselmotor ausgekupplt
+rem force %IX1.35.29 1 .
+rem force %IX1.35.30 1 .Opt. Motorüberw. Ok UW Kabeltrommel
+rem force %IX1.35.31 1 .Opt. Funkfernsteuerung aktiv
+rem force %IX1.35.32 1 .Opt. Magnet Schutzbeschaltung I>0
+
+
+
+rem ***************MODUL 89 *********************
+
+
+force %IW1.90.1 80 ..Kühlmitteltemparatur 
+ 
+force %IW1.90.2 400 ..Schmieröldruck 
+force %IW1.90.3 0 ..Motordrehzahl
+force %IW1.90.4 250 ..Ladeluftdruck 
+rem force %IW1.90.5  
+force %IW4.90.7 270 ..Batteriespannung !
+rem force %IX1.89.1 1
+rem force %IX1.89.4 1
+rem force %IX1.89.8 1
+rem force %IX1.89.11 1
+rem force %IX1.89.12 1 
+force %IX1.89.3 0
+force %IX1.89.7 0
+force %IX1.89.9 0
+force %IX1.89.13 0
+force %IX1.89.21 0
+force %IX1.89.25 0
+
+rem ***************MODUL 17 *********************
+
+ force %QW4.17.9 500 .. 
+ force %IW4.17.9 1 ..
+
+
+rem ***************MODUL 18 *********************
+
+
+force %QW4.18.13 500 ..
+force %IW4.18.13 1 .. 
+rem force %QW1.18.14 500 ..
+rem force %IW1.18.14 1 ..
+rem *************** UNDERCARRIAGE ***************
+rem                    [ LHM 100 - 400 ]                  
+  
+
+rem **************MODUL 41 *********************
+
+ force %IW2.41.1 8000 ..Winkelgeber Radsatz 21
+ force %IW2.41.2 8000 ..Winkelgeber Radsatz 22
+ force %IW2.41.3 8000 ..Winkelgeber Radsatz 23
+ force %IW2.41.4 8000 ..Winkelgeber Radsatz 24
+
+ force %IW2.41.5 8000 ..Winkelgeber Radsatz 31
+ force %IW2.41.6 8000 ..Winkelgeber Radsatz 32
+ force %IW2.41.7 8000 ..Winkelgeber Radsatz 33
+ force %IW2.41.8 8000 ..Winkelgeber Radsatz 34
+
+ force %IW2.41.9 8000 ..Winkelgeber Radsatz 41
+ force %IW2.41.10 8000 ..Winkelgeber Radsatz 42
+ force %IW2.41.11 8000 ..Winkelgeber Radsatz 43
+ force %IW2.41.12 8000 ..Winkelgeber Radsatz 44
+
+ force %IW2.41.13 8000 ..Winkelgeber Radsatz 51
+ force %IW2.41.14 8000 ..Winkelgeber Radsatz 52
+ force %IW2.41.15 8000 ..Winkelgeber Radsatz 53
+ force %IW2.41.16 8000 ..Winkelgeber Radsatz 54
+
+rem ***************MODUL 42 *********************
+
+ force %IW2.42.1 8000 ..Winkelgeber Radsatz 21
+ force %IW2.42.2 8000 ..Winkelgeber Radsatz 22
+ force %IW2.42.3 8000 ..Winkelgeber Radsatz 23
+ force %IW2.42.4 8000 ..Winkelgeber Radsatz 24
+
+ force %IW2.42.5 8000 ..Winkelgeber Radsatz 31
+ force %IW2.42.6 8000 ..Winkelgeber Radsatz 32
+ force %IW2.42.7 8000 ..Winkelgeber Radsatz 33
+ force %IW2.42.8 8000 ..Winkelgeber Radsatz 34
+
+ force %IW2.42.9 8000 ..Winkelgeber Radsatz 41
+ force %IW2.42.10 8000 ..Winkelgeber Radsatz 42
+ force %IW2.42.11 8000 ..Winkelgeber Radsatz 43
+ force %IW2.42.12 8000 ..Winkelgeber Radsatz 44
+
+ force %IW2.42.13 4000 ..Winkelgeber Radsatz 51
+ force %IW2.42.14 4000 ..Winkelgeber Radsatz 52
+ force %IW2.42.15 4000 ..Winkelgeber Radsatz 53
+ force %IW2.42.16 4000 ..Winkelgeber Radsatz 54
+                         
+
+rem **************MODUL 33 *********************
+
+ force %IX2.33.1 1 ..Schiebeholm 1 näherungsschalter in pos. 1
+rem force %IX2.33.2 1 ..Schiebeholm 1 näherungsschalter in pos. 2
+ force %IX2.33.3 1 ..Druckschalter Abstützung 1
+ force %IX2.33.4 1 ..Schiebeholm 3 näherungsschalter in pos. 1
+ force %IX2.33.5 1 ..Schiebeholm 2 näherungsschalter in pos. 1
+rem force %IX2.33.6 1 ..Schiebeholm 2 näherungsschalter in pos. 2
+ force %IX2.33.7 1 ..Druckschalter Abstützung 2
+ force %IX2.33.8 1 ..Schiebeholm 4 näherungsschalter in pos. 1
+ force %IX2.33.9 1 ..Opt. E-Motor angeschlossen 
+ force %IX2.33.10 1 ..Opt. Trafoölkabeltrommel
+ force %IX2.33.11 1 ..Reserve
+ force %IX2.33.12 1 ..Reserve
+ force %IX2.33.13 1 ..Reserve
+ force %IX2.33.14 1 ..Reserve
+ force %IX2.33.15 1 ..Aufstiegssignal zu Kabinenmonitor
+ force %IX2.33.16 1 ..Reserve
+rem force %IX2.33.17 1 ..Schiebeholm 3 näherungsschalter in pos. 2
+ force %IX2.33.18 1 ..Druckschalter Abstützung 3
+ force %IX2.33.19 1 ..Notabstiegsklappe 1 geschlossen 
+ force %IX2.33.20 1 ..Notabstiegsklappe 2 geschlossen
+rem force %IX2.33.21 1 ..Schiebeholm 4 näherungsschalter in pos. 2
+ force %IX2.33.22 1 ..Druckschalter Abstützung 4 
+rem force %IX2.33.23 1 ..Opt. Kabeltrommel UW Endsch. abspulen
+rem force %IX2.33.24 1 ..Opt. Kabeltrommel UW Endsch. aufspulen
+rem force %IX2.33.25 1 ..Opt. Kabeltrommel UW Kabelspannung vorwärts
+rem force %IX2.33.26 1 ..Opt. Kabeltrommel UW Kabelspannung rückwarts
+rem force %IX2.33.27 1 ..Opt. Kabeltrommel UW Scklappkabel
+rem force %IX2.33.28 1 ..Opt. Kabeltrommel Uw manuell aufspulen
+rem force %IX2.33.29 1 ..Opt. Kabeltrommel Uw manuell abspulen
+rem force %IX2.33.30 1 ..
+rem force %IX2.33.31 1 ..
+rem force %IX2.33.32 1 ..
+force %IX1.17.15 1      security input valve 4E-Y15
+force %IX1.9.27	1	security input valve luffing gear 4E-Y12				Vorhanden	Eingang	0
+
+rem force %QW1.18.13 0	switch over between steering and cooling (800mA at travelling oper.) aggregate 1 canline 1					Ausgang	0
+force %QX1.9.27 0	valve luffing gear pressure limitation 4E-Y12		
+force %IX1.9.27 0
+force %QW1.17.15 0
+force %IX1.17.15 0
+force %QW1.18.13 500
+force %IX1.18.13 1
+force %IX4.91.5 0
+force %IX4.91.41 0
+force %IW4.92.6 45
+force %IW4.92.7 80
+force %IW4.92.8 55
+force %IW4.92.9 350
+force %IW4.92.10 250
+force %IW4.92.1 1600
+force %MW1.900 502

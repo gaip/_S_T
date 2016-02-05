@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 26">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="26"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="27"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279007986"/>
+			<Prp name="stack beginning" type="I" value="27"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture24.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Window(&quot;TToolsForm&quot;, &quot;&quot;, 1)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="8"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7277224653"/>
+			<Prp name="stack beginning" type="I" value="8"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="picture" type="S" value="Picture7.png"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Unable to find the object VCLObject(&quot;PluginsContextForm&quot;). See Additional Information for details."/>
+		</Node>
+		<Node name="message 16">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="16"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7277474306"/>
+			<Prp name="stack beginning" type="I" value="15"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture14.png"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;FindChild&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginActionsContainer&quot;).VCLObject(&quot;CPluginActionsScroller&quot;).VCLObject(&quot;CPluginActionsPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 25">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="25"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="26"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7278972454"/>
+			<Prp name="stack beginning" type="I" value="26"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture23.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Window&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 19">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 36">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="36"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="39"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.727980463"/>
+			<Prp name="stack beginning" type="I" value="39"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture34.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Window&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 34">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="34"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="37"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279730903"/>
+			<Prp name="stack beginning" type="I" value="37"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture32.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 34">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="item 23">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 27">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 21">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="22"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7278826389"/>
+			<Prp name="stack beginning" type="I" value="22"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture19.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 17">
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="18"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.727751169"/>
+			<Prp name="stack beginning" type="I" value="17"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture15.png"/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object doesn't exists"/>
+		</Node>
+		<Node name="item 37">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="item 11">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 14">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="13"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7277400347"/>
+			<Prp name="stack beginning" type="I" value="13"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture12.png"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginActionsContainer&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 36">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="item 15">
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 18">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 32">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 19">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="20"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7278755208"/>
+			<Prp name="stack beginning" type="I" value="20"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture17.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 17">
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="8"/>
+		</Node>
+		<Node name="message 28">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="id" type="I" value="28"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="30"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279080324"/>
+			<Prp name="stack beginning" type="I" value="29"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture26.png"/>
+			<Prp name="line no" type="I" value="83"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;FindChild&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Window(&quot;TToolsForm&quot;, &quot;&quot;, 1).VCLObject(&quot;pnTool&quot;).VCLObject(&quot;frmToolSCR&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 27">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="27"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="28"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279043171"/>
+			<Prp name="stack beginning" type="I" value="28"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture25.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Window(&quot;TToolsForm&quot;, &quot;&quot;, 1).VCLObject(&quot;pnTool&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 8">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 9">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 24">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7275871759"/>
+			<Prp name="stack beginning" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 12">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="11"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7277330787"/>
+			<Prp name="stack beginning" type="I" value="11"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture10.png"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 4">
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 24">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="24"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="25"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7278935995"/>
+			<Prp name="stack beginning" type="I" value="25"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture22.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Window&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 13">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 1">
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7273915046"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="line no" type="I" value="3"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The file 'C:\Users\lmbtuh0\Documents\httpsubversion.lmb.liebherr.isvnSculiCUI\Trunk\KeywordTests\2013.03.01 V8 SCR.hzmb' exists"/>
+		</Node>
+		<Node name="item 35">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 12">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 33">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="33"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="36"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279694444"/>
+			<Prp name="stack beginning" type="I" value="36"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture31.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 20">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 31">
+			<Prp name="stacktext" type="S" value="findChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="88"/>
+		</Node>
+		<Node name="message 29">
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="id" type="I" value="29"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="32"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279116898"/>
+			<Prp name="stack beginning" type="I" value="31"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture27.png"/>
+			<Prp name="line no" type="I" value="88"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object with 'ObjectIdentifier' equal to 'Speed' is NOT found"/>
+		</Node>
+		<Node name="item 7">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 39">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="39"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="42"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279912268"/>
+			<Prp name="stack beginning" type="I" value="42"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture37.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Window(&quot;TToolsForm&quot;, &quot;&quot;, 1).VCLObject(&quot;pnTool&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 30">
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="30"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="33"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279585301"/>
+			<Prp name="stack beginning" type="I" value="33"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="picture" type="S" value="Picture28.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Unable to find the object VCLObject(&quot;PluginsContextForm&quot;). See Additional Information for details."/>
+		</Node>
+		<Node name="item 41">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="message 32">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="32"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="35"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279658218"/>
+			<Prp name="stack beginning" type="I" value="35"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture30.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 23">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="23"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="24"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.727889838"/>
+			<Prp name="stack beginning" type="I" value="24"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture21.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 10">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="9"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7277261111"/>
+			<Prp name="stack beginning" type="I" value="9"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture8.png"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 16">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 38">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="38"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="41"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279877083"/>
+			<Prp name="stack beginning" type="I" value="41"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture36.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Window(&quot;TToolsForm&quot;, &quot;&quot;, 1)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 30">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 29">
+			<Prp name="stacktext" type="S" value="findChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="83"/>
+		</Node>
+		<Node name="item 14">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{D13F3F80-8F89-47AA-8C3C-1BF211220DBF}"/>
+			<Prp name="unit 2" type="S" value="{0E686237-09C7-422C-9267-42A1F2EBA066}"/>
+			<Prp name="unit 1" type="S" value="{FD724B59-070F-43B9-AB10-647ED93D8515}"/>
+		</Node>
+		<Node name="item 6">
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="8"/>
+		</Node>
+		<Node name="item 40">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="item 38">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="5"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7275981829"/>
+			<Prp name="stack beginning" type="I" value="4"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture5.png"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;FindChild&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CContextActionsRollout&quot;).VCLObject(&quot;CContextActionsPageScroller&quot;).VCLObject(&quot;CContextActionsPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 40">
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="40"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="43"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279946991"/>
+			<Prp name="stack beginning" type="I" value="43"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture38.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The test execution was interrupted."/>
+		</Node>
+		<Node name="message 18">
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="19"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.727871875"/>
+			<Prp name="stack beginning" type="I" value="19"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="picture" type="S" value="Picture16.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Unable to find the object VCLObject(&quot;PluginsContextForm&quot;). See Additional Information for details."/>
+		</Node>
+		<Node name="message 22">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="23"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7278861343"/>
+			<Prp name="stack beginning" type="I" value="23"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture20.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="7"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7276018982"/>
+			<Prp name="stack beginning" type="I" value="6"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture6.png"/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object doesn't exists"/>
+		</Node>
+		<Node name="message 13">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="12"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7277365394"/>
+			<Prp name="stack beginning" type="I" value="12"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture11.png"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 10">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 39">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7275945139"/>
+			<Prp name="stack beginning" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture4.png"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CContextActionsRollout&quot;).VCLObject(&quot;CContextActionsPageScroller&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="2"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7275908681"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CContextActionsRollout&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7275835069"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="Unable to find the object VCLObject(&quot;PluginsContextForm&quot;). See Additional Information for details."/>
+		</Node>
+		<Node name="item 42">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="message 11">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="10"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7277295486"/>
+			<Prp name="stack beginning" type="I" value="10"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture9.png"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 25">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 0">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="click point x" type="I" value="52"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="134"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;CGlobalActionsRollout&quot;][&quot;CGlobalActionsPageScroller&quot;][&quot;CGlobalActionsPanel&quot;][&quot;VCLObject&quot;](&quot;btnactOpenOffline&quot;)"/>
+					<Prp name="object right" type="I" value="81"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="datetime" type="D" value="42067.6857224537"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="object left" type="I" value="23"/>
+					<Prp name="click point y" type="I" value="163"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+				</Node>
+			</Node>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7273901389"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="A click at point (29, 29) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;VCLObject&quot;](&quot;CGlobalActionsRollout&quot;)[&quot;VCLObject&quot;](&quot;CGlobalActionsPageScroller&quot;)[&quot;VCLObject&quot;](&quot;CGlobalActionsPanel&quot;)[&quot;VCLObject&quot;](&quot;btnactOpenOffline&quot;)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+		</Node>
+		<Node name="item 22">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 20">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="21"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7278791319"/>
+			<Prp name="stack beginning" type="I" value="21"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture18.png"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="message 35">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="35"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="38"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.727976794"/>
+			<Prp name="stack beginning" type="I" value="38"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture33.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 33">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="message 2">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="click point x" type="I" value="652"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="134"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;CGlobalActionsRollout&quot;][&quot;CGlobalActionsPageScroller&quot;][&quot;CGlobalActionsPanel&quot;][&quot;VCLObject&quot;](&quot;btnactOpenOffline&quot;)"/>
+					<Prp name="object right" type="I" value="81"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="datetime" type="D" value="42067.6857348727"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="object left" type="I" value="23"/>
+					<Prp name="click point y" type="I" value="703"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+				</Node>
+			</Node>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7274033449"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="A click at point (0, 0) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;Dialog&quot;](&quot;Öffnen&quot;)[&quot;Button&quot;](&quot;Öffnen&quot;)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+		</Node>
+		<Node name="item 5">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 15">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="14"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.727743831"/>
+			<Prp name="stack beginning" type="I" value="14"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture13.png"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginActionsContainer&quot;).VCLObject(&quot;CPluginActionsScroller&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="42067.7279946991"/>
+			</Node>
+			<Prp name="length" type="I" value="1"/>
+			<Prp name="description" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="columnindex" type="I" value="0"/>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="color" type="I" value="0"/>
+			<Prp name="isinteger" type="B" value="0"/>
+		</Node>
+		<Node name="message 31">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="31"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="34"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279620949"/>
+			<Prp name="stack beginning" type="I" value="34"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture29.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Node name="item 28">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 21">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 43">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="item 3">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 26">
+			<Prp name="stacktext" type="S" value="ToolsSCR()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 37">
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="id" type="I" value="37"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="40"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="date" type="D" value="42067.7279843056"/>
+			<Prp name="stack beginning" type="I" value="40"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture35.png"/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Window&quot; method or property of the &quot;VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)&quot; object that does not exist."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

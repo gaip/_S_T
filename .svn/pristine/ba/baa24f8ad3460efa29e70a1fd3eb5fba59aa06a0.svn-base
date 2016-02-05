@@ -1,0 +1,10 @@
+pressure difference in the sg in [bar] (absolut)
+start time	2011-04-12T08:15:53
+stop time	2011-05-03T08:25:31
+date-time	pressure difference in the sg in [bar] (absolut)	revolutions diesel engine 1 [rpm]	analog pump signal sg in [%]	load radius main boom in [m]	maximum lifting hight main boom (head hight) in [m]	load on the main boom in [to]	utilization in [%]	number of lml mode
+	%MD1.63	%MD1.4	%MD1.24	%MD1.39	%MD1.41	%MD1.32	%MD1.30	%MD1.29
+	MDauxSystemPress	MDpresenEngSpeed	MDsgPumpSignal	MDspeedHigh	MDaccelMedium	MDauxJoySignal	MDfawExtAnalSign	MDfawJoySignal
+2011-04-12T08:21:12	0	0	0	0	0	0	0	0
+2011-04-12T08:21:12	0	0	0	0	0	0	0	0
+2011-04-12T08:21:12	0	0	0	0	0	0	0	0
+2011-04-18T03:46:56	0	900	0	9.861865	9.2	27.1	384.8261	1

@@ -1,0 +1,9 @@
+rem autoexec.frc
+!version	00131
+
+can_rxtime /c 3
+
+_if CXnrsPortal EQ 1
+	can_conf /b 2 500
+_endif 
+

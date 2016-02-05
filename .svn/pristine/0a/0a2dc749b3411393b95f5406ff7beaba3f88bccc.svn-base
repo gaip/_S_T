@@ -1,0 +1,9 @@
+force cylinder 1 luffing gear 1 [kN]
+start time	2012-05-02T11:37:47
+stop time	2012-05-02T14:01:19
+date-time	force cylinder 1 luffing gear 1 [kN]	radius hoisting system 1 [m]	utilisation operation mode [%]	utilisation tipping curve [%]	operation mode 1	load hoisting system 1 [to]	rope force winch 1 [kN]	rope force winch 2 [kN]	rope speed winch 1 [m/min]	rope speed winch 2 [m/min]	status brake 1 winch 1	status brake 1 winch 2	status brake 1 slewing system 1	status lock 1 luffing gear 1 	angle slewing system 1 [ø]	actual design slewing speed [rpm]	actual slewing speed [rpm]	pressure pump 1 slewing system 1 [bar]	pressure pump 1 winch 1 [bar]	pressure pump 1 winch 2 [bar]	pressure pump 1 luffing gear 1 [bar]	pressure pump 1 accumulator 1 [bar]	power diesel engine 1 [kW]	power e-motor 1 [kW]	wind speed [m/s]	x-direction left joystick 1 [%]	y-direction left joystick 1 [%]	x-direction right joystick 1 [%]	y-direction right joystick 1 [%]
+	%MD1.308	%MD1.359	%MD1.405	%MD1.407	%MD1.316	%MD1.313	%MD1.309	%MD1.310	%MD1.380	%MD1.381	%MX4.300	%MX4.301	%MX4.303	%MX4.302	%MD1.301	%MD1.306	%MD1.300	%MD1.336	%MD1.334	%MD1.337	%MD1.335	%MD1.333	%MD1.350	%MD1.351	%MD1.382	%MD1.376	%MD1.377	%MD1.378	%MD1.379
+	MDmdeFcCy1LG1	MDmdeRdHS1	MDmdeUtOm	MDmdeUtTipp	MDmdeOm1	MDmdeLdHS1	MDmdeFcRoW1	MDmdeFcRoW2	MDmdeSpRoW1	MDmdeSpRoW2	MXmdeStBk1W1	MXmdeStBk1W2	MXmdeStBk1SS1	MXmdeStLoLG1	MDmdeAnSS1	MDmdeDsSS1	MDmdeAcsSS1	MDmdePrPu1SS1	MDmdePrPu1W1	MDmdePrPu1W2	MDmdePrPu1LG1	MDmdePrPu1ACC1	MDmdePwDiEn1	MDmdePwEmot1	MDmdeSpWind	MDmdeSgLxJs1	MDmdeSgLyJs1	MDmdeSgRxJs1	MDmdeSgRyJs1
+2012-05-02T11:37:47	1157.365	2.340008	999999.9	999999.9	0	1000	2452.5	2452.5	0	0	0	0	0	0	0	0	0	0	52.5	52.5	89.99998	0	0	0	6.25	0	0	0	0
+2012-05-02T11:37:47	1157.365	2.340008	999999.9	999999.9	0	1000	2452.5	2452.5	0	0	0	0	0	0	0	0	0	0	52.5	52.5	89.99998	0	0	0	6.25	0	0	0	0
+2012-05-02T11:37:47	1157.365	2.340008	999999.9	999999.9	0	1000	2452.5	2452.5	0	0	0	0	0	0	0	0	0	0	52.5	52.5	89.99998	0	0	0	6.25	0	0	0	0

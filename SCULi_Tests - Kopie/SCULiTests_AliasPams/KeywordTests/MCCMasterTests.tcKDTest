@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{D06B289E-BAD3-4538-B234-41080C0FC308}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword test." TestName="MCCMasterAnalyzerTest" />
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword test." TestName="MCCMasterVariableTests" />
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword test." TestName="MCCLiftTest" />
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{CEB3827C-502A-4ED6-A358-279D087A2090}" />
+	<Parameters Key="{F99A3A67-6847-49A9-95FA-5F99932CD684}" />
+</Root>

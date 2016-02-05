@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{A00FC7BC-B686-4D4A-85C9-F7DCF1F431F0}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps>
+					<Bitmap Name="Aliases.SCULi" Data="61717A697000000001000000360400007801CD914D48545118869F3B160E8535240EB5CB4512B588161991444845106D5C549B102217194644E1420809C11B5283395A8DCD143156642EAA4DA69099196856838A91BF133436380E3836453AF79EBEB94E8698D42A3AF09EF39D7BBEE7E53DF7E41FCC5D86357265DE2872A4A4B15E2A19A9F3B9CDDCAC94E27F50E6DEB3E457DCC65E74090E8B728A25E0F6BFCA5674DE4B2018262877718BB688B23F4579D2D5CB059707C786AD4BFAB0B38C82681C5D986E65D02B6B435C5115551CEF539C1E516C1B9EC4E1AE45DB9CB7C827AD2208AF1599E30972DE2B9C0FBEE2689821ABC5C0F9C6801BC3AC280F63EF51D09200BD0DF2CECDFB5058079727B0F9E4DC6D4259189A631050AC693749F70A5333233DB3502A7E8FA5AF71144E56FFF228B92FEC108C9AACF484D19AE268FDE2D524FD57A4DF23F24A5D6EB2FAD44B9C035FE0EED83C9F7C7FEA9FB27B5A71E0D1943093C2CBB756616AC5E77A4A574D96372648BFF30D2ABB17F2D79EB3ABCF401F91DE8B21D2DA256F40EA7B269A5BBC84B5542D6BA9DCA7A066016F657836856BC2E448CF34D445D0DE0A97945F989BE2E3973CBAD487FA17B149DEE61B22BB4B712BA6D8D33C8ECD1522A3F33B3B0615C70614EBDA84AD5268FBEB7FCB5B19FC1F59DB314B4944B1E9559C2CCF67F6BD8870B4C32043972CC59D4BB249DEF238F34EFEC120765F8C550FE52DDD2138F1010A5BFFC8FEF4F857EB0FD9B64B9F" />
+					<Bitmap Name="Aliases.SCULi.Dialog_File" Data="61717A697000000001000000360400007801A5934D48146118C77F4AE0B543976E1D3BF5056EB7040F1146121E3B0549D4250F4B8764D9E8A019511ADB874986B46CA5E05E5283C8D2B6026B13435D5BCDCDB25DD35D77F663F663763EB6773F8C650702EB1D9E776698F9FFE679FECF338D272C3B282E8BD8F78AD8598E1AF6882BB1CACF4B37A53DCFFF1FAD4D16B613E75B1A8AEF6F7DD93BF6043519259788908B87C9C53650A45F28D13594CD10D9F51532C125D2DF7DC8CB33C84BD366BD2CFD95A18457C9AE0548AF7E21F56DD6AC4FC5512B18C958840ECF3487DF0468F89CA07BF127958C42BD95F96BE924A1FE6EA4A94922EE47CCDB2FB2BB6F1486FCF051A76E2A86140EFD6198F41999EC3D3BC6B003ADEB1CFEC6FD9C1EF1C08017DEA6C06B30F83558F4A39047B55ECFA6919F3FC6705E45BFDB4EA8B99EBE01278786DE71616E9D537E992B8BC2D3B2AF26BD92410DAEA0B81CA84F6F225D3E4B60729CE30F3BA91BB552EBEFE2C8AB5BA4A22586499FCBA20B46B32349FB884C4B4F9C0327C739D66BA376B00D7CD760A693F70B1F8AFDADD61B5A0E4355B00D27697A60B0ABCDA0A67E02ABCB05F7CF080F6DF0E336975E3B8B3362D2EB1A0586673EC5C1EB3AFB3A7438BA8CF5C60B5ADD7778199AC51D99A3E7D3186A62D3E45FDED03104232DEAE89F90B13FCB62ED0DE35B08A289DE14FAAB15672426E64C32EBF3621ACA0C4353452D39F4B22785DE5433AAF32FFC03DB894AFDD61CFECBF937F1361B4F" />
+					<Bitmap Name="Aliases.SCULi.Form_Main" Data="61717A697000000001000000360400007801A5934B4EC33010867FA41E8023B0E404D922B144B0E10C6CB8105760C98E23B042881542AA40A0AA94D2479A4793D8CE8319DB89824D058544937162FF9FFFB19DC39360007D05F4DCA7D8B5B1833D6AD165FBCD8B7936F8FF7D7614609B383F3DD0E3DB996FAF2FA19225643C878C6690AB0F88F01D62398158BCA198BE201F0F91BD3E207DBA473ABCF3F569A81917C7838E31BAB902BF7388D9A86BF377F6FB65FE7584763C6719CD8D2E9C920FF2423E98534C9E918D1E3D7D9925BA5FA52B93E385CEA616C3687D30C39DBFCC533DBE241F3C4E25A1CE82E7B7A1F5E4836B71F55591197DCF475B0FEBD887D6DB75F5F4220733D807D7C23E14875D57776F3CBD2C50314364C45913871859BC91E1EAEB52A2560295E6FCCCF0F45589DF31E89CD0DEB8FAA6AE506F64F4D684F697F7C6D337749A3A86A25AA4ADE59B752586ABE77F609BE8EBDB73FC97FC09DF7737F3" />
+				</NodeBitmaps>
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{66F32D5F-A5DB-420E-9CB4-3DB7CADE2692}">
+				<Data Description="Runs the &quot;SCULi1&quot; tested application." TestedApp="SCULi1">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="Count" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="IgnoreRunning" DefVarType="11" DefValueType="7" DefValueValue="False" VarType="11" ValueType="7" ValueValue="False" />
+						<Parameter Name="Timeout" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{6A1B4CEE-4FB8-46E2-BFBD-403C84342301}">
+				<Data Description="Delays the test execution for the specified time period.">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="ms" DefVarType="3" VarType="3" ValueType="1" ValueValue="10000" />
+						<Parameter Name="Str" DefVarType="8" DefValueType="6" DefValueValue="" VarType="8" ValueType="6" ValueValue="" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Simulates a left-button single click in a window or control as specified (relative position, shift keys)." Action="Click">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="ClientX" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="ClientY" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="Shift" DefVarType="12" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0">
+							<Values IsEnum="True">
+								<Value Type="1" Value="0" Text="skNoShift" />
+								<Value Type="1" Value="8192" Text="skShift" />
+								<Value Type="1" Value="32768" Text="skAlt" />
+								<Value Type="1" Value="16384" Text="skCtrl" />
+							</Values>
+						</Parameter>
+					</Parameters>
+					<ObjectSyntax LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}" Code="Aliases.SCULi.Form_Main.Panel_GlobalActions.btnactOpenOffline;" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Enters text in the text editor." Action="SetText">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="Text" DefVarType="8" VarType="8" ValueType="6" ValueValue=" C:\Users\lmbtuh0\Downloads\Verbunden mit Master alles OK.hzmb" />
+					</Parameters>
+					<ObjectSyntax LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}" Code="Aliases.SCULi.Dialog_File.Dateiname_.Dateiname_.Dateiname_;" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Simulates a left-button single click in a window or control as specified (relative position, shift keys)." Action="Click">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="ClientX" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="ClientY" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="Shift" DefVarType="12" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0">
+							<Values IsEnum="True">
+								<Value Type="1" Value="0" Text="skNoShift" />
+								<Value Type="1" Value="8192" Text="skShift" />
+								<Value Type="1" Value="32768" Text="skAlt" />
+								<Value Type="1" Value="16384" Text="skCtrl" />
+							</Values>
+						</Parameter>
+					</Parameters>
+					<ObjectSyntax LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}" Code="Aliases.SCULi.Dialog_File.ffnen.ffnen;" />
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="findError" Unit="test">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.Panel_Cdata.MessagePanel.MessageFrame.MessagesTree" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="&quot;[MessagesTree&quot;, &quot;Text&quot;] " />
+						<Parameter Name="prob_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="[&quot;error&quot;]" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Aliases.SCULi.Form_Main.Panel_GlobalActions" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="ObjectIdentifier" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="btnactOpenOffline" />
+					</Parameters>
+				</Data>
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{40FD94AE-8869-4039-B755-B1D57735B8C0}" />
+	<Parameters Key="{1261D6A0-C42F-404B-B308-73627FC2F1A8}" />
+</Root>

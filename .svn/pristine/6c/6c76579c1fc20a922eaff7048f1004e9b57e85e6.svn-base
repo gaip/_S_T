@@ -1,0 +1,7775 @@
+%?class llspesym
+%?version 00057
+
+%?library llbasic
+(llbasic.ps) run
+%?library llgensym
+(llgensym.ps) run
+
+%?partdef ssFan002
+%?fn	ssFan002
+%?brief	Luefterblatt
+%?bbox	0 0 79 79
+/ssFan002 {
+	2 setlinewidth 
+	69 47 moveto 
+	currentcolor 
+	62 54 10 315 165 arc 
+	setcolor 
+%?manual_beg
+%?manual_end 
+	69 47 moveto 
+	64 34 13 70 135 arc 
+	stroke 
+	currentcolor 
+	52 56 moveto 
+	49 47 lineto 
+	stroke 
+	setcolor 
+} def
+%?partend
+
+%?partdef ssFan001
+%?fn	ssFan001
+%?brief	Luefterumkehr
+%?bbox	0 0 79 79
+/ssFan001 {
+	
+%?manual_beg
+	2 setlinewidth
+	45 41 moveto 
+	40 41 5 0 360 arc 
+	stroke 
+
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-9 0 translate 
+	0 rotate 
+	1 1 scale 
+	ssFan002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	81 -8 translate 
+	90 rotate 
+	1 1 scale 
+	ssFan002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-2 90 translate 
+	-90 rotate 
+	1 1 scale 
+	ssFan002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	89 82 translate 
+	180 rotate 
+	1 1 scale 
+	ssFan002 
+	setcolor 
+	setmatrix_nlw 
+	40 76 moveto 
+	3 setlinewidth_nlw 
+	40 40 35 90 180 arc 
+	stroke 
+	6 40 moveto 
+	11 45 lineto 
+	stroke 
+	5 40 moveto 
+	1 45 lineto 
+	stroke 
+	2 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssAircond006
+%?fn	ssAircond006
+%?brief	Lüftergebläse
+%?bbox	0 0 79 79
+/ssAircond006 {
+	1 setlinewidth_nlw 
+	newpath 
+	39.88 26.57 moveto 
+	40.65 27.59 41.17 28.66 41.49 29.89 curveto 
+	42.49 29.07 43.27 28.14 43.91 27.02 curveto 
+	44.55 25.91 45.17 24.91 46.36 24.24 curveto 
+	48.64 22.95 51.51 23.44 53.23 25.42 curveto 
+	56.91 29.66 56.60 36.04 52.54 39.91 curveto 
+	48.47 43.78 42.08 43.76 38.03 39.88 curveto 
+	37.01 40.65 35.94 41.17 34.71 41.49 curveto 
+	35.53 42.49 36.46 43.27 37.58 43.91 curveto 
+	38.69 44.55 39.69 45.17 40.36 46.36 curveto 
+	41.65 48.64 41.16 51.51 39.18 53.23 curveto 
+	34.94 56.91 28.56 56.60 24.69 52.54 curveto 
+	20.82 48.47 20.84 42.08 24.72 38.03 curveto 
+	23.95 37.01 23.43 35.94 23.11 34.71 curveto 
+	22.11 35.53 21.33 36.46 20.69 37.58 curveto 
+	20.05 38.69 19.43 39.69 18.24 40.36 curveto 
+	15.96 41.65 13.09 41.16 11.37 39.18 curveto 
+	7.69 34.94 8 28.56 12.06 24.69 curveto 
+	16.13 20.82 22.52 20.84 26.57 24.72 curveto 
+	27.59 23.95 28.66 23.43 29.89 23.11 curveto 
+	29.07 22.11 28.14 21.33 27.02 20.69 curveto 
+	25.91 20.05 24.91 19.43 24.24 18.24 curveto 
+	22.95 15.96 23.44 13.09 25.42 11.37 curveto 
+	29.66 7.69 36.04 8 39.91 12.06 curveto 
+	43.78 16.13 43.76 22.52 39.88 26.57 curveto 
+	37.40 36.33 moveto 
+	35.98 38.13 33.72 39.04 31.45 38.74 curveto 
+	30.68 38.64 30.09 39.42 30.40 40.13 curveto 
+	31.75 43.28 33.65 45.30 36.71 46.85 curveto 
+	38.29 47.65 38.56 49.80 37.22 50.97 curveto 
+	33.94 53.81 28.93 53.28 26.31 49.82 curveto 
+	23.70 46.35 24.56 41.40 28.20 39.02 curveto 
+	28.77 38.65 28.81 37.82 28.27 37.40 curveto 
+	26.47 35.98 25.56 33.72 25.86 31.45 curveto 
+	25.96 30.68 25.18 30.09 24.47 30.40 curveto 
+	21.32 31.75 19.30 33.65 17.75 36.71 curveto 
+	16.95 38.29 14.80 38.56 13.64 37.22 curveto 
+	10.79 33.94 11.32 28.93 14.78 26.31 curveto 
+	18.25 23.70 23.20 24.56 25.58 28.20 curveto 
+	25.95 28.77 26.78 28.81 27.20 28.27 curveto 
+	28.62 26.47 30.88 25.56 33.15 25.86 curveto 
+	33.92 25.96 34.51 25.18 34.20 24.47 curveto 
+	32.85 21.32 30.95 19.30 27.89 17.75 curveto 
+	26.31 16.95 26.04 14.80 27.38 13.64 curveto 
+	30.66 10.79 35.67 11.32 38.29 14.78 curveto 
+	40.90 18.25 40.04 23.20 36.40 25.58 curveto 
+	35.83 25.95 35.79 26.78 36.33 27.20 curveto 
+	38.13 28.62 39.04 30.88 38.74 33.15 curveto 
+	38.64 33.92 39.42 34.51 40.13 34.20 curveto 
+	43.28 32.85 45.30 30.95 46.85 27.89 curveto 
+	47.65 26.31 49.80 26.04 50.97 27.39 curveto 
+	53.81 30.67 53.28 35.67 49.82 38.29 curveto 
+	46.35 40.90 41.40 40.04 39.02 36.40 curveto 
+	38.65 35.83 37.82 35.79 37.40 36.33 curveto 
+	eofill 
+	newpath 
+	35.30 32.30 moveto 
+	35.30 33.96 33.96 35.30 32.30 35.30 curveto 
+	30.64 35.30 29.30 33.96 29.30 32.30 curveto 
+	29.30 30.64 30.64 29.30 32.30 29.30 curveto 
+	33.96 29.30 35.30 30.64 35.30 32.30 curveto 
+	eofill 
+} def
+%?partend
+
+%?partdef ssLine001
+%?fn	ssLine001
+%?brief	Zierbogen
+%?bbox	0 0 359 359
+/ssLine001 {
+	8 248 moveto 
+	1 setlinewidth_nlw 
+	currentcolor 
+	LightGrey 158 193 160 160 200 arc 
+	stroke 
+	setcolor 	
+} def
+%?partend
+
+%?partdef ssJoystick001
+%?fn	ssJoystick001
+%?brief	Umschaltung Steuergerät 1
+%?bbox	0 0 79 79
+/ssJoystick001 {
+	3 setlinewidth_nlw 
+	16.60 18.27 moveto 
+	16.71 18.33 lineto 
+	stroke 
+	16.71 18.33 moveto 
+	16.80 18.42 lineto 
+	stroke 
+	16.80 18.42 moveto 
+	16.86 18.52 lineto 
+	stroke 
+	16.86 18.52 moveto 
+	16.89 18.64 lineto 
+	stroke 
+	16.89 18.64 moveto 
+	16.90 18.77 lineto 
+	stroke 
+	16.90 18.77 moveto 
+	16.87 18.89 lineto 
+	stroke 
+	16.87 18.89 moveto 
+	16.82 19 lineto 
+	stroke 
+	16.82 19 moveto 
+	16.74 19.09 lineto 
+	stroke 
+	16.74 19.09 moveto 
+	16.64 19.16 lineto 
+	stroke 
+	16.64 19.16 moveto 
+	13.37 20.92 lineto 
+	stroke 
+	13.37 20.92 moveto 
+	13.26 21 lineto 
+	stroke 
+	13.26 21 moveto 
+	13.18 21.10 lineto 
+	stroke 
+	13.18 21.10 moveto 
+	13.12 21.22 lineto 
+	stroke 
+	13.12 21.22 moveto 
+	13.09 21.34 lineto 
+	stroke 
+	13.09 21.34 moveto 
+	13.10 21.47 lineto 
+	stroke 
+	13.10 21.47 moveto 
+	13.14 21.60 lineto 
+	stroke 
+	13.14 21.60 moveto 
+	13.20 21.71 lineto 
+	stroke 
+	13.20 21.71 moveto 
+	13.29 21.81 lineto 
+	stroke 
+	13.29 21.81 moveto 
+	13.40 21.87 lineto 
+	stroke 
+	13.40 21.87 moveto 
+	17.58 23.77 lineto 
+	stroke 
+	17.58 23.77 moveto 
+	17.69 23.83 lineto 
+	stroke 
+	17.69 23.83 moveto 
+	17.77 23.92 lineto 
+	stroke 
+	17.77 23.92 moveto 
+	17.84 24.02 lineto 
+	stroke 
+	17.84 24.02 moveto 
+	17.87 24.14 lineto 
+	stroke 
+	17.87 24.14 moveto 
+	17.87 24.27 lineto 
+	stroke 
+	17.87 24.27 moveto 
+	17.85 24.39 lineto 
+	stroke 
+	17.85 24.39 moveto 
+	17.79 24.50 lineto 
+	stroke 
+	17.79 24.50 moveto 
+	17.71 24.59 lineto 
+	stroke 
+	17.71 24.59 moveto 
+	17.61 24.66 lineto 
+	stroke 
+	17.61 24.66 moveto 
+	14.35 26.42 lineto 
+	stroke 
+	14.35 26.42 moveto 
+	14.24 26.50 lineto 
+	stroke 
+	14.24 26.50 moveto 
+	14.16 26.60 lineto 
+	stroke 
+	14.16 26.60 moveto 
+	14.10 26.72 lineto 
+	stroke 
+	14.10 26.72 moveto 
+	14.07 26.84 lineto 
+	stroke 
+	14.07 26.84 moveto 
+	14.08 26.97 lineto 
+	stroke 
+	14.08 26.97 moveto 
+	14.11 27.10 lineto 
+	stroke 
+	14.11 27.10 moveto 
+	14.18 27.21 lineto 
+	stroke 
+	14.18 27.21 moveto 
+	14.27 27.31 lineto 
+	stroke 
+	14.27 27.31 moveto 
+	14.38 27.37 lineto 
+	stroke 
+	14.38 27.37 moveto 
+	18.56 29.27 lineto 
+	stroke 
+	18.56 29.27 moveto 
+	18.67 29.33 lineto 
+	stroke 
+	18.67 29.33 moveto 
+	18.75 29.42 lineto 
+	stroke 
+	18.75 29.42 moveto 
+	18.81 29.52 lineto 
+	stroke 
+	18.81 29.52 moveto 
+	18.85 29.64 lineto 
+	stroke 
+	18.85 29.64 moveto 
+	18.85 29.77 lineto 
+	stroke 
+	18.85 29.77 moveto 
+	18.83 29.89 lineto 
+	stroke 
+	18.83 29.89 moveto 
+	18.77 30 lineto 
+	stroke 
+	18.77 30 moveto 
+	18.69 30.09 lineto 
+	stroke 
+	18.69 30.09 moveto 
+	18.59 30.16 lineto 
+	stroke 
+	18.59 30.16 moveto 
+	15.33 31.92 lineto 
+	stroke 
+	15.33 31.92 moveto 
+	15.24 31.99 lineto 
+	stroke 
+	15.24 31.99 moveto 
+	15.16 32.06 lineto 
+	stroke 
+	15.16 32.06 moveto 
+	15.10 32.16 lineto 
+	stroke 
+	15.10 32.16 moveto 
+	15.06 32.26 lineto 
+	stroke 
+	15.06 32.26 moveto 
+	15.05 32.37 lineto 
+	stroke 
+	15.05 32.37 moveto 
+	15.06 32.48 lineto 
+	stroke 
+	15.06 32.48 moveto 
+	15.48 34.89 lineto 
+	stroke 
+	15.48 34.89 moveto 
+	15.52 35 lineto 
+	stroke 
+	15.52 35 moveto 
+	15.57 35.10 lineto 
+	stroke 
+	15.57 35.10 moveto 
+	15.65 35.18 lineto 
+	stroke 
+	15.65 35.18 moveto 
+	15.75 35.25 lineto 
+	stroke 
+	15.75 35.25 moveto 
+	15.86 35.29 lineto 
+	stroke 
+	15.86 35.29 moveto 
+	15.98 35.30 lineto 
+	stroke 
+	15.98 35.30 moveto 
+	35.63 35.30 lineto 
+	stroke 
+	35.63 35.30 moveto 
+	35.74 35.29 lineto 
+	stroke 
+	35.74 35.29 moveto 
+	35.85 35.25 lineto 
+	stroke 
+	35.85 35.25 moveto 
+	35.95 35.18 lineto 
+	stroke 
+	35.95 35.18 moveto 
+	36.03 35.10 lineto 
+	stroke 
+	36.03 35.10 moveto 
+	36.09 35 lineto 
+	stroke 
+	36.09 35 moveto 
+	36.12 34.89 lineto 
+	stroke 
+	36.12 34.89 moveto 
+	36.55 32.48 lineto 
+	stroke 
+	36.55 32.48 moveto 
+	36.55 32.37 lineto 
+	stroke 
+	36.55 32.37 moveto 
+	36.54 32.26 lineto 
+	stroke 
+	36.54 32.26 moveto 
+	36.50 32.16 lineto 
+	stroke 
+	36.50 32.16 moveto 
+	36.44 32.06 lineto 
+	stroke 
+	36.44 32.06 moveto 
+	36.37 31.99 lineto 
+	stroke 
+	36.37 31.99 moveto 
+	36.28 31.92 lineto 
+	stroke 
+	36.28 31.92 moveto 
+	33.01 30.16 lineto 
+	stroke 
+	33.01 30.16 moveto 
+	32.91 30.09 lineto 
+	stroke 
+	32.91 30.09 moveto 
+	32.83 30 lineto 
+	stroke 
+	32.83 30 moveto 
+	32.78 29.89 lineto 
+	stroke 
+	32.78 29.89 moveto 
+	32.75 29.77 lineto 
+	stroke 
+	32.75 29.77 moveto 
+	32.75 29.64 lineto 
+	stroke 
+	32.75 29.64 moveto 
+	32.79 29.52 lineto 
+	stroke 
+	32.79 29.52 moveto 
+	32.85 29.42 lineto 
+	stroke 
+	32.85 29.42 moveto 
+	32.94 29.33 lineto 
+	stroke 
+	32.94 29.33 moveto 
+	33.04 29.27 lineto 
+	stroke 
+	33.04 29.27 moveto 
+	37.22 27.37 lineto 
+	stroke 
+	37.22 27.37 moveto 
+	37.33 27.31 lineto 
+	stroke 
+	37.33 27.31 moveto 
+	37.42 27.21 lineto 
+	stroke 
+	37.42 27.21 moveto 
+	37.49 27.10 lineto 
+	stroke 
+	37.49 27.10 moveto 
+	37.53 26.97 lineto 
+	stroke 
+	37.53 26.97 moveto 
+	37.53 26.84 lineto 
+	stroke 
+	37.53 26.84 moveto 
+	37.50 26.72 lineto 
+	stroke 
+	37.50 26.72 moveto 
+	37.45 26.60 lineto 
+	stroke 
+	37.45 26.60 moveto 
+	37.36 26.50 lineto 
+	stroke 
+	37.36 26.50 moveto 
+	37.25 26.42 lineto 
+	stroke 
+	37.25 26.42 moveto 
+	33.99 24.66 lineto 
+	stroke 
+	33.99 24.66 moveto 
+	33.89 24.59 lineto 
+	stroke 
+	33.89 24.59 moveto 
+	33.81 24.50 lineto 
+	stroke 
+	33.81 24.50 moveto 
+	33.75 24.39 lineto 
+	stroke 
+	33.75 24.39 moveto 
+	33.73 24.27 lineto 
+	stroke 
+	33.73 24.27 moveto 
+	33.73 24.14 lineto 
+	stroke 
+	33.73 24.14 moveto 
+	33.77 24.02 lineto 
+	stroke 
+	33.77 24.02 moveto 
+	33.83 23.92 lineto 
+	stroke 
+	33.83 23.92 moveto 
+	33.92 23.83 lineto 
+	stroke 
+	33.92 23.83 moveto 
+	34.02 23.77 lineto 
+	stroke 
+	34.02 23.77 moveto 
+	38.20 21.87 lineto 
+	stroke 
+	38.20 21.87 moveto 
+	38.31 21.81 lineto 
+	stroke 
+	38.31 21.81 moveto 
+	38.40 21.71 lineto 
+	stroke 
+	38.40 21.71 moveto 
+	38.47 21.60 lineto 
+	stroke 
+	38.47 21.60 moveto 
+	38.50 21.47 lineto 
+	stroke 
+	38.50 21.47 moveto 
+	38.51 21.34 lineto 
+	stroke 
+	38.51 21.34 moveto 
+	38.48 21.22 lineto 
+	stroke 
+	38.48 21.22 moveto 
+	38.42 21.10 lineto 
+	stroke 
+	38.42 21.10 moveto 
+	38.34 21 lineto 
+	stroke 
+	38.34 21 moveto 
+	38.23 20.92 lineto 
+	stroke 
+	38.23 20.92 moveto 
+	34.97 19.16 lineto 
+	stroke 
+	34.97 19.16 moveto 
+	34.87 19.09 lineto 
+	stroke 
+	34.87 19.09 moveto 
+	34.79 19 lineto 
+	stroke 
+	34.79 19 moveto 
+	34.73 18.89 lineto 
+	stroke 
+	34.73 18.89 moveto 
+	34.71 18.77 lineto 
+	stroke 
+	34.71 18.77 moveto 
+	34.71 18.64 lineto 
+	stroke 
+	34.71 18.64 moveto 
+	34.74 18.52 lineto 
+	stroke 
+	34.74 18.52 moveto 
+	34.81 18.42 lineto 
+	stroke 
+	34.81 18.42 moveto 
+	34.89 18.33 lineto 
+	stroke 
+	34.89 18.33 moveto 
+	35 18.27 lineto 
+	stroke 
+	35 18.27 moveto 
+	39.18 16.37 lineto 
+	stroke 
+	39.18 16.37 moveto 
+	39.25 16.33 lineto 
+	stroke 
+	39.25 16.33 moveto 
+	39.32 16.28 lineto 
+	stroke 
+	39.32 16.28 moveto 
+	39.38 16.22 lineto 
+	stroke 
+	39.38 16.22 moveto 
+	39.42 16.14 lineto 
+	stroke 
+	39.42 16.14 moveto 
+	39.46 16.07 lineto 
+	stroke 
+	39.46 16.07 moveto 
+	39.48 15.98 lineto 
+	stroke 
+	39.48 15.98 moveto 
+	39.94 13.39 lineto 
+	stroke 
+	39.94 13.39 moveto 
+	39.94 13.24 lineto 
+	stroke 
+	39.94 13.24 moveto 
+	39.91 13.10 lineto 
+	stroke 
+	39.91 13.10 moveto 
+	39.83 12.98 lineto 
+	stroke 
+	39.83 12.98 moveto 
+	39.72 12.88 lineto 
+	stroke 
+	39.72 12.88 moveto 
+	39.59 12.82 lineto 
+	stroke 
+	39.59 12.82 moveto 
+	39.45 12.80 lineto 
+	stroke 
+	39.45 12.80 moveto 
+	12.16 12.80 lineto 
+	stroke 
+	12.16 12.80 moveto 
+	12.01 12.82 lineto 
+	stroke 
+	12.01 12.82 moveto 
+	11.88 12.88 lineto 
+	stroke 
+	11.88 12.88 moveto 
+	11.77 12.98 lineto 
+	stroke 
+	11.77 12.98 moveto 
+	11.70 13.10 lineto 
+	stroke 
+	11.70 13.10 moveto 
+	11.66 13.24 lineto 
+	stroke 
+	11.66 13.24 moveto 
+	11.66 13.39 lineto 
+	stroke 
+	11.66 13.39 moveto 
+	12.12 15.98 lineto 
+	stroke 
+	12.12 15.98 moveto 
+	12.14 16.07 lineto 
+	stroke 
+	12.14 16.07 moveto 
+	12.18 16.14 lineto 
+	stroke 
+	12.18 16.14 moveto 
+	12.23 16.22 lineto 
+	stroke 
+	12.23 16.22 moveto 
+	12.29 16.28 lineto 
+	stroke 
+	12.29 16.28 moveto 
+	12.35 16.33 lineto 
+	stroke 
+	12.35 16.33 moveto 
+	12.43 16.37 lineto 
+	stroke 
+	12.43 16.37 moveto 
+	16.60 18.27 lineto 
+	stroke 
+	17.80 35.30 moveto 
+	17.80 36.85 lineto 
+	stroke 
+	17.80 36.85 moveto 
+	17.81 36.96 lineto 
+	stroke 
+	17.81 36.96 moveto 
+	17.85 37.06 lineto 
+	stroke 
+	17.85 37.06 moveto 
+	17.91 37.16 lineto 
+	stroke 
+	17.91 37.16 moveto 
+	17.98 37.24 lineto 
+	stroke 
+	17.98 37.24 moveto 
+	18.07 37.30 lineto 
+	stroke 
+	18.07 37.30 moveto 
+	18.18 37.33 lineto 
+	stroke 
+	18.18 37.33 moveto 
+	21.96 38.31 lineto 
+	stroke 
+	21.96 38.31 moveto 
+	22.30 38.41 lineto 
+	stroke 
+	22.30 38.41 moveto 
+	22.63 38.54 lineto 
+	stroke 
+	22.63 38.54 moveto 
+	22.95 38.69 lineto 
+	stroke 
+	22.95 38.69 moveto 
+	23.27 38.86 lineto 
+	stroke 
+	23.27 38.86 moveto 
+	23.56 39.06 lineto 
+	stroke 
+	23.56 39.06 moveto 
+	23.84 39.28 lineto 
+	stroke 
+	23.84 39.28 moveto 
+	24.11 39.52 lineto 
+	stroke 
+	24.11 39.52 moveto 
+	24.35 39.77 lineto 
+	stroke 
+	24.35 39.77 moveto 
+	24.58 40.05 lineto 
+	stroke 
+	24.58 40.05 moveto 
+	24.79 40.34 lineto 
+	stroke 
+	24.79 40.34 moveto 
+	24.97 40.65 lineto 
+	stroke 
+	24.97 40.65 moveto 
+	25.13 40.96 lineto 
+	stroke 
+	25.13 40.96 moveto 
+	25.27 41.29 lineto 
+	stroke 
+	25.27 41.29 moveto 
+	25.38 41.63 lineto 
+	stroke 
+	25.38 41.63 moveto 
+	25.47 41.98 lineto 
+	stroke 
+	25.47 41.98 moveto 
+	25.53 42.33 lineto 
+	stroke 
+	25.53 42.33 moveto 
+	25.56 42.68 lineto 
+	stroke 
+	25.56 42.68 moveto 
+	25.57 43.04 lineto 
+	stroke 
+	25.57 43.04 moveto 
+	25.55 43.40 lineto 
+	stroke 
+	25.55 43.40 moveto 
+	25.51 43.92 lineto 
+	stroke 
+	25.51 43.92 moveto 
+	25.48 44.45 lineto 
+	stroke 
+	25.48 44.45 moveto 
+	25.47 44.98 lineto 
+	stroke 
+	25.47 44.98 moveto 
+	25.47 45.51 lineto 
+	stroke 
+	25.47 45.51 moveto 
+	25.48 46.04 lineto 
+	stroke 
+	25.48 46.04 moveto 
+	25.51 46.56 lineto 
+	stroke 
+	25.51 46.56 moveto 
+	25.55 47.09 lineto 
+	stroke 
+	25.55 47.09 moveto 
+	25.60 47.62 lineto 
+	stroke 
+	25.60 47.62 moveto 
+	25.67 48.14 lineto 
+	stroke 
+	25.67 48.14 moveto 
+	25.75 48.67 lineto 
+	stroke 
+	25.75 48.67 moveto 
+	25.84 49.19 lineto 
+	stroke 
+	25.84 49.19 moveto 
+	25.95 49.70 lineto 
+	stroke 
+	25.95 49.70 moveto 
+	26.07 50.22 lineto 
+	stroke 
+	26.07 50.22 moveto 
+	26.20 50.73 lineto 
+	stroke 
+	26.20 50.73 moveto 
+	26.34 51.24 lineto 
+	stroke 
+	26.34 51.24 moveto 
+	26.50 51.75 lineto 
+	stroke 
+	26.50 51.75 moveto 
+	26.67 52.25 lineto 
+	stroke 
+	26.67 52.25 moveto 
+	26.85 52.74 lineto 
+	stroke 
+	26.85 52.74 moveto 
+	27.05 53.23 lineto 
+	stroke 
+	27.05 53.23 moveto 
+	27.26 53.72 lineto 
+	stroke 
+	27.26 53.72 moveto 
+	27.48 54.20 lineto 
+	stroke 
+	27.48 54.20 moveto 
+	27.71 54.68 lineto 
+	stroke 
+	27.71 54.68 moveto 
+	27.95 55.15 lineto 
+	stroke 
+	27.95 55.15 moveto 
+	28.21 55.61 lineto 
+	stroke 
+	28.21 55.61 moveto 
+	28.47 56.07 lineto 
+	stroke 
+	28.47 56.07 moveto 
+	28.75 56.52 lineto 
+	stroke 
+	28.75 56.52 moveto 
+	29.04 56.96 lineto 
+	stroke 
+	29.04 56.96 moveto 
+	29.34 57.39 lineto 
+	stroke 
+	29.34 57.39 moveto 
+	29.65 57.82 lineto 
+	stroke 
+	29.65 57.82 moveto 
+	29.83 58.07 lineto 
+	stroke 
+	29.83 58.07 moveto 
+	29.99 58.32 lineto 
+	stroke 
+	29.99 58.32 moveto 
+	30.14 58.59 lineto 
+	stroke 
+	30.14 58.59 moveto 
+	30.28 58.86 lineto 
+	stroke 
+	30.28 58.86 moveto 
+	30.41 59.13 lineto 
+	stroke 
+	30.41 59.13 moveto 
+	30.52 59.41 lineto 
+	stroke 
+	30.52 59.41 moveto 
+	30.62 59.70 lineto 
+	stroke 
+	30.62 59.70 moveto 
+	30.70 59.99 lineto 
+	stroke 
+	30.70 59.99 moveto 
+	30.77 60.29 lineto 
+	stroke 
+	30.77 60.29 moveto 
+	30.83 60.58 lineto 
+	stroke 
+	30.83 60.58 moveto 
+	30.87 60.88 lineto 
+	stroke 
+	30.87 60.88 moveto 
+	30.89 61.18 lineto 
+	stroke 
+	30.89 61.18 moveto 
+	30.91 61.49 lineto 
+	stroke 
+	30.91 61.49 moveto 
+	30.90 61.79 lineto 
+	stroke 
+	30.90 61.79 moveto 
+	30.91 61.87 lineto 
+	stroke 
+	30.91 61.87 moveto 
+	30.93 61.95 lineto 
+	stroke 
+	30.93 61.95 moveto 
+	30.96 62.03 lineto 
+	stroke 
+	30.96 62.03 moveto 
+	31 62.10 lineto 
+	stroke 
+	31 62.10 moveto 
+	31.05 62.16 lineto 
+	stroke 
+	31.05 62.16 moveto 
+	31.12 62.22 lineto 
+	stroke 
+	31.12 62.22 moveto 
+	35.97 65.60 lineto 
+	stroke 
+	35.97 65.60 moveto 
+	36.09 65.66 lineto 
+	stroke 
+	36.09 65.66 moveto 
+	36.23 65.69 lineto 
+	stroke 
+	36.23 65.69 moveto 
+	36.38 65.67 lineto 
+	stroke 
+	36.38 65.67 moveto 
+	36.51 65.62 lineto 
+	stroke 
+	36.51 65.62 moveto 
+	36.62 65.52 lineto 
+	stroke 
+	36.62 65.52 moveto 
+	36.70 65.41 lineto 
+	stroke 
+	36.70 65.41 moveto 
+	36.87 65.03 lineto 
+	stroke 
+	36.87 65.03 moveto 
+	37.02 64.65 lineto 
+	stroke 
+	37.02 64.65 moveto 
+	37.14 64.26 lineto 
+	stroke 
+	37.14 64.26 moveto 
+	37.24 63.86 lineto 
+	stroke 
+	37.24 63.86 moveto 
+	37.32 63.46 lineto 
+	stroke 
+	37.32 63.46 moveto 
+	37.37 63.05 lineto 
+	stroke 
+	37.37 63.05 moveto 
+	37.40 62.64 lineto 
+	stroke 
+	37.40 62.64 moveto 
+	37.40 62.23 lineto 
+	stroke 
+	37.40 62.23 moveto 
+	37.38 61.82 lineto 
+	stroke 
+	37.38 61.82 moveto 
+	37.33 61.41 lineto 
+	stroke 
+	37.33 61.41 moveto 
+	37.26 61 lineto 
+	stroke 
+	37.26 61 moveto 
+	37.16 60.60 lineto 
+	stroke 
+	37.16 60.60 moveto 
+	37.04 60.21 lineto 
+	stroke 
+	37.04 60.21 moveto 
+	36.90 59.83 lineto 
+	stroke 
+	36.90 59.83 moveto 
+	33.63 51.44 lineto 
+	stroke 
+	33.63 51.44 moveto 
+	33.60 51.37 lineto 
+	stroke 
+	33.60 51.37 moveto 
+	33.56 51.30 lineto 
+	stroke 
+	33.56 51.30 moveto 
+	33.50 51.25 lineto 
+	stroke 
+	33.50 51.25 moveto 
+	33.25 51.01 lineto 
+	stroke 
+	33.25 51.01 moveto 
+	33 50.77 lineto 
+	stroke 
+	33 50.77 moveto 
+	32.77 50.51 lineto 
+	stroke 
+	32.77 50.51 moveto 
+	32.54 50.25 lineto 
+	stroke 
+	32.54 50.25 moveto 
+	32.32 49.98 lineto 
+	stroke 
+	32.32 49.98 moveto 
+	32.11 49.71 lineto 
+	stroke 
+	32.11 49.71 moveto 
+	31.91 49.42 lineto 
+	stroke 
+	31.91 49.42 moveto 
+	31.72 49.13 lineto 
+	stroke 
+	31.72 49.13 moveto 
+	31.54 48.84 lineto 
+	stroke 
+	31.54 48.84 moveto 
+	31.37 48.53 lineto 
+	stroke 
+	31.37 48.53 moveto 
+	31.21 48.23 lineto 
+	stroke 
+	31.21 48.23 moveto 
+	31.06 47.91 lineto 
+	stroke 
+	31.06 47.91 moveto 
+	30.92 47.59 lineto 
+	stroke 
+	30.92 47.59 moveto 
+	30.80 47.27 lineto 
+	stroke 
+	30.80 47.27 moveto 
+	30.68 46.95 lineto 
+	stroke 
+	30.68 46.95 moveto 
+	30.57 46.62 lineto 
+	stroke 
+	30.57 46.62 moveto 
+	30.48 46.28 lineto 
+	stroke 
+	30.48 46.28 moveto 
+	30.40 45.95 lineto 
+	stroke 
+	30.40 45.95 moveto 
+	30.33 45.61 lineto 
+	stroke 
+	30.33 45.61 moveto 
+	29.76 42.64 lineto 
+	stroke 
+	29.76 42.64 moveto 
+	29.70 42.26 lineto 
+	stroke 
+	29.70 42.26 moveto 
+	29.67 41.88 lineto 
+	stroke 
+	29.67 41.88 moveto 
+	29.68 41.50 lineto 
+	stroke 
+	29.68 41.50 moveto 
+	29.72 41.11 lineto 
+	stroke 
+	29.72 41.11 moveto 
+	29.79 40.74 lineto 
+	stroke 
+	29.79 40.74 moveto 
+	29.88 40.37 lineto 
+	stroke 
+	29.88 40.37 moveto 
+	30.01 40 lineto 
+	stroke 
+	30.01 40 moveto 
+	30.17 39.65 lineto 
+	stroke 
+	30.17 39.65 moveto 
+	30.36 39.32 lineto 
+	stroke 
+	30.36 39.32 moveto 
+	30.57 39 lineto 
+	stroke 
+	30.57 39 moveto 
+	30.81 38.70 lineto 
+	stroke 
+	30.81 38.70 moveto 
+	31.07 38.42 lineto 
+	stroke 
+	31.07 38.42 moveto 
+	31.35 38.16 lineto 
+	stroke 
+	31.35 38.16 moveto 
+	31.66 37.92 lineto 
+	stroke 
+	31.66 37.92 moveto 
+	31.98 37.71 lineto 
+	stroke 
+	31.98 37.71 moveto 
+	32.32 37.53 lineto 
+	stroke 
+	32.32 37.53 moveto 
+	32.67 37.38 lineto 
+	stroke 
+	32.67 37.38 moveto 
+	33.03 37.25 lineto 
+	stroke 
+	33.03 37.25 moveto 
+	33.40 37.16 lineto 
+	stroke 
+	33.40 37.16 moveto 
+	33.51 37.12 lineto 
+	stroke 
+	33.51 37.12 moveto 
+	33.60 37.07 lineto 
+	stroke 
+	33.60 37.07 moveto 
+	33.68 37 lineto 
+	stroke 
+	33.68 37 moveto 
+	33.74 36.91 lineto 
+	stroke 
+	33.74 36.91 moveto 
+	33.78 36.81 lineto 
+	stroke 
+	33.78 36.81 moveto 
+	33.80 36.70 lineto 
+	stroke 
+	33.80 36.70 moveto 
+	33.89 35.30 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	56 54 moveto 
+	FatFont 
+	(1) 
+	show_utf8 
+} def
+%?partend
+
+%?partdef ssJoystick004
+%?fn	ssJoystick004
+%?brief	Joystick
+%?bbox	0 0 79 79
+/ssJoystick004 {
+	3 setlinewidth_nlw 
+	16.60 18.27 moveto 
+	16.71 18.33 lineto 
+	stroke 
+	16.71 18.33 moveto 
+	16.80 18.42 lineto 
+	stroke 
+	16.80 18.42 moveto 
+	16.86 18.52 lineto 
+	stroke 
+	16.86 18.52 moveto 
+	16.89 18.64 lineto 
+	stroke 
+	16.89 18.64 moveto 
+	16.90 18.77 moveto 
+	16.87 18.89 lineto 
+	stroke 
+	16.87 18.89 moveto 
+	16.82 19 lineto 
+	stroke 
+	16.82 19 moveto 
+	16.74 19.09 lineto 
+	stroke 
+	16.74 19.09 moveto 
+	16.64 19.16 lineto 
+	stroke 
+	16.64 19.16 moveto 
+	13.37 20.92 lineto 
+	stroke 
+	13.37 20.92 moveto 
+	13.26 21 lineto 
+	stroke 
+	13.26 21 moveto 
+	13.18 21.10 lineto 
+	stroke 
+	13.18 21.10 moveto 
+	13.12 21.22 lineto 
+	stroke 
+	13.12 21.22 moveto 
+	13.09 21.34 lineto 
+	stroke 
+	13.09 21.34 moveto 
+	13.10 21.47 lineto 
+	stroke 
+	13.10 21.47 moveto 
+	13.14 21.60 lineto 
+	stroke 
+	13.14 21.60 moveto 
+	13.20 21.71 lineto 
+	stroke 
+	13.20 21.71 moveto 
+	13.29 21.81 lineto 
+	stroke 
+	13.29 21.81 moveto 
+	13.40 21.87 lineto 
+	stroke 
+	13.40 21.87 moveto 
+	17.58 23.77 lineto 
+	stroke 
+	17.58 23.77 moveto 
+	17.69 23.83 lineto 
+	stroke 
+	17.69 23.83 moveto 
+	17.77 23.92 lineto 
+	stroke 
+	17.77 23.92 moveto 
+	17.84 24.02 lineto 
+	stroke 
+	17.84 24.02 moveto 
+	17.87 24.14 lineto 
+	stroke 
+	17.87 24.14 moveto 
+	17.87 24.27 lineto 
+	stroke 
+	17.87 24.27 moveto 
+	17.85 24.39 lineto 
+	stroke 
+	17.85 24.39 moveto 
+	17.79 24.50 lineto 
+	stroke 
+	17.79 24.50 moveto 
+	17.71 24.59 lineto 
+	stroke 
+	17.71 24.59 moveto 
+	17.61 24.66 lineto 
+	stroke 
+	17.61 24.66 moveto 
+	14.35 26.42 lineto 
+	stroke 
+	14.35 26.42 moveto 
+	14.24 26.50 lineto 
+	stroke 
+	14.24 26.50 moveto 
+	14.16 26.60 lineto 
+	stroke 
+	14.16 26.60 moveto 
+	14.10 26.72 lineto 
+	stroke 
+	14.10 26.72 moveto 
+	14.07 26.84 lineto 
+	stroke 
+	14.07 26.84 moveto 
+	14.08 26.97 lineto 
+	stroke 
+	14.08 26.97 moveto 
+	14.11 27.10 lineto 
+	stroke 
+	14.11 27.10 moveto 
+	14.18 27.21 lineto 
+	stroke 
+	14.18 27.21 moveto 
+	14.27 27.31 lineto 
+	stroke 
+	14.27 27.31 moveto 
+	14.38 27.37 lineto 
+	stroke 
+	14.38 27.37 moveto 
+	18.56 29.27 lineto 
+	stroke 
+	18.56 29.27 moveto 
+	18.67 29.33 lineto 
+	stroke 
+	18.67 29.33 moveto 
+	18.75 29.42 lineto 
+	stroke 
+	18.75 29.42 moveto 
+	18.81 29.52 lineto 
+	stroke 
+	18.81 29.52 moveto 
+	18.85 29.64 lineto 
+	stroke 
+	18.85 29.64 moveto 
+	18.85 29.77 lineto 
+	stroke 
+	18.85 29.77 moveto 
+	18.83 29.89 lineto 
+	stroke 
+	18.83 29.89 moveto 
+	18.77 30 lineto 
+	stroke 
+	18.77 30 moveto 
+	18.69 30.09 lineto 
+	stroke 
+	18.69 30.09 moveto 
+	18.59 30.16 lineto 
+	stroke 
+	18.59 30.16 moveto 
+	15.33 31.92 lineto 
+	stroke 
+	15.33 31.92 moveto 
+	15.24 31.99 lineto 
+	stroke 
+	15.24 31.99 moveto 
+	15.16 32.06 lineto 
+	stroke 
+	15.16 32.06 moveto 
+	15.10 32.16 lineto 
+	stroke 
+	15.10 32.16 moveto 
+	15.06 32.26 lineto 
+	stroke 
+	15.06 32.26 moveto 
+	15.05 32.37 lineto 
+	stroke 
+	15.05 32.37 moveto 
+	15.06 32.48 lineto 
+	stroke 
+	15.06 32.48 moveto 
+	15.48 34.89 lineto 
+	stroke 
+	15.48 34.89 moveto 
+	15.52 35 lineto 
+	stroke 
+	15.52 35 moveto 
+	15.57 35.10 lineto 
+	stroke 
+	15.57 35.10 moveto 
+	15.65 35.18 lineto 
+	stroke 
+	15.65 35.18 moveto 
+	15.75 35.25 lineto 
+	stroke 
+	15.75 35.25 moveto 
+	15.86 35.29 lineto 
+	stroke 
+	15.86 35.29 moveto 
+	15.98 35.30 lineto 
+	stroke 
+	15.98 35.30 moveto 
+	35.63 35.30 lineto 
+	stroke 
+	35.63 35.30 moveto 
+	35.74 35.29 lineto 
+	stroke 
+	35.74 35.29 moveto 
+	35.85 35.25 lineto 
+	stroke 
+	35.85 35.25 moveto 
+	35.95 35.18 lineto 
+	stroke 
+	35.95 35.18 moveto 
+	36.03 35.10 lineto 
+	stroke 
+	36.03 35.10 moveto 
+	36.09 35 lineto 
+	stroke 
+	36.09 35 moveto 
+	36.12 34.89 lineto 
+	stroke 
+	36.12 34.89 moveto 
+	36.55 32.48 lineto 
+	stroke 
+	36.55 32.48 moveto 
+	36.55 32.37 lineto 
+	stroke 
+	36.55 32.37 moveto 
+	36.54 32.26 lineto 
+	stroke 
+	36.54 32.26 moveto 
+	36.50 32.16 lineto 
+	stroke 
+	36.50 32.16 moveto 
+	36.44 32.06 lineto 
+	stroke 
+	36.44 32.06 moveto 
+	36.37 31.99 lineto 
+	stroke 
+	36.37 31.99 moveto 
+	36.28 31.92 lineto 
+	stroke 
+	36.28 31.92 moveto 
+	33.01 30.16 lineto 
+	stroke 
+	33.01 30.16 moveto 
+	32.91 30.09 lineto 
+	stroke 
+	32.91 30.09 moveto 
+	32.83 30 lineto 
+	stroke 
+	32.83 30 moveto 
+	32.78 29.89 lineto 
+	stroke 
+	32.78 29.89 moveto 
+	32.75 29.77 lineto 
+	stroke 
+	32.75 29.77 moveto 
+	32.75 29.64 lineto 
+	stroke 
+	32.75 29.64 moveto 
+	32.79 29.52 lineto 
+	stroke 
+	32.79 29.52 moveto 
+	32.85 29.42 lineto 
+	stroke 
+	32.85 29.42 moveto 
+	32.94 29.33 lineto 
+	stroke 
+	32.94 29.33 moveto 
+	33.04 29.27 lineto 
+	stroke 
+	33.04 29.27 moveto 
+	37.22 27.37 lineto 
+	stroke 
+	37.22 27.37 moveto 
+	37.33 27.31 lineto 
+	stroke 
+	37.33 27.31 moveto 
+	37.42 27.21 lineto 
+	stroke 
+	37.42 27.21 moveto 
+	37.49 27.10 lineto 
+	stroke 
+	37.49 27.10 moveto 
+	37.53 26.97 lineto 
+	stroke 
+	37.53 26.97 moveto 
+	37.53 26.84 lineto 
+	stroke 
+	37.53 26.84 moveto 
+	37.50 26.72 lineto 
+	stroke 
+	37.50 26.72 moveto 
+	37.45 26.60 lineto 
+	stroke 
+	37.45 26.60 moveto 
+	37.36 26.50 lineto 
+	stroke 
+	37.36 26.50 moveto 
+	37.25 26.42 lineto 
+	stroke 
+	37.25 26.42 moveto 
+	33.99 24.66 lineto 
+	stroke 
+	33.99 24.66 moveto 
+	33.89 24.59 lineto 
+	stroke 
+	33.89 24.59 moveto 
+	33.81 24.50 lineto 
+	stroke 
+	33.81 24.50 moveto 
+	33.75 24.39 lineto 
+	stroke 
+	33.75 24.39 moveto 
+	33.73 24.27 lineto 
+	stroke 
+	33.73 24.27 moveto 
+	33.73 24.14 lineto 
+	stroke 
+	33.73 24.14 moveto 
+	33.77 24.02 lineto 
+	stroke 
+	33.77 24.02 moveto 
+	33.83 23.92 lineto 
+	stroke 
+	33.83 23.92 moveto 
+	33.92 23.83 lineto 
+	stroke 
+	33.92 23.83 moveto 
+	34.02 23.77 lineto 
+	stroke 
+	34.02 23.77 moveto 
+	38.20 21.87 lineto 
+	stroke 
+	38.20 21.87 moveto 
+	38.31 21.81 lineto 
+	stroke 
+	38.31 21.81 moveto 
+	38.40 21.71 lineto 
+	stroke 
+	38.40 21.71 moveto 
+	38.47 21.60 lineto 
+	stroke 
+	38.47 21.60 moveto 
+	38.50 21.47 lineto 
+	stroke 
+	38.50 21.47 moveto 
+	38.51 21.34 lineto 
+	stroke 
+	38.51 21.34 moveto 
+	38.48 21.22 lineto 
+	stroke 
+	38.48 21.22 moveto 
+	38.42 21.10 lineto 
+	stroke 
+	38.42 21.10 moveto 
+	38.34 21 lineto 
+	stroke 
+	38.34 21 moveto 
+	38.23 20.92 lineto 
+	stroke 
+	38.23 20.92 moveto 
+	34.97 19.16 lineto 
+	stroke 
+	34.97 19.16 moveto 
+	34.87 19.09 lineto 
+	stroke 
+	34.87 19.09 moveto 
+	34.79 19 lineto 
+	stroke 
+	34.79 19 moveto 
+	34.73 18.89 lineto 
+	stroke 
+	34.73 18.89 moveto 
+	34.71 18.77 lineto 
+	stroke 
+	34.71 18.77 moveto 
+	34.71 18.64 lineto 
+	stroke 
+	34.71 18.64 moveto 
+	34.74 18.52 lineto 
+	stroke 
+	34.74 18.52 moveto 
+	34.81 18.42 lineto 
+	stroke 
+	34.81 18.42 moveto 
+	34.89 18.33 lineto 
+	stroke 
+	34.89 18.33 moveto 
+	35 18.27 lineto 
+	stroke 
+	35 18.27 moveto 
+	39.18 16.37 lineto 
+	stroke 
+	39.18 16.37 moveto 
+	39.25 16.33 lineto 
+	stroke 
+	39.25 16.33 moveto 
+	39.32 16.28 lineto 
+	stroke 
+	39.32 16.28 moveto 
+	39.38 16.22 lineto 
+	stroke 
+	39.38 16.22 moveto 
+	39.42 16.14 lineto 
+	stroke 
+	39.42 16.14 moveto 
+	39.46 16.07 lineto 
+	stroke 
+	39.46 16.07 moveto 
+	39.48 15.98 lineto 
+	stroke 
+	39.48 15.98 moveto 
+	39.94 13.39 lineto 
+	stroke 
+	39.94 13.39 moveto 
+	39.94 13.24 lineto 
+	stroke 
+	39.94 13.24 moveto 
+	39.91 13.10 lineto 
+	stroke 
+	39.91 13.10 moveto 
+	39.83 12.98 lineto 
+	stroke 
+	39.83 12.98 moveto 
+	39.72 12.88 lineto 
+	stroke 
+	39.72 12.88 moveto 
+	39.59 12.82 lineto 
+	stroke 
+	39.59 12.82 moveto 
+	39.45 12.80 lineto 
+	stroke 
+	39.45 12.80 moveto 
+	12.16 12.80 lineto 
+	stroke 
+	12.16 12.80 moveto 
+	12.01 12.82 lineto 
+	stroke 
+	12.01 12.82 moveto 
+	11.88 12.88 lineto 
+	stroke 
+	11.88 12.88 moveto 
+	11.77 12.98 lineto 
+	stroke 
+	11.77 12.98 moveto 
+	11.70 13.10 lineto 
+	stroke 
+	11.70 13.10 moveto 
+	11.66 13.24 lineto 
+	stroke 
+	11.66 13.24 moveto 
+	11.66 13.39 lineto 
+	stroke 
+	11.66 13.39 moveto 
+	12.12 15.98 lineto 
+	stroke 
+	12.12 15.98 moveto 
+	12.14 16.07 lineto 
+	stroke 
+	12.14 16.07 moveto 
+	12.18 16.14 lineto 
+	stroke 
+	12.18 16.14 moveto 
+	12.23 16.22 lineto 
+	stroke 
+	12.23 16.22 moveto 
+	12.29 16.28 lineto 
+	stroke 
+	12.29 16.28 moveto 
+	12.35 16.33 lineto 
+	stroke 
+	12.35 16.33 moveto 
+	12.43 16.37 lineto 
+	stroke 
+	12.43 16.37 moveto 
+	16.60 18.27 lineto 
+	stroke 
+	17.80 35.30 moveto 
+	17.80 36.85 lineto 
+	stroke 
+	17.80 36.85 moveto 
+	17.81 36.96 lineto 
+	stroke 
+	17.81 36.96 moveto 
+	17.85 37.06 lineto 
+	stroke 
+	17.85 37.06 moveto 
+	17.91 37.16 lineto 
+	stroke 
+	17.91 37.16 moveto 
+	17.98 37.24 lineto 
+	stroke 
+	17.98 37.24 moveto 
+	18.07 37.30 lineto 
+	stroke 
+	18.07 37.30 moveto 
+	18.18 37.33 lineto 
+	stroke 
+	18.18 37.33 moveto 
+	21.96 38.31 lineto 
+	stroke 
+	21.96 38.31 moveto 
+	22.30 38.41 lineto 
+	stroke 
+	22.30 38.41 moveto 
+	22.63 38.54 lineto 
+	stroke 
+	22.63 38.54 moveto 
+	22.95 38.69 lineto 
+	stroke 
+	22.95 38.69 moveto 
+	23.27 38.86 lineto 
+	stroke 
+	23.27 38.86 moveto 
+	23.56 39.06 lineto 
+	stroke 
+	23.56 39.06 moveto 
+	23.84 39.28 lineto 
+	stroke 
+	23.84 39.28 moveto 
+	24.11 39.52 lineto 
+	stroke 
+	24.11 39.52 moveto 
+	24.35 39.77 lineto 
+	stroke 
+	24.35 39.77 moveto 
+	24.58 40.05 lineto 
+	stroke 
+	24.58 40.05 moveto 
+	24.79 40.34 lineto 
+	stroke 
+	24.79 40.34 moveto 
+	24.97 40.65 lineto 
+	stroke 
+	24.97 40.65 moveto 
+	25.13 40.96 lineto 
+	stroke 
+	25.13 40.96 moveto 
+	25.27 41.29 lineto 
+	stroke 
+	25.27 41.29 moveto 
+	25.38 41.63 lineto 
+	stroke 
+	25.38 41.63 moveto 
+	25.47 41.98 lineto 
+	stroke 
+	25.47 41.98 moveto 
+	25.53 42.33 lineto 
+	stroke 
+	25.53 42.33 moveto 
+	25.56 42.68 lineto 
+	stroke 
+	25.56 42.68 moveto 
+	25.57 43.04 lineto 
+	stroke 
+	25.57 43.04 moveto 
+	25.55 43.40 lineto 
+	stroke 
+	25.55 43.40 moveto 
+	25.51 43.92 lineto 
+	stroke 
+	25.51 43.92 moveto 
+	25.48 44.45 lineto 
+	stroke 
+	25.48 44.45 moveto 
+	25.47 44.98 lineto 
+	stroke 
+	25.47 44.98 moveto 
+	25.47 45.51 lineto 
+	stroke 
+	25.47 45.51 moveto 
+	25.48 46.04 lineto 
+	stroke 
+	25.48 46.04 moveto 
+	25.51 46.56 lineto 
+	stroke 
+	25.51 46.56 moveto 
+	25.55 47.09 lineto 
+	stroke 
+	25.55 47.09 moveto 
+	25.60 47.62 lineto 
+	stroke 
+	25.60 47.62 moveto 
+	25.67 48.14 lineto 
+	stroke 
+	25.67 48.14 moveto 
+	25.75 48.67 lineto 
+	stroke 
+	25.75 48.67 moveto 
+	25.84 49.19 lineto 
+	stroke 
+	25.84 49.19 moveto 
+	25.95 49.70 lineto 
+	stroke 
+	25.95 49.70 moveto 
+	26.07 50.22 lineto 
+	stroke 
+	26.07 50.22 moveto 
+	26.20 50.73 lineto 
+	stroke 
+	26.20 50.73 moveto 
+	26.34 51.24 lineto 
+	stroke 
+	26.34 51.24 moveto 
+	26.50 51.75 lineto 
+	stroke 
+	26.50 51.75 moveto 
+	26.67 52.25 lineto 
+	stroke 
+	26.67 52.25 moveto 
+	26.85 52.74 lineto 
+	stroke 
+	26.85 52.74 moveto 
+	27.05 53.23 lineto 
+	stroke 
+	27.05 53.23 moveto 
+	27.26 53.72 lineto 
+	stroke 
+	27.26 53.72 moveto 
+	27.48 54.20 lineto 
+	stroke 
+	27.48 54.20 moveto 
+	27.71 54.68 lineto 
+	stroke 
+	27.71 54.68 moveto 
+	27.95 55.15 lineto 
+	stroke 
+	27.95 55.15 moveto 
+	28.21 55.61 lineto 
+	stroke 
+	28.21 55.61 moveto 
+	28.47 56.07 lineto 
+	stroke 
+	28.47 56.07 moveto 
+	28.75 56.52 lineto 
+	stroke 
+	28.75 56.52 moveto 
+	29.04 56.96 lineto 
+	stroke 
+	29.04 56.96 moveto 
+	29.34 57.39 lineto 
+	stroke 
+	29.34 57.39 moveto 
+	29.65 57.82 lineto 
+	stroke 
+	29.65 57.82 moveto 
+	29.83 58.07 lineto 
+	stroke 
+	29.83 58.07 moveto 
+	29.99 58.32 lineto 
+	stroke 
+	29.99 58.32 moveto 
+	30.14 58.59 lineto 
+	stroke 
+	30.14 58.59 moveto 
+	30.28 58.86 lineto 
+	stroke 
+	30.28 58.86 moveto 
+	30.41 59.13 lineto 
+	stroke 
+	30.41 59.13 moveto 
+	30.52 59.41 lineto 
+	stroke 
+	30.52 59.41 moveto 
+	30.62 59.70 lineto 
+	stroke 
+	30.62 59.70 moveto 
+	30.70 59.99 lineto 
+	stroke 
+	30.70 59.99 moveto 
+	30.77 60.29 lineto 
+	stroke 
+	30.77 60.29 moveto 
+	30.83 60.58 lineto 
+	stroke 
+	30.83 60.58 moveto 
+	30.87 60.88 lineto 
+	stroke 
+	30.87 60.88 moveto 
+	30.89 61.18 lineto 
+	stroke 
+	30.89 61.18 moveto 
+	30.91 61.49 lineto 
+	stroke 
+	30.91 61.49 moveto 
+	30.90 61.79 lineto 
+	stroke 
+	30.90 61.79 moveto 
+	30.91 61.87 lineto 
+	stroke 
+	30.91 61.87 moveto 
+	30.93 61.95 lineto 
+	stroke 
+	30.93 61.95 moveto 
+	30.96 62.03 lineto 
+	stroke 
+	30.96 62.03 moveto 
+	31 62.10 lineto 
+	stroke 
+	31 62.10 moveto 
+	31.05 62.16 lineto 
+	stroke 
+	31.05 62.16 moveto 
+	31.12 62.22 lineto 
+	stroke 
+	31.12 62.22 moveto 
+	35.97 65.60 lineto 
+	stroke 
+	35.97 65.60 moveto 
+	36.09 65.66 lineto 
+	stroke 
+	36.09 65.66 moveto 
+	36.23 65.69 lineto 
+	stroke 
+	36.23 65.69 moveto 
+	36.38 65.67 lineto 
+	stroke 
+	36.38 65.67 moveto 
+	36.51 65.62 lineto 
+	stroke 
+	36.51 65.62 moveto 
+	36.62 65.52 lineto 
+	stroke 
+	36.62 65.52 moveto 
+	36.70 65.41 lineto 
+	stroke 
+	36.70 65.41 moveto 
+	36.87 65.03 lineto 
+	stroke 
+	36.87 65.03 moveto 
+	37.02 64.65 lineto 
+	stroke 
+	37.02 64.65 moveto 
+	37.14 64.26 lineto 
+	stroke 
+	37.14 64.26 moveto 
+	37.24 63.86 lineto 
+	stroke 
+	37.24 63.86 moveto 
+	37.32 63.46 lineto 
+	stroke 
+	37.32 63.46 moveto 
+	37.37 63.05 lineto 
+	stroke 
+	37.37 63.05 moveto 
+	37.40 62.64 lineto 
+	stroke 
+	37.40 62.64 moveto 
+	37.40 62.23 lineto 
+	stroke 
+	37.40 62.23 moveto 
+	37.38 61.82 lineto 
+	stroke 
+	37.38 61.82 moveto 
+	37.33 61.41 lineto 
+	stroke 
+	37.33 61.41 moveto 
+	37.26 61 lineto 
+	stroke 
+	37.26 61 moveto 
+	37.16 60.60 lineto 
+	stroke 
+	37.16 60.60 moveto 
+	37.04 60.21 lineto 
+	stroke 
+	37.04 60.21 moveto 
+	36.90 59.83 lineto 
+	stroke 
+	36.90 59.83 moveto 
+	33.63 51.44 lineto 
+	stroke 
+	33.63 51.44 moveto 
+	33.60 51.37 lineto 
+	stroke 
+	33.60 51.37 moveto 
+	33.56 51.30 lineto 
+	stroke 
+	33.56 51.30 moveto 
+	33.50 51.25 lineto 
+	stroke 
+	33.50 51.25 moveto 
+	33.25 51.01 lineto 
+	stroke 
+	33.25 51.01 moveto 
+	33 50.77 lineto 
+	stroke 
+	33 50.77 moveto 
+	32.77 50.51 lineto 
+	stroke 
+	32.77 50.51 moveto 
+	32.54 50.25 lineto 
+	stroke 
+	32.54 50.25 moveto 
+	32.32 49.98 lineto 
+	stroke 
+	32.32 49.98 moveto 
+	32.11 49.71 lineto 
+	stroke 
+	32.11 49.71 moveto 
+	31.91 49.42 lineto 
+	stroke 
+	31.91 49.42 moveto 
+	31.72 49.13 lineto 
+	stroke 
+	31.72 49.13 moveto 
+	31.54 48.84 lineto 
+	stroke 
+	31.54 48.84 moveto 
+	31.37 48.53 lineto 
+	stroke 
+	31.37 48.53 moveto 
+	31.21 48.23 lineto 
+	stroke 
+	31.21 48.23 moveto 
+	31.06 47.91 lineto 
+	stroke 
+	31.06 47.91 moveto 
+	30.92 47.59 lineto 
+	stroke 
+	30.92 47.59 moveto 
+	30.80 47.27 lineto 
+	stroke 
+	30.80 47.27 moveto 
+	30.68 46.95 lineto 
+	stroke 
+	30.68 46.95 moveto 
+	30.57 46.62 lineto 
+	stroke 
+	30.57 46.62 moveto 
+	30.48 46.28 lineto 
+	stroke 
+	30.48 46.28 moveto 
+	30.40 45.95 lineto 
+	stroke 
+	30.40 45.95 moveto 
+	30.33 45.61 lineto 
+	stroke 
+	30.33 45.61 moveto 
+	29.76 42.64 lineto 
+	stroke 
+	29.76 42.64 moveto 
+	29.70 42.26 lineto 
+	stroke 
+	29.70 42.26 moveto 
+	29.67 41.88 lineto 
+	stroke 
+	29.67 41.88 moveto 
+	29.68 41.50 lineto 
+	stroke 
+	29.68 41.50 moveto 
+	29.72 41.11 lineto 
+	stroke 
+	29.72 41.11 moveto 
+	29.79 40.74 lineto 
+	stroke 
+	29.79 40.74 moveto 
+	29.88 40.37 lineto 
+	stroke 
+	29.88 40.37 moveto 
+	30.01 40 lineto 
+	stroke 
+	30.01 40 moveto 
+	30.17 39.65 lineto 
+	stroke 
+	30.17 39.65 moveto 
+	30.36 39.32 lineto 
+	stroke 
+	30.36 39.32 moveto 
+	30.57 39 lineto 
+	stroke 
+	30.57 39 moveto 
+	30.81 38.70 lineto 
+	stroke 
+	30.81 38.70 moveto 
+	31.07 38.42 lineto 
+	stroke 
+	31.07 38.42 moveto 
+	31.35 38.16 lineto 
+	stroke 
+	31.35 38.16 moveto 
+	31.66 37.92 lineto 
+	stroke 
+	31.66 37.92 moveto 
+	31.98 37.71 lineto 
+	stroke 
+	31.98 37.71 moveto 
+	32.32 37.53 lineto 
+	stroke 
+	32.32 37.53 moveto 
+	32.67 37.38 lineto 
+	stroke 
+	32.67 37.38 moveto 
+	33.03 37.25 lineto 
+	stroke 
+	33.03 37.25 moveto 
+	33.40 37.16 lineto 
+	stroke 
+	33.40 37.16 moveto 
+	33.51 37.12 lineto 
+	stroke 
+	33.51 37.12 moveto 
+	33.60 37.07 lineto 
+	stroke 
+	33.60 37.07 moveto 
+	33.68 37 lineto 
+	stroke 
+	33.68 37 moveto 
+	33.74 36.91 lineto 
+	stroke 
+	33.74 36.91 moveto 
+	33.78 36.81 lineto 
+	stroke 
+	33.78 36.81 moveto 
+	33.80 36.70 lineto 
+	stroke 
+	33.80 36.70 moveto 
+	33.89 35.30 lineto 
+	stroke 
+} def
+%?partend
+
+%?partdef ssJoystick005
+%?fn	ssJoystick005
+%?brief	Joystick forward, backward
+%?bbox	0 0 79 79
+/ssJoystick005 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	81 75 translate 
+	180 rotate 
+	1 1 scale 
+	gsDrive010 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Green 20 -5 translate 
+	0 rotate 
+	0.50 0.50 scale 
+	gsGeneral001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Green 60 85 translate 
+	180 rotate 
+	0.50 0.50 scale 
+	gsGeneral001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef ssJoystick006
+%?fn	ssJoystick006
+%?brief	Joystick forward
+%?bbox	0 0 79 79
+/ssJoystick006 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	81 75 translate 
+	180 rotate 
+	1 1 scale 
+	gsDrive011 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Green 72 53 translate 
+	180 rotate 
+	0.80 0.80 scale 
+	gsGeneral001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef ssJoystick002
+%?fn	ssJoystick002
+%?brief	Umschaltung Steuergerät 2
+%?bbox	0 0 79 79
+/ssJoystick002 {
+	3 setlinewidth_nlw 
+	16.60 18.27 moveto 
+	16.71 18.33 lineto 
+	stroke 
+	16.71 18.33 moveto 
+	16.80 18.42 lineto 
+	stroke 
+	16.80 18.42 moveto 
+	16.86 18.52 lineto 
+	stroke 
+	16.86 18.52 moveto 
+	16.89 18.64 lineto 
+	stroke 
+	16.89 18.64 moveto 
+	16.90 18.77 lineto 
+	stroke 
+	16.90 18.77 moveto 
+	16.87 18.89 lineto 
+	stroke 
+	16.87 18.89 moveto 
+	16.82 19 lineto 
+	stroke 
+	16.82 19 moveto 
+	16.74 19.09 lineto 
+	stroke 
+	16.74 19.09 moveto 
+	16.64 19.16 lineto 
+	stroke 
+	16.64 19.16 moveto 
+	13.37 20.92 lineto 
+	stroke 
+	13.37 20.92 moveto 
+	13.26 21 lineto 
+	stroke 
+	13.26 21 moveto 
+	13.18 21.10 lineto 
+	stroke 
+	13.18 21.10 moveto 
+	13.12 21.22 lineto 
+	stroke 
+	13.12 21.22 moveto 
+	13.09 21.34 lineto 
+	stroke 
+	13.09 21.34 moveto 
+	13.10 21.47 lineto 
+	stroke 
+	13.10 21.47 moveto 
+	13.14 21.60 lineto 
+	stroke 
+	13.14 21.60 moveto 
+	13.20 21.71 lineto 
+	stroke 
+	13.20 21.71 moveto 
+	13.29 21.81 lineto 
+	stroke 
+	13.29 21.81 moveto 
+	13.40 21.87 lineto 
+	stroke 
+	13.40 21.87 moveto 
+	17.58 23.77 lineto 
+	stroke 
+	17.58 23.77 moveto 
+	17.69 23.83 lineto 
+	stroke 
+	17.69 23.83 moveto 
+	17.77 23.92 lineto 
+	stroke 
+	17.77 23.92 moveto 
+	17.84 24.02 lineto 
+	stroke 
+	17.84 24.02 moveto 
+	17.87 24.14 lineto 
+	stroke 
+	17.87 24.14 moveto 
+	17.87 24.27 lineto 
+	stroke 
+	17.87 24.27 moveto 
+	17.85 24.39 lineto 
+	stroke 
+	17.85 24.39 moveto 
+	17.79 24.50 lineto 
+	stroke 
+	17.79 24.50 moveto 
+	17.71 24.59 lineto 
+	stroke 
+	17.71 24.59 moveto 
+	17.61 24.66 lineto 
+	stroke 
+	17.61 24.66 moveto 
+	14.35 26.42 lineto 
+	stroke 
+	14.35 26.42 moveto 
+	14.24 26.50 lineto 
+	stroke 
+	14.24 26.50 moveto 
+	14.16 26.60 lineto 
+	stroke 
+	14.16 26.60 moveto 
+	14.10 26.72 lineto 
+	stroke 
+	14.10 26.72 moveto 
+	14.07 26.84 lineto 
+	stroke 
+	14.07 26.84 moveto 
+	14.08 26.97 lineto 
+	stroke 
+	14.08 26.97 moveto 
+	14.11 27.10 lineto 
+	stroke 
+	14.11 27.10 moveto 
+	14.18 27.21 lineto 
+	stroke 
+	14.18 27.21 moveto 
+	14.27 27.31 lineto 
+	stroke 
+	14.27 27.31 moveto 
+	14.38 27.37 lineto 
+	stroke 
+	14.38 27.37 moveto 
+	18.56 29.27 lineto 
+	stroke 
+	18.56 29.27 moveto 
+	18.67 29.33 lineto 
+	stroke 
+	18.67 29.33 moveto 
+	18.75 29.42 lineto 
+	stroke 
+	18.75 29.42 moveto 
+	18.81 29.52 lineto 
+	stroke 
+	18.81 29.52 moveto 
+	18.85 29.64 lineto 
+	stroke 
+	18.85 29.64 moveto 
+	18.85 29.77 lineto 
+	stroke 
+	18.85 29.77 moveto 
+	18.83 29.89 lineto 
+	stroke 
+	18.83 29.89 moveto 
+	18.77 30 lineto 
+	stroke 
+	18.77 30 moveto 
+	18.69 30.09 lineto 
+	stroke 
+	18.69 30.09 moveto 
+	18.59 30.16 lineto 
+	stroke 
+	18.59 30.16 moveto 
+	15.33 31.92 lineto 
+	stroke 
+	15.33 31.92 moveto 
+	15.24 31.99 lineto 
+	stroke 
+	15.24 31.99 moveto 
+	15.16 32.06 lineto 
+	stroke 
+	15.16 32.06 moveto 
+	15.10 32.16 lineto 
+	stroke 
+	15.10 32.16 moveto 
+	15.06 32.26 lineto 
+	stroke 
+	15.06 32.26 moveto 
+	15.05 32.37 lineto 
+	stroke 
+	15.05 32.37 moveto 
+	15.06 32.48 lineto 
+	stroke 
+	15.06 32.48 moveto 
+	15.48 34.89 lineto 
+	stroke 
+	15.48 34.89 moveto 
+	15.52 35 lineto 
+	stroke 
+	15.52 35 moveto 
+	15.57 35.10 lineto 
+	stroke 
+	15.57 35.10 moveto 
+	15.65 35.18 lineto 
+	stroke 
+	15.65 35.18 moveto 
+	15.75 35.25 lineto 
+	stroke 
+	15.75 35.25 moveto 
+	15.86 35.29 lineto 
+	stroke 
+	15.86 35.29 moveto 
+	15.98 35.30 lineto 
+	stroke 
+	15.98 35.30 moveto 
+	35.63 35.30 lineto 
+	stroke 
+	35.63 35.30 moveto 
+	35.74 35.29 lineto 
+	stroke 
+	35.74 35.29 moveto 
+	35.85 35.25 lineto 
+	stroke 
+	35.85 35.25 moveto 
+	35.95 35.18 lineto 
+	stroke 
+	35.95 35.18 moveto 
+	36.03 35.10 lineto 
+	stroke 
+	36.03 35.10 moveto 
+	36.09 35 lineto 
+	stroke 
+	36.09 35 moveto 
+	36.12 34.89 lineto 
+	stroke 
+	36.12 34.89 moveto 
+	36.55 32.48 lineto 
+	stroke 
+	36.55 32.48 moveto 
+	36.55 32.37 lineto 
+	stroke 
+	36.55 32.37 moveto 
+	36.54 32.26 lineto 
+	stroke 
+	36.54 32.26 moveto 
+	36.50 32.16 lineto 
+	stroke 
+	36.50 32.16 moveto 
+	36.44 32.06 lineto 
+	stroke 
+	36.44 32.06 moveto 
+	36.37 31.99 lineto 
+	stroke 
+	36.37 31.99 moveto 
+	36.28 31.92 lineto 
+	stroke 
+	36.28 31.92 moveto 
+	33.01 30.16 lineto 
+	stroke 
+	33.01 30.16 moveto 
+	32.91 30.09 lineto 
+	stroke 
+	32.91 30.09 moveto 
+	32.83 30 lineto 
+	stroke 
+	32.83 30 moveto 
+	32.78 29.89 lineto 
+	stroke 
+	32.78 29.89 moveto 
+	32.75 29.77 lineto 
+	stroke 
+	32.75 29.77 moveto 
+	32.75 29.64 lineto 
+	stroke 
+	32.75 29.64 moveto 
+	32.79 29.52 lineto 
+	stroke 
+	32.79 29.52 moveto 
+	32.85 29.42 lineto 
+	stroke 
+	32.85 29.42 moveto 
+	32.94 29.33 lineto 
+	stroke 
+	32.94 29.33 moveto 
+	33.04 29.27 lineto 
+	stroke 
+	33.04 29.27 moveto 
+	37.22 27.37 lineto 
+	stroke 
+	37.22 27.37 moveto 
+	37.33 27.31 lineto 
+	stroke 
+	37.33 27.31 moveto 
+	37.42 27.21 lineto 
+	stroke 
+	37.42 27.21 moveto 
+	37.49 27.10 lineto 
+	stroke 
+	37.49 27.10 moveto 
+	37.53 26.97 lineto 
+	stroke 
+	37.53 26.97 moveto 
+	37.53 26.84 lineto 
+	stroke 
+	37.53 26.84 moveto 
+	37.50 26.72 lineto 
+	stroke 
+	37.50 26.72 moveto 
+	37.45 26.60 lineto 
+	stroke 
+	37.45 26.60 moveto 
+	37.36 26.50 lineto 
+	stroke 
+	37.36 26.50 moveto 
+	37.25 26.42 lineto 
+	stroke 
+	37.25 26.42 moveto 
+	33.99 24.66 lineto 
+	stroke 
+	33.99 24.66 moveto 
+	33.89 24.59 lineto 
+	stroke 
+	33.89 24.59 moveto 
+	33.81 24.50 lineto 
+	stroke 
+	33.81 24.50 moveto 
+	33.75 24.39 lineto 
+	stroke 
+	33.75 24.39 moveto 
+	33.73 24.27 lineto 
+	stroke 
+	33.73 24.27 moveto 
+	33.73 24.14 lineto 
+	stroke 
+	33.73 24.14 moveto 
+	33.77 24.02 lineto 
+	stroke 
+	33.77 24.02 moveto 
+	33.83 23.92 lineto 
+	stroke 
+	33.83 23.92 moveto 
+	33.92 23.83 lineto 
+	stroke 
+	33.92 23.83 moveto 
+	34.02 23.77 lineto 
+	stroke 
+	34.02 23.77 moveto 
+	38.20 21.87 lineto 
+	stroke 
+	38.20 21.87 moveto 
+	38.31 21.81 lineto 
+	stroke 
+	38.31 21.81 moveto 
+	38.40 21.71 lineto 
+	stroke 
+	38.40 21.71 moveto 
+	38.47 21.60 lineto 
+	stroke 
+	38.47 21.60 moveto 
+	38.50 21.47 lineto 
+	stroke 
+	38.50 21.47 moveto 
+	38.51 21.34 lineto 
+	stroke 
+	38.51 21.34 moveto 
+	38.48 21.22 lineto 
+	stroke 
+	38.48 21.22 moveto 
+	38.42 21.10 lineto 
+	stroke 
+	38.42 21.10 moveto 
+	38.34 21 lineto 
+	stroke 
+	38.34 21 moveto 
+	38.23 20.92 lineto 
+	stroke 
+	38.23 20.92 moveto 
+	34.97 19.16 lineto 
+	stroke 
+	34.97 19.16 moveto 
+	34.87 19.09 lineto 
+	stroke 
+	34.87 19.09 moveto 
+	34.79 19 lineto 
+	stroke 
+	34.79 19 moveto 
+	34.73 18.89 lineto 
+	stroke 
+	34.73 18.89 moveto 
+	34.71 18.77 lineto 
+	stroke 
+	34.71 18.77 moveto 
+	34.71 18.64 lineto 
+	stroke 
+	34.71 18.64 moveto 
+	34.74 18.52 lineto 
+	stroke 
+	34.74 18.52 moveto 
+	34.81 18.42 lineto 
+	stroke 
+	34.81 18.42 moveto 
+	34.89 18.33 lineto 
+	stroke 
+	34.89 18.33 moveto 
+	35 18.27 lineto 
+	stroke 
+	35 18.27 moveto 
+	39.18 16.37 lineto 
+	stroke 
+	39.18 16.37 moveto 
+	39.25 16.33 lineto 
+	stroke 
+	39.25 16.33 moveto 
+	39.32 16.28 lineto 
+	stroke 
+	39.32 16.28 moveto 
+	39.38 16.22 lineto 
+	stroke 
+	39.38 16.22 moveto 
+	39.42 16.14 lineto 
+	stroke 
+	39.42 16.14 moveto 
+	39.46 16.07 lineto 
+	stroke 
+	39.46 16.07 moveto 
+	39.48 15.98 lineto 
+	stroke 
+	39.48 15.98 moveto 
+	39.94 13.39 lineto 
+	stroke 
+	39.94 13.39 moveto 
+	39.94 13.24 lineto 
+	stroke 
+	39.94 13.24 moveto 
+	39.91 13.10 lineto 
+	stroke 
+	39.91 13.10 moveto 
+	39.83 12.98 lineto 
+	stroke 
+	39.83 12.98 moveto 
+	39.72 12.88 lineto 
+	stroke 
+	39.72 12.88 moveto 
+	39.59 12.82 lineto 
+	stroke 
+	39.59 12.82 moveto 
+	39.45 12.80 lineto 
+	stroke 
+	39.45 12.80 moveto 
+	12.16 12.80 lineto 
+	stroke 
+	12.16 12.80 moveto 
+	12.01 12.82 lineto 
+	stroke 
+	12.01 12.82 moveto 
+	11.88 12.88 lineto 
+	stroke 
+	11.88 12.88 moveto 
+	11.77 12.98 lineto 
+	stroke 
+	11.77 12.98 moveto 
+	11.70 13.10 lineto 
+	stroke 
+	11.70 13.10 moveto 
+	11.66 13.24 lineto 
+	stroke 
+	11.66 13.24 moveto 
+	11.66 13.39 lineto 
+	stroke 
+	11.66 13.39 moveto 
+	12.12 15.98 lineto 
+	stroke 
+	12.12 15.98 moveto 
+	12.14 16.07 lineto 
+	stroke 
+	12.14 16.07 moveto 
+	12.18 16.14 lineto 
+	stroke 
+	12.18 16.14 moveto 
+	12.23 16.22 lineto 
+	stroke 
+	12.23 16.22 moveto 
+	12.29 16.28 lineto 
+	stroke 
+	12.29 16.28 moveto 
+	12.35 16.33 lineto 
+	stroke 
+	12.35 16.33 moveto 
+	12.43 16.37 lineto 
+	stroke 
+	12.43 16.37 moveto 
+	16.60 18.27 lineto 
+	stroke 
+	17.80 35.30 moveto 
+	17.80 36.85 lineto 
+	stroke 
+	17.80 36.85 moveto 
+	17.81 36.96 lineto 
+	stroke 
+	17.81 36.96 moveto 
+	17.85 37.06 lineto 
+	stroke 
+	17.85 37.06 moveto 
+	17.91 37.16 lineto 
+	stroke 
+	17.91 37.16 moveto 
+	17.98 37.24 lineto 
+	stroke 
+	17.98 37.24 moveto 
+	18.07 37.30 lineto 
+	stroke 
+	18.07 37.30 moveto 
+	18.18 37.33 lineto 
+	stroke 
+	18.18 37.33 moveto 
+	21.96 38.31 lineto 
+	stroke 
+	21.96 38.31 moveto 
+	22.30 38.41 lineto 
+	stroke 
+	22.30 38.41 moveto 
+	22.63 38.54 lineto 
+	stroke 
+	22.63 38.54 moveto 
+	22.95 38.69 lineto 
+	stroke 
+	22.95 38.69 moveto 
+	23.27 38.86 lineto 
+	stroke 
+	23.27 38.86 moveto 
+	23.56 39.06 lineto 
+	stroke 
+	23.56 39.06 moveto 
+	23.84 39.28 lineto 
+	stroke 
+	23.84 39.28 moveto 
+	24.11 39.52 lineto 
+	stroke 
+	24.11 39.52 moveto 
+	24.35 39.77 lineto 
+	stroke 
+	24.35 39.77 moveto 
+	24.58 40.05 lineto 
+	stroke 
+	24.58 40.05 moveto 
+	24.79 40.34 lineto 
+	stroke 
+	24.79 40.34 moveto 
+	24.97 40.65 lineto 
+	stroke 
+	24.97 40.65 moveto 
+	25.13 40.96 lineto 
+	stroke 
+	25.13 40.96 moveto 
+	25.27 41.29 lineto 
+	stroke 
+	25.27 41.29 moveto 
+	25.38 41.63 lineto 
+	stroke 
+	25.38 41.63 moveto 
+	25.47 41.98 lineto 
+	stroke 
+	25.47 41.98 moveto 
+	25.53 42.33 lineto 
+	stroke 
+	25.53 42.33 moveto 
+	25.56 42.68 lineto 
+	stroke 
+	25.56 42.68 moveto 
+	25.57 43.04 lineto 
+	stroke 
+	25.57 43.04 moveto 
+	25.55 43.40 lineto 
+	stroke 
+	25.55 43.40 moveto 
+	25.51 43.92 lineto 
+	stroke 
+	25.51 43.92 moveto 
+	25.48 44.45 lineto 
+	stroke 
+	25.48 44.45 moveto 
+	25.47 44.98 lineto 
+	stroke 
+	25.47 44.98 moveto 
+	25.47 45.51 lineto 
+	stroke 
+	25.47 45.51 moveto 
+	25.48 46.04 lineto 
+	stroke 
+	25.48 46.04 moveto 
+	25.51 46.56 lineto 
+	stroke 
+	25.51 46.56 moveto 
+	25.55 47.09 lineto 
+	stroke 
+	25.55 47.09 moveto 
+	25.60 47.62 lineto 
+	stroke 
+	25.60 47.62 moveto 
+	25.67 48.14 lineto 
+	stroke 
+	25.67 48.14 moveto 
+	25.75 48.67 lineto 
+	stroke 
+	25.75 48.67 moveto 
+	25.84 49.19 lineto 
+	stroke 
+	25.84 49.19 moveto 
+	25.95 49.70 lineto 
+	stroke 
+	25.95 49.70 moveto 
+	26.07 50.22 lineto 
+	stroke 
+	26.07 50.22 moveto 
+	26.20 50.73 lineto 
+	stroke 
+	26.20 50.73 moveto 
+	26.34 51.24 lineto 
+	stroke 
+	26.34 51.24 moveto 
+	26.50 51.75 lineto 
+	stroke 
+	26.50 51.75 moveto 
+	26.67 52.25 lineto 
+	stroke 
+	26.67 52.25 moveto 
+	26.85 52.74 lineto 
+	stroke 
+	26.85 52.74 moveto 
+	27.05 53.23 lineto 
+	stroke 
+	27.05 53.23 moveto 
+	27.26 53.72 lineto 
+	stroke 
+	27.26 53.72 moveto 
+	27.48 54.20 lineto 
+	stroke 
+	27.48 54.20 moveto 
+	27.71 54.68 lineto 
+	stroke 
+	27.71 54.68 moveto 
+	27.95 55.15 lineto 
+	stroke 
+	27.95 55.15 moveto 
+	28.21 55.61 lineto 
+	stroke 
+	28.21 55.61 moveto 
+	28.47 56.07 lineto 
+	stroke 
+	28.47 56.07 moveto 
+	28.75 56.52 lineto 
+	stroke 
+	28.75 56.52 moveto 
+	29.04 56.96 lineto 
+	stroke 
+	29.04 56.96 moveto 
+	29.34 57.39 lineto 
+	stroke 
+	29.34 57.39 moveto 
+	29.65 57.82 lineto 
+	stroke 
+	29.65 57.82 moveto 
+	29.83 58.07 lineto 
+	stroke 
+	29.83 58.07 moveto 
+	29.99 58.32 lineto 
+	stroke 
+	29.99 58.32 moveto 
+	30.14 58.59 lineto 
+	stroke 
+	30.14 58.59 moveto 
+	30.28 58.86 lineto 
+	stroke 
+	30.28 58.86 moveto 
+	30.41 59.13 lineto 
+	stroke 
+	30.41 59.13 moveto 
+	30.52 59.41 lineto 
+	stroke 
+	30.52 59.41 moveto 
+	30.62 59.70 lineto 
+	stroke 
+	30.62 59.70 moveto 
+	30.70 59.99 lineto 
+	stroke 
+	30.70 59.99 moveto 
+	30.77 60.29 lineto 
+	stroke 
+	30.77 60.29 moveto 
+	30.83 60.58 lineto 
+	stroke 
+	30.83 60.58 moveto 
+	30.87 60.88 lineto 
+	stroke 
+	30.87 60.88 moveto 
+	30.89 61.18 lineto 
+	stroke 
+	30.89 61.18 moveto 
+	30.91 61.49 lineto 
+	stroke 
+	30.91 61.49 moveto 
+	30.90 61.79 lineto 
+	stroke 
+	30.90 61.79 moveto 
+	30.91 61.87 lineto 
+	stroke 
+	30.91 61.87 moveto 
+	30.93 61.95 lineto 
+	stroke 
+	30.93 61.95 moveto 
+	30.96 62.03 lineto 
+	stroke 
+	30.96 62.03 moveto 
+	31 62.10 lineto 
+	stroke 
+	31 62.10 moveto 
+	31.05 62.16 lineto 
+	stroke 
+	31.05 62.16 moveto 
+	31.12 62.22 lineto 
+	stroke 
+	31.12 62.22 moveto 
+	35.97 65.60 lineto 
+	stroke 
+	35.97 65.60 moveto 
+	36.09 65.66 lineto 
+	stroke 
+	36.09 65.66 moveto 
+	36.23 65.69 lineto 
+	stroke 
+	36.23 65.69 moveto 
+	36.38 65.67 lineto 
+	stroke 
+	36.38 65.67 moveto 
+	36.51 65.62 lineto 
+	stroke 
+	36.51 65.62 moveto 
+	36.62 65.52 lineto 
+	stroke 
+	36.62 65.52 moveto 
+	36.70 65.41 lineto 
+	stroke 
+	36.70 65.41 moveto 
+	36.87 65.03 lineto 
+	stroke 
+	36.87 65.03 moveto 
+	37.02 64.65 lineto 
+	stroke 
+	37.02 64.65 moveto 
+	37.14 64.26 lineto 
+	stroke 
+	37.14 64.26 moveto 
+	37.24 63.86 lineto 
+	stroke 
+	37.24 63.86 moveto 
+	37.32 63.46 lineto 
+	stroke 
+	37.32 63.46 moveto 
+	37.37 63.05 lineto 
+	stroke 
+	37.37 63.05 moveto 
+	37.40 62.64 lineto 
+	stroke 
+	37.40 62.64 moveto 
+	37.40 62.23 lineto 
+	stroke 
+	37.40 62.23 moveto 
+	37.38 61.82 lineto 
+	stroke 
+	37.38 61.82 moveto 
+	37.33 61.41 lineto 
+	stroke 
+	37.33 61.41 moveto 
+	37.26 61 lineto 
+	stroke 
+	37.26 61 moveto 
+	37.16 60.60 lineto 
+	stroke 
+	37.16 60.60 moveto 
+	37.04 60.21 lineto 
+	stroke 
+	37.04 60.21 moveto 
+	36.90 59.83 lineto 
+	stroke 
+	36.90 59.83 moveto 
+	33.63 51.44 lineto 
+	stroke 
+	33.63 51.44 moveto 
+	33.60 51.37 lineto 
+	stroke 
+	33.60 51.37 moveto 
+	33.56 51.30 lineto 
+	stroke 
+	33.56 51.30 moveto 
+	33.50 51.25 lineto 
+	stroke 
+	33.50 51.25 moveto 
+	33.25 51.01 lineto 
+	stroke 
+	33.25 51.01 moveto 
+	33 50.77 lineto 
+	stroke 
+	33 50.77 moveto 
+	32.77 50.51 lineto 
+	stroke 
+	32.77 50.51 moveto 
+	32.54 50.25 lineto 
+	stroke 
+	32.54 50.25 moveto 
+	32.32 49.98 lineto 
+	stroke 
+	32.32 49.98 moveto 
+	32.11 49.71 lineto 
+	stroke 
+	32.11 49.71 moveto 
+	31.91 49.42 lineto 
+	stroke 
+	31.91 49.42 moveto 
+	31.72 49.13 lineto 
+	stroke 
+	31.72 49.13 moveto 
+	31.54 48.84 lineto 
+	stroke 
+	31.54 48.84 moveto 
+	31.37 48.53 lineto 
+	stroke 
+	31.37 48.53 moveto 
+	31.21 48.23 lineto 
+	stroke 
+	31.21 48.23 moveto 
+	31.06 47.91 lineto 
+	stroke 
+	31.06 47.91 moveto 
+	30.92 47.59 lineto 
+	stroke 
+	30.92 47.59 moveto 
+	30.80 47.27 lineto 
+	stroke 
+	30.80 47.27 moveto 
+	30.68 46.95 lineto 
+	stroke 
+	30.68 46.95 moveto 
+	30.57 46.62 lineto 
+	stroke 
+	30.57 46.62 moveto 
+	30.48 46.28 lineto 
+	stroke 
+	30.48 46.28 moveto 
+	30.40 45.95 lineto 
+	stroke 
+	30.40 45.95 moveto 
+	30.33 45.61 lineto 
+	stroke 
+	30.33 45.61 moveto 
+	29.76 42.64 lineto 
+	stroke 
+	29.76 42.64 moveto 
+	29.70 42.26 lineto 
+	stroke 
+	29.70 42.26 moveto 
+	29.67 41.88 lineto 
+	stroke 
+	29.67 41.88 moveto 
+	29.68 41.50 lineto 
+	stroke 
+	29.68 41.50 moveto 
+	29.72 41.11 lineto 
+	stroke 
+	29.72 41.11 moveto 
+	29.79 40.74 lineto 
+	stroke 
+	29.79 40.74 moveto 
+	29.88 40.37 lineto 
+	stroke 
+	29.88 40.37 moveto 
+	30.01 40 lineto 
+	stroke 
+	30.01 40 moveto 
+	30.17 39.65 lineto 
+	stroke 
+	30.17 39.65 moveto 
+	30.36 39.32 lineto 
+	stroke 
+	30.36 39.32 moveto 
+	30.57 39 lineto 
+	stroke 
+	30.57 39 moveto 
+	30.81 38.70 lineto 
+	stroke 
+	30.81 38.70 moveto 
+	31.07 38.42 lineto 
+	stroke 
+	31.07 38.42 moveto 
+	31.35 38.16 lineto 
+	stroke 
+	31.35 38.16 moveto 
+	31.66 37.92 lineto 
+	stroke 
+	31.66 37.92 moveto 
+	31.98 37.71 lineto 
+	stroke 
+	31.98 37.71 moveto 
+	32.32 37.53 lineto 
+	stroke 
+	32.32 37.53 moveto 
+	32.67 37.38 lineto 
+	stroke 
+	32.67 37.38 moveto 
+	33.03 37.25 lineto 
+	stroke 
+	33.03 37.25 moveto 
+	33.40 37.16 lineto 
+	stroke 
+	33.40 37.16 moveto 
+	33.51 37.12 lineto 
+	stroke 
+	33.51 37.12 moveto 
+	33.60 37.07 lineto 
+	stroke 
+	33.60 37.07 moveto 
+	33.68 37 lineto 
+	stroke 
+	33.68 37 moveto 
+	33.74 36.91 lineto 
+	stroke 
+	33.74 36.91 moveto 
+	33.78 36.81 lineto 
+	stroke 
+	33.78 36.81 moveto 
+	33.80 36.70 lineto 
+	stroke 
+	33.80 36.70 moveto 
+	33.89 35.30 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	56 54 moveto 
+	FatFont 
+	(2) 
+	show_utf8 
+} def
+%?partend
+
+%?partdef ssJoystick003
+%?fn	ssJoystick003
+%?brief	Umschaltung Steuergerät 1 und 2
+%?bbox	0 0 79 79
+/ssJoystick003 {
+	3 setlinewidth_nlw 
+	16.60 18.27 moveto 
+	16.71 18.33 lineto 
+	stroke 
+	16.71 18.33 moveto 
+	16.80 18.42 lineto 
+	stroke 
+	16.80 18.42 moveto 
+	16.86 18.52 lineto 
+	stroke 
+	16.86 18.52 moveto 
+	16.89 18.64 lineto 
+	stroke 
+	16.89 18.64 moveto 
+	16.90 18.77 lineto 
+	stroke 
+	16.90 18.77 moveto 
+	16.87 18.89 lineto 
+	stroke 
+	16.87 18.89 moveto 
+	16.82 19 lineto 
+	stroke 
+	16.82 19 moveto 
+	16.74 19.09 lineto 
+	stroke 
+	16.74 19.09 moveto 
+	16.64 19.16 lineto 
+	stroke 
+	16.64 19.16 moveto 
+	13.37 20.92 lineto 
+	stroke 
+	13.37 20.92 moveto 
+	13.26 21 lineto 
+	stroke 
+	13.26 21 moveto 
+	13.18 21.10 lineto 
+	stroke 
+	13.18 21.10 moveto 
+	13.12 21.22 lineto 
+	stroke 
+	13.12 21.22 moveto 
+	13.09 21.34 lineto 
+	stroke 
+	13.09 21.34 moveto 
+	13.10 21.47 lineto 
+	stroke 
+	13.10 21.47 moveto 
+	13.14 21.60 lineto 
+	stroke 
+	13.14 21.60 moveto 
+	13.20 21.71 lineto 
+	stroke 
+	13.20 21.71 moveto 
+	13.29 21.81 lineto 
+	stroke 
+	13.29 21.81 moveto 
+	13.40 21.87 lineto 
+	stroke 
+	13.40 21.87 moveto 
+	17.58 23.77 lineto 
+	stroke 
+	17.58 23.77 moveto 
+	17.69 23.83 lineto 
+	stroke 
+	17.69 23.83 moveto 
+	17.77 23.92 lineto 
+	stroke 
+	17.77 23.92 moveto 
+	17.84 24.02 lineto 
+	stroke 
+	17.84 24.02 moveto 
+	17.87 24.14 lineto 
+	stroke 
+	17.87 24.14 moveto 
+	17.87 24.27 lineto 
+	stroke 
+	17.87 24.27 moveto 
+	17.85 24.39 lineto 
+	stroke 
+	17.85 24.39 moveto 
+	17.79 24.50 lineto 
+	stroke 
+	17.79 24.50 moveto 
+	17.71 24.59 lineto 
+	stroke 
+	17.71 24.59 moveto 
+	17.61 24.66 lineto 
+	stroke 
+	17.61 24.66 moveto 
+	14.35 26.42 lineto 
+	stroke 
+	14.35 26.42 moveto 
+	14.24 26.50 lineto 
+	stroke 
+	14.24 26.50 moveto 
+	14.16 26.60 lineto 
+	stroke 
+	14.16 26.60 moveto 
+	14.10 26.72 lineto 
+	stroke 
+	14.10 26.72 moveto 
+	14.07 26.84 lineto 
+	stroke 
+	14.07 26.84 moveto 
+	14.08 26.97 lineto 
+	stroke 
+	14.08 26.97 moveto 
+	14.11 27.10 lineto 
+	stroke 
+	14.11 27.10 moveto 
+	14.18 27.21 lineto 
+	stroke 
+	14.18 27.21 moveto 
+	14.27 27.31 lineto 
+	stroke 
+	14.27 27.31 moveto 
+	14.38 27.37 lineto 
+	stroke 
+	14.38 27.37 moveto 
+	18.56 29.27 lineto 
+	stroke 
+	18.56 29.27 moveto 
+	18.67 29.33 lineto 
+	stroke 
+	18.67 29.33 moveto 
+	18.75 29.42 lineto 
+	stroke 
+	18.75 29.42 moveto 
+	18.81 29.52 lineto 
+	stroke 
+	18.81 29.52 moveto 
+	18.85 29.64 lineto 
+	stroke 
+	18.85 29.64 moveto 
+	18.85 29.77 lineto 
+	stroke 
+	18.85 29.77 moveto 
+	18.83 29.89 lineto 
+	stroke 
+	18.83 29.89 moveto 
+	18.77 30 lineto 
+	stroke 
+	18.77 30 moveto 
+	18.69 30.09 lineto 
+	stroke 
+	18.69 30.09 moveto 
+	18.59 30.16 lineto 
+	stroke 
+	18.59 30.16 moveto 
+	15.33 31.92 lineto 
+	stroke 
+	15.33 31.92 moveto 
+	15.24 31.99 lineto 
+	stroke 
+	15.24 31.99 moveto 
+	15.16 32.06 lineto 
+	stroke 
+	15.16 32.06 moveto 
+	15.10 32.16 lineto 
+	stroke 
+	15.10 32.16 moveto 
+	15.06 32.26 lineto 
+	stroke 
+	15.06 32.26 moveto 
+	15.05 32.37 lineto 
+	stroke 
+	15.05 32.37 moveto 
+	15.06 32.48 lineto 
+	stroke 
+	15.06 32.48 moveto 
+	15.48 34.89 lineto 
+	stroke 
+	15.48 34.89 moveto 
+	15.52 35 lineto 
+	stroke 
+	15.52 35 moveto 
+	15.57 35.10 lineto 
+	stroke 
+	15.57 35.10 moveto 
+	15.65 35.18 lineto 
+	stroke 
+	15.65 35.18 moveto 
+	15.75 35.25 lineto 
+	stroke 
+	15.75 35.25 moveto 
+	15.86 35.29 lineto 
+	stroke 
+	15.86 35.29 moveto 
+	15.98 35.30 lineto 
+	stroke 
+	15.98 35.30 moveto 
+	35.63 35.30 lineto 
+	stroke 
+	35.63 35.30 moveto 
+	35.74 35.29 lineto 
+	stroke 
+	35.74 35.29 moveto 
+	35.85 35.25 lineto 
+	stroke 
+	35.85 35.25 moveto 
+	35.95 35.18 lineto 
+	stroke 
+	35.95 35.18 moveto 
+	36.03 35.10 lineto 
+	stroke 
+	36.03 35.10 moveto 
+	36.09 35 lineto 
+	stroke 
+	36.09 35 moveto 
+	36.12 34.89 lineto 
+	stroke 
+	36.12 34.89 moveto 
+	36.55 32.48 lineto 
+	stroke 
+	36.55 32.48 moveto 
+	36.55 32.37 lineto 
+	stroke 
+	36.55 32.37 moveto 
+	36.54 32.26 lineto 
+	stroke 
+	36.54 32.26 moveto 
+	36.50 32.16 lineto 
+	stroke 
+	36.50 32.16 moveto 
+	36.44 32.06 lineto 
+	stroke 
+	36.44 32.06 moveto 
+	36.37 31.99 lineto 
+	stroke 
+	36.37 31.99 moveto 
+	36.28 31.92 lineto 
+	stroke 
+	36.28 31.92 moveto 
+	33.01 30.16 lineto 
+	stroke 
+	33.01 30.16 moveto 
+	32.91 30.09 lineto 
+	stroke 
+	32.91 30.09 moveto 
+	32.83 30 lineto 
+	stroke 
+	32.83 30 moveto 
+	32.78 29.89 lineto 
+	stroke 
+	32.78 29.89 moveto 
+	32.75 29.77 lineto 
+	stroke 
+	32.75 29.77 moveto 
+	32.75 29.64 lineto 
+	stroke 
+	32.75 29.64 moveto 
+	32.79 29.52 lineto 
+	stroke 
+	32.79 29.52 moveto 
+	32.85 29.42 lineto 
+	stroke 
+	32.85 29.42 moveto 
+	32.94 29.33 lineto 
+	stroke 
+	32.94 29.33 moveto 
+	33.04 29.27 lineto 
+	stroke 
+	33.04 29.27 moveto 
+	37.22 27.37 lineto 
+	stroke 
+	37.22 27.37 moveto 
+	37.33 27.31 lineto 
+	stroke 
+	37.33 27.31 moveto 
+	37.42 27.21 lineto 
+	stroke 
+	37.42 27.21 moveto 
+	37.49 27.10 lineto 
+	stroke 
+	37.49 27.10 moveto 
+	37.53 26.97 lineto 
+	stroke 
+	37.53 26.97 moveto 
+	37.53 26.84 lineto 
+	stroke 
+	37.53 26.84 moveto 
+	37.50 26.72 lineto 
+	stroke 
+	37.50 26.72 moveto 
+	37.45 26.60 lineto 
+	stroke 
+	37.45 26.60 moveto 
+	37.36 26.50 lineto 
+	stroke 
+	37.36 26.50 moveto 
+	37.25 26.42 lineto 
+	stroke 
+	37.25 26.42 moveto 
+	33.99 24.66 lineto 
+	stroke 
+	33.99 24.66 moveto 
+	33.89 24.59 lineto 
+	stroke 
+	33.89 24.59 moveto 
+	33.81 24.50 lineto 
+	stroke 
+	33.81 24.50 moveto 
+	33.75 24.39 lineto 
+	stroke 
+	33.75 24.39 moveto 
+	33.73 24.27 lineto 
+	stroke 
+	33.73 24.27 moveto 
+	33.73 24.14 lineto 
+	stroke 
+	33.73 24.14 moveto 
+	33.77 24.02 lineto 
+	stroke 
+	33.77 24.02 moveto 
+	33.83 23.92 lineto 
+	stroke 
+	33.83 23.92 moveto 
+	33.92 23.83 lineto 
+	stroke 
+	33.92 23.83 moveto 
+	34.02 23.77 lineto 
+	stroke 
+	34.02 23.77 moveto 
+	38.20 21.87 lineto 
+	stroke 
+	38.20 21.87 moveto 
+	38.31 21.81 lineto 
+	stroke 
+	38.31 21.81 moveto 
+	38.40 21.71 lineto 
+	stroke 
+	38.40 21.71 moveto 
+	38.47 21.60 lineto 
+	stroke 
+	38.47 21.60 moveto 
+	38.50 21.47 lineto 
+	stroke 
+	38.50 21.47 moveto 
+	38.51 21.34 lineto 
+	stroke 
+	38.51 21.34 moveto 
+	38.48 21.22 lineto 
+	stroke 
+	38.48 21.22 moveto 
+	38.42 21.10 lineto 
+	stroke 
+	38.42 21.10 moveto 
+	38.34 21 lineto 
+	stroke 
+	38.34 21 moveto 
+	38.23 20.92 lineto 
+	stroke 
+	38.23 20.92 moveto 
+	34.97 19.16 lineto 
+	stroke 
+	34.97 19.16 moveto 
+	34.87 19.09 lineto 
+	stroke 
+	34.87 19.09 moveto 
+	34.79 19 lineto 
+	stroke 
+	34.79 19 moveto 
+	34.73 18.89 lineto 
+	stroke 
+	34.73 18.89 moveto 
+	34.71 18.77 lineto 
+	stroke 
+	34.71 18.77 moveto 
+	34.71 18.64 lineto 
+	stroke 
+	34.71 18.64 moveto 
+	34.74 18.52 lineto 
+	stroke 
+	34.74 18.52 moveto 
+	34.81 18.42 lineto 
+	stroke 
+	34.81 18.42 moveto 
+	34.89 18.33 lineto 
+	stroke 
+	34.89 18.33 moveto 
+	35 18.27 lineto 
+	stroke 
+	35 18.27 moveto 
+	39.18 16.37 lineto 
+	stroke 
+	39.18 16.37 moveto 
+	39.25 16.33 lineto 
+	stroke 
+	39.25 16.33 moveto 
+	39.32 16.28 lineto 
+	stroke 
+	39.32 16.28 moveto 
+	39.38 16.22 lineto 
+	stroke 
+	39.38 16.22 moveto 
+	39.42 16.14 lineto 
+	stroke 
+	39.42 16.14 moveto 
+	39.46 16.07 lineto 
+	stroke 
+	39.46 16.07 moveto 
+	39.48 15.98 lineto 
+	stroke 
+	39.48 15.98 moveto 
+	39.94 13.39 lineto 
+	stroke 
+	39.94 13.39 moveto 
+	39.94 13.24 lineto 
+	stroke 
+	39.94 13.24 moveto 
+	39.91 13.10 lineto 
+	stroke 
+	39.91 13.10 moveto 
+	39.83 12.98 lineto 
+	stroke 
+	39.83 12.98 moveto 
+	39.72 12.88 lineto 
+	stroke 
+	39.72 12.88 moveto 
+	39.59 12.82 lineto 
+	stroke 
+	39.59 12.82 moveto 
+	39.45 12.80 lineto 
+	stroke 
+	39.45 12.80 moveto 
+	12.16 12.80 lineto 
+	stroke 
+	12.16 12.80 moveto 
+	12.01 12.82 lineto 
+	stroke 
+	12.01 12.82 moveto 
+	11.88 12.88 lineto 
+	stroke 
+	11.88 12.88 moveto 
+	11.77 12.98 lineto 
+	stroke 
+	11.77 12.98 moveto 
+	11.70 13.10 lineto 
+	stroke 
+	11.70 13.10 moveto 
+	11.66 13.24 lineto 
+	stroke 
+	11.66 13.24 moveto 
+	11.66 13.39 lineto 
+	stroke 
+	11.66 13.39 moveto 
+	12.12 15.98 lineto 
+	stroke 
+	12.12 15.98 moveto 
+	12.14 16.07 lineto 
+	stroke 
+	12.14 16.07 moveto 
+	12.18 16.14 lineto 
+	stroke 
+	12.18 16.14 moveto 
+	12.23 16.22 lineto 
+	stroke 
+	12.23 16.22 moveto 
+	12.29 16.28 lineto 
+	stroke 
+	12.29 16.28 moveto 
+	12.35 16.33 lineto 
+	stroke 
+	12.35 16.33 moveto 
+	12.43 16.37 lineto 
+	stroke 
+	12.43 16.37 moveto 
+	16.60 18.27 lineto 
+	stroke 
+	17.80 35.30 moveto 
+	17.80 36.85 lineto 
+	stroke 
+	17.80 36.85 moveto 
+	17.81 36.96 lineto 
+	stroke 
+	17.81 36.96 moveto 
+	17.85 37.06 lineto 
+	stroke 
+	17.85 37.06 moveto 
+	17.91 37.16 lineto 
+	stroke 
+	17.91 37.16 moveto 
+	17.98 37.24 lineto 
+	stroke 
+	17.98 37.24 moveto 
+	18.07 37.30 lineto 
+	stroke 
+	18.07 37.30 moveto 
+	18.18 37.33 lineto 
+	stroke 
+	18.18 37.33 moveto 
+	21.96 38.31 lineto 
+	stroke 
+	21.96 38.31 moveto 
+	22.30 38.41 lineto 
+	stroke 
+	22.30 38.41 moveto 
+	22.63 38.54 lineto 
+	stroke 
+	22.63 38.54 moveto 
+	22.95 38.69 lineto 
+	stroke 
+	22.95 38.69 moveto 
+	23.27 38.86 lineto 
+	stroke 
+	23.27 38.86 moveto 
+	23.56 39.06 lineto 
+	stroke 
+	23.56 39.06 moveto 
+	23.84 39.28 lineto 
+	stroke 
+	23.84 39.28 moveto 
+	24.11 39.52 lineto 
+	stroke 
+	24.11 39.52 moveto 
+	24.35 39.77 lineto 
+	stroke 
+	24.35 39.77 moveto 
+	24.58 40.05 lineto 
+	stroke 
+	24.58 40.05 moveto 
+	24.79 40.34 lineto 
+	stroke 
+	24.79 40.34 moveto 
+	24.97 40.65 lineto 
+	stroke 
+	24.97 40.65 moveto 
+	25.13 40.96 lineto 
+	stroke 
+	25.13 40.96 moveto 
+	25.27 41.29 lineto 
+	stroke 
+	25.27 41.29 moveto 
+	25.38 41.63 lineto 
+	stroke 
+	25.38 41.63 moveto 
+	25.47 41.98 lineto 
+	stroke 
+	25.47 41.98 moveto 
+	25.53 42.33 lineto 
+	stroke 
+	25.53 42.33 moveto 
+	25.56 42.68 lineto 
+	stroke 
+	25.56 42.68 moveto 
+	25.57 43.04 lineto 
+	stroke 
+	25.57 43.04 moveto 
+	25.55 43.40 lineto 
+	stroke 
+	25.55 43.40 moveto 
+	25.51 43.92 lineto 
+	stroke 
+	25.51 43.92 moveto 
+	25.48 44.45 lineto 
+	stroke 
+	25.48 44.45 moveto 
+	25.47 44.98 lineto 
+	stroke 
+	25.47 44.98 moveto 
+	25.47 45.51 lineto 
+	stroke 
+	25.47 45.51 moveto 
+	25.48 46.04 lineto 
+	stroke 
+	25.48 46.04 moveto 
+	25.51 46.56 lineto 
+	stroke 
+	25.51 46.56 moveto 
+	25.55 47.09 lineto 
+	stroke 
+	25.55 47.09 moveto 
+	25.60 47.62 lineto 
+	stroke 
+	25.60 47.62 moveto 
+	25.67 48.14 lineto 
+	stroke 
+	25.67 48.14 moveto 
+	25.75 48.67 lineto 
+	stroke 
+	25.75 48.67 moveto 
+	25.84 49.19 lineto 
+	stroke 
+	25.84 49.19 moveto 
+	25.95 49.70 lineto 
+	stroke 
+	25.95 49.70 moveto 
+	26.07 50.22 lineto 
+	stroke 
+	26.07 50.22 moveto 
+	26.20 50.73 lineto 
+	stroke 
+	26.20 50.73 moveto 
+	26.34 51.24 lineto 
+	stroke 
+	26.34 51.24 moveto 
+	26.50 51.75 lineto 
+	stroke 
+	26.50 51.75 moveto 
+	26.67 52.25 lineto 
+	stroke 
+	26.67 52.25 moveto 
+	26.85 52.74 lineto 
+	stroke 
+	26.85 52.74 moveto 
+	27.05 53.23 lineto 
+	stroke 
+	27.05 53.23 moveto 
+	27.26 53.72 lineto 
+	stroke 
+	27.26 53.72 moveto 
+	27.48 54.20 lineto 
+	stroke 
+	27.48 54.20 moveto 
+	27.71 54.68 lineto 
+	stroke 
+	27.71 54.68 moveto 
+	27.95 55.15 lineto 
+	stroke 
+	27.95 55.15 moveto 
+	28.21 55.61 lineto 
+	stroke 
+	28.21 55.61 moveto 
+	28.47 56.07 lineto 
+	stroke 
+	28.47 56.07 moveto 
+	28.75 56.52 lineto 
+	stroke 
+	28.75 56.52 moveto 
+	29.04 56.96 lineto 
+	stroke 
+	29.04 56.96 moveto 
+	29.34 57.39 lineto 
+	stroke 
+	29.34 57.39 moveto 
+	29.65 57.82 lineto 
+	stroke 
+	29.65 57.82 moveto 
+	29.83 58.07 lineto 
+	stroke 
+	29.83 58.07 moveto 
+	29.99 58.32 lineto 
+	stroke 
+	29.99 58.32 moveto 
+	30.14 58.59 lineto 
+	stroke 
+	30.14 58.59 moveto 
+	30.28 58.86 lineto 
+	stroke 
+	30.28 58.86 moveto 
+	30.41 59.13 lineto 
+	stroke 
+	30.41 59.13 moveto 
+	30.52 59.41 lineto 
+	stroke 
+	30.52 59.41 moveto 
+	30.62 59.70 lineto 
+	stroke 
+	30.62 59.70 moveto 
+	30.70 59.99 lineto 
+	stroke 
+	30.70 59.99 moveto 
+	30.77 60.29 lineto 
+	stroke 
+	30.77 60.29 moveto 
+	30.83 60.58 lineto 
+	stroke 
+	30.83 60.58 moveto 
+	30.87 60.88 lineto 
+	stroke 
+	30.87 60.88 moveto 
+	30.89 61.18 lineto 
+	stroke 
+	30.89 61.18 moveto 
+	30.91 61.49 lineto 
+	stroke 
+	30.91 61.49 moveto 
+	30.90 61.79 lineto 
+	stroke 
+	30.90 61.79 moveto 
+	30.91 61.87 lineto 
+	stroke 
+	30.91 61.87 moveto 
+	30.93 61.95 lineto 
+	stroke 
+	30.93 61.95 moveto 
+	30.96 62.03 lineto 
+	stroke 
+	30.96 62.03 moveto 
+	31 62.10 lineto 
+	stroke 
+	31 62.10 moveto 
+	31.05 62.16 lineto 
+	stroke 
+	31.05 62.16 moveto 
+	31.12 62.22 lineto 
+	stroke 
+	31.12 62.22 moveto 
+	35.97 65.60 lineto 
+	stroke 
+	35.97 65.60 moveto 
+	36.09 65.66 lineto 
+	stroke 
+	36.09 65.66 moveto 
+	36.23 65.69 lineto 
+	stroke 
+	36.23 65.69 moveto 
+	36.38 65.67 lineto 
+	stroke 
+	36.38 65.67 moveto 
+	36.51 65.62 lineto 
+	stroke 
+	36.51 65.62 moveto 
+	36.62 65.52 lineto 
+	stroke 
+	36.62 65.52 moveto 
+	36.70 65.41 lineto 
+	stroke 
+	36.70 65.41 moveto 
+	36.87 65.03 lineto 
+	stroke 
+	36.87 65.03 moveto 
+	37.02 64.65 lineto 
+	stroke 
+	37.02 64.65 moveto 
+	37.14 64.26 lineto 
+	stroke 
+	37.14 64.26 moveto 
+	37.24 63.86 lineto 
+	stroke 
+	37.24 63.86 moveto 
+	37.32 63.46 lineto 
+	stroke 
+	37.32 63.46 moveto 
+	37.37 63.05 lineto 
+	stroke 
+	37.37 63.05 moveto 
+	37.40 62.64 lineto 
+	stroke 
+	37.40 62.64 moveto 
+	37.40 62.23 lineto 
+	stroke 
+	37.40 62.23 moveto 
+	37.38 61.82 lineto 
+	stroke 
+	37.38 61.82 moveto 
+	37.33 61.41 lineto 
+	stroke 
+	37.33 61.41 moveto 
+	37.26 61 lineto 
+	stroke 
+	37.26 61 moveto 
+	37.16 60.60 lineto 
+	stroke 
+	37.16 60.60 moveto 
+	37.04 60.21 lineto 
+	stroke 
+	37.04 60.21 moveto 
+	36.90 59.83 lineto 
+	stroke 
+	36.90 59.83 moveto 
+	33.63 51.44 lineto 
+	stroke 
+	33.63 51.44 moveto 
+	33.60 51.37 lineto 
+	stroke 
+	33.60 51.37 moveto 
+	33.56 51.30 lineto 
+	stroke 
+	33.56 51.30 moveto 
+	33.50 51.25 lineto 
+	stroke 
+	33.50 51.25 moveto 
+	33.25 51.01 lineto 
+	stroke 
+	33.25 51.01 moveto 
+	33 50.77 lineto 
+	stroke 
+	33 50.77 moveto 
+	32.77 50.51 lineto 
+	stroke 
+	32.77 50.51 moveto 
+	32.54 50.25 lineto 
+	stroke 
+	32.54 50.25 moveto 
+	32.32 49.98 lineto 
+	stroke 
+	32.32 49.98 moveto 
+	32.11 49.71 lineto 
+	stroke 
+	32.11 49.71 moveto 
+	31.91 49.42 lineto 
+	stroke 
+	31.91 49.42 moveto 
+	31.72 49.13 lineto 
+	stroke 
+	31.72 49.13 moveto 
+	31.54 48.84 lineto 
+	stroke 
+	31.54 48.84 moveto 
+	31.37 48.53 lineto 
+	stroke 
+	31.37 48.53 moveto 
+	31.21 48.23 lineto 
+	stroke 
+	31.21 48.23 moveto 
+	31.06 47.91 lineto 
+	stroke 
+	31.06 47.91 moveto 
+	30.92 47.59 lineto 
+	stroke 
+	30.92 47.59 moveto 
+	30.80 47.27 lineto 
+	stroke 
+	30.80 47.27 moveto 
+	30.68 46.95 lineto 
+	stroke 
+	30.68 46.95 moveto 
+	30.57 46.62 lineto 
+	stroke 
+	30.57 46.62 moveto 
+	30.48 46.28 lineto 
+	stroke 
+	30.48 46.28 moveto 
+	30.40 45.95 lineto 
+	stroke 
+	30.40 45.95 moveto 
+	30.33 45.61 lineto 
+	stroke 
+	30.33 45.61 moveto 
+	29.76 42.64 lineto 
+	stroke 
+	29.76 42.64 moveto 
+	29.70 42.26 lineto 
+	stroke 
+	29.70 42.26 moveto 
+	29.67 41.88 lineto 
+	stroke 
+	29.67 41.88 moveto 
+	29.68 41.50 lineto 
+	stroke 
+	29.68 41.50 moveto 
+	29.72 41.11 lineto 
+	stroke 
+	29.72 41.11 moveto 
+	29.79 40.74 lineto 
+	stroke 
+	29.79 40.74 moveto 
+	29.88 40.37 lineto 
+	stroke 
+	29.88 40.37 moveto 
+	30.01 40 lineto 
+	stroke 
+	30.01 40 moveto 
+	30.17 39.65 lineto 
+	stroke 
+	30.17 39.65 moveto 
+	30.36 39.32 lineto 
+	stroke 
+	30.36 39.32 moveto 
+	30.57 39 lineto 
+	stroke 
+	30.57 39 moveto 
+	30.81 38.70 lineto 
+	stroke 
+	30.81 38.70 moveto 
+	31.07 38.42 lineto 
+	stroke 
+	31.07 38.42 moveto 
+	31.35 38.16 lineto 
+	stroke 
+	31.35 38.16 moveto 
+	31.66 37.92 lineto 
+	stroke 
+	31.66 37.92 moveto 
+	31.98 37.71 lineto 
+	stroke 
+	31.98 37.71 moveto 
+	32.32 37.53 lineto 
+	stroke 
+	32.32 37.53 moveto 
+	32.67 37.38 lineto 
+	stroke 
+	32.67 37.38 moveto 
+	33.03 37.25 lineto 
+	stroke 
+	33.03 37.25 moveto 
+	33.40 37.16 lineto 
+	stroke 
+	33.40 37.16 moveto 
+	33.51 37.12 lineto 
+	stroke 
+	33.51 37.12 moveto 
+	33.60 37.07 lineto 
+	stroke 
+	33.60 37.07 moveto 
+	33.68 37 lineto 
+	stroke 
+	33.68 37 moveto 
+	33.74 36.91 lineto 
+	stroke 
+	33.74 36.91 moveto 
+	33.78 36.81 lineto 
+	stroke 
+	33.78 36.81 moveto 
+	33.80 36.70 lineto 
+	stroke 
+	33.80 36.70 moveto 
+	33.89 35.30 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	40 54 moveto 
+	FatFont 
+	(1) 
+	show_utf8 
+	53 54 moveto 
+	FatFont 
+	(/2) 
+	show_utf8 
+} def
+
+%?partdef ssGeneral001
+%?fn	ssGeneral001
+%?brief	Servicesymbol deaktivieren
+%?bbox	0 0 79 79
+/ssGeneral001 {
+	2 setlinewidth_nlw 
+	68 17 moveto 
+	58 17 10 -20 100 arc 
+	stroke 
+	30 55 moveto 
+	20 55 10 -10 110 arc 
+	stroke 
+	56 27 moveto 
+	30 53 lineto 
+	stroke 
+	48 19 moveto 
+	22 45 lineto 
+	stroke 
+	67 14 moveto 
+	63 18 lineto 
+	stroke 
+	61 8 moveto 
+	57 12 lineto 
+	stroke 
+	63 18 moveto 
+	57 12 lineto 
+	stroke 
+	17 64 moveto 
+	21 60 lineto 
+	stroke 
+	11 58 moveto 
+	15 54 lineto 
+	stroke 
+	21 60 moveto 
+	15 54 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	11 58 moveto 
+	2 setlinewidth_nlw 
+	20 55 10 160 280 arc 
+	stroke 
+	1 setlinewidth_nlw 
+	48 19 moveto 
+	2 setlinewidth_nlw 
+	58 17 10 170 290 arc 
+	stroke 
+	3 setlinewidth_nlw 
+	5 70 moveto 
+	70 5 lineto 
+	stroke 
+	6 6 moveto 
+	71 71 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partend
+%?partdef ssGeneral002
+%?fn	ssGeneral002
+%?brief	Datumsformat umschalten
+%?bbox	0 0 79 79
+/ssGeneral002 {
+	3 setlinewidth_nlw 
+	19.31 24.30 moveto 
+	11.80 24.30 lineto 
+	stroke 
+	11.80 24.30 moveto 
+	11.67 24.28 lineto 
+	stroke 
+	11.67 24.28 moveto 
+	11.55 24.23 lineto 
+	stroke 
+	11.55 24.23 moveto 
+	11.45 24.15 lineto 
+	stroke 
+	11.45 24.15 moveto 
+	11.37 24.05 lineto 
+	stroke 
+	11.37 24.05 moveto 
+	11.32 23.93 lineto 
+	stroke 
+	11.32 23.93 moveto 
+	11.30 23.80 lineto 
+	stroke 
+	11.30 23.80 moveto 
+	11.30 9.80 lineto 
+	stroke 
+	11.30 9.80 moveto 
+	11.32 9.67 lineto 
+	stroke 
+	11.32 9.67 moveto 
+	11.37 9.55 lineto 
+	stroke 
+	11.37 9.55 moveto 
+	11.45 9.45 lineto 
+	stroke 
+	11.45 9.45 moveto 
+	11.55 9.37 lineto 
+	stroke 
+	11.55 9.37 moveto 
+	11.67 9.32 lineto 
+	stroke 
+	11.67 9.32 moveto 
+	11.80 9.30 lineto 
+	stroke 
+	11.80 9.30 moveto 
+	25.80 9.30 lineto 
+	stroke 
+	25.80 9.30 moveto 
+	25.93 9.32 lineto 
+	stroke 
+	25.93 9.32 moveto 
+	26.05 9.37 lineto 
+	stroke 
+	26.05 9.37 moveto 
+	26.15 9.45 lineto 
+	stroke 
+	26.15 9.45 moveto 
+	26.23 9.55 lineto 
+	stroke 
+	26.23 9.55 moveto 
+	26.28 9.67 lineto 
+	stroke 
+	26.28 9.67 moveto 
+	26.30 9.80 lineto 
+	stroke 
+	26.30 9.80 moveto 
+	26.30 14.31 lineto 
+	stroke 
+	26 24 moveto 
+	17 15 lineto 
+	stroke 
+	17 15 moveto 
+	17 20 lineto 
+	stroke 
+	47.30 23.80 moveto 
+	47.28 23.93 lineto 
+	stroke 
+	47.28 23.93 moveto 
+	47.23 24.05 lineto 
+	stroke 
+	47.23 24.05 moveto 
+	47.15 24.15 lineto 
+	stroke 
+	47.15 24.15 moveto 
+	47.05 24.23 lineto 
+	stroke 
+	47.05 24.23 moveto 
+	46.93 24.28 lineto 
+	stroke 
+	46.93 24.28 moveto 
+	46.80 24.30 lineto 
+	stroke 
+	46.80 24.30 moveto 
+	32.80 24.30 lineto 
+	stroke 
+	32.80 24.30 moveto 
+	32.67 24.28 lineto 
+	stroke 
+	32.67 24.28 moveto 
+	32.55 24.23 lineto 
+	stroke 
+	32.55 24.23 moveto 
+	32.45 24.15 lineto 
+	stroke 
+	32.45 24.15 moveto 
+	32.37 24.05 lineto 
+	stroke 
+	32.37 24.05 moveto 
+	32.32 23.93 lineto 
+	stroke 
+	32.32 23.93 moveto 
+	32.30 23.80 lineto 
+	stroke 
+	32.30 23.80 moveto 
+	32.30 9.80 lineto 
+	stroke 
+	32.30 9.80 moveto 
+	32.32 9.67 lineto 
+	stroke 
+	32.32 9.67 moveto 
+	32.37 9.55 lineto 
+	stroke 
+	32.37 9.55 moveto 
+	32.45 9.45 lineto 
+	stroke 
+	32.45 9.45 moveto 
+	32.55 9.37 lineto 
+	stroke 
+	32.55 9.37 moveto 
+	32.67 9.32 lineto 
+	stroke 
+	32.67 9.32 moveto 
+	32.80 9.30 lineto 
+	stroke 
+	32.80 9.30 moveto 
+	46.80 9.30 lineto 
+	stroke 
+	46.80 9.30 moveto 
+	46.93 9.32 lineto 
+	stroke 
+	46.93 9.32 moveto 
+	47.05 9.37 lineto 
+	stroke 
+	47.05 9.37 moveto 
+	47.15 9.45 lineto 
+	stroke 
+	47.15 9.45 moveto 
+	47.23 9.55 lineto 
+	stroke 
+	47.23 9.55 moveto 
+	47.28 9.67 lineto 
+	stroke 
+	47.28 9.67 moveto 
+	47.30 9.80 lineto 
+	stroke 
+	47.30 9.80 moveto 
+	47.30 23.80 lineto 
+	stroke 
+	68.30 23.80 moveto 
+	68.28 23.93 lineto 
+	stroke 
+	68.28 23.93 moveto 
+	68.23 24.05 lineto 
+	stroke 
+	68.23 24.05 moveto 
+	68.15 24.15 lineto 
+	stroke 
+	68.15 24.15 moveto 
+	68.05 24.23 lineto 
+	stroke 
+	68.05 24.23 moveto 
+	67.93 24.28 lineto 
+	stroke 
+	67.93 24.28 moveto 
+	67.80 24.30 lineto 
+	stroke 
+	67.80 24.30 moveto 
+	53.80 24.30 lineto 
+	stroke 
+	53.80 24.30 moveto 
+	53.67 24.28 lineto 
+	stroke 
+	53.67 24.28 moveto 
+	53.55 24.23 lineto 
+	stroke 
+	53.55 24.23 moveto 
+	53.45 24.15 lineto 
+	stroke 
+	53.45 24.15 moveto 
+	53.37 24.05 lineto 
+	stroke 
+	53.37 24.05 moveto 
+	53.32 23.93 lineto 
+	stroke 
+	53.32 23.93 moveto 
+	53.30 23.80 lineto 
+	stroke 
+	53.30 23.80 moveto 
+	53.30 9.80 lineto 
+	stroke 
+	53.30 9.80 moveto 
+	53.32 9.67 lineto 
+	stroke 
+	53.32 9.67 moveto 
+	53.37 9.55 lineto 
+	stroke 
+	53.37 9.55 moveto 
+	53.45 9.45 lineto 
+	stroke 
+	53.45 9.45 moveto 
+	53.55 9.37 lineto 
+	stroke 
+	53.55 9.37 moveto 
+	53.67 9.32 lineto 
+	stroke 
+	53.67 9.32 moveto 
+	53.80 9.30 lineto 
+	stroke 
+	53.80 9.30 moveto 
+	67.80 9.30 lineto 
+	stroke 
+	67.80 9.30 moveto 
+	67.93 9.32 lineto 
+	stroke 
+	67.93 9.32 moveto 
+	68.05 9.37 lineto 
+	stroke 
+	68.05 9.37 moveto 
+	68.15 9.45 lineto 
+	stroke 
+	68.15 9.45 moveto 
+	68.23 9.55 lineto 
+	stroke 
+	68.23 9.55 moveto 
+	68.28 9.67 lineto 
+	stroke 
+	68.28 9.67 moveto 
+	68.30 9.80 lineto 
+	stroke 
+	68.30 9.80 moveto 
+	68.30 23.80 lineto 
+	stroke 
+	59 34 moveto 
+	20 34 lineto 
+	stroke 
+	18 36 moveto 
+	18 66 lineto 
+	stroke 
+	20 68 moveto 
+	59 68 lineto 
+	stroke 
+	61 66 moveto 
+	61 36 lineto 
+	stroke 
+	29 71 moveto 
+	29 65 lineto 
+	stroke 
+	50 71 moveto 
+	50 65 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	24 40 moveto 
+	FatFont 
+	(29) 
+	show_utf8 
+	3 setlinewidth_nlw 
+	59 68 moveto 
+	61 66 lineto 
+	stroke 
+	20 68 moveto 
+	18 66 lineto 
+	stroke 
+	18 36 moveto 
+	20 34 lineto 
+	stroke 
+	59 34 moveto 
+	61 36 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssGeneral050
+%?fn	ssGeneral050
+%?brief	arrow 90° fat
+%?bbox	0 0 79 79
+/ssGeneral050 {
+	3 setlinewidth_nlw 
+	39 56 moveto 
+	18 35 lineto 
+	stroke 
+	18 35 moveto 
+	15 38 lineto 
+	stroke 
+	15 38 moveto 
+	10 21 lineto 
+	stroke 
+	10 21 moveto 
+	26 27 lineto 
+	stroke 
+	23 30 moveto 
+	39 46 lineto 
+	stroke 
+	55 30 moveto 
+	52 27 lineto 
+	stroke 
+	52 27 moveto 
+	68 22 lineto 
+	stroke 
+	68 22 moveto 
+	63 38 lineto 
+	stroke 
+	63 38 moveto 
+	60 35 lineto 
+	stroke 
+	60 35 moveto 
+	39 56 lineto 
+	stroke 
+	26 27 moveto 
+	23 30 lineto 
+	stroke 
+	55 30 moveto 
+	39 46 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssGeneral051
+%?fn	ssGeneral051
+%?brief	double arrow
+%?bbox	0 0 79 79
+/ssGeneral051 {
+	3 setlinewidth_nlw 
+	15 40 moveto 
+	25 45 lineto 
+	stroke 
+	25 45 moveto 
+	25 42 lineto 
+	stroke 
+	25 42 moveto 
+	55 42 lineto 
+	stroke 
+	55 42 moveto 
+	55 45 lineto 
+	stroke 
+	55 45 moveto 
+	65 40 lineto 
+	stroke 
+	65 40 moveto 
+	55 34 lineto 
+	stroke 
+	55 34 moveto 
+	55 37 lineto 
+	stroke 
+	55 37 moveto 
+	25 37 lineto 
+	stroke 
+	25 37 moveto 
+	25 36 lineto 
+	stroke 
+	25 34 moveto 
+	15 40 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssDrive001
+%?fn	ssDrive001
+%?brief	Fahren Raupe links/rechts
+%?bbox	0 0 79 79
+/ssDrive001 {
+	3 setlinewidth_nlw 
+	37.30 42.30 moveto 
+	41.51 42.30 lineto 
+	stroke 
+	41.51 42.30 moveto 
+	41.64 42.32 lineto 
+	stroke 
+	41.64 42.32 moveto 
+	41.76 42.37 lineto 
+	stroke 
+	41.76 42.37 moveto 
+	41.86 42.45 lineto 
+	stroke 
+	41.86 42.45 moveto 
+	41.94 42.55 lineto 
+	stroke 
+	41.94 42.55 moveto 
+	41.99 42.67 lineto 
+	stroke 
+	41.99 42.67 moveto 
+	42.01 42.80 lineto 
+	stroke 
+	42.01 42.80 moveto 
+	42.01 44.80 lineto 
+	stroke 
+	42.01 44.80 moveto 
+	42.03 45.49 lineto 
+	stroke 
+	42.03 45.49 moveto 
+	42.10 46.17 lineto 
+	stroke 
+	42.10 46.17 moveto 
+	42.21 46.85 lineto 
+	stroke 
+	42.21 46.85 moveto 
+	42.36 47.52 lineto 
+	stroke 
+	42.36 47.52 moveto 
+	42.56 48.18 lineto 
+	stroke 
+	42.56 48.18 moveto 
+	42.81 48.82 lineto 
+	stroke 
+	42.81 48.82 moveto 
+	43.09 49.44 lineto 
+	stroke 
+	43.09 49.44 moveto 
+	43.41 50.05 lineto 
+	stroke 
+	43.41 50.05 moveto 
+	43.78 50.63 lineto 
+	stroke 
+	43.78 50.63 moveto 
+	44.18 51.19 lineto 
+	stroke 
+	44.18 51.19 moveto 
+	44.61 51.72 lineto 
+	stroke 
+	44.61 51.72 moveto 
+	45.08 52.22 lineto 
+	stroke 
+	45.08 52.22 moveto 
+	45.58 52.69 lineto 
+	stroke 
+	45.58 52.69 moveto 
+	46.11 53.13 lineto 
+	stroke 
+	46.11 53.13 moveto 
+	46.67 53.53 lineto 
+	stroke 
+	46.67 53.53 moveto 
+	47.26 53.89 lineto 
+	stroke 
+	47.26 53.89 moveto 
+	47.86 54.22 lineto 
+	stroke 
+	47.86 54.22 moveto 
+	48.49 54.50 lineto 
+	stroke 
+	48.49 54.50 moveto 
+	49.13 54.74 lineto 
+	stroke 
+	49.13 54.74 moveto 
+	49.79 54.94 lineto 
+	stroke 
+	49.79 54.94 moveto 
+	50.46 55.10 lineto 
+	stroke 
+	50.46 55.10 moveto 
+	51.14 55.21 lineto 
+	stroke 
+	51.14 55.21 moveto 
+	51.82 55.28 lineto 
+	stroke 
+	51.82 55.28 moveto 
+	52.51 55.30 lineto 
+	stroke 
+	52.51 55.30 moveto 
+	53.51 55.30 lineto 
+	stroke 
+	53.51 55.30 moveto 
+	53.64 55.28 lineto 
+	stroke 
+	53.64 55.28 moveto 
+	53.76 55.23 lineto 
+	stroke 
+	53.76 55.23 moveto 
+	53.86 55.15 lineto 
+	stroke 
+	53.86 55.15 moveto 
+	53.94 55.05 lineto 
+	stroke 
+	53.94 55.05 moveto 
+	53.99 54.93 lineto 
+	stroke 
+	53.99 54.93 moveto 
+	54.01 54.80 lineto 
+	stroke 
+	54.01 54.80 moveto 
+	54.01 50.52 lineto 
+	stroke 
+	54.01 50.52 moveto 
+	54.02 50.43 lineto 
+	stroke 
+	54.02 50.43 moveto 
+	54.08 50.35 lineto 
+	stroke 
+	54.08 50.35 moveto 
+	54.16 50.29 lineto 
+	stroke 
+	54.16 50.29 moveto 
+	54.26 50.27 lineto 
+	stroke 
+	54.26 50.27 moveto 
+	54.35 50.29 lineto 
+	stroke 
+	54.35 50.29 moveto 
+	54.43 50.35 lineto 
+	stroke 
+	54.43 50.35 moveto 
+	62.03 57.95 lineto 
+	stroke 
+	62.03 57.95 moveto 
+	62.11 58.05 lineto 
+	stroke 
+	62.11 58.05 moveto 
+	62.16 58.17 lineto 
+	stroke 
+	62.16 58.17 moveto 
+	62.18 58.30 lineto 
+	stroke 
+	62.18 58.30 moveto 
+	62.16 58.43 lineto 
+	stroke 
+	62.16 58.43 moveto 
+	62.11 58.55 lineto 
+	stroke 
+	62.11 58.55 moveto 
+	62.03 58.65 lineto 
+	stroke 
+	62.03 58.65 moveto 
+	54.43 66.25 lineto 
+	stroke 
+	54.43 66.25 moveto 
+	54.35 66.31 lineto 
+	stroke 
+	54.35 66.31 moveto 
+	54.26 66.33 lineto 
+	stroke 
+	54.26 66.33 moveto 
+	54.16 66.31 lineto 
+	stroke 
+	54.16 66.31 moveto 
+	54.08 66.25 lineto 
+	stroke 
+	54.08 66.25 moveto 
+	54.02 66.17 lineto 
+	stroke 
+	54.02 66.17 moveto 
+	54.01 66.08 lineto 
+	stroke 
+	54.01 66.08 moveto 
+	54.01 61.80 lineto 
+	stroke 
+	54.01 61.80 moveto 
+	53.99 61.67 lineto 
+	stroke 
+	53.99 61.67 moveto 
+	53.94 61.55 lineto 
+	stroke 
+	53.94 61.55 moveto 
+	53.86 61.45 lineto 
+	stroke 
+	53.86 61.45 moveto 
+	53.76 61.37 lineto 
+	stroke 
+	53.76 61.37 moveto 
+	53.64 61.32 lineto 
+	stroke 
+	53.64 61.32 moveto 
+	53.51 61.30 lineto 
+	stroke 
+	53.51 61.30 moveto 
+	52.51 61.30 lineto 
+	stroke 
+	52.51 61.30 moveto 
+	51.71 61.28 lineto 
+	stroke 
+	51.71 61.28 moveto 
+	50.91 61.22 lineto 
+	stroke 
+	50.91 61.22 moveto 
+	50.12 61.13 lineto 
+	stroke 
+	50.12 61.13 moveto 
+	49.34 60.99 lineto 
+	stroke 
+	49.34 60.99 moveto 
+	48.56 60.82 lineto 
+	stroke 
+	48.56 60.82 moveto 
+	47.79 60.61 lineto 
+	stroke 
+	47.79 60.61 moveto 
+	47.03 60.37 lineto 
+	stroke 
+	47.03 60.37 moveto 
+	46.29 60.08 lineto 
+	stroke 
+	46.29 60.08 moveto 
+	45.56 59.77 lineto 
+	stroke 
+	45.56 59.77 moveto 
+	44.84 59.41 lineto 
+	stroke 
+	44.84 59.41 moveto 
+	44.15 59.03 lineto 
+	stroke 
+	44.15 59.03 moveto 
+	43.47 58.61 lineto 
+	stroke 
+	43.47 58.61 moveto 
+	42.81 58.15 lineto 
+	stroke 
+	42.81 58.15 moveto 
+	42.18 57.67 lineto 
+	stroke 
+	42.18 57.67 moveto 
+	41.57 57.16 lineto 
+	stroke 
+	41.57 57.16 moveto 
+	40.99 56.61 lineto 
+	stroke 
+	40.99 56.61 moveto 
+	40.43 56.04 lineto 
+	stroke 
+	40.43 56.04 moveto 
+	39.90 55.45 lineto 
+	stroke 
+	39.90 55.45 moveto 
+	39.40 54.83 lineto 
+	stroke 
+	39.40 54.83 moveto 
+	38.90 55.45 lineto 
+	stroke 
+	38.90 55.45 moveto 
+	38.37 56.04 lineto 
+	stroke 
+	38.37 56.04 moveto 
+	37.82 56.61 lineto 
+	stroke 
+	37.82 56.61 moveto 
+	37.23 57.16 lineto 
+	stroke 
+	37.23 57.16 moveto 
+	36.62 57.67 lineto 
+	stroke 
+	36.62 57.67 moveto 
+	35.99 58.15 lineto 
+	stroke 
+	35.99 58.15 moveto 
+	35.34 58.61 lineto 
+	stroke 
+	35.34 58.61 moveto 
+	34.66 59.03 lineto 
+	stroke 
+	34.66 59.03 moveto 
+	33.96 59.41 lineto 
+	stroke 
+	33.96 59.41 moveto 
+	33.25 59.77 lineto 
+	stroke 
+	33.25 59.77 moveto 
+	32.52 60.08 lineto 
+	stroke 
+	32.52 60.08 moveto 
+	31.77 60.37 lineto 
+	stroke 
+	31.77 60.37 moveto 
+	31.01 60.61 lineto 
+	stroke 
+	31.01 60.61 moveto 
+	30.25 60.82 lineto 
+	stroke 
+	30.25 60.82 moveto 
+	29.47 60.99 lineto 
+	stroke 
+	29.47 60.99 moveto 
+	28.68 61.13 lineto 
+	stroke 
+	28.68 61.13 moveto 
+	27.89 61.22 lineto 
+	stroke 
+	27.89 61.22 moveto 
+	27.10 61.28 lineto 
+	stroke 
+	27.10 61.28 moveto 
+	26.30 61.30 lineto 
+	stroke 
+	26.30 61.30 moveto 
+	25.30 61.30 lineto 
+	stroke 
+	25.30 61.30 moveto 
+	25.17 61.32 lineto 
+	stroke 
+	25.17 61.32 moveto 
+	25.05 61.37 lineto 
+	stroke 
+	25.05 61.37 moveto 
+	24.95 61.45 lineto 
+	stroke 
+	24.95 61.45 moveto 
+	24.87 61.55 lineto 
+	stroke 
+	24.87 61.55 moveto 
+	24.82 61.67 lineto 
+	stroke 
+	24.82 61.67 moveto 
+	24.80 61.80 lineto 
+	stroke 
+	24.80 61.80 moveto 
+	24.80 66.08 lineto 
+	stroke 
+	24.80 66.08 moveto 
+	24.78 66.17 lineto 
+	stroke 
+	24.78 66.17 moveto 
+	24.73 66.25 lineto 
+	stroke 
+	24.73 66.25 moveto 
+	24.65 66.31 lineto 
+	stroke 
+	24.65 66.31 moveto 
+	24.55 66.33 lineto 
+	stroke 
+	24.55 66.33 moveto 
+	24.45 66.31 lineto 
+	stroke 
+	24.45 66.31 moveto 
+	24.37 66.25 lineto 
+	stroke 
+	24.37 66.25 moveto 
+	16.77 58.65 lineto 
+	stroke 
+	16.77 58.65 moveto 
+	16.70 58.55 lineto 
+	stroke 
+	16.70 58.55 moveto 
+	16.65 58.43 lineto 
+	stroke 
+	16.65 58.43 moveto 
+	16.63 58.30 lineto 
+	stroke 
+	16.63 58.30 moveto 
+	16.65 58.17 lineto 
+	stroke 
+	16.65 58.17 moveto 
+	16.70 58.05 lineto 
+	stroke 
+	16.70 58.05 moveto 
+	16.77 57.95 lineto 
+	stroke 
+	16.77 57.95 moveto 
+	24.37 50.35 lineto 
+	stroke 
+	24.37 50.35 moveto 
+	24.45 50.29 lineto 
+	stroke 
+	24.45 50.29 moveto 
+	24.55 50.27 lineto 
+	stroke 
+	24.55 50.27 moveto 
+	24.65 50.29 lineto 
+	stroke 
+	24.65 50.29 moveto 
+	24.73 50.35 lineto 
+	stroke 
+	24.73 50.35 moveto 
+	24.78 50.43 lineto 
+	stroke 
+	24.78 50.43 moveto 
+	24.80 50.52 lineto 
+	stroke 
+	24.80 50.52 moveto 
+	24.80 54.80 lineto 
+	stroke 
+	24.80 54.80 moveto 
+	24.82 54.93 lineto 
+	stroke 
+	24.82 54.93 moveto 
+	24.87 55.05 lineto 
+	stroke 
+	24.87 55.05 moveto 
+	24.95 55.15 lineto 
+	stroke 
+	24.95 55.15 moveto 
+	25.05 55.23 lineto 
+	stroke 
+	25.05 55.23 moveto 
+	25.17 55.28 lineto 
+	stroke 
+	25.17 55.28 moveto 
+	25.30 55.30 lineto 
+	stroke 
+	25.30 55.30 moveto 
+	26.30 55.30 lineto 
+	stroke 
+	26.30 55.30 moveto 
+	26.99 55.28 lineto 
+	stroke 
+	26.99 55.28 moveto 
+	27.67 55.21 lineto 
+	stroke 
+	27.67 55.21 moveto 
+	28.35 55.10 lineto 
+	stroke 
+	28.35 55.10 moveto 
+	29.02 54.94 lineto 
+	stroke 
+	29.02 54.94 moveto 
+	29.68 54.74 lineto 
+	stroke 
+	29.68 54.74 moveto 
+	30.32 54.50 lineto 
+	stroke 
+	30.32 54.50 moveto 
+	30.94 54.22 lineto 
+	stroke 
+	30.94 54.22 moveto 
+	31.55 53.89 lineto 
+	stroke 
+	31.55 53.89 moveto 
+	32.13 53.53 lineto 
+	stroke 
+	32.13 53.53 moveto 
+	32.69 53.13 lineto 
+	stroke 
+	32.69 53.13 moveto 
+	33.22 52.69 lineto 
+	stroke 
+	33.22 52.69 moveto 
+	33.72 52.22 lineto 
+	stroke 
+	33.72 52.22 moveto 
+	34.19 51.72 lineto 
+	stroke 
+	34.19 51.72 moveto 
+	34.63 51.19 lineto 
+	stroke 
+	34.63 51.19 moveto 
+	35.03 50.63 lineto 
+	stroke 
+	35.03 50.63 moveto 
+	35.39 50.05 lineto 
+	stroke 
+	35.39 50.05 moveto 
+	35.72 49.44 lineto 
+	stroke 
+	35.72 49.44 moveto 
+	36 48.82 lineto 
+	stroke 
+	36 48.82 moveto 
+	36.24 48.18 lineto 
+	stroke 
+	36.24 48.18 moveto 
+	36.44 47.52 lineto 
+	stroke 
+	36.44 47.52 moveto 
+	36.60 46.85 lineto 
+	stroke 
+	36.60 46.85 moveto 
+	36.71 46.17 lineto 
+	stroke 
+	36.71 46.17 moveto 
+	36.78 45.49 lineto 
+	stroke 
+	36.78 45.49 moveto 
+	36.80 44.80 lineto 
+	stroke 
+	36.80 44.80 moveto 
+	36.80 42.80 lineto 
+	stroke 
+	36.80 42.80 moveto 
+	36.82 42.67 lineto 
+	stroke 
+	36.82 42.67 moveto 
+	36.87 42.55 lineto 
+	stroke 
+	36.87 42.55 moveto 
+	36.95 42.45 lineto 
+	stroke 
+	36.95 42.45 moveto 
+	37.05 42.37 lineto 
+	stroke 
+	37.05 42.37 moveto 
+	37.17 42.32 lineto 
+	stroke 
+	37.17 42.32 moveto 
+	37.30 42.30 lineto 
+	stroke 
+	58.30 42.30 moveto 
+	51.30 42.30 lineto 
+	stroke 
+	21.30 42.30 moveto 
+	28.30 42.30 lineto 
+	stroke 
+	21.30 36.30 moveto 
+	28.30 36.30 lineto 
+	stroke 
+	21.30 18.30 moveto 
+	28.30 18.30 lineto 
+	stroke 
+	58.30 36.30 moveto 
+	51.30 36.30 lineto 
+	stroke 
+	58.30 18.30 moveto 
+	51.30 18.30 lineto 
+	stroke 
+	21.30 24.30 moveto 
+	28.30 24.30 lineto 
+	stroke 
+	58.30 24.30 moveto 
+	51.30 24.30 lineto 
+	stroke 
+	21.30 30.30 moveto 
+	28.30 30.30 lineto 
+	stroke 
+	21.30 12.30 moveto 
+	28.30 12.30 lineto 
+	stroke 
+	58.30 30.30 moveto 
+	51.30 30.30 lineto 
+	stroke 
+	58.30 12.30 moveto 
+	51.30 12.30 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssDrive002
+%?fn	ssDrive002
+%?brief	Fahren Raupe vor/zurück
+%?bbox	0 0 79 79
+/ssDrive002 {
+	3 setlinewidth_nlw 
+	39.45 10.45 moveto 
+	39.55 10.37 lineto 
+	stroke 
+	39.55 10.37 moveto 
+	39.67 10.32 lineto 
+	stroke 
+	39.67 10.32 moveto 
+	39.80 10.30 lineto 
+	stroke 
+	39.80 10.30 moveto 
+	39.93 10.32 lineto 
+	stroke 
+	39.93 10.32 moveto 
+	40.05 10.37 lineto 
+	stroke 
+	40.05 10.37 moveto 
+	40.15 10.45 lineto 
+	stroke 
+	40 10 moveto 
+	48 18 lineto 
+	stroke 
+	47.75 18.04 moveto 
+	47.81 18.13 lineto 
+	stroke 
+	47.81 18.13 moveto 
+	47.83 18.22 lineto 
+	stroke 
+	47.83 18.22 moveto 
+	47.81 18.32 lineto 
+	stroke 
+	47.81 18.32 moveto 
+	47.75 18.40 lineto 
+	stroke 
+	47.75 18.40 moveto 
+	47.67 18.45 lineto 
+	stroke 
+	47.67 18.45 moveto 
+	47.58 18.47 lineto 
+	stroke 
+	47.58 18.47 moveto 
+	43.30 18.47 lineto 
+	stroke 
+	43.30 18.47 moveto 
+	43.17 18.49 lineto 
+	stroke 
+	43.17 18.49 moveto 
+	43.05 18.54 lineto 
+	stroke 
+	43.05 18.54 moveto 
+	42.95 18.62 lineto 
+	stroke 
+	42.95 18.62 moveto 
+	42.87 18.72 lineto 
+	stroke 
+	42.87 18.72 moveto 
+	42.82 18.84 lineto 
+	stroke 
+	42.82 18.84 moveto 
+	42.80 18.97 lineto 
+	stroke 
+	42.80 18.97 moveto 
+	42.80 24.30 lineto 
+	stroke 
+	42.80 24.30 moveto 
+	42.78 24.43 lineto 
+	stroke 
+	42.78 24.43 moveto 
+	42.73 24.55 lineto 
+	stroke 
+	42.73 24.55 moveto 
+	42.65 24.65 lineto 
+	stroke 
+	42.65 24.65 moveto 
+	42.55 24.73 lineto 
+	stroke 
+	42.55 24.73 moveto 
+	42.43 24.78 lineto 
+	stroke 
+	42.43 24.78 moveto 
+	42.30 24.80 lineto 
+	stroke 
+	42.30 24.80 moveto 
+	37.30 24.80 lineto 
+	stroke 
+	37.30 24.80 moveto 
+	37.17 24.78 lineto 
+	stroke 
+	37.17 24.78 moveto 
+	37.05 24.73 lineto 
+	stroke 
+	37.05 24.73 moveto 
+	36.95 24.65 lineto 
+	stroke 
+	36.95 24.65 moveto 
+	36.87 24.55 lineto 
+	stroke 
+	36.87 24.55 moveto 
+	36.82 24.43 lineto 
+	stroke 
+	36.82 24.43 moveto 
+	36.80 24.30 lineto 
+	stroke 
+	36.80 24.30 moveto 
+	36.80 18.97 lineto 
+	stroke 
+	36.80 18.97 moveto 
+	36.78 18.84 lineto 
+	stroke 
+	36.78 18.84 moveto 
+	36.73 18.72 lineto 
+	stroke 
+	36.73 18.72 moveto 
+	36.65 18.62 lineto 
+	stroke 
+	36.65 18.62 moveto 
+	36.55 18.54 lineto 
+	stroke 
+	36.55 18.54 moveto 
+	36.43 18.49 lineto 
+	stroke 
+	36.43 18.49 moveto 
+	36.30 18.47 lineto 
+	stroke 
+	36.30 18.47 moveto 
+	32.02 18.47 lineto 
+	stroke 
+	32.02 18.47 moveto 
+	31.93 18.45 lineto 
+	stroke 
+	31.93 18.45 moveto 
+	31.85 18.40 lineto 
+	stroke 
+	31.85 18.40 moveto 
+	31.79 18.32 lineto 
+	stroke 
+	31.79 18.32 moveto 
+	31.77 18.22 lineto 
+	stroke 
+	31.77 18.22 moveto 
+	31.79 18.13 lineto 
+	stroke 
+	31.79 18.13 moveto 
+	31.85 18.04 lineto 
+	stroke 
+	32 18 moveto 
+	39 11 lineto 
+	stroke 
+	39.45 69.15 moveto 
+	39.55 69.23 lineto 
+	stroke 
+	39.55 69.23 moveto 
+	39.67 69.28 lineto 
+	stroke 
+	39.67 69.28 moveto 
+	39.80 69.30 lineto 
+	stroke 
+	39.80 69.30 moveto 
+	39.93 69.28 lineto 
+	stroke 
+	39.93 69.28 moveto 
+	40.05 69.23 lineto 
+	stroke 
+	40.05 69.23 moveto 
+	40.15 69.15 lineto 
+	stroke 
+	40 69 moveto 
+	47 62 lineto 
+	stroke 
+	47.75 61.56 moveto 
+	47.81 61.47 lineto 
+	stroke 
+	47.81 61.47 moveto 
+	47.83 61.38 lineto 
+	stroke 
+	47.83 61.38 moveto 
+	47.81 61.28 lineto 
+	stroke 
+	47.81 61.28 moveto 
+	47.75 61.20 lineto 
+	stroke 
+	47.75 61.20 moveto 
+	47.67 61.15 lineto 
+	stroke 
+	47.67 61.15 moveto 
+	47.58 61.13 lineto 
+	stroke 
+	47.58 61.13 moveto 
+	43.30 61.13 lineto 
+	stroke 
+	43.30 61.13 moveto 
+	43.17 61.11 lineto 
+	stroke 
+	43.17 61.11 moveto 
+	43.05 61.06 lineto 
+	stroke 
+	43.05 61.06 moveto 
+	42.95 60.98 lineto 
+	stroke 
+	42.95 60.98 moveto 
+	42.87 60.88 lineto 
+	stroke 
+	42.87 60.88 moveto 
+	42.82 60.76 lineto 
+	stroke 
+	42.82 60.76 moveto 
+	42.80 60.63 lineto 
+	stroke 
+	42.80 60.63 moveto 
+	42.80 55.30 lineto 
+	stroke 
+	42.80 55.30 moveto 
+	42.78 55.17 lineto 
+	stroke 
+	42.78 55.17 moveto 
+	42.73 55.05 lineto 
+	stroke 
+	42.73 55.05 moveto 
+	42.65 54.95 lineto 
+	stroke 
+	42.65 54.95 moveto 
+	42.55 54.87 lineto 
+	stroke 
+	42.55 54.87 moveto 
+	42.43 54.82 lineto 
+	stroke 
+	42.43 54.82 moveto 
+	42.30 54.80 lineto 
+	stroke 
+	42.30 54.80 moveto 
+	37.30 54.80 lineto 
+	stroke 
+	37.30 54.80 moveto 
+	37.17 54.82 lineto 
+	stroke 
+	37.17 54.82 moveto 
+	37.05 54.87 lineto 
+	stroke 
+	37.05 54.87 moveto 
+	36.95 54.95 lineto 
+	stroke 
+	36.95 54.95 moveto 
+	36.87 55.05 lineto 
+	stroke 
+	36.87 55.05 moveto 
+	36.82 55.17 lineto 
+	stroke 
+	36.82 55.17 moveto 
+	36.80 55.30 lineto 
+	stroke 
+	36.80 55.30 moveto 
+	36.80 60.63 lineto 
+	stroke 
+	36.80 60.63 moveto 
+	36.78 60.76 lineto 
+	stroke 
+	36.78 60.76 moveto 
+	36.73 60.88 lineto 
+	stroke 
+	36.73 60.88 moveto 
+	36.65 60.98 lineto 
+	stroke 
+	36.65 60.98 moveto 
+	36.55 61.06 lineto 
+	stroke 
+	36.55 61.06 moveto 
+	36.43 61.11 lineto 
+	stroke 
+	36.43 61.11 moveto 
+	36.30 61.13 lineto 
+	stroke 
+	36.30 61.13 moveto 
+	32.02 61.13 lineto 
+	stroke 
+	32.02 61.13 moveto 
+	31.93 61.15 lineto 
+	stroke 
+	31.93 61.15 moveto 
+	31.85 61.20 lineto 
+	stroke 
+	31.85 61.20 moveto 
+	31.79 61.28 lineto 
+	stroke 
+	31.79 61.28 moveto 
+	31.77 61.38 lineto 
+	stroke 
+	31.77 61.38 moveto 
+	31.79 61.47 lineto 
+	stroke 
+	31.79 61.47 moveto 
+	31.85 61.56 lineto 
+	stroke 
+	31.85 61.56 moveto 
+	39.45 69.15 lineto 
+	stroke 
+	58.30 24.80 moveto 
+	51.30 24.80 lineto 
+	stroke 
+	58.30 30.80 moveto 
+	51.30 30.80 lineto 
+	stroke 
+	58.30 36.80 moveto 
+	51.30 36.80 lineto 
+	stroke 
+	58.30 42.80 moveto 
+	51.30 42.80 lineto 
+	stroke 
+	58.30 48.80 moveto 
+	51.30 48.80 lineto 
+	stroke 
+	58.30 54.80 moveto 
+	51.30 54.80 lineto 
+	stroke 
+	21.30 24.80 moveto 
+	28.30 24.80 lineto 
+	stroke 
+	21.30 30.80 moveto 
+	28.30 30.80 lineto 
+	stroke 
+	21.30 36.80 moveto 
+	28.30 36.80 lineto 
+	stroke 
+	21.30 42.80 moveto 
+	28.30 42.80 lineto 
+	stroke 
+	21.30 48.80 moveto 
+	28.30 48.80 lineto 
+	stroke 
+	21.30 54.80 moveto 
+	28.30 54.80 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssDrive003
+%?fn	ssDrive003
+%?brief	Fahren Raupe vor
+%?bbox	0 0 79 79
+/ssDrive003 {
+	3 setlinewidth_nlw 
+	39.45 69.15 moveto 
+	39.55 69.23 lineto 
+	stroke 
+	39.55 69.23 moveto 
+	39.67 69.28 lineto 
+	stroke 
+	39.67 69.28 moveto 
+	39.80 69.30 lineto 
+	stroke 
+	39.80 69.30 moveto 
+	39.93 69.28 lineto 
+	stroke 
+	39.93 69.28 moveto 
+	40.05 69.23 lineto 
+	stroke 
+	40.05 69.23 moveto 
+	40.15 69.15 lineto 
+	stroke 
+	40 69 moveto 
+	47 62 lineto 
+	stroke 
+	47.75 61.56 moveto 
+	47.81 61.47 lineto 
+	stroke 
+	47.81 61.47 moveto 
+	47.83 61.38 lineto 
+	stroke 
+	47.83 61.38 moveto 
+	47.81 61.28 lineto 
+	stroke 
+	47.81 61.28 moveto 
+	47.75 61.20 lineto 
+	stroke 
+	47.75 61.20 moveto 
+	47.67 61.15 lineto 
+	stroke 
+	47.67 61.15 moveto 
+	47.58 61.13 lineto 
+	stroke 
+	47.58 61.13 moveto 
+	43.30 61.13 lineto 
+	stroke 
+	43.30 61.13 moveto 
+	43.17 61.11 lineto 
+	stroke 
+	43.17 61.11 moveto 
+	43.05 61.06 lineto 
+	stroke 
+	43.05 61.06 moveto 
+	42.95 60.98 lineto 
+	stroke 
+	42.95 60.98 moveto 
+	42.87 60.88 lineto 
+	stroke 
+	42.87 60.88 moveto 
+	42.82 60.76 lineto 
+	stroke 
+	42.82 60.76 moveto 
+	42.80 60.63 lineto 
+	stroke 
+	42.80 60.63 moveto 
+	42.80 55.30 lineto 
+	stroke 
+	42.80 55.30 moveto 
+	42.78 55.17 lineto 
+	stroke 
+	42.78 55.17 moveto 
+	42.73 55.05 lineto 
+	stroke 
+	42.73 55.05 moveto 
+	42.65 54.95 lineto 
+	stroke 
+	42.65 54.95 moveto 
+	42.55 54.87 lineto 
+	stroke 
+	42.55 54.87 moveto 
+	42.43 54.82 lineto 
+	stroke 
+	42.43 54.82 moveto 
+	42.30 54.80 lineto 
+	stroke 
+	42.30 54.80 moveto 
+	37.30 54.80 lineto 
+	stroke 
+	37.30 54.80 moveto 
+	37.17 54.82 lineto 
+	stroke 
+	37.17 54.82 moveto 
+	37.05 54.87 lineto 
+	stroke 
+	37.05 54.87 moveto 
+	36.95 54.95 lineto 
+	stroke 
+	36.95 54.95 moveto 
+	36.87 55.05 lineto 
+	stroke 
+	36.87 55.05 moveto 
+	36.82 55.17 lineto 
+	stroke 
+	36.82 55.17 moveto 
+	36.80 55.30 lineto 
+	stroke 
+	36.80 55.30 moveto 
+	36.80 60.63 lineto 
+	stroke 
+	36.80 60.63 moveto 
+	36.78 60.76 lineto 
+	stroke 
+	36.78 60.76 moveto 
+	36.73 60.88 lineto 
+	stroke 
+	36.73 60.88 moveto 
+	36.65 60.98 lineto 
+	stroke 
+	36.65 60.98 moveto 
+	36.55 61.06 lineto 
+	stroke 
+	36.55 61.06 moveto 
+	36.43 61.11 lineto 
+	stroke 
+	36.43 61.11 moveto 
+	36.30 61.13 lineto 
+	stroke 
+	36.30 61.13 moveto 
+	32.02 61.13 lineto 
+	stroke 
+	32.02 61.13 moveto 
+	31.93 61.15 lineto 
+	stroke 
+	31.93 61.15 moveto 
+	31.85 61.20 lineto 
+	stroke 
+	31.85 61.20 moveto 
+	31.79 61.28 lineto 
+	stroke 
+	31.79 61.28 moveto 
+	31.77 61.38 lineto 
+	stroke 
+	31.77 61.38 moveto 
+	31.79 61.47 lineto 
+	stroke 
+	31.79 61.47 moveto 
+	31.85 61.56 lineto 
+	stroke 
+	31.85 61.56 moveto 
+	39.45 69.15 lineto 
+	stroke 
+	58.30 24.80 moveto 
+	51.30 24.80 lineto 
+	stroke 
+	58.30 30.80 moveto 
+	51.30 30.80 lineto 
+	stroke 
+	58.30 36.80 moveto 
+	51.30 36.80 lineto 
+	stroke 
+	58.30 42.80 moveto 
+	51.30 42.80 lineto 
+	stroke 
+	58.30 48.80 moveto 
+	51.30 48.80 lineto 
+	stroke 
+	58.30 54.80 moveto 
+	51.30 54.80 lineto 
+	stroke 
+	21.30 24.80 moveto 
+	28.30 24.80 lineto 
+	stroke 
+	21.30 30.80 moveto 
+	28.30 30.80 lineto 
+	stroke 
+	21.30 36.80 moveto 
+	28.30 36.80 lineto 
+	stroke 
+	21.30 42.80 moveto 
+	28.30 42.80 lineto 
+	stroke 
+	21.30 48.80 moveto 
+	28.30 48.80 lineto 
+	stroke 
+	21.30 54.80 moveto 
+	28.30 54.80 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssPedal002
+%?fn	ssPedal002
+%?brief	Pedal unbetätigt
+%?bbox	0 0 79 79
+/ssPedal002 {
+	
+	currentcolor 
+	6 22 67 -6 rectfill 
+	3 setlinewidth_nlw 
+	19 22 moveto 
+	20 33 22 43 28 52 curveto 
+	stroke 
+	18 62 moveto 
+	73 22 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+	currentcolor 
+	Grey 17 22 moveto 
+	6 22 lineto 
+	stroke 
+	6 22 moveto 
+	6 16 lineto 
+	stroke 
+	6 16 moveto 
+	73 16 lineto 
+	stroke 
+	73 16 moveto 
+	73 20 lineto 
+	stroke 
+	71 22 moveto 
+	21 22 lineto 
+	stroke 
+	16 62 moveto 
+	18 64 lineto 
+	stroke 
+	18 64 moveto 
+	73 24 lineto 
+	stroke 
+	71 22 moveto 
+	16 62 lineto 
+	stroke 
+	75 22 moveto 
+	73 22 2 0 360 arc 
+	stroke 
+	setcolor 
+} def
+%?partend
+
+%?partdef ssPedal001
+%?fn	ssPedal001
+%?brief	2 Pedale
+%?bbox	0 0 79 79
+/ssPedal001 {
+	3 setlinewidth_nlw 
+	60.70 15.44 moveto 
+	61.20 15.93 lineto 
+	stroke 
+	61.20 15.93 moveto 
+	61.68 16.42 lineto 
+	stroke 
+	61.68 16.42 moveto 
+	62.15 16.91 lineto 
+	stroke 
+	62.15 16.91 moveto 
+	62.61 17.52 lineto 
+	stroke 
+	62.61 17.52 moveto 
+	63.05 18.01 lineto 
+	stroke 
+	63.05 18.01 moveto 
+	63.48 18.49 lineto 
+	stroke 
+	63.48 18.49 moveto 
+	63.89 19.11 lineto 
+	stroke 
+	63.89 19.11 moveto 
+	64.29 19.59 lineto 
+	stroke 
+	64.29 19.59 moveto 
+	64.67 20.20 lineto 
+	stroke 
+	64.67 20.20 moveto 
+	65.04 20.82 lineto 
+	stroke 
+	65.04 20.82 moveto 
+	65.39 21.43 lineto 
+	stroke 
+	65.39 21.43 moveto 
+	65.73 21.91 lineto 
+	stroke 
+	65.73 21.91 moveto 
+	66.04 22.53 lineto 
+	stroke 
+	66.04 22.53 moveto 
+	66.34 23.26 lineto 
+	stroke 
+	66.34 23.26 moveto 
+	66.63 23.87 lineto 
+	stroke 
+	66.63 23.87 moveto 
+	66.90 24.48 lineto 
+	stroke 
+	66.90 24.48 moveto 
+	67.14 25.09 lineto 
+	stroke 
+	67.14 25.09 moveto 
+	67.38 25.70 lineto 
+	stroke 
+	61.83 28.02 moveto 
+	61.74 27.78 lineto 
+	stroke 
+	61.74 27.78 moveto 
+	61.50 27.17 lineto 
+	stroke 
+	61.50 27.17 moveto 
+	61.25 26.43 lineto 
+	stroke 
+	61.25 26.43 moveto 
+	60.96 25.82 lineto 
+	stroke 
+	60.96 25.82 moveto 
+	60.66 25.21 lineto 
+	stroke 
+	60.66 25.21 moveto 
+	60.33 24.60 lineto 
+	stroke 
+	60.33 24.60 moveto 
+	59.98 23.99 lineto 
+	stroke 
+	59.98 23.99 moveto 
+	59.60 23.38 lineto 
+	stroke 
+	59.60 23.38 moveto 
+	59.21 22.89 lineto 
+	stroke 
+	59.21 22.89 moveto 
+	58.79 22.28 lineto 
+	stroke 
+	58.79 22.28 moveto 
+	58.36 21.67 lineto 
+	stroke 
+	58.36 21.67 moveto 
+	57.90 21.18 lineto 
+	stroke 
+	57.90 21.18 moveto 
+	57.42 20.69 lineto 
+	stroke 
+	57.42 20.69 moveto 
+	56.93 20.20 lineto 
+	stroke 
+	56.93 20.20 moveto 
+	56.42 19.72 lineto 
+	stroke 
+	56.42 19.72 moveto 
+	56.26 19.59 lineto 
+	stroke 
+	56.26 19.59 moveto 
+	56.07 19.59 lineto 
+	stroke 
+	56.07 19.59 moveto 
+	55.89 19.59 lineto 
+	stroke 
+	55.89 19.59 moveto 
+	55.73 19.72 lineto 
+	stroke 
+	55.73 19.72 moveto 
+	52.73 22.77 lineto 
+	stroke 
+	52.73 22.77 moveto 
+	52.65 22.77 lineto 
+	stroke 
+	52.65 22.77 moveto 
+	52.55 22.77 lineto 
+	stroke 
+	52.55 22.77 moveto 
+	52.45 22.77 lineto 
+	stroke 
+	52.45 22.77 moveto 
+	52.37 22.77 lineto 
+	stroke 
+	52.37 22.77 moveto 
+	52.32 22.65 lineto 
+	stroke 
+	52.32 22.65 moveto 
+	52.30 22.53 lineto 
+	stroke 
+	52.30 22.53 moveto 
+	52.30 11.78 lineto 
+	stroke 
+	52.30 11.78 moveto 
+	52.34 11.65 lineto 
+	stroke 
+	52.34 11.65 moveto 
+	52.45 11.41 lineto 
+	stroke 
+	52.45 11.41 moveto 
+	52.61 11.29 lineto 
+	stroke 
+	52.61 11.29 moveto 
+	52.80 11.29 lineto 
+	stroke 
+	52.80 11.29 moveto 
+	63.55 11.29 lineto 
+	stroke 
+	63.55 11.29 moveto 
+	63.64 11.29 lineto 
+	stroke 
+	63.64 11.29 moveto 
+	63.72 11.41 lineto 
+	stroke 
+	63.72 11.41 moveto 
+	63.78 11.41 lineto 
+	stroke 
+	63.78 11.41 moveto 
+	63.80 11.53 lineto 
+	stroke 
+	63.80 11.53 moveto 
+	63.78 11.65 lineto 
+	stroke 
+	63.78 11.65 moveto 
+	63.72 11.78 lineto 
+	stroke 
+	63.72 11.78 moveto 
+	60.69 14.83 lineto 
+	stroke 
+	60.69 14.83 moveto 
+	60.58 14.95 lineto 
+	stroke 
+	60.58 14.95 moveto 
+	60.54 15.20 lineto 
+	stroke 
+	60.54 15.20 moveto 
+	60.58 15.32 lineto 
+	stroke 
+	60.58 15.32 moveto 
+	60.70 15.44 lineto 
+	stroke 
+	62.99 39.98 moveto 
+	62.62 39.86 lineto 
+	stroke 
+	62.62 39.86 moveto 
+	62.23 39.86 lineto 
+	stroke 
+	62.23 39.86 moveto 
+	61.85 39.86 lineto 
+	stroke 
+	61.85 39.86 moveto 
+	61.47 39.98 lineto 
+	stroke 
+	61.47 39.98 moveto 
+	61.09 40.11 lineto 
+	stroke 
+	61.09 40.11 moveto 
+	60.73 40.23 lineto 
+	stroke 
+	60.73 40.23 moveto 
+	60.38 40.35 lineto 
+	stroke 
+	60.38 40.35 moveto 
+	60.05 40.59 lineto 
+	stroke 
+	60.05 40.59 moveto 
+	59.74 40.84 lineto 
+	stroke 
+	59.74 40.84 moveto 
+	56.10 44.01 lineto 
+	stroke 
+	56.10 44.01 moveto 
+	55.08 44.87 lineto 
+	stroke 
+	55.08 44.87 moveto 
+	54.04 45.72 lineto 
+	stroke 
+	54.04 45.72 moveto 
+	52.97 46.46 lineto 
+	stroke 
+	52.97 46.46 moveto 
+	51.87 47.19 lineto 
+	stroke 
+	51.87 47.19 moveto 
+	50.76 47.92 lineto 
+	stroke 
+	50.76 47.92 moveto 
+	49.62 48.65 lineto 
+	stroke 
+	49.62 48.65 moveto 
+	48.47 49.39 lineto 
+	stroke 
+	48.47 49.39 moveto 
+	47.30 50 lineto 
+	stroke 
+	47.30 50 moveto 
+	46.13 50.61 lineto 
+	stroke 
+	46.13 50.61 moveto 
+	44.94 51.22 lineto 
+	stroke 
+	44.94 51.22 moveto 
+	43.75 51.83 lineto 
+	stroke 
+	43.75 51.83 moveto 
+	42.55 52.44 lineto 
+	stroke 
+	42.55 52.44 moveto 
+	41.37 53.05 lineto 
+	stroke 
+	41.37 53.05 moveto 
+	40.18 53.66 lineto 
+	stroke 
+	40.18 53.66 moveto 
+	39.02 54.27 lineto 
+	stroke 
+	39.02 54.27 moveto 
+	37.87 55.01 lineto 
+	stroke 
+	37.87 55.01 moveto 
+	36.75 55.74 lineto 
+	stroke 
+	36.75 55.74 moveto 
+	35.67 56.47 lineto 
+	stroke 
+	35.67 56.47 moveto 
+	34.64 57.33 lineto 
+	stroke 
+	34.64 57.33 moveto 
+	29.24 62.09 lineto 
+	stroke 
+	29.24 62.09 moveto 
+	29.17 62.21 lineto 
+	stroke 
+	29.17 62.21 moveto 
+	29.16 62.33 lineto 
+	stroke 
+	29.16 62.33 moveto 
+	29.22 62.46 lineto 
+	stroke 
+	29.22 62.46 moveto 
+	29.33 62.58 lineto 
+	stroke 
+	29.33 62.58 moveto 
+	36.89 64.90 lineto 
+	stroke 
+	36.89 64.90 moveto 
+	37.23 64.90 lineto 
+	stroke 
+	37.23 64.90 moveto 
+	37.56 64.90 lineto 
+	stroke 
+	37.56 64.90 moveto 
+	37.90 64.90 lineto 
+	stroke 
+	37.90 64.90 moveto 
+	38.24 64.90 lineto 
+	stroke 
+	38.24 64.90 moveto 
+	38.57 64.78 lineto 
+	stroke 
+	38.57 64.78 moveto 
+	38.89 64.65 lineto 
+	stroke 
+	38.89 64.65 moveto 
+	39.21 64.53 lineto 
+	stroke 
+	39.21 64.53 moveto 
+	39.51 64.41 lineto 
+	stroke 
+	39.51 64.41 moveto 
+	39.80 64.29 lineto 
+	stroke 
+	39.80 64.29 moveto 
+	40.79 63.56 lineto 
+	stroke 
+	40.79 63.56 moveto 
+	41.79 62.82 lineto 
+	stroke 
+	41.79 62.82 moveto 
+	42.77 62.21 lineto 
+	stroke 
+	42.77 62.21 moveto 
+	43.76 61.48 lineto 
+	stroke 
+	43.76 61.48 moveto 
+	44.74 60.75 lineto 
+	stroke 
+	44.74 60.75 moveto 
+	45.71 60.01 lineto 
+	stroke 
+	45.71 60.01 moveto 
+	46.68 59.28 lineto 
+	stroke 
+	46.68 59.28 moveto 
+	47.65 58.55 lineto 
+	stroke 
+	47.65 58.55 moveto 
+	48.61 57.82 lineto 
+	stroke 
+	48.61 57.82 moveto 
+	49.57 57.08 lineto 
+	stroke 
+	49.57 57.08 moveto 
+	50.52 56.35 lineto 
+	stroke 
+	50.52 56.35 moveto 
+	51.47 55.49 lineto 
+	stroke 
+	51.47 55.49 moveto 
+	52.41 54.76 lineto 
+	stroke 
+	52.41 54.76 moveto 
+	53.35 54.03 lineto 
+	stroke 
+	53.35 54.03 moveto 
+	54.28 53.30 lineto 
+	stroke 
+	54.28 53.30 moveto 
+	55.21 52.44 lineto 
+	stroke 
+	55.21 52.44 moveto 
+	56.13 51.71 lineto 
+	stroke 
+	56.13 51.71 moveto 
+	57.05 50.85 lineto 
+	stroke 
+	57.05 50.85 moveto 
+	57.96 50.12 lineto 
+	stroke 
+	57.96 50.12 moveto 
+	58.87 49.27 lineto 
+	stroke 
+	58.87 49.27 moveto 
+	59.77 48.41 lineto 
+	stroke 
+	59.77 48.41 moveto 
+	60.67 47.68 lineto 
+	stroke 
+	60.67 47.68 moveto 
+	61.56 46.82 lineto 
+	stroke 
+	61.56 46.82 moveto 
+	62.44 45.97 lineto 
+	stroke 
+	62.44 45.97 moveto 
+	63.32 45.11 lineto 
+	stroke 
+	63.32 45.11 moveto 
+	64.20 44.26 lineto 
+	stroke 
+	64.20 44.26 moveto 
+	65.07 43.40 lineto 
+	stroke 
+	65.07 43.40 moveto 
+	65.93 42.55 lineto 
+	stroke 
+	65.93 42.55 moveto 
+	66.78 41.69 lineto 
+	stroke 
+	66.78 41.69 moveto 
+	66.84 41.57 lineto 
+	stroke 
+	66.84 41.57 moveto 
+	66.85 41.45 lineto 
+	stroke 
+	66.85 41.45 moveto 
+	66.79 41.45 lineto 
+	stroke 
+	66.79 41.45 moveto 
+	66.69 41.33 lineto 
+	stroke 
+	66.69 41.33 moveto 
+	62.99 39.98 lineto 
+	stroke 
+	37.46 32.53 moveto 
+	37.77 32.29 lineto 
+	stroke 
+	37.77 32.29 moveto 
+	38.11 32.17 lineto 
+	stroke 
+	38.11 32.17 moveto 
+	38.46 31.92 lineto 
+	stroke 
+	38.46 31.92 moveto 
+	38.83 31.92 lineto 
+	stroke 
+	38.83 31.92 moveto 
+	39.20 31.80 lineto 
+	stroke 
+	39.20 31.80 moveto 
+	39.57 31.68 lineto 
+	stroke 
+	39.57 31.68 moveto 
+	39.96 31.68 lineto 
+	stroke 
+	39.96 31.68 moveto 
+	40.34 31.80 lineto 
+	stroke 
+	40.34 31.80 moveto 
+	40.70 31.80 lineto 
+	stroke 
+	40.70 31.80 moveto 
+	44.94 33.39 lineto 
+	stroke 
+	44.94 33.39 moveto 
+	45.05 33.51 lineto 
+	stroke 
+	45.05 33.51 moveto 
+	45.10 33.51 lineto 
+	stroke 
+	45.10 33.51 moveto 
+	45.09 33.75 lineto 
+	stroke 
+	45.09 33.75 moveto 
+	45.02 33.75 lineto 
+	stroke 
+	45.02 33.75 moveto 
+	41.26 37.17 lineto 
+	stroke 
+	41.26 37.17 moveto 
+	40.45 37.91 lineto 
+	stroke 
+	40.45 37.91 moveto 
+	39.66 38.64 lineto 
+	stroke 
+	39.66 38.64 moveto 
+	38.89 39.49 lineto 
+	stroke 
+	38.89 39.49 moveto 
+	38.16 40.35 lineto 
+	stroke 
+	38.16 40.35 moveto 
+	37.45 41.20 lineto 
+	stroke 
+	37.45 41.20 moveto 
+	36.77 42.06 lineto 
+	stroke 
+	36.77 42.06 moveto 
+	36.13 42.91 lineto 
+	stroke 
+	36.13 42.91 moveto 
+	35.52 43.89 lineto 
+	stroke 
+	35.52 43.89 moveto 
+	34.95 44.75 lineto 
+	stroke 
+	34.95 44.75 moveto 
+	34.41 45.72 lineto 
+	stroke 
+	34.41 45.72 moveto 
+	33.89 46.70 lineto 
+	stroke 
+	33.89 46.70 moveto 
+	33.38 47.68 lineto 
+	stroke 
+	33.38 47.68 moveto 
+	32.86 48.65 lineto 
+	stroke 
+	32.86 48.65 moveto 
+	32.32 49.63 lineto 
+	stroke 
+	32.32 49.63 moveto 
+	31.74 50.61 lineto 
+	stroke 
+	31.74 50.61 moveto 
+	31.11 51.46 lineto 
+	stroke 
+	31.11 51.46 moveto 
+	30.41 52.32 lineto 
+	stroke 
+	30.41 52.32 moveto 
+	29.66 53.17 lineto 
+	stroke 
+	29.66 53.17 moveto 
+	28.86 53.91 lineto 
+	stroke 
+	28.86 53.91 moveto 
+	23.21 58.91 lineto 
+	stroke 
+	23.21 58.91 moveto 
+	22.91 59.16 lineto 
+	stroke 
+	22.91 59.16 moveto 
+	22.58 59.28 lineto 
+	stroke 
+	22.58 59.28 moveto 
+	22.23 59.53 lineto 
+	stroke 
+	22.23 59.53 moveto 
+	21.87 59.65 lineto 
+	stroke 
+	21.87 59.65 moveto 
+	21.50 59.65 lineto 
+	stroke 
+	21.50 59.65 moveto 
+	21.12 59.77 lineto 
+	stroke 
+	21.12 59.77 moveto 
+	20.75 59.77 lineto 
+	stroke 
+	20.75 59.77 moveto 
+	20.37 59.77 lineto 
+	stroke 
+	20.37 59.77 moveto 
+	20 59.65 lineto 
+	stroke 
+	20 59.65 moveto 
+	11.76 57.20 lineto 
+	stroke 
+	11.76 57.20 moveto 
+	11.66 57.08 lineto 
+	stroke 
+	11.66 57.08 moveto 
+	11.59 56.96 lineto 
+	stroke 
+	11.59 56.96 moveto 
+	11.59 56.84 lineto 
+	stroke 
+	11.59 56.84 moveto 
+	11.64 56.72 lineto 
+	stroke 
+	11.64 56.72 moveto 
+	12.44 55.86 lineto 
+	stroke 
+	12.44 55.86 moveto 
+	13.24 54.88 lineto 
+	stroke 
+	13.24 54.88 moveto 
+	14.06 54.03 lineto 
+	stroke 
+	14.06 54.03 moveto 
+	14.88 53.05 lineto 
+	stroke 
+	14.88 53.05 moveto 
+	15.70 52.20 lineto 
+	stroke 
+	15.70 52.20 moveto 
+	16.54 51.34 lineto 
+	stroke 
+	16.54 51.34 moveto 
+	17.38 50.36 lineto 
+	stroke 
+	17.38 50.36 moveto 
+	18.23 49.51 lineto 
+	stroke 
+	18.23 49.51 moveto 
+	19.09 48.65 lineto 
+	stroke 
+	19.09 48.65 moveto 
+	19.95 47.80 lineto 
+	stroke 
+	19.95 47.80 moveto 
+	20.82 46.95 lineto 
+	stroke 
+	20.82 46.95 moveto 
+	21.70 46.09 lineto 
+	stroke 
+	21.70 46.09 moveto 
+	22.58 45.24 lineto 
+	stroke 
+	22.58 45.24 moveto 
+	23.47 44.38 lineto 
+	stroke 
+	23.47 44.38 moveto 
+	24.37 43.53 lineto 
+	stroke 
+	24.37 43.53 moveto 
+	25.27 42.67 lineto 
+	stroke 
+	25.27 42.67 moveto 
+	26.18 41.94 lineto 
+	stroke 
+	26.18 41.94 moveto 
+	27.09 41.08 lineto 
+	stroke 
+	27.09 41.08 moveto 
+	28.01 40.23 lineto 
+	stroke 
+	28.01 40.23 moveto 
+	28.93 39.49 lineto 
+	stroke 
+	28.93 39.49 moveto 
+	29.86 38.64 lineto 
+	stroke 
+	29.86 38.64 moveto 
+	30.79 37.91 lineto 
+	stroke 
+	30.79 37.91 moveto 
+	31.73 37.05 lineto 
+	stroke 
+	31.73 37.05 moveto 
+	32.67 36.32 lineto 
+	stroke 
+	32.67 36.32 moveto 
+	33.62 35.59 lineto 
+	stroke 
+	33.62 35.59 moveto 
+	34.57 34.73 lineto 
+	stroke 
+	34.57 34.73 moveto 
+	35.53 34 lineto 
+	stroke 
+	35.53 34 moveto 
+	36.49 33.27 lineto 
+	stroke 
+	36.49 33.27 moveto 
+	37.46 32.53 lineto 
+	stroke 
+	62 28 moveto 
+	57 29 lineto 
+	stroke 
+	73 26 moveto 
+	68 27 lineto 
+	stroke 
+	68 27 moveto 
+	67 25 lineto 
+	stroke 
+	57 29 moveto 
+	67 35 lineto 
+	stroke 
+	67 35 moveto 
+	73 26 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssHydr001
+%?fn	ssHydr001
+%?brief	symbol of variable hydraulic Motor
+%?bbox	0 0 79 79
+/ssHydr001 {
+	3 setlinewidth_nlw 
+	60.30 36.80 moveto 
+	60.18 39.05 lineto 
+	stroke 
+	60.18 39.05 moveto 
+	59.83 41.27 lineto 
+	stroke 
+	59.83 41.27 moveto 
+	59.25 43.44 lineto 
+	stroke 
+	59.25 43.44 moveto 
+	58.44 45.54 lineto 
+	stroke 
+	58.44 45.54 moveto 
+	57.42 47.55 lineto 
+	stroke 
+	57.42 47.55 moveto 
+	56.19 49.44 lineto 
+	stroke 
+	56.19 49.44 moveto 
+	54.78 51.19 lineto 
+	stroke 
+	54.78 51.19 moveto 
+	53.19 52.78 lineto 
+	stroke 
+	53.19 52.78 moveto 
+	51.44 54.19 lineto 
+	stroke 
+	51.44 54.19 moveto 
+	49.55 55.42 lineto 
+	stroke 
+	49.55 55.42 moveto 
+	47.54 56.44 lineto 
+	stroke 
+	47.54 56.44 moveto 
+	45.44 57.25 lineto 
+	stroke 
+	45.44 57.25 moveto 
+	43.27 57.83 lineto 
+	stroke 
+	43.27 57.83 moveto 
+	41.05 58.18 lineto 
+	stroke 
+	41.05 58.18 moveto 
+	38.80 58.30 lineto 
+	stroke 
+	38.80 58.30 moveto 
+	36.55 58.18 lineto 
+	stroke 
+	36.55 58.18 moveto 
+	34.33 57.83 lineto 
+	stroke 
+	34.33 57.83 moveto 
+	32.16 57.25 lineto 
+	stroke 
+	32.16 57.25 moveto 
+	30.06 56.44 lineto 
+	stroke 
+	30.06 56.44 moveto 
+	28.05 55.42 lineto 
+	stroke 
+	28.05 55.42 moveto 
+	26.16 54.19 lineto 
+	stroke 
+	26.16 54.19 moveto 
+	24.41 52.78 lineto 
+	stroke 
+	24.41 52.78 moveto 
+	22.82 51.19 lineto 
+	stroke 
+	22.82 51.19 moveto 
+	21.41 49.44 lineto 
+	stroke 
+	21.41 49.44 moveto 
+	20.18 47.55 lineto 
+	stroke 
+	20.18 47.55 moveto 
+	19.16 45.54 lineto 
+	stroke 
+	19.16 45.54 moveto 
+	18.35 43.44 lineto 
+	stroke 
+	18.35 43.44 moveto 
+	17.77 41.27 lineto 
+	stroke 
+	17.77 41.27 moveto 
+	17.42 39.05 lineto 
+	stroke 
+	17.42 39.05 moveto 
+	17.30 36.80 lineto 
+	stroke 
+	17.30 36.80 moveto 
+	17.42 34.55 lineto 
+	stroke 
+	17.42 34.55 moveto 
+	17.77 32.33 lineto 
+	stroke 
+	17.77 32.33 moveto 
+	18.35 30.16 lineto 
+	stroke 
+	18.35 30.16 moveto 
+	19.16 28.06 lineto 
+	stroke 
+	19.16 28.06 moveto 
+	20.18 26.05 lineto 
+	stroke 
+	20.18 26.05 moveto 
+	21.41 24.16 lineto 
+	stroke 
+	21.41 24.16 moveto 
+	22.82 22.41 lineto 
+	stroke 
+	22.82 22.41 moveto 
+	24.41 20.82 lineto 
+	stroke 
+	24.41 20.82 moveto 
+	26.16 19.41 lineto 
+	stroke 
+	26.16 19.41 moveto 
+	28.05 18.18 lineto 
+	stroke 
+	28.05 18.18 moveto 
+	30.06 17.16 lineto 
+	stroke 
+	30.06 17.16 moveto 
+	32.16 16.35 lineto 
+	stroke 
+	32.16 16.35 moveto 
+	34.33 15.77 lineto 
+	stroke 
+	34.33 15.77 moveto 
+	36.55 15.42 lineto 
+	stroke 
+	36.55 15.42 moveto 
+	38.80 15.30 lineto 
+	stroke 
+	38.80 15.30 moveto 
+	41.05 15.42 lineto 
+	stroke 
+	41.05 15.42 moveto 
+	43.27 15.77 lineto 
+	stroke 
+	43.27 15.77 moveto 
+	45.44 16.35 lineto 
+	stroke 
+	45.44 16.35 moveto 
+	47.54 17.16 lineto 
+	stroke 
+	47.54 17.16 moveto 
+	49.55 18.18 lineto 
+	stroke 
+	49.55 18.18 moveto 
+	51.44 19.41 lineto 
+	stroke 
+	51.44 19.41 moveto 
+	53.19 20.82 lineto 
+	stroke 
+	53.19 20.82 moveto 
+	54.78 22.41 lineto 
+	stroke 
+	54.78 22.41 moveto 
+	56.19 24.16 lineto 
+	stroke 
+	56.19 24.16 moveto 
+	57.42 26.05 lineto 
+	stroke 
+	57.42 26.05 moveto 
+	58.44 28.06 lineto 
+	stroke 
+	58.44 28.06 moveto 
+	59.25 30.16 lineto 
+	stroke 
+	59.25 30.16 moveto 
+	59.83 32.33 lineto 
+	stroke 
+	59.83 32.33 moveto 
+	60.18 34.55 lineto 
+	stroke 
+	60.18 34.55 moveto 
+	60.30 36.80 lineto 
+	stroke 
+	15 11 moveto 
+	64 60 lineto 
+	stroke 
+	66 62 moveto 
+	58 62 lineto 
+	stroke 
+	66 62 moveto 
+	66 55 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	%?plinebeg
+	
+	newpath 
+	39 27 moveto 
+	29 17 lineto 
+	49 17 lineto 
+	39 27 lineto 
+	eofill 
+	%?plineend
+	
+	%?plinebeg
+	
+	newpath 
+	39 47 moveto 
+	29 57 lineto 
+	49 57 lineto 
+	39 47 lineto 
+	eofill 
+	%?plineend
+	35 20 7 -4 rectfill 
+} def
+%?partend
+
+%?partdef ssHydr002
+%?fn	ssHydr002
+%?brief	symbol of variable hydraulic Pump
+%?bbox	0 0 79 79
+/ssHydr002 {
+	3 setlinewidth_nlw 
+	60.30 36.80 moveto 
+	60.18 39.05 lineto 
+	stroke 
+	60.18 39.05 moveto 
+	59.83 41.27 lineto 
+	stroke 
+	59.83 41.27 moveto 
+	59.25 43.44 lineto 
+	stroke 
+	59.25 43.44 moveto 
+	58.44 45.54 lineto 
+	stroke 
+	58.44 45.54 moveto 
+	57.42 47.55 lineto 
+	stroke 
+	57.42 47.55 moveto 
+	56.19 49.44 lineto 
+	stroke 
+	56.19 49.44 moveto 
+	54.78 51.19 lineto 
+	stroke 
+	54.78 51.19 moveto 
+	53.19 52.78 lineto 
+	stroke 
+	53.19 52.78 moveto 
+	51.44 54.19 lineto 
+	stroke 
+	51.44 54.19 moveto 
+	49.55 55.42 lineto 
+	stroke 
+	49.55 55.42 moveto 
+	47.54 56.44 lineto 
+	stroke 
+	47.54 56.44 moveto 
+	45.44 57.25 lineto 
+	stroke 
+	45.44 57.25 moveto 
+	43.27 57.83 lineto 
+	stroke 
+	43.27 57.83 moveto 
+	41.05 58.18 lineto 
+	stroke 
+	41.05 58.18 moveto 
+	38.80 58.30 lineto 
+	stroke 
+	38.80 58.30 moveto 
+	36.55 58.18 lineto 
+	stroke 
+	36.55 58.18 moveto 
+	34.33 57.83 lineto 
+	stroke 
+	34.33 57.83 moveto 
+	32.16 57.25 lineto 
+	stroke 
+	32.16 57.25 moveto 
+	30.06 56.44 lineto 
+	stroke 
+	30.06 56.44 moveto 
+	28.05 55.42 lineto 
+	stroke 
+	28.05 55.42 moveto 
+	26.16 54.19 lineto 
+	stroke 
+	26.16 54.19 moveto 
+	24.41 52.78 lineto 
+	stroke 
+	24.41 52.78 moveto 
+	22.82 51.19 lineto 
+	stroke 
+	22.82 51.19 moveto 
+	21.41 49.44 lineto 
+	stroke 
+	21.41 49.44 moveto 
+	20.18 47.55 lineto 
+	stroke 
+	20.18 47.55 moveto 
+	19.16 45.54 lineto 
+	stroke 
+	19.16 45.54 moveto 
+	18.35 43.44 lineto 
+	stroke 
+	18.35 43.44 moveto 
+	17.77 41.27 lineto 
+	stroke 
+	17.77 41.27 moveto 
+	17.42 39.05 lineto 
+	stroke 
+	17.42 39.05 moveto 
+	17.30 36.80 lineto 
+	stroke 
+	17.30 36.80 moveto 
+	17.42 34.55 lineto 
+	stroke 
+	17.42 34.55 moveto 
+	17.77 32.33 lineto 
+	stroke 
+	17.77 32.33 moveto 
+	18.35 30.16 lineto 
+	stroke 
+	18.35 30.16 moveto 
+	19.16 28.06 lineto 
+	stroke 
+	19.16 28.06 moveto 
+	20.18 26.05 lineto 
+	stroke 
+	20.18 26.05 moveto 
+	21.41 24.16 lineto 
+	stroke 
+	21.41 24.16 moveto 
+	22.82 22.41 lineto 
+	stroke 
+	22.82 22.41 moveto 
+	24.41 20.82 lineto 
+	stroke 
+	24.41 20.82 moveto 
+	26.16 19.41 lineto 
+	stroke 
+	26.16 19.41 moveto 
+	28.05 18.18 lineto 
+	stroke 
+	28.05 18.18 moveto 
+	30.06 17.16 lineto 
+	stroke 
+	30.06 17.16 moveto 
+	32.16 16.35 lineto 
+	stroke 
+	32.16 16.35 moveto 
+	34.33 15.77 lineto 
+	stroke 
+	34.33 15.77 moveto 
+	36.55 15.42 lineto 
+	stroke 
+	36.55 15.42 moveto 
+	38.80 15.30 lineto 
+	stroke 
+	38.80 15.30 moveto 
+	41.05 15.42 lineto 
+	stroke 
+	41.05 15.42 moveto 
+	43.27 15.77 lineto 
+	stroke 
+	43.27 15.77 moveto 
+	45.44 16.35 lineto 
+	stroke 
+	45.44 16.35 moveto 
+	47.54 17.16 lineto 
+	stroke 
+	47.54 17.16 moveto 
+	49.55 18.18 lineto 
+	stroke 
+	49.55 18.18 moveto 
+	51.44 19.41 lineto 
+	stroke 
+	51.44 19.41 moveto 
+	53.19 20.82 lineto 
+	stroke 
+	53.19 20.82 moveto 
+	54.78 22.41 lineto 
+	stroke 
+	54.78 22.41 moveto 
+	56.19 24.16 lineto 
+	stroke 
+	56.19 24.16 moveto 
+	57.42 26.05 lineto 
+	stroke 
+	57.42 26.05 moveto 
+	58.44 28.06 lineto 
+	stroke 
+	58.44 28.06 moveto 
+	59.25 30.16 lineto 
+	stroke 
+	59.25 30.16 moveto 
+	59.83 32.33 lineto 
+	stroke 
+	59.83 32.33 moveto 
+	60.18 34.55 lineto 
+	stroke 
+	60.18 34.55 moveto 
+	60.30 36.80 lineto 
+	stroke 
+	15 11 moveto 
+	64 60 lineto 
+	stroke 
+	66 62 moveto 
+	58 62 lineto 
+	stroke 
+	66 62 moveto 
+	66 55 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	%?plinebeg
+	
+	newpath 
+	39 59 moveto 
+	29 49 lineto 
+	49 49 lineto 
+	39 59 lineto 
+	eofill 
+	%?plineend
+	
+	%?plinebeg
+	
+	newpath 
+	39 15 moveto 
+	29 25 lineto 
+	49 25 lineto 
+	39 15 lineto 
+	eofill 
+	%?plineend
+	
+} def
+%?partend
+
+%?partdef ssLimit001
+%?fn	ssLimit001
+%?brief	limit switch middle
+%?bbox	0 0 79 79
+/ssLimit001 {
+	
+	%?plinebeg
+	
+	newpath 
+	37 40 moveto 
+	21 32 lineto 
+	21 48 lineto 
+	37 40 lineto 
+	eofill 
+	newpath 
+	41 40 moveto 
+	57 32 lineto 
+	57 48 lineto 
+	41 40 lineto 
+	eofill 
+	%?plineend
+	3 setlinewidth 
+	39 30 moveto 
+	39 50 lineto 
+	stroke 
+	4 40 moveto 
+	23 40 lineto 
+	stroke 
+	55 40 moveto 
+	74 40 lineto 
+	stroke 
+	1 setlinewidth 
+} def
+%?partend
+
+%?partdef ssLimit002
+%?fn	ssLimit002
+%?brief	limit diagonal
+%?bbox	0 0 79 79
+/ssLimit002 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-27 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsLimit019 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 -30 translate 
+	0 rotate 
+	1 1 scale 
+	gsLimit002 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef ssSteerPedalLeft001
+%?fn	ssSteerPedalLeft001
+%?brief	Symbol Lenkpedal Links unbetätigt
+%?bbox	0 0 199 199
+/ssSteerPedalLeft001 {
+%?manual_beg
+	3 setlinewidth_nlw 
+	5 12 moveto 
+	58 160 lineto 
+	stroke 
+	71 12 moveto 
+	124 160 lineto 
+	stroke 
+	58 160 moveto 
+	125 160 lineto 
+	stroke 
+	6 12 moveto 
+	73 12 lineto 
+	stroke 
+	5 11 moveto 
+	5 4 lineto 
+	stroke 
+	5 4 moveto 
+	72 4 lineto 
+	stroke 
+	72 4 moveto 
+	72 12 lineto 
+	stroke 
+	71 12 moveto 
+	130 69 lineto 
+	stroke 
+	130 69 moveto 
+	93 69 lineto 
+	stroke 
+	130 68 moveto 
+	130 57 lineto 
+	stroke 
+	71 3 moveto 
+	129 59 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	68 158 moveto 
+	54 147 lineto 
+	stroke 
+	79 158 moveto 
+	48 134 lineto 
+	stroke 
+	90 158 moveto 
+	44 121 lineto 
+	stroke 
+	102 158 moveto 
+	41 109 lineto 
+	stroke 
+	114 158 moveto 
+	33 93 lineto 
+	stroke 
+	120 154 moveto 
+	30 81 lineto 
+	stroke 
+	27 71 moveto 
+	119 145 lineto 
+	stroke 
+	22 59 moveto 
+	115 134 lineto 
+	stroke 
+	19 47 moveto 
+	109 119 lineto 
+	stroke 
+	13 34 moveto 
+	106 107 lineto 
+	stroke 
+	10 24 moveto 
+	100 93 lineto 
+	stroke 
+	8 13 moveto 
+	94 77 lineto 
+	stroke 
+	17 12 moveto 
+	90 65 lineto 
+	stroke 
+	30 11 moveto 
+	85 51 lineto 
+	stroke 
+	44 12 moveto 
+	79 37 lineto 
+	stroke 
+	58 12 moveto 
+	75 24 lineto 
+	stroke 
+%?manual_end
+} def
+%?partend
+
+%?partdef ssSteerPedalLeft002
+%?fn	ssSteerPedalLeft002
+%?brief	Symbol Lenkpedal Links betätigt
+%?bbox	0 0 199 199
+/ssSteerPedalLeft002 {
+%?manual_beg
+	3 setlinewidth_nlw 
+	6 12 moveto 
+	73 12 lineto 
+	stroke 
+	63 84 moveto 
+	130 84 lineto 
+	stroke 
+	5 11 moveto 
+	5 4 lineto 
+	stroke 
+	5 4 moveto 
+	72 4 lineto 
+	stroke 
+	72 4 moveto 
+	72 12 lineto 
+	stroke 
+	71 12 moveto 
+	130 69 lineto 
+	stroke 
+	130 68 moveto 
+	130 57 lineto 
+	stroke 
+	71 3 moveto 
+	129 59 lineto 
+	stroke 
+	71 12 moveto 
+	130 84 lineto 
+	stroke 
+	4 12 moveto 
+	63 84 lineto 
+	stroke 
+	129 68 moveto 
+	120 68 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	70 83 moveto 
+	56 75 lineto 
+	stroke 
+	80 83 moveto 
+	45 62 lineto 
+	stroke 
+	88 82 moveto 
+	39 53 lineto 
+	stroke 
+	100 81 moveto 
+	22 34 lineto 
+	stroke 
+	114 81 moveto 
+	11 18 lineto 
+	stroke 
+	127 83 moveto 
+	11 11 lineto 
+	stroke 
+	121 71 moveto 
+	25 11 lineto 
+	stroke 
+	110 58 moveto 
+	38 12 lineto 
+	stroke 
+	97 44 moveto 
+	49 12 lineto 
+	stroke 
+	83 26 moveto 
+	62 12 lineto 
+	stroke
+%?manual_end	
+} def
+%?partend
+
+%?partdef ssSteerPedalRight001
+%?fn	ssSteerPedalRight001
+%?brief	Symbol Lenkpedal Links unbetätigt
+%?bbox	0 0 199 199
+/ssSteerPedalRight001 {
+%?manual_beg	
+	3 setlinewidth_nlw 
+	189 12 moveto 
+	136 160 lineto 
+	stroke 
+	123 12 moveto 
+	70 160 lineto 
+	stroke 
+	136 160 moveto 
+	69 160 lineto 
+	stroke 
+	188 12 moveto 
+	121 12 lineto 
+	stroke 
+	189 11 moveto 
+	189 4 lineto 
+	stroke 
+	189 4 moveto 
+	122 4 lineto 
+	stroke 
+	122 4 moveto 
+	122 12 lineto 
+	stroke 
+	123 12 moveto 
+	64 69 lineto 
+	stroke 
+	64 69 moveto 
+	101 69 lineto 
+	stroke 
+	64 68 moveto 
+	64 57 lineto 
+	stroke 
+	123 3 moveto 
+	65 59 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	126 158 moveto 
+	140 147 lineto 
+	stroke 
+	115 158 moveto 
+	146 134 lineto 
+	stroke 
+	104 158 moveto 
+	150 121 lineto 
+	stroke 
+	92 158 moveto 
+	153 109 lineto 
+	stroke 
+	80 158 moveto 
+	161 93 lineto 
+	stroke 
+	74 154 moveto 
+	164 81 lineto 
+	stroke 
+	167 71 moveto 
+	75 145 lineto 
+	stroke 
+	172 59 moveto 
+	79 134 lineto 
+	stroke 
+	175 47 moveto 
+	85 119 lineto 
+	stroke 
+	181 34 moveto 
+	88 107 lineto 
+	stroke 
+	184 24 moveto 
+	94 93 lineto 
+	stroke 
+	186 13 moveto 
+	100 77 lineto 
+	stroke 
+	177 12 moveto 
+	104 65 lineto 
+	stroke 
+	164 11 moveto 
+	109 51 lineto 
+	stroke 
+	150 12 moveto 
+	115 37 lineto 
+	stroke 
+	136 12 moveto 
+	119 24 lineto 
+	stroke 
+%?manual_end	
+} def
+%?partend
+
+%?partdef ssSteerPedalRight002
+%?fn	ssSteerPedalRight002
+%?brief	Symbol Lenkpedal Rechts betätigt
+%?bbox	0 0 199 199
+/ssSteerPedalRight002 {
+%?manual_beg
+	3 setlinewidth_nlw 
+	189 12 moveto 
+	122 12 lineto 
+	stroke 
+	132 84 moveto 
+	65 84 lineto 
+	stroke 
+	190 11 moveto 
+	190 4 lineto 
+	stroke 
+	190 4 moveto 
+	123 4 lineto 
+	stroke 
+	123 4 moveto 
+	123 12 lineto 
+	stroke 
+	124 12 moveto 
+	65 69 lineto 
+	stroke 
+	65 68 moveto 
+	65 57 lineto 
+	stroke 
+	124 3 moveto 
+	66 59 lineto 
+	stroke 
+	124 12 moveto 
+	65 84 lineto 
+	stroke 
+	191 12 moveto 
+	132 84 lineto 
+	stroke 
+	66 68 moveto 
+	75 68 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	125 83 moveto 
+	139 75 lineto 
+	stroke 
+	115 83 moveto 
+	150 62 lineto 
+	stroke 
+	107 82 moveto 
+	156 53 lineto 
+	stroke 
+	95 81 moveto 
+	173 34 lineto 
+	stroke 
+	81 81 moveto 
+	184 18 lineto 
+	stroke 
+	68 83 moveto 
+	184 11 lineto 
+	stroke 
+	74 71 moveto 
+	170 11 lineto 
+	stroke 
+	85 58 moveto 
+	157 12 lineto 
+	stroke 
+	98 44 moveto 
+	146 12 lineto 
+	stroke 
+	112 26 moveto 
+	133 12 lineto 
+	stroke 
+%?manual_end
+} def
+%?partend
+
+%?partdef ssSteerPedals001
+%?fn	ssSteerPedals001
+%?brief	Symbol Lenkpedal Links und Rechts unbetätigt
+%?bbox	0 0 299 199
+/ssSteerPedals001 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	ssSteerPedalLeft001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 0 translate 
+	0 rotate 
+	1 1 scale 
+	ssSteerPedalRight001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef ssGeneral022
+%?fn	ssGeneral022
+%?brief	Check Box
+%?bbox	0 0 79 79
+/ssGeneral022 {
+	3 setlinewidth_nlw 
+	1 1 moveto 
+	1 20 lineto 
+	stroke 
+	1 1 moveto 
+	20 1 lineto 
+	stroke 
+	20 1 moveto 
+	20 20 lineto 
+	stroke 
+	1 20 moveto 
+	20 20 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssGeneral023
+%?fn	ssGeneral023
+%?brief	Check Box - Filling
+%?bbox	0 0 79 79
+/ssGeneral023 {
+	1 setlinewidth_nlw 
+	5 5 11 11 rectfill 
+} def
+%?partend
+
+%?partdef ssPowertrain
+%?fn	ssPowertrain
+%?brief	powertrain dozer
+%?bbox	0 0 359 299
+/ssPowertrain {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	279 267 translate 
+	180 rotate 
+	1 1 scale 
+	ssHydr001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	149 267 translate 
+	180 rotate 
+	1 1 scale 
+	ssHydr001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	281 96 translate 
+	180 rotate 
+	1 1 scale 
+	ssHydr002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	149 98 translate 
+	180 rotate 
+	1 1 scale 
+	ssHydr002 
+	setcolor 
+	setmatrix_nlw 
+	3 setlinewidth_nlw 
+	currentcolor 
+	Green 5 setlinewidth_nlw 
+	%?plinebeg
+	110 260 moveto 
+	110 290 lineto 
+	160 290 lineto 
+	160 10 lineto 
+	110 10 lineto 
+	110 30 lineto 
+	stroke 
+	%?plineend
+	
+	%?plinebeg
+	240 260 moveto 
+	240 290 lineto 
+	190 290 lineto 
+	190 10 lineto 
+	240 10 lineto 
+	240 30 lineto 
+	stroke 
+	%?plineend
+	
+	%?plinebeg
+	240 200 moveto 
+	240 90 lineto 
+	stroke 
+	%?plineend
+	
+	%?plinebeg
+	110 200 moveto 
+	110 90 lineto 
+	stroke 
+	%?plineend
+	
+	setcolor 
+	1 setlinewidth_nlw 
+	173 71 moveto 
+	173 51 lineto 
+	stroke 
+	65 70 moveto 
+	65 50 lineto 
+	stroke 
+	61 70 moveto 
+	61 50 lineto 
+	stroke 
+	177 71 moveto 
+	177 51 lineto 
+	stroke 
+	173 66 moveto 
+	137 66 lineto 
+	stroke 
+	177 55 moveto 
+	213 55 lineto 
+	stroke 
+	173 55 moveto 
+	137 55 lineto 
+	stroke 
+	177 66 moveto 
+	213 66 lineto 
+	stroke 
+	65 65 moveto 
+	83 65 lineto 
+	stroke 
+	65 235 moveto 
+	83 235 lineto 
+	stroke 
+	61 65 moveto 
+	43 65 lineto 
+	stroke 
+	285 235 moveto 
+	267 235 lineto 
+	stroke 
+	65 54 moveto 
+	83 54 lineto 
+	stroke 
+	65 224 moveto 
+	83 224 lineto 
+	stroke 
+	61 54 moveto 
+	43 54 lineto 
+	stroke 
+	285 225 moveto 
+	267 225 lineto 
+	stroke 
+	currentcolor 
+	341 282 -56 -25 rectstroke 
+	65 282 -56 -25 rectstroke 
+	341 232 -56 -25 rectstroke 
+	65 232 -56 -25 rectstroke 
+	341 257 -56 -25 rectstroke 
+	65 257 -56 -25 rectstroke 
+	341 207 -56 -25 rectstroke 
+	65 207 -56 -25 rectstroke 
+	341 182 -56 -25 rectstroke 
+	65 182 -56 -25 rectstroke 
+	285 262 moveto 
+	341 262 lineto 
+	stroke 
+	9 262 moveto 
+	65 262 lineto 
+	stroke 
+	285 212 moveto 
+	341 212 lineto 
+	stroke 
+	9 212 moveto 
+	65 212 lineto 
+	stroke 
+	285 237 moveto 
+	341 237 lineto 
+	stroke 
+	9 237 moveto 
+	65 237 lineto 
+	stroke 
+	285 187 moveto 
+	341 187 lineto 
+	stroke 
+	9 187 moveto 
+	65 187 lineto 
+	stroke 
+	285 162 moveto 
+	341 162 lineto 
+	stroke 
+	9 162 moveto 
+	65 162 lineto 
+	stroke 
+	285 279 moveto 
+	341 279 lineto 
+	stroke 
+	9 279 moveto 
+	65 279 lineto 
+	stroke 
+	285 229 moveto 
+	341 229 lineto 
+	stroke 
+	9 229 moveto 
+	65 229 lineto 
+	stroke 
+	285 254 moveto 
+	341 254 lineto 
+	stroke 
+	9 254 moveto 
+	65 254 lineto 
+	stroke 
+	285 204 moveto 
+	341 204 lineto 
+	stroke 
+	9 204 moveto 
+	65 204 lineto 
+	stroke 
+	285 179 moveto 
+	341 179 lineto 
+	stroke 
+	9 179 moveto 
+	65 179 lineto 
+	stroke 
+	305 272 moveto 
+	303 272 2 0 360 arc 
+	stroke 
+	29 272 moveto 
+	27 272 2 0 360 arc 
+	stroke 
+	305 222 moveto 
+	303 222 2 0 360 arc 
+	stroke 
+	29 222 moveto 
+	27 222 2 0 360 arc 
+	stroke 
+	305 247 moveto 
+	303 247 2 0 360 arc 
+	stroke 
+	29 247 moveto 
+	27 247 2 0 360 arc 
+	stroke 
+	305 197 moveto 
+	303 197 2 0 360 arc 
+	stroke 
+	29 197 moveto 
+	27 197 2 0 360 arc 
+	stroke 
+	305 172 moveto 
+	303 172 2 0 360 arc 
+	stroke 
+	29 172 moveto 
+	27 172 2 0 360 arc 
+	stroke 
+	324 272 moveto 
+	322 272 2 0 360 arc 
+	stroke 
+	48 272 moveto 
+	46 272 2 0 360 arc 
+	stroke 
+	324 222 moveto 
+	322 222 2 0 360 arc 
+	stroke 
+	48 222 moveto 
+	46 222 2 0 360 arc 
+	stroke 
+	324 247 moveto 
+	322 247 2 0 360 arc 
+	stroke 
+	48 247 moveto 
+	46 247 2 0 360 arc 
+	stroke 
+	324 197 moveto 
+	322 197 2 0 360 arc 
+	stroke 
+	48 197 moveto 
+	46 197 2 0 360 arc 
+	stroke 
+	324 172 moveto 
+	322 172 2 0 360 arc 
+	stroke 
+	48 172 moveto 
+	46 172 2 0 360 arc 
+	stroke 
+	285 276 moveto 
+	341 276 lineto 
+	stroke 
+	9 276 moveto 
+	65 276 lineto 
+	stroke 
+	285 226 moveto 
+	341 226 lineto 
+	stroke 
+	9 226 moveto 
+	65 226 lineto 
+	stroke 
+	285 251 moveto 
+	341 251 lineto 
+	stroke 
+	9 251 moveto 
+	65 251 lineto 
+	stroke 
+	285 201 moveto 
+	341 201 lineto 
+	stroke 
+	9 201 moveto 
+	65 201 lineto 
+	stroke 
+	285 176 moveto 
+	341 176 lineto 
+	stroke 
+	9 176 moveto 
+	65 176 lineto 
+	stroke 
+	setcolor 
+} def
+%?partend
+
+%?partdef ssCrossWithFrame
+%?fn	ssCrossWithFrame
+%?brief	frame with a cross
+%?bbox	0 0 79 79
+/ssCrossWithFrame {
+	1 setlinewidth_nlw 
+	0 0 moveto 
+	80 80 lineto 
+	stroke 
+	0 80 moveto 
+	80 0 lineto 
+	stroke 
+	0 80 moveto 
+	80 80 lineto 
+	stroke 
+	80 80 moveto 
+	80 0 lineto 
+	stroke 
+	0 0 moveto 
+	80 0 lineto 
+	stroke 
+	0 80 moveto 
+	0 0 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssHydr003
+%?fn	ssHydr003
+%?brief	Arbeitshydraulik entlüften
+%?bbox	0 0 79 79
+/ssHydr003 {
+	3 setlinewidth_nlw 
+	23 29 moveto 
+	23 20 lineto 
+	stroke 
+	23 44 moveto 
+	23 35 lineto 
+	stroke 
+	23 44 moveto 
+	11 32 lineto 
+	stroke 
+	23 20 moveto 
+	11 32 lineto 
+	stroke 
+	23 35 moveto 
+	42 40 lineto 
+	stroke 
+	23 29 moveto 
+	42 23 lineto 
+	stroke 
+	34 61 moveto 
+	34 13 lineto 
+	stroke 
+	34 13 moveto 
+	67 13 lineto 
+	stroke 
+	67 13 moveto 
+	67 61 lineto 
+	stroke 
+	39 57 moveto 
+	62 57 lineto 
+	stroke 
+	51 57 moveto 
+	51 66 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssGeneral052
+%?fn	ssGeneral052
+%?brief	Save Icon
+%?bbox	0 0 79 79
+/ssGeneral052 {
+	3 setlinewidth_nlw 
+	currentcolor 
+	White 74 4 moveto 
+	4 4 lineto 
+	stroke 
+	4 4 moveto 
+	4 75 lineto 
+	stroke 
+	17 10 moveto 
+	17 29 lineto 
+	stroke 
+	17 29 moveto 
+	58 29 lineto 
+	stroke 
+	19 51 moveto 
+	52 51 lineto 
+	stroke 
+	4 75 moveto 
+	64 75 lineto 
+	stroke 
+	74 4 moveto 
+	74 65 lineto 
+	stroke 
+	64 75 moveto 
+	74 65 lineto 
+	stroke 
+	52 51 moveto 
+	52 75 lineto 
+	stroke 
+	19 51 moveto 
+	19 75 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	39 71 7 -15 rectfill 
+	setcolor 
+} def
+%?partend
+
+%?partdef ssAircond007
+%?fn	ssAircond007
+%?brief	Temperatur
+%?bbox	0 0 79 79
+/ssAircond007 {
+	1 setlinewidth_nlw 
+	newpath 
+	27.95 16.75 moveto 
+	28.10 17.13 28.24 17.51 28.38 17.89 curveto 
+	28.73 18.89 29.03 19.90 29.26 20.93 curveto 
+	29.62 22.56 29.80 24.24 29.66 25.90 curveto 
+	29.54 27.35 29.17 28.79 28.68 30.17 curveto 
+	28.12 31.77 27.39 33.30 26.65 34.82 curveto 
+	26.33 35.45 26.02 36.08 25.73 36.73 curveto 
+	25.42 37.44 25.14 38.17 24.96 38.92 curveto 
+	24.61 40.34 24.59 41.83 24.72 43.30 curveto 
+	24.81 44.26 24.96 45.22 25.15 46.17 curveto 
+	25.39 47.32 25.68 48.46 26.01 49.58 curveto 
+	26.45 49.58 26.89 49.58 27.33 49.58 curveto 
+	28.10 49.58 28.58 50.42 28.20 51.08 curveto 
+	27.24 52.74 26.28 54.40 25.32 56.06 curveto 
+	24.93 56.73 23.97 56.73 23.59 56.06 curveto 
+	22.63 54.40 21.67 52.74 20.71 51.08 curveto 
+	20.33 50.42 20.81 49.58 21.58 49.58 curveto 
+	22.02 49.58 22.45 49.58 22.89 49.58 curveto 
+	22.58 48.43 22.30 47.27 22.09 46.10 curveto 
+	21.87 44.93 21.72 43.74 21.66 42.54 curveto 
+	21.62 41.51 21.65 40.47 21.80 39.45 curveto 
+	21.92 38.65 22.11 37.86 22.37 37.10 curveto 
+	22.53 36.60 22.73 36.12 22.94 35.64 curveto 
+	23.09 35.31 23.24 34.98 23.40 34.64 curveto 
+	23.63 34.15 23.87 33.66 24.11 33.16 curveto 
+	24.50 32.37 24.89 31.57 25.24 30.75 curveto 
+	25.43 30.31 25.61 29.85 25.77 29.40 curveto 
+	25.94 28.94 26.09 28.48 26.23 28.01 curveto 
+	26.40 27.40 26.54 26.78 26.62 26.15 curveto 
+	26.68 25.68 26.71 25.21 26.71 24.73 curveto 
+	26.70 23.94 26.62 23.15 26.49 22.37 curveto 
+	26.31 21.36 26.04 20.37 25.72 19.40 curveto 
+	25.55 18.88 25.36 18.36 25.16 17.85 curveto 
+	24.85 17.08 25.23 16.21 26 15.90 curveto 
+	26.77 15.60 27.64 15.98 27.95 16.75 curveto 
+	eofill 
+	newpath 
+	40.30 12.80 moveto 
+	41.13 12.80 41.80 12.13 41.80 11.30 curveto 
+	41.80 10.47 41.13 9.80 40.30 9.80 curveto 
+	30.97 9.80 21.63 9.80 12.30 9.80 curveto 
+	11.47 9.80 10.80 10.47 10.80 11.30 curveto 
+	10.80 12.13 11.47 12.80 12.30 12.80 curveto 
+	21.63 12.80 30.97 12.80 40.30 12.80 curveto 
+	eofill 
+	newpath 
+	38.72 16.75 moveto 
+	38.87 17.13 39.02 17.51 39.15 17.89 curveto 
+	39.50 18.89 39.81 19.90 40.04 20.93 curveto 
+	40.40 22.56 40.57 24.24 40.44 25.90 curveto 
+	40.31 27.35 39.95 28.79 39.46 30.17 curveto 
+	38.90 31.77 38.17 33.30 37.42 34.82 curveto 
+	37.11 35.45 36.80 36.08 36.51 36.73 curveto 
+	36.20 37.44 35.92 38.17 35.74 38.92 curveto 
+	35.38 40.34 35.37 41.83 35.50 43.30 curveto 
+	35.59 44.26 35.74 45.22 35.93 46.17 curveto 
+	36.17 47.32 36.46 48.46 36.79 49.58 curveto 
+	37.23 49.58 37.67 49.58 38.11 49.58 curveto 
+	38.88 49.58 39.36 50.42 38.97 51.08 curveto 
+	38.01 52.74 37.05 54.40 36.10 56.06 curveto 
+	35.71 56.73 34.75 56.73 34.36 56.06 curveto 
+	33.41 54.40 32.45 52.74 31.49 51.08 curveto 
+	31.10 50.42 31.58 49.58 32.35 49.58 curveto 
+	32.79 49.58 33.23 49.58 33.67 49.58 curveto 
+	33.35 48.43 33.08 47.27 32.86 46.10 curveto 
+	32.65 44.93 32.49 43.74 32.44 42.54 curveto 
+	32.40 41.51 32.43 40.47 32.58 39.45 curveto 
+	32.70 38.65 32.88 37.86 33.14 37.10 curveto 
+	33.31 36.60 33.51 36.12 33.72 35.64 curveto 
+	33.86 35.31 34.02 34.98 34.18 34.64 curveto 
+	34.41 34.15 34.65 33.66 34.89 33.16 curveto 
+	35.28 32.37 35.67 31.57 36.01 30.75 curveto 
+	36.21 30.31 36.38 29.85 36.55 29.40 curveto 
+	36.71 28.94 36.87 28.48 37 28.01 curveto 
+	37.18 27.40 37.32 26.78 37.40 26.15 curveto 
+	37.46 25.68 37.49 25.21 37.48 24.73 curveto 
+	37.48 23.94 37.40 23.15 37.26 22.37 curveto 
+	37.09 21.36 36.82 20.37 36.50 19.40 curveto 
+	36.33 18.88 36.14 18.36 35.93 17.85 curveto 
+	35.63 17.08 36.01 16.21 36.78 15.90 curveto 
+	37.55 15.60 38.42 15.98 38.72 16.75 curveto 
+	eofill 
+	newpath 
+	17.17 16.75 moveto 
+	17.32 17.13 17.46 17.51 17.60 17.89 curveto 
+	17.95 18.89 18.25 19.90 18.48 20.93 curveto 
+	18.84 22.56 19.02 24.24 18.88 25.90 curveto 
+	18.76 27.35 18.39 28.79 17.91 30.17 curveto 
+	17.34 31.77 16.62 33.30 15.87 34.82 curveto 
+	15.56 35.45 15.24 36.08 14.96 36.73 curveto 
+	14.64 37.44 14.37 38.17 14.18 38.92 curveto 
+	13.83 40.34 13.81 41.83 13.95 43.30 curveto 
+	14.03 44.26 14.18 45.22 14.38 46.17 curveto 
+	14.61 47.32 14.91 48.46 15.24 49.58 curveto 
+	15.67 49.58 16.11 49.58 16.55 49.58 curveto 
+	17.32 49.58 17.80 50.42 17.42 51.08 curveto 
+	16.46 52.74 15.50 54.40 14.54 56.06 curveto 
+	14.16 56.73 13.19 56.73 12.81 56.06 curveto 
+	11.85 54.40 10.89 52.74 9.93 51.08 curveto 
+	9.55 50.42 10.03 49.58 10.80 49.58 curveto 
+	11.24 49.58 11.68 49.58 12.12 49.58 curveto 
+	11.80 48.43 11.52 47.27 11.31 46.10 curveto 
+	11.09 44.93 10.94 43.74 10.89 42.54 curveto 
+	10.84 41.51 10.88 40.47 11.03 39.45 curveto 
+	11.14 38.65 11.33 37.86 11.59 37.10 curveto 
+	11.76 36.60 11.95 36.12 12.16 35.64 curveto 
+	12.31 35.31 12.47 34.98 12.62 34.64 curveto 
+	12.86 34.15 13.10 33.66 13.34 33.16 curveto 
+	13.72 32.37 14.11 31.57 14.46 30.75 curveto 
+	14.65 30.31 14.83 29.85 14.99 29.40 curveto 
+	15.16 28.94 15.32 28.48 15.45 28.01 curveto 
+	15.63 27.40 15.77 26.78 15.85 26.15 curveto 
+	15.91 25.68 15.93 25.21 15.93 24.73 curveto 
+	15.93 23.94 15.84 23.15 15.71 22.37 curveto 
+	15.53 21.36 15.27 20.37 14.95 19.40 curveto 
+	14.77 18.88 14.58 18.36 14.38 17.85 curveto 
+	14.08 17.08 14.45 16.21 15.22 15.90 curveto 
+	15.99 15.60 16.87 15.98 17.17 16.75 curveto 
+	eofill 
+} def
+%?partend
+
+%?partdef ssHydr004
+%?fn	ssHydr004
+%?brief	Ventil
+%?bbox	0 0 79 79
+/ssHydr004 {
+	1 setlinewidth_nlw 
+	121 40 moveto 
+	3 setlinewidth_nlw 
+	9 41 moveto 
+	9 19 lineto 
+	stroke 
+	62 41 moveto 
+	62 19 lineto 
+	stroke 
+	62 41 moveto 
+	9 19 lineto 
+	stroke 
+	9 41 moveto 
+	62 19 lineto 
+	stroke 
+	35 30 moveto 
+	35 52 lineto 
+	stroke 
+	35 30 moveto 
+	35 6 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	37 45 moveto 
+	FatFont (Â°C) 
+	show_utf8 
+} def
+%?partend
+
+%?partdef ssSwitch001
+%?fn	ssSwitch001
+%?brief	Druckschalter
+%?bbox	0 0 79 79
+/ssSwitch001 {
+	3 setlinewidth_nlw 
+	4 16 moveto 
+	23 16 lineto 
+	stroke 
+	23 16 moveto 
+	47 27 lineto 
+	stroke 
+	48 16 moveto 
+	75 16 lineto 
+	stroke 
+	36 43 moveto 
+	36 22 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	34 55 moveto 
+	FatFont 
+	(p) 
+	show_utf8 
+	3 setlinewidth_nlw 
+	16 76 44 -32 rectstroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef ssGear001
+%?fn	ssGear001
+%?brief	Getriebe
+%?bbox	-40 -40 39 39
+/ssGear001 {
+	-40 -40 translate 
+	10 0 translate 
+	1 setlinewidth_nlw 
+	newpath 
+	30.80 25.80 moveto 
+	23.07 25.80 16.80 32.07 16.80 39.80 curveto 
+	16.80 47.53 23.07 53.80 30.80 53.80 curveto 
+	38.53 53.80 44.80 47.53 44.80 39.80 curveto 
+	44.80 32.07 38.53 25.80 30.80 25.80 curveto 
+	32.11 19.84 moveto 
+	31.24 19.79 30.36 19.79 29.49 19.84 curveto 
+	29.07 19.87 28.72 20.15 28.60 20.54 curveto 
+	28.33 21.38 28.07 22.22 27.80 23.07 curveto 
+	26.85 23.24 25.94 23.48 25.03 23.81 curveto 
+	24.38 23.21 23.73 22.62 23.08 22.02 curveto 
+	22.77 21.74 22.33 21.68 21.96 21.86 curveto 
+	21.17 22.25 20.41 22.68 19.68 23.17 curveto 
+	19.34 23.40 19.17 23.82 19.26 24.22 curveto 
+	19.45 25.08 19.64 25.95 19.84 26.81 curveto 
+	19.10 27.43 18.43 28.10 17.81 28.84 curveto 
+	16.95 28.64 16.08 28.45 15.22 28.26 curveto 
+	14.82 28.17 14.40 28.34 14.17 28.68 curveto 
+	13.68 29.41 13.25 30.17 12.86 30.96 curveto 
+	12.68 31.33 12.74 31.77 13.02 32.08 curveto 
+	13.62 32.73 14.21 33.38 14.81 34.03 curveto 
+	14.48 34.94 14.24 35.85 14.07 36.80 curveto 
+	13.22 37.07 12.38 37.33 11.54 37.60 curveto 
+	11.15 37.72 10.87 38.07 10.84 38.49 curveto 
+	10.79 39.36 10.79 40.24 10.84 41.11 curveto 
+	10.87 41.53 11.15 41.88 11.54 42 curveto 
+	12.38 42.27 13.22 42.53 14.07 42.80 curveto 
+	14.24 43.75 14.48 44.66 14.81 45.57 curveto 
+	14.21 46.22 13.62 46.87 13.02 47.52 curveto 
+	12.74 47.83 12.68 48.27 12.86 48.64 curveto 
+	13.25 49.43 13.68 50.19 14.17 50.92 curveto 
+	14.40 51.26 14.82 51.43 15.22 51.34 curveto 
+	16.08 51.15 16.95 50.96 17.81 50.76 curveto 
+	18.43 51.50 19.10 52.17 19.84 52.79 curveto 
+	19.64 53.65 19.45 54.52 19.26 55.38 curveto 
+	19.17 55.78 19.34 56.20 19.68 56.43 curveto 
+	20.41 56.92 21.17 57.35 21.96 57.74 curveto 
+	22.33 57.92 22.77 57.86 23.08 57.58 curveto 
+	23.73 56.98 24.38 56.39 25.03 55.79 curveto 
+	25.94 56.12 26.85 56.36 27.80 56.53 curveto 
+	28.07 57.38 28.33 58.22 28.60 59.06 curveto 
+	28.72 59.45 29.07 59.73 29.49 59.76 curveto 
+	30.36 59.81 31.24 59.81 32.11 59.76 curveto 
+	32.53 59.73 32.88 59.45 33 59.06 curveto 
+	33.27 58.22 33.53 57.38 33.80 56.53 curveto 
+	34.75 56.36 35.66 56.12 36.57 55.79 curveto 
+	37.22 56.39 37.87 56.98 38.52 57.58 curveto 
+	38.83 57.86 39.27 57.92 39.64 57.74 curveto 
+	40.43 57.35 41.19 56.92 41.92 56.43 curveto 
+	42.26 56.20 42.43 55.78 42.34 55.38 curveto 
+	42.15 54.52 41.96 53.65 41.76 52.79 curveto 
+	42.50 52.17 43.17 51.50 43.79 50.76 curveto 
+	44.65 50.96 45.52 51.15 46.38 51.34 curveto 
+	46.78 51.43 47.20 51.26 47.43 50.92 curveto 
+	47.92 50.19 48.35 49.43 48.74 48.64 curveto 
+	48.92 48.27 48.86 47.83 48.58 47.52 curveto 
+	47.98 46.87 47.39 46.22 46.79 45.57 curveto 
+	47.12 44.66 47.36 43.75 47.53 42.80 curveto 
+	48.38 42.53 49.22 42.27 50.06 42 curveto 
+	50.45 41.88 50.73 41.53 50.76 41.11 curveto 
+	50.81 40.24 50.81 39.36 50.76 38.49 curveto 
+	50.73 38.07 50.45 37.72 50.06 37.60 curveto 
+	49.22 37.33 48.38 37.07 47.53 36.80 curveto 
+	47.36 35.85 47.12 34.94 46.79 34.03 curveto 
+	47.39 33.38 47.98 32.73 48.58 32.08 curveto 
+	48.86 31.77 48.92 31.33 48.74 30.96 curveto 
+	48.35 30.17 47.92 29.41 47.43 28.68 curveto 
+	47.20 28.34 46.78 28.17 46.38 28.26 curveto 
+	45.52 28.45 44.65 28.64 43.79 28.84 curveto 
+	43.17 28.10 42.50 27.43 41.76 26.81 curveto 
+	41.96 25.95 42.15 25.08 42.34 24.22 curveto 
+	42.43 23.82 42.26 23.40 41.92 23.17 curveto 
+	41.19 22.68 40.43 22.25 39.64 21.86 curveto 
+	39.27 21.68 38.83 21.74 38.52 22.02 curveto 
+	37.87 22.62 37.22 23.21 36.57 23.81 curveto 
+	35.66 23.48 34.75 23.24 33.80 23.07 curveto 
+	33.53 22.22 33.27 21.38 33 20.54 curveto 
+	32.88 20.15 32.53 19.87 32.11 19.84 curveto 
+	eofill 
+	closepath 
+} def
+%?partend
+
+%?partdef ssFan003
+%?fn	ssFan003
+%?brief	Fan reverse user disabled
+%?bbox	0 0 79 79
+/ssFan003 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	5 -5 translate 
+	0 rotate 
+	1 1 scale 
+	ssFan001 
+	setcolor 
+	setmatrix_nlw 
+	6 setlinewidth_nlw 
+	10 65 moveto 
+	65 10 lineto 
+	stroke 
+	2 setlinewidth_nlw 
+	0 0 0 setrgbcolor 
+	10 70 moveto 
+	70 10 lineto 
+	stroke 
+	0 0 0 setrgbcolor 
+	5 65 moveto 
+	65 5 lineto 
+	stroke 
+} def
+%?partend

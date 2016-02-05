@@ -1,0 +1,6 @@
+pressure difference in the sg in [bar] (absolut)
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:31
+date-time	pressure difference in the sg in [bar] (absolut)	present engine speed in [rpm]	analog pump signal sg in [%]	load radius main boom in [m]	load radius luffing jib in [m]	maximum lifting hight main boom (head hight) in [m]	maximum lifting hight luffing jib (head hight) in [m]	load on the main boom in [to]	load on the luffing jib in [to]	utilization in [%]	utilization backwards in [%] (derrick operation)	number of lml mode
+	%MD1.63	%MD1.4	%MD1.24	%MD1.39	%MD1.40	%MD1.41	%MD1.42	%MD1.32	%MD1.33	%MD1.30	%MD1.31	%MD1.29
+	MDauxSystemPress	MDpresenEngSpeed	MDsgPumpSignal	MDspeedHigh	MDaccelLow	MDaccelMedium	MDaccelHigh	MDauxJoySignal	MDauxValvSignal	MDfawExtAnalSign	MDfawValvSignal	MDfawJoySignal

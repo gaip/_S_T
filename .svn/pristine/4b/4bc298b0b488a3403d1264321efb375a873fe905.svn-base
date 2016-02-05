@@ -1,0 +1,26 @@
+rem --------------------------------------------------
+rem Radio Remote Control Settings
+rem --------------------------------------------------
+spsmon COM4 /a /w MDRadioArrowDownLong ARROWDOWNLONG
+spsmon COM4 /a /w MDRadioArrowDownShort ARROWDOWNSHORT
+spsmon COM4 /a /w MDRadioArrowLeftLong ARROWLEFTLONG
+spsmon COM4 /a /w MDRadioArrowLeftShort ARROWLEFTSHORT
+spsmon COM4 /a /w MDRadioArrowRightLong ARROWRIGHTLONG
+spsmon COM4 /a /w MDRadioArrowRightShort ARROWRIGHTSHORT
+spsmon COM4 /a /w MDRadioArrowUpLong ARROWUPLONG
+spsmon COM4 /a /w MDRadioArrowUpShort ARROWUPSHORT
+spsmon COM4 /a /w MDRadioMuteLong MUTELONG
+spsmon COM4 /a /w MDRadioMuteShort MUTESHORT
+spsmon COM4 /a /w MDRadioOkLong OKLONG
+spsmon COM4 /a /w MDRadioOkShort OKSHORT
+spsmon COM4 /a /w MDRadioSourceLong SOURCELONG
+spsmon COM4 /a /w MDRadioSourceShort SOURCESHORT
+spsmon COM4 /a /w MDRadioVolumeDownLong VOLDOWNLONG
+spsmon COM4 /a /w MDRadioVolumeDownShort VOLDOWNSHORT
+spsmon COM4 /a /w MDRadioVolumeUpLong VOLUPLONG
+spsmon COM4 /a /w MDRadioVolumeUpShort VOLUPSHORT
+spsmon COM4 /o 0
+spsmon COM4 /t 20
+spsmon COM4 /w
+
+!crc	0xc4e8e974

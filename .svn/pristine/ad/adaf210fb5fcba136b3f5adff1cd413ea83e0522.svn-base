@@ -1,0 +1,32 @@
+!version	00043
+#
+#	message-configuration
+#
+#	date:	01.04.2009
+#	name:	Flatscher Wolfgang 
+#
+
+# Filterung der synchronen Motormeldungen die nur mehr als Summenstörmeldung am Monitor angezeigt werden
+user.hs.0x00000000-0x00000030.error	system >bild/*
+user.hs.0x0000003A-0x0000003D.error	system >bild/*
+user.hs.0x0000003F-0x000000F1.error	system >bild/*
+user.hs.0x000000F3-0x00000199.error	system >bild/*
+user.hs.0x0000019C-0x000001F8.error	system >bild/*
+user.hs.0x00000203-0x00000209.error	system >bild/*
+user.hs.0x0000020C-0x00000234.error	system >bild/*
+user.hs.0x00000236-0xFFFFFFFF.error	system >bild/*
+
+
+lib.lml.error	system	>bild/*
+outer.syscheck.0x43000013-0x43000014.* system >bildnack/*
+lib.pde.error	system >bild/*
+outer.recorder.error	system	>bild/*
+user.=debug	english	>sms/COM2
+!occurrences 1
+*.critical	english	>sms/COM2
+!occurrences 0
+!rotate	20	30	0
+!gather 5000
+*.*	english	CF1:\messages.log
+
+!crc	0x4713eacb

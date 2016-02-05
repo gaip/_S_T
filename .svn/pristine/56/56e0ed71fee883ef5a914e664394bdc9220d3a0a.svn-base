@@ -1,0 +1,6 @@
+hydraulic oil temperature upper maximum in [°C]
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:29
+date-time	hydraulic oil temperature upper maximum in [°C]	cooling water temperature of the engine in [°C]	present engine speed in [rpm]	diesel engine exploitation (utilization of the engine) in [%]	hg1 system pressure in [bar]	hg2 system pressure in [bar]	number of lml mode	load radius main boom in [m]	load radius luffing jib in [m]	maximum lifting hight main boom (head hight) in [m]	maximum lifting hight luffing jib (head hight) in [m]	load on the main boom in [to]	load on the luffing jib in [to]	utilization in [%]	utilization backwards in [%] (derrick operation)
+	%MD1.53	%MD1.2	%MD1.4	%MD1.62	%MD1.10	%MD1.15	%MD1.29	%MD1.39	%MD1.40	%MD1.41	%MD1.42	%MD1.32	%MD1.33	%MD1.30	%MD1.31
+	MDz6JoySignal	MDcoolWaterTemp	MDpresenEngSpeed	MDz3JoySignal	MDhg1ExtAnalSign	MDropeLenghtFaw	MDfawJoySignal	MDspeedHigh	MDaccelLow	MDaccelMedium	MDaccelHigh	MDauxJoySignal	MDauxValvSignal	MDfawExtAnalSign	MDfawValvSignal

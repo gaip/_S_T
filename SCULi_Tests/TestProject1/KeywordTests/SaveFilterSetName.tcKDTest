@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{AAFD2223-2E6A-489D-B469-1F8B40DD1040}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CContextActionsRollout&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Caption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Analyzer" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CPageCtrlHeaderPanel&quot;)[&quot;VCLObject&quot;](&quot;pnlFilterActions&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="ObjectIdentifier" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="btnShowFilter" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Text" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Workgroup" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="ObjectIdentifier" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="btnAddFilter" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="findChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Text" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="New FilterSet" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="ClickOnObjectRBUseFullName" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;TextObject&quot;](&quot;New FilterSet&quot;)" />
+						<Parameter Name="controlName" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="12" ValueType="0" ValueValue="0" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;Popup&quot;](&quot;Kontextmenü&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Text" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Rename" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{CAAA7522-FB54-4521-BF2F-29D327FC9341}">
+				<Data Description="Simulates one or several keypresses." Action="Keys">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="Keys" DefVarType="8" VarType="8" ValueType="6" ValueValue="TestFilterSet[Enter]" />
+					</Parameters>
+					<ObjectSyntax LangId="{90813F19-086D-4670-83BC-DB51386DC224}" Code="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;UIAObject&quot;](&quot;New_FilterSet&quot;, 5)[&quot;TextObject&quot;](&quot;New FilterSet&quot;);" />
+				</Data>
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{2AF02EAD-FB17-46B1-BE59-2F611E8FD51B}" />
+	<Parameters Key="{86D4EFE6-E838-4D72-91A6-F7341E3A0276}" />
+</Root>

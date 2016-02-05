@@ -1,0 +1,576 @@
+!version	00058
+#
+!font	UTF8
+!best-fit-font	iso8859-1
+
+# Language File / Sprachtexte File
+# Finnish / Finnisch
+!language	fin
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Ruuvikuljettimen tuotto [l/min]
+2	Ruuvikuljettimen tuotto [g/min]
+3	Putken tuotto [l/min]
+4	Putken tuotto [g/min]
+5	Tuotto [l/min]
+6	Tuotto [g/min]
+7	Pumppujen lukumäärä
+8	Puristuspihtien paine [bar]
+9	Epäkeskolaitteen säätöaika [s]
+10	Pääpuomin pujotus
+11	Junttauspaino [kg]
+12	Junttauspaino [lb]
+13	Iskut/syvyys
+14	Push & Pull -sylinterien lukumäärä
+15	Ruuvikuljettimen pituus [cm]
+16	Ruuvikuljettimen pituus [ft]
+17	PDE Grafiikan tulostus
+18	PDE Grafiikan tall. kortille
+19	Syvyysmitta [cm]
+20	Syvyysmitta [in]
+21	PDE Liipaisuaika [s]
+22	Betonimäärä/pulssi [l/pulssi]
+23	Betonimäärä/pulssi [g/pulssi]
+24	Betonipaineanturin mittausalue [bar]
+25	Betonipainenäytön asteitus [bar]
+26	Paalun halkaisija [cm]
+27	Paalun halkaisija [in]
+28	Paalun poikkileikkaus [cm]
+29	Paalun poikkileikkaus [in]
+30	Sisäputken halkaisija [cm]
+31	Sisäputken halkaisija [in]
+32	Kuilun syvennys [%]
+33	Ruuvikuljettimen nousu [cm]
+34	Ruuvikuljettimen nousu [in]
+35	Vetoautomatiikan käynnistyspaine [bar]
+36	Vetoautomatiikan pysäytyspaine [bar]
+37	sallittu betonin ylikulutus [%]
+38	Eko-kierrosluku
+39	Kulutusmittaus paineella (1=KYLLÄ)
+40	Vetoautomatiikan enim.paine [bar]
+41	Ruuvikuljettimen enim.paine [bar]
+42	Putken enim.paine [bar]
+43	Enim.paine [bar]
+44	Ruuvikuljettimen 1 tuotto [l/min]
+45	Ruuvikuljettimen 1 tuotto [g/min]
+46	Ruuvikuljettimen 2 tuotto [l/min]
+47	Ruuvikuljettimen 2 tuotto [g/min]
+48	Ruuvikuljettimen 3 tuotto [l/min]
+49	Ruuvikuljettimen 3 tuotto [g/min]
+50	Ruuvikuljettimien lkm.
+51	Putkituskoneen tuotto [l/min]
+52	Putkituskoneen tuotto [g/min]
+53	Syöttömäärä kahmaria avatt. [l/min]
+54	Syöttömäärä kahmaria avatt. [g/min]
+55	Syöttöm. kahmaria suljett. [l/min]
+56	Syöttöm. kahmaria suljett. [g/min]
+57	maks.paine kahmaria avatt. [bar]
+58	maks.paine kahmaria suljett. [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	osioita pylväässä
+62	ominaispaino siilo 1 [kg/dm³]
+63	ominaispaino siilo 1 [lb/ft³]
+64	ominaispaino siilo 2 [kg/dm³]
+65	ominaispaino siilo 2 [lb/ft³]
+66	Syvyys [m]
+67	Syvyys [ft]
+68	syötön nousu [cm/r]
+69	syötön nousu [in/r]
+70	sideaineen paino [kg/m]
+71	sideaineen paino [lb/ft]
+72	minimi tuotto [%]
+73	torque limitation (1=YES)
+74	Putkituskoneen tuotto 2 [l/min]
+75	Putkituskoneen tuotto 2 [g/min]
+76	volume main Pump [l/min]
+
+!LOGGER
+1	Aloituspäivä
+2	Aloitusaika
+3	Lopetuspäivä
+4	Lopetusaika
+5	tulostuspäivä
+6	tulostusaika
+
+!PDESERV
+# !! max. 40 Zeichen !!
+1	Painikkeella Start alkaa
+3	taltiointi Painikkeella Stop
+4	talt. paattyy Odota - graf. lask. Odota
+5	Painokuvan laskenta
+6	Lisaa pisteita Kuva(t) tallennettu
+7	Painike '0' kaynnistaa tulostuksen
+8	Ei PDE maarityksia Lisaa tietoja
+10	káynnistysta varten tarvitaan
+11	Kirjoitin
+13	ei kayttivalmis!
+14	PDE-virhe
+15	Paina painiketta
+16	Muistikorttia ei tyinnetty kokon. sisaan
+17	Tyiasemaa ei liytynyt
+18	Muistikortilla liian vahan muistia
+19	Tallentaminen mahdotonta
+20	Muistik. (tulostin) ei ole liit. oikein
+21	Tyiasemaa (tulostin) ei liytynyt
+22	Liian vahan vap. muistia (tul.-muistik.)
+23	Tallent. mahdotonta (tulostimen tiedot)
+24	Kaytti
+25	Vain vahan vapaata tallennuskapasit.
+26	Vain vahan vapaata tall.kapas.(tulostin)
+27	PDE kuvaus lopetettu
+28	Painike '.' keskeyttaa, 'Stop' lopettaa
+29	'Start' jatkaa, 'Stop' lopettaa
+30	Datalogger ei valmiina
+31	ei muistitilaa, vaihda muistikortti
+32	ei muistitilaa (tulostinkortti)
+33	PDE alustaa...
+34	Tietojen tallentaminen alkaa...
+35	Tietojen tallentaminen pysähtyy...
+36	Tiedot lähetetään...
+37	Yhteys katkennut...
+
+!PDE
+1	Käyttötapa
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Sivu
+4	Noston kuvaus
+5	Laskun kuvaus
+6	Paalun säde [cm]
+7	Paalun säde [in]
+8	Tyyli
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly-poraus
+200	Kaksoispääporaus
+300	Pitkae kierreporaus
+400	Taerytin
+401	lasku
+402	nosto
+403	lasku/nosto
+404	aikana
+411	Taeryttimen lasku
+412	Taeryttimen nosto
+413	Taeryt. lasku & nosto
+414	Taerytin aikana
+500	Hydraulijuntta
+600	push&pull
+700	Hydraulikahmari
+800	Junttaohjaus
+900	Kaivukori
+1000	Muutos
+1100	Maan sekoittaminen
+1200	sähkötärytin
+1201	täytepylväs (tiivistys)
+1202	täytepylväs
+1211	sähkötär.t.pylväs
+1212	sähkötär.pylväs
+1300	kuivasekoitus
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitudi [in/100]
+7	Betonipaine [bar]
+2	Amplitudi [mm]
+3	Syvyys [cm]
+4	Syvyys [ft]
+5	iskujen lkm.
+6	Iskut/syvyys
+8	Kierreporan paine [bar]
+9	Putkiporan paine [bar]
+10	Porauspaine [bar]
+11	Paalutuspaine [bar]
+12	Tärytinpaine [bar]
+13	Porausliike [r/m]
+14	Porausliike [r/ft]
+15	Porauksen vääntömom. [kip.ft]
+16	Porauksen vääntömom. [kNm]
+17	Energia/isku [kip.ft]
+18	Energia/isku [kNm]
+19	Energia/syvyys [kip.ft]
+20	Energia/syvyys [kNm]
+21	Aika [hh:mm:ss]
+22	Puristusvoima [kN]
+23	Puristusvoima [kip]
+24	Syöttönopeus [ft/min]
+25	Syöttönopeus [m/min]
+26	Taajuus [Hz]
+27	Iskuja/min
+28	Tärytinyksikkö [PÄÄLLE/POIS]
+29	Poikkeama X [ft]
+30	Poikkeama X [cm]
+31	Poikkeama Y [ft]
+32	Poikkeama Y [cm]
+33	iskujen lukumäärä
+34	Nostokorkeus [m]
+35	Nostokorkeus [ft]
+36	Tiivistys/isku [ft]
+37	Tiivistys/isku [m]
+38	Absol. tiivistys [ft]
+39	Absol. tiivistys [m]
+40	Jarrutuskorkeuden esiasetus [ft]
+41	Jarrutuskorkeuden esiasetus [m]
+42	Vinssin 1 maks.nopeus [ft/min]
+43	Vinssin 1 maks.nopeus [m/min]
+44	Vinssin 2 maks.nopeus [ft/min]
+45	Vinssin 2 maks.nopeus [m/min]
+46	Pvm [PP:KK:VV]
+47	Käyntiaika [s]
+48	Betonimäärä [yd³]
+49	Betonimäärä [m³]
+50	Numero
+51	Aika köyden junttaan [s]
+52	Nostoaika [s]
+53	Laskuaika [s]
+54	Iskujen esiasetus
+55	Nostokorkeuden esiasetus [m]
+56	Nostokorkeuden esiasetus [ft]
+57	Tiivistyksen esiasetus [m]
+58	Tiivistyksen esiasetus [ft]
+59	Kaivukorin käyttöaika [s]
+60	Jaksoaika [s]
+61	Irtokuorma [t]
+62	Vetokuorma yhteensä [t]
+63	Kahmarikäyttöaika [s]
+64	Jaksokuorma [t]
+65	Jaksokuorma yhteensä [t]
+66	Jaksokuorma irtokuormana [t]
+67	Virta [A]
+68	Virran lasku [A]
+69	Sivuvesi [l/m]
+70	Kärkivesi [l/m]
+71	Ilmanpaine [bar]
+72	Automatiikka PÄÄLLÄ
+73	Jännite [V]
+74	Keskeytys
+75	Kaltevuus [°]
+76	Kierrosluku [r/min]
+77	Betonimäärä 1 [yd³]
+78	Betonimäärä 1 [m³]
+79	Betonimäärä 2 [yd³]
+80	Betonimäärä 2 [m³]
+81	Betonimäärä 3 [yd³]
+82	Betonimäärä 3 [m³]
+83	Kierrosten lukumäärä 1 [r]
+84	Kierrosten lukumäärä 2 [r]
+85	Kierrosten lukumäärä 3 [r]
+86	Aika [min]
+87	Betonimäärä [l/min]
+88	Betonimäärä [g/min]
+89	minimi täryttimen paine [bar]
+90	maksimi täryttimen paine [bar]
+91	minimi syöttönopeus [ft/min]
+92	minimi syöttönopeus [m/min]
+93	maksimi syöttönopeus [ft/min]
+94	maksimi syöttönopeus [m/min]
+95	maksimi poran paine 1 [bar]
+96	maksimi poran paine 2 [bar]
+97	maksimi poran paine 3 [bar]
+98	minimi poran eteneminen 1 [r/m]
+99	minimi poran eteneminen 1 [r/ft]
+100	minimi poran eteneminen 2 [r/m]
+101	minimi poran eteneminen 2 [r/ft]
+102	minimi poran eteneminen 3 [r/m]
+103	minimi poran eteneminen 3 [r/ft]
+104	minimi sekoittuminen [r]
+105	sekoittuminen 1 [r]
+106	sekoittuminen 2 [r]
+107	betonimäärä per syvyysyksikkö [l/m]
+108	betonimäärä per syvyysyksikkö [g/ft]
+109	betonimäärä 1 [l/min]
+110	betonimäärä 1 [g/min]
+111	betonimäärä 2 [l/min]
+112	betonimäärä 2 [g/min]
+113	betonimäärä 3 [l/min]
+114	betonimäärä 3 [g/min]
+115	tärytinlämpötila [°C]
+116	tärytinlämpötila [°F]
+117	maksimi poran eteneminen 1 [r/m]
+118	maksimi poran eteneminen 1 [r/ft]
+119	maksimi poran eteneminen 2 [r/m]
+120	maksimi poran eteneminen 2 [r/ft]
+121	maksimi poran eteneminen 3 [r/m]
+122	maksimi poran eteneminen 3 [r/ft]
+123	sekoittuminen 3 [r]
+124	min. nousu 1 [cm/r]
+125	min. nousu 1 [in/r]
+126	min. nousu 2 [cm/r]
+127	min. nousu 2 [in/r]
+128	min. nousu 3 [cm/r]
+129	min. nousu 3 [in/r]
+130	sideaineen määrä [kg/min]
+131	sideaineen määrä [lb/min]
+132	sideaineen määrä 1 [kg/min]
+133	sideaineen määrä 1 [lb/min]
+134	sideaineen määrä 2 [kg/min]
+135	sideaineen määrä 2 [lb/min]
+136	sideaineen määrä 3 [kg/min]
+137	sideaineen määrä 3 [lb/min]
+138	sideaineen paino 1 [kg]
+139	sideaineen paino 1 [lb]
+140	sideaineen paino 2 [kg]
+141	sideaineen paino 2 [lb]
+142	sideaineen paino 3 [kg]
+143	sideaineen paino 3 [lb]
+144	sideaineen paino / syvyys [kg/m]
+145	sideaineen paino / syvyys [lb/ft]
+146	kellyspeed [m/min]
+147	kellyspeed [ft/min]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Tärytinp. nosto [bar]
+1	Amplitudi [in]
+2	Amplitudi [mm]
+3	Iskut/%s ft
+4	Iskut/%s mm
+5	Syvyys [ft]
+6	Syvyys [m]
+7	Tiivistys [m]
+8	Poikkeama X [cm]
+9	Poikkeama X [in]
+10	Poikkeama Y [cm]
+11	Poikkeama Y [in]
+12	Betonipaine [bar]
+13	Kierrepor. paine [bar]
+14	Putkiporan paine [bar]
+15	Porauspaine [bar]
+16	Paalutuspaine [bar]
+17	Paal.pain. nosto [bar]
+19	Tärytinp. lasku [bar]
+20	Porausliike [r/m]
+21	Porausliike [r/ft]
+22	Por. vääntöm. [kip.ft]
+23	Por. vääntöm. [kNm]
+24	Energia [kip.ft]
+25	Energia [kNm]
+26	Energia/%s ft [kip.ft]
+27	Energia/%s mm [kNm]
+28	Puristusvoima [kN]
+29	Puristusvoima [kip]
+30	Syöttönopeus [ft/min]
+31	Syöttönopeus [m/min]
+32	Iskunopeus [ft/min]
+33	Iskunopeus [m/min]
+34	Laskunopeus [ft/min]
+35	Laskunopeus [m/min]
+36	Taajuus [Hz]
+37	Virta [A]
+38	Virran lasku [A]
+39	Sivuvesi [l/m]
+40	Kärkivesi [l/m]
+41	Aika [s]
+42	Aika, lasku [s]
+43	Isku [nro]
+44	Tärytinpaine [bar]
+45	Amplitudi [%]
+46	Porauspaine 1 [bar]
+47	Porauspaine 2 [bar]
+48	Porauspaine 3 [bar]
+49	Porausliike 1 [r/m]
+50	Porausliike 1 [r/ft]
+51	Porausliike 2 [r/m]
+52	Porausliike 2 [r/ft]
+53	Porausliike 3 [r/m]
+54	Porausliike 3 [r/ft]
+55	Betonipaine.1 [bar]
+56	Betonipaine.2 [bar]
+57	Betonipaine.3 [bar]
+58	Betonimäärä [l/m]
+59	Betonimäärä [g/ft]
+60	Betonimäär1 [l/min]
+61	Betonimäär1 [g/min]
+62	Betonimäär2 [l/min]
+63	Betonimäär2 [g/min]
+64	Betonimäär3 [l/min]
+65	Betonimäär3 [g/min]
+66	Sekoittuminen [r]
+67	Kierrosl.1 [r/min]
+68	Kierrosl.2 [r/min]
+69	Kierrosl.3 [r/min]
+70	Tärytinvirta [A]
+71	tunkeuma [cm/r]
+72	tunkeuma [in/r]
+73	nousu 1 [cm/r]
+74	nousu 1 [in/r]
+75	nousu 2 [cm/r]
+76	nousu 2 [in/r]
+77	nousu 3 [cm/r]
+78	nousu 3 [in/r]
+79	sideaine [kg/m]
+80	sideaine [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Tyoemaa
+2	Paalunro
+3	Paalutyyppi (1betoni;2puu;3teraes)
+4	Paalun pituus [m]
+5	Paalun pinta-ala [cm²]
+6	Paalun halkaisija [cm]
+7	Uranumero
+8	Piirrosnro
+9	Kuljettajan nro
+10	Tilausnro
+11	Tiivistyskohta
+12	Sarjanumero
+13	Laitenro
+14	Paalun halkaisija [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Syvyysmitta [ft]
+2	Syvyysmitta [mm]
+3	Maksimisyvyys [cm]
+4	Maksimisyvyys [ft]
+5	Iskuja yhteensä
+6	Energia yhteensä [kip.ft]
+7	Energia yhteensä [kNm]
+8	Junttauspaino [lb]
+9	Junttauspaino [kg]
+10	Vääntömom.näyttö
+11	US-yksiköt
+12	US-yksiköt (kip)
+13	Tiivistyskohta
+14	Vinssi 1 aktiivinen
+15	Vinssi 2 aktiivinen
+16	Betonimäärä yhteensä [yd³]
+17	Betonimäärä yhteensä [m³]
+18	Pulssimäärä (betonipumppu)
+19	Litraa/pulssi (betonipumppu)
+20	Iskujen esiasetus
+21	Tiivistys yhteensä [m]
+22	Tiivistyksen esiasetus [m]
+23	Nostokorkeuden esiasetus [m]
+24	Jarrutuskorkeuden esiasetus [m]
+25	Aika yhteensä [s]
+26	Aika [s]
+27	Jaksojen määrä yhteensä
+28	Kaivukorin paino tyhjänä [t]
+29	Irtokuorma [t]
+30	Kaivukori täynnä [t]
+31	Liipaisujen määrä yhteensä
+32	Kuormankannattimien tyhjäpaino [t]
+33	Jaksokuorma [t]
+34	Jaksokuormat yhteensä [t]
+35	Irtokuorman jaksokuormat [t]
+36	Laskuaika [s]
+37	Laskun maksimivirta [A]
+38	Jaksoaika yhteensä [s]
+39	Maksimivirran esiasetus [A]
+40	Vetosyvyys [m]
+41	Vetosyvyys 1 [m]
+42	Vetosyvyys 2 [m]
+43	Maksimiajan 1 esiasetus [s]
+44	Maksimiliikkeen 1 esiasetus [m]
+45	Maksimiajan 2 esiasetus [s]
+46	Maksimiliikkeen 2 esiasetus [m]
+47	Maksimiajan 3 esiasetus [s]
+48	Maksimiliikkeen 3 esiasetus [m]
+49	Sivuvesi yhteensä [l]
+50	Kärkivesi yhteensä [l]
+51	Ilmanpaineen keskiarvo [bar]
+52	Kahmarikäyttö
+53	Hydraulijuntta
+54	hyd. Push&Pull-käyttö
+55	Kelly-porauskäyttö
+56	Kaksoispääporauksen käyttö
+57	Pitkä kierreporaus
+58	Tärytinkäyttö
+59	Tärytinyksikkö
+60	(kip)
+61	(in / 100)
+62	POIS
+63	PÄÄLLÄ
+64	Ylikulutus [%]
+65	Paalubetonimäärä [yd³]
+66	Paalubetonimäärä [m³]
+67	gallons/pulssi (betonipumppu)
+68	Maksimisyvyys [m]
+69	Ruuvikulj. lkm.
+70	Ruuvikuljettimen pituus [cm]
+71	Ruuvikuljettimen pituus [ft]
+72	gps-sijainti X [cm]
+73	gps-sijainti Y [cm]
+74	kulutus [kWh]
+75	Aloituskaltevuus [°]
+76	Lopetuskaltevuus [°]
+77	Paalun pituus [cm]
+78	Paalun pituus [ft]
+79	sideaine yht. [kg]
+80	sideaine yht. [lb]
+81	nousukeskiarvo [mm/r]
+82	nousukeskiarvo [in/r]
+83	porapainekeskiarvo [bar]
+84	sekoitinnopeus-ka. [r/min]
+85	sideaine-ka. [kg/m]
+86	sideaine-ka. [lb/ft]
+87	sideainevirta-ka. [kg/min]
+88	sideainevirta-ka. [lb/min]
+89	siilo 1 [kg]
+90	siilo 1 [lb]
+91	siilo 2 [kg]
+92	siilo 2 [lb]
+93	syöttökorkeus [cm]
+94	syöttökorkeus [ft]
+95	Tyhjä aukko [cm]
+96	Tyhjä aukko [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly-poraus
+200	Kaksoispääporaus
+300	Pitkae kierreporaus
+400	Taerytin
+401	lasku
+402	nosto
+403	lasku/nosto
+404	aikana
+411	Taeryttimen lasku
+412	Taeryttimen nosto
+413	Taeryt. lasku & nosto
+414	Taerytin aikana
+500	Hydraulijuntta
+600	push&pull
+700	Hydraulikahmari
+800	Junttaohjaus
+900	Kaivukori
+1000	Muutos
+1100	Maan sekoittaminen
+1200	sähkötärytin
+1201	täytepylväs (tiivistys)
+1202	täytepylväs
+1211	sähkötär.t.pylväs
+1212	sähkötär.pylväs
+1300	kuivasekoitus
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	Tyoemaa
+2	Paalunro
+3	Paalutyyppi (1betoni;2puu;3teraes)
+4	Paalun pituus [m]
+5	Paalun pinta-ala [cm^2]
+6	Paalun halkaisija [cm]
+7	Uranumero
+8	Piirrosnro
+9	Kuljettajan nro
+10	Tilausnro
+11	Tiivistyskohta
+12	Sarjanumero
+13	Laitenro
+14	Paalun halkaisija [in]

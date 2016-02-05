@@ -1,0 +1,568 @@
+!version	00055
+#
+!font	UTF8
+!best-fit-font	iso8859-1
+
+# Language File / Sprachtexte File
+# French / Französisch
+!language	fra
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Débit tarière [l/min]
+2	Débit tarière [g/min]
+3	Débit tube [l/min]
+4	Débit tube [g/min]
+5	Débit [l/min]
+6	Débit [g/min]
+7	Nombre pompes
+8	Pression mâchoires [bar]
+9	Temps réglage excentrique [s]
+10	Mouflage treuil principal
+11	Masse de battage [kg]
+12	Masse de battage [lb]
+13	Coups / Palier de profondeur
+14	Nombre vérins Push & Pull
+15	Longueur tarière [cm]
+16	Longueur tarière [ft]
+17	Graphique PDE sur imprimante
+18	Graphique PDE sur carte
+19	Palier de profondeur [cm]
+20	Palier de profondeur [in]
+21	Temps déclenchement PDE [s]
+22	Qté béton/Impulsion [l/imp.]
+23	Qté béton/Impulsion [g/imp.]
+24	Plage capteur press. béton [bar]
+25	Échelle indic. press. béton [bar]
+26	Diamètre de pieu [cm]
+27	Diamètre de pieu [in]
+28	Section pile [cm]
+29	Section pile [in]
+30	Diamètre âme de tube [cm]
+31	Diamètre âme de tube [in]
+32	Facteur de fonçage [%]
+33	Pas de tarière [cm]
+34	Pas de tarière [in]
+35	Pression dém. tirage autom [bar]
+36	Pression arrêt tirage autom [bar]
+37	Excédent béton autorisé [%]
+38	Régime écologique
+39	Mesure qté via pression (1=OUI)
+40	Pression max. tirage autom [bar]
+41	Pression max. tarière [bar]
+42	Pression max. tube [bar]
+43	Pression max. [bar]
+44	Débit tarière 1 [l/min]
+45	Débit tarière 1 [g/min]
+46	Débit tarière 2 [l/min]
+47	Débit tarière 2 [g/min]
+48	Débit tarière 3 [l/min]
+49	Débit tarière 3 [g/min]
+50	Nombre tarières
+51	Débit tubages [l/min]
+52	Débit tubages [g/min]
+53	Ouvrir débit max. benne [l/min]
+54	Ouvrir débit max. benne [g/min]
+55	Fermer débit max. benne [l/min]
+56	Fermer débit max. benne [g/min]
+57	Ouvrir pression max. benne [bar]
+58	Fermer pression max. benne [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	sections de la colonne
+62	poids du silo 1 [kg/dm³]
+63	poids du silo 1 [lb/ft³]
+64	poids du silo 2 [kg/dm³]
+65	poids du silo 2 [lb/ft³]
+66	Profondeur [m]
+67	Profondeur [ft]
+68	inclinaison de l’avance [cm/r]
+69	inclinaison de l’avance [in/r]
+70	poids liant [kg/m]
+71	poids liant [lb/ft]
+72	Débit min. [%]
+
+!LOGGER
+1	Date démarrage
+2	Heure démarrage
+3	Date fin
+4	Heure fin
+5	Date d’impression
+6	Heure d’impression
+
+!PDESERV
+# !! max. 40 Zeichen !!
+1	Touche Marche demarre l'enregistrement
+3	Touche Arret arrete l'enregistrement
+4	Veuillez patienter - Calcul graphique
+5	Veuillez patienter - Calcul epreuve
+6	Autres points
+7	Epreuve(s) enregistree(s)
+8	Touche '0' demarre l'impression
+10	Pas de configuration PDE
+11	Saisies suppl. necessaires pour Marche
+13	Imprimante necessaire pas prete !
+14	Erreur PDE
+15	Appuyez sur une touche
+16	Carte memoire non inseree
+17	Le lecteur n'a pas ete trouve
+18	Memoire libre insuffisante sur carte
+19	Enregistrement impossible
+20	Carte memoire (imprimante) non inseree
+21	Le lecteur (imprim.) n'a pas ete trouve
+22	Mem. libre insuffisante (carte imprim.)
+23	Enregistr. impossible (donnees imprim.)
+24	Regime
+25	Memoire libre encore insuffisante
+26	Memoire libre insuffisante (imprimante)
+27	Enregistrement PDE arrete
+28	Touche '.' interrompre, 'Arret' fin
+29	'Marche' poursuivre, 'Arret' fin
+30	Datalogger non disponible
+31	Pas capac. memoire, changer carte donnee
+32	Pas capac. memoire (carte imprimante)
+33	Initialisation PDE...
+34	Debut d'enregistrement...
+35	Fin d'enregistrement...
+36	Envoi des donnees...
+37	Connexion interrompue...
+
+!PDE
+1	Mode de fonctionnement
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Page
+4	Enregistr. levage
+5	Enregistr. descente
+6	Rayon du pieu [cm]
+7	Rayon du pieu [in]
+8	Style
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Forage Kelly
+200	Forage 2 têtes
+300	Fraises CFA
+400	Vibreur
+401	descendre
+402	lever
+403	descendre/lever
+404	durée écoulée
+411	Descendre vibreur
+412	Lever vibreur
+413	Descendre et lever vibreur
+414	durée écoulée vibreur
+500	Marteau
+600	push&pull
+700	Benne preneuse hydraulique
+800	Commande de battage
+900	Benne dragueuse
+1000	Transbordement
+1100	Mélange sol
+1200	vibrateur électrique
+1201	colonne de rempl. (compactage)
+1202	colonne de rempl.
+1211	colonne de compactage de remplacement de vib. él.
+1212	colonne de remplacement de vib. él.
+1300	mélange sec
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitude [in/100]
+7	Pression béton [bar]
+2	Amplitude [mm]
+3	Profondeur [cm]
+4	Profondeur [ft]
+5	Nombre de coups
+6	Nombre de coups/palier de profondeur
+8	Pression de forage tarière [bar]
+9	Pression de forage tube [bar]
+10	Pression forage [bar]
+11	Pression équipement de battage [bar]
+12	Pression vibreur [bar]
+13	Progression du forage [r/m]
+14	Progression du forage [r/ft]
+15	Couple de rotation de forage [kip.ft]
+16	Couple de rotation de forage [kNm]
+17	Energie/coup [kip.ft]
+18	Energie/coup [kNm]
+19	Energie/palier de profondeur [kip.ft]
+20	Energie/palier de profondeur [kNm]
+21	Temps [HH:mm:ss]
+22	Force pression [kN]
+23	Force pression [kip]
+24	Vitesse d'avancement [ft/min]
+25	Vitesse d'avancement [m/min]
+26	Fréquence [Hz]
+27	Nombre de coups/min
+28	Unité vibreur [MARCHE/ARRET]
+29	Ecart X [ft]
+30	Ecart X [cm]
+31	Ecart Y [ft]
+32	Ecart Y [cm]
+33	Numéro coup
+34	Hauteur de levage [m]
+35	Hauteur de levage [ft]
+36	Compactage/coup [ft]
+37	Compactage/coup [m]
+38	Compactage absolu [ft]
+39	Compactage absolu [m]
+40	Indication hauteur de freinage [ft]
+41	Indication hauteur de freinage [m]
+42	Vitesse maxi treuil 1 [ft/min]
+43	Vitesse maxi treuil 1 [m/min]
+44	Vitesse maxi treuil 2 [ft/min]
+45	Vitesse maxi treuil 2 [m/min]
+46	Date [JJ:MM:AA]
+47	Temps de fonctionnement [s]
+48	Quantité de béton [yd³]
+49	Quantité de béton [m³]
+50	Numéro de position
+51	Durée jusqu'à équipement de battage sur câble [s]
+52	Durée levage [s]
+53	Durée descente [s]
+54	Indication nombre de coups
+55	Indication hauteur de levage [m]
+56	Indication hauteur de levage [ft]
+57	Indication compactage [m]
+58	Indication compactage [ft]
+59	Durée travail avec benne dragueuse [s]
+60	Durée du cycle [s]
+61	Charge matériaux en vrac [t]
+62	Charge totale remorquée [t]
+63	Durée travail de transbordement [s]
+64	Charge du cycle [t]
+65	Charge totale du cycle [t]
+66	Charge du cycle matériaux en vrac [t]
+67	Intensité [A]
+68	Diminuer l'intensité [A]
+69	Eau latérale [l/m]
+70	Eau de pointe [l/m]
+71	Pression d'air [bar]
+72	Système automatique MARCHE
+73	Tension [V]
+74	Interruption
+75	Inclinaison [°]
+76	Vitesse [r/min]
+77	Quantité de béton 1 [yd³]
+78	Quantité de béton 1 [m³]
+79	Quantité de béton 2 [yd³]
+80	Quantité de béton 2 [m³]
+81	Quantité de béton 3 [yd³]
+82	Quantité de béton 3 [m³]
+83	Rotation 1 [r]
+84	Rotation 2 [r]
+85	Rotation 3 [r]
+86	Temps [min]
+87	Quantité de béton [l/min]
+88	Quantité de béton [g/min]
+89	Pression vibr. min. [bar]
+90	Pression vibr. max. [bar]
+91	Vitesse avance min. [ft/min]
+92	Vitesse avance min. [m/min]
+93	Vitesse avance max. [ft/min]
+94	Vitesse avance max. [m/min]
+95	Pression. forage max. 1 [bar]
+96	Pression. forage max. 2 [bar]
+97	Pression. forage max. 3 [bar]
+98	Pénétration forage min. 1 [r/m]
+99	Pénétration forage min. 1 [r/ft]
+100	Pénétration forage min. 2 [r/m]
+101	Pénétration forage min. 2 [r/ft]
+102	Pénétration forage min. 3 [r/m]
+103	Pénétration forage min. 3 [r/ft]
+104	Mélange min. [r]
+105	Mélange 1 [r]
+106	Mélange 2 [r]
+107	Volume béton par profondeur [l/m]
+108	Volume béton par profondeur [g/ft]
+109	Volume béton 1 [l/min]
+110	Volume béton 1 [g/min]
+111	Volume béton 2 [l/min]
+112	Volume béton 2 [g/min]
+113	Volume béton 3 [l/min]
+114	Volume béton 3 [g/min]
+115	Temp. Vibreur. [°C]
+116	Temp. Vibreur. [°F]
+117	Pénétration forage max. 1 [r/m]
+118	Pénétration forage max. 1 [r/ft]
+119	Pénétration forage max. 2 [r/m]
+120	Pénétration forage max. 2 [r/ft]
+121	Pénétration forage max. 3 [r/m]
+122	Pénétration forage max. 3 [r/ft]
+123	Mélange 3 [r]
+124	inclin. min. 1 [cm/r]
+125	inclin. min. 1 [in/r]
+126	inclin. min. 2 [cm/r]
+127	inclin. min. 2 [in/r]
+128	inclin. min. 3 [cm/r]
+129	inclin. min. 3 [in/r]
+130	débit liant [kg/min]
+131	débit liant [lb/min]
+132	débit liant 1 [kg/min]
+133	débit liant 1 [lb/min]
+134	débit liant 2 [kg/min]
+135	débit liant 2 [lb/min]
+136	débit liant 3 [kg/min]
+137	débit liant 3 [lb/min]
+138	poids liant 1 [kg]
+139	poids liant 1 [lb]
+140	poids liant 2 [kg]
+141	poids liant 2 [lb]
+142	poids liant 3 [kg]
+143	poids liant 3 [lb]
+144	poids liant selon prof. [kg/m]
+145	poids liant selon prof. [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Aug. pres. vibr. [bar]
+1	Amplitude [in]
+2	Amplitude [mm]
+3	Coups/%s ft
+4	Coups/%s mm
+5	Profondeur [ft]
+6	Profondeur [m]
+7	Compactage [m]
+8	Ecart X [cm]
+9	Ecart X [in]
+10	Ecart Y [cm]
+11	Ecart Y [in]
+12	Pression béton [bar]
+13	Pres. for. tar. [bar]
+14	Pres. for. tube [bar]
+15	Pression forage [bar]
+16	Pres. battage [bar]
+17	Aug. pres. batt. [bar]
+19	Dim. pres. vibr. [bar]
+20	Progres. for. [r/m]
+21	Progres. for. [r/ft]
+22	Cpl rot. for. [kip.ft]
+23	Cpl rot. for. [kNm]
+24	Energie [kip.ft]
+25	Energie [kNm]
+26	Energie/%s ft [kip.ft]
+27	Energie/%s mm [kNm]
+28	Force pression [kN]
+29	Force pression [kip]
+30	Vit. avancemt [ft/min]
+31	Vit. avancemt [m/min]
+32	Vit. levage [ft/min]
+33	Vit. levage [m/min]
+34	Vit. descente [ft/min]
+35	Vit. descente [m/min]
+36	Fréquence [Hz]
+37	Intensité [A]
+38	Dim. intensité [A]
+39	Eau latérale [l/m]
+40	Eau de pointe [l/m]
+41	Temps [s]
+42	Dim. durée [s]
+43	Coup [Numéro]
+44	Pres. vibreur [bar]
+45	Amplitude [%]
+46	Pres.forage 1 [bar]
+47	Pres.forage 2 [bar]
+48	Pres.forage 3 [bar]
+49	Progre.for.1 [r/m]
+50	Progre.for.1 [r/ft]
+51	Progre.for.2 [r/m]
+52	Progre.for.2 [r/ft]
+53	Progre.for.3 [r/m]
+54	Progre.for.3 [r/ft]
+55	Pres.béton1 [bar]
+56	Pres.béton2 [bar]
+57	Pres.béton3 [bar]
+58	Quant.béton [l/m]
+59	Quant.béton [g/ft]
+60	Vol.béton1 [l/min]
+61	Vol.béton1 [g/min]
+62	Vol.béton2 [l/min]
+63	Vol.béton2 [g/min]
+64	Vol.béton3 [l/min]
+65	Vol.béton3 [g/min]
+66	Mélange [r]
+67	Vitesse 1 [r/min]
+68	Vitesse 2 [r/min]
+69	Vitesse 3 [r/min]
+70	Cour. vibreur [A]
+71	Pénétration [cm/r]
+72	Pénétration [in/r]
+73	inclinaison 1 [cm/r]
+74	inclinaison 1 [in/r]
+75	inclinaison 2 [cm/r]
+76	inclinaison 2 [in/r]
+77	inclinaison 3 [cm/r]
+78	inclinaison 3 [in/r]
+79	liant [kg/m]
+80	liant [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Chantier
+2	Numéro de pieu
+3	Type de pieu (béton ; bois ; acier)
+4	Longueur de pieu [m]
+5	Surface de pieu [cm²]
+6	Diamètre de pieu [cm]
+7	N° de point d'insertion
+8	N° d'enregistrement
+9	Numéro de conducteur
+10	Numéro de contrat
+11	Point de compactage
+12	Numéro de série
+13	Numéro d'engin
+14	Diamètre de pieu [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Palier de profondeur [ft]
+2	Palier de profondeur [mm]
+3	Profondeur maximale [cm]
+4	Profondeur maximale [ft]
+5	Nombre total de coups
+6	Energie totale [kip.ft]
+7	Energie totale [kNm]
+8	Masse de battage [lb]
+9	Masse de battage [kg]
+10	Affichage du couple de rotation
+11	Unités US
+12	Unités US (kip)
+13	Point de compactage
+14	Treuil 1 actif
+15	Treuil 2 actif
+16	Quantité totale de béton [yd³]
+17	Quantité totale de béton [m³]
+18	Nombre d'imp.(pompe à béton)
+19	litres/imp.(pompe à béton)
+20	Indication nombre de coups
+21	Compactage total [m]
+22	Indication compactage [m]
+23	Indication hauteur de levage [m]
+24	Indication hauteur de freinage [m]
+25	Durée totale [s]
+26	Temps [s]
+27	Nombre total de cycles
+28	Charge benne dragueuse vide [t]
+29	Somme des matériaux en vrac [t]
+30	Somme benne dragueuse pleine [t]
+31	Nombre total de déclenchements
+32	Poids à vide du dispositif de suspension [t]
+33	Somme charge du cycle [t]
+34	Somme charge totale du cycle [t]
+35	Somme charge du cycle matériaux en vrac [t]
+36	Durée du processus de descente [s]
+37	Intensité maxi processus de descente [A]
+38	Durée totale du cycle [s]
+39	Indication intensité maxi [A]
+40	Profondeur critère de traction [m]
+41	Profondeur critère de traction 1 [m]
+42	Profondeur critère de traction 2 [m]
+43	Indication durée 1 maxi [s]
+44	Indication parcours 1 maxi [m]
+45	Indication durée 2 maxi [s]
+46	Indication parcours 2 maxi [m]
+47	Indication durée 3 maxi [s]
+48	Indication parcours 3 maxi [m]
+49	Eau latérale totale [l]
+50	Eau de pointe totale [l]
+51	Pression d'air moyenne [bar]
+52	Trav. av. benne pren.
+53	Travail avec marteau
+54	Mode Push&Pull hydr.
+55	Trav. forage Kelly
+56	Trav. forage à 2 têtes
+57	Trav. forage CFA
+58	Travail avec vibreur
+59	Unité vibreur
+60	(kip)
+61	(in / 100)
+62	ARRET
+63	MARCHE
+64	Quantité excédentaire [%]
+65	Quantité de béton pour pieux [yd³]
+66	Quantité de béton pour pieux [m³]
+67	gallons/imp.(pompe à béton)
+68	Profondeur maximale [m]
+69	Nombre tarières
+70	Longueur tarière [cm]
+71	Longueur tarière [ft]
+72	Position gps X [cm]
+73	Position gps Y [cm]
+74	Consommation [kWh]
+75	Inclinaison démarrage [°]
+76	Inclinaison fin [°]
+77	Longueur de pieu [cm]
+78	Longueur de pieu [ft]
+79	total liant [kg]
+80	total liant [lb]
+81	pas moy. [mm/r]
+82	pas moy. [in/r]
+83	press. for. moy [bar]
+84	vitesse rév. moy. [r/min]
+85	liant moy. [kg/m]
+86	liant moy. [lb/ft]
+87	flux liant moy. [kg/min]
+88	flux liant moy. [lb/min]
+89	silo 1 [kg]
+90	silo 1 [lb]
+91	silo 2 [kg]
+92	silo 2 [lb]
+93	hauteur insertion [cm]
+94	hauteur insertion [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Forage Kelly
+200	Forage 2 têtes
+300	Fraises CFA
+400	Vibreur
+401	descendre
+402	lever
+403	descendre/lever
+404	duree ecoulee
+411	Descendre vibreur
+412	Lever vibreur
+413	Descendre et lever vibreur
+414	duree ecoulee vibreur
+500	Marteau
+600	push&pull
+700	Benne preneuse hydraulique
+800	Commande de battage
+900	Benne dragueuse
+1000	Transbordement
+1100	Mélange sol
+1200	vibrateur électrique
+1201	colonne de rempl. (compactage)
+1202	colonne de rempl.
+1211	colonne de compactage de remplacement de vib. él.
+1212	colonne de remplacement de vib. él.
+1300	dry mixing
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	Chantier
+2	Numero de pieu
+3	Type de pieu (1beton ;2bois ;3acier)
+4	Longueur de pieu [m]
+5	Surface de pieu [cm^2]
+6	Diametre de pieu [cm]
+7	No de point d'insertion
+8	No d'enregistrement
+9	Numero de conducteur
+10	Numero de contrat
+11	Point de compactage
+12	Numero de serie
+13	Numero d'engin
+14	Diametre de pieu [in]

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 4">
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="message" type="S" value="The test execution was interrupted."/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="stack beginning" type="I" value="3"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="3"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="42396.3794828588"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Courier New, Arial; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;body&gt;&lt;p&gt;An error occurred while accessing the &quot;Keys&quot; method or property of the &quot;&lt;a href=&quot;lnamemapping://{3C58AC84-6694-44A9-B14B-1FFA4E4C0D3E}.{752C532F-6217-4618-A333-45F344157FB4}&quot;&gt;Console&lt;/a&gt;&quot; object.&lt;br/&gt;The object or one of its parent objects was not found.&lt;/p&gt;&lt;h4&gt;Object Whose Method or Property Was Accessed&lt;/h4&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; noborder&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Alias:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Aliases.CMD.Console&lt;/td&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Name mapping item:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;NameMapping.Sys.CMD.Console&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h4&gt;Object That Was Not Found&lt;/h4&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Alias:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;lnamemapping://{3C58AC84-6694-44A9-B14B-1FFA4E4C0D3E}.{8D707885-9D49-4FDB-8FC6-B279C3074447}&quot;&gt;Aliases.CMD&lt;/a&gt;&lt;/td&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Name mapping item:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;namemapping://{3C58AC84-6694-44A9-B14B-1FFA4E4C0D3E}.{D0A7C041-FEFC-4579-B5E1-9B4F622BFC14}&quot;&gt;NameMapping.Sys.CMD&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;Click the link above to view and configure mapping settings for the missing object.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;aqa-help://2201&quot;&gt;Learn about possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="0"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="42396.3787070949"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="priority" type="I" value="400"/>
+		</Node>
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="42396.3794828588"/>
+			</Node>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="description" type="S" value=""/>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+			<Prp name="length" type="I" value="1"/>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="color" type="I" value="0"/>
+			<Prp name="isinteger" type="B" value="0"/>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="columnindex" type="I" value="0"/>
+		</Node>
+		<Node name="message 1">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point y" type="I" value="396"/>
+					<Prp name="object top" type="I" value="389"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="object right" type="I" value="151"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="datetime" type="D" value="42396.3349479861"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="3"/>
+					<Prp name="object bottom" type="I" value="404"/>
+					<Prp name="object name" type="S" value="Aliases.explorer.Start_menu.Item.Frequently_used_programs.Command_Prompt"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="101"/>
+					<Prp name="object left" type="I" value="51"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (50, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.explorer.Start_menu.Item.Frequently_used_programs.Command_Prompt&#xA;(Sys.Process(&quot;explorer&quot;).UIAObject(&quot;Start_menu&quot;).Window(&quot;DesktopProgramsMFU&quot;, &quot;&quot;, 1).UIAObject(&quot;Frequently_used_programs&quot;).TextObject(&quot;Command Prompt&quot;))"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="42396.3766158449"/>
+			<Prp name="line no" type="I" value="3"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="item 3">
+			<Prp name="stacktext" type="S" value="CheckMSConfig()"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="stacktext" type="S" value="getChildObject"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="97"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="stacktext" type="S" value="CheckMSConfig()"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 0">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point y" type="I" value="1030"/>
+					<Prp name="object top" type="I" value="1003"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="object right" type="I" value="54"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="datetime" type="D" value="42396.3349322569"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="line #" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="1057"/>
+					<Prp name="object name" type="S" value="Aliases.explorer.Start"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="27"/>
+					<Prp name="object left" type="I" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.explorer.Start&#xA;(Sys.Process(&quot;explorer&quot;).UIAObject(&quot;Start&quot;))"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="42396.3766116204"/>
+			<Prp name="line no" type="I" value="2"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Courier New, Arial; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;body&gt;&lt;p&gt;The process &quot;&lt;a href=&quot;lnamemapping://{3C58AC84-6694-44A9-B14B-1FFA4E4C0D3E}.{78907426-CA47-49CD-BAF2-547BE13E7157}&quot;&gt;msconfig&lt;/a&gt;&quot; does not exist.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="stack beginning" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="2"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="42396.3794085532"/>
+			<Prp name="line no" type="I" value="97"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="priority" type="I" value="400"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{22612DAC-869D-4E12-A8E2-BAA27EDB9B95}"/>
+			<Prp name="unit 1" type="S" value="{99A36B4D-E12F-4F50-9935-54FBC6D0B887}"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="stacktext" type="S" value="CheckMSConfig()"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

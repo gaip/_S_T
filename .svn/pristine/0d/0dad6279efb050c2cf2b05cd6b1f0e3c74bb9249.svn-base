@@ -1,0 +1,2493 @@
+!version	00214
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	MDE LHM V0014
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#
+#
+#	File:					MDE 0012.cnf
+#
+#	File created with program:		Ultraedit
+#
+#	Date and time of last change:		21.09.2011 15:00:00
+#
+#	Author:					Marent Michael
+#
+#	(c) 2008 Liebherr - Werk Nenzing
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	automatic storage
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+AUTOSTORE  30    10000   CF1:\ 25000
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	General Part (all crane types)
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Aggregat
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+_if MWmdeIfDiEn1 EQ 1
+GROUPTIME	De101			diesel engine 1
+ELEMENT MDmdeRvDiEn1		revolutions diesel engine 1 [rpm]
+LIMIT	500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400 2500
+ELEMENT MDmdePwDiEn1		power diesel engine 1 [kW]
+LIMIT	-500 -450 -400 -350 -300 -250 -200 -150 -100 -50 0 50 100 150 200 250 300 350 400 450 500 550 600 650 700 750
+_endif
+
+_if MWmdeIfDiEn1 EQ 1
+GROUPTIME	De201			diesel engine 1
+ELEMENT MDmdeRvDiEn1		revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1700 1800 1850 1900 1950 2000 2100 2200 2400
+ELEMENT MDmdePrChAirEn1		charge air pressure diesel engine 1 [bar]
+LIMIT	1 1.5 2 2.25 2.5 2.75 3 3.25 3.5 3.75 4 4.25 4.5 5
+ELEMENT MDmdeExDiEn1		engine exploitation diesel engine 1 [%]
+LIMIT	0 10 20 30 40 50 60 70 75 80 82.5 85 87.5 90 95
+_endif
+
+_if MWmdeIfDiEn1 EQ 1
+GROUPTIME	De501			diesel engine 1
+ELEMENT MDmdeRvDiEn1		revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+ELEMENT MDmdeTmCoWaEn1		cooling water temperature diesel engine 1 [°C]
+LIMIT	-20 0 20 40 60 80 85 90 95 100 105 110 120
+ELEMENT MDmdePrLbOilEn1		lub oil pressure diesel engine 1 [bar]
+LIMIT	0.5 1 2 3 4 5 6 7 8
+_endif
+
+
+#*****************************************************************************************************
+#	Betriebsarten
+#*****************************************************************************************************
+
+GROUPTIME	Om111			operation mode 1
+ELEMENT MDmdeOm1		operation mode 1
+LIMIT	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+
+GROUPCHANGE	Om211			operation mode 1
+ELEMENT MDmdeOm1		operation mode 1
+LIMIT	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+
+GROUPTIME	Om131			operation mode 1
+ELEMENT MDmdeOm1		operation mode 1
+LIMIT	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+ELEMENT MDmdeOm2		operation mode 2
+LIMIT	1 2 3 4 5
+ELEMENT MDmdeRvEn		revolutions engine [rpm]
+LIMIT	500
+
+
+#*****************************************************************************************************
+#	Wippzylinder
+#*****************************************************************************************************
+
+GROUPCYCLE	Cy111LG1			cylinder 1 luffing gear 1
+BORDER  CATEGORY 1
+HYSTERESE 50
+ELEMENT MDmdeFcCy1LG1		force cylinder 1 luffing gear 1 [kN]
+STEP	-2500	100 82
+
+
+#*****************************************************************************************************
+#	Generator
+#*****************************************************************************************************
+
+GROUPTIME	Ge101			Generator 1
+ELEMENT	MDmdeCu1Ge1				current 1 generator 1 [A]
+LIMIT	20 40 60 80 100 120 140 160 180
+ELEMENT MDmdeOm1					operation mode 1
+LIMIT	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+
+MAXIMUM	MDmdeFr1Ge1	Fr1Ge1H	frequency pickup 1 generator 1 [Hz]
+MAX_ELEMENT	MDmdeFr2Ge1				frequency pickup 2 generator 1 [Hz]
+MAX_ELEMENT	MDmdeVo1Ge1				voltage 1 generator 1 [V]
+MAX_ELEMENT	MDmdeCu1Ge1				current 1 generator 1 [A]
+MAX_ELEMENT	MDmdeRvDiEn1			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT	MDmdeRvEmot1			revolutions e-motor 1 [rpm]
+MAX_ELEMENT	MDmdeRvDiEn2			revolutions diesel engine 2 [rpm]
+MAX_ELEMENT	MDmdeRvEmot2			revolutions e-motor 2 [rpm]
+MAX_ELEMENT	MDmdeOm1					operation mode 1
+
+MAXIMUM	MDmdeFr2Ge1	Fr2Ge1H	frequency pickup 2 generator 1 [Hz]
+MAX_ELEMENT	MDmdeFr1Ge1				frequency pickup 1 generator 1 [Hz]
+MAX_ELEMENT	MDmdeVo1Ge1				voltage 1 generator 1 [V]
+MAX_ELEMENT	MDmdeCu1Ge1				current 1 generator 1 [A]
+MAX_ELEMENT	MDmdeRvDiEn1			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT	MDmdeRvEmot1			revolutions e-motor 1 [rpm]
+MAX_ELEMENT	MDmdeRvDiEn2			revolutions diesel engine 2 [rpm]
+MAX_ELEMENT	MDmdeRvEmot2			revolutions e-motor 2 [rpm]
+MAX_ELEMENT	MDmdeOm1					operation mode 1
+
+MAXIMUM	MDmdeVo1Ge1	Vo1Ge1H		voltage 1 generator 1 [V]
+MAX_ELEMENT	MDmdeFr1Ge1				frequency pickup 1 generator 1 [Hz]
+MAX_ELEMENT	MDmdeFr2Ge1				frequency pickup 2 generator 1 [Hz]
+MAX_ELEMENT	MDmdeCu1Ge1				current 1 generator 1 [A]
+MAX_ELEMENT	MDmdeRvDiEn1			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT	MDmdeRvEmot1			revolutions e-motor 1 [rpm]
+MAX_ELEMENT	MDmdeRvDiEn2			revolutions diesel engine 2 [rpm]
+MAX_ELEMENT	MDmdeRvEmot2			revolutions e-motor 2 [rpm]
+MAX_ELEMENT	MDmdeOm1					operation mode 1
+
+MAXIMUM	MDmdeCu1Ge1	Cu1Ge1H		current 1 generator 1 [V]
+MAX_ELEMENT	MDmdeFr1Ge1				frequency pickup 1 generator 1 [Hz]
+MAX_ELEMENT	MDmdeFr2Ge1				frequency pickup 2 generator 1 [Hz]
+MAX_ELEMENT	MDmdeVo1Ge1				voltage 1 generator 1 [A]
+MAX_ELEMENT	MDmdeRvDiEn1			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT	MDmdeRvEmot1			revolutions e-motor 1 [rpm]
+MAX_ELEMENT	MDmdeRvDiEn2			revolutions diesel engine 2 [rpm]
+MAX_ELEMENT	MDmdeRvEmot2			revolutions e-motor 2 [rpm]
+MAX_ELEMENT	MDmdeOm1					operation mode 1
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Struktur
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+GROUPTIME	HEEL1			heel of crane [°]
+ELEMENT MDmdeAnHeel		heel inclination of crane absolute [°]
+LIMIT	0.25 0.5 0.75 1 1.25 1.5 1.75 2 2.25 2.5 2.75 3 3.25 3.5 3.75 4 4.25 4.5 4.75
+ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+LIMIT	10 20 30 40 50 60 70 80 90 100 110 120 130 140 150
+
+GROUPTIME	TRIM1			trim of crane [°]
+ELEMENT MDmdeAnTrim		trim inclination of crane absolute [°]
+LIMIT	0.25 0.5 0.75 1 1.25 1.5 1.75 2 2.25 2.5 2.75 3 3.25 3.5 3.75 4 4.25 4.5 4.75
+ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+LIMIT	10 20 30 40 50 60 70 80 90 100 110 120 130 140 150
+
+GROUPTIME	TRIMHEEL1			trim of crane [°]
+ELEMENT MDmdeAnTrim		trim inclination of crane absolute [°]
+LIMIT	0.25 0.5 0.75 1 1.25 1.5 1.75 2 2.25 2.5 2.75 3 3.25 3.5 3.75 4 4.25 4.5 4.75
+ELEMENT MDmdeAnHeel		heel inclination of crane absolute [°]
+LIMIT	0.25 0.5 0.75 1 1.25 1.5 1.75 2 2.25 2.5 2.75 3 3.25 3.5 3.75 4 4.25 4.5 4.75
+
+MAXIMUM	MDmdeAnHeel	HEEL1	crane heel inclination [°]
+MAX_ELEMENT	MDmdeAnInclX			crane inclination X axis [°]
+MAX_ELEMENT	MDmdeAnInclY			crane inclination Y axis [°]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+
+MAXIMUM	MDmdeAnIncXY	INCLIN1	crane inclination [°]
+MAX_ELEMENT	MDmdeAnInclX			crane inclination X axis [°]
+MAX_ELEMENT	MDmdeAnInclY			crane inclination Y axis [°]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+
+MAXIMUM	MDmdeAnTrim	TRIM1	crane trim inclination [°]
+MAX_ELEMENT	MDmdeAnInclX			crane inclination X axis [°]
+MAX_ELEMENT	MDmdeAnInclY			crane inclination Y axis [°]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+
+
+
+
+
+_if MWmdeActiv EQ 2
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Old Part (crane types 100 150 320 400 500)
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#------------------------------------------------------------------------------
+# MDE for LHM  version	00119 
+#------------------------------------------------------------------------------
+#
+#	modification:
+#
+#	version | mod. number | date       | name             | 
+#	--------------------------------------------------------------------------
+#	00001   | 00000       | 16.09.1998 | Rajek Martin     | 
+#	00005   |             | 17.08.1999 | Rajek Martin     |   
+#	00010   |             | 16.12.1999 | Huster Dirk      |
+#	00026   |             | 05.03.2001 | Rajek Martin     | info on CU824 board added
+#	00099   |             | 08.02.2002 | Sonderegger J.   | MDoperationMode um 3 weitere Betriebsarten erweitert
+#   00063			    	25.06.2003   Sonderegger J.   | 2. WW Pumpe; engine neue Einteilung
+#   00119			    	4.04.2006    Sonderegger J.   | System Variablen entfernt
+# 									10.08.2009   Marent M.  Erweiterung Maxwerte (Design slewing speed,...)
+#										24.11.2011   Marent M.  Erweiterung Maxwerte (utiilisation tipping and utilisation operation mode; STACKSIZE 30)
+#										20.06.2011   Marent M. If Bedingungen angepasst
+#										21.09.2011   Marent M. Klassenfehler ausgebessert; verfeinerte Wippzylinder und Uitlisation Einteilung; Betriebsarten MDmdeOm neu
+#
+#
+#------------------------------------------------------------------------------
+# automatische Speicherung
+#------------------------------------------------------------------------------
+AUTOSTORE	30	500	9.0\
+
+#------------------------------------------------------------------------------
+# Spannungszyklen
+#------------------------------------------------------------------------------
+
+# Last am Seil
+GROUPCYCLE	LOADCYCL	load on hook
+HYSTERESE	2
+ELEMENT	MDloadLML	load l.m.l. [to]
+STEP	5	5	31
+ELEMENT	MDoutreachLML	outreach LML [m]
+STEP	3	3	17
+
+# Ausnutzung
+GROUPCYCLE	UTILCYCL	utilization
+HYSTERESE	5
+ELEMENT	MDutilizationMde	utilization MDE [%]
+STEP	20	5	22
+
+# Kraft am Wippzylinder ??
+GROUPCYCLE	LUFFCYCL	cycles of luffing gear
+HYSTERESE	200
+ELEMENT	MDlgForceCyl	force at cylinder luffing gear [kN]
+STEP	-4400	400	24
+
+
+#------------------------------------------------------------------------------
+# Gruppen (Zeit)
+#------------------------------------------------------------------------------
+
+# Haltewinde
+GROUPTIME	WINCH1	Holding Winch (Winch 1)
+ELEMENT	MDhgLoadLMLW1	load l.m.l. [to]
+STEP	5	5	31
+ELEMENT	MDhgSpeedW1	speed h.g. [m/min]
+LIMIT	-120	-100	-75	-50	-30	-10	-1	1	10	30	50	75	100	120
+ELEMENT	MDoperationMode	operation mode
+STEP	1	1	14
+
+# Schliesswinde
+GROUPTIME	WINCH2	Closing Winch (Winch 2)
+ELEMENT	MDhgLoadLMLW2	load l.m.l. [to]
+STEP	5	5	31
+ELEMENT	MDhgSpeedW2	speed h.g. [m/min]
+LIMIT	-120	-100	-75	-50	-30	-10	-1	1	10	30	50	75	100	120
+ELEMENT	MDoperationMode	operation mode
+STEP	1	1	14
+
+# Drehwerksgetriebe
+GROUPTIME	SLEWGEAR	Slewing Gear
+ELEMENT	MDsgPresDiffRiLe	pressure difference slewing gear [bar]
+LIMIT	-320	-280	-240	-200	-160	-120	-80	-40	-10	10	40	80	120	160	200	240	280	320
+#Drehgeschwindigkeit ??
+#Betriebsart ??
+
+# Wippwerk
+GROUPTIME	LUFFING	Luffing Gear
+ELEMENT	MDlgForceCyl	force at cylinder luffing gear [kN]
+STEP	-4400	400	24
+ELEMENT	MDoperationMode	operation mode
+STEP	1	1	14
+
+# Verteilergetriebe (alle relevanten Achsen, Fahrbetrieb nicht meßbar, Dieselmotor)
+GROUPTIME	DIST-DI	Distribution Gearbox	
+ELEMENT	MDtorq6_8	torque aggregate axle 6- 8 [Nm]
+STEP	-1000	400	11
+ELEMENT	MDtorq7_9	torque aggregate axle 7- 9 [Nm]
+STEP	-1000	400	11
+ELEMENT	MDsumTorqEng	additiv torque aggregate engine [Nm]
+STEP	-1000	400	11
+
+# Verteilergetriebe (alle relevanten Achsen, Fahrbetrieb nicht meßbar, mit E- Motoren)
+GROUPTIME	DIST-EL	Distribution Gearbox	
+ELEMENT	MDtorq6_8	torque aggregate axle 6- 8 [Nm]
+STEP	-1000	400	11
+ELEMENT	MDtorq7_9	torque aggregate axle 7- 9 [Nm]
+STEP	-1000	400	11
+ELEMENT	MDsumTorqEmot	additiv torque aggregate e-motors [Nm]
+STEP	-1000	400	11
+
+# Dieselmotor Grenzlast
+GROUPTIME	ENGINE	Engine Speed
+ELEMENT	MDdieselEngSpeed	engine speed [rpm]
+STEP	800 200 9
+ELEMENT	MDsumPowerEng	additiv output power aggregate engine [kW]
+LIMIT	-200	-100	0	100	200 250	300 350	400	450	500	550	600	650	700	
+
+# Elektromotor Grenzlast
+GROUPTIME	E-POWER		Power Elektric Motor
+ELEMENT	MDengineSpeed	engine speed [rpm]
+LIMIT	500	1750	2050	2300
+ELEMENT	MDsumPowerEmot	additiv output power aggregate e-motors [kW]]
+STEP	-200 100 10
+
+# Elektromotor
+GROUPTIME	EMOTOR	Electric Motor
+ELEMENT	MDmainMotCurr	electric motor current [A]
+STEP	100	150	10
+ELEMENT	MDoperationMode	operation mode
+STEP	1	1	14
+
+# Temperatur
+GROUPTIME	TEMPRATR	Temperature
+ELEMENT	MDhydrOilTemp	hydraulic oil temperature [°C]
+STEP	0	10	12
+
+# Generator 
+GROUPTIME	GENERATR	Genarator
+ELEMENT	MDgeneratCurrent	generator current [A]
+STEP	20	20	10
+ELEMENT	MDoperationMode	operation mode
+STEP	1	1	14
+
+# Pump Hoisting Gear 1
+GROUPTIME	PUMP_HG1	Pump Hoisting Gear 1
+ELEMENT	MDpowerPu1Hg	output power pump1 hoisting gear [kW]
+STEP	-180	40	11
+ELEMENT	MDhgSumPressW1	pressure signal h.g. 1 [bar]
+STEP	40 40 10
+
+# Pump Hoisting Gear 2
+GROUPTIME	PUMP_HG2	Pump Hoisting Gear 2
+ELEMENT	MDpowerPu2Hg	output power pump2 hoisting gear [kW]
+STEP	-180	40	11
+ELEMENT	MDhgSumPressW2	pressure signal h.g. 2 [bar]
+STEP	40 40 10
+
+# Pump Slewing Gear 1
+GROUPTIME	PUMP_SG1	Pump Slewing Gear 1
+ELEMENT	MDpowerPu1Sg	output power pump1 slewing gear [kW]
+STEP	-180	40	11
+ELEMENT	MDsgPresDiffRiLe	pressure difference slewing gear [bar]
+STEP	-320	40	18
+
+# Pump Slewing Gear 2
+GROUPTIME	PUMP_SG2	Pump Slewing Gear 2
+ELEMENT	MDpowerPu2Sg	output power pump2 slewing gear [kW]
+STEP	-180	40	11
+ELEMENT	MDsgPresDiffRiLe	pressure difference slewing gear [bar]
+STEP	-320	40	18
+
+# Pump Luffing Gear
+GROUPTIME	PUMP_LG	Pump Luffing Gear
+ELEMENT	MDpowerPu1Lg	output power pump luffing gear [kW]
+STEP	-180	40	11
+ELEMENT	MDlgSumPressPuUp	pressure signal l.g. pump up 4E-B03 [bar]
+STEP	40 40 10
+
+# Last am Seil
+GROUPTIME	LOADHOOK	load on hook
+ELEMENT	MDloadLML	load l.m.l. [to]
+STEP	5	5	31
+ELEMENT	MDoutreachLML	outreach LML [m]
+STEP	3	3	17
+
+# Dieselmotor 1
+GROUPTIME	ENGINE1	diesel Engine 1
+ELEMENT	MDdieselEngSpeed		present diesel engine speed [rpm]
+LIMIT	1000	1400	1920	2050	2200	2300
+ELEMENT	MDchargeAirPress	charge air pressure in [bar]
+STEP	1	0.25	7
+ELEMENT	MDengExploitatio	diesel engine exploitation (utilization of the engine) in [%]
+STEP	-10	2	12
+
+# Dieselmotor 2
+GROUPTIME	ENGINE2	diesel Engine 2
+ELEMENT	MDdieselEngSpeed		present diesel engine speed [rpm]
+LIMIT	1000	1400	1920	2050	2200	2300
+ELEMENT	MDtempCoolWater		cooling water temperature of the engine in [°C]
+STEP	-20	20	8
+ELEMENT	MDlubOilPressure	lub oil pressure of the engine in [bar]
+STEP	1	1	8
+
+# CPU (only CU824)
+# GROUPTIME	CPU	CU824 CPU bord info
+# ELEMENT	%SD8.5		voltage of local battery in [V]
+# STEP	2.2	0.2	9
+# ELEMENT	%SD8.6		temperature of CPU surface in [°C]
+# STEP	-30 10 13
+# ELEMENT	%SD8.7		temperature of board in [°C]
+# STEP	-30 10 13
+
+
+#------------------------------------------------------------------------------
+# Gruppen (Wechsel)
+#------------------------------------------------------------------------------
+
+# Laufbahn Drehkranz
+GROUPCHANGE	SLEWTRAK	Slewing Gear Track
+ELEMENT	SDVslewingAngle	slewing angle [°]
+STEP	7.5	15	25
+ELEMENT	MDloadLML	load l.m.l. [to]
+NO_CHANGE_DETECT
+STEP	5	5	31
+ELEMENT	MDoutreachLML	outreach LML [m]
+NO_CHANGE_DETECT
+STEP	3	3	17
+
+# Verzahnung Drehkranz
+GROUPCHANGE	SLEWTETH	Slewing Gear Teeth
+ELEMENT	SDVslewingAngle	slewing angle [°]
+STEP	7.5	15	25
+ELEMENT	MDsgPresDiffRiLe	pressure difference slewing gear [bar]
+NO_CHANGE_DETECT
+LIMIT	-320	-280	-240	-200	-160	-120	-80	-40	-10	10	40	80	120	160	200	240	280	320
+
+# Anzahl Dieselstarts
+GROUPCHANGE	ENGSTART	Engine Starts
+ELEMENT MDdieselEngSpeed	diesel engine speed [rpm]
+LIMIT	10	500
+ELEMENT	MDtempCoolWater		cooling water temperature of the engine in [°C]
+NO_CHANGE_DETECT
+STEP	-20	20	8
+
+#------------------------------------------------------------------------------
+# Maxima
+#------------------------------------------------------------------------------
+# Dieselmotor
+MAXIMUM	MDdieselEngSpeed	ENGSPEED	diesel engine speed [rpm]
+MAX_ELEMENT	MDchargeAirPress	charge air pressure in [bar]
+MAX_ELEMENT	MDengExploitatio	diesel engine exploitation (utilization of the engine) in [%]
+MAX_ELEMENT	MDtempCoolWater		cooling water temperature of the engine in [°C]
+MAX_ELEMENT	MDlubOilPressure	lub oil pressure of the engine in [bar]
+
+MAXIMUM	 MDtempCoolWater	COOLWATE	cooling water temperature of the engine in [°C]
+MAX_ELEMENT	MDchargeAirPress	charge air pressure in [bar]
+MAX_ELEMENT	MDengExploitatio	diesel engine exploitation (utilization of the engine) in [%]
+MAX_ELEMENT	MDdieselEngSpeed	present diesel engine speed [rpm]
+MAX_ELEMENT	MDlubOilPressure	lub oil pressure of the engine in [bar]
+MAX_ELEMENT	MDhydrOilTemp		hydraulic oil temperature in [°C]
+
+# Seillast Hubwerk 1
+MAXIMUM	MDhgLoadLMLW1	WINCH1	load winch 1 [to]
+STACKSIZE 50
+MAX_ELEMENT	MDhgLoadLMLW2				load winch 2 [to]
+MAX_ELEMENT	MDhgSumPressW1			pressure winch 1 [bar]
+MAX_ELEMENT	MDoutreachLML				outreach LML [m]
+MAX_ELEMENT	MDoperationMode			operation mode
+MAX_ELEMENT	SDVslewingAngle			slewing angle [°]
+MAX_ELEMENT	MDsgPresDiffRiLe		pressure difference slewing gear [bar]
+MAX_ELEMENT	MDlgPressCyUp				l.g. pressure [bar]
+MAX_ELEMENT	MDutilizationMde		utilization MDE [%]
+MAX_ELEMENT	MDhgSpeedW1					speed h.g. [m/min]
+MAX_ELEMENT	MDhgSpeedW2					speed h.g. [m/min]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT	MXmdeStBk1SS1				status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeSpWind					wind speed [m/s]
+MAX_ELEMENT MDmdePwDiEn1				power diesel engine 1 [kW]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+
+# Seillast Hubwerk 2
+MAXIMUM	MDhgLoadLMLW2	WINCH2	load winch 2 [to]
+STACKSIZE 50
+MAX_ELEMENT	MDhgLoadLMLW1	load winch 1 [to]
+MAX_ELEMENT	MDhgSumPressW2	pressure winch 2 [bar]
+MAX_ELEMENT	MDoutreachLML	outreach LML [m]
+MAX_ELEMENT	MDoperationMode	operation mode
+MAX_ELEMENT	SDVslewingAngle	slewing angle [°]
+MAX_ELEMENT	MDsgPresDiffRiLe	pressure difference slewing gear [bar]
+MAX_ELEMENT	MDlgPressCyUp	l.g. pressure [bar]
+MAX_ELEMENT	MDutilizationMde	utilization MDE [%]
+MAX_ELEMENT	MDhgSpeedW1	speed h.g. [m/min]
+MAX_ELEMENT	MDhgSpeedW2	speed h.g. [m/min]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT	MXmdeStBk1SS1				status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeSpWind					wind speed [m/s]
+MAX_ELEMENT MDmdePwDiEn1				power diesel engine 1 [kW]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+# max. Druck (Moment) Drehwerk
+MAXIMUM	MDsgPresDiffRiLe	SLEWING	pressure difference slewing gear [bar]
+STACKSIZE 30
+MAX_ELEMENT	MDloadLML	load l.m.l. [to]
+MAX_ELEMENT	MDoutreachLML	outreach LML [m]
+MAX_ELEMENT	MDoperationMode	operation mode
+MAX_ELEMENT	SDVslewingAngle	slewing angle [°]
+MAX_ELEMENT	MDsgPresDiffRiLe	pressure difference slewing gear
+MAX_ELEMENT	MDutilizationMde	utilization MDE [%]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDhgLoadLMLW1	load winch 1 [to]
+MAX_ELEMENT	MDhgLoadLMLW2	load winch 2 [to]
+MAX_ELEMENT	MDhgSpeedW1	speed h.g. [m/min]
+MAX_ELEMENT	MDhgSpeedW2	speed h.g. [m/min]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT	MXmdeStBk1SS1				status brake 1 slewing system 1
+MAX_ELEMENT MDmdePwDiEn1				power diesel engine 1 [kW]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+
+# max. Druck Wippwerk
+MAXIMUM	MDlgPressCyUp	LUFFING	pressure signal l.g. cylinder up 4E-B01 [bar]
+MAX_ELEMENT	MDloadLML	load l.m.l. [to]
+MAX_ELEMENT	MDoutreachLML	outreach LML [m]
+MAX_ELEMENT	MDoperationMode	operation mode
+MAX_ELEMENT	MDjibAngleLML	jib angle LML [°]
+MAX_ELEMENT	SDVslewingAngle	slewing angle [°]
+MAX_ELEMENT	MDhgSpeedW1	speed h.g. [m/min]
+MAX_ELEMENT	MDhgSpeedW2	speed h.g. [m/min]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT	MXmdeStBk1SS1				status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeSpWind					wind speed [m/s]
+MAX_ELEMENT MDmdePwDiEn1				power diesel engine 1 [kW]
+
+
+# max. Kraft Wippwerk
+MAXIMUM	MDlgForceCyl	LUFF_FRC	force at cylinder luffing gear [kN]
+STACKSIZE 30
+MAX_ELEMENT	MDloadLML	load l.m.l. [to]
+MAX_ELEMENT	MDoutreachLML	outreach LML [m]
+MAX_ELEMENT	MDoperationMode	operation mode
+MAX_ELEMENT	MDjibAngleLML	jib angle LML [°]
+MAX_ELEMENT	SDVslewingAngle	slewing angle [°]
+MAX_ELEMENT	MDhgSpeedW1	speed h.g. [m/min]
+MAX_ELEMENT	MDhgSpeedW2	speed h.g. [m/min]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT	MXmdeStBk1SS1				status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeSpWind					wind speed [m/s]
+MAX_ELEMENT MDmdePwDiEn1				power diesel engine 1 [kW]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+# Generator
+MAXIMUM	MDgeneratCurrent	GENERATR	generator current [A]
+MAX_ELEMENT	MDoperationMode	operation mode
+
+
+
+# Summe aller Momente im Verteilergetriebe
+
+# Druck Fahrwerk
+
+# max. Drehzahl Motor
+MAXIMUM	MDengineSpeed	ENGINE	engine speed [rpm]
+MAX_ELEMENT	MDloadLML	load l.m.l. [to]
+MAX_ELEMENT	MDoutreachLML	outreach LML [m]
+MAX_ELEMENT	MDoperationMode	operation mode
+MAX_ELEMENT	MDjibAngleLML	jib angle LML [°]
+MAX_ELEMENT	MDutilizationMde	utilization MDE [%]
+
+# max. Strom E-Motor
+MAXIMUM	MDmainMotCurr	EMOTOR	electric motor current [A]
+MAX_ELEMENT	MDloadLML	load l.m.l. [to]
+MAX_ELEMENT	MDoutreachLML	outreach LML [m]
+MAX_ELEMENT	MDoperationMode	operation mode
+
+# max. Temperatur Umgebung
+MAXIMUM	MDoutsideTemp	OUT_TEMP	 outside temperatur [°C]
+MAX_ELEMENT	MDhydrOilTemp	hydraulic oil temperature [°C]
+
+# max. Oeltemperatur
+MAXIMUM	MDhydrOilTemp	OIL_TEMP	hydraulic oil temperature [°C]
+MAX_ELEMENT	MDoperationMode	operation mode
+
+# max. Ausnutzung
+MAXIMUM	MDutilizationMde	UTILISAT	utilization MDE [%]
+STACKSIZE 50
+MAX_ELEMENT	MDoutreachLML	outreach LML [m]
+MAX_ELEMENT	MDoperationMode	operation mode
+MAX_ELEMENT	MDloadLML	load l.m.l. [to]
+MAX_ELEMENT	SDVslewingAngle	slewing angle [°]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDhgLoadLMLW1	load winch 1 [to]
+MAX_ELEMENT	MDhgLoadLMLW2	load winch 2 [to]
+MAX_ELEMENT	MDhgSpeedW1	speed h.g. [m/min]
+MAX_ELEMENT	MDhgSpeedW2	speed h.g. [m/min]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT	MXmdeStBk1SS1				status brake 1 slewing system 1
+MAX_ELEMENT MDmdePwDiEn1				power diesel engine 1 [kW]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+# max CPU temperature
+# MAXIMUM %SD8.6	CPU_TEMP	temperature of CPU surface in [°C]
+# MAX_ELEMENT	%SD8.5		voltage of local battery in [V]
+# MAX_ELEMENT	%SD8.7		temperature of board in [°C]
+
+#------------------------------------------------------------------------------
+# Minima
+#------------------------------------------------------------------------------
+
+# min. Temperatur Umgebung
+MINIMUM	MDoutsideTemp	OUT_TEMP	 outside temperatur [°C]
+MIN_ELEMENT	MDhydrOilTemp	hydraulic oil temperature [°C]
+
+# min. Druck (Moment) Drehwerk
+MINIMUM	MDsgPresDiffRiLe	SLEWING	pressure difference slewing gear [bar]
+STACKSIZE 30
+MIN_ELEMENT	MDloadLML	load l.m.l. [to]
+MIN_ELEMENT	MDoutreachLML	outreach LML [m]
+MIN_ELEMENT	MDoperationMode	operation mode
+MIN_ELEMENT	SDVslewingAngle	slewing angle [°]
+MIN_ELEMENT	MDsgPresDiffRiLe	pressure difference slewing gear
+MIN_ELEMENT	MDutilizationMde	utilization MDE [%]
+MIN_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MIN_ELEMENT	MDhgLoadLMLW1	load winch 1 [to]
+MIN_ELEMENT	MDhgLoadLMLW2	load winch 2 [to]
+MIN_ELEMENT	MDhgSpeedW1	speed h.g. [m/min]
+MIN_ELEMENT	MDhgSpeedW2	speed h.g. [m/min]
+MIN_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MIN_ELEMENT	MXmdeStBk1SS1				status brake 1 slewing system 1
+MIN_ELEMENT MDmdePwDiEn1				power diesel engine 1 [kW]
+MIN_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MIN_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+# min. Druck Wippwerk
+MINIMUM	MDlgPressCyUp	LUFFING	pressure signal l.g. cylinder up 4E-B01 [bar]
+MIN_ELEMENT	MDloadLML	load l.m.l. [to]
+MIN_ELEMENT	MDoutreachLML	outreach LML [m]
+MIN_ELEMENT	MDoperationMode	operation mode
+MIN_ELEMENT	MDjibAngleLML	jib angle LML [°]
+MIN_ELEMENT	SDVslewingAngle	slewing angle [°]
+MIN_ELEMENT	MDhgSpeedW1	speed h.g. [m/min]
+MIN_ELEMENT	MDhgSpeedW2	speed h.g. [m/min]
+MIN_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MIN_ELEMENT	MXmdeStBk1SS1				status brake 1 slewing system 1
+MIN_ELEMENT	MDmdeSpWind					wind speed [m/s]
+MIN_ELEMENT MDmdePwDiEn1				power diesel engine 1 [kW]
+
+# min. Kraft Wippwerk
+MINIMUM	MDlgForceCyl	LUFF_FRC	force at cylinder luffing gear [kN]
+STACKSIZE 30
+MIN_ELEMENT	MDloadLML	load l.m.l. [to]
+MIN_ELEMENT	MDoutreachLML	outreach LML [m]
+MIN_ELEMENT	MDoperationMode	operation mode
+MIN_ELEMENT	MDjibAngleLML	jib angle LML [°]
+MIN_ELEMENT	SDVslewingAngle	slewing angle [°]
+MIN_ELEMENT	MDhgSpeedW1	speed h.g. [m/min]
+MIN_ELEMENT	MDhgSpeedW2	speed h.g. [m/min]
+MIN_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MIN_ELEMENT	MXmdeStBk1SS1				status brake 1 slewing system 1
+MIN_ELEMENT	MDmdeSpWind					wind speed [m/s]
+MIN_ELEMENT MDmdePwDiEn1				power diesel engine 1 [kW]
+MIN_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MIN_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+
+_endif
+
+
+
+_if MWmdeActiv EQ 1
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	New Part (crane types 120 180 280 600)
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Aggregat
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#*****************************************************************************************************
+#	Dieselmotor
+#*****************************************************************************************************
+
+#_if MWmdeIfDiEn1 EQ 1
+#GROUPTIME	De101			diesel engine 1
+#ELEMENT MDmdeRvDiEn1		revolutions diesel engine 1 [rpm]
+#LIMIT	500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400 2500
+#ELEMENT MDmdePwDiEn1		power diesel engine 1 [kW]
+#LIMIT	-500 -450 -400 -350 -300 -250 -200 -150 -100 -50 0 50 100 150 200 250 300 350 400 450 500 550 600 650 700 750
+#_endif
+
+_if MWmdeIfDiEn2 EQ 1
+GROUPTIME	De102			diesel engine 2
+ELEMENT MDmdeRvDiEn2		revolutions diesel engine 2 [rpm]
+LIMIT	500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400 2500
+ELEMENT MDmdePwDiEn2		power diesel engine 2 [kW]
+LIMIT	-500 -450 -400 -350 -300 -250 -200 -150 -100 -50 0 50 100 150 200 250 300 350 400 450 500 550 600 650 700 750
+_endif
+
+#_if MWmdeIfDiEn1 EQ 1
+#GROUPTIME	De201			diesel engine 1
+#ELEMENT MDmdeRvDiEn1		revolutions diesel engine 1 [rpm]
+#LIMIT	800 1000 1200 1400 1600 1700 1800 1850 1900 1950 2000 2100 2200 2400
+#ELEMENT MDmdePrChAirEn1		charge air pressure diesel engine 1 [bar]
+#LIMIT	1 1.5 2 2.25 2.5 2.75 3 3.25 3.5 3.75 4 4.25 4.5 5
+#ELEMENT MDmdeExDiEn1		engine exploitation diesel engine 1 [%]
+#LIMIT	0 10 20 30 40 50 60 70 75 80 82.5 85 87.5 90 95
+#_endif
+
+_if MWmdeIfDiEn2 EQ 1
+GROUPTIME	De202			diesel engine 2
+ELEMENT MDmdeRvDiEn2		revolutions diesel engine 2 [rpm]
+LIMIT	800 1000 1200 1400 1600 1700 1800 1850 1900 1950 2000 2100 2200 2400
+ELEMENT MDmdePrChAirEn2		charge air pressure diesel engine 2 [bar]
+LIMIT	1 1.5 2 2.25 2.5 2.75 3 3.25 3.5 3.75 4 4.25 4.5 5
+ELEMENT MDmdeExDiEn2		engine exploitation diesel engine 2 [%]
+LIMIT	0 10 20 30 40 50 60 70 75 80 82.5 85 87.5 90 95
+_endif
+
+_if MWmdeIfDiEn1 EQ 1
+GROUPTIME	De301			diesel engine 1
+ELEMENT MDmdeRvDiEn1		revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+ELEMENT MDmdePrChAirEn1		charge air pressure diesel engine 1 [bar]
+LIMIT	1 1.5 2 2.5 3 3.5 4 4.5 5
+ELEMENT MDmdeTmChAirEn1		charge air temperature diesel engine 1 [°C]
+LIMIT	-10 0 10 20 30 40 50 60 70
+_endif
+
+_if MWmdeIfDiEn2 EQ 1
+GROUPTIME	De302			diesel engine 2
+ELEMENT MDmdeRvDiEn2		revolutions diesel engine 2 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+ELEMENT MDmdePrChAirEn2		charge air pressure diesel engine 2 [bar]
+LIMIT	1 1.5 2 2.5 3 3.5 4 4.5 5
+ELEMENT MDmdeTmChAirEn2		charge air temperature diesel engine 2 [°C]
+LIMIT	-10 0 10 20 30 40 50 60 70
+_endif
+
+#_if MWmdeIfDiEn1 EQ 1
+#GROUPTIME	De501			diesel engine 1
+#ELEMENT MDmdeRvDiEn1		revolutions diesel engine 1 [rpm]
+#LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+#ELEMENT MDmdeTmCoWaEn1		cooling water temperature diesel engine 1 [°C]
+#LIMIT	-20 0 20 40 60 80 85 90 95 100 105 110 120
+#ELEMENT MDmdePrLbOilEn1		lub oil pressure diesel engine 1 [bar]
+#LIMIT	0.5 1 2 3 4 5 6 7 8
+#_endif
+
+_if MWmdeIfDiEn2 EQ 1
+GROUPTIME	De502			diesel engine 2
+ELEMENT MDmdeRvDiEn2		revolutions diesel engine 2 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+ELEMENT MDmdeTmCoWaEn2		cooling water temperature diesel engine 2 [°C]
+LIMIT	-20 0 20 40 60 80 85 90 95 100 105 110 120
+ELEMENT MDmdePrLbOilEn2		lub oil pressure diesel engine 2 [bar]
+LIMIT	0.5 1 2 3 4 5 6 7 8
+_endif
+
+_if MWmdeIfDiEn1 EQ 1
+GROUPTIME	De621			diesel Engine 1
+ELEMENT MDmdeRvDiEn1		revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200
+ELEMENT MDmdeCoFuelEn1		fuel consumption diesel engine 1 [L/h]
+STEP	0 2.5 90
+_endif
+
+_if MWmdeIfDiEn2 EQ 1
+GROUPTIME	De622			diesel Engine 2
+ELEMENT MDmdeRvDiEn2		revolutions diesel engine 2 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200
+ELEMENT MDmdeCoFuelEn2		fuel consumption diesel engine 2 [L/h]
+STEP	0 2.5 90
+_endif
+
+_if MWmdeIfDiEn1 EQ 1
+MAXIMUM	MDmdeRvDiEn1	RvDiEn1H	revolutions diesel engine 1 [rpm]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdeTmCoWaEn1			cooling water temperature diesel engine 1 [°C]
+MAX_ELEMENT	MDmdePrChAirEn1			charge air pressure diesel engine 1 [bar]
+MAX_ELEMENT	MDmdeTmChAirEn1			charge air temperature diesel engine 1 [°C]
+MAX_ELEMENT	MDmdePrAirFiEn1			air filter negative pressure diesel engine 1 [mbar]
+MAX_ELEMENT	MDmdePrLbOilEn1			lub oil pressure diesel engine 1 [bar]
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdeRvEmot1			revolutions e-motor 1 [rpm]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdeRvDiEn2			revolutions diesel engine 2 [rpm]
+MAX_ELEMENT	MDmdeTmCoWaEn2			cooling water temperature diesel engine 2 [°C]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeRvEmot2			revolutions e-motor 2 [rpm]
+_endif
+
+_if MWmdeIfDiEn2 EQ 1
+MAXIMUM	MDmdeRvDiEn2	RvDiEn2H	revolutions diesel engine 2 [rpm]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdeTmCoWaEn2			cooling water temperature diesel engine 2 [°C]
+MAX_ELEMENT	MDmdePrChAirEn2			charge air pressure diesel engine 2 [bar]
+MAX_ELEMENT	MDmdeTmChAirEn2			charge air temperature diesel engine 2 [°C]
+MAX_ELEMENT	MDmdePrAirFiEn2			air filter negative pressure diesel engine 2 [mbar]
+MAX_ELEMENT	MDmdePrLbOilEn2			lub oil pressure diesel engine 2 [bar]
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdeRvDiEn1			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT	MDmdeTmCoWaEn1			cooling water temperature diesel engine 1 [°C]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdeRvEmot1			revolutions e-motor 1 [rpm]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeRvEmot2			revolutions e-motor 2 [rpm]
+MAX_ELEMENT	MDmdeTmHOilTa1			temperature hydraulic oil tank 1 [°C]
+_endif
+
+_if MWmdeIfDiEn1 EQ 1
+MAXIMUM	MDmdeTmCoWaEn1	TmCWaE1H	cooling water temperature diesel engine 1 [°C]
+MAX_ELEMENT	MDmdeRvDiEn1			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePrChAirEn1			charge air pressure diesel engine 1 [bar]
+MAX_ELEMENT	MDmdeTmChAirEn1			charge air temperature diesel engine 1 [°C]
+MAX_ELEMENT	MDmdePrAirFiEn1			air filter negative pressure diesel engine 1 [mbar]
+MAX_ELEMENT	MDmdePrLbOilEn1			lub oil pressure diesel engine 1 [bar]
+MAX_ELEMENT	MXmdeLvCoWaEn1			cooling water tank level diesel engine 1
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdeRvEmot1			revolutions e-motor 1 [rpm]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdeRvDiEn2			revolutions diesel engine 2 [rpm]
+MAX_ELEMENT	MDmdeTmCoWaEn2			cooling water temperature diesel engine 2 [°C]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeRvEmot2			revolutions e-motor 2 [rpm]
+MAX_ELEMENT	MDmdeTmHOilTa1			temperature hydraulic oil tank 1 [°C]
+_endif
+
+_if MWmdeIfDiEn2 EQ 1
+MAXIMUM	MDmdeTmCoWaEn2	TmCWaE2H	cooling water temperature diesel engine 2 [°C]
+MAX_ELEMENT	MDmdeRvDiEn2			revolutions diesel engine 2 [rpm]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePrChAirEn2			charge air pressure diesel engine 2 [bar]
+MAX_ELEMENT	MDmdeTmChAirEn2			charge air temperature diesel engine 2 [°C]
+MAX_ELEMENT	MDmdePrAirFiEn2			air filter negative pressure diesel engine 2 [mbar]
+MAX_ELEMENT	MDmdePrLbOilEn2			lub oil pressure diesel engine 2 [bar]
+MAX_ELEMENT	MXmdeLvCoWaEn2			cooling water tank level diesel engine 2
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdeRvDiEn1			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT	MDmdeTmCoWaEn1			cooling water temperature diesel engine 1 [°C]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdeRvEmot1			revolutions e-motor 1 [rpm]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeRvEmot2			revolutions e-motor 2 [rpm]
+MAX_ELEMENT	MDmdeTmHOilTa1			temperature hydraulic oil tank 1 [°C]
+_endif
+
+
+
+#*****************************************************************************************************
+#	Verteilergetriebe
+#*****************************************************************************************************
+
+_if MWmdeIfDG1 EQ 1
+GROUPTIME	Gr101DG1			input 1 distribution gear 1
+ELEMENT MDmdeRvIn1DG1		revolutions input 1 distribution gear 1 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+ELEMENT MDmdeTqIn1DG1		torque input 1 distribution gear 1 [Nm]
+ABSOLUTE
+LIMIT	400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+
+_if MWmdeIfDG2 EQ 1
+GROUPTIME	Gr101DG2			input 1 distribution gear 2
+ELEMENT MDmdeRvIn1DG2		revolutions input 1 distribution gear 2 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+ELEMENT MDmdeTqIn1DG2		torque input 1 distribution gear 2 [Nm]
+ABSOLUTE
+LIMIT	400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+
+_if MWmdeIfDG1 EQ 1
+GROUPTIME	Gr201DG1			input 1 distribution gear 1
+ELEMENT MDmdeRvIn1DG1		revolutions input 1 distribution gear 1 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+ELEMENT MDmdeTmDG1		temperature distribution gear 1 [°C]
+LIMIT	-30 -20 -10 0 10 20 30 40 50 60 70 80 90 100 110 120
+_endif
+
+_if MWmdeIfDG2 EQ 1
+GROUPTIME	Gr201DG2			input 1 distribution gear 2
+ELEMENT MDmdeRvIn1DG2		revolutions input 1 distribution gear 2 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+ELEMENT MDmdeTmDG2		temperature distribution gear 2 [°C]
+LIMIT	-30 -20 -10 0 10 20 30 40 50 60 70 80 90 100 110 120
+_endif
+
+_if MWmdeIfDG1 EQ 1
+GROUPTIME	Gr301DG1			axle 1 distribution gear 1
+ELEMENT MDmdeTqAx1DG1		torque axle 1 distribution gear 1 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG2 EQ 1
+GROUPTIME	Gr301DG2			axle 1 distribution gear 2
+ELEMENT MDmdeTqAx1DG2		torque axle 1 distribution gear 2 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG1 EQ 1
+GROUPTIME	Gr302DG1			axle 2 distribution gear 1
+ELEMENT MDmdeTqAx2DG1		torque axle 2 distribution gear 1 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG2 EQ 1
+GROUPTIME	Gr302DG2			axle 2 distribution gear 2
+ELEMENT MDmdeTqAx2DG2		torque axle 2 distribution gear 2 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG1 EQ 1
+GROUPTIME	Gr303DG1			axle 3 distribution gear 1
+ELEMENT MDmdeTqAx3DG1		torque axle 3 distribution gear 1 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG2 EQ 1
+GROUPTIME	Gr303DG2			axle 3 distribution gear 2
+ELEMENT MDmdeTqAx3DG2		torque axle 3 distribution gear 2 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG1 EQ 1
+GROUPTIME	Gr304DG1			axle 4 distribution gear 1
+ELEMENT MDmdeTqAx4DG1		torque axle 4 distribution gear 1 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG2 EQ 1
+GROUPTIME	Gr304DG2			axle 4 distribution gear 2
+ELEMENT MDmdeTqAx4DG2		torque axle 4 distribution gear 2 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG1 EQ 1
+GROUPTIME	Gr305DG1			axle 5 distribution gear 1
+ELEMENT MDmdeTqAx5DG1		torque axle 5 distribution gear 1 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG2 EQ 1
+GROUPTIME	Gr305DG2			axle 5 distribution gear 2
+ELEMENT MDmdeTqAx5DG2		torque axle 5 distribution gear 2 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+_endif
+
+_if MWmdeIfDG1 EQ 1
+MAXIMUM	MDmdeTmDG1	TmDG1H	temperature distribution gear 1 [°C]
+MAX_ELEMENT	MDmdeTmDG2			temperature distribution gear 2 [°C]
+MAX_ELEMENT	MDmdeTmHOilTa1			temperature hydraulic oil tank 1 [°C]
+MAX_ELEMENT	MDmdeTmCoWaEn1			cooling water temperature diesel engine 1 [°C]
+MAX_ELEMENT	MDmdeTmCoWaEn2			cooling water temperature diesel engine 2 [°C]
+_endif
+
+_if MWmdeIfDG2 EQ 1
+MAXIMUM	MDmdeTmDG2	TmDG2H	temperature distribution gear 2 [°C]
+MAX_ELEMENT	MDmdeTmDG1			temperature distribution gear 1 [°C]
+MAX_ELEMENT	MDmdeTmHOilTa1			temperature hydraulic oil tank 1 [°C]
+MAX_ELEMENT	MDmdeTmCoWaEn1			cooling water temperature diesel engine 1 [°C]
+MAX_ELEMENT	MDmdeTmCoWaEn2			cooling water temperature diesel engine 2 [°C]
+_endif
+
+
+
+#*****************************************************************************************************
+#	E-Motor
+#*****************************************************************************************************
+
+_if MWmdeIfEmot1 EQ 1
+GROUPTIME	Em101			e-motor 1
+ELEMENT MDmdeRvEmot1		revolutions e-motor 1 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1500 1600 1700 1800 2000 2200
+ELEMENT MDmdeCuEmot1		current e-motor 1 [A]
+ABSOLUTE
+LIMIT	100 200 300 400 500 600 800 1000 1200 1400 1600 1800 2000 2200 2400
+_endif
+
+_if MWmdeIfEmot2 EQ 1
+GROUPTIME	Em102			e-motor 2
+ELEMENT MDmdeRvEmot2		revolutions e-motor 2 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1500 1600 1700 1800 2000 2200
+ELEMENT MDmdeCuEmot2		current e-motor 2 [A]
+ABSOLUTE
+LIMIT	100 200 300 400 500 600 800 1000 1200 1400 1600 1800 2000 2200 2400
+_endif
+
+_if MWmdeIfEmot1 EQ 1
+GROUPTIME	Em201			e-motor 1
+ELEMENT MDmdeRvEmot1		revolutions e-motor 1 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1500 1600 1700 1800 2000 2200
+ELEMENT MDmdePwEmot1		power e-motor 1 [kW]
+LIMIT	-480 -440 -400 -360 -320 -280 -240 -200 -160 -120 -80 -40 0 40 80 120 160 200 240 280 320 360 400 440 480
+_endif
+
+_if MWmdeIfEmot2 EQ 1
+GROUPTIME	Em202			e-motor 2
+ELEMENT MDmdeRvEmot2		revolutions e-motor 2 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1500 1600 1700 1800 2000 2200
+ELEMENT MDmdePwEmot2		power e-motor 2 [kW]
+LIMIT	-480 -440 -400 -360 -320 -280 -240 -200 -160 -120 -80 -40 0 40 80 120 160 200 240 280 320 360 400 440 480
+_endif
+
+_if MWmdeIfEmot1 EQ 1
+GROUPTIME	Em301			e-motor 1
+ELEMENT MDmdeRvEmot1		revolutions e-motor 1 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1500 1600 1700 1800 2000 2200
+ELEMENT MDmdeTqEmot1		torque e-motor 1 [Nm]
+LIMIT	-3200 -2800 -2400 -2000 -1600 -1200 -800 -400 0 400 800 1200 1600 2000 2400 2800 3200
+_endif
+
+_if MWmdeIfEmot2 EQ 1
+GROUPTIME	Em302			e-motor 2
+ELEMENT MDmdeRvEmot2		revolutions e-motor 2 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1500 1600 1700 1800 2000 2200
+ELEMENT MDmdeTqEmot2		torque e-motor 2 [Nm]
+LIMIT	-3200 -2800 -2400 -2000 -1600 -1200 -800 -400 0 400 800 1200 1600 2000 2400 2800 3200
+_endif
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Wippwerk
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+#*****************************************************************************************************
+#	Wippzylinder
+#*****************************************************************************************************
+
+GROUPTIME	Cy301LG1			cylinder 1 luffing gear 1
+ELEMENT MDmdeFcCy1LG1		force cylinder 1 luffing gear 1 [kN]
+LIMIT	-4400 -4000 -3600 -3200 -2800 -2400 -2000 -1600 -1200 -800 -400 0 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+ELEMENT MDmdeOm1		operation mode 1
+LIMIT	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+
+GROUPCYCLE	Cy101LG1			cylinder 1 luffing gear 1
+HYSTERESE 200
+ELEMENT MDmdeFcCy1LG1		force cylinder 1 luffing gear 1 [kN]
+LIMIT	-4400 -4000 -3600 -3200 -2800 -2400 -2000 -1600 -1200 -800 -400 0 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+
+GROUPCHANGE	Cy201LG1			cylinder 1 luffing gear 1
+ELEMENT MXmdeChCy1LG1		changes in direction cylinder 1 luffing gear 1
+LIMIT	1
+
+MAXIMUM	MDmdeFcCy1LG1	FcC1LG1H	force cylinder 1 luffing gear 1 [kN]
+STACKSIZE 30
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+MINIMUM	MDmdeFcCy1LG1	FcC1LG1H	force cylinder 1 luffing gear 1 [kN]
+STACKSIZE 30
+MIN_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MIN_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MIN_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MIN_ELEMENT	MDmdeOm1			operation mode 1
+MIN_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MIN_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MIN_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MIN_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MIN_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MIN_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MIN_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MIN_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MIN_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MIN_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MIN_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MIN_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MIN_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MIN_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MIN_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MIN_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MIN_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MIN_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MIN_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MIN_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MIN_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+
+
+#*****************************************************************************************************
+#	Pumpen Wippwerk
+#*****************************************************************************************************
+
+_if MWmdeIfVp1Sy2 EQ 1
+GROUPTIME	Vp101Sy2			variable pump 1 system 2
+ELEMENT MDmdeRvPu1Sy2		revolutions pump 1 system 2 [rpm]
+ABSOLUTE
+LIMIT	300 600 900 1200 1500 1800 2100 2400 2700 3000 3300
+ELEMENT MDmdePrPu1Sy2		pressure pump 1 system 2 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvPu1Sy2		pivoting range pump 1 system 2 [%]
+LIMIT	-80 -60 -40 -20 0 20 40 60 80
+_endif
+
+_if MWmdeIfVp2Sy2 EQ 1
+GROUPTIME	Vp102Sy2			variable pump 2 system 2
+ELEMENT MDmdeRvPu2Sy2		revolutions pump 2 system 2 [rpm]
+ABSOLUTE
+LIMIT	300 600 900 1200 1500 1800 2100 2400 2700 3000 3300
+ELEMENT MDmdePrPu2Sy2		pressure pump 2 system 2 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvPu2Sy2		pivoting range pump 2 system 2 [%]
+LIMIT	-80 -60 -40 -20 0 20 40 60 80
+_endif
+
+_if MWmdeIfVp1Sy2 EQ 1
+GROUPTIME	Vp201Sy2			variable pump 1 system 2
+ELEMENT MDmdeRvPu1Sy2		revolutions pump 1 system 2 [rpm]
+ABSOLUTE
+LIMIT	150 300 450 600 750 900 1050 1200 1350 1500 1650 1800 1950 2100 2250 2400 2550 2700 2850 3000 3150 3300
+ELEMENT MDmdePwPu1Sy2		power pump 1 system 2 [kW]
+LIMIT	-352 -320 -288 -256 -224 -192 -160 -128 -96 -64 -32 0 32 64 96 128 160 192 224 256 288 320 352
+_endif
+
+_if MWmdeIfVp2Sy2 EQ 1
+GROUPTIME	Vp202Sy2			variable pump 2 system 2
+ELEMENT MDmdeRvPu2Sy2		revolutions pump 2 system 2 [rpm]
+ABSOLUTE
+LIMIT	150 300 450 600 750 900 1050 1200 1350 1500 1650 1800 1950 2100 2250 2400 2550 2700 2850 3000 3150 3300
+ELEMENT MDmdePwPu2Sy2		power pump 2 system 2 [kW]
+LIMIT	-352 -320 -288 -256 -224 -192 -160 -128 -96 -64 -32 0 32 64 96 128 160 192 224 256 288 320 352
+_endif
+
+_if MWmdeIfVp1Sy2 EQ 1
+MAXIMUM	MDmdePrPu1Sy2	PrP1Sy2H	pressure pump 1 system 2 [bar]
+MAX_ELEMENT	MDmdeRvPu1Sy2			revolutions pump 1 system 2 [rpm]
+MAX_ELEMENT	MDmdePvPu1Sy2			pivoting range pump 1 system 2 [%] 
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+
+MINIMUM	MDmdePrPu1Sy2	PrP1Sy2H	pressure pump 1 system 2 [bar]
+MIN_ELEMENT	MDmdeRvPu1Sy2			revolutions pump 1 system 2 [rpm]
+MIN_ELEMENT	MDmdePvPu1Sy2			pivoting range pump 1 system 2 [%] 
+MIN_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MIN_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MIN_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MIN_ELEMENT	MDmdeOm1			operation mode 1
+MIN_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MIN_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MIN_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MIN_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MIN_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MIN_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MIN_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MIN_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MIN_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MIN_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MIN_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MIN_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MIN_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MIN_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MIN_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MIN_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MIN_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MIN_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MIN_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+_endif
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Hubwerk
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+#*****************************************************************************************************
+#	Haltewinde
+#*****************************************************************************************************
+
+GROUPTIME	Wh10HW1			holding winch 1
+ELEMENT MDmdeFcRoHW1		rope force holding winch 1 [kN]
+LIMIT	40 80 120 160 200 240 280 320 360 400 440 480 520 560 600 640 680 720 760 800 840 880
+ELEMENT MDmdeSpRoHW1		rope speed holding winch 1 [m/min]
+LIMIT	-144 -128 -112 -96 -80 -64 -48 -32 -16 -0.16 0.16 16 32 48 64 80 96 112 128 144
+
+GROUPTIME	Wh20HW1			holding winch 1
+ELEMENT MDmdeFcRoHW1		rope force holding winch 1 [kN]
+LIMIT	40 80 120 160 200 240 280 320 360 400 440 480 520 560 600 640 680 720 760 800 840 880
+ELEMENT MDmdeOm2		operation mode 2
+LIMIT	1 2 3 4 5
+ELEMENT MDmdeSpRoHW1		rope speed holding winch 1 [m/min]
+ABSOLUTE
+LIMIT	0.16
+
+MAXIMUM	MDmdeFcRoHW1	FcRoHW1H	rope force holding winch 1 [kN]
+STACKSIZE 30
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+#-----------------------------------------------------------------------------------------------------
+#	Pumpen Haltewinde
+#-----------------------------------------------------------------------------------------------------
+
+_if MWmdeIfVp1HW1 EQ 1
+GROUPTIME	Vp101HW1			variable pump 1 holding winch 1
+ELEMENT MDmdeRvPu1HW1		revolutions pump 1 holding winch 1 [rpm]
+ABSOLUTE
+LIMIT	300 600 900 1200 1500 1800 2100 2400 2700 3000 3300
+ELEMENT MDmdePrPu1HW1		pressure pump 1 holding winch 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvPu1HW1		pivoting range pump 1 holding winch 1 [%]
+LIMIT	-80 -60 -40 -20 0 20 40 60 80
+_endif
+
+_if MWmdeIfVp2HW1 EQ 1
+GROUPTIME	Vp102HW1			variable pump 2 holding winch 1
+ELEMENT MDmdeRvPu2HW1		revolutions pump 2 holding winch 1 [rpm]
+ABSOLUTE
+LIMIT	300 600 900 1200 1500 1800 2100 2400 2700 3000 3300
+ELEMENT MDmdePrPu2HW1		pressure pump 2 holding winch 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvPu2HW1		pivoting range pump 2 holding winch 1 [%]
+LIMIT	-80 -60 -40 -20 0 20 40 60 80
+_endif
+
+_if MWmdeIfVp1HW1 EQ 1
+GROUPTIME	Vp201HW1			variable pump 1 holding winch 1
+ELEMENT MDmdeRvPu1HW1		revolutions pump 1 holding winch 1 [rpm]
+ABSOLUTE
+LIMIT	150 300 450 600 750 900 1050 1200 1350 1500 1650 1800 1950 2100 2250 2400 2550 2700 2850 3000 3150 3300
+ELEMENT MDmdePwPu1HW1		power pump 1 holding winch 1 [kW]
+LIMIT	-352 -320 -288 -256 -224 -192 -160 -128 -96 -64 -32 0 32 64 96 128 160 192 224 256 288 320 352
+_endif
+
+_if MWmdeIfVp2HW1 EQ 1
+GROUPTIME	Vp202HW1			variable pump 2 holding winch 1
+ELEMENT MDmdeRvPu2HW1		revolutions pump 2 holding winch 1 [rpm]
+ABSOLUTE
+LIMIT	150 300 450 600 750 900 1050 1200 1350 1500 1650 1800 1950 2100 2250 2400 2550 2700 2850 3000 3150 3300
+ELEMENT MDmdePwPu2HW1		power pump 2 holding winch 1 [kW]
+LIMIT	-352 -320 -288 -256 -224 -192 -160 -128 -96 -64 -32 0 32 64 96 128 160 192 224 256 288 320 352
+_endif
+
+_if MWmdeIfVp1HW1 EQ 1
+MAXIMUM	MDmdePrPu1HW1	PrP1HW1H	pressure pump 1 holding winch 1 [bar] 
+MAX_ELEMENT	MDmdeRvPu1HW1			revolutions pump 1 holding winch 1 [rpm]
+MAX_ELEMENT	MDmdePvPu1HW1			pivoting range pump 1 holding winch 1 [%]
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+_endif
+
+
+#-----------------------------------------------------------------------------------------------------
+#	Motoren Haltewinde
+#-----------------------------------------------------------------------------------------------------
+
+_if MWmdeIfNuCmHW1hd GT 0
+GROUPTIME	Cm101hH1			constant motor 1 hd. holding winch 1
+ELEMENT MDmdeRvMo1hdHW1		revolutions motor 1 hd. holding winch 1 [rpm]
+ABSOLUTE
+LIMIT	6 600 1200 1800 2400 3000 3600 4200 4800 5400
+ELEMENT MDmdePrMo1hdHW1		pressure motor 1 hd. holding winch 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+_endif
+
+_if MWmdeIfNuVmHW1nd GT 0
+GROUPTIME	Vm111HW1			variable motor 1 holding winch 1
+ELEMENT MDmdeRvMo1HW1		revolutions motor 1 holding winch 1 [rpm]
+ABSOLUTE
+LIMIT	6 600 1200 1800 2400 3000 3600 4200 4800 5400
+ELEMENT MDmdePrMo1HW1		pressure motor 1 holding winch 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvMo1HW1		pivoting range motor 1 holding winch 1 [%]
+LIMIT	10 20 30 40 50 60 70 80 90
+_endif
+
+
+#-----------------------------------------------------------------------------------------------------
+#	Windengetriebe Haltewinde
+#-----------------------------------------------------------------------------------------------------
+
+_if MWmdeIfNuCmHW1hd GT 0
+GROUPTIME	Gr101hH1			gear 1 hd. holding winch 1
+ELEMENT MDmdeRvG1hdHW1		input revolutions gear 1 hd. holding winch 1 [rpm]
+ABSOLUTE
+LIMIT	4 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+ELEMENT MDmdeTqG1hdHW1		input torque gear 1 hd. holding winch 1 [Nm]
+ABSOLUTE
+LIMIT	400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+
+_if MWmdeIfNuVmHW1nd GT 0
+GROUPTIME	Gr101HW1			gear 1 holding winch 1
+ELEMENT MDmdeRvG1HW1		input revolutions gear 1 holding winch 1 [rpm]
+ABSOLUTE
+LIMIT	4 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+ELEMENT MDmdeTqG1HW1		input torque gear 1 holding winch 1 [Nm]
+ABSOLUTE
+LIMIT	400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+
+_if MWmdeIfNuCmHW1hd GT 0
+GROUPCYCLE	Gr401hH1			gear 1 hd. holding winch 1
+BORDER  CATEGORY 1
+HYSTERESE 200
+ELEMENT MDmdeTqG1hdHW1		input torque gear 1 hd. holding winch 1 [Nm]
+LIMIT	-4400 -4000 -3600 -3200 -2800 -2400 -2000 -1600 -1200 -800 -400 0 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+
+_if MWmdeIfNuVmHW1nd GT 0
+GROUPCYCLE	Gr401HW1			gear 1 holding winch 1
+BORDER  CATEGORY 1
+HYSTERESE 200
+ELEMENT MDmdeTqG1HW1		input torque gear 1 holding winch 1 [Nm]
+LIMIT	-4400 -4000 -3600 -3200 -2800 -2400 -2000 -1600 -1200 -800 -400 0 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+
+
+
+#*****************************************************************************************************
+#	Schließwinde
+#*****************************************************************************************************
+_if MWmdeIfCW1 EQ 1
+GROUPTIME	Wh10CW1			closing winch 1
+ELEMENT MDmdeFcRoCW1		rope force closing winch 1 [kN]
+LIMIT	40 80 120 160 200 240 280 320 360 400 440 480 520 560 600 640 680 720 760 800 840 880
+ELEMENT MDmdeSpRoCW1		rope speed closing winch 1 [m/min]
+LIMIT	-144 -128 -112 -96 -80 -64 -48 -32 -16 -0.16 0.16 16 32 48 64 80 96 112 128 144
+
+GROUPTIME	Wh20CW1			closing winch 1
+ELEMENT MDmdeFcRoCW1		rope force closing winch 1 [kN]
+LIMIT	40 80 120 160 200 240 280 320 360 400 440 480 520 560 600 640 680 720 760 800 840 880
+ELEMENT MDmdeOm2		operation mode 2
+LIMIT	1 2 3 4 5
+ELEMENT MDmdeSpRoCW1		rope speed closing winch 1 [m/min]
+ABSOLUTE
+LIMIT	0.16
+
+MAXIMUM	MDmdeFcRoCW1	FcRoCW1H	rope force closing winch 1 [kN]
+STACKSIZE 30
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+
+
+#-----------------------------------------------------------------------------------------------------
+#	Pumpen Schließwinde
+#-----------------------------------------------------------------------------------------------------
+
+_if MWmdeIfVp1CW1 EQ 1
+GROUPTIME	Vp101CW1			variable pump 1 closing winch 1
+ELEMENT MDmdeRvPu1CW1		revolutions pump 1 closing winch 1 [rpm]
+ABSOLUTE
+LIMIT	300 600 900 1200 1500 1800 2100 2400 2700 3000 3300
+ELEMENT MDmdePrPu1CW1		pressure pump 1 closing winch 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvPu1CW1		pivoting range pump 1 closing winch 1 [%]
+LIMIT	-80 -60 -40 -20 0 20 40 60 80
+_endif
+
+_if MWmdeIfVp2CW1 EQ 1
+GROUPTIME	Vp102CW1			variable pump 2 closing winch 1
+ELEMENT MDmdeRvPu2CW1		revolutions pump 2 closing winch 1 [rpm]
+ABSOLUTE
+LIMIT	300 600 900 1200 1500 1800 2100 2400 2700 3000 3300
+ELEMENT MDmdePrPu2CW1		pressure pump 2 closing winch 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvPu2CW1		pivoting range pump 2 closing winch 1 [%]
+LIMIT	-80 -60 -40 -20 0 20 40 60 80
+_endif
+
+_if MWmdeIfVp1CW1 EQ 1
+GROUPTIME	Vp201CW1			variable pump 1 closing winch 1
+ELEMENT MDmdeRvPu1CW1		revolutions pump 1 closing winch 1 [rpm]
+ABSOLUTE
+LIMIT	150 300 450 600 750 900 1050 1200 1350 1500 1650 1800 1950 2100 2250 2400 2550 2700 2850 3000 3150 3300
+ELEMENT MDmdePwPu1CW1		power pump 1 closing winch 1 [kW]
+LIMIT	-352 -320 -288 -256 -224 -192 -160 -128 -96 -64 -32 0 32 64 96 128 160 192 224 256 288 320 352
+_endif
+
+_if MWmdeIfVp2CW1 EQ 1
+GROUPTIME	Vp202CW1			variable pump 2 closing winch 1
+ELEMENT MDmdeRvPu2CW1		revolutions pump 2 closing winch 1 [rpm]
+ABSOLUTE
+LIMIT	150 300 450 600 750 900 1050 1200 1350 1500 1650 1800 1950 2100 2250 2400 2550 2700 2850 3000 3150 3300
+ELEMENT MDmdePwPu2CW1		power pump 2 closing winch 1 [kW]
+LIMIT	-352 -320 -288 -256 -224 -192 -160 -128 -96 -64 -32 0 32 64 96 128 160 192 224 256 288 320 352
+_endif
+
+_if MWmdeIfVp1CW1 EQ 1
+MAXIMUM	MDmdePrPu1CW1	PrP1CW1H	pressure pump 1 closing winch 1 [bar] 
+MAX_ELEMENT	MDmdeRvPu1CW1			revolutions pump 1 closing winch 1 [rpm]
+MAX_ELEMENT	MDmdePvPu1CW1			pivoting range pump 1 closing winch 1 [%]
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+_endif
+
+
+#-----------------------------------------------------------------------------------------------------
+#	Motoren Schließwinde
+#-----------------------------------------------------------------------------------------------------
+
+_if MWmdeIfNuCmCW1hd GT 0
+GROUPTIME	Cm101hC1			constant motor 1 hd. closing winch 1
+ELEMENT MDmdeRvMo1hdCW1		revolutions motor 1 hd. closing winch 1 [rpm]
+ABSOLUTE
+LIMIT	6 600 1200 1800 2400 3000 3600 4200 4800 5400
+ELEMENT MDmdePrMo1hdCW1		pressure motor 1 hd. closing winch 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+_endif
+
+_if MWmdeIfNuVmCW1nd GT 0
+GROUPTIME	Vm111CW1			variable motor 1 closing winch 1
+ELEMENT MDmdeRvMo1CW1		revolutions motor 1 closing winch 1 [rpm]
+ABSOLUTE
+LIMIT	6 600 1200 1800 2400 3000 3600 4200 4800 5400
+ELEMENT MDmdePrMo1CW1		pressure motor 1 closing winch 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvMo1CW1		pivoting range motor 1 closing winch 1 [%]
+LIMIT	10 20 30 40 50 60 70 80 90
+_endif
+
+
+#-----------------------------------------------------------------------------------------------------
+#	Windengetriebe Schließwinde
+#-----------------------------------------------------------------------------------------------------
+
+_if MWmdeIfNuVmCW1nd GT 0
+GROUPTIME	Gr101CW1			gear 1 closing winch 1
+ELEMENT MDmdeRvG1CW1		input revolutions gear 1 closing winch 1 [rpm]
+ABSOLUTE
+LIMIT	4 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+ELEMENT MDmdeTqG1CW1		input torque gear 1 closing winch 1 [Nm]
+ABSOLUTE
+LIMIT	400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+
+_if MWmdeIfNuCmCW1hd GT 0
+GROUPTIME	Gr101hC1			gear 1 hd. closing winch 1
+ELEMENT MDmdeRvG1hdCW1		input revolutions gear 1 hd. closing winch 1 [rpm]
+ABSOLUTE
+LIMIT	4 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+ELEMENT MDmdeTqG1hdCW1		input torque gear 1 hd. closing winch 1 [Nm]
+ABSOLUTE
+LIMIT	400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+
+_if MWmdeIfNuVmCW1nd GT 0
+GROUPCYCLE	Gr401CW1			gear 1 closing winch 1
+BORDER  CATEGORY 1
+HYSTERESE 200
+ELEMENT MDmdeTqG1CW1		input torque gear 1 closing winch 1 [Nm]
+LIMIT	-4400 -4000 -3600 -3200 -2800 -2400 -2000 -1600 -1200 -800 -400 0 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+
+_if MWmdeIfNuCmCW1hd GT 0
+GROUPCYCLE	Gr401hC1			gear 1 hd. closing winch 1
+BORDER  CATEGORY 1
+HYSTERESE 200
+ELEMENT MDmdeTqG1hdCW1		input torque gear 1 hd. closing winch 1 [Nm]
+LIMIT	-4400 -4000 -3600 -3200 -2800 -2400 -2000 -1600 -1200 -800 -400 0 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+_endif
+_endif
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Drehwerk / KUD
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+GROUPCHANGE	Ss101			slewing system 1
+ELEMENT MDmdeAnSS1		angle slewing system 1 [°]
+HYSTERESE_ELEMENT 1
+LIMIT	7.5 22.5 37.5 52.5 67.5 82.5 97.5 112.5 127.5 142.5 157.5 172.5 187.5 202.5 217.5 232.5 247.5 262.5 277.5 292.5 307.5 322.5 337.5 352.5
+ELEMENT MDmdePrSS1		pressure difference slewing system 1 [bar]
+NO_CHANGE_DETECT
+LIMIT	-400 -360 -320 -280 -240 -200 -160 -120 -80 -40 0 40 80 120 160 200 240 280 320 360 400
+
+GROUPTIME	Ss201			slewing system 1
+ELEMENT MDmdeAnSS1		angle slewing system 1 [°]
+LIMIT	7.5 22.5 37.5 52.5 67.5 82.5 97.5 112.5 127.5 142.5 157.5 172.5 187.5 202.5 217.5 232.5 247.5 262.5 277.5 292.5 307.5 322.5 337.5 352.5
+ELEMENT MDmdeAsSS1		slewing speed slewing system 1 [°/s]
+LIMIT	-12 -10 -8 -6 -4 -2 -0.02 0.02 2 4 6 8 10 12
+ELEMENT MDmdePrSS1		pressure difference slewing system 1 [bar]
+LIMIT	-400 -360 -320 -280 -240 -200 -160 -120 -80 -40 0 40 80 120 160 200 240 280 320 360 400
+
+_if MWmdeIfmaxLdHS1 LE 84
+GROUPCHANGE	Ss421			slewing system 1
+ELEMENT MDmdeAnSS1		angle slewing system 1 [°]
+HYSTERESE_ELEMENT 1
+LIMIT	7.5 22.5 37.5 52.5 67.5 82.5 97.5 112.5 127.5 142.5 157.5 172.5 187.5 202.5 217.5 232.5 247.5 262.5 277.5 292.5 307.5 322.5 337.5 352.5
+ELEMENT MDmdeRdHS1		radius hoisting system 1 [m]
+NO_CHANGE_DETECT
+LIMIT	8 16 24 32 40 48 56 64 72
+ELEMENT MDmdeLdHS1		load hoisting system 1 [to]
+NO_CHANGE_DETECT
+LIMIT	8 16 24 32 40 48 56 64 72 80 88
+_endif
+
+_if MWmdeIfmaxLdHS1 GT 84
+GROUPCHANGE	Ss421			slewing system 1
+ELEMENT MDmdeAnSS1		angle slewing system 1 [°]
+HYSTERESE_ELEMENT 1
+LIMIT	7.5 22.5 37.5 52.5 67.5 82.5 97.5 112.5 127.5 142.5 157.5 172.5 187.5 202.5 217.5 232.5 247.5 262.5 277.5 292.5 307.5 322.5 337.5 352.5
+ELEMENT MDmdeRdHS1		radius hoisting system 1 [m]
+NO_CHANGE_DETECT
+LIMIT	8 16 24 32 40 48 56 64 72
+ELEMENT MDmdeLdHS1		load hoisting system 1 [to]
+NO_CHANGE_DETECT
+LIMIT	16 32 48 64 80 96 112 128 144 160 176
+_endif
+
+
+
+#*****************************************************************************************************
+#	Pumpen Drehwerk
+#*****************************************************************************************************
+
+_if MWmdeIfVp1Sy1 EQ 1
+GROUPTIME	Vp101Sy1			variable pump 1 system 1
+ELEMENT MDmdeRvPu1Sy1		revolutions pump 1 system 1 [rpm]
+ABSOLUTE
+LIMIT	300 600 900 1200 1500 1800 2100 2400 2700 3000 3300
+ELEMENT MDmdePrPu1Sy1		pressure pump 1 system 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvPu1Sy1		pivoting range pump 1 system 1 [%]
+LIMIT	-80 -60 -40 -20 0 20 40 60 80
+_endif
+
+_if MWmdeIfVp2Sy1 EQ 1
+GROUPTIME	Vp102Sy1			variable pump 2 system 1
+ELEMENT MDmdeRvPu2Sy1		revolutions pump 2 system 1 [rpm]
+ABSOLUTE
+LIMIT	300 600 900 1200 1500 1800 2100 2400 2700 3000 3300
+ELEMENT MDmdePrPu2Sy1		pressure pump 2 system 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+ELEMENT MDmdePvPu2Sy1		pivoting range pump 2 system 1 [%]
+LIMIT	-80 -60 -40 -20 0 20 40 60 80
+_endif
+
+_if MWmdeIfVp1Sy1 EQ 1
+GROUPTIME	Vp201Sy1			variable pump 1 system 1
+ELEMENT MDmdeRvPu1Sy1		revolutions pump 1 system 1 [rpm]
+ABSOLUTE
+LIMIT	150 300 450 600 750 900 1050 1200 1350 1500 1650 1800 1950 2100 2250 2400 2550 2700 2850 3000 3150 3300
+ELEMENT MDmdePwPu1Sy1		power pump 1 system 1 [kW]
+LIMIT	-352 -320 -288 -256 -224 -192 -160 -128 -96 -64 -32 0 32 64 96 128 160 192 224 256 288 320 352
+_endif
+
+_if MWmdeIfVp2Sy1 EQ 1
+GROUPTIME	Vp202Sy1			variable pump 2 system 1
+ELEMENT MDmdeRvPu2Sy1		revolutions pump 2 system 1 [rpm]
+ABSOLUTE
+LIMIT	150 300 450 600 750 900 1050 1200 1350 1500 1650 1800 1950 2100 2250 2400 2550 2700 2850 3000 3150 3300
+ELEMENT MDmdePwPu2Sy1		power pump 2 system 1 [kW]
+LIMIT	-352 -320 -288 -256 -224 -192 -160 -128 -96 -64 -32 0 32 64 96 128 160 192 224 256 288 320 352
+_endif
+
+MAXIMUM	MDmdePrPu1Sy1	PrP1Sy1H	pressure pump 1 system 1 [bar]
+STACKSIZE 30
+MAX_ELEMENT	MDmdeRvPu1Sy1			revolutions pump 1 system 1 [rpm]
+MAX_ELEMENT	MDmdePvPu1Sy1			pivoting range pump 1 system 1 [%] 
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+
+MINIMUM	MDmdePrPu1Sy1	PrP1Sy1H	pressure pump 1 system 1 [bar]
+STACKSIZE 30
+MIN_ELEMENT	MDmdeRvPu1Sy1			revolutions pump 1 system 1 [rpm]
+MIN_ELEMENT	MDmdePvPu1Sy1			pivoting range pump 1 system 1 [%] 
+MIN_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MIN_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MIN_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MIN_ELEMENT	MDmdeOm1			operation mode 1
+MIN_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MIN_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MIN_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MIN_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MIN_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MIN_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MIN_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MIN_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MIN_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MIN_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MIN_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MIN_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MIN_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MIN_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MIN_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MIN_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MIN_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MIN_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MIN_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+
+
+
+#*****************************************************************************************************
+#	Motoren Drehwerk
+#*****************************************************************************************************
+
+_if MWmdeIfNuMoSS1 GT 0
+GROUPTIME	Cm101SS1			constant motor 1 slewing system 1
+ELEMENT MDmdeRvMo1SS1		revolutions motor 1 slewing system 1 [rpm]
+ABSOLUTE
+LIMIT	6 600 1200 1800 2400 3000 3600 4200 4800 5400
+ELEMENT MDmdePrMo1SS1		pressure motor 1 slewing system 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+_endif
+
+
+
+#*****************************************************************************************************
+#	Drehwerksgetriebe
+#*****************************************************************************************************
+
+_if MWmdeIfNuMoSS1 GT 0
+GROUPTIME	Gr101SS1			gear 1 slewing system 1
+ELEMENT MDmdeRvG1SS1		input revolutions gear 1 slewing system 1 [rpm]
+ABSOLUTE
+LIMIT	4 400 800 1200 1600 2000 2400 2800 3200 3600 4000 4400
+ELEMENT MDmdeTqG1SS1		input torque gear 1 slewing system 1 [Nm]
+ABSOLUTE
+LIMIT	50 100 150 200 250 300 350 400 450 500 550
+
+MAXIMUM	MDmdeTqG1SS1	TqG1SS1H	input torque gear 1 slewing system 1 [Nm]
+MAX_ELEMENT	MDmdeRvPu1Sy1			revolutions pump 1 system 1 [rpm]
+MAX_ELEMENT	MDmdePvPu1Sy1			pivoting range pump 1 system 1 [%] 
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+
+MINIMUM	MDmdeTqG1SS1	TqG1SS1H	input torque gear 1 slewing system 1 [Nm]
+MIN_ELEMENT	MDmdeRvPu1Sy1			revolutions pump 1 system 1 [rpm]
+MIN_ELEMENT	MDmdePvPu1Sy1			pivoting range pump 1 system 1 [%] 
+MIN_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MIN_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MIN_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MIN_ELEMENT	MDmdeOm1			operation mode 1
+MIN_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MIN_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MIN_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MIN_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MIN_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MIN_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MIN_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MIN_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MIN_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MIN_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MIN_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MIN_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MIN_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MIN_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MIN_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MIN_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MIN_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MIN_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MIN_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MIN_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MIN_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+_endif
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Abstützung
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+#*****************************************************************************************************
+#	Abstützzylinder
+#*****************************************************************************************************
+
+GROUPCHANGE	Cy201Su1			cylinder 1 support 1
+ELEMENT MXmdeChCy1Sup1		changes in direction cylinder 1 support 1
+LIMIT	1
+
+GROUPCHANGE	Cy202Su1			cylinder 2 support 1
+ELEMENT MXmdeChCy2Sup1		changes in direction cylinder 2 support 1
+LIMIT	1
+
+GROUPCHANGE	Cy203Su1			cylinder 3 support 1
+ELEMENT MXmdeChCy3Sup1		changes in direction cylinder 3 support 1
+LIMIT	1
+
+GROUPCHANGE	Cy204Su1			cylinder 4 support 1
+ELEMENT MXmdeChCy4Sup1		changes in direction cylinder 4 support 1
+LIMIT	1
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Ausschub
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+#*****************************************************************************************************
+#	Ausschubzylinder
+#*****************************************************************************************************
+
+GROUPCHANGE	Cy201Ex1			cylinder 1 extension 1
+ELEMENT MXmdeChCy1Ext1		changes in direction cylinder 1 extension 1
+LIMIT	1
+
+GROUPCHANGE	Cy202Ex1			cylinder 2 extension 1
+ELEMENT MXmdeChCy2Ext1		changes in direction cylinder 2 extension 1
+LIMIT	1
+
+GROUPCHANGE	Cy203Ex1			cylinder 3 extension 1
+ELEMENT MXmdeChCy3Ext1		changes in direction cylinder 3 extension 1
+LIMIT	1
+
+GROUPCHANGE	Cy204Ex1			cylinder 4 extension 1
+ELEMENT MXmdeChCy4Ext1		changes in direction cylinder 4 extension 1
+LIMIT	1
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Fahrwerk
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+#*****************************************************************************************************
+#	Niveauregulierung
+#*****************************************************************************************************
+
+GROUPTIME	La101TS1			level adjustment section 1 travelling system 1
+ELEMENT MDmdePrLa1TS1		pressure level adjustment section 1 travelling system 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+
+GROUPTIME	La102TS1			level adjustment section 2 travelling system 1
+ELEMENT MDmdePrLa2TS1		pressure level adjustment section 2 travelling system 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+
+GROUPTIME	La103TS1			level adjustment section 3 travelling system 1
+ELEMENT MDmdePrLa3TS1		pressure level adjustment section 3 travelling system 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+
+GROUPTIME	La104TS1			level adjustment section 4 travelling system 1
+ELEMENT MDmdePrLa4TS1		pressure level adjustment section 4 travelling system 1 [bar]
+ABSOLUTE
+LIMIT	40 80 120 160 200 240 280 320 360 400
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Hydraulisches System
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+#*****************************************************************************************************
+#	Hydrauliköl
+#*****************************************************************************************************
+
+GROUPTIME	Ho10Ta1			hydraulic oil tank 1
+ELEMENT MDmdeTmHOilTa1		temperature hydraulic oil tank 1 [°C]
+LIMIT	-30 -20 -10 0 10 20 30 40 50 60 70 80 90 100 110 120
+ELEMENT MDmdeLvHOilTa1		level hydraulic oil tank 1 [%]
+LIMIT	10 20 30 40 50 60 70 80 90
+
+MAXIMUM	MDmdeTmHOilTa1	TmHOTa1H	temperature hydraulic oil tank 1 [°C]
+MAX_ELEMENT	MDmdeLvHOilTa1			level hydraulic oil tank 1 [%]
+MAX_ELEMENT	MDmdeTmCoWaEn1			cooling water temperature diesel engine 1 [°C]
+MAX_ELEMENT	MDmdeTmCoWaEn2			cooling water temperature diesel engine 2 [°C]
+
+MINIMUM	MDmdeTmHOilTa1	TmHOTa1H	temperature hydraulic oil tank 1 [°C]
+MIN_ELEMENT	MDmdeLvHOilTa1			level hydraulic oil tank 1 [%]
+MIN_ELEMENT	MDmdeTmCoWaEn1			cooling water temperature diesel engine 1 [°C]
+MIN_ELEMENT	MDmdeTmCoWaEn2			cooling water temperature diesel engine 2 [°C]
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Elektr. System
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+#*****************************************************************************************************
+#	Lichtmaschine / Batterie
+#*****************************************************************************************************
+
+GROUPTIME	Bt101			battery 1
+ELEMENT MDmdeVoBat1		voltage battery 1 [V]
+LIMIT	14 16 18 20 22 24 26 28 30 32 34
+
+
+
+
+#*****************************************************************************************************
+#	Meisterschalter
+#*****************************************************************************************************
+
+
+#-----------------------------------------------------------------------------------------------------
+#	Meisterschalter links
+#-----------------------------------------------------------------------------------------------------
+
+_if MWmdeIfLowerCa EQ 1
+GROUPTIME	Js101LC1			left joystick 1 cabin 1 
+ELEMENT MDmdeSgLxJs1C1		x-direction left joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+ELEMENT MDmdeSgLyJs1C1		y-direction left joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+_endif
+
+GROUPTIME	Js101LC2			left joystick 1 cabin 2 
+ELEMENT MDmdeSgLxJs1C2		x-direction left joystick 1 cabin 2 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+ELEMENT MDmdeSgLyJs1C2		y-direction left joystick 1 cabin 2 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+_if MWmdeIfLowerCa EQ 1
+GROUPCHANGE	Js201Lx1			x-direction left joystick 1 cabin 1
+ELEMENT MDmdeSgLxJs1C1		x-direction left joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+_endif
+
+GROUPCHANGE	Js201Lx2			x-direction left joystick 1 cabin 2
+ELEMENT MDmdeSgLxJs1C2		x-direction left joystick 1 cabin 2 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+_if MWmdeIfLowerCa EQ 1
+GROUPCHANGE	Js201Ly1			y-direction left joystick 1 cabin 1
+ELEMENT MDmdeSgLyJs1C1		y-direction left joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+_endif
+
+GROUPCHANGE	Js201Ly2			y-direction left joystick 1 cabin 2
+ELEMENT MDmdeSgLyJs1C2		y-direction left joystick 1 cabin 2 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+
+#-----------------------------------------------------------------------------------------------------
+#	Meisterschalter rechts
+#-----------------------------------------------------------------------------------------------------
+
+_if MWmdeIfLowerCa EQ 1
+GROUPTIME	Js101RC1			right joystick 1 cabin 1
+ELEMENT MDmdeSgRxJs1C1		x-direction right joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+ELEMENT MDmdeSgRyJs1C1		y-direction right joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+_endif
+
+GROUPTIME	Js101RC2			right joystick 1 cabin 2
+ELEMENT MDmdeSgRxJs1C2		x-direction right joystick 1 cabin 2 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+ELEMENT MDmdeSgRyJs1C2		y-direction right joystick 1 cabin 2 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+_if MWmdeIfLowerCa EQ 1
+GROUPCHANGE	Js201Rx1			x-direction right joystick 1 cabin 1
+ELEMENT MDmdeSgRxJs1C1		x-direction right joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+_endif
+
+GROUPCHANGE	Js201Rx2			x-direction right joystick 1 cabin 2
+ELEMENT MDmdeSgRxJs1C2		x-direction right joystick 1 cabin 2 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+_if MWmdeIfLowerCa EQ 1
+GROUPCHANGE	Js201Ry1			y-direction right joystick 1 cabin 1
+ELEMENT MDmdeSgRyJs1C1		y-direction right joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+_endif
+
+GROUPCHANGE	Js201Ry2			y-direction right joystick 1 cabin 2
+ELEMENT MDmdeSgRyJs1C2		y-direction right joystick 1 cabin 2 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Struktur
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+_if MWmdeIfmaxLdHS1 LE 84
+GROUPCYCLE	Gi131			geometric information hoisting system 1
+BORDER  CATEGORY 1
+HYSTERESE 2
+ELEMENT MDmdeRdHS1		radius hoisting system 1 [m]
+LIMIT	4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76
+ELEMENT MDmdeLdHS1		load hoisting system 1 [to]
+LIMIT	8 16 24 32 40 48 56 64 72 80 88
+_endif
+
+_if MWmdeIfmaxLdHS1 GT 84
+GROUPCYCLE	Gi131			geometric information hoisting system 1
+BORDER  CATEGORY 1
+HYSTERESE 2
+ELEMENT MDmdeRdHS1		radius hoisting system 1 [m]
+LIMIT	4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76
+ELEMENT MDmdeLdHS1		load hoisting system 1 [to]
+LIMIT	16 32 48 64 80 96 112 128 144 160 176
+_endif
+
+_if MWmdeIfmaxLdHS1 GT 84
+GROUPTIME	Hs111			hoisting system 1
+ELEMENT MDmdeLdHS1		load hoisting system 1 [to]
+LIMIT	8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 128 136 144 152 160 168 176
+ELEMENT MDmdeRdHS1		radius hoisting system 1 [m]
+LIMIT	4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76
+_endif
+
+_if MWmdeIfmaxLdHS1 LE 84
+GROUPTIME	Hs111			hoisting system 1
+ELEMENT MDmdeLdHS1		load hoisting system 1 [to]
+LIMIT	4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88
+ELEMENT MDmdeRdHS1		radius hoisting system 1 [m]
+LIMIT	4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76
+_endif
+
+_if MWmdeIfmaxLdHS1 LE 84
+GROUPCYCLE	Hs241			hoisting system 1
+BORDER  CATEGORY 1
+HYSTERESE 2
+ELEMENT MDmdeLdHS1		load hoisting system 1 [to]
+LIMIT	4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88
+ELEMENT MDmdeRdHS1		radius hoisting system 1 [m]
+LIMIT	8 16 24 32 40 48 56 64 72
+_endif
+
+_if MWmdeIfmaxLdHS1 GT 84
+GROUPCYCLE	Hs241			hoisting system 1
+BORDER  CATEGORY 1
+HYSTERESE 4
+ELEMENT MDmdeLdHS1		load hoisting system 1 [to]
+LIMIT	8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 128 136 144 152 160 168 176
+ELEMENT MDmdeRdHS1		radius hoisting system 1 [m]
+LIMIT	8 16 24 32 40 48 56 64 72
+_endif
+
+GROUPCYCLE	Hs521			hoisting system 1
+BORDER  CATEGORY 1
+HYSTERESE 5
+ELEMENT MDmdeUtHS1		utilisation hoisting system 1 [%]
+LIMIT	10 20 30 40 50 60 70 80 90 100 110 120 130 140 150
+ELEMENT MDmdeOm1		operation mode 1
+LIMIT	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+
+GROUPCYCLE	Hs631			hoisting system 1
+BORDER  CATEGORY 1
+HYSTERESE 2.5
+ELEMENT MDmdeUtOm			utilisation operation mode [%]
+LIMIT	5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150
+ELEMENT MDmdeOm2		operation mode 2
+LIMIT	1 2 3 4 5
+
+MAXIMUM	MDmdeLdHS1	LdHS1H	load hoisting system 1 [to]
+STACKSIZE 50
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+MAXIMUM	MDmdeUtHS1	UtHS1H	utilisation hoisting system 1 [%]
+STACKSIZE 50
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT MDmdeUtOm				utilisation operation mode [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+
+MAXIMUM	MDmdeUtOm	UtOm1H	utilisation operation mode [%]
+STACKSIZE 50
+MAX_ELEMENT	MDmdeLdHS1			load hoisting system 1 [to]
+MAX_ELEMENT	MDmdeRdHS1			radius hoisting system 1 [m]
+MAX_ELEMENT	MDmdeOm1			operation mode 1
+MAX_ELEMENT	MDmdeLdHolSy1			load holding system 1 [to]
+MAX_ELEMENT	MDmdeSpHolSy1			hoisting speed holding system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1HW1			status brake 1 holding winch 1
+MAX_ELEMENT	MXmdeStBk1hdHW1			status brake 1 hd. holding winch 1
+MAX_ELEMENT	MDmdeLdCloSy1			load closing system 1 [to]
+MAX_ELEMENT	MDmdeSpCloSy1			hoisting speed closing system 1 [m/min]
+MAX_ELEMENT	MXmdeStBk1CW1			status brake 1 closing winch 1
+MAX_ELEMENT	MXmdeStBk1hdCW1			status brake 1 hd. closing winch 1
+MAX_ELEMENT	MDmdeAnSS1			angle slewing system 1 [°]
+MAX_ELEMENT	MDmdeAsSS1			slewing speed slewing system 1 [°/s]
+MAX_ELEMENT	MDmdePrSS1			pressure difference slewing system 1 [bar]
+MAX_ELEMENT	MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT	MDmdeFcCy1LG1			force cylinder 1 luffing gear 1 [kN]
+MAX_ELEMENT	MDmdePwDiEn1			power diesel engine 1 [kW]
+MAX_ELEMENT	MDmdePwEmot1			power e-motor 1 [kW]
+MAX_ELEMENT	MDmdePwDiEn2			power diesel engine 2 [kW]
+MAX_ELEMENT	MDmdePwEmot2			power e-motor 2 [kW]
+MAX_ELEMENT	MDmdeSpWind			wind speed [m/s]
+MAX_ELEMENT	MDmdeSgLxJs1C1			x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C1			y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C1			x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C1			y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT	MDmdeSgLxJs1C2			x-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgLyJs1C2			y-direction left joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRxJs1C2			x-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT	MDmdeSgRyJs1C2			y-direction right joystick 1 cabin 2 [%]
+MAX_ELEMENT MDmdeDsSS1					actual design slewing speed [rpm]
+MAX_ELEMENT	MDmdeUtHS1			utilisation hoisting system 1 [%]
+MAX_ELEMENT MDmdeUtTipp			utilisation tipping curve [%]
+_endif

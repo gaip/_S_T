@@ -1,0 +1,1572 @@
+%?version 00019
+%?class	llsystem
+
+% Definition of global system routines and variables LWN PS project files
+
+
+% global variables especially for touch screen feature, keyboard and entry fields
+% Never change these! Never use these for something other!
+/_currentpage (page0) def
+/_cpindex -1 def	% for "display"-procedure
+/_display_page_shown false def	% for "display_page"-procedure to avoid recursive call
+/_mdown false def	% for touchscreen detection
+/_mup false def
+/_mstatus false def % true after touch down, reset at touch release
+/_mxposd 0 def
+/_myposd 0 def
+% for keyboard hit detection
+/_keyhit false def	
+/_keycode 0 def
+% for entry fields
+/_fieldselect 0 def % index of currently selected entry field (0 if none)
+/_fieldprevious 0 def % index of the last edited field
+/_fieldactive false def % true if any entry field is highlighted
+
+% Global not documented variables needed in every project
+/_unused 0 def			%?brief sink for unused part outputs %?type DINT %?dflt 0
+
+% Global variables needed in every project
+/language.system	() def			%?brief language.system %?use GLO %?type STRI %?dflt 
+/MScurrentPage (page0) def	%?brief actual page name (read only!)			%?use MEM %?type STRI %?dflt (page0)
+/MXpageSwitched false def	%?brief page was switched						%?use MEM %?type BOOL %?dflt false
+/MXflashing true def		%?brief variable flashing						%?use MEM %?type BOOL %?dflt true
+/MXchangeUnit		false def		%?brief general switch to imperial units		%?use MEM %?type BOOL %?dflt false
+/MXchangeUnitDist	false def		%?brief switch distance to imperial units		%?use MEM %?type BOOL %?dflt false
+/MXchangeUnitLoad	false def		%?brief switch load to imperial units			%?use MEM %?type BOOL %?dflt false
+/MXchangeUnitPress	false def		%?brief switch pressure to imperial units		%?use MEM %?type BOOL %?dflt false
+/MXchangeUnitTemp	false def		%?brief switch temperature to imperial units	%?use MEM %?type BOOL %?dflt false
+/MXchangeUnitFlow	false def		%?brief switch flow to imperial units			%?use MEM %?type BOOL %?dflt false
+/MXchangeUnitSpeed	false def		%?brief switch speed to imperial units			%?use MEM %?type BOOL %?dflt false
+/MXtweeterNotSpeaker false def	%?brief Monitor with tweeter not speaker	%?use MEM %?type BOOL %?dflt false
+/MXsetBigMsgFont	false def	%?brief set big message font	%?use MEM %?type BOOL %?dflt false
+/MRrotate 0.000 def			%?brief variable rotating 360dgr				%?use MEM %?type REAL %?dflt 0.000
+/MRslide 0.000 def			%?brief variable sliding 0 to 100 and back		%?use MEM %?type REAL %?dflt 0.000
+/MDmsgValidNr -1 def		%?brief number of relevant messages				%?use MEM %?type DINT %?dflt -1
+/MDmsgAcknNr 0 def			%?brief number of active and acknowledged messages			%?use MEM %?type DINT %?dflt 0
+/MDmsgDeactNr 0 def			%?brief number of inactive and not acknowledged messages	%?use MEM %?type DINT %?dflt 0
+/MDscreenPixX	960 def		%?brief screen pixel X							%?use MEM %?type DINT %?dflt 960
+/MDscreenPixY	720 def		%?brief screen pixel Y							%?use MEM %?type DINT %?dflt 720
+/MDmaxMsgPixX	400 def		%?brief message Part pixel X					%?use MEM %?type DINT %?dflt 400
+/MDmaxMsgPixY	320 def		%?brief message Part pixel Y					%?use MEM %?type DINT %?dflt 320
+/MDsymbolGrid	80 def		%?brief SymbolGrid in pixel						%?use MEM %?type DINT %?dflt 80
+/MXiaActivated	false	def	%?brief any input area is activated				%?use MEM %?type BOOL %?dflt false
+/MRpi	3.141592654 def		%?brief die Zahl Pi								%?use CONST %?type REAL %?dflt 3.141592654
+
+% Hidden global variables needed in every project
+/MDbeepCount		0	def		%?brief number of not acknowledged notices on the screen	%?type DINT %?dflt 0
+/MDmsgLowIndex		0	def		%?brief index of the lowest relevant message				%?type DINT %?dflt 0
+/MDmsgHighIndex		0	def		%?brief index of the highest relevant message				%?type DINT %?dflt 0
+/MDiaIndexCounter	0	def		%?brief maximaler Index der Eingabefelder					%?type DINT %?dflt 0
+/MDiaInitIndex		0	def		%?brief Index des Eingabefeldes das zuletzt aktiviert wurde %?type DINT %?dflt 0
+/MDiaActualIndex	0	def		%?brief Index des aktuell aktiven Eingabefeldes				%?type DINT %?dflt 0
+/MRiaActualValue	0	def		%?brief aktuelle Zahl des Eingabefeldes						%?type REAL %?dflt 0
+/MRiaActChaVal		0	def		%?brief aktuell eingegebene Zahl							%?type REAL %?dflt 0
+/MSiaActChaVal		(0)	def		%?brief aktuell eingegebene Zahl als String					%?type STRI %?dflt (0)
+/MRiaActMinVal		0	def		%?brief minimalwert der aktuell eingegebene Zahl			%?type REAL %?dflt 0
+/MRiaActMaxVal		0	def		%?brief maximalwert der aktuell eingegebene Zahl			%?type REAL %?dflt 0
+/MRiaActDeciNumb	3.2	def		%?brief dezimal code des aktuell ausgewählten Eingabefeldes		%?type REAL %?dflt 3.2
+/MDiaActDeciPoint	2	def		%?brief Anzahl Dezimalstellen der aktuellen Eingabe			%?type DINT %?dflt 2
+/MXiaInitKeyboard false	def		%?brief Tastatur muß initialisiert werden da die IA gewechselt wurde	%?type BOOL %?dflt false
+/MXiaKeybEnter	false	def		%?brief Eingabefeld wurde mit ENTER auf der Tastatur deaktivert	%?type BOOL %?dflt false
+
+
+% Procedure for displaying of "currentpage" - called on any page switch
+% Caution: Other implementation necessary for use with original PS interpreter (Ghostscript etc.)
+/display {
+	_cpindex 0 lt {
+		/_fieldselect 0 store	% page switch occured -
+		/_fieldprevious 0 store	% reset selection parameters for entry fields
+		/_fieldactive false store % initially no field selected
+		% load global variable with actual page name
+		dup /MScurrentPage exch store
+		% set global variable page switched
+		/MXpageSwitched true store
+		% page adress not valid, generate it
+		cvx		
+		/_cpindex exch store	% Pointer auf neue Seite in cpindex speichern
+		/_mstatus false store	% touch-status zurücksetzen
+	} {
+		% page adress valid, use it directly
+		pop	% remove page name from stack		
+		% reset global variable page switched
+		/MXpageSwitched false store
+	} ifelse
+	_cpindex exec
+} def
+
+
+% ******************************************************************************
+% function definitions
+% ******************************************************************************
+
+%!proc sp_sysRotVar
+/sp_sysRotVar {
+	/MRrotate realtime 20 div 360 mod store			% dreht pro ms um 0,05°
+} def
+
+%!proc sp_getSlide
+/sp_getSlide {
+	realtime 2000 mod dup 1000 gt { 2000 exch sub } if 10 div	% 0 bis 100 in einer Sekunde, dann zurück
+	/MRslide exch store
+} def
+
+%!proc sp_getFlashing
+/sp_getFlashing {
+	/MXflashing getflashstate store
+} def
+
+%!proc sp_getMsgState
+/sp_getMsgState {
+	getmessagestate
+	/MDmsgHighIndex exch store
+	/MDmsgLowIndex exch store
+	/MDmsgAcknNr exch store
+	/MDmsgDeactNr exch store
+	/MDmsgValidNr exch store
+} def
+
+
+% ******************************************************************************
+% font definitions
+% ******************************************************************************
+
+% Important: If you add a font procedure definition here,
+% 			 do also add an entry in the procedure fontinit{} below!
+
+%!proc Fontdefinitions
+
+%?fontdef
+/StdFont {
+ 	/llfar012 10 selectfont		% 12 pixel size
+} def		
+
+%?fontdef
+/MiniFont {
+ 	/llfstd	10 selectfont		% 10 pixel size
+} def		
+
+%?fontdef
+/MidFont {
+ 	/llfar016 10 selectfont		% 16 pixel size
+} def		
+
+%?fontdef
+/BigFont {
+ 	/llfstd 20 selectfont		% 20 pixel size
+} def		
+
+%?fontdef
+/ValueFont {
+ 	/llfar016	10 selectfont	% 16 pixel size
+} def		
+
+%?fontdef
+/MsgFont {
+ 	/llfar012	10 selectfont	% 12 pixel size
+} def		
+
+%?fontdef
+/MsgBigFont { 
+	/llfar020	10 selectfont	% 20 pixel size	, outlines gefüllt
+} def	
+
+%?fontdef
+/FatFont { 
+	/llfar020	10 selectfont	% 20 pixel size	, outlines gefüllt
+} def	
+
+%?fontdef
+/BigFatFont { 
+	/llfar020	15 selectfont	% 30 pixel size	, outlines gefüllt
+} def	
+
+
+/FSstdFont		1 def	%?brief Font selection standard Font	%?use CONST %?type DINT %?dflt 1
+/FSminiFont		2 def	%?brief Font selection Mini Font		%?use CONST %?type DINT %?dflt 2
+/FSmidFont		3 def	%?brief Font selection middle Font		%?use CONST %?type DINT %?dflt 3
+/FSbigFont		4 def	%?brief Font selection big Font			%?use CONST %?type DINT %?dflt 4
+/FSvalueFont	5 def	%?brief Font selection Value Font		%?use CONST %?type DINT %?dflt 5
+/FSmsgFont		6 def	%?brief Font selection Message Font		%?use CONST %?type DINT %?dflt 6
+/FSfatFont		7 def	%?brief Font selection Fat Font			%?use CONST %?type DINT %?dflt 7
+/FSbigFatFont	8 def	%?brief Font selection Big Fat Font		%?use CONST %?type DINT %?dflt 8
+/FSmsgBigFont	9 def	%?brief Font selection Big Message Font	%?use CONST %?type DINT %?dflt 9
+
+
+% fontinit: All font procedures must be called here! 
+% Purpose: 1. To force an error to occur if a font procedure selects an unknown font
+% 		   2. To set the default font. The last font which is called here remains set
+% 	          until a font call occurs in the project
+/fontinit {
+	BigFatFont
+	FatFont
+	MsgBigFont
+	MsgFont
+	ValueFont
+	BigFont
+	MidFont
+	MiniFont
+	StdFont		% <- the last font which is called here is the default font!
+} def
+
+
+%set font according to font number
+%?subproc
+/selectFont {
+	% select optimized font for given font size
+	/idFontSelection exch def
+	idFontSelection 1 lt idFontSelection 8 gt or { StdFont } if				% unknown font size -> standard
+	idFontSelection 1 eq {	StdFont } if
+	idFontSelection 2 eq {	MiniFont } if
+	idFontSelection 3 eq {	MidFont } if
+	idFontSelection 4 eq {	BigFont } if
+	idFontSelection 5 eq {	ValueFont } if
+	idFontSelection 6 eq {	MsgFont } if
+	idFontSelection 7 eq {	FatFont } if
+	idFontSelection 8 eq {	BigFatFont } if
+	idFontSelection 9 eq {	MsgBigFont } if
+} def
+
+
+% ******************************************************************************
+% color definitions (do not change the structure of the definitions!!!)
+% ******************************************************************************
+
+%!proc Colordefinitions
+
+/ColGreen 0 def
+/ColYellow 0 def
+/ColRed 0 def
+/ColBlue 0 def
+/ColGrey 0 def
+/ColLightGrey 0 def
+/ColWhite 0 def
+/ColBlack 0 def
+
+%?coldef Green
+/Green {
+ColGreen setcolor
+} def
+
+%?coldef Yellow
+/Yellow {
+ColYellow setcolor
+} def
+
+%?coldef Red
+/Red {
+ColRed setcolor
+} def
+
+%?coldef Blue
+/Blue {
+ColBlue setcolor
+} def
+
+%?coldef Grey
+/Grey {
+ColGrey setcolor
+} def
+
+%?coldef LightGrey
+/LightGrey {
+ColLightGrey setcolor
+} def
+
+%?coldef TouchArea
+/TouchArea {
+ColGrey setcolor
+} def
+
+%?coldef TouchAreaInv
+/TouchAreaInv {
+ColLightGrey setcolor
+} def
+
+%?coldef Invisible
+/Invisible {
+ColBlack setcolor
+} def
+
+%?coldef White
+/White {
+ColWhite setcolor
+} def
+
+
+% Procedure for initialisation of color variables
+% To be called from main part of project file at every startup of monitor
+
+/colorinit {
+currentcolor
+
+0.00 1.00 0.00 setrgbcolor
+currentcolor
+/ColGreen exch store
+
+1.00 1.00 0.00 setrgbcolor
+currentcolor
+/ColYellow exch store
+
+1.00 0.00 0.00 setrgbcolor
+currentcolor
+/ColRed exch store
+
+0.00 0.00 1.00 setrgbcolor
+currentcolor
+/ColBlue exch store
+
+0.40 0.40 0.40 setrgbcolor
+currentcolor
+/ColGrey exch store
+
+0.50 0.50 0.50 setrgbcolor
+currentcolor
+/ColLightGrey exch store
+
+1.00 1.00 1.00 setrgbcolor
+currentcolor
+/ColWhite exch store
+
+0.00 0.00 0.00 setrgbcolor
+currentcolor
+/ColBlack exch store
+
+/_cpindex -1 store
+
+setcolor
+} def
+
+% must be called here one time at first run to initialize color variables
+colorinit	
+
+
+% ******************************************************************************
+% Part - definitionen
+% ******************************************************************************
+
+%?partdef	GeneralFunctions
+%?fn	GeneralFunctions
+%?brief	Part with general functions needed in page0
+%?bbox 0 0 79 79
+/GeneralFunctions {
+%?manual_beg
+	% FirstPage
+	/MEM_msgIndex	exch	def		%?brief actual message index						%?use STATIC	%?type DINT	%?dflt 0
+	/isFirstPage exch def			%?brief first page to display after system start	%?use INP	%?type STRI	%?dflt main
+	_currentpage (page0) eq {
+		/_currentpage isFirstPage store
+		/_cpindex -1 store
+		/MScurrentPage _currentpage store
+	} if
+
+	% Funktionsaufrufe
+	sp_sysRotVar
+	sp_getSlide
+	sp_getFlashing
+	sp_getMsgState
+
+	% Setzen der Einheitenumschaltungen wenn die alle Einheiten generell umgeschalten werden sollen
+	MXchangeUnit {
+		/MXchangeUnitDist true store
+		/MXchangeUnitLoad true store
+		/MXchangeUnitPress true store
+		/MXchangeUnitTemp true store
+		/MXchangeUnitFlow true store
+		/MXchangeUnitSpeed true store
+	} if
+	
+	% Beschleunigung der MessageSeite (Page 0 vorder im Hintergrund laufend eine Message nach der anderen an, damit die Messages auf den Monitor geladen werden)
+	MDmsgValidNr 0 gt _currentpage (s_message) ne and {
+		MEM_msgIndex MDmsgLowIndex lt {
+			/MEM_msgIndex MDmsgLowIndex store
+		} if
+		MEM_msgIndex MDmsgHighIndex le {
+			MEM_msgIndex getmessagetext
+			pop pop pop pop pop								% die erhaltene Information ist uninteressant, die Messages sollen nur vom Master auf den Monitor geholt werden
+		} if
+		/MEM_msgIndex MEM_msgIndex 1 add store				% Message-Index für nächsten Durchlauf erhöhen
+		MEM_msgIndex MDmsgHighIndex gt {					% Falls der Maximale Index überschritten wurde, soll von vorne begonnen werden.
+			/MEM_msgIndex MDmsgLowIndex store
+		} if
+	} if
+	% Umschaltung des Message Font
+	language.system (chinese) eq { /MXsetBigMsgFont true store } if
+
+	% InputArea
+	% eine InputArea wurde aktiviert
+	MDiaActualIndex 0 ne { /MXiaActivated true store } { /MXiaActivated false store } ifelse
+	% Initialisierung beim aktivieren eines Eingabefeldes: Startwert des aktiven Eingabefeldes speichern
+	MDiaActualIndex MDiaInitIndex ne MDiaInitIndex 0 eq and {							% Wenn sich der aktuelle Index geändert hat neu initialisieren
+		% aktuelle Initialisierung setzen
+		/MDiaInitIndex MDiaActualIndex store
+		/MXiaInitKeyboard true store
+		/MDiaActDeciPoint MRiaActDeciNumb MRiaActDeciNumb cvi sub 10 mul cvi store
+		/MSiaActChaVal MRiaActChaVal MSiaActChaVal MDiaActDeciPoint ncvs store
+	} if
+	% Zurücksetzen aller Werte, wenn die Eingabe abgebrochen wurde durch aktivieren eines anderen Eingabefeldes oder durch umblättern
+	MDiaActualIndex MDiaInitIndex ne MDiaActualIndex 0 ne MDiaInitIndex 0 ne and and _cpindex 0 lt or {			% die cpindex Abfrage funktioniert hier, weil beim Umschalter der Seite cpindex auf -1 gesetzt wird, und das gleich am beginn der aktiven Seite. Die Info ist also vorhanden und die "alte"Seite wird erst noch durchlaufen!
+		_cpindex 0 lt { /MDiaActualIndex 0 store } if
+		/MXiaInitKeyboard true store
+	} if
+	% wurde die InputArea korrekt (bsp mit ENTER) abgeschlossen so werden die Werte übernommen
+	MDiaActualIndex 0 eq MDiaInitIndex 0 ne and {
+		/MRiaActualValue MRiaActChaVal store	% aktuell veränderten Wert übernehmen
+		/MDiaInitIndex 0 store
+	} if
+
+	% Werte für globale Speicherung auf den stack legen
+	MEM_msgIndex
+%?manual_end
+} def
+%?partend
+
+%?partdef	GeneralDefinition
+%?fn	GeneralDefinition
+%?brief	Part with general definitions (used to change general initialisation parameter)
+%?bbox 0 0 79 79
+/GeneralDefinition {
+%?manual_beg
+	/idDummy1 exch def				%?brief dummy input for future definitions				%?use INP	%?type DINT	%?dflt 0
+	/idDummy2 exch def				%?brief dummy input for future definitions				%?use INP	%?type DINT	%?dflt 0
+	/idDummy3 exch def				%?brief dummy input for future definitions				%?use INP	%?type DINT	%?dflt 0
+	/idDummy4 exch def				%?brief dummy input for future definitions				%?use INP	%?type DINT	%?dflt 0
+	/idDummy5 exch def				%?brief dummy input for future definitions				%?use INP	%?type DINT	%?dflt 0
+	/ixTweeterNotSpeaker exch def	%?brief monitor with internal beeper instead of loudspeaker (fixed freuquency)	%?use INP	%?type BOOL	%?dflt false
+	/idSymbolGrid exch def			%?brief system grid for page drwaing in screen pixels	%?use INP	%?type DINT	%?dflt 80
+	/idMsgAreaHight exch def		%?brief Y size of the message part in pixel				%?use INP	%?type DINT	%?dflt 400
+	/idMsgAreaWidth exch def		%?brief X size of the message part in pixel				%?use INP	%?type DINT	%?dflt 640
+	/idScreenHight exch def			%?brief Y size of the screen in pixel					%?use INP	%?type DINT	%?dflt 480
+	/idScreenWidth exch def			%?brief X size of the screen in pixel					%?use INP	%?type DINT	%?dflt 640
+	
+	/MDscreenPixX idScreenWidth store
+	/MDscreenPixY idScreenHight store
+	/MDmaxMsgPixX idMsgAreaWidth store
+	/MDmaxMsgPixY idMsgAreaHight store
+	/MDsymbolGrid idSymbolGrid store
+	/MXtweeterNotSpeaker ixTweeterNotSpeaker store
+
+%?manual_end
+} def
+%?partend
+
+% project initialisation procedure
+/projinit {
+	/LS_target product def
+	LS_target (PME1 Display) eq { 800 480 640 400 80 true 0 0 0 0 0 GeneralDefinition } if
+	LS_target (PME1 Mining Monitor) eq { 640 480 640 400 80 true 0 0 0 0 0 GeneralDefinition } if
+	LS_target (Litronic Monitor) eq { 640 480 640 400 80 false 0 0 0 0 0 GeneralDefinition } if
+	LS_target (PME1 Monitor 5) eq { 960 720 960 557 80 false 0 0 0 0 0 GeneralDefinition } if
+} def
+projinit
+
+
+%?partdef display_page
+%?fn	display_page
+%?brief	draw page on screen
+%?bbox	0 0 79 79
+/display_page {
+	/isPageName exch def	%?brief name of page %?use INP %?type STRI %?dflt 
+%?manual_beg
+	isPageName () ne { 
+		_display_page_shown not { 
+			/_display_page_shown true store
+			matrix currentmatrix_nlw 
+			currentcolor 
+			initmatrix
+			0 0 moveto
+			isPageName cvx exec 
+			setcolor 
+			setmatrix_nlw 
+			/_display_page_shown false store
+		} if
+	} if
+%?manual_end
+} def
+%?partend
+
+%?partdef	bitmap
+%?fn	bitmap
+%?brief	implement of bitmaps on the page
+%?bbox 0 0 80 80
+/bitmap {
+%?manual_beg
+	/isBmpName	exch	def		%?brief filename of the bitmap			%?use INP	%?type STRI	%?dflt *.bmp
+	0 0 moveto 
+	isBmpName
+	showimage 
+%?manual_end
+} def
+%?partend
+
+%?partdef switch_page
+%?fn	switch_page
+%?brief	switch page by variable
+%?bbox	0 0 79 79
+/switch_page {
+	/ixSwitchPage exch def	%?brief switch the page %?use INP %?type BOOL %?dflt false
+	/isPageName exch def	%?brief name of page to switch to %?use INP %?type STRI %?dflt 
+	/qxSwitchPage false def	%?brief page switches %?use OUT %?type BOOL %?dflt false
+%?manual_beg
+	ixSwitchPage {
+		/_currentpage isPageName store 
+		/_cpindex -1 store 
+	} if
+%?manual_end 
+	
+	qxSwitchPage 
+} def
+%?partend
+
+%?partdef	BeepCall
+%?fn	BeepCall
+%?brief	call of the monitor beeper with the delivered parameters
+%?bbox 0 0 79 79
+/BeepCall {
+%?manual_beg
+	/ixActive		exch	def		%?brief set beep active						%?use INP	%?type BOOL	%?dflt false
+	/irVolume		exch	def		%?brief volume of the beep					%?use INP	%?type REAL	%?dflt 100
+	/irFreq2		exch	def		%?brief	frequency of the beep at time 2		%?use INP	%?type REAL	%?dflt 0
+	/irFreq1		exch	def		%?brief frequency of the beep at time 1		%?use INP	%?type REAL	%?dflt 1000
+	/irtime2		exch	def		%?brief beep time 2							%?use INP	%?type REAL	%?dflt 1000
+	/irtime1		exch	def		%?brief beep time 1							%?use INP	%?type REAL	%?dflt 1000
+
+% definition for PME Display
+	MXtweeterNotSpeaker {
+		/irFreq2 0 store
+		irFreq1 990 gt {
+			/irFreq1 2400 store
+		} {
+			/irFreq1 1300 store
+		} ifelse
+	} if
+	
+	irtime1 irtime2 irFreq1 irFreq2 irVolume ixActive multibeep
+
+%?manual_end
+} def
+%?partend
+
+%?partdef	BeepCallOne
+%?fn	BeepCallOne
+%?brief	call of the monitor beeper with the delivered parameters
+%?bbox 0 0 79 79
+/BeepCallOne {
+%?manual_beg
+	/ixActive		exch	def		%?brief set beep active				%?use INP	%?type BOOL	%?dflt false
+	/irVolume		exch	def		%?brief volume of the beep			%?use INP	%?type REAL	%?dflt 100
+	/irFreq			exch	def		%?brief frequency of the beep		%?use INP	%?type REAL	%?dflt 1000
+	/irTime			exch	def		%?brief beep time					%?use INP	%?type REAL	%?dflt 1000
+
+% definition for PME Display
+	MXtweeterNotSpeaker {
+		irFreq 990 gt {
+			/irFreq 2400 store
+		} {
+			/irFreq 1300 store
+		} ifelse
+	} if
+	
+	ixActive {
+		irTime irFreq irVolume beep
+	} if
+
+%?manual_end
+} def
+%?partend
+
+%?partdef	BeepAct
+%?fn	BeepAct
+%?brief	part to activate the monitor beeper, call this part and set the valid input with the same variable the notice is called, set the acknowledge input true to deactivate the beep while the notice is active after acknowledge
+%?bbox 0 0 79 79
+/BeepAct {
+%?manual_beg
+	/MEM_acknowledged	exch	def		%?brief notice acknowledged			%?use STATIC	%?type BOOL	%?dflt false
+	/ixAckn		exch	def				%?brief acknowledge notice			%?use INP		%?type BOOL	%?dflt false
+	/ixValid	exch	def				%?brief notice is active			%?use INP		%?type BOOL	%?dflt false
+
+	ixAckn { /MEM_acknowledged true store } if
+	ixValid MEM_acknowledged not and { /MDbeepCount MDbeepCount 1 add store } if
+	ixValid not MEM_acknowledged and { /MEM_acknowledged false store } if
+
+	% Werte für globale Speicherung auf den stack legen
+	MEM_acknowledged
+%?manual_end
+} def
+%?partend
+
+%?partdef	BeepAct1
+%?fn	BeepAct1
+%?brief	part to activate the monitor beeper and the beeper reset, call this part and set the valid input with the same variable the notice is called, set the acknowledge input true to deactivate the beep while the notice is active after acknowledge
+%?bbox 0 0 79 79
+/BeepAct1 {
+%?manual_beg
+	/MEM_acknowledged	exch	def		%?brief notice acknowledged			%?use STATIC	%?type BOOL	%?dflt false
+	/ixAckn		exch	def				%?brief acknowledge notice			%?use INP		%?type BOOL	%?dflt false
+	/ixValid	exch	def				%?brief notice is active			%?use INP		%?type BOOL	%?dflt false
+	/qxBeepActivated	false	def		%?brief beeper is activated by this part	%?use OUT	%?type BOOL	%?dflt false
+
+	ixAckn { /MEM_acknowledged true store } if
+	ixValid MEM_acknowledged not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid not MEM_acknowledged and { /MEM_acknowledged false store } if
+
+	% Werte für globale Speicherung auf den stack legen
+	qxBeepActivated
+	MEM_acknowledged
+%?manual_end
+} def
+%?partend
+
+%?partdef	BeepAct15
+%?fn	BeepAct15
+%?brief	part to activate the monitor beeper and the beeper reset by 15 different notices at the same page and acknowledge it with one variable, call this part and set the valid input with the same variables the notice is called, set the acknowledge input true to deactivate the beep while the notice is active after acknowledge
+%?bbox 0 0 79 79
+/BeepAct15 {
+%?manual_beg
+	/MEM_ackn15	exch	def				%?brief notice 15 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn14	exch	def				%?brief notice 14 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn13	exch	def				%?brief notice 13 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn12	exch	def				%?brief notice 12 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn11	exch	def				%?brief notice 11 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn10	exch	def				%?brief notice 10 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn9	exch	def				%?brief notice 9 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn8	exch	def				%?brief notice 8 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn7	exch	def				%?brief notice 7 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn6	exch	def				%?brief notice 6 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn5	exch	def				%?brief notice 5 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn4	exch	def				%?brief notice 4 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn3	exch	def				%?brief notice 3 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn2	exch	def				%?brief notice 2 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_ackn1	exch	def				%?brief notice 1 acknowledged		%?use STATIC	%?type BOOL	%?dflt false
+	/ixAckn		exch	def				%?brief acknowledge notices			%?use INP		%?type BOOL	%?dflt false
+	/ixValid15	exch	def				%?brief notice 15 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid14	exch	def				%?brief notice 14 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid13	exch	def				%?brief notice 13 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid12	exch	def				%?brief notice 12 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid11	exch	def				%?brief notice 11 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid10	exch	def				%?brief notice 10 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid9	exch	def				%?brief notice 9 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid8	exch	def				%?brief notice 8 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid7	exch	def				%?brief notice 7 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid6	exch	def				%?brief notice 6 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid5	exch	def				%?brief notice 5 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid4	exch	def				%?brief notice 4 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid3	exch	def				%?brief notice 3 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid2	exch	def				%?brief notice 2 is active			%?use INP		%?type BOOL	%?dflt false
+	/ixValid1	exch	def				%?brief notice 1 is active			%?use INP		%?type BOOL	%?dflt false
+	/qxBeepActivated	false	def		%?brief beeper is activated by this part	%?use OUT	%?type BOOL	%?dflt false
+
+	ixAckn {
+		ixValid1 { /MEM_ackn1 true store } if
+		ixValid2 { /MEM_ackn2 true store } if
+		ixValid3 { /MEM_ackn3 true store } if
+		ixValid4 { /MEM_ackn4 true store } if
+		ixValid5 { /MEM_ackn5 true store } if
+		ixValid6 { /MEM_ackn6 true store } if
+		ixValid7 { /MEM_ackn7 true store } if
+		ixValid8 { /MEM_ackn8 true store } if
+		ixValid9 { /MEM_ackn9 true store } if
+		ixValid10 { /MEM_ackn10 true store } if
+		ixValid11 { /MEM_ackn11 true store } if
+		ixValid12 { /MEM_ackn12 true store } if
+		ixValid13 { /MEM_ackn13 true store } if
+		ixValid14 { /MEM_ackn14 true store } if
+		ixValid15 { /MEM_ackn15 true store } if
+	} if
+
+	ixValid1 MEM_ackn1 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid2 MEM_ackn2 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid3 MEM_ackn3 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid4 MEM_ackn4 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid5 MEM_ackn5 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid6 MEM_ackn6 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid7 MEM_ackn7 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid8 MEM_ackn8 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid9 MEM_ackn9 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid10 MEM_ackn10 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid11 MEM_ackn11 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid12 MEM_ackn12 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid13 MEM_ackn13 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid14 MEM_ackn14 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid15 MEM_ackn15 not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+	ixValid1 not MEM_ackn1 and { /MEM_ackn1 false store } if
+	ixValid2 not MEM_ackn2 and { /MEM_ackn2 false store } if
+	ixValid3 not MEM_ackn3 and { /MEM_ackn3 false store } if
+	ixValid4 not MEM_ackn4 and { /MEM_ackn4 false store } if
+	ixValid5 not MEM_ackn5 and { /MEM_ackn5 false store } if
+	ixValid6 not MEM_ackn6 and { /MEM_ackn6 false store } if
+	ixValid7 not MEM_ackn7 and { /MEM_ackn7 false store } if
+	ixValid8 not MEM_ackn8 and { /MEM_ackn8 false store } if
+	ixValid9 not MEM_ackn9 and { /MEM_ackn9 false store } if
+	ixValid10 not MEM_ackn10 and { /MEM_ackn10 false store } if
+	ixValid11 not MEM_ackn11 and { /MEM_ackn11 false store } if
+	ixValid12 not MEM_ackn12 and { /MEM_ackn12 false store } if
+	ixValid13 not MEM_ackn13 and { /MEM_ackn13 false store } if
+	ixValid14 not MEM_ackn14 and { /MEM_ackn14 false store } if
+	ixValid15 not MEM_ackn15 and { /MEM_ackn15 false store } if
+
+	% Werte für globale Speicherung auf den stack legen
+	qxBeepActivated
+	MEM_ackn15
+	MEM_ackn14
+	MEM_ackn13
+	MEM_ackn12
+	MEM_ackn11
+	MEM_ackn10
+	MEM_ackn9
+	MEM_ackn8
+	MEM_ackn7
+	MEM_ackn6
+	MEM_ackn5
+	MEM_ackn4
+	MEM_ackn3
+	MEM_ackn2
+	MEM_ackn1
+%?manual_end
+} def
+%?partend
+
+%?partdef	BeepActStore
+%?fn	BeepActStore
+%?brief	part to activate the monitor beeper and call a notice symbol until beeper acknowledge (even if the notice is deactive meanwhile)
+%?bbox 0 0 79 79
+/BeepActStore {
+%?manual_beg
+	/MEM_active	exch	def				%?brief notice active				%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_acknowledged	exch	def		%?brief notice acknowledged			%?use STATIC	%?type BOOL	%?dflt false
+	/ixAckn		exch	def				%?brief acknowledge notice			%?use INP		%?type BOOL	%?dflt false
+	/ixValid	exch	def				%?brief notice is active			%?use INP		%?type BOOL	%?dflt false
+	/qxActive	false	def				%?brief call notice symbol			%?use OUT		%?type BOOL	%?dflt false
+
+	ixValid { /MEM_active true store } if			% Störmeldung speichern (wenn nicht aktiv -> keine Änderung)
+	ixAckn { /MEM_acknowledged true store } if		% Quittierung speichern (wenn nicht aktiv -> keine Änderung)
+
+	% beeperzähler erhöhen
+	MEM_active MEM_acknowledged not and { /MDbeepCount MDbeepCount 1 add store } if
+
+	% zurücksetzen der Speicher
+	ixValid not MEM_acknowledged and { /MEM_active false store /MEM_acknowledged false store } if
+
+	% Ausgangswert für Symbolanzeige auf den stack legen
+	/qxActive MEM_active store
+	qxActive
+
+	% Werte für globale Speicherung auf den stack legen
+	MEM_active
+	MEM_acknowledged
+%?manual_end
+} def
+%?partend
+
+%?partdef	BeepActStore1
+%?fn	BeepActStore1
+%?brief	part to activate the monitor beeper and the beeper reset and call a notice symbol until beeper acknowledge (even if the notice is deactive meanwhile)
+%?bbox 0 0 79 79
+/BeepActStore1 {
+%?manual_beg
+	/MEM_active	exch	def				%?brief notice active				%?use STATIC	%?type BOOL	%?dflt false
+	/MEM_acknowledged	exch	def		%?brief notice acknowledged			%?use STATIC	%?type BOOL	%?dflt false
+	/ixAckn		exch	def				%?brief acknowledge notice			%?use INP		%?type BOOL	%?dflt false
+	/ixValid	exch	def				%?brief notice is active			%?use INP		%?type BOOL	%?dflt false
+	/qxActive	false	def				%?brief call notice symbol			%?use OUT		%?type BOOL	%?dflt false
+	/qxBeepActivated	false	def		%?brief beeper is activated by this part	%?use OUT	%?type BOOL	%?dflt false
+
+	ixValid { /MEM_active true store } if			% Störmeldung speichern (wenn nicht aktiv -> keine Änderung)
+	ixAckn { /MEM_acknowledged true store } if		% Quittierung speichern (wenn nicht aktiv -> keine Änderung)
+
+	% beeperzähler erhöhen
+	MEM_active MEM_acknowledged not and { /MDbeepCount MDbeepCount 1 add store /qxBeepActivated true store } if
+
+	% zurücksetzen der Speicher
+	ixValid not MEM_acknowledged and { /MEM_active false store /MEM_acknowledged false store } if
+
+	% Ausgangswert für Symbolanzeige auf den stack legen
+	/qxActive MEM_active store
+	qxActive
+	qxBeepActivated
+
+	% Werte für globale Speicherung auf den stack legen
+	MEM_active
+	MEM_acknowledged
+%?manual_end
+} def
+%?partend
+
+
+% ************************************************************************************************************************
+
+%?partdef WndCompLow
+%?fn	WndCompLow
+%?brief	Fensterkomparator mit Hysterese unterhalb des Schwellwert (gleich lwnlib)
+%?bbox 0 0 79 79
+/WndCompLow {
+%?manual_beg
+	/irLimitHyst exch def		%?brief Schwellwert deaktiviert Ausgang	%?use INP	%?type REAL	%?dflt 0.000
+	/irLimit exch def			%?brief Schwellwert aktiviert Ausgang	%?use INP	%?type REAL	%?dflt 0.000
+	/irValue exch def			%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.000
+	/qxValInWnd false def		%?brief Eingangswert liegt unter dem Schwellwert	%?use OUT	%?type BOOL	%?dflt false
+	irValue irLimit lt {
+		/qxValInWnd true store
+	} if
+	irValue irLimitHyst gt {
+		/qxValInWnd false store
+	} if
+	qxValInWnd
+%?manual_end
+} def
+%?partend
+
+%?partdef WndCompHigh
+%?fn	WndCompHigh
+%?brief	Fensterkomparator mit Hysterese oberhalb des Schwellwert (gleich lwnlib)
+%?bbox 0 0 79 79
+/WndCompHigh {
+%?manual_beg
+	/irLimitHyst exch def		%?brief Schwellwert deaktiviert Ausgang	%?use INP	%?type REAL	%?dflt 0.000
+	/irLimit exch def			%?brief Schwellwert aktiviert Ausgang	%?use INP	%?type REAL	%?dflt 0.000
+	/irValue exch def			%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.000
+	/qxValInWnd false def		%?brief Eingangswert liegt ober dem Schwellwert	%?use OUT	%?type BOOL	%?dflt false
+	irValue irLimit gt {
+		/qxValInWnd true store
+	} if
+	irValue irLimitHyst lt {
+		/qxValInWnd false store
+	} if
+	qxValInWnd
+%?manual_end
+} def
+%?partend
+
+%?partdef	TOGGLE
+%?fn	TOGGLE
+%?brief	toggle-Funktion: mit jeder steigenden Flanke am Eingang wechselt der Ausgang
+%?bbox 0 0 79 79
+/TOGGLE {
+%?manual_beg
+	/MEM_toggle	exch def	%?brief toggle Zustand gespeichert	%?use STATIC	%?type BOOL	%?dflt false
+	/In1	exch	def		%?brief toggle Impuls (darf nur ein Durchlauf true sein (z.B. touch))	%?use INP	%?type BOOL	%?dflt false
+	/Out	false	def		%?brief Ausgang			%?use OUT	%?type BOOL	%?dflt false
+
+	In1 { MEM_toggle { /MEM_toggle false store } { /MEM_toggle true store } ifelse } if
+	/Out MEM_toggle store
+	
+	Out
+	MEM_toggle
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_AND_2
+%?fn	FUN_AND_2
+%?brief	AND -Funktion mit 2 Eingängen
+%?bbox 0 0 79 79
+/FUN_AND_2 {
+%?manual_beg
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type BOOL	%?dflt true
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type BOOL	%?dflt false
+	/Out	false	def		%?brief AND-Ausgang			%?use OUT	%?type BOOL	%?dflt false
+
+	In1 In2 and
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_AND_5
+%?fn	FUN_AND_5
+%?brief	AND -Funktion mit 5 Eingängen
+%?bbox 0 0 79 79
+/FUN_AND_5 {
+%?manual_beg
+	/In5	exch	def		%?brief Eingangsvariable 5	%?use INP	%?type BOOL	%?dflt true
+	/In4	exch	def		%?brief Eingangsvariable 4	%?use INP	%?type BOOL	%?dflt true
+	/In3	exch	def		%?brief Eingangsvariable 3	%?use INP	%?type BOOL	%?dflt true
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type BOOL	%?dflt true
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type BOOL	%?dflt false
+	/Out	false	def		%?brief AND-Ausgang			%?use OUT	%?type BOOL	%?dflt false
+
+	In1 In2 In3 In4 In5 and and and and
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_AND_15
+%?fn	FUN_AND_15
+%?brief	AND -Funktion mit 15 Eingängen
+%?bbox 0 0 79 79
+/FUN_AND_15 {
+%?manual_beg
+	/In15	exch	def		%?brief Eingangsvariable 15	%?use INP	%?type BOOL	%?dflt true
+	/In14	exch	def		%?brief Eingangsvariable 14	%?use INP	%?type BOOL	%?dflt true
+	/In13	exch	def		%?brief Eingangsvariable 13	%?use INP	%?type BOOL	%?dflt true
+	/In12	exch	def		%?brief Eingangsvariable 12	%?use INP	%?type BOOL	%?dflt true
+	/In11	exch	def		%?brief Eingangsvariable 11	%?use INP	%?type BOOL	%?dflt true
+	/In10	exch	def		%?brief Eingangsvariable 10	%?use INP	%?type BOOL	%?dflt true
+	/In9	exch	def		%?brief Eingangsvariable 9	%?use INP	%?type BOOL	%?dflt true
+	/In8	exch	def		%?brief Eingangsvariable 8	%?use INP	%?type BOOL	%?dflt true
+	/In7	exch	def		%?brief Eingangsvariable 7	%?use INP	%?type BOOL	%?dflt true
+	/In6	exch	def		%?brief Eingangsvariable 6	%?use INP	%?type BOOL	%?dflt true
+	/In5	exch	def		%?brief Eingangsvariable 5	%?use INP	%?type BOOL	%?dflt true
+	/In4	exch	def		%?brief Eingangsvariable 4	%?use INP	%?type BOOL	%?dflt true
+	/In3	exch	def		%?brief Eingangsvariable 3	%?use INP	%?type BOOL	%?dflt true
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type BOOL	%?dflt true
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type BOOL	%?dflt false
+	/Out	false	def		%?brief AND-Ausgang		%?use OUT	%?type BOOL	%?dflt false
+
+	In1 In2 In3 In4 In5 In6 In7 In8 In9 In10 In11 In12 In13 In14 In15
+	and and and and and and and and and and and and and and
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_OR_2
+%?fn	FUN_OR_2
+%?brief	ODER -Funktion mit 2 Eingängen
+%?bbox 0 0 79 79
+/FUN_OR_2 {
+%?manual_beg
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type BOOL	%?dflt false
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type BOOL	%?dflt false
+	/Out	false	def		%?brief ODER-Ausgang		%?use OUT	%?type BOOL	%?dflt false
+
+	In1 In2 or
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_OR_5
+%?fn	FUN_OR_5
+%?brief	ODER -Funktion mit 5 Eingängen
+%?bbox 0 0 79 79
+/FUN_OR_5 {
+%?manual_beg
+	/In5	exch	def		%?brief Eingangsvariable 5	%?use INP	%?type BOOL	%?dflt false
+	/In4	exch	def		%?brief Eingangsvariable 4	%?use INP	%?type BOOL	%?dflt false
+	/In3	exch	def		%?brief Eingangsvariable 3	%?use INP	%?type BOOL	%?dflt false
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type BOOL	%?dflt false
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type BOOL	%?dflt false
+	/Out	false	def		%?brief ODER-Ausgang		%?use OUT	%?type BOOL	%?dflt false
+
+	In1 In2 In3 In4 In5 or or or or
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_OR_15
+%?fn	FUN_OR_15
+%?brief	ODER -Funktion mit 15 Eingängen
+%?bbox 0 0 79 79
+/FUN_OR_15 {
+%?manual_beg
+	/In15	exch	def		%?brief Eingangsvariable 15	%?use INP	%?type BOOL	%?dflt false
+	/In14	exch	def		%?brief Eingangsvariable 14	%?use INP	%?type BOOL	%?dflt false
+	/In13	exch	def		%?brief Eingangsvariable 13	%?use INP	%?type BOOL	%?dflt false
+	/In12	exch	def		%?brief Eingangsvariable 12	%?use INP	%?type BOOL	%?dflt false
+	/In11	exch	def		%?brief Eingangsvariable 11	%?use INP	%?type BOOL	%?dflt false
+	/In10	exch	def		%?brief Eingangsvariable 10	%?use INP	%?type BOOL	%?dflt false
+	/In9	exch	def		%?brief Eingangsvariable 9	%?use INP	%?type BOOL	%?dflt false
+	/In8	exch	def		%?brief Eingangsvariable 8	%?use INP	%?type BOOL	%?dflt false
+	/In7	exch	def		%?brief Eingangsvariable 7	%?use INP	%?type BOOL	%?dflt false
+	/In6	exch	def		%?brief Eingangsvariable 6	%?use INP	%?type BOOL	%?dflt false
+	/In5	exch	def		%?brief Eingangsvariable 5	%?use INP	%?type BOOL	%?dflt false
+	/In4	exch	def		%?brief Eingangsvariable 4	%?use INP	%?type BOOL	%?dflt false
+	/In3	exch	def		%?brief Eingangsvariable 3	%?use INP	%?type BOOL	%?dflt false
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type BOOL	%?dflt false
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type BOOL	%?dflt false
+	/Out	false	def		%?brief ODER-Ausgang		%?use OUT	%?type BOOL	%?dflt false
+
+	In1 In2 In3 In4 In5 In6 In7 In8 In9 In10 In11 In12 In13 In14 In15
+	or or or or or or or or or or or or or or
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_MUL
+%?fn	FUN_MUL
+%?brief	MUL -Funktion mit 2 Eingängen
+%?bbox 0 0 79 79
+/FUN_MUL {
+%?manual_beg
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type REAL	%?dflt 0.00
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type REAL	%?dflt 0.00
+	/Out	0.00	def		%?brief MUL-Ausgang		%?use OUT	%?type REAL	%?dflt 0.00
+
+	In1 In2 mul
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_DIV
+%?fn	FUN_DIV
+%?brief	DIV -Funktion mit 2 Eingängen
+%?bbox 0 0 79 79
+/FUN_DIV {
+%?manual_beg
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type REAL	%?dflt 0.00
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type REAL	%?dflt 0.00
+	/Out	0.00	def		%?brief DIV-Ausgang		%?use OUT	%?type REAL	%?dflt 0.00
+
+	In2 0 ne { In1 In2 div } if
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_ADD
+%?fn	FUN_ADD
+%?brief	ADD -Funktion mit 2 Eingängen
+%?bbox 0 0 79 79
+/FUN_ADD {
+%?manual_beg
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type REAL	%?dflt 0.00
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type REAL	%?dflt 0.00
+	/Out	0.00	def		%?brief ADD-Ausgang		%?use OUT	%?type REAL	%?dflt 0.00
+
+	In1 In2 add
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_SUB
+%?fn	FUN_SUB
+%?brief	SUB -Funktion mit 2 Eingängen
+%?bbox 0 0 79 79
+/FUN_SUB {
+%?manual_beg
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type REAL	%?dflt 0.00
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type REAL	%?dflt 0.00
+	/Out	0.00	def		%?brief SUB-Ausgang		%?use OUT	%?type REAL	%?dflt 0.00
+
+	In1 In2 sub
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_SEL
+%?fn	FUN_SEL
+%?brief	SEL -Funktion (Selektierer)
+%?bbox 0 0 79 79
+/FUN_SEL {
+%?manual_beg
+	/In1	exch	def		%?brief Eingangsvariable IN 1	%?use INP	%?type REAL	%?dflt 0.00
+	/In0	exch	def		%?brief Eingangsvariable IN 0	%?use INP	%?type REAL	%?dflt 0.00
+	/InG	exch	def		%?brief Eingangsvariable G (Auswahl)	%?use INP	%?type BOOL	%?dflt false
+	/Out	0.00	def		%?brief SEL-Ausgang		%?use OUT	%?type REAL	%?dflt 0.00
+
+	InG true eq { In1 } { In0 } ifelse
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_SET_VAR_BOOL
+%?fn	FUN_SET_VAR_BOOL
+%?brief	set value of boolean variable
+%?bbox 0 0 79 79
+/FUN_SET_VAR_BOOL {
+	/In	exch	def		%?brief input value (integer)	%?use INP	%?type BOOL	%?dflt false
+	/Out	0	def		%?brief output value (integer)	%?use OUT	%?type BOOL	%?dflt false
+%?manual_beg
+	/Out In store
+	Out
+%?manual_end
+} def
+%?partend
+
+%?partdef	FUN_SET_VAR_INT
+%?fn	FUN_SET_VAR_INT
+%?brief	set value of integer variable
+%?bbox 0 0 79 79
+/FUN_SET_VAR_INT {
+	/In	exch	def		%?brief input value (integer)	%?use INP	%?type DINT	%?dflt 0
+	/Out	0	def		%?brief output value (integer)	%?use OUT	%?type DINT	%?dflt 0
+%?manual_beg
+	/Out In store
+	Out
+%?manual_end
+} def
+%?partend
+
+%?partdef	FUN_SET_VAR_REAL
+%?fn	FUN_SET_VAR_REAL
+%?brief	set value of real variable
+%?bbox 0 0 79 79
+/FUN_SET_VAR_REAL {
+	/In	exch	def		%?brief input value (real)	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0	def		%?brief output value (real)	%?use OUT	%?type REAL	%?dflt 0.0
+%?manual_beg
+	/Out In store
+	Out
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_SET_VAR_STRING
+%?fn	FUN_SET_VAR_STRING
+%?brief	set value of string variable
+%?bbox 0 0 79 79
+/FUN_SET_VAR_STRING {
+	/In	exch	def		%?brief input value (string)	%?use INP	%?type STRI	%?dflt (text)
+	/Out	0	def		%?brief output value (string)	%?use OUT	%?type STRI	%?dflt (text)
+%?manual_beg
+	/Out In store
+	Out
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_MUX5
+%?fn	FUN_MUX5
+%?brief	MUX -Funktion (Multiplexer mit 5 Eingängen)
+%?bbox 0 0 79 79
+/FUN_MUX5 {
+%?manual_beg
+	/In5	exch	def		%?brief Eingangsvariable 5	%?use INP	%?type REAL	%?dflt 0.00
+	/In4	exch	def		%?brief Eingangsvariable 4	%?use INP	%?type REAL	%?dflt 0.00
+	/In3	exch	def		%?brief Eingangsvariable 3	%?use INP	%?type REAL	%?dflt 0.00
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type REAL	%?dflt 0.00
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type REAL	%?dflt 0.00
+	/InK	exch	def		%?brief Eingangsvariable K (Auswahl)	%?use INP	%?type REAL	%?dflt 0.00
+	/Out	0.00	def		%?brief MUX-Ausgang		%?use OUT	%?type REAL	%?dflt 0.00
+
+	InK 0 le { 0.0 } if
+	InK 1 eq { In1 } if
+	InK 2 eq { In2 } if
+	InK 3 eq { In3 } if
+	InK 4 eq { In4 } if
+	InK 5 eq { In5 } if
+	InK 6 ge { 0.0 } if
+%?manual_end
+} def
+%?partend
+
+
+%?partdef	FUN_MUX15
+%?fn	FUN_MUX15
+%?brief	MUX -Funktion (Multiplexer mit 15 Eingängen)
+%?bbox 0 0 79 79
+/FUN_MUX15 {
+%?manual_beg
+	/In15	exch	def		%?brief Eingangsvariable 15	%?use INP	%?type REAL	%?dflt 0.00
+	/In14	exch	def		%?brief Eingangsvariable 14	%?use INP	%?type REAL	%?dflt 0.00
+	/In13	exch	def		%?brief Eingangsvariable 13	%?use INP	%?type REAL	%?dflt 0.00
+	/In12	exch	def		%?brief Eingangsvariable 12	%?use INP	%?type REAL	%?dflt 0.00
+	/In11	exch	def		%?brief Eingangsvariable 11	%?use INP	%?type REAL	%?dflt 0.00
+	/In10	exch	def		%?brief Eingangsvariable 10	%?use INP	%?type REAL	%?dflt 0.00
+	/In9	exch	def		%?brief Eingangsvariable 9	%?use INP	%?type REAL	%?dflt 0.00
+	/In8	exch	def		%?brief Eingangsvariable 8	%?use INP	%?type REAL	%?dflt 0.00
+	/In7	exch	def		%?brief Eingangsvariable 7	%?use INP	%?type REAL	%?dflt 0.00
+	/In6	exch	def		%?brief Eingangsvariable 6	%?use INP	%?type REAL	%?dflt 0.00
+	/In5	exch	def		%?brief Eingangsvariable 5	%?use INP	%?type REAL	%?dflt 0.00
+	/In4	exch	def		%?brief Eingangsvariable 4	%?use INP	%?type REAL	%?dflt 0.00
+	/In3	exch	def		%?brief Eingangsvariable 3	%?use INP	%?type REAL	%?dflt 0.00
+	/In2	exch	def		%?brief Eingangsvariable 2	%?use INP	%?type REAL	%?dflt 0.00
+	/In1	exch	def		%?brief Eingangsvariable 1	%?use INP	%?type REAL	%?dflt 0.00
+	/InK	exch	def		%?brief Eingangsvariable K (Auswahl)	%?use INP	%?type REAL	%?dflt 0.00
+	/Out	0.00	def		%?brief MUX-Ausgang		%?use OUT	%?type REAL	%?dflt 0.00
+
+	InK 0 le { 0.0 } if
+	InK 1 eq { In1 } if
+	InK 2 eq { In2 } if
+	InK 3 eq { In3 } if
+	InK 4 eq { In4 } if
+	InK 5 eq { In5 } if
+	InK 6 eq { In6 } if
+	InK 7 eq { In7 } if
+	InK 8 eq { In8 } if
+	InK 9 eq { In9 } if
+	InK 10 eq { In10 } if
+	InK 11 eq { In11 } if
+	InK 12 eq { In12 } if
+	InK 13 eq { In13 } if
+	InK 14 eq { In14 } if
+	InK 15 eq { In15 } if
+	InK 16 ge { 0.0 } if
+%?manual_end
+} def
+%?partend
+
+%?partdef	FUN_LIMIT
+%?fn	FUN_LIMIT
+%?brief	LIMIT -Funktion (Begrenzt die Eingangsvariable mit dem LimitLow und LimitHigh und gibt sie am Ausgang zurück)
+%?bbox 0 0 79 79
+/FUN_LIMIT {
+%?manual_beg
+	/LimitHigh	exch	def		%?brief obere Begrenzung	%?use INP	%?type REAL	%?dflt 0.00
+	/LimitLow	exch	def		%?brief untere Begrenzung	%?use INP	%?type REAL	%?dflt 0.00
+	/In	exch	def		%?brief Eingangsvariable 	%?use INP	%?type REAL	%?dflt 0.00
+	/Out	0.00	def		%?brief Begrenzter Ausgang		%?use OUT	%?type REAL	%?dflt 0.00
+
+	/Out In store
+	LimitLow LimitHigh le {
+		In LimitLow lt { /Out LimitLow store } if
+		In LimitHigh gt { /Out LimitHigh store } if
+	} if
+	Out
+%?manual_end
+} def
+%?partend
+
+%?partdef	FUB_TON
+%?fn	FUB_TON
+%?brief	TON -Funktionsbaustein (timer on)
+%?bbox 0 0 79 79
+/FUB_TON {
+%?manual_beg
+	/MEM_startTime exch def	%?brief time before rising signal					%?use STATIC	%?type REAL	%?dflt 0.00
+	/PT	exch	def		%?brief time delay in seconds							%?use INP	%?type REAL	%?dflt 1.00
+	/In	exch	def		%?brief input: In 										%?use INP	%?type BOOL	%?dflt false
+	/ET	0.00	def		%?brief elapsed time in seconds							%?use OUT	%?type REAL	%?dflt 0.00
+	/Q	false	def		%?brief output Q (time delayed input at rising signal)	%?use OUT	%?type BOOL	%?dflt false
+
+% Funktionsbeschreibung siehe IEC1131-3 B Standardfunktionsbausteine
+
+	/L_diffTime realtime_sec MEM_startTime sub def
+	In {
+		L_diffTime PT gt {
+			/ET PT store									% die bereits abgelaufenen Zeit auf die Vorgabezeit setzen
+			/Q true store
+		} {
+			/ET L_diffTime store									% die bereits abgelaufenen Zeit speichern
+		} ifelse
+	} {
+		/MEM_startTime realtime_sec store
+	} ifelse
+	
+	ET
+	Q
+	MEM_startTime
+%?manual_end
+} def
+%?partend
+
+%?partdef	FUB_TOF
+%?fn	FUB_TOF
+%?brief	TOF -Funktionsbaustein (timer off)
+%?bbox 0 0 79 79
+/FUB_TOF {
+%?manual_beg
+	/MEM_startTime exch def	%?brief time before falling signal					%?use STATIC	%?type REAL	%?dflt 0.00
+	/PT	exch	def		%?brief time delay in seconds							%?use INP	%?type REAL	%?dflt 1.00
+	/In	exch	def		%?brief input: In 										%?use INP	%?type BOOL	%?dflt false
+	/ET	0.00	def		%?brief elapsed time in seconds							%?use OUT	%?type REAL	%?dflt 0.00
+	/Q	false	def		%?brief output Q (time delayed input at falling signal)	%?use OUT	%?type BOOL	%?dflt false
+
+% Funktionsbeschreibung siehe IEC1131-3 B Standardfunktionsbausteine
+
+	/L_diffTime realtime_sec MEM_startTime sub def
+	In {
+		/MEM_startTime realtime_sec store
+		/Q true store
+	} {
+		L_diffTime PT le {
+			/ET L_diffTime store									% die bereits abgelaufenen Zeit speichern
+			/Q true store
+		} {
+			MEM_startTime 0 ne {							% vor der ersten Betätigung des TOF soll ET Null bleiben
+				/ET PT store								% die bereits abgelaufenen Zeit auf die Vorgabezeit setzen
+			} if
+		} ifelse
+	} ifelse
+
+	ET
+	Q
+	MEM_startTime
+%?manual_end
+} def
+%?partend
+
+%?partdef	FUB_TP
+%?fn	FUB_TP
+%?brief	TP -Funktionsbaustein (impulse)
+%?bbox 0 0 79 79
+/FUB_TP {
+%?manual_beg
+	/MEM_startTime exch def	%?brief time before falling signal					%?use STATIC	%?type REAL	%?dflt 0.00
+	/MEM_active exch def	%?brief TP activated								%?use STATIC	%?type BOOL	%?dflt false
+	/PT	exch	def		%?brief time delay in seconds							%?use INP	%?type REAL	%?dflt 1.00
+	/In	exch	def		%?brief input: In 										%?use INP	%?type BOOL	%?dflt false
+	/ET	0.00	def		%?brief elapsed time in seconds							%?use OUT	%?type REAL	%?dflt 0.00
+	/Q	false	def		%?brief output Q (time impulse)							%?use OUT	%?type BOOL	%?dflt false
+
+% Funktionsbeschreibung siehe IEC1131-3 B Standardfunktionsbausteine (Ausnahme: wird währen TP aktiv ist der In false wird und dann wieder true, so bleibt ET nach Deaktivierung von TP auch gleich PT solange In true ist)
+
+	/L_diffTime realtime_sec MEM_startTime sub def
+	In {										% In ist TRUE
+		L_diffTime PT le {								% Zeit läuft noch: aktuelle Zeit schreiben
+			/ET L_diffTime store
+			MEM_active not {									% TP nicht aktiv: TP setzen
+				/MEM_active true store
+			} if
+		} {												% Zeit läuft nicht mehr: TP zurücksetzen, aktuelle Zeit auf max Zeit setzen
+			/MEM_active false store
+			/ET PT store
+		} ifelse
+	} {											% In ist FALSE
+		L_diffTime PT le MEM_active and {				% TP aktiv und Zeit läuft noch: nichts ändern, aktuelle Zeit schreiben
+			/ET L_diffTime store						% die bereits abgelaufenen Zeit speichern
+		} if
+		L_diffTime PT gt MEM_active and {				% TP aktiv und Zeit ist abgelaufen: TP zurücksetzen, aktuelle Zeit nicht setzen (0 lassen)
+			/MEM_active false store
+		} if
+		MEM_active not {								% TP ist nicht aktiv: Zeit laden
+			/MEM_startTime realtime_sec store
+		} if
+	} ifelse
+
+	/Q MEM_active store
+	
+	ET
+	Q
+	MEM_startTime
+	MEM_active
+%?manual_end
+} def
+%?partend
+
+%?partdef	FUB_R_TRIG
+%?fn	FUB_R_TRIG
+%?brief	R_TRIG -Funktionsbaustein (rising trigger)
+%?bbox 0 0 79 79
+/FUB_R_TRIG {
+%?manual_beg
+	/MEM_active exch def	%?brief TP activated								%?use STATIC	%?type BOOL	%?dflt false
+	/In	exch	def		%?brief input: In 										%?use INP	%?type BOOL	%?dflt false
+	/Q	false	def		%?brief output: Q (pulse for one scan at rising input signal)	%?use OUT	%?type BOOL	%?dflt false
+
+% Funktionsbeschreibung siehe IEC1131-3 B Standardfunktionsbausteine
+
+	In MEM_active not and {
+		/Q true store
+		/MEM_active true store
+	} if
+	In MEM_active and {
+		/Q false store
+	} if
+	In not MEM_active and {
+		/MEM_active false store
+	} if
+
+	Q
+	MEM_active
+%?manual_end
+} def
+%?partend
+
+%?partdef	FUB_F_TRIG
+%?fn	FUB_F_TRIG
+%?brief	F_TRIG -Funktionsbaustein (falling trigger)
+%?bbox 0 0 79 79
+/FUB_F_TRIG {
+%?manual_beg
+	/MEM_active exch def	%?brief TP activated								%?use STATIC	%?type BOOL	%?dflt false
+	/In	exch	def		%?brief input: In 										%?use INP	%?type BOOL	%?dflt false
+	/Q	false	def		%?brief output: Q (pulse for one scan at falling input signal)	%?use OUT	%?type BOOL	%?dflt false
+
+% Funktionsbeschreibung siehe IEC1131-3 B Standardfunktionsbausteine
+
+	In MEM_active not and {
+		/MEM_active true store
+	} if
+	In not MEM_active and {
+		/Q true store
+		/MEM_active false store
+	} if
+
+	Q
+	MEM_active
+%?manual_end
+} def
+%?partend
+
+
+% ********************************************************************************************************************
+
+%?partdef	calc_lbs
+%?fn	calc_lbs
+%?brief	Einheitenumrechnung Gewicht: t -> lbs (Tonnen in Pounds)
+%?bbox 0 0 79 79
+/calc_lbs {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 2204.62 mul
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_kip
+%?fn	calc_kip
+%?brief	Einheitenumrechnung Gewicht: t -> klb (Tonnen in KiloPounds)
+%?bbox 0 0 79 79
+/calc_kip {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 2.20462 mul
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_tnsh
+%?fn	calc_tnsh
+%?brief	Einheitenumrechnung Gewicht: t -> shortton (Tonnen in Short Ton)
+%?bbox 0 0 79 79
+/calc_tnsh {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 1.10231 mul
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_F
+%?fn	calc_F
+%?brief	Einheitenumrechnung Temperatur: °C -> °F (Grad Celsius in Grad Fahrenheit)
+%?bbox 0 0 79 79
+/calc_F {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 1.8 mul 32 add
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_psi
+%?fn	calc_psi
+%?brief	Einheitenumrechnung Druck: bar -> psi (Tonnen in Pounds)
+%?bbox 0 0 79 79
+/calc_psi {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 1450.38 mul 100 div
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_kmh_mph
+%?fn	calc_kmh_mph
+%?brief	Einheitenumrechnung Geschwindigkeit: km/h -> mph (Kilometer pro Stunde in Mile per houre)
+%?bbox 0 0 79 79
+/calc_kmh_mph {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 62.14 mul 100 div
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_ms_mph
+%?fn	calc_ms_mph
+%?brief	Einheitenumrechnung Geschwindigkeit: m/s -> mph (Meter pro Sekunde in Mile per houre)
+%?bbox 0 0 79 79
+/calc_ms_mph {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 223.69 mul 100 div
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_ms_kn
+%?fn	calc_ms_kn
+%?brief	Einheitenumrechnung Geschwindigkeit: m/s -> kn (Meter pro Sekunde in knots (nautical mile (nmi) per houre))
+%?bbox 0 0 79 79
+/calc_ms_kn {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 194.39 mul 100 div
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_ftin
+%?fn	calc_ftin
+%?brief	Einheitenumrechnung Weg: m -> ft, in (',") (Meter in feet und inch)
+%?bbox 0 0 79 79
+/calc_ftin {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out1	0.0		def		%?brief Ausgabewert ganze inch	%?use OUT	%?type REAL	%?dflt 0.0
+	/Out2	0.0		def		%?brief Ausgabewert ganze feet	%?use OUT	%?type REAL	%?dflt 0.0
+
+	/LD_value 0 def
+
+	In 39.37 mul									% Umrechnung in inch
+	/LD_value exch store							% Inch speichern
+	% Numerischen Wert runden
+	LD_value cvi 0 eq {								% hier wird eine Division durch null verhindert: mod im else-Teil
+		LD_value cvi 0.5 ge { 1 }{ 0 } ifelse
+	}{
+		LD_value LD_value cvi mod 0.5 ge {
+			LD_value cvi 1 add
+		}{
+			LD_value cvi
+		} ifelse
+	} ifelse
+	/LD_value exch store							% Inch gerundet speichern
+		
+	% Numerischen Wert in feet und inch aufteilen
+	LD_value 12 div cvi								% ganze Feet ermitteln
+	/Out2 exch store								% Feet speichern
+	LD_value Out2 12 mul sub					% verbliebene Inch ermitteln
+	/Out1 exch store								% Inch speichern
+	
+	Out1
+	Out2
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_ft
+%?fn	calc_ft
+%?brief	Einheitenumrechnung Weg: m -> ft (Meter in foot)
+%?bbox 0 0 79 79
+/calc_ft {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 3.28083 mul
+%?manual_end
+} def
+%?partend
+
+%?partdef	calc_in
+%?fn	calc_in
+%?brief	Einheitenumrechnung Weg: m -> in (Meter in inch)
+%?bbox 0 0 79 79
+/calc_in {
+%?manual_beg
+	/In		exch	def		%?brief Eingangswert	%?use INP	%?type REAL	%?dflt 0.0
+	/Out	0.0		def		%?brief Ausgabewert		%?use OUT	%?type REAL	%?dflt 0.0
+
+	In 39.37 mul
+%?manual_end
+} def
+%?partend
+

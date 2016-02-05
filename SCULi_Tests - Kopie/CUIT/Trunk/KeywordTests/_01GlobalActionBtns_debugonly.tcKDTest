@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="9.0">
+	<TestData Description="" Key="{B00C41D3-CF52-4EDA-BC97-CB11C0BC9885}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps>
+					<Bitmap Name="Aliases.Sculi" Data="61717A697000000001000000360400007801CD914D48545118869F3B160E8535240EB5CB4512B588161991444845106D5C549B102217194644E1420809C11B5283395A8DCD143156642EAA4DA69099196856838A91BF133436380E3836453AF79EBEB94E8698D42A3AF09EF39D7BBEE7E53DF7E41FCC5D86357265DE2872A4A4B15E2A19A9F3B9CDDCAC94E27F50E6DEB3E457DCC65E74090E8B728A25E0F6BFCA5674DE4B2018262877718BB688B23F4579D2D5CB059707C786AD4BFAB0B38C82681C5D986E65D02B6B435C5115551CEF539C1E516C1B9EC4E1AE45DB9CB7C827AD2208AF1599E30972DE2B9C0FBEE2689821ABC5C0F9C6801BC3AC280F63EF51D09200BD0DF2CECDFB5058079727B0F9E4DC6D4259189A631050AC693749F70A5333233DB3502A7E8FA5AF71144E56FFF228B92FEC108C9AACF484D19AE268FDE2D524FD57A4DF23F24A5D6EB2FAD44B9C035FE0EED83C9F7C7FEA9FB27B5A71E0D1943093C2CBB756616AC5E77A4A574D96372648BFF30D2ABB17F2D79EB3ABCF401F91DE8B21D2DA256F40EA7B269A5BBC84B5542D6BA9DCA7A066016F657836856BC2E448CF34D445D0DE0A97945F989BE2E3973CBAD487FA17B149DEE61B22BB4B712BA6D8D33C8ECD1522A3F33B3B0615C70614EBDA84AD5268FBEB7FCB5B19FC1F59DB314B4944B1E9559C2CCF67F6BD8870B4C32043972CC59D4BB249DEF238F34EFEC120765F8C550FE52DDD2138F1010A5BFFC8FEF4F857EB0FD9B64B9F" />
+				</NodeBitmaps>
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="GlobalActionBtnClick" Unit="uScUtilities">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="aBtnName" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="New..." />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Enters %p1 in the &apos;%n&apos; object." Action="Keys">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="Keys" DefVarType="8" VarType="8" ValueType="6" ValueValue="[Esc]" />
+					</Parameters>
+					<ObjectSyntax LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}" Code="Aliases.Sculi.AddressBookForm.dataFieldPanel.dataBottomPanel.dataBottomButtonsPanel.CConnect" />
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="GlobalActionBtnClick" Unit="uScUtilities">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="aBtnName" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Open" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Enters &apos;[Esc]&apos;" DescriptionEdited="True" Action="Keys">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="Keys" DefVarType="8" VarType="8" ValueType="6" ValueValue="[Esc]" />
+					</Parameters>
+					<ObjectSyntax LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}" Code="Aliases.Sculi.dlgOpen.ComboBoxEx32.ComboBox.Edit" />
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="GlobalActionBtnClick" Unit="uScUtilities">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="aBtnName" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="MFinder" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="CloseContext" Unit="uScUtilities" />
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="GlobalActionBtnClick" Unit="uScUtilities">
+					<Parameters LangId="{9E432E59-33EF-4EAA-95C6-63FC35AF69EE}">
+						<Parameter Name="aBtnName" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="CodeGen" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="CloseContext" Unit="uScUtilities" />
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{9D6B829C-9EB7-4B1D-B7C0-2CE74F02A82A}" />
+	<Parameters Key="{2AA14A91-62AF-4B91-9619-4B325B165396}" />
+</Root>

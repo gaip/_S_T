@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="b">
+    <xsd:complexType mixed="true">
+      <xsd:group ref="inline" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:group name="block">
+    <xsd:choice>
+      <xsd:element ref="p"/>
+      <xsd:group ref="lists"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:element name="br">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:group name="special.pre">
+    <xsd:choice>
+      <xsd:element ref="br"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="fontstyle">
+    <xsd:choice>
+      <xsd:element ref="i"/>
+      <xsd:element ref="b"/>
+      <xsd:element ref="u"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:element name="i">
+    <xsd:complexType mixed="true">
+      <xsd:group ref="inline" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:group name="inline">
+    <xsd:choice>
+      <xsd:group ref="special"/>
+      <xsd:group ref="fontstyle"/>
+      <xsd:group ref="phrase"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:element name="li">
+    <xsd:complexType mixed="true">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:group ref="block"/>
+        <xsd:group ref="inline"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ol">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" ref="li"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:group name="phrase">
+    <xsd:choice>
+      <xsd:element ref="sub"/>
+      <xsd:element ref="sup"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="special">
+    <xsd:choice>
+      <xsd:group ref="special.pre"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:element name="sub">
+    <xsd:complexType mixed="true">
+      <xsd:group ref="inline" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="sup">
+    <xsd:complexType mixed="true">
+      <xsd:group ref="inline" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="u">
+    <xsd:complexType mixed="true">
+      <xsd:group ref="inline" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ul">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" ref="li"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:group name="lists">
+    <xsd:choice>
+      <xsd:element ref="ul"/>
+      <xsd:element ref="ol"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:element name="p">
+    <xsd:complexType mixed="true">
+      <xsd:group ref="inline" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

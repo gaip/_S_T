@@ -1,0 +1,6 @@
+engine speed in [rpm]
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:29
+date-time	engine speed in [rpm]	actual engine power [kW]	cooling water temperature of the engine in [°C]	charge air pressure in [bar]	charge air temperatur [°C]	air filter underpressure [mbar]	lub oil pressure of the engine in [bar]	engine fuel consumption [l/h]	pressure switch travelling gear	operation mode	hydraulic oil temperature upper maximum in [°C]
+	%MD1.4	%MD1.401	%MD1.2	%MD1.5	%MD1.335	%MD1.404	%MD1.3	%MD1.402	%IX1.77.37	%MD1.405	%MD1.53
+	MDpresenEngSpeed	%MD1.401	MDcoolWaterTemp	MDchargeAirPress	%MD1.335	%MD1.404	MDlubOilPressure	%MD1.402	IXswitTravelGear	%MD1.405	MDz6JoySignal

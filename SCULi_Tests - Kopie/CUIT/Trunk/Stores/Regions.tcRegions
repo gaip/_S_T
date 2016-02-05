@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child list">
+			<Node name="item0000000000">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEBack"/>
+					<Prp name="filename" type="S" value="Regions\MEBack.png"/>
+					<Prp name="id" type="S" value="{2F815724-20B8-4553-9914-C33E8A77F7D3}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="key" type="S" value="{2F815724-20B8-4553-9914-C33E8A77F7D3}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000001">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEDownloadError"/>
+					<Prp name="filename" type="S" value="Regions\MEDownloadError.png"/>
+					<Prp name="id" type="S" value="{28732443-38EE-4707-A109-6A51618DFCCC}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="1"/>
+				<Prp name="key" type="S" value="{28732443-38EE-4707-A109-6A51618DFCCC}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000002">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEHome"/>
+					<Prp name="filename" type="S" value="Regions\MEHome.png"/>
+					<Prp name="id" type="S" value="{EFACC238-F392-4231-BB2C-54993FBC944E}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="2"/>
+				<Prp name="key" type="S" value="{EFACC238-F392-4231-BB2C-54993FBC944E}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000003">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEMCCConsistent#2"/>
+					<Prp name="filename" type="S" value="Regions\MEMCCConsistent#2.png"/>
+					<Prp name="id" type="S" value="{C57E3B1A-F657-44E1-8FAC-8EF168A9040A}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="3"/>
+				<Prp name="key" type="S" value="{C57E3B1A-F657-44E1-8FAC-8EF168A9040A}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000004">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEEMTConsistent"/>
+					<Prp name="filename" type="S" value="Regions\MEEMTConsistent.png"/>
+					<Prp name="id" type="S" value="{512727D1-8C21-483F-B8A4-3A769B3851BD}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="4"/>
+				<Prp name="key" type="S" value="{512727D1-8C21-483F-B8A4-3A769B3851BD}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000005">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEEMTHome#2"/>
+					<Prp name="filename" type="S" value="Regions\MEEMTHome#2.png"/>
+					<Prp name="id" type="S" value="{7014FFC3-AE5F-410B-BD5F-59639DCFB2C8}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="5"/>
+				<Prp name="key" type="S" value="{7014FFC3-AE5F-410B-BD5F-59639DCFB2C8}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000006">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="WizardHome#2"/>
+					<Prp name="filename" type="S" value="Regions\WizardHome#2.png"/>
+					<Prp name="id" type="S" value="{71E7E6D4-9AD4-46EA-BD9E-03156E5152A8}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="6"/>
+				<Prp name="key" type="S" value="{71E7E6D4-9AD4-46EA-BD9E-03156E5152A8}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000007">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="ScottiHome"/>
+					<Prp name="filename" type="S" value="Regions\ScottiHome.png"/>
+					<Prp name="id" type="S" value="{579EFE38-04D2-48C2-9435-2A68A736305F}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="7"/>
+				<Prp name="key" type="S" value="{579EFE38-04D2-48C2-9435-2A68A736305F}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000008">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="WizardHome#3"/>
+					<Prp name="filename" type="S" value="Regions\WizardHome#3.png"/>
+					<Prp name="id" type="S" value="{A38A1075-B51E-449C-9F1A-02D26D9FC6A7}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="8"/>
+				<Prp name="key" type="S" value="{A38A1075-B51E-449C-9F1A-02D26D9FC6A7}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000009">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEMCCHome"/>
+					<Prp name="filename" type="S" value="Regions\MEMCCHome.old"/>
+					<Prp name="id" type="S" value="{EDD92949-858C-4B7F-B591-1D6451A8BF35}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="9"/>
+				<Prp name="key" type="S" value="{EDD92949-858C-4B7F-B591-1D6451A8BF35}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000010">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEMCCHome.old5"/>
+					<Prp name="filename" type="S" value="Regions\MEMCCHome.old5"/>
+					<Prp name="id" type="S" value="{42264003-A06B-48F4-BD2D-7731A64F5EBD}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="10"/>
+				<Prp name="key" type="S" value="{42264003-A06B-48F4-BD2D-7731A64F5EBD}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000011">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEMCCHome.old3"/>
+					<Prp name="filename" type="S" value="Regions\MEMCCHome.old3"/>
+					<Prp name="id" type="S" value="{51685863-4333-46A6-9005-32051F3ECCB4}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="11"/>
+				<Prp name="key" type="S" value="{51685863-4333-46A6-9005-32051F3ECCB4}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000012">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEMCCHome.old4"/>
+					<Prp name="filename" type="S" value="Regions\MEMCCHome.old4"/>
+					<Prp name="id" type="S" value="{3F2694D5-6E20-4D44-861B-C35FD1CDF19F}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="12"/>
+				<Prp name="key" type="S" value="{3F2694D5-6E20-4D44-861B-C35FD1CDF19F}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000013">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="WizardHome"/>
+					<Prp name="filename" type="S" value="Regions\WizardHome.png"/>
+					<Prp name="id" type="S" value="{3EE32A77-4C94-4E2C-B314-BA6C1F50FE59}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="13"/>
+				<Prp name="key" type="S" value="{3EE32A77-4C94-4E2C-B314-BA6C1F50FE59}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000014">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEEMTHome#3"/>
+					<Prp name="filename" type="S" value="Regions\MEEMTHome#3.png"/>
+					<Prp name="id" type="S" value="{85B825F4-E4F3-4F5C-9AA7-9E43F9AF20F0}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="14"/>
+				<Prp name="key" type="S" value="{85B825F4-E4F3-4F5C-9AA7-9E43F9AF20F0}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000015">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MEEMTHome"/>
+					<Prp name="filename" type="S" value="Regions\MEEMTHome.png"/>
+					<Prp name="id" type="S" value="{703316C5-3F44-4193-AEE3-C22D59AF8C98}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="15"/>
+				<Prp name="key" type="S" value="{703316C5-3F44-4193-AEE3-C22D59AF8C98}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000016">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="MESCEditHome"/>
+					<Prp name="filename" type="S" value="Regions\MESCEditHome.png"/>
+					<Prp name="id" type="S" value="{052E4C70-B8D7-499E-B3E4-79ADAD363BCE}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="16"/>
+				<Prp name="key" type="S" value="{052E4C70-B8D7-499E-B3E4-79ADAD363BCE}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+			<Node name="item0000000017">
+				<Node name="item data">
+					<Node name="settings"/>
+					<Prp name="caption" type="S" value="SCR"/>
+					<Prp name="filename" type="S" value="Regions\SCR.png"/>
+					<Prp name="id" type="S" value="{1390B423-FC30-44B1-8688-598D8CBC66DA}"/>
+					<Prp name="signature" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+					<Prp name="update" type="B" value="0"/>
+					<Prp name="version" type="S" value="9.0"/>
+				</Node>
+				<Prp name="index" type="I" value="17"/>
+				<Prp name="key" type="S" value="{1390B423-FC30-44B1-8688-598D8CBC66DA}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{1FD256C1-604C-48A1-9990-9A9329139EC4}"/>
+				<Prp name="typename" type="S" value="Region"/>
+			</Node>
+		</Node>
+		<Node name="folders">
+			<Node name="folders"/>
+		</Node>
+		<Node name="settings"/>
+		<Prp name="signature" type="S" value="{DA6D7EF7-5B05-4735-AAF0-A85E47D47989}"/>
+		<Prp name="version" type="S" value="9.0"/>
+	</Node>
+</Nodes>

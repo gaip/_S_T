@@ -1,0 +1,573 @@
+!version	00057
+#
+!font	UTF8
+!best-fit-font	iso8859-1
+
+# Language File / Sprachtexte File
+# Italian / Italienisch
+!language	ita
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Mandata trivella [l/min]
+2	Mandata trivella [g/min]
+3	Mandata tubo [l/min]
+4	Mandata tubo [g/min]
+5	Mandata [l/min]
+6	Mandata [g/min]
+7	N. pompe
+8	Pressione morsa [bar]
+9	Intervallo regolaz. eccentrico [s]
+10	Sospensione braccio principale
+11	Peso battipalo [kg]
+12	Peso battipalo [lb]
+13	Battute/passo di profondità
+14	N. cilindri Push & Pull
+15	Lunghezza trivella [cm]
+16	Lunghezza trivella [ft]
+17	Grafico PDE alla stampante
+18	Grafico PDE alla scheda
+19	Livello di profondità [cm]
+20	Livello di profondità [in]
+21	Tempo innesco PDE [s]
+22	Vol. calcestruzzo/impulso [l/imp.]
+23	Vol. calcestruzzo/impulso [g/imp.]
+24	Int. mis. sens. press. calc. [bar]
+25	Scala visual. press. calc. [bar]
+26	Diametro palo [cm]
+27	Diametro palo [in]
+28	Sezione trasversale palo [cm]
+29	Sezione trasversale palo [in]
+30	Diametro tubo interno [cm]
+31	Diametro tubo interno [in]
+32	Fattore di penetrazione [%]
+33	Passo trivella [cm]
+34	Passo trivella [in]
+35	Pressione avviam. com. auto. [bar]
+36	Pressione disatt. com. auto. [bar]
+37	Quant. calc. eccesso consen. [%]
+38	Regime eco
+39	Misuraz. vol. sotto press. (1=SI')
+40	Pressione max. com. auto. [bar]
+41	Pressione max. trivella [bar]
+42	Pressione max. tubo [bar]
+43	Pressione max. [bar]
+44	Mandata trivella 1 [l/min]
+45	Mandata trivella 1 [g/min]
+46	Mandata trivella 2 [l/min]
+47	Mandata trivella 2 [g/min]
+48	Mandata trivella 3 [l/min]
+49	Mandata trivella 3 [g/min]
+50	N. trivelle
+51	Mandata perf. verticale [l/min]
+52	Mandata perf. verticale [g/min]
+53	Mandata benna aperta [l/min]
+54	Mandata benna aperta [g/min]
+55	Mandata benna chiusa [l/min]
+56	Mandata benna chiusa [g/min]
+57	Pressione max. benna aperta [bar]
+58	Pressione max. benna chiusa [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	n. sezioni per palo
+62	peso specifico silo 1 [kg/dm³]
+63	peso specifico silo 1 [lb/ft³]
+64	peso specifico silo 2 [kg/dm³]
+65	peso specifico silo 2 [lb/ft³]
+66	Profondità [m]
+67	Profondità [ft]
+68	passo avanzamento [cm/r]
+69	passo avanzamento [in/r]
+70	peso legante [kg/m]
+71	peso legante [lb/ft]
+72	Mandata min. [%]
+73	torque limitation (1=YES)
+74	Mandata perf. verticale 2 [l/min]
+75	Mandata perf. verticale 2 [g/min]
+
+!LOGGER
+1	Data inizio
+2	Ora inizio
+3	Data fine
+4	Ora fine
+5	data di stampa
+6	ora di stampa
+
+!PDESERV
+# !! max. 40 Zeichen !!
+1	Tasto Start inizia registr.
+3	Tasto Stop termina registrazione
+4	Attendere prego - calcolo grafica
+5	Attendere prego - calcolo figura stampa
+6	Ulteriori punti
+7	Figura(e) memorizzata(e)
+8	Tasto '0' inizia stampa
+10	Nessuna configurazione PDE
+11	Ulteriori immiss. necess. per avviam.
+13	Stampante non ancora pronta!
+14	Errore PDE
+15	Premere un tasto
+16	Scheda di memoria non inserita
+17	Floppy non trovato
+18	Troppo poca mem libera su scheda mem
+19	Salvataggio non possibile
+20	Scheda memoria (stampante) non inserita
+21	Floppy (stampante) non trovato
+22	Troppo poca mem lib (scheda mem stamp)
+23	Salvataggio non possibile (dati stamp)
+24	Modalita
+25	Ancora poca memoria libera
+26	Ancora poca memoria libera (stampante)
+27	Registrazione dei PDE
+28	Tasto '.' interrompe, 'Stop' termina
+29	'Start' per continuare, 'Stop' termina
+30	Datalogger non pronto
+31	Spz mem non disp.sost.sch.dati
+32	Spz mem non disp.(sch. stampa)
+33	Inizializzazione PDE in corso...
+34	Avvio registrazione...
+35	Arresto registrazione...
+36	Invio dati in corso...
+37	Connessione interrotta...
+
+!PDE
+1	Modalità operativa
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Pagina
+4	Registr sollevamento
+5	Registr abbassamento
+6	Raggio palo [cm]
+7	Raggio palo [in]
+8	Stile
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Trivellazione Kelly
+200	Forat doppia testa
+300	Trivellazione CFA
+400	Vibratore
+401	abbassare
+402	sollevare
+403	abbassare/sollevare
+404	superiore al tempo
+411	Abbassare vibratore
+412	Sollevare vibratore
+413	Abbassare e sollevare vibratore
+414	Vibratore superiore al tempo
+500	Martello
+600	push&pull
+700	Benna idraulica
+800	Dispositivo di comando battitura
+900	Benna trascinata
+1000	Benna rovescia
+1100	Miscela suolo
+1200	vibratore elettrico
+1201	pala di costipamento (compattazione)
+1202	pala di costipamento
+1211	vib. el. pala di costip. e compattaz.
+1212	vib. el. pala di costip.
+1300	mescolatura a secco
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Ampiezza [in/100]
+7	Pressione calcestruzzo [bar]
+2	Ampiezza [mm]
+3	Profondità [cm]
+4	Profondità [ft]
+5	Numero di colpi
+6	Battute/livello di profondità
+8	Pressione trivellazione coclea [bar]
+9	Pressione trivellazione tubo [bar]
+10	Pressione trivellazione [bar]
+11	Pressione battipalo [bar]
+12	Pressione vibratore [bar]
+13	Avanzamento trivellazione [r/m]
+14	Avanzamento trivellazione [r/ft]
+15	Coppia torcente trivellazione [kip.ft]
+16	Coppia torcente trivellazione [kNm]
+17	Forza/battuta [kip.ft]
+18	Forza/battuta [kNm]
+19	Forza/livello di profondità [kip.ft]
+20	Forza/livello di profondità [kNm]
+21	Tempo [hh:mm:ss]
+22	Forza di pressione [kN]
+23	Forza di pressione [kip]
+24	Velocità di avanzamento [ft/min]
+25	Velocità di avanzamento [m/min]
+26	Frequenza [Hz]
+27	Battute/min
+28	Unità vibratore [ON/OFF]
+29	Scostamento X [ft]
+30	Scostamento X [cm]
+31	Scostamento Y [ft]
+32	Scostamento Y [cm]
+33	Numero battute
+34	Altezza di sollevamento [m]
+35	Altezza di sollevamento [ft]
+36	Compattamento/battuta [ft]
+37	Compattamento/battuta [m]
+38	Compattamento assoluto [ft]
+39	Compattamento assoluto [m]
+40	Altezza frenatura predefinita [ft]
+41	Altezza frenatura predefinita [m]
+42	Velocità max. verricello 1 [ft/min]
+43	Velocità max. verricello 1 [m/min]
+44	Velocità max. verricello 2 [ft/min]
+45	Velocità max. verricello 2 [m/min]
+46	Data [GG:MM:AA]
+47	Tempo di funzionamento [s]
+48	Quantità calcestruzzo [yd³]
+49	Quantità calcestruzzo [m³]
+50	Numero posizione
+51	Tempo battitura su fune [s]
+52	Tempo sollevamento [s]
+53	Tempo abbassamento [s]
+54	Battute predefinite
+55	Altezza di sollevamento predefinita [m]
+56	Altezza di sollevamento predefinita [ft]
+57	Compattamento predefinito [m]
+58	Compattamento predefinito [ft]
+59	Tempo modalità benna trascinata [s]
+60	Tempo ciclo [s]
+61	Carico materiale sfuso [t]
+62	Carico totale traino [t]
+63	Tempo modalità benna rovescia [s]
+64	Carico ciclo [t]
+65	Carico ciclo totale [t]
+66	Carico ciclo materiale sfuso [t]
+67	Corrente [A]
+68	Corrente abbassamento [A]
+69	Acqua fianchi [l/m]
+70	Acqua cuspide [l/m]
+71	Pressione atmosferica [bar]
+72	Attivazione automatica
+73	Tensione [V]
+74	Interruzione
+75	Inclinazione [°]
+76	Velocità di rotazione [r/min]
+77	Quantità calcestruzzo 1 [yd³]
+78	Quantità calcestruzzo 1 [m³]
+79	Quantità calcestruzzo 2 [yd³]
+80	Quantità calcestruzzo 2 [m³]
+81	Quantità calcestruzzo 3 [yd³]
+82	Quantità calcestruzzo 3 [m³]
+83	Rotazione 1 [r]
+84	Rotazione 2 [r]
+85	Rotazione 3 [r]
+86	Tempo [min]
+87	Quantità calcestruzzo [l/min]
+88	Quantità calcestruzzo [g/min]
+89	Pressione min. vibratore [bar]
+90	Pressione max. vibratore [bar]
+91	Velocità avanzamento min. [ft/min]
+92	Velocità avanzamento min. [m/min]
+93	Velocità avanzamento max. [ft/min]
+94	Velocità avanzamento max. [m/min]
+95	Pressione foratura max. 1 [bar]
+96	Pressione foratura max. 2 [bar]
+97	Pressione foratura max. 3 [bar]
+98	Progresso foratura min. 1 [r/m]
+99	Progresso foratura min. 1 [r/ft]
+100	Progresso foratura min. 2 [r/m]
+101	Progresso foratura min. 2 [r/ft]
+102	Progresso foratura min. 3 [r/m]
+103	Progresso foratura min. 3 [r/ft]
+104	Miscelatura min. [r]
+105	Miscelatura 1 [r]
+106	Miscelatura 2 [r]
+107	Vol calcestruzzo su prof. [l/m]
+108	Vol calcestruzzo su prof. [g/ft]
+109	Quantità calcestruzzo 1 [l/min]
+110	Quantità calcestruzzo 1 [g/min]
+111	Quantità calcestruzzo 2 [l/min]
+112	Quantità calcestruzzo 2 [g/min]
+113	Quantità calcestruzzo 3 [l/min]
+114	Quantità calcestruzzo 3 [g/min]
+115	Temperatura battip [°C]
+116	Temperatura battip [°F]
+117	Progresso foratura max. 1 [r/m]
+118	Progresso foratura max. 1 [r/ft]
+119	Progresso foratura max. 2 [r/m]
+120	Progresso foratura max. 2 [r/ft]
+121	Progresso foratura max. 3 [r/m]
+122	Progresso foratura max. 3 [r/ft]
+123	Miscelatura 3 [r]
+124	min. passo 1 [cm/r]
+125	min. passo 1 [in/r]
+126	min. passo 2 [cm/r]
+127	min. passo 2 [in/r]
+128	min. passo 3 [cm/r]
+129	min. passo 3 [in/r]
+130	portata legante [kg/min]
+131	portata legante [lb/min]
+132	portata legante 1 [kg/min]
+133	portata legante 1 [lb/min]
+134	portata legante 2 [kg/min]
+135	portata legante 2 [lb/min]
+136	portata legante 3 [kg/min]
+137	portata legante 3 [lb/min]
+138	peso legante 1 [kg]
+139	peso legante 1 [lb]
+140	peso legante 2 [kg]
+141	peso legante 2 [lb]
+142	peso legante 3 [kg]
+143	peso legante 3 [lb]
+144	peso legante per profondità [kg/m]
+145	peso legante per profondità [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Press vibr soll [bar]
+1	Ampiezza [in]
+2	Ampiezza [mm]
+3	Battute/%s ft
+4	Battute/%s mm
+5	Profondità [ft]
+6	Profondità [m]
+7	Compattamento [m]
+8	Scostamento X [cm]
+9	Scostamento X [in]
+10	Scostamento Y [cm]
+11	Scostamento Y [in]
+12	Press calcestr [bar]
+13	Press triv cocl [bar]
+14	Press triv tubo [bar]
+15	Press triv [bar]
+16	Press battipalo [bar]
+17	Press batt soll [bar]
+19	Press vibr abb [bar]
+20	Avanz triv [r/m]
+21	Avanz triv [r/ft]
+22	Cop tor triv [kip.ft]
+23	Cop tor triv [kNm]
+24	Forza [kip.ft]
+25	Forza [kNm]
+26	Forza/%s ft [kip.ft]
+27	Forza/%s mm [kNm]
+28	Forza press [kN]
+29	Forza press [kip]
+30	Vel avanz [ft/min]
+31	Vel avanz [m/min]
+32	Vel sollev [ft/min]
+33	Vel sollev [m/min]
+34	Vel abbass [ft/min]
+35	Vel abbass [m/min]
+36	Frequenza [Hz]
+37	Corrente [A]
+38	Corrente abb [A]
+39	Acqua fianchi [l/m]
+40	Acqua cuspide [l/m]
+41	Tempo [s]
+42	Tempo abb [s]
+43	Battuta [numero]
+44	Press vibratore [bar]
+45	Ampiezza [%]
+46	Press triv 1 [bar]
+47	Press triv.2 [bar]
+48	Press triv.3 [bar]
+49	Avanz triv.1 [r/m]
+50	Avanz triv.1 [r/ft]
+51	Avanz triv.2 [r/m]
+52	Avanz triv.2 [r/ft]
+53	Avanz triv.3 [r/m]
+54	Avanz triv.3 [r/ft]
+55	Press calce.1 [bar]
+56	Press calce.2 [bar]
+57	Press calce.3 [bar]
+58	Qu.calcest [l/m]
+59	Qu.calcest [g/ft]
+60	Qu.calcest1 [l/min]
+61	Qu.calcest1 [g/min]
+62	Qu.calcest2 [l/min]
+63	Qu.calcest2 [g/min]
+64	Qu.calcest3 [l/min]
+65	Qu.calcest3 [g/min]
+66	Miscelatura [r]
+67	VelRot1 [r/min]
+68	VelRot2 [r/min]
+69	VelRot3 [r/min]
+70	Corr battip [A]
+71	Penetrazione [cm/r]
+72	Penetrazione [in/r]
+73	passo 1 [cm/r]
+74	passo 1 [in/r]
+75	passo 2 [cm/r]
+76	passo 2 [in/r]
+77	passo 3 [cm/r]
+78	passo 3 [in/r]
+79	legante [kg/m]
+80	legante [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Cantiere
+2	Numero palo
+3	Tipo di palo(1calcestr.;2legno;3acciaio)
+4	Lunghezza palo [m]
+5	Superficie palo [cm²]
+6	Diametro palo [cm]
+7	Numero scanalatura
+8	Numero registrazione
+9	Numero conducente
+10	Numero ordine
+11	Punto di compattamento
+12	Numero di serie
+13	Numero apparecchio
+14	Diametro palo [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Livello di profondità [ft]
+2	Livello di profondità [mm]
+3	Profondità massima [cm]
+4	Profondità massima [ft]
+5	Battute totali
+6	Forza totale [kip.ft]
+7	Forza totale [kNm]
+8	Peso battipalo [lb]
+9	Peso battipalo [kg]
+10	Visualizzazione coppia torcente
+11	Unità US
+12	Unità US (kip)
+13	Punto di compattamento
+14	Verricello 1 attivato
+15	Verricello 2 attivato
+16	Quantità totale calcestruzzo [yd³]
+17	Quantità totale calcestruzzo [m³]
+18	Numero imp.(pompa calcestruzzo)
+19	Litro/imp.(pompa calcestruzzo)
+20	Battute predefinite
+21	Compattamento totale [m]
+22	Compattamento predefinito [m]
+23	Altezza di sollevamento predefinita [m]
+24	Altezza frenatura predefinita [m]
+25	Tempo totale [s]
+26	Tempo [s]
+27	Numero totale cicli
+28	Capacità di carico benna trascinata a vuoto [t]
+29	Somma materiale sfuso [t]
+30	Somma benna trascinata a pieno carico [t]
+31	Numero totale trigger
+32	Tara bozzello di sospensione [t]
+33	Somma carico ciclo [t]
+34	Somma totale carico ciclo [t]
+35	Somma carico ciclo materiale sfuso [t]
+36	Tempo procedura di abbassamento [s]
+37	Corrente max. procedura di abbassamento [A]
+38	Tempo totale ciclo [s]
+39	Corrente max. predefinita [A]
+40	Profondità criterio di trazione [m]
+41	Profondità criterio di trazione 1 [m]
+42	Profondità criterio di trazione 2 [m]
+43	Tempo max. 1 predefinito [s]
+44	Distanza max. 1 predefinita [m]
+45	Tempo max. 2 predefinito [s]
+46	Distanza max. 2 predefinita [m]
+47	Tempo max. 3 predefinito [s]
+48	Distanza max. 3 predefinita [m]
+49	Acqua totale fianchi [l]
+50	Acqua totale cuspide [l]
+51	Media pressione atmosferica [bar]
+52	Modalità benna
+53	Modalità martello
+54	Mod Push&Pull idr
+55	Mod trivellazione Kelly
+56	Modalità foratura a doppia testa
+57	Mod trivellazione CFA
+58	Modalità vibratore
+59	Unità vibratore
+60	(kip)
+61	(in / 100)
+62	OFF
+63	ON
+64	Quantità eccessiva [%]
+65	Volume calcestruzzo palo [yd³]
+66	Volume calcestruzzo palo [m³]
+67	gallons/imp.(pompa calcestruzzo)
+68	Profondità massima [m]
+69	N. trivelle
+70	Lunghezza trivella [cm]
+71	Lunghezza trivella [ft]
+72	gps posizione X [cm]
+73	gps posizione Y [cm]
+74	Consumo [kWh]
+75	Inclinazione inizio [°]
+76	Inclinazione fine [°]
+77	Lunghezza palo [cm]
+78	Lunghezza palo [ft]
+79	totale legante [kg]
+80	totale legante [lb]
+81	passo medio [mm/r]
+82	passo medio [in/r]
+83	press. perf. media [bar]
+84	veloc. rot. media [r/min]
+85	leg. medio [kg/m]
+86	leg. medio [lb/ft]
+87	flusso leg. medio [kg/min]
+88	flusso leg. medio [lb/min]
+89	silo 1 [kg]
+90	silo 1 [lb]
+91	silo 2 [kg]
+92	silo 2 [lb]
+93	altezza inserz. [cm]
+94	altezza inserz. [ft]
+95	empty core [cm]
+96	empty core [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Trivellazione Kelly
+200	Forat doppia testa
+300	Trivellazione CFA
+400	Vibratore
+401	abbassare
+402	sollevare
+403	abbassare/sollevare
+404	superiore al tempo
+411	Abbassare vibratore
+412	Sollevare vibratore
+413	Abbassare e sollevare vibratore
+414	Vibratore superiore al tempo
+500	Martello
+600	push&pull
+700	Benna idraulica
+800	Dispositivo di comando battitura
+900	Benna trascinata
+1000	Benna rovescia
+1100	Miscela suolo
+1200	vibratore elettrico
+1201	pala di costipamento (compattazione)
+1202	pala di costipamento
+1211	vib. el. pala di costip. e compattaz.
+1212	vib. el. pala di costip.
+1300	mescolatura a secco
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	Cantiere
+2	Numero palo
+3	Tipo di palo(1calcestr.;2legno;3acciaio)
+4	Lunghezza palo [m]
+5	Superficie palo [cm^2]
+6	Diametro palo [cm]
+7	Numero scanalatura
+8	Numero registrazione
+9	Numero conducente
+10	Numero ordine
+11	Punto di compattamento
+12	Numero di serie
+13	Numero apparecchio
+14	Diametro palo [in]

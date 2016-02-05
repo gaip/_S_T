@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Latvian / Lettisch
+%?language	lav
+
+%section: SCREEN
+/TSoilFlowAuger	(Daudzums gliemezim) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Daudzums gliemezim)
+/TSoilFlowCase	(Daudzums caurulei) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Daudzums caurulei)
+/TSoilFlow	(Daudzums) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Daudzums)
+/TSnumbOfPumps	(Sūkņu skaits) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Sūkņu skaits)
+/TSclampJawPress	(Spaiļu stangu spiediens) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Spaiļu stangu spiediens)
+/TSexcAutoTime	(Ekscentru pārstatīšanas laiks) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Ekscentru pārstatīšanas laiks)
+/TSramWeight	(Pāļu dz.svars) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Pāļu dz.svars)
+/TSblowsPerDepthStep	(Veseris / dziļuma solis) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Veseris / dziļuma solis)
+/TSnumbPuPuCylinder	(Push &amp; Pull cilindra skaits) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Push &amp; Pull cilindra skaits)
+/TSaugerLength	(Gliemeža garums) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Gliemeža garums)
+/TSconcVolPerImp	(Betona daudzums / imp.) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Betona daudzums / imp.)
+/TSscalConcPresSens	(Bet. sp. sens. mērdiapazons) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Bet. sp. sens. mērdiapazons)
+/TSscalConcPresDisp	(Betona sp. rād. skalas dal.) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Betona sp. rād. skalas dal.)
+/TSpileDiameter	(Pāļa diametrs) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Pāļa diametrs)
+/TSmaxPressAuger	(Gliemeža maks. spied.) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Gliemeža maks. spied.)
+/TSmaxPressCase	(Caurules maks. spied.) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Caurules maks. spied.)
+/TSmaxPressure	(Maks. spied.) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Maks. spied.)
+/TSoilFlowAuger1	(Daudzums gliemezim 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Daudzums gliemezim 1)
+/TSoilFlowAuger2	(Daudzums gliemezim 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Daudzums gliemezim 2)
+/TSoilFlowAuger3	(Daudzums gliemezim 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Daudzums gliemezim 3)
+/TSnumbOfAugers	(Gliemežpārvadu skaits) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Gliemežpārvadu skaits)
+/TSoilFlowOscil	(Daudzums caurulēm) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Daudzums caurulēm)
+/TSoilFlowGrabOpen	(Caurpl. atvērt greiferi) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Caurpl. atvērt greiferi)
+/TSoilFlowGrabClose	(Caurpl. aizvērt greiferi) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Caurpl. aizvērt greiferi)
+/TSmaxPressGrabOpen	(Maks. spied. atvērt greiferi) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Maks. spied. atvērt greiferi)
+/TSmaxPressGrabClose	(Maks. spied. aizvērt greif.) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Maks. spied. aizvērt greif.)
+/TSminOilFlow	(min. daudzums) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. daudzums)
+/TSoilFlowOscil2	(Daudzums caurulēm 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Daudzums caurulēm 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

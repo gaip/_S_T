@@ -1,0 +1,3363 @@
+%?class llusrpar
+%?version 00005
+
+%?library lllng
+(lllng.ps) run
+%?library llgensym
+(llgensym.ps) run
+%?library llbasic
+(llbasic.ps) run
+%?library llspesym
+(llspesym.ps) run
+%?library llspepar
+(llspepar.ps) run
+
+
+%?partdef upMain001
+%?fn	upMain001
+%?brief	Anzeige gesamte Maschine für Kranbetrieb incl. LMB Daten usw.
+%?bbox	0 -80 559 399
+/upMain001 {
+	/irMachineType exch def	%?brief machine superstructure type %?use INP %?type REAL %?dflt    1.00
+	/ixMainBoomPresel exch def	%?brief main boom is preselected %?use INP %?type BOOL %?dflt true
+	/ixMaBoRedPresel exch def	%?brief main boom with reduction is preselected %?use INP %?type BOOL %?dflt false
+	/ixFixedJibPresel exch def	%?brief fixed jib is preselected %?use INP %?type BOOL %?dflt false
+	/ixLuffJibPresel exch def	%?brief luffing jib is preselected %?use INP %?type BOOL %?dflt false
+	/ixLoadLocMainMidWithJib exch def	%?brief load location main boom with jib mounted or midfall %?use INP %?type BOOL %?dflt false
+	/ixMidfallPresel exch def	%?brief midfall is preselected %?use INP %?type BOOL %?dflt false
+	/ixDerrickPresel exch def	%?brief derrick is preselected %?use INP %?type BOOL %?dflt false
+	/ixCouCarPresel exch def	%?brief counterweight carrier is preselected %?use INP %?type BOOL %?dflt false
+	/ixOkAnglePivPi exch def	%?brief angle sensor pivot piece OK %?use INP %?type BOOL %?dflt false
+	/ixOkGeometrical exch def	%?brief lml geometrical OK %?use INP %?type BOOL %?dflt false
+	/ixOkCalculation exch def	%?brief lml calculation OK %?use INP %?type BOOL %?dflt false
+	/ixOkCalcDerr exch def	%?brief lml calculation OK derrick %?use INP %?type BOOL %?dflt false
+	/ixLmlWarn exch def	%?brief lml warning symbol %?use INP %?type BOOL %?dflt false
+	/ixLmlStop exch def	%?brief lml stop symbol %?use INP %?type BOOL %?dflt false
+	/irUtilization exch def	%?brief lml utilization %?use INP %?type REAL %?dflt    0.00
+	/irUtilizationBack exch def	%?brief lml utilization backwards %?use INP %?type REAL %?dflt    0.00
+	/irActualLoad exch def	%?brief actual load %?use INP %?type REAL %?dflt    0.00
+	/irMaxLoad exch def	%?brief maximum load %?use INP %?type REAL %?dflt    0.00
+	/irActJibLoadAtOLL exch def	%?brief actual jib load at other load location %?use INP %?type REAL %?dflt    0.00
+	/irLoadRadiusAct exch def	%?brief actual load radius %?use INP %?type REAL %?dflt    0.00
+	/irHeadHightAct exch def	%?brief actual upper head hight %?use INP %?type REAL %?dflt    0.00
+	/irBoomAngle exch def	%?brief boom angle %?use INP %?type REAL %?dflt    0.00
+	/irJibAngle exch def	%?brief jib angle %?use INP %?type REAL %?dflt    0.00
+	/irCouCarLoad exch def	%?brief counterweight carrier actual load %?use INP %?type REAL %?dflt    0.00
+	/irCouCarRadius exch def	%?brief counterweight carrier load radius %?use INP %?type REAL %?dflt    0.00
+	/qxTaraActLoad false def	%?brief aktuelle Lastanzeige tarieren %?use OUT %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	70 130 translate 
+	0 rotate 
+	2 1 scale 
+	baTouchButton007 {	
+		/qxTaraActLoad true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 -70 translate 
+	0 rotate 
+	1 1 scale 
+	ixCouCarPresel ixDerrickPresel false 
+	ixLuffJibPresel false 
+	ixFixedJibPresel ixMainBoomPresel ixMaBoRedPresel 0 
+	irMachineType 
+	spMachine001 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	
+	ixLuffJibPresel ixFixedJibPresel or 
+	ixLoadLocMainMidWithJib not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		86 342 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart011 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	ixLuffJibPresel ixFixedJibPresel or 
+	ixLoadLocMainMidWithJib and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		86 342 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart012 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixMainBoomPresel true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		156 322 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart011 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixFixedJibPresel ixLoadLocMainMidWithJib and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		236 250 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart011 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixMidfallPresel ixLoadLocMainMidWithJib not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		187 305 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart012 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixMidfallPresel ixLoadLocMainMidWithJib and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		187 305 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart011 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	ixLoadLocMainMidWithJib ixLuffJibPresel and 
+	ixMidfallPresel not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		285 269 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart011 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	ixLoadLocMainMidWithJib ixLuffJibPresel and 
+	ixOkCalculation and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		134 278 translate 
+		0 rotate 
+		1 1 scale 
+		irActJibLoadAtOLL 2.10 false false 4 1 0.80 
+		baValueLoad001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		159 143 translate 
+		0 rotate 
+		1 1 scale 
+		irActualLoad 3.10 false false 8 1 0.80 
+		baValueLoad001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixLuffJibPresel true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		289 300 translate 
+		0 rotate 
+		1 1 scale 
+		irJibAngle 2 (Â°) false false 
+		FSmidFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkAnglePivPi ixLuffJibPresel not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		341 107 translate 
+		0 rotate 
+		1 1 scale 
+		irBoomAngle 2 (Â°) false false 
+		FSmidFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixLuffJibPresel ixDerrickPresel not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		375 90 translate 
+		0 rotate 
+		1 1 scale 
+		irBoomAngle 2 (Â°) false false 
+		FSmidFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixLuffJibPresel ixDerrickPresel and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 225 translate 
+		0 rotate 
+		1 1 scale 
+		irBoomAngle 2 (Â°) false false 
+		FSmidFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkGeometrical true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		260 10 translate 
+		0 rotate 
+		1 1 scale 
+		irLoadRadiusAct 3.20 false false 4 1 
+		baValueDist001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	ixLuffJibPresel not 
+	ixFixedJibPresel not and 
+	ixOkGeometrical and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		172 337 translate 
+		0 rotate 
+		1 1 scale 
+		irHeadHightAct 3 false false 
+		FSstdFont 1 
+		baValueDist001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	ixLuffJibPresel ixFixedJibPresel or 
+	ixOkGeometrical and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		99 358 translate 
+		0 rotate 
+		1 1 scale 
+		irHeadHightAct 3 false false 
+		FSstdFont 1 
+		baValueDist001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation ixDerrickPresel not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		455 5 translate 
+		0 rotate 
+		1 1 scale 
+		irUtilization (%) 0 125 false true true false 
+		ixLmlWarn ixLmlStop 125 125 0 0 5 20 270 true true 0 false 0 
+		FSstdFont false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation ixDerrickPresel and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		330 -75 translate 
+		90 rotate 
+		1 1 scale 
+		irUtilization (%) 0 125 false true true false 
+		ixLmlWarn ixLmlStop 125 125 0 0 5 15 250 true true -90 true 0 
+		FSstdFont false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation ixDerrickPresel and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		310 5 translate 
+		-90 rotate 
+		1 1 scale 
+		irUtilizationBack (%) 0 125 false true true false 
+		ixLmlWarn ixLmlStop 125 125 0 0 5 15 200 true true 90 false 0 
+		FSstdFont false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 350 5 moveto 
+	190 5 lineto 
+	stroke 
+	190 5 moveto 
+	202 8 lineto 
+	stroke 
+	190 5 moveto 
+	202 2 lineto 
+	stroke 
+	ixOkCalculation true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		174 114 translate 
+		0 rotate 
+		1 1 scale 
+		irMaxLoad 3.10 false false 4 1 0.80 
+		baValueLoad001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		197 105 translate 
+		0 rotate 
+		1 1 scale 
+		(max) 
+		FSmidFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixDerrickPresel true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		505 40 translate 
+		0 rotate 
+		1 1 scale 
+		irCouCarLoad 3.10 false false 
+		FSbigFont 1 1 
+		baValueLoad001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixCouCarPresel true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		485 10 translate 
+		0 rotate 
+		1 1 scale 
+		irCouCarRadius 2.10 false false 
+		FSmidFont 1 
+		baValueDist001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation ixDerrickPresel not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		435 170 translate 
+		0 rotate 
+		1 1.10 scale 
+		ssLml004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation ixDerrickPresel and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		436 18 translate 
+		-90 rotate 
+		0.75 0.80 scale 
+		ssLml004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation ixDerrickPresel and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		175 18 translate 
+		-90 rotate 
+		0.75 -1 scale 
+		ssLml004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qxTaraActLoad 
+} def
+%?partend
+
+%?partdef upMain002
+%?fn	upMain002
+%?brief	Anzeige gesamte Maschine für Anbaugerät im Seil hängend
+%?bbox	0 0 399 399
+/upMain002 {
+	/irMachineType exch def	%?brief machine superstructure type %?use INP %?type REAL %?dflt    1.00
+	/irCurrentMode exch def	%?brief current operation mode %?use INP %?type REAL %?dflt    0.00
+	/ixGrabHoseAct exch def	%?brief grab hose reel active %?use INP %?type BOOL %?dflt false
+	/ixOkAnglePivPi exch def	%?brief angle sensor pivot piece OK %?use INP %?type BOOL %?dflt false
+	/ixOkGeometrical exch def	%?brief lml geometrical OK %?use INP %?type BOOL %?dflt false
+	/ixOkCalculation exch def	%?brief lml calculation OK %?use INP %?type BOOL %?dflt false
+	/ixLmlWarn exch def	%?brief lml warning symbol %?use INP %?type BOOL %?dflt false
+	/ixLmlStop exch def	%?brief lml stop symbol %?use INP %?type BOOL %?dflt false
+	/irUtilization exch def	%?brief lml utilization %?use INP %?type REAL %?dflt    0.00
+	/irActualLoad exch def	%?brief actual load %?use INP %?type REAL %?dflt    0.00
+	/irMaxLoad exch def	%?brief maximum load %?use INP %?type REAL %?dflt    0.00
+	/irLoadRadiusAct exch def	%?brief actual load radius %?use INP %?type REAL %?dflt    0.00
+	/irHeadHightAct exch def	%?brief actual upper head hight %?use INP %?type REAL %?dflt    0.00
+	/irBoomAngle exch def	%?brief boom angle %?use INP %?type REAL %?dflt    0.00
+	/qxTaraActLoad false def	%?brief aktuelle Lastanzeige Tarieren %?use OUT %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	135 215 translate 
+	0 rotate 
+	2 1 scale 
+	baTouchButton007 {	
+		/qxTaraActLoad true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 10 translate 
+	0 rotate 
+	1 1 scale 
+	false false 
+	irMachineType 
+	spMachine003 
+	setcolor 
+	setmatrix_nlw 
+	ixOkCalculation true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		225 263 translate 
+		0 rotate 
+		1 1 scale 
+		irActualLoad 3.10 false false 8 1 1 
+		baValueLoad001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	irCurrentMode 2 ne 
+	irCurrentMode 13 ne and 
+	ixOkAnglePivPi and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		274 85 translate 
+		0 rotate 
+		1 1 scale 
+		irBoomAngle 2 (Â°) false false 
+		FSmidFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	irCurrentMode 2 eq 
+	irCurrentMode 13 eq or 
+	ixOkAnglePivPi and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		323 142 translate 
+		0 rotate 
+		1 1 scale 
+		irBoomAngle 2 (Â°) false false 
+		FSbigFatFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	ixOkGeometrical irCurrentMode 13 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		182 10 translate 
+		0 rotate 
+		1 1 scale 
+		irLoadRadiusAct 3.20 false false 4 1 
+		baValueDist001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	ixOkGeometrical irCurrentMode 13 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 330 translate 
+		0 rotate 
+		1 1 scale 
+		irHeadHightAct 3 false false 1 1 
+		baValueDist001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 5 translate 
+		0 rotate 
+		1 1 scale 
+		irUtilization (%) 0 125 false true true false 
+		ixLmlWarn ixLmlStop 125 125 0 0 5 20 270 true true 0 false 0 
+		FSstdFont false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixGrabHoseAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		200 120 translate 
+		0 rotate 
+		1 1 scale 
+		ssEquipment017 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irCurrentMode 13 ne {	
+		275 5 moveto 
+		115 5 lineto 
+		stroke 
+		115 5 moveto 
+		127 8 lineto 
+		stroke 
+		115 5 moveto 
+		127 2 lineto 
+		stroke 
+	} if 
+	ixOkCalculation true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		238 235 translate 
+		0 rotate 
+		1 1 scale 
+		irMaxLoad 3.10 false false 4 1 0.80 
+		baValueLoad001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkCalculation true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		262 224 translate 
+		0 rotate 
+		1 1 scale 
+		(max) 
+		FSmidFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qxTaraActLoad 
+} def
+%?partend
+
+%?partdef upMain003
+%?fn	upMain003
+%?brief	Anzeige gesamte Maschine mit Mäkler
+%?bbox	0 0 399 399
+/upMain003 {
+	/irMachineType exch def	%?brief machine superstructure type %?use INP %?type REAL %?dflt    1.00
+	/ixOkAnglePivPi exch def	%?brief angle sensor pivot piece OK %?use INP %?type BOOL %?dflt false
+	/ixOkGeometrical exch def	%?brief lml geometrical OK %?use INP %?type BOOL %?dflt false
+	/irHeadHightAct exch def	%?brief actual upper head hight %?use INP %?type REAL %?dflt    0.00
+	/irBoomAngle exch def	%?brief boom angle %?use INP %?type REAL %?dflt    0.00
+	/irLeaderPosY_2 exch def	%?brief vorgegebene Mäklerneigung Y %?use INP %?type REAL %?dflt    0.00
+	/irLeaderPosX_2 exch def	%?brief vorgegebene Mäklerneigung X %?use INP %?type REAL %?dflt    0.00
+	/irLeaderPosAbs_1 exch def	%?brief aktuelle Mäklerneigung absolut %?use INP %?type REAL %?dflt    0.00
+	/irLeaderPosY_1 exch def	%?brief aktuelle Mäklerneigung Y %?use INP %?type REAL %?dflt    0.00
+	/irLeaderPosX_1 exch def	%?brief aktuelle Mäklerneigung X %?use INP %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-40 0 translate 
+	0 rotate 
+	1 1 scale 
+	false true 
+	irMachineType 
+	spMachine003 
+	setcolor 
+	setmatrix_nlw 
+	ixOkAnglePivPi true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		260 63 translate 
+		0 rotate 
+		1 1 scale 
+		irBoomAngle 2 (Â°) false false 
+		FSfatFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixOkGeometrical true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		140 320 translate 
+		0 rotate 
+		1 1 scale 
+		irHeadHightAct 3 false false 1 1 
+		baValueDist001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	75 330 translate 
+	0 rotate 
+	1 1 scale 
+	ssEquipment016 
+	setcolor 
+	setmatrix_nlw 
+	20 0 moveto 
+	203 0 lineto 
+	stroke 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 160 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	irLeaderPosX_1 irLeaderPosY_1 irLeaderPosAbs_1 
+	irLeaderPosX_2 irLeaderPosY_2 5 15 -5 -15 true 
+	spInclinat002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 145 translate 
+	0 rotate 
+	1 1 scale 
+	irLeaderPosY_1 2.10 (Â°) false false 
+	FSstdFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	242 275 translate 
+	0 rotate 
+	1 1 scale 
+	irLeaderPosX_1 2.10 (Â°) false false 
+	FSstdFont 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef upEquipment001
+%?fn	upEquipment001
+%?brief	Anzeige Anbaugeräte
+%?bbox	0 0 479 399
+/upEquipment001 {
+	/irInclinationAbs exch def	%?brief Neigungsanzeige absolut %?use INP %?type REAL %?dflt    0.00
+	/irInclinationY exch def	%?brief Neigungsanzeige Y %?use INP %?type REAL %?dflt    0.00
+	/irInclinationX exch def	%?brief Neigungsanzeige X %?use INP %?type REAL %?dflt    0.00
+	/irGrabOpen exch def	%?brief grab open position [ %?use INP %?type REAL %?dflt  100.00
+	/irGrabType exch def	%?brief grab type: 1=Schlitzwand, 2=Zweischalen, 3=Poly, 4=Brunnen, 5=Kellygreifer, 11=Betonbeisser %?use INP %?type REAL %?dflt    0.00
+	/ixDdFastSpeed exch def	%?brief drilling drive fast speed %?use INP %?type BOOL %?dflt false
+	/irDdRotation exch def	%?brief drilling drive rotation speed %?use INP %?type REAL %?dflt    0.00
+	/irVibAmpHamEner exch def	%?brief vibrator amplitude / hammer energy %?use INP %?type REAL %?dflt    0.00
+	/irVibHamFreq exch def	%?brief vibrator frequency [Hz] / hammer beats per minute %?use INP %?type REAL %?dflt    0.00
+	/ixVibHamMeasAct exch def	%?brief vibrator /hammer measuring active %?use INP %?type BOOL %?dflt false
+	/irPressure2 exch def	%?brief pressure 2 %?use INP %?type REAL %?dflt    0.00
+	/ixPress2Active exch def	%?brief pressure bar 2 activated %?use INP %?type BOOL %?dflt false
+	/irPressure1 exch def	%?brief pressure 1 %?use INP %?type REAL %?dflt    0.00
+	/idCurrMode exch def	%?brief current Mode %?use INP %?type DINT %?dflt 1
+	/LRpsiPress1 0 def	%?brief pressure 1 in psi %?use LOC %?type REAL %?dflt    0.00
+	/LRpsiPress2 0 def	%?brief pressure 2 in psi %?use LOC %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	irPressure1 
+	calc_psi 
+	/LRpsiPress1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	irPressure2 
+	calc_psi 
+	/LRpsiPress2 exch store 
+	setcolor 
+	setmatrix_nlw 
+	idCurrMode 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 240 translate 
+		0 rotate 
+		1 1 scale 
+		irVibHamFreq irVibAmpHamEner ixVibHamMeasAct 
+		spEquipment001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idCurrMode 4 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 240 translate 
+		0 rotate 
+		1 1 scale 
+		irVibHamFreq irVibAmpHamEner ixVibHamMeasAct 
+		spEquipment002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idCurrMode 11 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 230 translate 
+		0 rotate 
+		1 1 scale 
+		irDdRotation ixDdFastSpeed 
+		spEquipment003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	idCurrMode 5 ge 
+	idCurrMode 10 le and 
+	irGrabType 10 le and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 240 translate 
+		0 rotate 
+		1 1 scale 
+		irGrabOpen irGrabType false 
+		spEquipment004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	idCurrMode 5 eq 
+	irGrabType 11 eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 240 translate 
+		0 rotate 
+		1 1 scale 
+		irGrabOpen false 
+		spEquipment005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitPress false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 140 translate 
+		90 rotate 
+		1 1 scale 
+		irPressure1 (bar) 0 400 false false true false false false 380 400 20 10 4 15 280 true true -90 true 0 
+		FSstdFont false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	idCurrMode 4 ne 
+	ixPress2Active and 
+	MXchangeUnitPress not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 60 translate 
+		90 rotate 
+		1 1 scale 
+		irPressure2 (bar) 0 400 false false true false false false 380 400 20 10 4 15 280 true true -90 true 0 
+		FSstdFont false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitPress true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 140 translate 
+		90 rotate 
+		1 1 scale 
+		LRpsiPress1 (psi) 0 6000 false false true false false false 380 400 20 10 6 15 280 true true -90 true 0 
+		FSstdFont false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	idCurrMode 4 ne 
+	ixPress2Active and 
+	MXchangeUnitPress and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 60 translate 
+		90 rotate 
+		1 1 scale 
+		LRpsiPress2 (psi) 0 6000 false false true false false false 380 400 20 10 6 15 280 true true -90 true 0 
+		FSstdFont false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idCurrMode 6 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 240 translate 
+		0 rotate 
+		1 1 scale 
+		irInclinationX irInclinationY irInclinationAbs true 3 
+		spInclinat003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+%?partdef upMain101
+%?fn	upMain101
+%?brief	Anzeige für LB, gesamte Maschine ohne Betriebsart
+%?bbox	0 0 319 559
+/upMain101 {
+	/ixZ4LimitOut exch def	%?brief maximale Ausladung Z4 %?use INP %?type BOOL %?dflt false
+	/ixCsSlowMotion exch def	%?brief Vorschub langsam %?use INP %?type BOOL %?dflt false
+	/ixKellyOverload exch def	%?brief Überlast Kellywinde %?use INP %?type BOOL %?dflt false
+	/ixAuxOverload exch def	%?brief Überlast Hilfswinde %?use INP %?type BOOL %?dflt false
+	/ixCsOverload exch def	%?brief Überlast Vorschubsystem %?use INP %?type BOOL %?dflt false
+	/ixAuxLoadActive exch def	%?brief load measuring auxillary winch active %?use INP %?type BOOL %?dflt false
+	/ixKellyLoadActive exch def	%?brief load measuring kelly winch active %?use INP %?type BOOL %?dflt false
+	/ixCsLower exch def	%?brief Vorschubsystem senken %?use INP %?type BOOL %?dflt false
+	/ixCsLift exch def	%?brief Vorschubsystem heben %?use INP %?type BOOL %?dflt false
+	/ixCsPdeHightAct exch def	%?brief PDE Vorschubsystemhöhe aktiv %?use INP %?type BOOL %?dflt false
+	/ixCsRopeLengAct exch def	%?brief Vorschubseillängenmessung aktiv %?use INP %?type BOOL %?dflt false
+	/ixKellyLower exch def	%?brief Kellywinde senken %?use INP %?type BOOL %?dflt false
+	/ixKellyLift exch def	%?brief Kellywinde heben %?use INP %?type BOOL %?dflt false
+	/ixKellyPdeHightAct exch def	%?brief PDE Seillänge Kellywinde aktiv %?use INP %?type BOOL %?dflt false
+	/ixKellyRopeLengAct exch def	%?brief Kellyseillängenmessung aktiv %?use INP %?type BOOL %?dflt false
+	/idKellyScaleNumb exch def	%?brief Anzahl der Skalierungsfelder Kellywinde %?use INP %?type DINT %?dflt 1
+	/idAuxScaleNumb exch def	%?brief Anzahl der Skalierungsfelder Hilfswinde %?use INP %?type DINT %?dflt 1
+	/irKellyMaxLoad exch def	%?brief maximal Last Kellywinde %?use INP %?type REAL %?dflt    1.00
+	/irAuxMaxLoad exch def	%?brief maximal Last Hilfswinde %?use INP %?type REAL %?dflt    1.00
+	/irCsMaxLoadNeg exch def	%?brief maximales Anpressen Vorschubsystem %?use INP %?type REAL %?dflt   -1.00
+	/irCsMaxLoad exch def	%?brief maximale Last Vorschubsystem %?use INP %?type REAL %?dflt    1.00
+	/irCsLoad exch def	%?brief Last Vorschubsystem %?use INP %?type REAL %?dflt    0.00
+	/irLeaderAngle exch def	%?brief Y angle of the leader [°] %?use INP %?type REAL %?dflt    0.00
+	/irAuxLoad exch def	%?brief load auxillary winch %?use INP %?type REAL %?dflt    0.00
+	/irKellyLoad exch def	%?brief load kelly winch %?use INP %?type REAL %?dflt    0.00
+	/irCsSpeed exch def	%?brief Vorschubsystemgeschwindigkeit %?use INP %?type REAL %?dflt    0.00
+	/irCsHight exch def	%?brief Vorschubsystemhöhe %?use INP %?type REAL %?dflt    0.00
+	/irCsPdeHight exch def	%?brief PDE Vorschubsystemhöhe %?use INP %?type REAL %?dflt    0.00
+	/irKellySpeed exch def	%?brief Seilgeschwindigkeit Kellywinde %?use INP %?type REAL %?dflt    0.00
+	/irKellyRopeLength exch def	%?brief Seillänge Kellywinde %?use INP %?type REAL %?dflt    0.00
+	/irKellyPdeRopeLen exch def	%?brief PDE Seillänge Kellywinde %?use INP %?type REAL %?dflt    0.00
+	/LRcsScaleValue 0 def	%?brief crowdsystem scale value (max/2) %?use LOC %?type REAL %?dflt    0.00
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	irCsMaxLoad 2 
+	FUN_DIV 
+	/LRcsScaleValue exch store 
+	setcolor 
+	setmatrix_nlw 
+
+	80 80 moveto 
+	320 80 lineto 
+	stroke 
+	ixCsRopeLengAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		149 475 translate 
+		0 rotate 
+		1 1 scale 
+		irCsPdeHight irCsHight irCsSpeed 
+		ixCsPdeHightAct ixCsLift ixCsLower 
+		spWinch004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	1 80 translate 
+	0 rotate 
+	1 1 scale 
+	irLeaderAngle 0 
+	ixAuxLoadActive 
+	spMachine101 
+	setcolor 
+	setmatrix_nlw 
+	irCsLoad 0 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		82 121 translate 
+		0 rotate 
+		1 1 scale 
+		irCsLoad 0 
+		irCsMaxLoad irCsMaxLoad 10000 13 387 true true false 
+		ixCsOverload false 0 
+		baBar005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irCsLoad 0 lt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		95 508 translate 
+		180 rotate 
+		1 1 scale 
+		irCsLoad 0 
+		irCsMaxLoadNeg 1000 1000 13 387 true true false false false 0 
+		baBar005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 80 translate 
+	0 rotate 
+	1 1 scale 
+	ixKellyLoadActive ixAuxLoadActive irKellyLoad 
+	irAuxLoad irAuxMaxLoad irKellyMaxLoad ixAuxOverload 
+	ixKellyOverload idAuxScaleNumb idKellyScaleNumb 
+	spLoadMeas001 
+	setcolor 
+	setmatrix_nlw 
+	ixCsLift ixCsLower or {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		90 362 translate 
+		0 rotate 
+		1 1 scale 
+		ixCsSlowMotion 
+		spGeneral001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixZ4LimitOut true eq {	
+		ixZ4LimitOut true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		94 152 translate 
+		0 rotate 
+		0.37 0.37 scale 
+		ssLimit026 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	149 -2 translate 
+	0 rotate 
+	1 1 scale 
+	irKellyPdeRopeLen irKellyRopeLength irKellySpeed 
+	ixKellyPdeHightAct ixKellyLift ixKellyLower 
+	spWinch004 
+	setcolor 
+	setmatrix_nlw 
+	97 314 moveto 
+	103 314 lineto 
+	stroke 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	106 309 translate 
+	0 rotate 
+	1 1 scale 
+	LRcsScaleValue 3 (kN) false false 
+	FSstdFont 0.80 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	103 479 translate 
+	0 rotate 
+	1 1 scale 
+	irCsLoad 3 (kN) false false 
+	FSmidFont 0.80 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef upDrill001
+%?fn	upDrill001
+%?brief	Kelly
+%?bbox	0 0 559 559
+/upDrill001 {
+	/ixDdTorqueLimitBridged exch def	%?brief drilling drive torque limitation bridged %?use INP %?type BOOL %?dflt false
+	/ixDdTorqueLimit exch def	%?brief drilling drive torque limitation %?use INP %?type BOOL %?dflt false
+	/ixDrillingDriveStop exch def	%?brief drilling drive stop %?use INP %?type BOOL %?dflt false
+	/ixDrillingDriveWarning exch def	%?brief drilling drive warning %?use INP %?type BOOL %?dflt false
+	/ixDrillingFreeTurn exch def	%?brief drilling drive free turn %?use INP %?type BOOL %?dflt false
+	/ixCasingOscilAct exch def	%?brief casing oscillator active %?use INP %?type BOOL %?dflt false
+	/irDrillingGear exch def	%?brief drilling drive gear %?use INP %?type REAL %?dflt    0.00
+	/irCasingOscilPressure exch def	%?brief casing oscillator pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingPressure exch def	%?brief drilling drive pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingRPM exch def	%?brief drilling drive rotations per minute %?use INP %?type REAL %?dflt    0.00
+	/irDrillProgress exch def	%?brief drilling drive drill progress %?use INP %?type REAL %?dflt    0.00
+	/irDrillFill exch def	%?brief drilling drive fill of driller [ %?use INP %?type REAL %?dflt    0.00
+	/irDrillDepthSiR exch def	%?brief drilling drive depth since reset [ %?use INP %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	425 1 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillFill 0 100 90 100 36 78 true true false false false 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	1 setlinewidth_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	399 240 translate 
+	0 rotate 
+	1 1 scale 
+	ssMachinePart106 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	392 3 translate 
+	0 rotate 
+	1 1 scale 
+	ssMachinePart107 
+	setcolor 
+	setmatrix_nlw 
+	438 80 moveto 
+	438 273 lineto 
+	stroke 
+	448 80 moveto 
+	448 273 lineto 
+	stroke 
+	ixCasingOscilAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		401 80 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart108 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?plinebeg
+	399 80 moveto 
+	424 80 lineto 
+	424 0 lineto 
+	462 0 lineto 
+	462 80 lineto 
+	518 80 lineto 
+	stroke 
+	%?plineend
+	443 388 moveto 
+	443 549 lineto 
+	stroke 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 320 translate 
+	90 rotate 
+	1 1 scale 
+	irDrillingPressure (bar) 0 400 false false true false false false 380 400 20 10 4 15 280 true false -90 true 0 
+	FSstdFont false 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	ixCasingOscilAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 80 translate 
+		90 rotate 
+		1 1 scale 
+		irCasingOscilPressure (bar) 0 400 false false true false false false 380 400 20 10 4 15 280 true false -90 true 0 
+		FSstdFont false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	387 339 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillingGear 1 () false false 
+	FSfatFont 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	ixDrillingFreeTurn true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 240 translate 
+		0 rotate 
+		1 1 scale 
+		ssDrill005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	421 340 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillingRPM 2.10 () false false 
+	FSmsgBigFont 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	ixDrillingDriveWarning ixDrillingDriveStop not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 240 translate 
+		0 rotate 
+		1 1 scale 
+		false true false false (gsGeneral003) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixDrillingDriveStop true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 240 translate 
+		0 rotate 
+		1 1 scale 
+		true false false false (gsGeneral004) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	409 10 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillProgress 3 () 14 (/U) false false false false false 
+	FSmidFont 7 0 
+	baValueText004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	318 313 translate 
+	0 rotate 
+	1.20 1.20 scale 
+	gsGeneral021 
+	setcolor 
+	setmatrix_nlw 
+	ixDdTorqueLimit ixDdTorqueLimitBridged not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 160 240 translate 
+		0 rotate 
+		1 1 scale 
+		ssDrill006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixDdTorqueLimitBridged true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 160 240 translate 
+		0 rotate 
+		1 1 scale 
+		ssDrill007 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	496 10 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillDepthSiR 3.20 () 10 () true false false false false 
+	FSmidFont 1 0 
+	baValueText004 
+	setcolor 
+	setmatrix_nlw 
+	colorinit 3 setlinewidth_nlw 
+	475 69 moveto 
+	475 6 lineto 
+	stroke 
+	475 6 moveto 
+	480 17 lineto 
+	stroke 
+	475 6 moveto 
+	470 17 lineto 
+	stroke 
+	470 5 moveto 
+	480 5 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef upDrill002
+%?fn	upDrill002
+%?brief	SOB
+%?bbox	0 0 559 559
+/upDrill002 {
+	/ixDrillingDriveStop exch def	%?brief drilling drive stop %?use INP %?type BOOL %?dflt false
+	/ixDrillingDriveWarning exch def	%?brief drilling drive warning %?use INP %?type BOOL %?dflt false
+	/ixConcVolumePresAct exch def	%?brief concrete volume measurement with pressure sensor active %?use INP %?type BOOL %?dflt false
+	/ixConcVolumeAct exch def	%?brief concrete volume indication active %?use INP %?type BOOL %?dflt false
+	/ixConcPressureAct exch def	%?brief concrete pressure indication active %?use INP %?type BOOL %?dflt false
+	/irConcreteVolume exch def	%?brief concrete volume [m³] %?use INP %?type REAL %?dflt    0.00
+	/irAddConcretePressure exch def	%?brief additional concrete pressure for volume calculation [bar] %?use INP %?type REAL %?dflt    0.00
+	/irConcretePressure exch def	%?brief concrete pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingGear exch def	%?brief drilling drive gear %?use INP %?type REAL %?dflt    0.00
+	/irDrillingPressure exch def	%?brief drilling drive pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingRPM exch def	%?brief drilling drive rotations per minute [rpm] %?use INP %?type REAL %?dflt    0.00
+	/irDrillProgress exch def	%?brief drilling drive drill progress [mm/U] %?use INP %?type REAL %?dflt    0.00
+	/irScaleConcPresInd exch def	%?brief scaling concrete pressure indication [bar] %?use INP %?type REAL %?dflt    1.00
+	/irPileOverGrout exch def	%?brief rated pile over grouting [ %?use INP %?type REAL %?dflt    0.00
+	/irConcConsump exch def	%?brief pile concrete Consumption [ %?use INP %?type REAL %?dflt    0.00
+	1 setlinewidth_nlw 
+	%?plinebeg
+	399 80 moveto 
+	424 80 lineto 
+	424 0 lineto 
+	462 0 lineto 
+	462 80 lineto 
+	518 80 lineto 
+	stroke 
+	%?plineend
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 320 translate 
+	90 rotate 
+	1 1 scale 
+	irDrillingPressure (bar) 0 400 false false true false false false 380 400 20 10 4 15 280 true false -90 true 0 
+	FSstdFont false 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	387 339 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillingGear 1 () false false 
+	FSfatFont 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	421 340 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillingRPM 2.10 () false false 
+	FSmsgBigFont 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	ixDrillingDriveWarning ixDrillingDriveStop not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 240 translate 
+		0 rotate 
+		1 1 scale 
+		false true false false (gsGeneral003) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixDrillingDriveStop true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 240 translate 
+		0 rotate 
+		1 1 scale 
+		true false false false (gsGeneral004) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	409 10 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillProgress 3 () 14 (/U) false false false false false 
+	FSmidFont 7 0 
+	baValueText004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	392 3 translate 
+	0 rotate 
+	1 1 scale 
+	ssMachinePart111 
+	setcolor 
+	setmatrix_nlw 
+	ixConcVolumeAct false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		399 240 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart110 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcPressureAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 430 translate 
+		90 rotate 
+		1 1 scale 
+		irConcretePressure (bar) 
+		irScaleConcPresInd false false true false false false 40 50 2 1 true true 15 280 true -90 true 0 0 false 1 
+		baBar010 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcVolumePresAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 500 translate 
+		90 rotate 
+		1 1 scale 
+		irAddConcretePressure (???) 
+		irScaleConcPresInd false false true false false false 40 50 2 1 true true 6 280 false 0 false 0 0 false 1 
+		baBar010 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	318 313 translate 
+	0 rotate 
+	1.20 1.20 scale 
+	gsGeneral021 
+	setcolor 
+	setmatrix_nlw 
+	ixConcVolumeAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		399 240 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart115 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcVolumeAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		475 406 translate 
+		0 rotate 
+		1 1 scale 
+		irConcreteVolume 3.20 51 false false 7 
+		FSvalueFont true 
+		baValue005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcVolumeAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 110 translate 
+		90 rotate 
+		1 1 scale 
+		irConcConsump (%) -10 40 false false true false false false 90 100 20 10 5 15 280 true false -90 true 0 0 false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcVolumeAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 137 translate 
+		90 rotate 
+		1 1 scale 
+		irPileOverGrout (%) -10 40 0 
+		irPileOverGrout 6 4 3 1 false 4 0 0 0 15 280 0 false true 
+		baBar008 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+%?partdef upInclinat001
+%?fn	upInclinat001
+%?brief	Neigungsanzeige
+%?bbox	0 0 239 319
+/upInclinat001 {
+	/MEM_active_00 exch def	%?brief  %?use STATIC %?type BOOL
+	/MEM_grafik_aktiv exch def	%?brief grafik wechseln %?use STATIC %?type BOOL
+	/irMaxYn exch def	%?brief maximaler negativer Y-Wert %?use INP %?type REAL %?dflt  -20.00
+	/irMaxXn exch def	%?brief maximaler negativer X-Wert %?use INP %?type REAL %?dflt   -5.00
+	/irMaxYp exch def	%?brief maximaler positiver Y-Wert %?use INP %?type REAL %?dflt   10.00
+	/irMaxXp exch def	%?brief maximaler positiver X-Wert %?use INP %?type REAL %?dflt    5.00
+	/irYaddRatedIncl exch def	%?brief Y-position des zusätzlichen Soll-Cursor %?use INP %?type REAL %?dflt    0.00
+	/irXaddRatedIncl exch def	%?brief X-position des zusätzlichen Soll-Cursor %?use INP %?type REAL %?dflt    0.00
+	/irYratedIncl exch def	%?brief Y-position des Soll-Cursor %?use INP %?type REAL %?dflt    0.00
+	/irXratedIncl exch def	%?brief X-position des Soll-Cursor %?use INP %?type REAL %?dflt    0.00
+	/irYinclination exch def	%?brief Y-position des Ist-Cursor %?use INP %?type REAL %?dflt    0.00
+	/irXinclination exch def	%?brief X-position des Ist-Cursor %?use INP %?type REAL %?dflt    0.00
+	/idCursorForm3 exch def	%?brief 3. Cursor-form: 0 nicht aktiv, 1 quadrat, 2 kreuz, 3 kreis %?use INP %?type DINT %?dflt 0
+	/idCursorForm2 exch def	%?brief 2. Cursor-form: 0 nicht aktiv, 1 quadrat, 2 kreuz, 3 kreis %?use INP %?type DINT %?dflt 1
+	/idCursorForm1 exch def	%?brief 1. Cursor-form: 0 nicht aktiv, 1 quadrat, 2 kreuz, 3 kreis %?use INP %?type DINT %?dflt 2
+	MEM_grafik_aktiv false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		idCursorForm1 idCursorForm2 idCursorForm3 
+		irXinclination irYinclination irXratedIncl irYratedIncl 
+		irXaddRatedIncl irYaddRatedIncl 3 4 
+		irMaxXp irMaxYp irMaxXn 
+		irMaxYn 
+		baCursorfield001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MEM_grafik_aktiv false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		5 5 translate 
+		0 rotate 
+		1 1 scale 
+		irYinclination 2.10 (Â°) false false 
+		FSmidFont 1 
+		baValue003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MEM_grafik_aktiv false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		236 195 translate 
+		0 rotate 
+		1 1 scale 
+		irXinclination 2.10 (Â°) false false 
+		FSmidFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MEM_grafik_aktiv true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		60 10 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		irYinclination 0 false 
+		spMachine101 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MEM_grafik_aktiv true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		1 10 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		irXinclination 0 
+		spMachine102 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	3 4 scale 
+	MEM_active_00 
+	baTouchButPart011 
+	/MEM_active_00 exch store 
+	/MEM_grafik_aktiv exch store 
+	setcolor 
+	setmatrix_nlw 
+	2 2 moveto 
+	238 2 lineto 
+	stroke 
+	MEM_active_00 MEM_grafik_aktiv 
+} def
+%?partend
+
+%?partdef upDrill003
+%?fn	upDrill003
+%?brief	VDW
+%?bbox	0 0 559 559
+/upDrill003 {
+	/ixDrillingDriveFastSpAuger exch def	%?brief drilling drive fast speed auger %?use INP %?type BOOL %?dflt false
+	/ixDrillingDriveFastSpCase exch def	%?brief drilling drive fast speed case %?use INP %?type BOOL %?dflt false
+	/ixDrillingDriveStop exch def	%?brief drilling drive stop %?use INP %?type BOOL %?dflt false
+	/ixDrillingDriveWarning exch def	%?brief drilling drive warning %?use INP %?type BOOL %?dflt false
+	/ixConcVolumePresAct exch def	%?brief concrete volume measurement with pressure sensor active %?use INP %?type BOOL %?dflt false
+	/ixConcVolumeAct exch def	%?brief concrete volume indication active %?use INP %?type BOOL %?dflt false
+	/ixConcPressureAct exch def	%?brief concrete pressure indication active %?use INP %?type BOOL %?dflt false
+	/irConcreteVolume exch def	%?brief concrete volume [m³] %?use INP %?type REAL %?dflt    0.00
+	/irAddConcretePressure exch def	%?brief additional concrete pressure for volume calculation [bar] %?use INP %?type REAL %?dflt    0.00
+	/irConcretePressure exch def	%?brief concrete pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingRPMAuger exch def	%?brief drilling drive rotations per minute auger [rpm] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingRPMCase exch def	%?brief drilling drive rotations per minute case [rpm] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingGear exch def	%?brief drilling drive gear %?use INP %?type REAL %?dflt    0.00
+	/irDrillingPressureAuger exch def	%?brief drilling drive pressure auger [bar] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingPressureCase exch def	%?brief drilling drive pressure case [bar] %?use INP %?type REAL %?dflt    0.00
+	/irDrillProgress exch def	%?brief drilling drive drill progress [mm/U] %?use INP %?type REAL %?dflt    0.00
+	/irScaleConcPresInd exch def	%?brief scaling concrete pressure indication [bar] %?use INP %?type REAL %?dflt    1.00
+	/irPileOverGrout exch def	%?brief rated pile over grouting [ %?use INP %?type REAL %?dflt    0.00
+	/irConcConsump exch def	%?brief pile concrete Consumption [ %?use INP %?type REAL %?dflt    0.00
+	1 setlinewidth_nlw 
+	%?plinebeg
+	390 80 moveto 
+	415 80 lineto 
+	415 0 lineto 
+	453 0 lineto 
+	453 80 lineto 
+	518 80 lineto 
+	stroke 
+	%?plineend
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 320 translate 
+	90 rotate 
+	1 1 scale 
+	irDrillingPressureAuger (bar) 0 400 false false true false false false 380 400 20 10 4 15 280 true false -90 true 0 
+	FSstdFont false 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	421 343 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillingRPMAuger 2.10 () false false 
+	FSmsgBigFont 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	ixDrillingDriveWarning ixDrillingDriveStop not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 160 translate 
+		0 rotate 
+		1 1 scale 
+		false true false false (gsGeneral003) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixDrillingDriveStop true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 160 translate 
+		0 rotate 
+		1 1 scale 
+		true false false false (gsGeneral004) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	409 10 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillProgress 3 () 14 (/U) false false false false false 
+	FSmidFont 7 0 
+	baValueText004 
+	setcolor 
+	setmatrix_nlw 
+	ixConcPressureAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 430 translate 
+		90 rotate 
+		1 1 scale 
+		irConcretePressure (bar) 
+		irScaleConcPresInd false false true false false false 40 50 2 1 true true 15 280 true -90 true 0 0 false 1 
+		baBar010 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcVolumePresAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 500 translate 
+		90 rotate 
+		1 1 scale 
+		irAddConcretePressure (???) 
+		irScaleConcPresInd false false true false false false 40 50 2 1 true true 6 280 false 0 false 0 0 false 1 
+		baBar010 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	383 1 translate 
+	0 rotate 
+	1 1 scale 
+	ssMachinePart112 
+	setcolor 
+	setmatrix_nlw 
+	453 80 moveto 
+	453 282 lineto 
+	stroke 
+	453 282 moveto 
+	415 282 lineto 
+	stroke 
+	415 80 moveto 
+	415 282 lineto 
+	stroke 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	421 298 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillingRPMCase 3.10 () false false 
+	FSfatFont 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 240 translate 
+	90 rotate 
+	1 1 scale 
+	irDrillingPressureCase (bar) 0 400 false false true false false false 90 100 20 10 4 15 280 true false -90 true 0 0 false 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	ixDrillingDriveFastSpAuger true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		331 339 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsDrive007 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixDrillingDriveFastSpCase true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		331 259 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsDrive007 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcVolumeAct false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		399 214 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart113 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcVolumeAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 110 translate 
+		90 rotate 
+		1 1 scale 
+		irConcConsump (%) -10 40 false false true false false false 90 100 20 10 5 15 280 true false -90 true 0 0 false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcVolumeAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 137 translate 
+		90 rotate 
+		1 1 scale 
+		irPileOverGrout (%) -10 40 0 
+		irPileOverGrout 6 4 3 1 false 4 0 0 0 15 280 0 false true 
+		baBar008 
+		setcolor 
+		setmatrix_nlw 
+	} if 416 46 moveto 
+	419 51 lineto 
+	stroke 
+	419 51 moveto 
+	422 46 lineto 
+	stroke 
+	422 46 moveto 
+	425 51 lineto 
+	stroke 
+	425 51 moveto 
+	428 46 lineto 
+	stroke 
+	428 46 moveto 
+	431 51 lineto 
+	stroke 
+	431 51 moveto 
+	434 46 lineto 
+	stroke 
+	434 46 moveto 
+	437 51 lineto 
+	stroke 
+	437 51 moveto 
+	440 46 lineto 
+	stroke 
+	440 46 moveto 
+	443 51 lineto 
+	stroke 
+	443 51 moveto 
+	446 46 lineto 
+	stroke 
+	446 46 moveto 
+	449 51 lineto 
+	stroke 
+	449 51 moveto 
+	452 46 lineto 
+	stroke 
+	416 46 moveto 
+	415 46 lineto 
+	stroke 
+	452 46 moveto 
+	453 46 lineto 
+	stroke 
+	434 46 moveto 
+	439 47 lineto 
+	stroke 
+	ixConcVolumeAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		399 254 translate 
+		0 rotate 
+		1 1 scale 
+		ssMachinePart116 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixConcVolumeAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		475 422 translate 
+		0 rotate 
+		1 1 scale 
+		irConcreteVolume 3.20 51 false false 7 
+		FSvalueFont true 
+		baValue005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+%?partdef upDrill004
+%?fn	upDrill004
+%?brief	SMO (Soil Mixing Operation)
+%?bbox	0 0 559 559
+/upDrill004 {
+	/ixDrillingDriveStop exch def	%?brief drilling drive stop %?use INP %?type BOOL %?dflt false
+	/ixDrillingDriveWarning exch def	%?brief drilling drive warning %?use INP %?type BOOL %?dflt false
+	/ixConcVolumePresAct exch def	%?brief concrete volume measurement with pressure sensor active %?use INP %?type BOOL %?dflt false
+	/ixConcVolumeAct exch def	%?brief concrete volume indication active %?use INP %?type BOOL %?dflt false
+	/ixConcPressureAct exch def	%?brief concrete pressure indication active %?use INP %?type BOOL %?dflt false
+	/irConcreteVolume exch def	%?brief concrete volume [m³] %?use INP %?type REAL %?dflt    0.00
+	/irAddConcretePressure exch def	%?brief additional concrete pressure for volume calculation [bar] %?use INP %?type REAL %?dflt    0.00
+	/irConcretePressure exch def	%?brief concrete pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingGear exch def	%?brief drilling drive gear %?use INP %?type REAL %?dflt    0.00
+	/irDrillingPressure exch def	%?brief drilling drive pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irDrillingRPM exch def	%?brief drilling drive rotations per minute [rpm] %?use INP %?type REAL %?dflt    0.00
+	/irDrillProgress exch def	%?brief drilling drive drill progress [mm/U] %?use INP %?type REAL %?dflt    0.00
+	1 setlinewidth_nlw 
+	%?plinebeg
+	399 80 moveto 
+	424 80 lineto 
+	424 0 lineto 
+	462 0 lineto 
+	462 80 lineto 
+	518 80 lineto 
+	stroke 
+	%?plineend
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 319 translate 
+	90 rotate 
+	1 1 scale 
+	irDrillingPressure (bar) 0 400 false false true false false false 380 400 20 10 4 15 280 true false -90 true 0 
+	FSstdFont false 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	421 340 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillingRPM 2.10 () false false 
+	FSmsgBigFont 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	ixDrillingDriveWarning ixDrillingDriveStop not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 240 translate 
+		0 rotate 
+		1 1 scale 
+		false true false false (gsGeneral003) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixDrillingDriveStop true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 240 translate 
+		0 rotate 
+		1 1 scale 
+		true false false false (gsGeneral004) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	409 10 translate 
+	0 rotate 
+	1 1 scale 
+	irDrillProgress 3 () 14 (/U) false false false false false 
+	FSmidFont 7 0 
+	baValueText004 
+	setcolor 
+	setmatrix_nlw 
+	ixConcPressureAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 430 translate 
+		90 rotate 
+		1 1 scale 
+		irConcretePressure (bar) 50 false false true false false false 40 50 2 1 true false 15 280 true -90 true 0 0 false 1 
+		baBar010 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	392 3 translate 
+	0 rotate 
+	1 1 scale 
+	ssMachinePart112 
+	setcolor 
+	setmatrix_nlw 
+	440 82 moveto 
+	440 322 lineto 
+	stroke 
+	446 82 moveto 
+	446 322 lineto 
+	stroke 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	399 240 translate 
+	0 rotate 
+	1 1 scale 
+	ssMachinePart114 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	416 457 translate 
+	0 rotate 
+	1 1 scale 
+	6.35 3.20 () 51 () false false false false false 
+	FSmidFont 1 0 
+	baValueText004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	474 407 translate 
+	0 rotate 
+	1 1 scale 
+	241 4 () 50 (/min) false false false false false 
+	FSmidFont 7 0 
+	baValueText004 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef upDrillAdjust001
+%?fn	upDrillAdjust001
+%?brief	Einstellseite Kelly
+%?bbox	0 0 639 559
+/upDrillAdjust001 {
+	/MEM_Index_05 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_00 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_04 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_03 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_02 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_01 exch def	%?brief  %?use STATIC %?type DINT
+	/ixPressContAct exch def	%?brief pressure controll active %?use INP %?type BOOL %?dflt false
+	/ixAddHydAct exch def	%?brief casing oscillator active %?use INP %?type BOOL %?dflt false
+	/ixClampJawPresAct exch def	%?brief rated clamping jaw pressure active %?use INP %?type BOOL %?dflt false
+	/irClampJawPress exch def	%?brief rated clamping jaw pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irRatedVol1 exch def	%?brief rated volume section 1 [l/min] %?use INP %?type REAL %?dflt    0.00
+	/irRatedVol2 exch def	%?brief rated volume section 2 [l/min] %?use INP %?type REAL %?dflt    0.00
+	/irUsedPumps exch def	%?brief used pumps %?use INP %?type REAL %?dflt    0.00
+	/irRatedPres1 exch def	%?brief rated pressure section 1 [bar] %?use INP %?type REAL %?dflt    0.00
+	/irRatedPres2 exch def	%?brief rated pressure section 2 [bar] %?use INP %?type REAL %?dflt    0.00
+	/irRatedAddHyVol exch def	%?brief rated volume casing oscillator [l/min] %?use INP %?type REAL %?dflt    0.00
+	/irAugerLength exch def	%?brief ratet auger length [cm] %?use INP %?type REAL %?dflt    0.00
+	/qrClampJawPress 0 def	%?brief rated clamping jaw pressure [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedVol1 0 def	%?brief rated volume section 1 [l/min] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedVol2 0 def	%?brief rated volume section 2 [l/min] %?use OUT %?type REAL %?dflt    0.00
+	/qrUsedPumps 0 def	%?brief used pumps %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedPres1 0 def	%?brief rated pressure section 1 [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedPres2 0 def	%?brief rated pressure section 2 [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedAddHyVol 0 def	%?brief rated volume casing oscillator [l/min] %?use OUT %?type REAL %?dflt    0.00
+	/qrAugerLength 0 def	%?brief ratet auger length [cm] %?use OUT %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 514 translate 
+	0 rotate 
+	1 1 scale 
+	irRatedVol1 true 3 0 999.90 
+	FSmidFont 50 true 7 0 0 0 0 0 
+	MEM_Index_01 
+	baInpArea003 
+	/MEM_Index_01 exch store 
+	/qrRatedVol1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 469 translate 
+	0 rotate 
+	1 1 scale 
+	irUsedPumps true 1 0 9.90 
+	FSmidFont 0 false 7 0 0 0 0 0 
+	MEM_Index_02 
+	baInpArea003 
+	/MEM_Index_02 exch store 
+	/qrUsedPumps exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 377 translate 
+	0 rotate 
+	1 1 scale 
+	irAugerLength true 3 0 999.90 
+	FSmidFont 12 true 7 0 0 0 0 0 
+	MEM_Index_03 
+	baInpArea003 
+	/MEM_Index_03 exch store 
+	/qrAugerLength exch store 
+	setcolor 
+	setmatrix_nlw 
+	ixAddHydAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		100 286 translate 
+		0 rotate 
+		1 1 scale 
+		irRatedAddHyVol true 3 0 999.90 
+		FSmidFont 50 true 7 0 0 0 0 0 
+		MEM_Index_04 
+		baInpArea003 
+		/MEM_Index_04 exch store 
+		/qrRatedAddHyVol exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	118 524 translate 
+	0 rotate 
+	1 1 scale 
+	TSoilFlow FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	118 479 translate 
+	0 rotate 
+	1 1 scale 
+	TSnumbOfPumps FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	118 387 translate 
+	0 rotate 
+	1 1 scale 
+	TSaugerLength FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	ixAddHydAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		118 296 translate 
+		0 rotate 
+		1 1 scale 
+		TSoilFlowOscil FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixClampJawPresAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		100 194 translate 
+		0 rotate 
+		1 1 scale 
+		irClampJawPress true 3 0 999.90 
+		FSmidFont 30 true 7 0 0 0 0 0 
+		MEM_Index_00 
+		baInpArea003 
+		/MEM_Index_00 exch store 
+		/qrClampJawPress exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixClampJawPresAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		119 204 translate 
+		0 rotate 
+		1 1 scale 
+		TSclampJawPress FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixPressContAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		100 424 translate 
+		0 rotate 
+		1 1 scale 
+		irRatedPres1 true 3 0 999.90 
+		FSmidFont 30 true 7 0 0 0 0 0 
+		MEM_Index_05 
+		baInpArea003 
+		/MEM_Index_05 exch store 
+		/qrRatedPres1 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixPressContAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		119 434 translate 
+		0 rotate 
+		1 1 scale 
+		TSmaxPressure FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qrClampJawPress qrRatedVol1 qrRatedVol2 
+	qrUsedPumps qrRatedPres1 qrRatedPres2 qrRatedAddHyVol 
+	qrAugerLength MEM_Index_05 MEM_Index_00 MEM_Index_04 
+	MEM_Index_03 MEM_Index_02 MEM_Index_01 
+} def
+%?partend
+
+%?partdef upDrillAdjust002
+%?fn	upDrillAdjust002
+%?brief	Einstellseite SOB
+%?bbox	0 0 639 559
+/upDrillAdjust002 {
+	/MEM_Index_06 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_05 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_00 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_04 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_03 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_02 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_01 exch def	%?brief  %?use STATIC %?type DINT
+	/ixPressContAct exch def	%?brief pressure controll active %?use INP %?type BOOL %?dflt false
+	/ixConcVolAct exch def	%?brief concrete volume active %?use INP %?type BOOL %?dflt false
+	/ixClampJawPresAct exch def	%?brief rated clamping jaw pressure active %?use INP %?type BOOL %?dflt false
+	/irClampJawPress exch def	%?brief rated clamping jaw pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irRatedVol1 exch def	%?brief rated volume section 1 [l/min] %?use INP %?type REAL %?dflt    0.00
+	/irRatedVol2 exch def	%?brief rated volume section 2 [l/min] %?use INP %?type REAL %?dflt    0.00
+	/irUsedPumps exch def	%?brief used pumps %?use INP %?type REAL %?dflt    0.00
+	/irRatedPres1 exch def	%?brief rated pressure section 1 [bar] %?use INP %?type REAL %?dflt    0.00
+	/irRatedPres2 exch def	%?brief rated pressure section 2 [bar] %?use INP %?type REAL %?dflt    0.00
+	/irScaleConcPres exch def	%?brief scaling concrete pressure sensor [bar] %?use INP %?type REAL %?dflt    0.00
+	/irScaleConcPresInd exch def	%?brief scaling concrete pressure sensore indication [bar] %?use INP %?type REAL %?dflt    0.00
+	/irConcFlowImp exch def	%?brief concrete volume per impulse [l/Imp] %?use INP %?type REAL %?dflt    0.00
+	/irPileDiameter exch def	%?brief ratet pile diameter [cm] %?use INP %?type REAL %?dflt    0.00
+	/qrClampJawPress 0 def	%?brief rated clamping jaw pressure [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedVol1 0 def	%?brief rated volume section 1 [l/min] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedVol2 0 def	%?brief rated volume section 2 [l/min] %?use OUT %?type REAL %?dflt    0.00
+	/qrUsedPumps 0 def	%?brief used pumps %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedPres1 0 def	%?brief rated pressure section 1 [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedPres2 0 def	%?brief rated pressure section 2 [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrScaleConcPres 0 def	%?brief scaling concrete pressure sensor [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrScaleConcPresInd 0 def	%?brief scaling concrete pressure sensore indication [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrConcFlowImp 0 def	%?brief concrete volume per impulse [l/Imp] %?use OUT %?type REAL %?dflt    0.00
+	/qrPileDiameter 0 def	%?brief ratet pile diameter [cm] %?use OUT %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 514 translate 
+	0 rotate 
+	1 1 scale 
+	irRatedVol1 true 3 0 999.90 
+	FSmidFont 50 true 7 0 0 0 0 0 
+	MEM_Index_01 
+	baInpArea003 
+	/MEM_Index_01 exch store 
+	/qrRatedVol1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 469 translate 
+	0 rotate 
+	1 1 scale 
+	irUsedPumps true 1 0 9.90 
+	FSmidFont 0 false 7 0 0 0 0 0 
+	MEM_Index_02 
+	baInpArea003 
+	/MEM_Index_02 exch store 
+	/qrUsedPumps exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 377 translate 
+	0 rotate 
+	1 1 scale 
+	irPileDiameter true 3 0 999.90 
+	FSmidFont 12 true 7 0 0 0 0 0 
+	MEM_Index_03 
+	baInpArea003 
+	/MEM_Index_03 exch store 
+	/qrPileDiameter exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 286 translate 
+	0 rotate 
+	1 1 scale 
+	irScaleConcPres true 3 0 999.90 
+	FSmidFont 30 true 7 0 0 0 0 0 
+	MEM_Index_04 
+	baInpArea003 
+	/MEM_Index_04 exch store 
+	/qrScaleConcPres exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	118 524 translate 
+	0 rotate 
+	1 1 scale 
+	TSoilFlow FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	118 479 translate 
+	0 rotate 
+	1 1 scale 
+	TSnumbOfPumps FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	118 387 translate 
+	0 rotate 
+	1 1 scale 
+	TSpileDiameter FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	118 296 translate 
+	0 rotate 
+	1 1 scale 
+	TSscalConcPresSens FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	ixClampJawPresAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		100 100 translate 
+		0 rotate 
+		1 1 scale 
+		irClampJawPress true 3 0 999.90 
+		FSmidFont 30 true 7 0 0 0 0 0 
+		MEM_Index_00 
+		baInpArea003 
+		/MEM_Index_00 exch store 
+		/qrClampJawPress exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixClampJawPresAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		119 111 translate 
+		0 rotate 
+		1 1 scale 
+		TSclampJawPress FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 239 translate 
+	0 rotate 
+	1 1 scale 
+	irScaleConcPresInd true 3 0 999.90 
+	FSmidFont 30 true 7 0 0 0 0 0 
+	MEM_Index_05 
+	baInpArea003 
+	/MEM_Index_05 exch store 
+	/qrScaleConcPresInd exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	101 194 translate 
+	0 rotate 
+	1 1 scale 
+	irConcFlowImp true 3.10 0 999.90 
+	FSmidFont 52 true 7 0 0 0 0 0 
+	MEM_Index_06 
+	baInpArea003 
+	/MEM_Index_06 exch store 
+	/qrConcFlowImp exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	119 248 translate 
+	0 rotate 
+	1 1 scale 
+	TSscalConcPresDisp FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	119 204 translate 
+	0 rotate 
+	1 1 scale 
+	TSconcVolPerImp FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	ixPressContAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		100 424 translate 
+		0 rotate 
+		1 1 scale 
+		irRatedPres1 true 3 0 999.90 
+		FSmidFont 30 true 7 0 0 0 0 0 
+		MEM_Index_05 
+		baInpArea003 
+		/MEM_Index_05 exch store 
+		/qrRatedPres1 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixPressContAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		119 434 translate 
+		0 rotate 
+		1 1 scale 
+		TSmaxPressure FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qrClampJawPress qrRatedVol1 qrRatedVol2 
+	qrUsedPumps qrRatedPres1 qrRatedPres2 qrScaleConcPres 
+	qrScaleConcPresInd qrConcFlowImp qrPileDiameter MEM_Index_06 
+	MEM_Index_05 MEM_Index_00 MEM_Index_04 MEM_Index_03 
+	MEM_Index_02 MEM_Index_01 
+} def
+%?partend
+
+%?partdef upDrillAdjust003
+%?fn	upDrillAdjust003
+%?brief	Einstellseite VDW
+%?bbox	0 0 639 559
+/upDrillAdjust003 {
+	/MEM_Index_07 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_06 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_05 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_00 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_04 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_03 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_02 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_01 exch def	%?brief  %?use STATIC %?type DINT
+	/ixPressContAct exch def	%?brief pressure controll active %?use INP %?type BOOL %?dflt false
+	/ixConcVolAct exch def	%?brief concrete volume active %?use INP %?type BOOL %?dflt false
+	/ixClampJawPresAct exch def	%?brief rated clamping jaw pressure active %?use INP %?type BOOL %?dflt false
+	/irClampJawPress exch def	%?brief rated clamping jaw pressure [bar] %?use INP %?type REAL %?dflt    0.00
+	/irRatedVol1 exch def	%?brief rated volume section 1 [l/min] %?use INP %?type REAL %?dflt    0.00
+	/irRatedVol2 exch def	%?brief rated volume section 2 [l/min] %?use INP %?type REAL %?dflt    0.00
+	/irUsedPumps exch def	%?brief used pumps %?use INP %?type REAL %?dflt    0.00
+	/irRatedPres1 exch def	%?brief rated pressure section 1 [bar] %?use INP %?type REAL %?dflt    0.00
+	/irRatedPres2 exch def	%?brief rated pressure section 2 [bar] %?use INP %?type REAL %?dflt    0.00
+	/irScaleConcPres exch def	%?brief scaling concrete pressure sensor [bar] %?use INP %?type REAL %?dflt    0.00
+	/irScaleConcPresInd exch def	%?brief scaling concrete pressure sensore indication [bar] %?use INP %?type REAL %?dflt    0.00
+	/irConcFlowImp exch def	%?brief concrete volume per impulse [l/Imp] %?use INP %?type REAL %?dflt    0.00
+	/irPileDiameter exch def	%?brief ratet pile diameter [cm] %?use INP %?type REAL %?dflt    0.00
+	/qrClampJawPress 0 def	%?brief rated clamping jaw pressure [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedVol1 0 def	%?brief rated volume section 1 [l/min] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedVol2 0 def	%?brief rated volume section 2 [l/min] %?use OUT %?type REAL %?dflt    0.00
+	/qrUsedPumps 0 def	%?brief used pumps %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedPres1 0 def	%?brief rated pressure section 1 [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrRatedPres2 0 def	%?brief rated pressure section 2 [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrScaleConcPres 0 def	%?brief scaling concrete pressure sensor [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrScaleConcPresInd 0 def	%?brief scaling concrete pressure sensore indication [bar] %?use OUT %?type REAL %?dflt    0.00
+	/qrConcFlowImp 0 def	%?brief concrete volume per impulse [l/Imp] %?use OUT %?type REAL %?dflt    0.00
+	/qrPileDiameter 0 def	%?brief ratet pile diameter [cm] %?use OUT %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 514 translate 
+	0 rotate 
+	1 1 scale 
+	irRatedVol1 true 3 0 999.90 
+	FSmidFont 50 true 7 0 0 0 0 0 
+	MEM_Index_01 
+	baInpArea003 
+	/MEM_Index_01 exch store 
+	/qrRatedVol1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 469 translate 
+	0 rotate 
+	1 1 scale 
+	irRatedVol2 true 3 0 999.90 
+	FSmidFont 50 true 7 0 0 0 0 0 
+	MEM_Index_02 
+	baInpArea003 
+	/MEM_Index_02 exch store 
+	/qrRatedVol2 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 333 translate 
+	0 rotate 
+	1 1 scale 
+	irPileDiameter true 3 0 999.90 
+	FSmidFont 12 true 7 0 0 0 0 0 
+	MEM_Index_03 
+	baInpArea003 
+	/MEM_Index_03 exch store 
+	/qrPileDiameter exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 286 translate 
+	0 rotate 
+	1 1 scale 
+	irScaleConcPres true 3 0 999.90 
+	FSmidFont 30 true 7 0 0 0 0 0 
+	MEM_Index_04 
+	baInpArea003 
+	/MEM_Index_04 exch store 
+	/qrScaleConcPres exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	119 524 translate 
+	0 rotate 
+	1 1 scale 
+	TSoilFlowAuger FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	119 479 translate 
+	0 rotate 
+	1 1 scale 
+	TSoilFlowCase FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	119 343 translate 
+	0 rotate 
+	1 1 scale 
+	TSpileDiameter FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	119 296 translate 
+	0 rotate 
+	1 1 scale 
+	TSscalConcPresSens FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	ixClampJawPresAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		100 100 translate 
+		0 rotate 
+		1 1 scale 
+		irClampJawPress true 3 0 999.90 
+		FSmidFont 30 true 7 0 0 0 0 0 
+		MEM_Index_00 
+		baInpArea003 
+		/MEM_Index_00 exch store 
+		/qrClampJawPress exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixClampJawPresAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		119 111 translate 
+		0 rotate 
+		1 1 scale 
+		TSclampJawPress FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 239 translate 
+	0 rotate 
+	1 1 scale 
+	irScaleConcPresInd true 3 0 999.90 
+	FSmidFont 30 true 7 0 0 0 0 0 
+	MEM_Index_05 
+	baInpArea003 
+	/MEM_Index_05 exch store 
+	/qrScaleConcPresInd exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 194 translate 
+	0 rotate 
+	1 1 scale 
+	irConcFlowImp true 3.10 0 999.90 
+	FSmidFont 52 true 7 0 0 0 0 0 
+	MEM_Index_06 
+	baInpArea003 
+	/MEM_Index_06 exch store 
+	/qrConcFlowImp exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	119 248 translate 
+	0 rotate 
+	1 1 scale 
+	TSscalConcPresDisp FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	119 204 translate 
+	0 rotate 
+	1 1 scale 
+	TSconcVolPerImp FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	ixPressContAct true eq {	
+	matrix currentmatrix_nlw 
+	currentcolor 
+		100 424 translate 
+	0 rotate 
+	1 1 scale 
+		irRatedPres1 true 3 0 999.90 
+		FSmidFont 30 true 7 0 0 0 0 0 
+		MEM_Index_05 
+	baInpArea003 
+		/MEM_Index_05 exch store 
+		/qrRatedPres1 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixPressContAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		119 434 translate 
+		0 rotate 
+		1 1 scale 
+		TSmaxPressAuger FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixPressContAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		100 380 translate 
+		0 rotate 
+		1 1 scale 
+		irRatedPres2 true 3 0 999.90 
+		FSmidFont 30 true 7 0 0 0 0 0 
+		MEM_Index_07 
+		baInpArea003 
+		/MEM_Index_07 exch store 
+		/qrRatedPres2 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixPressContAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 390 translate 
+		0 rotate 
+		1 1 scale 
+		TSmaxPressCase FSmidFont 1 false false false false 480 0 
+		baText003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qrClampJawPress qrRatedVol1 qrRatedVol2 
+	qrUsedPumps qrRatedPres1 qrRatedPres2 qrScaleConcPres 
+	qrScaleConcPresInd qrConcFlowImp qrPileDiameter MEM_Index_07 
+	MEM_Index_06 MEM_Index_05 MEM_Index_00 MEM_Index_04 
+	MEM_Index_03 MEM_Index_02 MEM_Index_01 
+} def
+%?partend
+
+%?partdef upEquipment002
+%?fn	upEquipment002
+%?brief	Anzeige Verrohrungsmaschine
+%?bbox	0 0 439 79
+/upEquipment002 {
+	/irPressure1 exch def	%?brief pressure 1 %?use INP %?type REAL %?dflt    0.00
+	/irPressure2 exch def	%?brief pressure 2 %?use INP %?type REAL %?dflt    0.00
+	/LRpsiPress1 0 def	%?brief pressure 1 in psi %?use LOC %?type REAL %?dflt    0.00
+	/LRpsiPress2 0 def	%?brief pressure 2 in psi %?use LOC %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	irPressure1 
+	calc_psi 
+	/LRpsiPress1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	irPressure2 
+	calc_psi 
+	/LRpsiPress2 exch store 
+	setcolor 
+	setmatrix_nlw 
+	MXchangeUnitPress false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		310 -10 translate 
+		90 rotate 
+		1 1 scale 
+		true 
+		irPressure1 irPressure2 (bar) false 0 400 false true false false false false 20 10 4 20 270 true false -90 true 0 
+		FSstdFont false 1 
+		baBar004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitPress true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		310 -10 translate 
+		90 rotate 
+		1 1 scale 
+		true 
+		LRpsiPress1 LRpsiPress2 (psi) false 0 6000 false true false false false false 20 10 6 20 270 true false -90 true 0 
+		FSstdFont false 1 
+		baBar004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	318 10 translate 
+	0 rotate 
+	1 1 scale 
+	ssMachinePart108 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+
+%?partdef upEquipment003
+%?fn	upEquipment003
+%?brief	Anzeige Rammsteuerung
+%?bbox	0 0 559 479
+/upEquipment003 {
+	/MEM_Index_03 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_02 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_01 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_00 exch def	%?brief  %?use STATIC %?type DINT
+	/irDgcCompaction exch def	%?brief DGC Verdichtung %?use INP %?type REAL %?dflt    0.00
+	/irDgcBeats exch def	%?brief DGC Schlaganzahl %?use INP %?type REAL %?dflt    0.00
+	/irDgcSlowHight exch def	%?brief DGC Vorhalteweg %?use INP %?type REAL %?dflt    0.00
+	/irDgcLiftHight exch def	%?brief DGC Hubhöhe %?use INP %?type REAL %?dflt    0.00
+	/irDgcActCompaction exch def	%?brief DGC Verdichtung %?use INP %?type REAL %?dflt    0.00
+	/irDgcActBeats exch def	%?brief DGC Schlaganzahl %?use INP %?type REAL %?dflt    0.00
+	/irDgcActLiftHight exch def	%?brief DGC Hubhöhe %?use INP %?type REAL %?dflt    0.00
+	/ixDgcChiselActive exch def	%?brief DGC Meiselautomatik -> Brunnengreifer %?use INP %?type BOOL %?dflt false
+	/ixDgcAutoActive exch def	%?brief DGC automatic is active %?use INP %?type BOOL %?dflt false
+	/qrDgcCompaction 0 def	%?brief DGC Verdichtung %?use OUT %?type REAL %?dflt    0.00
+	/qrDgcBeats 0 def	%?brief DGC Schlaganzahl %?use OUT %?type REAL %?dflt    0.00
+	/qrDgcSlowHight 0 def	%?brief DGC Vorhalteweg %?use OUT %?type REAL %?dflt    0.00
+	/qrDgcLiftHight 0 def	%?brief DGC Hubhöhe %?use OUT %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	200 240 translate 
+	0 rotate 
+	1 1 scale 
+	ixDgcChiselActive 0 
+	spEquipment006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	284 353 translate 
+	0 rotate 
+	1 1 scale 
+	irDgcLiftHight true 2.10 0 99.90 
+	FSmidFont 0 true 0 0 0 0 0 0 
+	MEM_Index_00 
+	baInpArea003 
+	/MEM_Index_00 exch store 
+	/qrDgcLiftHight exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	283 277 translate 
+	0 rotate 
+	1 1 scale 
+	irDgcBeats true 2 0 99 
+	FSmidFont 0 false 0 0 0 0 0 0 
+	MEM_Index_01 
+	baInpArea003 
+	/MEM_Index_01 exch store 
+	/qrDgcBeats exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	280 204 translate 
+	0 rotate 
+	1 1 scale 
+	irDgcSlowHight true 2.10 0 99.90 
+	FSmidFont 0 true 0 0 0 0 0 0 
+	MEM_Index_02 
+	baInpArea003 
+	/MEM_Index_02 exch store 
+	/qrDgcSlowHight exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	421 43 translate 
+	0 rotate 
+	1 1 scale 
+	irDgcActCompaction 1.10 10 true false 9 
+	FSmidFont true 
+	baValue005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	286 55 translate 
+	0 rotate 
+	1 1 scale 
+	irDgcCompaction true 1.10 0 9.90 
+	FSmidFont 0 true 0 0 0 0 0 0 
+	MEM_Index_03 
+	baInpArea003 
+	/MEM_Index_03 exch store 
+	/qrDgcCompaction exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	318 398 translate 
+	0 rotate 
+	1 1 scale 
+	irDgcActLiftHight 2.10 10 true false 9 
+	FSmidFont true 
+	baValue005 
+	setcolor 
+	setmatrix_nlw 
+	ixDgcAutoActive true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 440 200 translate 
+		MRrotate 
+		rotate 
+		1 1 scale 
+		gsGeneral020 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	234 277 translate 
+	0 rotate 
+	1 1 scale 
+	irDgcActBeats 2 false false 
+	FSmidFont 
+	baValue004 
+	setcolor 
+	setmatrix_nlw 
+	248 266 moveto 
+	255 285 lineto 
+	stroke 
+	qrDgcCompaction qrDgcBeats qrDgcSlowHight 
+	qrDgcLiftHight MEM_Index_03 MEM_Index_02 MEM_Index_01 
+	MEM_Index_00 
+} def
+%?partend
+
+%?partdef upAdjust001
+%?fn	upAdjust001
+%?brief	Einstellungen für Rüttler, Hammer, Bohrer
+%?bbox	0 0 639 559
+/upAdjust001 {
+	/MEM_Index_00_01 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_01_01 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_00_00 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_01_00 exch def	%?brief  %?use STATIC %?type DINT
+	/irExcentricTime exch def	%?brief excentric Time %?use INP %?type REAL %?dflt    0.00
+	/irPressure2 exch def	%?brief equipment pressure 2 %?use INP %?type REAL %?dflt    0.00
+	/irPressure1 exch def	%?brief equipment pressure 1 %?use INP %?type REAL %?dflt    0.00
+	/irVolume2 exch def	%?brief equipment volume 2 %?use INP %?type REAL %?dflt    0.00
+	/irVolume1 exch def	%?brief equipment volume 1 %?use INP %?type REAL %?dflt    0.00
+	/irOperatMode exch def	%?brief operational mode %?use INP %?type REAL %?dflt    0.00
+	/qrExcentricTime 0 def	%?brief excentric time %?use OUT %?type REAL %?dflt    0.00
+	/qrPressure2 0 def	%?brief equipment pressure 2 %?use OUT %?type REAL %?dflt    0.00
+	/qrPressure1 0 def	%?brief equipment pressure 1 %?use OUT %?type REAL %?dflt    0.00
+	/qrVolume2 0 def	%?brief equipment volume 2 %?use OUT %?type REAL %?dflt    0.00
+	/qrVolume1 0 def	%?brief equipment volume 1 %?use OUT %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 440 translate 
+	0 rotate 
+	1 1 scale 
+	irPressure1 irVolume1 TSoilFlow 
+	TSmaxPressure MEM_Index_00_00 MEM_Index_01_00 
+	spAdjust001 
+	/MEM_Index_00_00 exch store 
+	/MEM_Index_01_00 exch store 
+	/qrPressure1 exch store 
+	/qrVolume1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	irOperatMode 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 320 translate 
+		0 rotate 
+		1 1 scale 
+		irExcentricTime irPressure2 TSclampJawPress 
+		TSexcAutoTime MEM_Index_00_01 MEM_Index_01_01 
+		spAdjust002 
+		/MEM_Index_00_01 exch store 
+		/MEM_Index_01_01 exch store 
+		/qrExcentricTime exch store 
+		/qrPressure2 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qrExcentricTime qrPressure2 qrPressure1 qrVolume2 
+	qrVolume1 MEM_Index_00_01 MEM_Index_01_01 
+	MEM_Index_00_00 MEM_Index_01_00 
+} def
+%?partend
+
+%?partdef upAdjust002
+%?fn	upAdjust002
+%?brief	Einstellungen für Greifer
+%?bbox	0 0 639 559
+/upAdjust002 {
+	/MEM_Index_00_01 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_01_01 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_00_00 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Index_01_00 exch def	%?brief  %?use STATIC %?type DINT
+	/irPressure2 exch def	%?brief equipment pressure 2 %?use INP %?type REAL %?dflt    0.00
+	/irPressure1 exch def	%?brief equipment pressure 1 %?use INP %?type REAL %?dflt    0.00
+	/irVolume2 exch def	%?brief equipment volume 2 %?use INP %?type REAL %?dflt    0.00
+	/irVolume1 exch def	%?brief equipment volume 1 %?use INP %?type REAL %?dflt    0.00
+	/irOperatMode exch def	%?brief operational mode %?use INP %?type REAL %?dflt    0.00
+	/qrPressure2 0 def	%?brief equipment pressure 2 %?use OUT %?type REAL %?dflt    0.00
+	/qrPressure1 0 def	%?brief equipment pressure 1 %?use OUT %?type REAL %?dflt    0.00
+	/qrVolume2 0 def	%?brief equipment volume 2 %?use OUT %?type REAL %?dflt    0.00
+	/qrVolume1 0 def	%?brief equipment volume 1 %?use OUT %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 440 translate 
+	0 rotate 
+	1 1 scale 
+	irVolume2 irVolume1 TSoilFlowGrabOpen 
+	TSmaxPressGrabOpen MEM_Index_00_00 MEM_Index_01_00 
+	spAdjust001 
+	/MEM_Index_00_00 exch store 
+	/MEM_Index_01_00 exch store 
+	/qrVolume2 exch store 
+	/qrVolume1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 320 translate 
+	0 rotate 
+	1 1 scale 
+	irPressure2 irPressure1 TSoilFlowGrabClose 
+	TSmaxPressGrabClose MEM_Index_00_01 MEM_Index_01_01 
+	spAdjust001 
+	/MEM_Index_00_01 exch store 
+	/MEM_Index_01_01 exch store 
+	/qrPressure2 exch store 
+	/qrPressure1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	qrPressure2 qrPressure1 qrVolume2 
+	qrVolume1 MEM_Index_00_01 MEM_Index_01_01 MEM_Index_00_00 
+	MEM_Index_01_00 
+} def
+%?partend
+
+%?partdef upEquipment004
+%?fn	upEquipment004
+%?brief	Anzeige Schleppschaufel
+%?bbox	0 0 559 479
+/upEquipment004 {
+	/irHeadHight exch def	%?brief main boom head hight %?use INP %?type REAL %?dflt    0.00
+	/irHeadRadius exch def	%?brief main boom head radius %?use INP %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 240 translate 
+	0 rotate 
+	1 1 scale 
+	spEquipment007 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	441 391 translate 
+	0 rotate 
+	1 1 scale 
+	irHeadRadius 2.10 10 false false 9 
+	FSmidFont true 
+	baValue005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	302 351 translate 
+	0 rotate 
+	1 1 scale 
+	irHeadHight 2.10 10 false false 9 
+	FSmidFont true 
+	baValue005 
+	setcolor 
+	setmatrix_nlw 
+	355 400 moveto 
+	335 400 lineto 
+	stroke 
+	345 400 moveto 
+	345 319 lineto 
+	stroke 
+	345 399 moveto 
+	340 380 lineto 
+	stroke 
+	345 399 moveto 
+	350 380 lineto 
+	stroke 
+	360 405 moveto 
+	360 424 lineto 
+	stroke 
+	360 415 moveto 
+	490 415 lineto 
+	stroke 
+	361 415 moveto 
+	379 419 lineto 
+	stroke 
+	361 415 moveto 
+	380 410 lineto 
+	stroke 
+} def
+%?partend
+
+%?partdef upStatus001
+%?fn	upStatus001
+%?brief	Meisterschalterbelegung
+%?bbox	0 0 239 79
+/upStatus001 {
+	/irLgSpeed exch def	%?brief lgSpeed %?use INP %?type REAL %?dflt    0.00
+	/irSgSpeed exch def	%?brief sgSpeed %?use INP %?type REAL %?dflt    0.00
+	/ixJoy2Tenab exch def	%?brief 2 T joystick enabled %?use INP %?type BOOL %?dflt false
+	/irJoyLeftY exch def	%?brief joystick left direction 2 (Y) %?use INP %?type REAL %?dflt    0.00
+	/irJoyLeftX exch def	%?brief joystick left direction 1 (X) %?use INP %?type REAL %?dflt    0.00
+	/irJoyRightY exch def	%?brief joystick right direction 2 (Y or right) %?use INP %?type REAL %?dflt    0.00
+	/irJoyRightX exch def	%?brief joystick right direction 1 (X or left) %?use INP %?type REAL %?dflt    0.00
+	/LRsymNrJoyRi2 irJoyRightY def	%?brief symbol number joystick right direction 2 %?use LOC %?type REAL %?dflt    0.00
+	/LRsymNrJoyRi1 irJoyRightX def	%?brief symbol number joystick right direction 1 %?use LOC %?type REAL %?dflt    0.00
+	/LRsymNrJoyLe2 irJoyLeftY def	%?brief symbol number joystick left direction 2 %?use LOC %?type REAL %?dflt    0.00
+	/LRsymNrJoyLe1 irJoyLeftX def	%?brief symbol number joystick left direction 1 %?use LOC %?type REAL %?dflt    0.00
+	irJoyLeftX 100 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		irJoyLeftX 100 
+		FUN_SUB 
+		/LRsymNrJoyLe1 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irJoyLeftY 100 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		irJoyLeftY 100 
+		FUN_SUB 
+		/LRsymNrJoyLe2 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irJoyRightX 100 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		irJoyRightX 100 
+		FUN_SUB 
+		/LRsymNrJoyRi1 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irJoyRightY 100 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 0 translate 
+		0 rotate 
+		1 1 scale 
+		irJoyRightY 100 
+		FUN_SUB 
+		/LRsymNrJoyRi2 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irJoyLeftX 100 gt {	
+		true setflash 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	2 22 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	LRsymNrJoyLe1 
+	spStatus002 
+	setcolor 
+	setmatrix_nlw 
+	false setflash 
+	irJoyLeftY 100 gt {	
+		true setflash 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	60 22 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	LRsymNrJoyLe2 
+	spStatus002 
+	setcolor 
+	setmatrix_nlw 
+	false setflash 
+	irJoyRightX 100 gt {	
+		true setflash 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	120 22 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	LRsymNrJoyRi1 
+	spStatus002 
+	setcolor 
+	setmatrix_nlw 
+	false setflash 
+	irJoyRightY 100 gt {	
+		true setflash 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	178 22 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	LRsymNrJoyRi2 
+	spStatus002 
+	setcolor 
+	setmatrix_nlw 
+	false setflash 
+	3 setlinewidth_nlw 
+	currentcolor 
+	LightGrey 1 77 moveto 
+	1 8 lineto 
+	stroke 
+	120 77 moveto 
+	120 5 lineto 
+	stroke 
+	238 77 moveto 
+	238 8 lineto 
+	stroke 
+	1 8 moveto 
+	3 4 lineto 
+	stroke 
+	238 8 moveto 
+	236 4 lineto 
+	stroke 
+	3 4 moveto 
+	6 2 lineto 
+	stroke 
+	236 4 moveto 
+	232 2 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 48 0 translate 
+	0 rotate 
+	0.37 0.37 scale 
+	ssGeneral041 
+	setcolor 
+	setmatrix_nlw 
+	ixJoy2Tenab true ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey 166 1 translate 
+		0 rotate 
+		0.37 0.37 scale 
+		ssGeneral041 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixJoy2Tenab true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey 164 0 translate 
+		0 rotate 
+		0.37 0.37 scale 
+		ssGeneral040 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	LRsymNrJoyLe1 1 eq 
+	LRsymNrJoyLe1 2 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		34 51 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		irSgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	LRsymNrJoyLe1 3 eq 
+	LRsymNrJoyLe1 4 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		18 35 translate 
+		0 rotate 
+		1 1 scale 
+		irLgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LRsymNrJoyLe1 5 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 65 translate 
+		0 rotate 
+		1 1 scale 
+		irLgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	LRsymNrJoyLe2 1 eq 
+	LRsymNrJoyLe2 2 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		91 51 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		irSgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	LRsymNrJoyLe2 3 eq 
+	LRsymNrJoyLe2 4 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		76 35 translate 
+		0 rotate 
+		1 1 scale 
+		irLgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LRsymNrJoyLe2 5 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		78 65 translate 
+		0 rotate 
+		1 1 scale 
+		irLgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	LRsymNrJoyRi1 1 eq 
+	LRsymNrJoyRi1 2 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		151 51 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		irSgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	LRsymNrJoyRi1 3 eq 
+	LRsymNrJoyRi1 4 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		136 35 translate 
+		0 rotate 
+		1 1 scale 
+		irLgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LRsymNrJoyRi1 5 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		138 65 translate 
+		0 rotate 
+		1 1 scale 
+		irLgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	LRsymNrJoyRi2 1 eq 
+	LRsymNrJoyRi2 2 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		209 51 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		irSgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	LRsymNrJoyRi2 3 eq 
+	LRsymNrJoyRi2 4 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		194 35 translate 
+		0 rotate 
+		1 1 scale 
+		irLgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LRsymNrJoyRi2 5 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		194 35 translate 
+		0 rotate 
+		1 1 scale 
+		irLgSpeed 1 false false 
+		FSfatFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 20 -5 translate 
+	0 rotate 
+	0.37 0.37 scale 
+	ssGeneral039 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 100 0 translate 
+	90 rotate 
+	0.31 0.31 scale 
+	ssGeneral039 
+	setcolor 
+	setmatrix_nlw 
+	ixJoy2Tenab true ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey 135 -5 translate 
+		0 rotate 
+		0.37 0.37 scale 
+		ssGeneral039 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixJoy2Tenab true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey 165 0 translate 
+		90 rotate 
+		0.31 0.31 scale 
+		ssGeneral039 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 215 0 translate 
+	90 rotate 
+	0.31 0.31 scale 
+	ssGeneral039 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend

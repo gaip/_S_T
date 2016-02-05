@@ -1,0 +1,50 @@
+!ident	991858414
+!ident_index	023
+
+!environment	06301
+!target	MCC01
+!state	released
+!machineserial	CDmachinSerialNr
+
+!machinespecifictype	CDmachinSpecType
+
+!machinesalestype	database.MachineSalesType.1.1
+
+!machinetypeseries	database.MachineTypeSeries.1.1
+
+!machineclass	database.MachineClass.1.1
+
+
+# outer core
+out_mcc01.hex	crc1.0x82416A7C	crc2.0x65622464	crc3.0x221EE836	crc4.0x989948AD	crc5.0xEE52AAF7	crc6.0xB3576911	crc7.0x7E8CBC71	crc8.0x5B32F925	crc9.0x619CFDCB	crc10.0x880659B9	crc11.0x3B9F09F1	crc12.0x81A323FC	crc13.0x797058A9	crc14.0xC89A0D40	crc15.0x61AD62FE	crc16.0x1DF115DD	crc17.0x53FF9B40	crc18.0xEDB34F42	crc19.0xA25C6F05	crc20.0x3B24422A	crc21.0xA8B494F7	name.out	version.4.334
+system.cnf	crc1.0x158337CE	name.include	version.4.334
+applicat_mcc01.out	crc1.0xF6F17A2E	crc2.0xA0AA4132	crc3.0x6FECD8E1	crc4.0x369DD69E	crc5.0x2383F206	crc6.0x49ED0881	crc7.0x0CE35BBE	crc8.0x4505047F	crc9.0x4B125ED7	crc10.0x124CB66E	crc11.0x08CDFF9A	crc12.0x48CBB5BA	crc13.0xF7D4478E	crc14.0xE03E805A	crc15.0x52B07448	crc16.0xDB36C785	name.applicat
+project.asc	version.01919
+$softctrl.zip
+$tabdat.c
+
+# screen configuration
+bild.hex	crc1.0x609EA2FF
+$scedit.zip
+
+# monitor
+mon_pikt.s	crc1.0x5550	version.00115	client.* server.BILD
+$pikto.zip
+mon_init.s	crc1.0x9E42	version.00005	client.* server.BILD
+mon1251.s	crc1.0x3251	name.mon_font	version.00003	client.* server.BILD language.=russian language.=bulgaria
+mon88591.s	crc1.0xDC85	name.mon_font	version.00003	client.* server.BILD language.=american language.=dansk language.=deutsch language.=english language.=espanol language.=francais language.=italiano language.=nederlan language.=norsk language.=portugue language.=suomi language.=svenska
+mon88592.s	crc1.0x718B	name.mon_font	version.00003	client.* server.BILD language.=polski language.=magyar language.=cesky language.=romana language.=slovenci language.=slovensc
+mon88594.s	crc1.0xAD0B	name.mon_font	version.00003	client.* server.BILD language.=lietuviu language.=latviesu language.=eesti
+mon88597.s	crc1.0x8FFD	name.mon_font	version.00003	client.* server.BILD language.=greek
+mon88599.s	crc1.0x44ED	name.mon_font	version.00003	client.* server.BILD language.=turkish
+syslog.cnf	crc1.0x4713EACB	version.00043
+$message
+$language
+mde.cnf	version.00192
+lml.cnf	version.00159
+client.cnf	version.00020
+autoexec.frc	version.00082
+database.xml	crc1.0x2BF2DCBF	version.00029
+shutdown.frc	version.00001
+
+boot.cnf	crc.0x053f8c80

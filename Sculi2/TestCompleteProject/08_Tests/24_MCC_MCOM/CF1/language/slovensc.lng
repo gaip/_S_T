@@ -1,0 +1,542 @@
+!version	00058
+#
+!font	UTF8
+!best-fit-font	iso8859-2
+
+# Language File / Sprachtexte File
+# Slovenian / Slowenisch
+!language	slv
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	potisna količina polž 1 [l/min]
+2	potisna količina polž 1 [g/min]
+3	potisna količina cev [l/min]
+4	potisna količina cev [g/min]
+5	potisna količina [l/min]
+6	potisna količina [g/min]
+7	število črpalk
+8	tlak klešč za spone [bar]
+9	čas za prestavitev ekscentra [s]
+10	navijanje glavni vitel
+11	Teža zabijala [kg]
+12	Teža zabijala [lb]
+13	udarci/glob.korak
+14	število cilindrov Push & Pull
+15	dolžina polža [cm]
+16	dolžina polža [ft]
+17	PDE Grafika na tiskalnik
+18	PDE Grafika na kartico
+19	Korak globine [cm]
+20	Korak globine [in]
+21	PDE čas za sproženje [s]
+22	količina betona / impulz [l/imp.]
+23	količina betona / impulz [g/imp.]
+24	območje tipala za bet.tlak [bar]
+25	umerjanje tlaka betona [bar]
+26	Premer količka [cm]
+27	Premer količka [in]
+28	presek droga [cm]
+29	presek droga [in]
+30	presek notranje cevi [cm]
+31	presek notranje cevi [in]
+32	konstrukcijski faktor [%]
+33	vzpon polža [cm]
+34	vzpon polža [in]
+35	vlečna avtomatika start tlak [bar]
+36	vlečna avtomatika stop tlak [bar]
+37	dovolj. presežek betona [%]
+38	ekološki obrati
+39	meritev količine s tlakom (1=˙DA)
+40	vlečna avtomatika maks. tlak [bar]
+41	maks. tlak polž [bar]
+42	maks. tlak cev [bar]
+43	maks. tlak [bar]
+44	potisna količina polž 1 [l/min]
+45	potisna količina polž 1 [g/min]
+46	potisna količina polž 2 [l/min]
+47	potisna količina polž 2 [g/min]
+48	potisna količina polž 3 [l/min]
+49	potisna količina polž 3 [g/min]
+50	število polžev
+51	transp. količina po ceveh [l/min]
+52	transp. količina po ceveh [g/min]
+53	Ročica za pretok odprta [l/min]
+54	Ročica za pretok odprta [g/min]
+55	Ročica za pretok zaprta [l/min]
+56	Ročica za pretok zaprta [g/min]
+57	Ročica za maks. tlak odprta [bar]
+58	Ročica za maks. tlak zaprta [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	št. razdelkov za steber
+62	specifična sila v silosu 1 [kg/dm3]
+63	specifična sila v silosu 1 [lb/ft3]
+64	specifična sila v silosu 2 [kg/dm3]
+65	specifična sila v silosu 2 [lb/ft3]
+66	Globina [m]
+67	Globina [ft]
+68	dvig premika [cm/obr]
+69	dvig premika [in/obr]
+70	teža veziva [kg/m]
+71	teža veziva [lb/ft]
+72	min. potisna količina [%]
+73	torque limitation (1=YES)
+74	transp. količina po ceveh 2 [l/min]
+75	transp. količina po ceveh 2 [g/min]
+76	volume main Pump [l/min]
+
+!LOGGER
+1	Začetni datum
+2	Začetni čas
+3	Končni datum
+4	Končni čas
+5	datum tiskanja
+6	čas tiskanja
+
+!PDESERV
+# English is fix in the system
+
+!PDE
+1	Način obratovanja
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Stran
+4	Dvig zarisovanja
+5	Spust zarisovanja
+6	Radij količka [cm]
+7	Radij količka [in]
+8	Slog
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Vrtanje Kelly
+200	Vrtanje dvojno rotacijsko
+300	Vrtanje CFA
+400	Vibrator
+401	spuščanje
+402	dviganje
+403	spuščanje/dviganje
+404	preko časa
+411	spuščanje vibratorja
+412	dviganje vibratorja
+413	spuščanje & dviganje vibratorja
+414	Vibrator preko časa
+500	Kladivo
+600	Potisni&povleci
+700	Hidravlično prijemalo
+800	Krmiljenje zabijala
+900	Pobiralna posoda
+1000	Obračanje
+1100	Mešanje zemlje
+1200	električni vibrator
+1201	nadom. steber (tlačenje)
+1202	nadom. steber
+1211	el. Vib. stlač. temelj. stebra
+1212	el. Vib. nadom. stebra
+1300	suho mešanje
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplituda [in/100]
+7	Tlak betona [bar]
+2	Amplituda [mm]
+3	Globina [cm]
+4	Globina [ft]
+5	Števec udarcev
+6	Udarci/korak globine
+8	Vrtalni tlak polža [bar]
+9	Vrtalni tlak cevi [bar]
+10	Vrtalni tlak [bar]
+11	Tlak zabijala [bar]
+12	Tlak vibratorja [bar]
+13	Pomik vrtanja [obr/m]
+14	Pomik vrtanja [obr/ft]
+15	Vrtilni moment vrtanja [kip.ft]
+16	Vrtilni moment vrtanja [kNm]
+17	Energija/udarec [kip.ft]
+18	Energija/udarec [kNm]
+19	Energija/globinski korak [kip.ft]
+20	Energija/globinski korak [kNm]
+21	Čas [HH:mm:ss]
+22	Pritisna sila [kN]
+23	Pritisna sila [kip]
+24	Hitrost podajanja [ft/min]
+25	Hitrost podajanja [m/min]
+26	Frekvenca [Hz]
+27	Udarcev/min
+28	Enota vibratorja [VKL/IZKL]
+29	Odstopanje X [ft]
+30	Odstopanje X [cm]
+31	Odstopanje Y [ft]
+32	Odstopanje Y [cm]
+33	Število udarcev
+34	Višina dviga [m]
+35	Višina dviga [ft]
+36	Zgoščevanje/udarec [ft]
+37	Zgoščevanje/udarec [m]
+38	Kompresija absolutno [ft]
+39	Kompresija absolutno [m]
+40	Nastavljena vrednost višine zaviranja [ft]
+41	Nastavljena vrednost višine zaviranja [m]
+42	maks. hitrost vitla 1 [ft/min]
+43	maks. hitrost vitla 1 [m/min]
+44	maks. hitrost vitla 2 [ft/min]
+45	maks. hitrost vitla 2 [m/min]
+46	Datum [TT:MM:JJ]
+47	Čas delovanja [s]
+48	Količina betona [yd3]
+49	Količina betona [m3]
+50	Pozicijska številka
+51	Čas do zabijala ob vrvi [s]
+52	Čas dviganja [s]
+53	Čas spuščanja [s]
+54	Nastavljena vrednost udarcev
+55	Nastavljena vrednost višine dviga [m]
+56	Nastavljena vrednost višine dviga [ft]
+57	Nastavljena vrednost kompresije [m]
+58	Nastavljena vrednost kompresije [ft]
+59	Čas obratovanja pobiralne posode [s]
+60	Ciklusni čas [s]
+61	Breme sipkega materiala [t]
+62	Skupno vlečno breme [t]
+63	Čas obračalnega obratovanja [s]
+64	Breme ciklusa [t]
+65	Skupno breme ciklusa [t]
+66	Breme ciklusa sipkega materiala [t]
+67	Tok [A]
+68	Spuščanje tok [A]
+69	Stranska voda [l/m]
+70	Brizgalna voda [l/m]
+71	Zračni tlak [bar]
+72	Avtomatika VKLOP
+73	Napetost [V]
+74	Prekinitev
+75	Nagib [°]
+76	Št. obratov [obr/min]
+77	Količina betona 1 [yd3]
+78	Količina betona 1 [m3]
+79	Količina betona 2 [yd3]
+80	Količina betona 2 [m3]
+81	Količina betona 3 [yd3]
+82	Količina betona 3 [m3]
+83	obrat 1 [obr]
+84	obrat 2 [obr]
+85	obrat 3 [obr]
+86	Čas [min]
+87	Količina betona [l/min]
+88	Količina betona [g/min]
+89	min. vibr. tlak [bar]
+90	maks. vibr. tlak [bar]
+91	min. podajalna hitrost [ft/min]
+92	min. podajalna hitrost [m/min]
+93	maks. podajalna hitrost [ft/min]
+94	maks. podajalna hitrost [m/min]
+95	maks. vrtalni tlak 1 [bar]
+96	maks. vrtalni tlak 2 [bar]
+97	maks. vrtalni tlak 3 [bar]
+98	min. vrtalni korak 1 [obr/m]
+99	min. vrtalni korak 1 [obr/ft]
+100	min. vrtalni korak 2 [obr/m]
+101	min. vrtalni korak 2 [obr/ft]
+102	min. vrtalni korak 3 [obr/m]
+103	min. vrtalni korak 3 [obr/ft]
+104	min. mešanje [obr]
+105	mešanje 1 [obr]
+106	mešanje 2 [obr]
+107	Volumen betona na globino [l/m]
+108	Volumen betona na globino [g/ft]
+109	Pretok betona 1 [l/min]
+110	Pretok betona 1 [g/min]
+111	Pretok betona 2 [l/min]
+112	Pretok betona 2 [g/min]
+113	Pretok betona 3 [l/min]
+114	Pretok betona 3 [g/min]
+115	Temperatura vibratorja [°C]
+116	Temperatura vibratorja [°F]
+117	maks. vrtalni korak 1 [obr/m]
+118	maks. vrtalni korak 1 [obr/ft]
+119	maks. vrtalni korak 2 [obr/m]
+120	maks. vrtalni korak 2 [obr/ft]
+121	maks. vrtalni korak 3 [obr/m]
+122	maks. vrtalni korak 3 [obr/ft]
+123	mešanje 3 [obr]
+124	min. dvig 1 [cm/obr]
+125	min. dvig 1 [in/obr]
+126	min. dvig 2 [cm/obr]
+127	min. dvig 2 [in/obr]
+128	min. dvig 3 [cm/obr]
+129	min. dvig 3 [in/obr]
+130	pretok veziva [kg/min]
+131	pretok veziva [lb/min]
+132	pretok veziva 1 [kg/min]
+133	pretok veziva 1 [lb/min]
+134	pretok veziva 2 [kg/min]
+135	pretok veziva 2 [lb/min]
+136	pretok veziva 3 [kg/min]
+137	pretok veziva 3 [lb/min]
+138	teža veziva 1 [kg]
+139	teža veziva 1 [lb]
+140	teža veziva 2 [kg]
+141	teža veziva 2 [lb]
+142	teža veziva 3 [kg]
+143	teža veziva 3 [lb]
+144	teža veziva na globino [kg/m]
+145	teža veziva na globino [lb/ft]
+146	kellyspeed [m/min]
+147	kellyspeed [ft/min]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Dvig tlaka vibr. [bar]
+1	Amplituda [in]
+2	Amplituda [mm]
+3	Udarcev/%s ft
+4	Udarcev/%s mm
+5	Globina [ft]
+6	Globina [m]
+7	Kompresija [m]
+8	Odstopanje X [cm]
+9	Odstopanje X [in]
+10	Odstopanje Y [cm]
+11	Odstopanje Y [in]
+12	Tlak betona [bar]
+13	Vrt. tlak polža [bar]
+14	Vrt. tlak cevi [bar]
+15	Vrtalni tlak [bar]
+16	Tlak zabijala [bar]
+17	Dvig tlaka zab. [bar]
+19	Spust tlaka vibr. [bar]
+20	Pomik vrtan. [obr/m]
+21	Pomik vrtan. [obr/ft]
+22	Moment vrt. [kip.ft]
+23	Moment vrt. [kNm]
+24	Energija [kip.ft]
+25	Energija [kNm]
+26	Energija/%s ft [kip.ft]
+27	Energija/%s mm [kNm]
+28	Pritisna sila [kN]
+29	Pritisna sila [kip]
+30	Hitrost podaj. [ft/min]
+31	Hitrost podaj. [m/min]
+32	Hitrost dvig. [ft/min]
+33	Hitrost dvig. [m/min]
+34	Hitrost spušč. [ft/min]
+35	Hitrost spušč. [m/min]
+36	Frekvenca [Hz]
+37	Tok [A]
+38	Tok spuščanja [A]
+39	Stranska voda [l/m]
+40	Brizgalna voda [l/m]
+41	Čas [s]
+42	Čas spuščanje [s]
+43	Udarec [število]
+44	Tlak vibrat. [bar]
+45	Amplituda [%]
+46	Vrtal.tlak 1 [bar]
+47	Vrtal.tlak 2 [bar]
+48	Vrtal.tlak 3 [bar]
+49	Pomik vrta.1 [obr/m]
+50	Pomik vrta.1 [obr/ft]
+51	Pomik vrta.2 [obr/m]
+52	Pomik vrta.2 [obr/ft]
+53	Pomik vrta.3 [obr/m]
+54	Pomik vrta.3 [obr/ft]
+55	Tlak betona1 [bar]
+56	Tlak betona2 [bar]
+57	Tlak betona3 [bar]
+58	Količi.beto. [l/m]
+59	Količi.beto. [g/ft]
+60	Pret.beto.1 [l/min]
+61	Pret.beto.1 [g/min]
+62	Pret.beto.2 [l/min]
+63	Pret.beto.2 [g/min]
+64	Pret.beto.3 [l/min]
+65	Pret.beto.3 [g/min]
+66	Mešanje 1 [obr]
+67	Št. obr.1 [obr/min]
+68	Št. obr.2 [obr/min]
+69	Št. obr.3 [obr/min]
+70	Vibracijs. tok [A]
+71	Prodiranje [cm/obr]
+72	Prodiranje [in/obr]
+73	dvig 1 [cm/obr]
+74	dvig 1 [in/obr]
+75	dvig 2 [cm/obr]
+76	dvig 2 [in/obr]
+77	dvig 3 [cm/obr]
+78	dvig 3 [in/obr]
+79	vezivo [kg/m]
+80	vezivo [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Gradbišče
+2	Številka količka
+3	Tip količka(1beton;2les;3jeklo)
+4	Dolžina količka [m]
+5	Površina količka [cm2]
+6	Premer količka [cm]
+7	Številka količka
+8	Številka zarisov.
+9	Številka voznika
+10	Štev. zahtevka
+11	Točka kompresije
+12	Serijska številka
+13	Številka aparata
+14	Premer količka [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Korak globine [ft]
+2	Korak globine [mm]
+3	maks. globina [cm]
+4	maks. globina [ft]
+5	Udarcev skupno
+6	Energija skupno [kip.ft]
+7	Energija skupno [kNm]
+8	Teža zabijala [lb]
+9	Teža zabijala [kg]
+10	Prikaz momenta
+11	ZDA enote
+12	ZDA enote(kip)
+13	Točka kompresije
+14	Vitel 1 aktiven
+15	Vitel 2 aktiven
+16	Količ. betona skp. [yd3]
+17	Količ. betona skp. [m3]
+18	Štev. imp. (črp. betona)
+19	Lit./imp. (črp. betona)
+20	Nastavljena vrednost udarcev
+21	Kompresija skp. [m]
+22	Nastavljena vrednost kompresije [m]
+23	Nastavljena vrednost višine dviga [m]
+24	Nastavljena vrednost višine zaviranja [m]
+25	Čas skup. [s]
+26	Čas [s]
+27	Štev. cikl. skp.
+28	Breme pob. pos. praz. [t]
+29	Sešt. sipk. mater. [t]
+30	Sešt. pob. pos. polna [t]
+31	Štev. prož. skp.
+32	Praz. teža obeš. [t]
+33	Sešt. brem. ciklusa [t]
+34	Sešt. brem. cikl. skp. [t]
+35	Sešt. brem. sipk. mater. [t]
+36	Čas proc. spusta [s]
+37	Tok maks. proc. spusta [A]
+38	Skup. cikl. čas [s]
+39	Nast. vred. toka maks. [A]
+40	Glob. krit. vleč. [m]
+41	Glob. krit. vleč. 1 [m]
+42	Glob. krit. vleč. 2 [m]
+43	Nast. vred. časa 1 maks. [s]
+44	Nast. vred. poti 1 maks. [m]
+45	Nast. vred. časa 2 maks. [s]
+46	Nast. vred. poti 2 maks. [m]
+47	Nast. vred. časa 3 maks. [s]
+48	Nast. vred. poti 3 maks. [m]
+49	Str. voda skp. [l]
+50	Brizg. voda skp. [l]
+51	Zračni tlak povpr. [bar]
+52	Obr. prijemala
+53	Obr. kladiva
+54	hidr. obr. pot.&povl.
+55	Vrt. obr. Kelly
+56	Vrt. obr. dvojnega rotacijskega
+57	Vrt. obr. CFA
+58	Vibr. obratov.
+59	Enota vibratorja
+60	(kip)
+61	(in / 100)
+62	IZKLOP
+63	VKLOP
+64	Prev. kol. [%]
+65	Kol. bet. za kol. [yd3]
+66	Kol. bet. za kol. [m3]
+67	galon./imp. (črp. bet.)
+68	maks. globina [m]
+69	število polžev
+70	dolžina polža [cm]
+71	dolžina polža [ft]
+72	gps položaj X [cm]
+73	gps položaj Y [cm]
+74	Poraba [kWh]
+75	Začetni nagib [°]
+76	Končni nagib [°]
+77	Dolžina količka [cm]
+78	Dolžina količka [ft]
+79	celotno vezivo [kg]
+80	celotno vezivo [lb]
+81	povpr. vzpon [mm/obr]
+82	povpr. vzpon [in/obr]
+83	povp. tlak vrtanja [bar]
+84	povp. hitr obr. [obr/min]
+85	povpr. vezivo [kg/m]
+86	povpr. vezivo [lb/ft]
+87	povpr. pretok vez. [kg/min]
+88	povpr. pretok vez. [lb/min]
+89	silos 1 [kg]
+90	silos 1 [lb]
+91	silos 2 [kg]
+92	silos 2 [lb]
+93	vstavljalna višina [cm]
+94	vstavljalna višina [ft]
+95	votla sredica [cm]
+96	votla sredica [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	kelly drilling
+200	double rotary drilling
+300	CFA drilling
+400	vibrator
+401	lowering
+402	lifting
+403	lowering/lifting
+404	over time
+411	vibrator lowering
+412	vibrator lifting
+413	vibrator lowering/lifting
+414	vibrator over time
+500	Hammer
+600	push&pull
+700	hydraulic grab
+800	dyn. compaction
+900	dragline
+1000	duty cycle
+1100	soil mixing
+1200	el. vibrator
+1201	repl. column (compaction)
+1202	repl. column
+1211	el. vibro RCC
+1212	el. vibro RC
+1300	dry mixing
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	job site
+2	pile number
+3	pile type(1concrete;2wood;3steel)
+4	pile length [m]
+5	pile area [cm^2]
+6	pile diameter [cm]
+7	slot number
+8	record number
+9	driver number
+10	job number
+11	compaction point
+12	serial number
+13	machine number
+14	pile diameter [in]

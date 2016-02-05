@@ -1,0 +1,573 @@
+!version	00057
+#
+!font	UTF8
+!best-fit-font	iso8859-1
+
+# Language File / Sprachtexte File
+# Dutch / Holländisch
+!language	nld
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Opbrengst spiraalboor [l/min]
+2	Opbrengst spiraalboor [g/min]
+3	Opbrengst buis [l/min]
+4	Opbrengst buis [g/min]
+5	Opbrengst [l/min]
+6	Opbrengst [g/min]
+7	Aantal pompen
+8	Klemtangdruk [bar]
+9	Versteltijd excenter [s]
+10	Inschering hoofdlier
+11	Ramgewicht [kg]
+12	Ramgewicht [lb]
+13	Slagen / dieptestap
+14	Aantal Push & Pull cilinders
+15	Lengte winding [cm]
+16	Lengte winding [ft]
+17	PDE afbeelding op printer
+18	PDE afbeelding op kaart
+19	Dieptestap [cm]
+20	Dieptestap [in]
+21	PDE triggertijd [s]
+22	Hoeveelh. beton / impuls [l/imp.]
+23	Hoeveelh. beton / impuls [g/imp.]
+24	Meetbereik betondruksensor [bar]
+25	Schaalverd. betondrukmeter [bar]
+26	Paaldiameter [cm]
+27	Paaldiameter [in]
+28	Paaldoorsnede [cm]
+29	Paaldoorsnede [in]
+30	Diameter kernbuis [cm]
+31	Diameter kernbuis [in]
+32	Uitdiepfactor [%]
+33	Spoed spiraalboor [cm]
+34	Spoed spiraalboor [in]
+35	Trekautomaat startdruk [bar]
+36	Trekautomaat stopdruk [bar]
+37	toel. overtollig beton [%]
+38	Economisch toerental
+39	Debietmeting d.m.v. druk (1=JA)
+40	Trekautomaat max. druk [bar]
+41	max. druk spiraalboor [bar]
+42	max. druk buis [bar]
+43	max. druk [bar]
+44	Opbrengst spiraalboor 1 [l/min]
+45	Opbrengst spiraalboor 1 [g/min]
+46	Opbrengst spiraalboor 2 [l/min]
+47	Opbrengst spiraalboor 2 [g/min]
+48	Opbrengst spiraalboor 3 [l/min]
+49	Opbrengst spiraalboor 3 [g/min]
+50	Aantal windingen
+51	Capac. buizenlegmachine [l/min]
+52	Capac. buizenlegmachine [g/min]
+53	Cap. grijper openen [l/min]
+54	Cap. grijper openen [g/min]
+55	Cap. grijper sluiten [l/min]
+56	Cap. grijper sluiten [g/min]
+57	Max. druk grijper openen [bar]
+58	Max. druk grijper sluiten [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	aantal secties per paal
+62	specifiek gewicht silo 1 [kg/dm³]
+63	specifiek gewicht silo 1 [lb/ft³]
+64	specifiek gewicht silo 2 [kg/dm³]
+65	specifiek gewicht silo 2 [lb/ft³]
+66	Diepte [m]
+67	Diepte [ft]
+68	spoed van boorvoeding [cm/omw]
+69	spoed van boorvoeding [in/omw]
+70	bindmidelgewicht [kg/m]
+71	bindmidelgewicht [lb/ft]
+72	min. opbrengst [%]
+73	torque limitation (1=YES)
+74	Capac. buizenlegmachine 2 [l/min]
+75	Capac. buizenlegmachine 2 [g/min]
+
+!LOGGER
+1	Startdatum
+2	Starttijd
+3	Einddatum
+4	Eindtijd
+5	Printdatum
+6	Printtijd
+
+!PDESERV
+# !! max. 40 Zeichen !!
+1	Met de toets Start begint de registratie
+3	Met de toets Stop eindigt de registratie
+4	Wachten a.u.b. - Berekening grafiek
+5	Wachten a.u.b. - Berekening drukbeeld
+6	overige punten van
+7	Beeld(en) opgeslagen
+8	Met de toets '0' wordt afdrukken gestart
+10	Geen PDE configuratie
+11	Meer gegevens voor start
+13	Vereiste printer niet gereed!
+14	PDE fout
+15	Druk op een toets
+16	Geheugenkaart niet eringestoken
+17	Loopwerk werd niet gevonden
+18	Te weinig vrij geheugen op geheugenkaart
+19	Opslaan niet mogelijk
+20	Geheugenkaart (printer) niet geplaatst
+21	Loopwerk (printer) niet gevonden
+22	Te weinig vrij geheugen-geh.krt.printer
+23	Opslaan niet mogelijk (printergegevens)
+24	Bedrijf
+25	Weinig vrij geheugen
+26	Weinig vrij geheugen (printer)
+27	PDE opnemen van gegevens gestopt
+28	Toets '.' onderbreken, 'Stop' beeindigen
+29	'Start' doorgaan, 'Stop' beeindigen
+30	Datalogger niet gereed
+31	Geen geheugenruimte, verwissel datakaart
+32	Geen geheugenruimte (printerkaart)
+33	PDE-initialisatie...
+34	Registratie wordt gestart...
+35	Registratie wordt gestopt...
+36	Gegevens worden verstuurd...
+37	Verbinding verbroken...
+
+!PDE
+1	Bedrijfsvoering
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Bladzijde
+4	Aanwijzing heffen
+5	Aanwijzing zakken
+6	Paalradius [cm]
+7	Paalradius [in]
+8	Stijl
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly-boren
+200	Dubbelkops boren
+300	CFA-boren
+400	Verdichter
+401	zakken
+402	heffen
+403	zakken/heffen
+404	via tijd
+411	Verdichter zakken
+412	Verdichter heffen
+413	Verdichter zakken & heffen
+414	Verdichter via tijd
+500	Hamer
+600	push&pull
+700	Hydr. grijper
+800	Ramaansturing
+900	Graafbak
+1000	Overslag
+1100	Grondmenging
+1200	Elektrische vibrator
+1201	Vervangingszuil (verdichting)
+1202	Vervangingszuil
+1211	el. vibrator verv. zuil verdichting
+1212	el. vibrator vervangingszuil
+1300	droogmixen
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitude [in/100]
+7	Betondruk [bar]
+2	Amplitude [mm]
+3	Diepte [cm]
+4	Diepte [ft]
+5	Aantal slagen
+6	Slagen/dieptestap
+8	Boordruk schroef [bar]
+9	Boordruk buis [bar]
+10	Boordruk [bar]
+11	Druk ram [bar]
+12	Druk trilverdichter [bar]
+13	Voortgang boor [omw/m]
+14	Voortgang boor [omw/ft]
+15	Koppel boor [kip.ft]
+16	Koppel boor [kNm]
+17	Energie/slag [kip.ft]
+18	Energie/slag [kNm]
+19	Energie/dieptestap [kip.ft]
+20	Energie/dieptestap [kNm]
+21	Tijd [HH:mm:ss]
+22	Aanperskracht [kN]
+23	Aanperskracht [kip]
+24	Diepteaanzetsnelheid [ft/min]
+25	Diepteaanzetsnelheid [m/min]
+26	Frequentie [Hz]
+27	Slagen/min
+28	Trilverdichter [AAN/UIT]
+29	Afwijking X [ft]
+30	Afwijking X [cm]
+31	Afwijking Y [ft]
+32	Afwijking Y [cm]
+33	Slag nummer
+34	Hefhoogte [m]
+35	Hefhoogte [ft]
+36	Verdichting/slag [ft]
+37	Verdichting/slag [m]
+38	Absolute verdichting [ft]
+39	Absolute verdichting [m]
+40	Richtlijn remh. [ft]
+41	Richtlijn remh. [m]
+42	max. snelh. lier 1 [ft/min]
+43	max. snelh. lier 1 [m/min]
+44	max. snelh. lier 2 [ft/min]
+45	max. snelh. lier 2 [m/min]
+46	Datum [DD:MM:JJ]
+47	Looptijd [s]
+48	Hoeveelheid beton [yd³]
+49	Hoeveelheid beton [m³]
+50	Plaats nummer
+51	Tijd tot ram aan kabel [s]
+52	Heffen tijd [s]
+53	Zakken tijd [s]
+54	Richtlijn slagen
+55	Richtlijn hefhoogte [m]
+56	Richtlijn hefhoogte [ft]
+57	Richtlijn verdichting [m]
+58	Richtlijn verdichting [ft]
+59	Tijd graafbakbedrijfsvoering [s]
+60	Cyclustijd [s]
+61	Last stortgoed [t]
+62	Sleeplast totaal [t]
+63	Tijd overslagbedrijfsvoering [s]
+64	Cycluslast [t]
+65	Cycluslast totaal [t]
+66	Cycluslast stortgoed [t]
+67	Stroom [A]
+68	Zakken stroom [A]
+69	Water zijkant [l/m]
+70	Water top [l/m]
+71	Luchtdruk [bar]
+72	Automaat AAN
+73	Spanning [V]
+74	Onderbreking
+75	Hoek [°]
+76	Toerental [omw/min]
+77	Hoeveelheid beton 1 [yd³]
+78	Hoeveelheid beton 1 [m³]
+79	Hoeveelheid beton 2 [yd³]
+80	Hoeveelheid beton 2 [m³]
+81	Hoeveelheid beton 3 [yd³]
+82	Hoeveelheid beton 3 [m³]
+83	Omwentelingen 1 [omw]
+84	Omwentelingen 2 [omw]
+85	Omwentelingen 3 [omw]
+86	Tijd [min]
+87	Hoeveelheid beton [l/min]
+88	Hoeveelheid beton [g/min]
+89	min. verdichtdruk [bar]
+90	max. verdichtdruk [bar]
+91	min. diepteaanzetsnelheid [ft/min]
+92	min. diepteaanzetsnelheid [m/min]
+93	max. diepteaanzetsnelheid [ft/min]
+94	max. diepteaanzetsnelheid [m/min]
+95	max. boordruk 1 [bar]
+96	max. boordruk 2 [bar]
+97	max. boordruk 3 [bar]
+98	min. boorvoortgang 1 [omw/m]
+99	min. boorvoortgang 1 [omw/ft]
+100	min. boorvoortgang 2 [omw/m]
+101	min. boorvoortgang 2 [omw/ft]
+102	min. boorvoortgang 3 [omw/m]
+103	min. boorvoortgang 3 [omw/ft]
+104	min. menging [omw]
+105	menging 1 [omw]
+106	menging 2 [omw]
+107	betonvolume per diepte [l/m]
+108	betonvolume per diepte [g/ft]
+109	betondebiet 1 [l/min]
+110	betondebiet 1 [g/min]
+111	betondebiet 2 [l/min]
+112	betondebiet 2 [g/min]
+113	betondebiet 3 [l/min]
+114	betondebiet 3 [g/min]
+115	Trilbloktemp. [°C]
+116	Trilbloktemp. [°F]
+117	max. boorvoortgang 1 [omw/m]
+118	max. boorvoortgang 1 [omw/ft]
+119	max. boorvoortgang 2 [omw/m]
+120	max. boorvoortgang 2 [omw/ft]
+121	max. boorvoortgang 3 [omw/m]
+122	max. boorvoortgang 3 [omw/ft]
+123	menging 3 [omw]
+124	min. spoed 1 [cm/omw]
+125	min. spoed 1 [in/omw]
+126	min. spoed 2 [cm/omw]
+127	min. spoed 2 [in/omw]
+128	min. spoed 3 [cm/omw]
+129	min. spoed 3 [in/omw]
+130	bindmiddelhoevelheid [kg/min]
+131	bindmiddelhoevelheid [lb/min]
+132	bindmiddelhoevelheid 1 [kg/min]
+133	bindmiddelhoevelheid 1 [lb/min]
+134	bindmiddelhoevelheid 2 [kg/min]
+135	bindmiddelhoevelheid 2 [lb/min]
+136	bindmiddelhoevelheid 3 [kg/min]
+137	bindmiddelhoevelheid 3 [lb/min]
+138	bindmidelgewicht 1 [kg]
+139	bindmidelgewicht 1 [lb]
+140	bindmidelgewicht 2 [kg]
+141	bindmidelgewicht 2 [lb]
+142	bindmidelgewicht 3 [kg]
+143	bindmidelgewicht 3 [lb]
+144	bindmiddelgew. per diepte [kg/m]
+145	bindmiddelgew. per diepte [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Trilverd.heffen [bar]
+1	Amplitude [in]
+2	Amplitude [mm]
+3	Slagen/%s ft
+4	Slagen/%s mm
+5	Diepte [ft]
+6	Diepte [m]
+7	Verdichting [m]
+8	Afwijking X [cm]
+9	Afwijking X [in]
+10	Afwijking Y [cm]
+11	Afwijking Y [in]
+12	Betondruk [bar]
+13	Boordr.schroef [bar]
+14	Boordr.buis [bar]
+15	Boordruk [bar]
+16	Ramdruk [bar]
+17	Ramdr. heffen [bar]
+19	Trilverd.zakken [bar]
+20	Voortg.boor [omw/m]
+21	Voortg.boor [omw/ft]
+22	Koppel boor [kip.ft]
+23	Koppel boor [kNm]
+24	Energie [kip.ft]
+25	Energie [kNm]
+26	Energie/%s ft [kip.ft]
+27	Energie/%s mm [kNm]
+28	Aanperskracht [kN]
+29	Aanperskracht [kip]
+30	Diepteaanzet [ft/min]
+31	Diepteaanzet [m/min]
+32	Snelh.heffen [ft/min]
+33	Snelh.heffen [m/min]
+34	Snelh.zakken [ft/min]
+35	Snelh.zakken [m/min]
+36	Frequentie [Hz]
+37	Stroom [A]
+38	Stroom zakken [A]
+39	Water zijkant [l/m]
+40	Water top [l/m]
+41	Tijd [s]
+42	Tijd zakken [s]
+43	Slag [nummer]
+44	Verdichtdruk [bar]
+45	Amplitude [%]
+46	Boordruk 1 [bar]
+47	Boordruk.2 [bar]
+48	Boordruk.3 [bar]
+49	Voort.boor.1 [omw/m]
+50	Voort.boor.1 [omw/ft]
+51	Voort.boor.2 [omw/m]
+52	Voort.boor.2 [omw/ft]
+53	Voort.boor.3 [omw/m]
+54	Voort.boor.3 [omw/ft]
+55	Betondruk 1 [bar]
+56	Betondruk 2 [bar]
+57	Betondruk 3 [bar]
+58	Hoeve.beton [l/m]
+59	Hoeve.beton [g/ft]
+60	Bet.debiet1 [l/min]
+61	Bet.debiet1 [g/min]
+62	Bet.debiet2 [l/min]
+63	Bet.debiet2 [g/min]
+64	Bet.debiet3 [l/min]
+65	Bet.debiet3 [g/min]
+66	Menging [omw]
+67	Toerental1 [omw/min]
+68	Toerental2 [omw/min]
+69	Toerental3 [omw/min]
+70	Trilstroom [A]
+71	Indringing [cm/omw]
+72	Indringing [in/omw]
+73	spoed 1 [cm/omw]
+74	spoed 1 [in/omw]
+75	spoed 2 [cm/omw]
+76	spoed 2 [in/omw]
+77	spoed 3 [cm/omw]
+78	spoed 3 [in/omw]
+79	bindmiddel [kg/m]
+80	bindmiddel [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Bouwterrein
+2	Paal nummer
+3	Type paal (1beton;2hout;3staal)
+4	Paallengte [m]
+5	Paaloppervlak [cm²]
+6	Paaldiameter [cm]
+7	Sleufnummer
+8	Registratienr.
+9	Bestuurdernummer
+10	Opdrachtnummer
+11	Verdichtingspunt
+12	Serienummer
+13	Machinenummer
+14	Paaldiameter [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Dieptestap [ft]
+2	Dieptestap [mm]
+3	maximale diepte [cm]
+4	maximale diepte [ft]
+5	Slagen totaal
+6	Energie totaal [kip.ft]
+7	Energie totaal [kNm]
+8	Ramgewicht [lb]
+9	Ramgewicht [kg]
+10	Koppelweergave
+11	US eenheden
+12	US eenheden (kip)
+13	Verdichtingspunt
+14	Lier 1 actief
+15	Lier 2 actief
+16	Totale hoeveelheid beton [yd³]
+17	Totale hoeveelheid beton [m³]
+18	Aantal pulsen (betonpomp)
+19	Liter/pulsen (betonpomp)
+20	Richtlijn slagen
+21	Verdichting totaal [m]
+22	Richtlijn verdichting [m]
+23	Richtlijn hefhoogte [m]
+24	Richtlijn remh. [m]
+25	Totale tijd [s]
+26	Tijd [s]
+27	Totaal aantal cycli
+28	Last graafbak leeg [t]
+29	Som stortgoed [t]
+30	Som graafbak vol [t]
+31	Totaal aantal triggers
+32	Leeggewicht ophanging [t]
+33	Som cycluslast [t]
+34	Som cycluslast totaal [t]
+35	Som cycluslast stortgoed [t]
+36	Tijd zakken [s]
+37	Stroom max. zakken [A]
+38	Cyclustijd totaal [s]
+39	Richtlijn stroom max. [A]
+40	Diepte trekcriterium [m]
+41	Diepte trekcriterium 1 [m]
+42	Diepte trekcriterium 2 [m]
+43	Richtlijn tijd 1 max. [s]
+44	Richtlijn weg 1 max. [m]
+45	Richtlijn tijd 2 max. [s]
+46	Richtlijn weg 2 max. [m]
+47	Richtlijn tijd 3 max. [s]
+48	Richtlijn weg 3 max. [m]
+49	Water zij totaal [l]
+50	Water top totaal [l]
+51	Luchtdruk gemiddeld [bar]
+52	Grijperbedrijfsv.
+53	Hamerbedrijfsv.
+54	hyd. Push&Pull-bedr.
+55	Kelly-boorbedrijfsv.
+56	Dubbelkops-boorbedrijfsv.
+57	CFA-boorbedrijfsv.
+58	Trilverdichten
+59	Trilverdichter
+60	(kip)
+61	(in / 100)
+62	UIT
+63	AAN
+64	Te grote hoeveelheid [%]
+65	Hoeveelheid paalbeton [yd³]
+66	Hoeveelheid paalbeton [m³]
+67	Gallons/pulsen (betonpomp)
+68	maximale diepte [m]
+69	Aantal windingen
+70	Lengte winding [cm]
+71	Lengte winding [ft]
+72	Gps-positie X [cm]
+73	Gps-positie Y [cm]
+74	Verbruik [kWh]
+75	Starthoek [°]
+76	Eindhoek [°]
+77	Paallengte [cm]
+78	Paallengte [ft]
+79	bindmiddel totaal [kg]
+80	bindmiddel totaal [lb]
+81	gem. spoed [mm/omw]
+82	gem. spoed [in/omw]
+83	gem. boordruk [bar]
+84	gem. toerental [omw/min]
+85	gem. binder [kg/m]
+86	gem. binder [lb/ft]
+87	gem. binderstroom [kg/min]
+88	gem. binderstroom [lb/min]
+89	silo 1 [kg]
+90	silo 1 [lb]
+91	silo 2 [kg]
+92	silo 2 [lb]
+93	insteekhoogte [cm]
+94	insteekhoogte [ft]
+95	empty core [cm]
+96	empty core [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly-boren
+200	Dubbelkops boren
+300	CFA-boren
+400	Verdichter
+401	zakken
+402	heffen
+403	zakken/heffen
+404	via tijd
+411	Verdichter zakken
+412	Verdichter heffen
+413	Verdichter zakken & heffen
+414	Verdichter via tijd
+500	Hamer
+600	push&pull
+700	Hydr. grijper
+800	Ramaansturing
+900	Graafbak
+1000	Overslag
+1100	Grondmenging
+1200	Elektrische vibrator
+1201	Vervangingszuil (verdichting)
+1202	Vervangingszuil
+1211	el. vibrator verv. zuil verdichting
+1212	el. vibrator vervangingszuil
+1300	droogmixen
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	Bouwterrein
+2	Paal nummer
+3	Type paal (1beton;2hout;3staal)
+4	Paallengte [m]
+5	Paaloppervlak [cm^2]
+6	Paaldiameter [cm]
+7	Sleufnummer
+8	Registratienr.
+9	Bestuurdernummer
+10	Opdrachtnummer
+11	Verdichtingspunt
+12	Serienummer
+13	Machinenummer
+14	Paaldiameter [in]

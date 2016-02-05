@@ -1,0 +1,573 @@
+!version	00057
+#
+!font	UTF8
+!best-fit-font	iso8859-1
+
+# Language File / Sprachtexte File
+# Portuguese / Portugiesisch
+!language	por
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Capac. descarga rosca [l/min]
+2	Capac. descarga rosca [g/min]
+3	Capac. descarga tubo [l/min]
+4	Capac. descarga tubo [g/min]
+5	Capacidade de descarga [l/min]
+6	Capacidade de descarga [g/min]
+7	Número de bombas
+8	Pressão da tensão de aperto [bar]
+9	Tempo regulação excêntrico [s]
+10	Fixação do cabo guincho principal
+11	Peso do condutor [kg]
+12	Peso do condutor [lb]
+13	Batimentos/avanço profundidade
+14	Número de cilindros Push & Pull
+15	Comprimento das roscas [cm]
+16	Comprimento das roscas [ft]
+17	PDE Gráfico para impressora
+18	PDE Gráfico para placa
+19	Avanço de profundidade [cm]
+20	Avanço de profundidade [in]
+21	PDE Tempo de activador [s]
+22	Quantidade betão/impulso [l/imp.]
+23	Quantidade betão/impulso [g/imp.]
+24	Amp. med. sen. pres. betão [bar]
+25	Escala indic. pressão betão [bar]
+26	Diâmetro do esteio [cm]
+27	Diâmetro do esteio [in]
+28	Largura do esteio [cm]
+29	Largura do esteio [in]
+30	Diâmetro do tubo interior [cm]
+31	Diâmetro do tubo interior [in]
+32	Factor de aprofundamento [%]
+33	Inclinação da rosca [cm]
+34	Inclinação da rosca [in]
+35	Pres. arranque tracção auto [bar]
+36	Pres. paragem tracção auto [bar]
+37	Quantidade betão permitida [%]
+38	Rotação eco.
+39	Med. quant. por pressão (1=SIM)
+40	Pres. máxima tracção auto [bar]
+41	Pressão máxima da rosca [bar]
+42	Pressão máxima do tubo [bar]
+43	Pressão máx. [bar]
+44	Capac. descarga rosca 1 [l/min]
+45	Capac. descarga rosca 1 [g/min]
+46	Capac. descarga rosca 2 [l/min]
+47	Capac. descarga rosca 2 [g/min]
+48	Capac. descarga rosca 3 [l/min]
+49	Capac. descarga rosca 3 [g/min]
+50	N.º de roscas
+51	Capac. descarga máq.tubagem [l/min]
+52	Capac. descarga máq.tubagem [g/min]
+53	Capac. desc. abrir garra [l/min]
+54	Capac. desc. abrir garra [g/min]
+55	Capac. desc. fechar garra [l/min]
+56	Capac. desc. fechar garra [g/min]
+57	Pressão máx. abrir garra [bar]
+58	Pressão máx. fechar garra [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	secções por coluna
+62	peso específico silo 1 [kg/dm³]
+63	peso específico silo 1 [lb/ft³]
+64	peso específico silo 2 [kg/dm³]
+65	peso específico silo 2 [lb/ft³]
+66	Profundidade [m]
+67	Profundidade [ft]
+68	inclinação do avanço [cm/r]
+69	inclinação do avanço [in/r]
+70	peso do aglutinante [kg/m]
+71	peso do aglutinante [lb/ft]
+72	Capacidade mín. de descarga [%]
+73	torque limitation (1=YES)
+74	Capac. descarga máq.tubagem 2 [l/min]
+75	Capac. descarga máq.tubagem 2 [g/min]
+
+!LOGGER
+1	Data de início
+2	Hora de início
+3	Data de conclusão
+4	Hora de conclusão
+5	Data da impressão
+6	Hora da impressão
+
+!PDESERV
+# !! max. 40 Zeichen !!
+1	Tecla Start inicia o registo
+3	Tecla Stop encerra o registo
+4	Aguarde - calculo graficos
+5	Aguarde - calculo imagem impressao
+6	Outros pontos
+7	Imagem/Imagens guardada(s)
+8	Tecla '0' inicia impressao
+10	nenhuma configuracao PDE
+11	necessarias mais entradas para iniciar
+13	Impressora nao operacional!
+14	Erro PDE
+15	Prima uma tecla
+16	Placa de memoria nao introduzida
+17	Unidade nao encontrada
+18	Espaco livre insuficiente na placa mem.
+19	Nao e possível guardar
+20	Placa mem.(impressora) nao introduzida
+21	Unidade (impressora) nao encontrada
+22	Espaco livre insuf.(placa impressora)
+23	Nao e possivel guardar (dados imp.)
+24	Funcionamento
+25	Pouco espaco livre disponivel
+26	Espaco livre quase insuf.(impressora)
+27	Registo PDE parou
+28	Tecla '.' interrompe, 'Stop' encerra
+29	'Start' continuar, 'Stop' encerra
+30	Registador de dados nao esta pronto
+31	Sem espaco memoria, mudar placa dados
+32	Sem espaco memoria (placa impressora)
+33	Inicializacao da PDE...
+34	A iniciar registo...
+35	A interromper registo...
+36	A enviar dados...
+37	Ligacao interrompida...
+
+!PDE
+1	Tipo de funcionamento
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Página
+4	Aumentar registo
+5	Diminuir registo
+6	aio do esteio [cm]
+7	aio do esteio [in]
+8	Estilo
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Broca Kelly
+200	Perfuração com cabeça dupla
+300	Broca continua
+400	Vibrador
+401	baixar
+402	elevar
+403	baixar/elevar
+404	para alem do tempo
+411	Baixar vibrador
+412	Elevar vibrador
+413	Baixar e elevar vibrador
+414	Vibrador para alem do tempo
+500	Martelo
+600	push&pull
+700	Grampo hidraulico
+800	Controlo do condutor
+900	Pa niveladora
+1000	Movimentacao
+1100	Mistura de solo
+1200	vibrador eléctrico
+1201	coluna de subst. (compactação)
+1202	coluna de subst.
+1211	Coluna compact. subst. vib. eléc.
+1212	Coluna subst. vib. eléc.
+1300	mistura seca
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitude [in/100]
+7	Pressão betão [bar]
+2	Amplitude [mm]
+3	Profundidade [cm]
+4	Profundidade [ft]
+5	Número batimentos
+6	Batimentos/avanço profundidade
+8	Pressão de perfuração da rosca [bar]
+9	Pressão de perfuração do tubo [bar]
+10	Pressão de perfuração [bar]
+11	Pressão dos condutores [bar]
+12	Pressão do vibrador [bar]
+13	Avanço de perfuração [r/m]
+14	Avanço de perfuração [r/ft]
+15	Momento de rotação da broca [kip.ft]
+16	Momento de rotação da broca [kNm]
+17	Energia/batimento [kip.ft]
+18	Energia/batimento [kNm]
+19	Energia/avanço profundidade [kip.ft]
+20	Energia/avanço profundidade [kNm]
+21	Tempo [HH:mm:ss]
+22	Força de compressão [kN]
+23	Força de compressão [kip]
+24	Velocidade de avanço [ft/min]
+25	Velocidade de avanço [m/min]
+26	Frequência [Hz]
+27	Batimentos/min
+28	Unidade do vibrador [LIGADA/DESLIGADA]
+29	Desvio X [ft]
+30	Desvio X [cm]
+31	Desvio Y [ft]
+32	Desvio Y [cm]
+33	Número de batimentos
+34	Altura de elevação [m]
+35	Altura de elevação [ft]
+36	Compactação/batimento [ft]
+37	Compactação/batimento [m]
+38	Compactação absoluta [ft]
+39	Compactação absoluta [m]
+40	Altura dos travões predefinida [ft]
+41	Altura dos travões predefinida [m]
+42	Vel. máx. Guincho 1 [ft/min]
+43	Vel. máx. Guincho 1 [m/min]
+44	Vel. máx. Guincho 2 [ft/min]
+45	Vel. máx. Guincho 2 [m/min]
+46	Data [DD:MM:AA]
+47	Tempo de funcionamento [s]
+48	Quantidade de betão [yd³]
+49	Quantidade de betão [m³]
+50	Número da posição
+51	Tempo até condutor estar junto ao cabo [s]
+52	Tempo de elevação [s]
+53	Tempo de abaixamento [s]
+54	Batimentos predefinidos
+55	Altura de elevação predefinida [m]
+56	Altura de elevação predefinida [ft]
+57	Compactação predefinida [m]
+58	Compactação predefinida [ft]
+59	Tempo de funcionamento da pá nivelada [s]
+60	Tempo do ciclo [s]
+61	Carga a granel [t]
+62	Carga de arrasto total [t]
+63	Tempo de funcionamento de movimentação [s]
+64	Carga do ciclo [t]
+65	Carga do ciclo total [t]
+66	Carga do ciclo a granel [t]
+67	Corrente [A]
+68	Baixar corrente [A]
+69	Água dos lados [l/m]
+70	Água das pontas [l/m]
+71	Pressão do ar [bar]
+72	Ligação automática
+73	Tensão [V]
+74	Interrupção
+75	Inclinação [°]
+76	núm.rotações [r/min]
+77	Quantidade de betão 1 [yd³]
+78	Quantidade de betão 1 [m³]
+79	Quantidade de betão 2 [yd³]
+80	Quantidade de betão 2 [m³]
+81	Quantidade de betão 3 [yd³]
+82	Quantidade de betão 3 [m³]
+83	Rotação 1 [r]
+84	Rotação 2 [r]
+85	Rotação 3 [r]
+86	Tempo [min]
+87	Quantidade de betão [l/min]
+88	Quantidade de betão [g/min]
+89	pressão mínima vibrador [bar]
+90	pressão máxima vibrador [bar]
+91	velocidade mínima de avanço [ft/min]
+92	velocidade mínima de avanço [m/min]
+93	velocidade máxima de avanço [ft/min]
+94	velocidade máxima de avanço [m/min]
+95	pressão máxima de perfuração 1 [bar]
+96	pressão máxima de perfuração 2 [bar]
+97	pressão máxima de perfuração 3 [bar]
+98	progresso mín. de perfuração 1 [r/m]
+99	progresso mín. de perfuração 1 [r/ft]
+100	progresso mín. de perfuração 2 [r/m]
+101	progresso mín. de perfuração 2 [r/ft]
+102	progresso mín. de perfuração 3 [r/m]
+103	progresso mín. de perfuração 3 [r/ft]
+104	mistura mínima [r]
+105	mistura 1 [r]
+106	mistura 1 [r]
+107	vol.de betão por profundidade [l/m]
+108	vol.de betão por profundidade [g/ft]
+109	quantidade de betão 1 [l/min]
+110	quantidade de betão 1 [g/min]
+111	quantidade de betão 2 [l/min]
+112	quantidade de betão 2 [g/min]
+113	quantidade de betão 3 [l/min]
+114	quantidade de betão 3 [g/min]
+115	Temp. vibrador [ºC]
+116	Temp. vibrador [ºF]
+117	progresso máx. de perfuração 1 [r/m]
+118	progresso máx. de perfuração 1 [r/ft]
+119	progresso máx. de perfuração 2 [r/m]
+120	progresso máx. de perfuração 2 [r/ft]
+121	progresso máx. de perfuração 3 [r/m]
+122	progresso máx. de perfuração 3 [r/ft]
+123	mistura 3 [r]
+124	inclinação mín. 1 [cm/r]
+125	inclinação mín. 1 [in/r]
+126	inclinação mín. 2 [cm/r]
+127	inclinação mín. 2 [in/r]
+128	inclinação mín. 3 [cm/r]
+129	inclinação mín. 3 [in/r]
+130	quant. aglutinante [kg/min]
+131	quant. aglutinante [lb/min]
+132	quant. aglutinante 1 [kg/min]
+133	quant. aglutinante 1 [lb/min]
+134	quant. aglutinante 2 [kg/min]
+135	quant. aglutinante 2 [lb/min]
+136	quant. aglutinante 3 [kg/min]
+137	quant. aglutinante 3 [lb/min]
+138	peso do aglutinante 1 [kg]
+139	peso do aglutinante 1 [lb]
+140	peso do aglutinante 2 [kg]
+141	peso do aglutinante 2 [lb]
+142	peso do aglutinante 3 [kg]
+143	peso do aglutinante 3 [lb]
+144	peso aglut. por profund. [kg/m]
+145	peso aglut. por profund. [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Elevar pr. vibr. [bar]
+1	Amplitude [in]
+2	Amplitude [mm]
+3	Batimentos/%s ft
+4	Batimentos/%s mm
+5	Profundidade [ft]
+6	Profundidade [m]
+7	Compactação [m]
+8	Desvio X [cm]
+9	Desvio X [in]
+10	Desvio Y [cm]
+11	Desvio Y [in]
+12	Pressão betão [bar]
+13	Pr. perf. rosca [bar]
+14	Pr. perf. tubo [bar]
+15	Pressão perf. [bar]
+16	Pressão condutor [bar]
+17	Elevar pr. cond. [bar]
+19	Baixar pr. vibr. [bar]
+20	Avanço perf. [r/m]
+21	Avanço perf. [r/ft]
+22	M. rot. broca [kip.ft]
+23	M. rot. broca [kNm]
+24	Energia [kip.ft]
+25	Energia [kNm]
+26	Energia/%s ft [kip.ft]
+27	Energia/%s mm [kNm]
+28	Força compressão [kN]
+29	Força compressão [kip]
+30	Vel. avanço [ft/min]
+31	Vel. avanço [m/min]
+32	Vel. elevação [ft/min]
+33	Vel. elevação [m/min]
+34	Vel. abaixamento [ft/min]
+35	Vel. abaixamento [m/min]
+36	Frequência [Hz]
+37	Corrente [A]
+38	Baixar corrente [A]
+39	Água lados [l/m]
+40	Água pontas [l/m]
+41	Tempo [s]
+42	Diminuir tempo [s]
+43	Batimento [número]
+44	Pressão vibrador [bar]
+45	Amplitude [%]
+46	Press.perf.1 [bar]
+47	Press.perf.2 [bar]
+48	Press.perf.3 [bar]
+49	Avanço perf.1 [r/m]
+50	Avanço perf.1 [r/ft]
+51	Avanço perf.2 [r/m]
+52	Avanço perf.2 [r/ft]
+53	Avanço perf.3 [r/m]
+54	Avanço perf.3 [r/ft]
+55	Press.betão1 [bar]
+56	Press.betão2 [bar]
+57	Press.betão3 [bar]
+58	Quant.betão [l/m]
+59	Quant.betão [g/ft]
+60	Flux.betão1 [l/min]
+61	Flux.betão1 [g/min]
+62	Flux.betão2 [l/min]
+63	Flux.betão2 [g/min]
+64	Flux.betão3 [l/min]
+65	Flux.betão3 [g/min]
+66	Mistura [r]
+67	Rotações 1 [r/min]
+68	Rotações 2 [r/min]
+69	Rotações 3 [r/min]
+70	Corr. vibrador [A]
+71	Penetração [cm/r]
+72	Penetração [in/r]
+73	inclinação 1 [cm/r]
+74	inclinação 1 [in/r]
+75	inclinação 2 [cm/r]
+76	inclinação 2 [in/r]
+77	inclinação 3 [cm/r]
+78	inclinação 3 [in/r]
+79	aglutinante [kg/m]
+80	aglutinante [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Terreno de construcao
+2	Numero de esteios
+3	Tipo de esteio(1betao;2madeira;aco)
+4	Comprimento do esteio [m]
+5	Area do esteio [cm²]
+6	Diâmetro do esteio [cm]
+7	N.º da ranhura
+8	N.º do registo
+9	Número do condutor
+10	Número da tarefa
+11	Ponto de compactação
+12	Número de serie
+13	Número do equipamento
+14	Diâmetro do esteio [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Avanço de profundidade [ft]
+2	Avanço de profundidade [mm]
+3	Profundidade máxima [cm]
+4	Profundidade máxima [ft]
+5	Batimentos totais
+6	Energia total [kip.ft]
+7	Energia total [kNm]
+8	Peso do condutor [lb]
+9	Peso do condutor [kg]
+10	Indicação do momento de rotação
+11	Unidades dos EUA
+12	Unidades dos EUA (kip)
+13	Ponto de compactação
+14	Guincho 1 Activo
+15	Guincho 2 Activo
+16	Quantidade de betão total [yd³]
+17	Quantidade de betão total [m³]
+18	Número de imp.(bomba de betão)
+19	Litros/imp.(bomba de betão)
+20	Batimentos predefinidos
+21	Compactação total [m]
+22	Compactação predefinida [m]
+23	Altura de elevação predefinida [m]
+24	Altura dos travões predefinida [m]
+25	Tempo total [s]
+26	Tempo [s]
+27	Número de ciclos total
+28	Carga da pá niveladora vazia [t]
+29	Soma da carga a granel [t]
+30	Soma da pá niveladora cheia [t]
+31	Número de activadores total
+32	Aparelho de suspensão com peso vazio [t]
+33	Soma da carga de ciclo [t]
+34	Soma da carga de ciclo total [t]
+35	Soma da carga de ciclo a granel [t]
+36	Tempo do processo de abaixamento [s]
+37	Corrente máx. do processo abaixamento [A]
+38	Tempo de ciclo total [s]
+39	Corrente máx. predefinida [A]
+40	Profundidade critério de tracção [m]
+41	Profundidade critério de tracção 1 [m]
+42	Profundidade critério de tracção 2 [m]
+43	Tempo 1 máx. predefinido [s]
+44	Percurso 1 máx. predefinido [m]
+45	Tempo 2 máx. predefinido [s]
+46	Percurso 2 máx. predefinido [m]
+47	Tempo 3 máx. predefinido [s]
+48	Percurso 3 máx. predefinido [m]
+49	Água dos lados total [l]
+50	Água das pontas total [l]
+51	Pressão do ar média [bar]
+52	Funcionamento do grampo
+53	Funcionamento martelo
+54	Func. Push&Pull hidr.
+55	Func. broca Kelly
+56	Func. perfuração com cabeça dupla
+57	Func. broca contínua
+58	Funcionamento vibrador
+59	Unidade do vibrador
+60	(kip)
+61	(in / 100)
+62	DESLIGADO
+63	LIGADO
+64	Consumo em excesso [%]
+65	volume de esteio de cimento [yd³]
+66	volume de esteio de cimento [m³]
+67	gallons/imp.(bomba de betão)
+68	Profundidade máxima [m]
+69	N.º de roscas
+70	Comprimento das roscas [cm]
+71	Comprimento das roscas [ft]
+72	gps posição X [cm]
+73	gps posição Y [cm]
+74	Consumo [kWh]
+75	Inclinação de início [°]
+76	Inclinação de conclusão [°]
+77	Comprimento do esteio [cm]
+78	Comprimento do esteio [ft]
+79	total aglutinante [kg]
+80	total aglutinante [lb]
+81	ang. incl. méd. [mm/r]
+82	ang. incl. méd. [in/r]
+83	pressão perf. méd. [bar]
+84	veloc. rot. méd. [r/min]
+85	aglutinante méd. [kg/m]
+86	aglutinante méd. [lb/ft]
+87	fluxo aglut. méd. [kg/min]
+88	fluxo aglut. méd. [lb/min]
+89	silo 1 [kg]
+90	silo 1 [lb]
+91	silo 2 [kg]
+92	silo 2 [lb]
+93	altura inserção [cm]
+94	altura inserção [ft]
+95	empty core [cm]
+96	empty core [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Broca Kelly
+200	Perfuração com cabeça dupla
+300	Broca continua
+400	Vibrador
+401	baixar
+402	elevar
+403	baixar/elevar
+404	para alem do tempo
+411	Baixar vibrador
+412	Elevar vibrador
+413	Baixar e elevar vibrador
+414	Vibrador para alem do tempo
+500	Martelo
+600	push&pull
+700	Grampo hidraulico
+800	Controlo do condutor
+900	Pa niveladora
+1000	Movimentacao
+1100	Mistura de solo
+1200	vibrador eléctrico
+1201	coluna de subst. (compactação)
+1202	coluna de subst.
+1211	Coluna compact. subst. vib. eléc.
+1212	Coluna subst. vib. eléc.
+1300	mistura seca
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	Terreno de construcao
+2	Numero de esteios
+3	Tipo de esteio(1betao;2madeira;aco)
+4	Comprimento do esteio [m]
+5	Area do esteio [cm^2]
+6	Diametro do esteio [cm]
+7	No. da ranhura
+8	No. do registo
+9	Numero do condutor
+10	Numero da tarefa
+11	Ponto de compactacao
+12	Numero de serie
+13	Numero do equipamento
+14	Diametro do esteio [in]

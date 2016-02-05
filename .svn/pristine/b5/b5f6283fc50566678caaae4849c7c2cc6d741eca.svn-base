@@ -1,0 +1,88 @@
+-----------------------
+- Team AC3 14.05.2012 -
+-----------------------
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+PAMS
+-----
+- 6 Juni LHB: Lizenzverwaltung und Prozessen
+- Test Version (1.0.5) available here: http://10.27.184.22/
+- Generation of licences files through WebService
+- Interpretation of PAMS Licences files for Sculi
+
+Open:
+- Which dongle (Aladdin vs. Gemalto) ?
+- External users in Active Directory ?
+
+! Open:
+- Verwaltungprozess mit Sculi --> Meeting with Glauser & Wallmueller
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+Sculi 1
+--------
+1.361
+- End of sprint
+- Hasan is doing scenaring tests
+- sent to CPL this week for approbation
+
+General
+- Bernhard Schmiedl Master 4/Lidat Teleservice
+- Olivier Monney & Patrick Bruegger travel to LFR to test DPF Functions
+- Included into 1.362 ?
+
+1.370
+- Start on Wednesday
+- SCR functions
+- PAMS Licences files
+
+!Open:
+- Wirtschaft & Verwaltungprozess mit PAMS
+
+
+Sculi 2
+--------
+- User requirements defined with Markus Burri
+- List of current variables used in Sculi 1 -> ODX
+- Prototype accepted
+- Todo: planning
+- 23 Mai: ITM Meeting
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+LiDIS (QuickUpload pour la prod, liaison avec BAAN)
+----------------------------------------------------
+- En cours: Bug à la prod --> déploiement
+
+HzmLib (version améliorée - gestion de la communication)
+---------------------------------------------------------
+- Merge des modifications sur les différents outils
+
+Stratégie Download
+-------------------
+- rounded problem DCM --> Hzm
+- all in DWN ?
+
+Strategie (LWE)
+----------
+- gestion des scripts d'export pour les quickuploads (plusieurs départements)
+- waiting on Bugnon (donner les informations au MD6 pour pouvoir appeller ce script manuellement)
+- Late: KW19 planned
+- mailing list
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+Team
+-----
+- Common Framework
+- Strategie LMB Tools
+

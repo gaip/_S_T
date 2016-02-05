@@ -1,0 +1,539 @@
+!version	00057
+#
+!font	UTF8
+!best-fit-font	iso8859-2
+
+# Language File / Sprachtexte File
+# Polish / Polnisch
+!language	pol
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Ilość przetłaczana ślimaka [l/min]
+2	Ilość przetłaczana ślimaka [g/min]
+3	Ilość przetłaczana rury [l/min]
+4	Ilość przetłaczana rury [g/min]
+5	Ilość przetłaczana [l/min]
+6	Ilość przetłaczana [g/min]
+7	Liczba pomp
+8	Ciśnienie kleszczy zacisk. [bar]
+9	Czas przest. mimośrodu [s]
+10	Nawleczenie główn. dźwignika
+11	Ciężar młota [kg]
+12	Ciężar młota [lb]
+13	Uderzeń / głębia
+14	Liczba cylindrów Push & Pull
+15	Długość ślimaka [cm]
+16	Długość ślimaka [ft]
+17	Grafika PDE na drukarkę
+18	Grafika PDE na kartę
+19	Krok zagłębienia [cm]
+20	Krok zagłębienia [in]
+21	Czas wyzwalania PDE [s]
+22	Ilość betonu / impuls [l/imp.]
+23	Ilość betonu / impuls [g/imp.]
+24	Zakres pom.czujn.ciśn.betonu [bar]
+25	Skalowanie wsk. ciśn.betonu [bar]
+26	Średnica pala [cm]
+27	Średnica pala [in]
+28	Przekrój poprzeczny kołka [cm]
+29	Przekrój poprzeczny kołka [in]
+30	Średnica rury rdzeniowej [cm]
+31	Średnica rury rdzeniowej [in]
+32	Współczynnik drążenia [%]
+33	Skok ślimaka [cm]
+34	Skok ślimaka [in]
+35	Ciśn. startu ukł.aut.wyciąg. [bar]
+36	Ciśn. zatrz.ukł.aut.wyciąg. [bar]
+37	dop.nadmiar betonu [%]
+38	Ek.prędkość.obrotowa
+39	Pomiar ilości ciśnieniem (1=TAK)
+40	Maks.ciśn.ukł.autom.wyciąg. [bar]
+41	maks. ciśnienie ślimaka [bar]
+42	maks. ciśnienie w rurach [bar]
+43	maks. ciśnienie [bar]
+44	Ilość przetł. ślimaka 1 [l/min]
+45	Ilość przetł. ślimaka 1 [g/min]
+46	Ilość przetł. ślimaka 2 [l/min]
+47	Ilość przetł. ślimaka 2 [g/min]
+48	Ilość przetł. ślimaka 3 [l/min]
+49	Ilość przetł. ślimaka 3 [g/min]
+50	Liczba ślimaków
+51	Ilość przetł. rur [l/min]
+52	Ilość przetł. rur [g/min]
+53	Przepływ - otw. chwytaka [l/min]
+54	Przepływ - otw. chwytaka [g/min]
+55	Przepływ - zam. chwytaka [l/min]
+56	Przepływ - zam. chwytaka [g/min]
+57	Maks. ciśn. otw. chwytaka [bar]
+58	Maks. ciśn. zam. chwytaka [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	ilość sekcji w kolumnie
+62	specyficzna waga silosu 1 [kg/dm3]
+63	specyficzna waga silosu 1 [lb/ft3]
+64	specyficzna waga silosu 2 [kg/dm3]
+65	specyficzna waga silosu 2 [lb/ft3]
+66	Głębokość [m]
+67	Głębokość [ft]
+68	skok posuwu [cm/obr]
+69	skok posuwu [in/obr]
+70	waga spoi. [kg/m]
+71	waga spoi. [lb/ft]
+72	min. ilość przetłaczana [%]
+73	torque limitation (1=YES)
+74	Ilość przetł. rur 2 [l/min]
+75	Ilość przetł. rur 2 [g/min]
+
+!LOGGER
+1	Data uruchomienia
+2	Czas uruchomienia
+3	Data zakończenia
+4	Czas zakończenia
+5	data wydruku
+6	godzina wydruku
+
+!PDESERV
+# English is fix in the system
+
+!PDE
+1	Tryb pracy
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Strona
+4	Zapis podnoszenia
+5	Zapis opuszczania
+6	Promień pala [cm]
+7	Promień pala [in]
+8	Styl
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Wiercenie graniatką
+200	Wiercenie dwugłowicowe
+300	Wiercenie ślimakiem ciągłym
+400	Wibromłot
+401	Opuszczanie
+402	Podnoszenie
+403	Opuszczanie/podnoszenie
+404	Czasowo
+411	Opuszczanie. wibromłota
+412	Podnoszenie wibromłota
+413	Opuszczanie i podnoszenie wibromłota
+414	Wibromłot czasowo
+500	Młot
+600	push&pull
+700	Chwytak hydrauliczny
+800	Sterowanie kafara
+900	Łopata zgarniarki
+1000	Przeładunek
+1100	Mieszanie ziemi
+1200	wibrator elektr.
+1201	kolumna wym. (kompakcyjna)
+1202	kolumna wym.
+1211	komp. kol. wym. wibr. elektr.
+1212	kol. wym. wibr. elektr.
+1300	mieszanie na sucho
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplituda [in/100]
+7	Ciśnienie betonu [bar]
+2	Amplituda [mm]
+3	Głębokość [cm]
+4	Głębokość [ft]
+5	Liczba uderzeń
+6	Liczba uderzeń/krok zagłębienia
+8	Ciśnienie wiercenia ślimaka [bar]
+9	Ciśnienie wiercenia rury [bar]
+10	Ciśnienie wiercenia [bar]
+11	Ciśnienie kafara [bar]
+12	Ciśnienie wibromłota [bar]
+13	Postęp wiercenia [obr/m]
+14	Postęp wiercenia [obr/ft]
+15	Moment obrotowy wiercenia [kip.ft]
+16	Moment obrotowy wiercenia [kNm]
+17	Energia/uderzenie [kip.ft]
+18	Energia/uderzenie [kNm]
+19	Energia/krok zagłębienia [kip.ft]
+20	Energia/krok zagłębienia [kNm]
+21	Czas [GG:mm:ss]
+22	Siła docisku [kN]
+23	Siła docisku [kip]
+24	Prędkość posuwu [ft/min]
+25	Prędkość posuwu [m/min]
+26	Częstotliwość [Hz]
+27	Liczba uderzeń/min
+28	Podzespół wibromłota [WŁ/WYŁ]
+29	Odchyłka X [ft]
+30	Odchyłka X [cm]
+31	Odchyłka Y [ft]
+32	Odchyłka Y [cm]
+33	Numer uderzenia
+34	Wysokość podnoszenia [m]
+35	Wysokość podnoszenia [ft]
+36	Zagęszczenie/uderzenie [ft]
+37	Zagęszczenie/uderzenie [m]
+38	Zagęszczenie absolutne [ft]
+39	Zagęszczenie absolutne [m]
+40	Zdefiniowana wysokość hamowania [ft]
+41	Zdefiniowana wysokość hamowania [m]
+42	Maks. prędk. wciąg. 1 [ft/min]
+43	Maks. prędk. wciąg. 1 [m/min]
+44	Maks. prędk. wciąg. 2 [ft/min]
+45	Maks. prędk. wciąg. 2 [m/min]
+46	Data [DD:MM:RR]
+47	czas pracy [s]
+48	Ilość betonu [yd3]
+49	Ilość betonu [m3]
+50	Numer pozycji
+51	Czas aż kafar będzie na linie [s]
+52	Czas podnoszenia [s]
+53	Czas opuszczania [s]
+54	Zdefiniowana ilość uderzeń
+55	Zdefiniowana wysokość podnoszenia [m]
+56	Zdefiniowana wysokość podnoszenia [ft]
+57	Zdefiniowane zagęszczenie [m]
+58	Zdefiniowane zagęszczenie [ft]
+59	Czas pracy łopatą zgarniarki [s]
+60	Czas cyklu [s]
+61	Ciężar mat. nasypowego [t]
+62	Ciężar wleczony [t]
+63	Czas trybu przeładunkowego [s]
+64	Obciążenie cyklu [t]
+65	Łączne obciążenie cyklu [t]
+66	Obciążenie cyklu materiału nasypowego [t]
+67	Prąd [A]
+68	Prąd opuszczania [A]
+69	Woda boczna [l/m]
+70	Woda szczytowa [l/m]
+71	Ciśnienie powietrza [bar]
+72	Automatyka WŁ
+73	Napięcie [V]
+74	Przerwanie
+75	Nachylenie [°]
+76	Prędkość obrotowa [obr/min]
+77	Ilość betonu 1 [yd3]
+78	Ilość betonu 1 [m3]
+79	Ilość betonu 2 [yd3]
+80	Ilość betonu 2 [m3]
+81	Ilość betonu 3 [yd3]
+82	Ilość betonu 3 [m3]
+83	Obrót 1 [obr]
+84	Obrót 2 [obr]
+85	Obrót 3 [obr]
+86	Czas [min]
+87	Ilość betonu [l/min]
+88	Ilość betonu [g/min]
+89	min. ciśnienie wibratora [bar]
+90	maks.ciśnienie wibratora [bar]
+91	min. prędkość posuwu [ft/min]
+92	min. prędkość posuwu [m/min]
+93	maks. prędkość posuwu [ft/min]
+94	maks. prędkość posuwu [m/min]
+95	maks. nacisk na świder 1 [bar]
+96	maks. nacisk na świder 2 [bar]
+97	maks. nacisk na świder 3 [bar]
+98	min. postęp wiercenia 1 [obr/m]
+99	min. postęp wiercenia 1 [obr/ft]
+100	min. postęp wiercenia 2 [obr/m]
+101	min. postęp wiercenia 2 [obr/ft]
+102	min. postęp wiercenia 3 [obr/m]
+103	min. postęp wiercenia 3 [obr/ft]
+104	min. mieszanie [obr]
+105	Mieszanie 1 [obr]
+106	Mieszanie 2 [obr]
+107	Objętość betonu na głębokość [l/m]
+108	Objętość betonu na głębokość [g/ft]
+109	Ilość betonu 1 [l/min]
+110	Ilość betonu 1 [g/min]
+111	Ilość betonu 2 [l/min]
+112	Ilość betonu 2 [g/min]
+113	Ilość betonu 3 [l/min]
+114	Ilość betonu 3 [g/min]
+115	temp. wibratora [°C]
+116	temp. wibratora [°F]
+117	maks. postęp wiercenia 1 [obr/m]
+118	maks. postęp wiercenia 1 [obr/ft]
+119	maks. postęp wiercenia 2 [obr/m]
+120	maks. postęp wiercenia 2 [obr/ft]
+121	maks. postęp wiercenia 3 [obr/m]
+122	maks. postęp wiercenia 3 [obr/ft]
+123	Mieszanie 3 [obr]
+124	min. skok 1 [cm/obr]
+125	min. skok 1 [in/obr]
+126	min. skok 2 [cm/obr]
+127	min. skok 2 [in/obr]
+128	min. skok 3 [cm/obr]
+129	min. skok 3 [in/obr]
+130	ilość spoi. [kg/min]
+131	ilość spoi. [lb/min]
+132	ilość spoi.1 [kg/min]
+133	ilość spoi.1 [lb/min]
+134	ilość spoi.2 [kg/min]
+135	ilość spoi.2 [lb/min]
+136	ilość spoi.3 [kg/min]
+137	ilość spoi.3 [lb/min]
+138	waga spoi.1 [kg]
+139	waga spoi.1 [lb]
+140	waga spoi.2 [kg]
+141	waga spoi.2 [lb]
+142	waga spoi.3 [kg]
+143	waga spoi.3 [lb]
+144	wa.sp.na gł. [kg/m]
+145	wa.sp.na gł. [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	C.podn..kaf. [bar]
+1	Amplituda [in]
+2	Amplituda [mm]
+3	Uderzenia/%s ft
+4	Uderzenia/%s mm
+5	Głębokość [ft]
+6	Głębokość [m]
+7	Zagęszczenie [m]
+8	Odchyłka X [cm]
+9	Odchyłka X [in]
+10	Odchyłka Y [cm]
+11	Odchyłka Y [in]
+12	Ciśn. bet. [bar]
+13	C.wier.ślim. [bar]
+14	C.wier.rur. [bar]
+15	Ciśn.wierc. [bar]
+16	Ciśn. kafara [bar]
+17	C.podn.kaf. [bar]
+19	C.podn.kaf. [bar]
+20	Pos.wierc. [obr/m]
+21	Pos.wierc. [obr/ft]
+22	Mo.obr.w. [kip.ft]
+23	Mo.obr.w. [kNm]
+24	Energia [kip.ft]
+25	Energia [kNm]
+26	En./%s ft [kip.ft]
+27	En./%s mm [kNm]
+28	S.docisku [kN]
+29	S.docisku [kip]
+30	Pr.posuwu [ft/min]
+31	Pr.posuwu [m/min]
+32	Pr.podn. [ft/min]
+33	Pr.podn. [m/min]
+34	Pr.opuszcz. [ft/min]
+35	Pr.opuszcz. [m/min]
+36	Częstotliwość [Hz]
+37	Prąd [A]
+38	Prąd opuszcz. [A]
+39	Woda boczna [l/m]
+40	Woda szczyt. [l/m]
+41	Czas [s]
+42	Czas opuszcz. [s]
+43	Uderzenie [numer]
+44	Ciś.wibromł. [bar]
+45	Amplituda [%]
+46	Ciśn.wierc.1 [bar]
+47	Ciśn.wierc.2 [bar]
+48	Ciśn.wierc.3 [bar]
+49	Pos.wierc.1 [obr/m]
+50	Pos.wierc.1 [obr/ft]
+51	Pos.wierc.2 [obr/m]
+52	Pos.wierc.2 [obr/ft]
+53	Pos.wierc.3 [obr/m]
+54	Pos.wierc.3 [obr/ft]
+55	Ciśn.bet.1 [bar]
+56	Ciśn.bet.2 [bar]
+57	Ciśn.bet.3 [bar]
+58	Il.betonu [l/m]
+59	Il.betonu [g/ft]
+60	Il.betonu1 [l/min]
+61	Il.betonu1 [g/min]
+62	Il.betonu2 [l/min]
+63	Il.betonu2 [g/min]
+64	Il.betonu3 [l/min]
+65	Il.betonu3 [g/min]
+66	Mieszanie [obr]
+67	Pręd.ob.1 [obr/min]
+68	Pręd.ob.2 [obr/min]
+69	Pręd.ob.3 [obr/min]
+70	prąd wibratora [A]
+71	zagłębienie [cm/obr]
+72	zagłębienie [in/obr]
+73	skok 1 [cm/obr]
+74	skok 1 [in/obr]
+75	skok 2 [cm/obr]
+76	skok 2 [in/obr]
+77	skok 3 [cm/obr]
+78	skok 3 [in/obr]
+79	spoiwo [kg/m]
+80	spoiwo [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Miejsce budowy
+2	Numer pala
+3	Typ pala(1beton;2drewno;3stal)
+4	Długość pala [m]
+5	Powierzchnia pala [cm2]
+6	Średnica pala [cm]
+7	Numer szczeliny
+8	Nr zapisu
+9	Nr operatora
+10	Nr zlecenia
+11	Punkt zagęszczania
+12	Nr seryjny
+13	Nr urządzenia
+14	Średnica pala [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Krok zagłębienia [ft]
+2	Krok zagłębienia [mm]
+3	Maksymalna głębokość [cm]
+4	Maksymalna głębokość [ft]
+5	Łączna ilość uderzeń
+6	Łączna energia [kip.ft]
+7	Łączna energia [kNm]
+8	Ciężar młota [lb]
+9	Ciężar młota [kg]
+10	Wskaźnik momentu obrotowego
+11	Jednostki USA
+12	Jednostki USA (kip)
+13	Punkt zagęszczania
+14	Wciągarka 1 aktywna
+15	Wciągarka 2 aktywna
+16	Łączna ilość betonu [yd3]
+17	Łączna ilość betonu [m3]
+18	Liczba impulsów(pompy betonu)
+19	Litry/impuls (pompy betonu)
+20	Zdefiniowana ilość uderzeń
+21	Łączne zagęszczenie [m]
+22	Zdefiniowane zagęszczenie [m]
+23	Zdefiniowana wysokość podnoszenia [m]
+24	Zdefiniowana wysokość hamowania [m]
+25	Łączny czas [s]
+26	Czas [s]
+27	Łączna liczba cykli
+28	Ciężar pustej łopaty zgarniarki [t]
+29	Suma materiału nasypowego [t]
+30	Suma pełnej łopaty zgarniarki [t]
+31	Liczba zadziałań układu spustowego
+32	Ciężar pustego zawieszenia [t]
+33	Suma obciążenia cyklu [t]
+34	Suma obciążenia cyklu [t]
+35	Suma obciążenia cyklu materiału nasypowego [t]
+36	Czas procedury opuszczania [s]
+37	Maks. prąd procedury opuszczania [A]
+38	Łączny czas cyklu [s]
+39	Zdefiniowany maksymalny prąd [A]
+40	Głębokość kryterium wyciągania [m]
+41	Głębokość kryterium wyciągania 1 [m]
+42	Głębokość kryterium wyciągania 2 [m]
+43	Zdefiniowany maks. czas 1 [s]
+44	Zdefiniowana maks. droga 1 [m]
+45	Zdefiniowany maks. czas 2 [s]
+46	Zdefiniowana maks. droga 2 [m]
+47	Zdefiniowany maks. czas 3 [s]
+48	Zdefiniowana maks. droga 3 [m]
+49	Łączna woda boczna [l]
+50	Łączna woda szczytowa [l]
+51	Przeciętne ciśnienie powietrza [bar]
+52	Tryb chwytaka
+53	Tryb młota
+54	Hydrauliczny tryb push&pull
+55	Tryb wiercenia graniatką
+56	Dwugłowicowy tryb wiercenia
+57	Tryb wiercenia ślimakiem ciągłym
+58	Tryb wibromłota
+59	Podzespół wibromłota
+60	(kip)
+61	(in / 100)
+62	WYŁ.
+63	WŁ.
+64	Nadmiar [%]
+65	Ilość betonu na pal [yd3]
+66	Ilość betonu na pal [m3]
+67	Galony/impuls (pompy betonu)
+68	Maksymalna głębokość [m]
+69	Liczba ślimaków
+70	Długość ślimaka [cm]
+71	Długość ślimaka [ft]
+72	gps pozycja X [cm]
+73	gps pozycja Y [cm]
+74	zużycie [kWh]
+75	Nachylenie uruchomienia [°]
+76	Nachylenie zakończenia [°]
+77	Długość pala [cm]
+78	Długość pala [ft]
+79	całkowite spoiwo [kg]
+80	całkowite spoiwo [lb]
+81	śr. podziałka [mm/obr]
+82	śr. podziałka [in/obr]
+83	śr. ciśn. wierc. [bar]
+84	śr. prędk. wst. [obr/min]
+85	śr. spoiwo [kg/m]
+86	śr. spoiwo [lb/ft]
+87	śr.przepł. spoiwa [kg/min]
+88	śr.przepł. spoiwa [lb/min]
+89	silos 1 [kg]
+90	silos 1 [lb]
+91	silos 2 [kg]
+92	silos 2 [lb]
+93	wys. wkładania [cm]
+94	wys. wkładania [ft]
+95	empty core [cm]
+96	empty core [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	kelly drilling
+200	double rotary drilling
+300	CFA drilling
+400	vibrator
+401	lowering
+402	lifting
+403	lowering/lifting
+404	over time
+411	vibrator lowering
+412	vibrator lifting
+413	vibrator lowering/lifting
+414	vibrator over time
+500	Hammer
+600	push&pull
+700	hydraulic grab
+800	dyn. compaction
+900	dragline
+1000	duty cycle
+1100	soil mixing
+1200	el. vibrator
+1201	repl. column (compaction)
+1202	repl. column
+1211	el. vibro RCC
+1212	el. vibro RC
+1300	mieszanie na sucho
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	job site
+2	pile number
+3	pile type(1concrete;2wood;3steel)
+4	pile length [m]
+5	pile area [cm^2]
+6	pile diameter [cm]
+7	slot number
+8	record number
+9	driver number
+10	job number
+11	compaction point
+12	serial number
+13	machine number
+14	pile diameter [in]

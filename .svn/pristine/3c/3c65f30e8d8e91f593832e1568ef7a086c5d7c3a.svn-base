@@ -1,0 +1,12 @@
+vibrator system
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:29
+category			0	1	2	3	4	5	6
+ad vibrator system pressure [bar]	%MD1.76	MDdd2ExtAnalSign	<100	[100..200[	[200..300[	>=300
+ad device faw rope speed [m/min]	%MD4.44	SDVfawRopeSpeed	<0.01	[0.01..0.05[	>=0.05
+ad vibrator amplitude [mm]	%MD1.79	MDhamJoySignal	<1	[1..5[	[5..20[	>=20
+ad vibrator frequency [Hz]	%MD1.78	MDhamPumpSignal	<12	[12..18[	[18..24[	[24..28[	[28..34[	[34..40[	>=40
+vibrator gearbox max(1or2) temperature [°C]	%MD1.406	%MD1.406	<10	[10..80[	>=80
+feed action pressure [kN]	%MD1.185	MDaddWiExtAnaSig	<120	[120..240[	[240..360[	>=360
+
+ad vibrator system pressure [bar]	ad device faw rope speed [m/min]	ad vibrator amplitude [mm]	ad vibrator frequency [Hz]	vibrator gearbox max(1or2) temperature [°C]	feed action pressure [kN]	sum of time [sek]

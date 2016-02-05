@@ -1,0 +1,31 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity" x:Name="Start_connection_Name"
+	mc:Ignorable="d"
+	x:Class="Sculi2Screens.Start_connection"
+	Width="640" Height="480">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+
+		<TextBlock HorizontalAlignment="Left" Style="{DynamicResource TitleLeft-Sketch}" Margin="50,0,0,0" d:LayoutOverrides="Height"><Run Language="fr-ch" Text="Start connection"/></TextBlock>
+		<Button Content="&lt;-" HorizontalAlignment="Left" Style="{DynamicResource Button-Sketch}" Width="50" FontSize="48" Margin="0" Height="50" VerticalAlignment="Top">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<pi:NavigateToScreenAction TargetScreen="Sculi2Screens.Screen_1"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
+		<TextBlock HorizontalAlignment="Left" Style="{DynamicResource SubtitleLeft-Sketch}" VerticalAlignment="Top" Margin="50,100,0,0" Grid.Row="1"><Run Text="Detected devices"/></TextBlock>
+		<TextBlock HorizontalAlignment="Left" Style="{DynamicResource SubtitleLeft-Sketch}" Text="Lidec2" VerticalAlignment="Top" Margin="100,200,0,0" FontSize="18.667"/>
+		<Image Source="pack://siteoforigin:,,,/Image1.png" Stretch="Fill" HorizontalAlignment="Left" Height="59.329" VerticalAlignment="Top" Width="67.333" Margin="89,140.671,0,0">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="MouseLeftButtonDown">
+					<pi:NavigateToScreenAction TargetScreen="Sculi2Screens.Screen_1_1"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Image>
+		<TextBox Style="{DynamicResource Note-Sketch}" TextWrapping="Wrap" Text="TODO:&#xd;&#xa;- Add information about the current connected devices&#xd;&#xa;- Add refresh button" Margin="148,0,28,44.329" Height="180" VerticalAlignment="Bottom"/>
+	</Grid>
+</UserControl>

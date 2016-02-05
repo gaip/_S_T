@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%German / Deutsch
+%?language	deu
+
+%section: SCREEN
+/TSoilFlowAuger	(Fördermenge Schnecke) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Fördermenge Schnecke)
+/TSoilFlowCase	(Fördermenge Rohr) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Fördermenge Rohr)
+/TSoilFlow	(Fördermenge) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Fördermenge)
+/TSnumbOfPumps	(Pumpenanzahl) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Pumpenanzahl)
+/TSclampJawPress	(Klemmzangendruck) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Klemmzangendruck)
+/TSexcAutoTime	(Exzenterverstellzeit) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Exzenterverstellzeit)
+/TSramWeight	(Rammgewicht) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Rammgewicht)
+/TSblowsPerDepthStep	(Schläge / Tiefenschritt) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Schläge / Tiefenschritt)
+/TSnumbPuPuCylinder	(Anzahl Push & Pull Zylinder) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Anzahl Push & Pull Zylinder)
+/TSaugerLength	(Schneckenlänge) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Schneckenlänge)
+/TSconcVolPerImp	(Betonmenge / Impuls) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Betonmenge / Impuls)
+/TSscalConcPresSens	(Messbereich Betondrucksensor) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Messbereich Betondrucksensor)
+/TSscalConcPresDisp	(Skalierung Betondruckanzeige) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Skalierung Betondruckanzeige)
+/TSpileDiameter	(Pfahldurchmesser) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Pfahldurchmesser)
+/TSmaxPressAuger	(max. Druck Schnecke) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (max. Druck Schnecke)
+/TSmaxPressCase	(max. Druck Rohr) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (max. Druck Rohr)
+/TSmaxPressure	(max. Druck) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (max. Druck)
+/TSoilFlowAuger1	(Fördermenge Schnecke 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Fördermenge Schnecke 1)
+/TSoilFlowAuger2	(Fördermenge Schnecke 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Fördermenge Schnecke 2)
+/TSoilFlowAuger3	(Fördermenge Schnecke 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Fördermenge Schnecke 3)
+/TSnumbOfAugers	(Schneckenanzahl) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Schneckenanzahl)
+/TSoilFlowOscil	(Fördermenge Verrohrungsm.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Fördermenge Verrohrungsm.)
+/TSoilFlowGrabOpen	(Fördermenge Greifer öffnen) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Fördermenge Greifer öffnen)
+/TSoilFlowGrabClose	(Förderm. Greifer schließen) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Förderm. Greifer schließen)
+/TSmaxPressGrabOpen	(max. Druck Greifer öffnen) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (max. Druck Greifer öffnen)
+/TSmaxPressGrabClose	(max. Druck Greifer schließen) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (max. Druck Greifer schließen)
+/TSminOilFlow	(min. Fördermenge) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. Fördermenge)
+/TSoilFlowOscil2	(Fördermenge Verrohrungsm.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Fördermenge Verrohrungsm.2)
+/TStorqueLimitation	(Drehmomentbegrenzung) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (Drehmomentbegrenzung)
+/TSoilFlow38Hz	(Fördermenge bei 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (Fördermenge bei 38Hz)
+/TSvibFreq	(Rüttlerfrequenz) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (Rüttlerfrequenz)

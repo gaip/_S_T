@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child list">
+			<Node name="item0">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="debug">
+							<Prp name="workfolder" type="S" value="c:\windows\system32\"/>
+						</Node>
+						<Node name="runas">
+							<Prp name="domain" type="S" value="Lmbw2k\"/>
+						</Node>
+						<Node name="simple">
+							<Prp name="filename" type="S" value="cmd.exe"/>
+							<Prp name="filepath" type="S" value="C:\Windows\system32\"/>
+							<Prp name="workfolder" type="S" value="c:\windows\system32\"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Debug"/>
+					</Node>
+					<Prp name="node name" type="S" value="msconfig"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+					<Prp name="userchangename" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{347D58D7-688E-49B9-BF86-55BE4C38DEE0}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Node name="item1">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="debug">
+							<Prp name="parameters" type="S" value="/c _INSP_N.bat"/>
+							<Prp name="workfolder" type="S" value="C:\Users\lmbtuh0\Documents\Sculi\SculiEnv\LMB_Dongle\Trunk\src\MarxAdmin\PME1"/>
+						</Node>
+						<Node name="simple">
+							<Prp name="filename" type="S" value="cmd.exe"/>
+							<Prp name="filepath" type="S" value="C:\Windows\System32\"/>
+							<Prp name="parameters" type="S" value="/c _INSP_N.bat"/>
+							<Prp name="workfolder" type="S" value="C:\Users\lmbtuh0\Documents\Sculi\SculiEnv\LMB_Dongle\Trunk\src\MarxAdmin\PME1"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="autorunonrecording" type="B" value="-1"/>
+					<Prp name="node name" type="S" value="Dongle_RUN"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+					<Prp name="userchangename" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{9A575DBD-FD10-4CFB-BBAD-8D1FE82FFD81}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Node name="item2">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="debug">
+							<Prp name="parameters" type="S" value="C:\Users\lmbtuh0\Documents\Data Protocol ECU Lidec 1 2000 00 0000.pdf"/>
+						</Node>
+						<Node name="simple">
+							<Prp name="filename" type="S" value="AcroRd32.exe"/>
+							<Prp name="filepath" type="S" value="C:\Program Files (x86)\Adobe\Reader 11.0\Reader\"/>
+							<Prp name="parameters" type="S" value="C:\Users\lmbtuh0\Documents\Data Protocol ECU Lidec 1 2000 00 0000.pdf"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="node name" type="S" value="AcroRd32"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{EF099E4B-AAE8-449A-94A9-F7AB6E3D626A}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Node name="item3">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="debug">
+							<Prp name="parameters" type="S" value="/c reboot.bat"/>
+							<Prp name="workfolder" type="S" value="c:\"/>
+						</Node>
+						<Node name="simple">
+							<Prp name="filename" type="S" value="cmd.exe"/>
+							<Prp name="filepath" type="S" value="C:\Windows\System32\"/>
+							<Prp name="parameters" type="S" value="/c reboot.bat"/>
+							<Prp name="workfolder" type="S" value="c:\"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="node name" type="S" value="Reboot"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+					<Prp name="userchangename" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{17BB270E-7576-4ACA-80F3-62CDDB36272D}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Node name="item4">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="debug">
+							<Prp name="parameters" type="S" value="start OpenVPNService"/>
+							<Prp name="workfolder" type="S" value="C:\Windows\System32\"/>
+						</Node>
+						<Node name="simple">
+							<Prp name="filename" type="S" value="sc.exe"/>
+							<Prp name="parameters" type="S" value="start OpenVPNService"/>
+							<Prp name="workfolder" type="S" value="C:\Windows\System32\"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="node name" type="S" value="StartOpenVPN"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+					<Prp name="userchangename" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{1C8D9983-B3A0-4B62-9997-4992167DEE2E}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Node name="item5">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="simple">
+							<Prp name="filename" type="S" value="SCULi.exe"/>
+							<Prp name="filepath" type="S" value="C:\Program Files (x86)\Liebherr\SCULi\"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="node name" type="S" value="SCULi"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{D6286CF1-2AED-42DF-B847-CBF9205BEA52}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Node name="item6">
+				<Node name="config">
+					<Node name="runmodeparams">
+						<Node name="simple">
+							<Prp name="filename" type="S" value="services.msc"/>
+							<Prp name="filepath" type="S" value="C:\Windows\System32\"/>
+						</Node>
+						<Prp name="activerunmode" type="S" value="Simple"/>
+					</Node>
+					<Prp name="node name" type="S" value="services"/>
+					<Prp name="usefeaturedruntimeobject" type="B" value="-1"/>
+				</Node>
+				<Node name="data"/>
+				<Node name="test data"/>
+				<Prp name="key" type="S" value="{04A59EA1-A813-4BAF-BE99-6AC38AE6B289}"/>
+				<Prp name="type" type="S" value="{FD30A383-63C2-4C25-948C-2595C0F81320}"/>
+				<Prp name="typename" type="S" value="Tested Application"/>
+			</Node>
+			<Prp name="item count" type="I" value="7"/>
+		</Node>
+		<Node name="config">
+			<Prp name="node name" type="S" value="TestedApps"/>
+		</Node>
+		<Node name="data"/>
+		<Node name="folders">
+			<Node name="folders"/>
+		</Node>
+		<Node name="test data"/>
+		<Prp name="key" type="S" value="{66F9BA41-431D-4FF1-AB19-81483863E8BA}"/>
+		<Prp name="signature" type="S" value="{90D101C8-80C7-48D4-9055-2E451B9BCD75}"/>
+		<Prp name="type" type="S" value="{90D101C8-80C7-48D4-9055-2E451B9BCD75}"/>
+		<Prp name="typename" type="S" value="Tested Applications"/>
+		<Prp name="version" type="I" value="910"/>
+	</Node>
+</Nodes>

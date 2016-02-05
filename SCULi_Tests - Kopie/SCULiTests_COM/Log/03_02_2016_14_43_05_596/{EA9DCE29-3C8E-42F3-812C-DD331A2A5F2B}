@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 3">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="162"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="21"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="182"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718454514"/>
+					<Prp name="object bottom" type="I" value="540"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Panel_ContextActions.btn_actM4_MessageAnalyzer"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="object top" type="I" value="479"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135133681"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (11, 11) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;btnAddFilter&quot;)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 5">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="586"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718770833"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135453241"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 9)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 9">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage9.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="442"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.571889919"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135584838"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 5)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 2">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="262"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="21"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="166"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718265857"/>
+					<Prp name="object bottom" type="I" value="540"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Panel_ContextActions.btn_actM4_MessageAnalyzer"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="object top" type="I" value="479"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6134944097"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (30, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;Workgroup&quot;)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 10">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage10.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="406"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718941551"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135622222"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 4)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 14">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage14.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="658"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5719066551"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135755093"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 11)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 6">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="550"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718802546"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135484259"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 8)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 8">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage8.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="478"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718871759"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135550347"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 6)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 0">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="509"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="21"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="51"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5716085532"/>
+					<Prp name="object bottom" type="I" value="540"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Panel_ContextActions.btn_actM4_MessageAnalyzer"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="object top" type="I" value="479"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.613276875"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (30, 30) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.SCULi.Form_Main.Panel_ContextActions.btn_actM4_MessageAnalyzer&#xA;(Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CContextActionsRollout&quot;).VCLObject(&quot;CContextActionsPageScroller&quot;).VCLObject(&quot;CContextActionsPanel&quot;).VCLObject(&quot;btn_actM4_MessageAnalyzer&quot;))"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 11">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage11.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="370"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718971991"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135650926"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 3)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 1" type="S" value="{6CA6591F-92CC-42E8-85E2-875A23549B5F}"/>
+			<Prp name="unit 0" type="S" value="{FDC00FD5-8764-49BF-9D72-65A2BA3AC304}"/>
+			<Prp name="unit 2" type="S" value="{E6F23CC2-9FFE-4596-8DFF-EF28228FA2A0}"/>
+		</Node>
+		<Node name="message 4">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="622"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718731713"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135421759"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 7">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="514"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718833565"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135514931"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 7)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 21">
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="date" type="D" value="42403.613821088"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="16"/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="stack end" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The test execution was interrupted."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 13">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage13.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="298"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5719038657"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.613571794"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 1)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 17">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage17.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="730"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5719160648"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.613584375"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 13)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 15">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage15.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="694"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5719105093"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135784028"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 12)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 16">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage16.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="748"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5719133102"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135812037"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 14)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 18">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage18.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="354"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="331"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="331"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5719677894"/>
+					<Prp name="object bottom" type="I" value="355"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;pnlFilterObjects&quot;).VCLObject(&quot;pnlObjects&quot;).VCLObject(&quot;pnlGroup&quot;)"/>
+					<Prp name="object right" type="I" value="619"/>
+					<Prp name="object top" type="I" value="325"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6136480787"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (0, 29) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;pnlFilterObjects&quot;).VCLObject(&quot;pnlObjects&quot;).VCLObject(&quot;pnlGroup&quot;)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 19">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage20.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="340"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5719976157"/>
+					<Prp name="object bottom" type="I" value="378"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="4"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;pnlFilterObjects&quot;).VCLObject(&quot;pnlObjects&quot;).VCLObject(&quot;pnlGroup&quot;).Window(&quot;TCategoryPanelSurface&quot;, &quot;&quot;, 1).VCLObject(&quot;cboGroup&quot;)"/>
+					<Prp name="object right" type="I" value="612"/>
+					<Prp name="object top" type="I" value="356"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.613679375"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;pnlFilterObjects&quot;).VCLObject(&quot;pnlObjects&quot;).VCLObject(&quot;pnlGroup&quot;).Window(&quot;TCategoryPanelSurface&quot;, &quot;&quot;, 1).VCLObject(&quot;cboGroup&quot;)"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The combo box item 'outer' was selected."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 12">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage12.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="334"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="190"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="217"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5719010301"/>
+					<Prp name="object bottom" type="I" value="629"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="61"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Tab_MessageAnalyzer.CLowerArea_MessageAnalyzer.CMainFilterPanel.FilterFrame.VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 10)"/>
+					<Prp name="object right" type="I" value="245"/>
+					<Prp name="object top" type="I" value="615"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6135689699"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (27, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;New Filter&quot;, 2)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="42403.613821088"/>
+			</Node>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+			<Prp name="color" type="I" value="0"/>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="length" type="I" value="1"/>
+			<Prp name="columnindex" type="I" value="0"/>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="isinteger" type="B" value="0"/>
+			<Prp name="description" type="S" value=""/>
+		</Node>
+		<Node name="message 20">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6136805787"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Select SubGroup"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 1">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="129"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="21"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="109"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="42403.5718019097"/>
+					<Prp name="object bottom" type="I" value="540"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Panel_ContextActions.btn_actM4_MessageAnalyzer"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="object top" type="I" value="479"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="date" type="D" value="42403.6134697106"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (13, 13) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CPageCtrlHeaderPanel&quot;).VCLObject(&quot;pnlFilterActions&quot;).VCLObject(&quot;btnShowFilter&quot;)"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="stacktext" type="S" value="_2_4_3_0_MCC_FilterWithGroupSubgroup()"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="16"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

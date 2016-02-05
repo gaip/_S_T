@@ -1,0 +1,9 @@
+!version	00058
+mon_out_5_1.hex	crc1.0xB111	name.mon_out	version.5.135	client.*	server.BILD	loader.10278735
+mon_out_5_1.hex	crc1.0xB111	name.mon_out	version.5.135	client.*	server.BILD	loader.10426950
+mon_out_5_3.hex	crc1.0x9D4C	name.mon_out	version.5.328	client.*	server.BILD	loader.10499224
+mon_out_6.hex	crc1.0x7F0F	name.mon_out	version.6.038	client.LAN1	server.BILD	loader.10446150
+mon_out_6.hex	crc1.0x7F0F	name.mon_out	version.6.038	client.LAN2	server.BILD	loader.10446150
+mon_out_6.hex	crc1.0x7F0F	name.mon_out	version.6.038	client.LAN3	server.BILD	loader.10446150
+
+upd_mon.cnf	crc.0x8b1e6985

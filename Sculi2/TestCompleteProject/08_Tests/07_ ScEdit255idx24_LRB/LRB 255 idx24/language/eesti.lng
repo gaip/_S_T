@@ -1,0 +1,568 @@
+!version	00055
+#
+!font	UTF8
+!best-fit-font	iso8859-4
+
+# Language File / Sprachtexte File
+# Estonian / Estnisch
+!language	est
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Edastuskogus tigu [l/min]
+2	Edastuskogus tigu [g/min]
+3	Edastuskogus toru [l/min]
+4	Edastuskogus toru [g/min]
+5	Edastuskogus [l/min]
+6	Edastuskogus [g/min]
+7	Pumpade arv
+8	Kinnitusrakise rõhk [bar]
+9	Ekstsentri seadistusaeg [s]
+10	Peavintsi kordsus
+11	Rammimismass [kg]
+12	Rammimismass [lb]
+13	Lööki / sügavussamm
+14	Push & Pull silindrite arv
+15	Teo pikkus [cm]
+16	Teo pikkus [ft]
+17	PDE graafika printerile
+18	PDE graafika kaardile
+19	Sügavussamm [cm]
+20	Sügavussamm [in]
+21	PDE trigeri aeg [s]
+22	Betoonikogus / impulss [l/imp.]
+23	Betoonikogus / impulss [g/imp.]
+24	Bet-rõhu sens. mõõtmisvahem. [bar]
+25	Betoonirõhu näidiku skaala [bar]
+26	Vaia laebimoeoet [cm]
+27	Vaia laebimoeoet [in]
+28	Vaia ristlõige [cm]
+29	Vaia ristlõige [in]
+30	Sisetoru läbimõõt [cm]
+31	Sisetoru läbimõõt [in]
+32	Süvendusfaktor [%]
+33	Teo samm [cm]
+34	Teo samm [in]
+35	Tõmbeautomaatika start rõhk [bar]
+36	Tõmbeautomaatika stopp rõhk [bar]
+37	lub. betooni ülekogus [%]
+38	Öko-pöörded
+39	Koguse mõõtmine rõhu abil (1=JAH)
+40	Tõmbeautomaatika maks. rõhk [bar]
+41	maks. rõhk tigu [bar]
+42	maks. rõhk toru [bar]
+43	maks. rõhk [bar]
+44	Edastuskogus tigu 1 [l/min]
+45	Edastuskogus tigu 1 [g/min]
+46	Edastuskogus tigu 2 [l/min]
+47	Edastuskogus tigu 2 [g/min]
+48	Edastuskogus tigu 3 [l/min]
+49	Edastuskogus tigu 3 [g/min]
+50	Tigude arv
+51	Edastuskogus torustamism. [l/min]
+52	Edastuskogus torustamism. [g/min]
+53	Teisaldus-kgs haar. avam. [l/min]
+54	Teisaldus-kgs haar. avam. [g/min]
+55	Teisalduskgs haar. sulgem. [l/min]
+56	Teisalduskgs haar. sulgem. [g/min]
+57	Maks. rõhk haar. avam. [bar]
+58	Maks. rõhk haar. sulgem. [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	sektsioone vaia kohta
+62	erikaal punker 1 [kg/dm3]
+63	erikaal punker 1 [lb/ft3]
+64	erikaal punker 2 [kg/dm3]
+65	erikaal punker 2 [lb/ft3]
+66	Sügavus [m]
+67	Sügavus [ft]
+68	etteande tõus [cm/p]
+69	etteande tõus [in/p]
+70	sideaine kaal [kg/m]
+71	sideaine kaal [lb/ft]
+72	min. edastuskogus [%]
+
+!LOGGER
+1	Alustamiskuupäev
+2	Algusaeg
+3	Lõpetamiskuupäev
+4	Lõpuaeg
+5	printimiskuupäev
+6	printimisaeg
+
+!PDESERV
+# !! max. 40 Zeichen !!
+1	Klahv Start alustab salvestamist
+3	Klahv Stop lopetab salvestamise
+4	Palun oodake - graafika arvutamine
+5	Palun oodake - printpildi arvutamine
+6	Edasised punktid
+7	Pilt(id) salvestatud
+8	Klahv '0' käivitab printimise
+10	PDE konfiguratsioon puudub
+11	Käivitamiseks vaja lisaandmeid
+13	Printer ei ole töövalmis!
+14	PDE viga
+15	Vajutage suvalist klahvi
+16	Mälukaart paigaldamata
+17	Lugejaseadet ei leitud
+18	Kaardi vaba mälumaht ebapiisav
+19	Salvestamine pole voimalik
+20	Mälukaart (printer) paigaldamata
+21	Lugejaseadet (printer) ei leitud
+22	Ebapiisav mälumaht (printeri kaart)
+23	Salvestam. voimatu (printeri andmed)
+24	Tööreziim
+25	Vähe vaba mälumahtu
+26	Vähe vaba mälumahtu (printer)
+27	PDE salvestamine seisatud
+28	Klahv '.' katkestab, 'Stop' lopetab
+29	'Start' jätkab, 'Stop' lopetab
+30	Datalogger pole valmis
+31	Pole vaba mälu, vahetage andmekaart
+32	Pole vaba mälu (printeri kaart)
+33	PDE initsialiseerimine...
+34	Salvestamine käivitatakse...
+35	Salvestamine peatatakse...
+36	Edastatakse andmeid...
+37	Ühendus katkenud...
+
+!PDE
+1	Töörežiim
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Lehekülg
+4	Tõstmise salvest.
+5	Langet. salvest.
+6	Vaia raadius [cm]
+7	Vaia raadius [in]
+8	Stiil
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly-puurimine
+200	topeltpeapuurimine
+300	CFA-puurimine
+400	Vibraator
+401	toestmine
+402	langetamine
+403	toestm./langet.
+404	uele aja
+411	Vibr. langet.
+412	Vibr. toestm.
+413	Vibr. ueles&alla
+414	Vibr. uele aja
+500	Haamer
+600	push&pull
+700	Huedr. haarats
+800	Rammijuht.-sues.
+900	Heitkopp
+1000	Teisaldamine
+1100	pinnase segamine
+1200	elektrivibraator
+1201	tamptäitesammas
+1202	täitesammas
+1211	el. vibraator TT-sammas
+1212	el. vibraator täitesammas
+1300	kuivsegamine
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplituud [in/100]
+7	Betoonisurve [bar]
+2	Amplituud [mm]
+3	Sügavus [cm]
+4	Sügavus [ft]
+5	Löökide arv
+6	Lööki/sügavussamm
+8	Teo puurimissurve [bar]
+9	Toru puurimissurve [bar]
+10	Puurimissurve [bar]
+11	Rammimissurve [bar]
+12	Vibraatori surve [bar]
+13	Puurimisedu [p/m]
+14	Puurimisedu [p/ft]
+15	Puurimise pöördemoment [kip.ft]
+16	Puurimise pöördemoment [kNm]
+17	Energia/löök [kip.ft]
+18	Energia/löök [kNm]
+19	Energia/sügavussamm [kip.ft]
+20	Energia/sügavussamm [kNm]
+21	Aeg [tt:mm:ss]
+22	Survejõud [kN]
+23	Survejõud [kip]
+24	Etteandekiirus [ft/min]
+25	Etteandekiirus [m/min]
+26	Sagedus [Hz]
+27	Lööki/min
+28	Vibraatormehhanism [SISSE/VÄLJA]
+29	Hälve X [ft]
+30	Hälve X [cm]
+31	Hälve Y [ft]
+32	Hälve Y [cm]
+33	Löögi number
+34	Tõstekõrgus [m]
+35	Tõstekõrgus [ft]
+36	Tihendamine/löök [ft]
+37	Tihendamine/löök [m]
+38	Absoluutne tihendamine [ft]
+39	Absoluutne tihendamine [m]
+40	Etteantud pidurduskõrgus [ft]
+41	Etteantud pidurduskõrgus [m]
+42	Vints 1 maks. kiirus [ft/min]
+43	Vints 1 maks. kiirus [m/min]
+44	Vints 2 maks. kiirus [ft/min]
+45	Vints 2 maks. kiirus [m/min]
+46	Kuupäev [PP:KK:AA]
+47	Tööaeg [s]
+48	Betooni kogus [yd3]
+49	Betooni kogus [m3]
+50	Positsiooni number
+51	Aeg kuni vaivasar trossil [s]
+52	Tõstmisaeg [s]
+53	Langetamisaeg [s]
+54	Etteantud löögid
+55	Etteantud tõstekõrgus [m]
+56	Etteantud tõstekõrgus [ft]
+57	Etteantud tihendamine [m]
+58	Etteantud tihendamine [ft]
+59	Heitkoparežiimi aeg [s]
+60	Tsükli aeg [s]
+61	Puisteaine koormus [t]
+62	Veokoormus kokku [t]
+63	Teisaldamisrežiimi aeg [s]
+64	Tsüklikoormus [t]
+65	Tsüklikoormus kokku [t]
+66	Puisteaine tsüklikoormus [t]
+67	Vool [A]
+68	Langetamise vool [A]
+69	Külgvesi [l/m]
+70	Tipuvesi [l/m]
+71	Õhurõhk [bar]
+72	Automaatika SISSE
+73	Pinge [V]
+74	Katkestus
+75	Kalle [°]
+76	Pööretearv [p/min]
+77	Betooni kogus 1 [yd3]
+78	Betooni kogus 1 [m3]
+79	Betooni kogus 2 [yd3]
+80	Betooni kogus 2 [m3]
+81	Betooni kogus 3 [yd3]
+82	Betooni kogus 3 [m3]
+83	Pöörded 1 [p]
+84	Pöörded 2 [p]
+85	Pöörded 3 [p]
+86	Aeg [min]
+87	Betooni kogus [l/min]
+88	Betooni kogus [g/min]
+89	min. vibraatori surve [bar]
+90	maks. vibraatori surve [bar]
+91	min. etteandekiirus [ft/min]
+92	min. etteandekiirus [m/min]
+93	maks. etteandekiirus [ft/min]
+94	maks. etteandekiirus [m/min]
+95	maks. puurimisrõhk 1 [bar]
+96	maks. puurimisrõhk 2 [bar]
+97	maks. puurimisrõhk 3 [bar]
+98	min. puurimisprogress 1 [p/m]
+99	min. puurimisprogress 1 [p/ft]
+100	min. puurimisprogress 2 [p/m]
+101	min. puurimisprogress 2 [p/ft]
+102	min. puurimisprogress 3 [p/m]
+103	min. puurimisprogress 3 [p/ft]
+104	min. segamine [p]
+105	segamine 1 [p]
+106	segamine 2 [p]
+107	betoonimaht sügavuse kohta [l/m]
+108	betoonimaht sügavuse kohta [g/ft]
+109	betoonikogus 1 [l/min]
+110	betoonikogus 1 [g/min]
+111	betoonikogus 2 [l/min]
+112	betoonikogus 2 [g/min]
+113	betoonikogus 3 [l/min]
+114	betoonikogus 3 [g/min]
+115	Vibr. temperatuur [°C]
+116	Vibr. temperatuur [°F]
+117	maks. puurimisprogress 1 [p/m]
+118	maks. puurimisprogress 1 [p/ft]
+119	maks. puurimisprogress 2 [p/m]
+120	maks. puurimisprogress 2 [p/ft]
+121	maks. puurimisprogress 3 [p/m]
+122	maks. puurimisprogress 3 [p/ft]
+123	segamine 3 [p]
+124	min tõus 1 [cm/p]
+125	min tõus 1 [in/p]
+126	min tõus 2 [cm/p]
+127	min tõus 2 [in/p]
+128	min tõus 3 [cm/p]
+129	min tõus 3 [in/p]
+130	sideaine kogus [kg/min]
+131	sideaine kogus [lb/min]
+132	sideaine kogus 1 [kg/min]
+133	sideaine kogus 1 [lb/min]
+134	sideaine kogus 2 [kg/min]
+135	sideaine kogus 2 [lb/min]
+136	sideaine kogus 3 [kg/min]
+137	sideaine kogus 3 [lb/min]
+138	sideaine kaal 1 [kg]
+139	sideaine kaal 1 [lb]
+140	sideaine kaal 2 [kg]
+141	sideaine kaal 2 [lb]
+142	sideaine kaal 3 [kg]
+143	sideaine kaal 3 [lb]
+144	sideaine kaal sügavusele [kg/m]
+145	sideaine kaal sügavusele [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Vibr.surve tõstm. [bar]
+1	Amplituud [in]
+2	Amplituud [mm]
+3	Lööki/%s ft
+4	Lööki/%s mm
+5	Sügavus [ft]
+6	Sügavus [m]
+7	Tihendamine [m]
+8	Hälve X [cm]
+9	Hälve X [in]
+10	Hälve Y [cm]
+11	Hälve Y [in]
+12	Betooni surve [bar]
+13	Teo puurimissurve [bar]
+14	Toru puurim.surve [bar]
+15	Puurimissurve [bar]
+16	Rammimissurve [bar]
+17	Tõstm. ramm.surve [bar]
+19	Vibr.surve langet. [bar]
+20	Puurimisedu [p/m]
+21	Puurimisedu [p/ft]
+22	Puur.pöördemoment [kip.ft]
+23	Puur.pöördemoment [kNm]
+24	Energia [kip.ft]
+25	Energia [kNm]
+26	Energia/%s ft [kip.ft]
+27	Energia/%s mm [kNm]
+28	Survejõud [kN]
+29	Survejõud [kip]
+30	Etteandekiirus [ft/min]
+31	Etteandekiirus [m/min]
+32	Tõstekiirus [ft/min]
+33	Tõstekiirus [m/min]
+34	Langet.kiirus [ft/min]
+35	Langet.kiirus [m/min]
+36	Sagedus [Hz]
+37	Vool [A]
+38	Langetamise vool [A]
+39	Külgvesi [l/m]
+40	Tipuvesi [l/m]
+41	Aeg [s]
+42	Langetamisaeg [s]
+43	Löök [number]
+44	Vibraatori surve [bar]
+45	Amplituud [%]
+46	Puurimissur.1 [bar]
+47	Puurimissur.2 [bar]
+48	Puurimissur.3 [bar]
+49	Puurimisedu1 [p/m]
+50	Puurimisedu1 [p/ft]
+51	Puurimisedu2 [p/m]
+52	Puurimisedu2 [p/ft]
+53	Puurimisedu3 [p/m]
+54	Puurimisedu3 [p/ft]
+55	Betoon.surv.1 [bar]
+56	Betoon.surv.2 [bar]
+57	Betoon.surv.3 [bar]
+58	Betoon.kogus [l/m]
+59	Betoon.kogus [g/ft]
+60	Bet.kogus1 [l/min]
+61	Bet.kogus1 [g/min]
+62	Bet.kogus2 [l/min]
+63	Bet.kogus2 [g/min]
+64	Bet.kogus3 [l/min]
+65	Bet.kogus3 [g/min]
+66	Segamine [p]
+67	Pööretearv1 [p/min]
+68	Pööretearv2 [p/min]
+69	Pööretearv3 [p/min]
+70	Vibraatorivool [A]
+71	Sissetung [cm/p]
+72	Sissetung [in/p]
+73	tõus 1 [cm/p]
+74	tõus 1 [in/p]
+75	tõus 2 [cm/p]
+76	tõus 2 [in/p]
+77	tõus 3 [cm/p]
+78	tõus 3 [in/p]
+79	sideaine [kg/m]
+80	sideaine [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Ehitusplats
+2	Vaia number
+3	Vaia tueuep(1betoon;2puit;3teras)
+4	Vaia pikkus [m]
+5	Vaia pindala [cm2]
+6	Vaia laebimoeoet [cm]
+7	Sälgu number
+8	Salvestuse nr.
+9	Juhi number
+10	Tellimuse number
+11	Tihendamispunkt
+12	Seerianumber
+13	Seadme number
+14	Vaia laebimoeoet [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Sügavussamm [ft]
+2	Sügavussamm [mm]
+3	maksimaalne sügavus [cm]
+4	maksimaalne sügavus [ft]
+5	Lööke kokku
+6	Energia kokku [kip.ft]
+7	Energia kokku [kNm]
+8	Rammimismass [lb]
+9	Rammimismass [kg]
+10	Pöördemomendi näit
+11	US ühikud
+12	US ühikud (kip)
+13	Tihendamispunkt
+14	Vints 1 aktiivne
+15	Vints 2 aktiivne
+16	Betooni kogus kokku [yd3]
+17	Betooni kogus kokku [m3]
+18	Impulsside arv (betoonipump)
+19	Liitrit/imp.(betoonipump)
+20	Etteantud löögid
+21	Tihendamine kokku [m]
+22	Etteantud tihendamine [m]
+23	Etteantud tõstekõrgus [m]
+24	Etteantud pidurduskõrgus [m]
+25	Aeg kokku [s]
+26	Aeg [s]
+27	Tsüklite arv kokku
+28	Heitkopa tühimass [t]
+29	Puisteaine summa [t]
+30	Täis heitkoppade summa [t]
+31	Triggerte arv kokku
+32	Rippmehhanismi tühikaal [t]
+33	Tsüklikoormuse summa [t]
+34	Tsüklikoormuse summa kokku [t]
+35	Puisteaine tsüklikoormuse summa [t]
+36	Langetamisprotsessi aeg [s]
+37	Maks. langetamisprotsessi vool [A]
+38	Tsükliaeg kokku [s]
+39	Etteantud vool maks. [A]
+40	Sügavuse tõmbekriteerium [m]
+41	Sügavuse tõmbekriteerium 1 [m]
+42	Sügavuse tõmbekriteerium 2 [m]
+43	Etteantud aeg 1 maks. [s]
+44	Etteantud tee 1 maks. [m]
+45	Etteantud aeg 2 maks. [s]
+46	Etteantud tee 2 maks. [m]
+47	Etteantud aeg 3 maks. [s]
+48	Etteantud tee 3 maks. [m]
+49	Külgvesi kokku [l]
+50	Tipuvesi kokku [l]
+51	Keskmine õhurõhk [bar]
+52	Haaratsirežiim
+53	Haamrirežiim
+54	hüdraulika Push&pull-režiim
+55	Kelly-puurimisrežiim
+56	topeltpea-puurimisrežiim
+57	CFA-puurimisrežiim
+58	Vibraatorirežiim
+59	Vibraatormehhanism
+60	(kip)
+61	(in / 100)
+62	VÄLJA
+63	SISSE
+64	Ülekogus [%]
+65	Vaiabetooni kogus [yd3]
+66	Vaiabetooni kogus [m3]
+67	gallonit/imp. (betoonipump)
+68	maksimaalne sügavus [m]
+69	Tigude arv
+70	Teo pikkus [cm]
+71	Teo pikkus [ft]
+72	gps positsioon X [cm]
+73	gps positsioon Y [cm]
+74	Voolutarve [kWh]
+75	Alustab Kalle [°]
+76	Lopetab Kalle [°]
+77	Vaia pikkus [cm]
+78	Vaia pikkus [ft]
+79	sideaine kokku [kg]
+80	sideaine kokku [lb]
+81	k töösamm [mm/p]
+82	k töösamm [in/p]
+83	k puurimissurve [bar]
+84	k pöörded [p/min]
+85	k sideaine [kg/m]
+86	k sideaine [lb/ft]
+87	k sideainevool [kg/min]
+88	k sideainevool [lb/min]
+89	punker 1 [kg]
+90	punker 1 [lb]
+91	punker 2 [kg]
+92	punker 2 [lb]
+93	sisestuskõrgus [cm]
+94	sisestuskõrgus [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly-puurimine
+200	topeltpeapuurimine
+300	CFA-puurimine
+400	Vibraator
+401	toestmine
+402	langetamine
+403	toestm./langet.
+404	uele aja
+411	Vibr. langet.
+412	Vibr. toestm.
+413	Vibr. ueles&alla
+414	Vibr. uele aja
+500	Haamer
+600	push&pull
+700	Huedr. haarats
+800	Rammijuht.-sues.
+900	Heitkopp
+1000	Teisaldamine
+1100	pinnase segamine
+1200	elektrivibraator
+1201	tamptäitesammas
+1202	täitesammas
+1211	el. vibraator TT-sammas
+1212	el. vibraator täitesammas
+1300	kuivsegamine
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	Ehitusplats
+2	Vaia number
+3	Vaia tueuep(1betoon;2puit;3teras)
+4	Vaia pikkus [m]
+5	Vaia pindala [cm^2]
+6	Vaia laebimoeoet [cm]
+7	Sälgu number
+8	Salvestuse nr.
+9	Juhi number
+10	Tellimuse number
+11	Tihendamispunkt
+12	Seerianumber
+13	Seadme number
+14	Vaia laebimoeoet [in]

@@ -1,0 +1,180 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity" xmlns:local="clr-namespace:PrototypeScreens" xmlns:pc="http://schemas.microsoft.com/prototyping/2010/controls" x:Name="Variable_Editor_Name"
+	mc:Ignorable="d"
+	x:Class="PrototypeScreens.Copy_of_Variable_Editor_1"
+	Width="1024" Height="768">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="ProjectDataSources.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<Storyboard x:Key="ShowMainShortcut"/>
+			<Storyboard x:Key="UnShowMainShortcut"/>
+			<SolidColorBrush x:Key="ListBorder" Color="#828790"/>
+			<Style x:Key="TreeViewStyle1" TargetType="{x:Type TreeView}">
+			   <Setter Property="FontFamily" Value="./Fonts/BuxtonSketch.ttf#Buxton Sketch"/>
+			   <Setter Property="FontSize" Value="14"/>
+			   <Setter Property="BorderBrush" Value="{StaticResource BaseBorder-Sketch}"/>
+			   <Setter Property="BorderThickness" Value="1"/>
+			   <Setter Property="Padding" Value="1"/>
+			   <Setter Property="Foreground" Value="{StaticResource BaseForeground-Sketch}"/>
+			   <Setter Property="Background" Value="{StaticResource BaseBackground-Sketch}"/>
+			   <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+			   <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+			   <Setter Property="VerticalContentAlignment" Value="Center"/>
+			   <Setter Property="Template">
+			    <Setter.Value>
+			     <ControlTemplate TargetType="TreeView">
+			      <Grid>
+			       <Grid x:Name="Bd" >
+			        <ScrollViewer HorizontalScrollBarVisibility="auto" 
+			         VerticalScrollBarVisibility="auto" >
+			         <ItemsPresenter />
+			        </ScrollViewer>
+			        <pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" x:Name="SketchRectangleSL" 
+			         BorderBrush="{TemplateBinding BorderBrush}" 
+			         ExtensionLength="0" 
+			         ExtensionVariance="0" 
+			         StrokeWidth="2" 
+			         SegmentLength="8" 
+			         SegmentVariance="0.1" 
+			         SegmentOffset="0.12" 
+			         VerticalAlignment="Stretch" 
+			         Height="Auto" 
+			         Background="{x:Null}"/>
+			       </Grid>
+			      </Grid> 
+			     </ControlTemplate>
+			    </Setter.Value>
+			   </Setter>
+			  </Style>
+  		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White" DataContext="{Binding Source={StaticResource VariableDataSource}}">
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="VariableEditorApplicationBar">
+				<VisualStateGroup.Transitions>
+					<VisualTransition GeneratedDuration="0:0:0.5">
+						<VisualTransition.GeneratedEasingFunction>
+							<QuinticEase EasingMode="EaseInOut"/>
+						</VisualTransition.GeneratedEasingFunction>
+					</VisualTransition>
+				</VisualStateGroup.Transitions>
+				<VisualState x:Name="_Default"/>
+				<VisualState x:Name="_Visible">
+					<Storyboard>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="GridBottom">
+							<EasingDoubleKeyFrame KeyTime="0" Value="-61"/>
+						</DoubleAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+						<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<pi:ActivateStateAction TargetState="_Default"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+
+		<Grid>
+			<local:GoBackButton Margin="10" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" >
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Screen_1"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</local:GoBackButton>
+			<TextBlock Margin="75,10,0,0" Style="{DynamicResource TitleLeft-Sketch}" Background="#FF16DA19"><Run Language="fr-ch" Text="Oscilloscope"/></TextBlock>
+		</Grid>
+		
+		<Grid Grid.Row="1" DataContext="{Binding Source={StaticResource SampleDataSource}}">
+			<Grid Margin="24.833,8,-24.833,-8">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="0.25*"/>
+					<ColumnDefinition Width="0.75*"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="30"/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Grid Name="GridSearch" Grid.Column="1" Width="510" HorizontalAlignment="Left" Margin="8,0,0,0">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="100"/>
+						<ColumnDefinition Width="200"/>
+						<ColumnDefinition Width="100"/>
+						<ColumnDefinition Width="110"/>
+					</Grid.ColumnDefinitions>
+					
+					<!--	
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+						<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Grid.ColumnSpan="2" />
+						<TextBlock Margin="10,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Style="{DynamicResource TextBlock-Sketch}" Text="Click here to enter text for searching" FontStyle="Italic"/>
+						<TextBlock Text="" FontSize="32" VerticalAlignment="Center" FontFamily="/Prototype.Screens;component/Fonts/#Segoe UI Symbol" Grid.Column="1"/>
+						-->
+				</Grid>
+				<TextBlock Grid.ColumnSpan="2" Margin="50,318,294,76" Grid.Row="1" Style="{DynamicResource TextBlock-Sketch}"><InlineUIContainer>
+						<Image
+				Height="301.5" Source="Image12.png" Stretch="Fill" Width="705"/>
+					</InlineUIContainer></TextBlock>
+				<Image Margin="-75,89,0,0" Source="Image10.png" Stretch="Fill" Height="38" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="196" RenderTransformOrigin="0.5,0.5">
+					<Image.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform Angle="89"/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Image.RenderTransform>
+				</Image>
+				<TextBox Height="222.5" Margin="70.5,67.833,279.334,0" Grid.Row="1" Style="{DynamicResource Note-Sketch}" TextWrapping="Wrap" Text="Select / Deselect variables to record&#xd;&#xa;Change the range of a variable (each variable has its own change)&#xd;&#xa;Start / Stop&#xd;&#xa;Define the sampling rate&#xd;&#xa;horizontal / vertical bar&#xd;&#xa;&#xd;&#xa;Open/Save (package 2)&#xd;&#xa;&#xd;&#xa;" VerticalAlignment="Top" Grid.ColumnSpan="2"/>	
+			</Grid>
+			<Grid x:Name="GridBottom" VerticalAlignment="Bottom" Height="70" Margin="0,0,0,-63" RenderTransformOrigin="0.5,0.5">
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseLeftButtonDown">
+						<pi:ActivateStateAction TargetState="_Visible"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+				<Grid.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Grid.RenderTransform>
+				<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Background="#FFBEBEBE"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+					<StackPanel Margin="5,0,5,0">
+						<Grid/>
+							<TextBlock Style="{DynamicResource TextBlock-Sketch}" Text="Delete" HorizontalAlignment="Center" VerticalAlignment="Top"/>						
+					</StackPanel>
+					<StackPanel Margin="5,0,5,0">
+						<Grid>
+							<pc:SketchCircleUC Height="43"  Style="{DynamicResource Circle-Sketch}" Margin="0,3.5" Width="43"/>
+							<TextBlock Text="" FontFamily="/Prototype.Screens;component/Fonts/#Segoe UI Symbol" Style="{DynamicResource TextBlock-Sketch}" VerticalAlignment="Bottom" FontSize="26.667" HorizontalAlignment="Center" Margin="0,0,0,7.265">
+								<i:Interaction.Triggers>
+									<i:EventTrigger EventName="MouseLeftButtonDown">
+										<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.OSC_settings"/>
+									</i:EventTrigger>
+								</i:Interaction.Triggers>
+							</TextBlock>
+						</Grid>
+							<TextBlock Style="{DynamicResource TextBlock-Sketch}" Text="Settings" HorizontalAlignment="Center" VerticalAlignment="Top"/>						
+					</StackPanel>
+				</StackPanel>
+			</Grid>
+		</Grid>
+		<Image Margin="139.5,0,139.5,22.5" Source="Image11.png" Stretch="Fill" Height="108" Grid.Row="1" VerticalAlignment="Bottom"/>
+	</Grid>
+</UserControl>

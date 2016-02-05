@@ -1,0 +1,13 @@
+rem autoexec.frc
+!version	00158
+
+can_conf /u 3 7
+
+_if CXenabSample16GB EQ 1
+sample /r LHM_3_m00001.smp
+sample /a
+_endif 
+
+_if CXnrsSynTronic EQ 1
+wait 2000
+_endif 

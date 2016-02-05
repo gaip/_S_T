@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sculi2", "Sculi2\Sculi2.csproj", "{a8095d13-c351-4cba-888c-3fb9acdfc689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sculi2Screens", "Sculi2\Sculi2Screens\Sculi2Screens.csproj", "{915cfb61-3c53-4079-abe2-5de79f089ef3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8095D13-C351-4CBA-888C-3FB9ACDFC689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8095D13-C351-4CBA-888C-3FB9ACDFC689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8095D13-C351-4CBA-888C-3FB9ACDFC689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8095D13-C351-4CBA-888C-3FB9ACDFC689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915CFB61-3C53-4079-ABE2-5DE79F089EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915CFB61-3C53-4079-ABE2-5DE79F089EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915CFB61-3C53-4079-ABE2-5DE79F089EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915CFB61-3C53-4079-ABE2-5DE79F089EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

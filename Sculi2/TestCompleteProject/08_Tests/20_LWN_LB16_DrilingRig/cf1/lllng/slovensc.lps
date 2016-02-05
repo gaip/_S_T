@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Slovenian / Slowenisch
+%?language	slv
+
+%section: SCREEN
+/TSoilFlowAuger	(potisna količina polž 1) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (potisna količina polž 1)
+/TSoilFlowCase	(potisna količina cev) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (potisna količina cev)
+/TSoilFlow	(potisna količina) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (potisna količina)
+/TSnumbOfPumps	(število črpalk) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (število črpalk)
+/TSclampJawPress	(tlak klešč za spone) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (tlak klešč za spone)
+/TSexcAutoTime	(čas za prestavitev ekscentra) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (čas za prestavitev ekscentra)
+/TSramWeight	(Teža zabijala) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Teža zabijala)
+/TSblowsPerDepthStep	(udarci/glob.korak) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (udarci/glob.korak)
+/TSnumbPuPuCylinder	(število cilindrov Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (število cilindrov Push & Pull)
+/TSaugerLength	(dolžina polža) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (dolžina polža)
+/TSconcVolPerImp	(količina betona / impulz) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (količina betona / impulz)
+/TSscalConcPresSens	(območje tipala za bet.tlak) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (območje tipala za bet.tlak)
+/TSscalConcPresDisp	(umerjanje tlaka betona) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (umerjanje tlaka betona)
+/TSpileDiameter	(Premer količka) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Premer količka)
+/TSmaxPressAuger	(maks. tlak polž) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (maks. tlak polž)
+/TSmaxPressCase	(maks. tlak cev) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (maks. tlak cev)
+/TSmaxPressure	(maks. tlak) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (maks. tlak)
+/TSoilFlowAuger1	(potisna količina polž 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (potisna količina polž 1)
+/TSoilFlowAuger2	(potisna količina polž 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (potisna količina polž 2)
+/TSoilFlowAuger3	(potisna količina polž 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (potisna količina polž 3)
+/TSnumbOfAugers	(število polžev) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (število polžev)
+/TSoilFlowOscil	(transp. količina po ceveh) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (transp. količina po ceveh)
+/TSoilFlowGrabOpen	(Ročica za pretok odprta) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Ročica za pretok odprta)
+/TSoilFlowGrabClose	(Ročica za pretok zaprta) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Ročica za pretok zaprta)
+/TSmaxPressGrabOpen	(Ročica za maks. tlak odprta) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Ročica za maks. tlak odprta)
+/TSmaxPressGrabClose	(Ročica za maks. tlak zaprta) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Ročica za maks. tlak zaprta)
+/TSminOilFlow	(min. potisna količina) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. potisna količina)
+/TSoilFlowOscil2	(transp. količina po ceveh 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (transp. količina po ceveh 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

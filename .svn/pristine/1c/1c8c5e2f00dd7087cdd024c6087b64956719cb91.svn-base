@@ -1,0 +1,117 @@
+level /c "34171548" LAN3
+
+
+rem Simulator LB ohne Motormodul
+
+rem ########### Kabine##########
+
+can_conf /r 1 29
+can_conf /r 1 65 
+can_conf /r 1 66 
+can_conf /r 1 67 
+can_conf /r 1 68
+can_conf /r 1 73 
+can_conf /r 1 77
+can_conf /r 1 78
+can_conf /r 1 79
+can_conf /r 1 79
+can_conf /r 1 80   
+can_conf /r 1 80   
+can_conf /r 1 97
+can_conf /r 1 107
+can_conf /r 1 500
+can_conf /r 2 1000
+
+rem ############### LB16 #########
+
+can_conf /r 2 5
+can_conf /r 2 13
+can_conf /r 2 14
+can_conf /r 2 15
+can_conf /r 2 18
+can_conf /r 2 57
+can_conf /r 2 58
+can_conf /r 2 92
+can_conf /r 2 94
+force %IW2.041.03 4000 rem system pressure HG lifting
+force %IW2.041.12 15000 rem hydraulic tank content
+force %IX2.033.05 1
+force %IX2.033.28 1
+force %IW2.041.11 8000
+force %IW2.041.13 6000
+                         
+rem ############Oberwagen########
+
+can_conf /r 2 9
+can_conf /r 2 10
+can_conf /r 2 17
+can_conf /r 2 18
+can_conf /r 2 19
+can_conf /r 2 33
+can_conf /r 2 34
+can_conf /r 2 41
+can_conf /r 2 42
+can_conf /r 2 57
+
+rem ############################
+
+force %IX1.077.34 1 rem Einstiegshebel
+force %IX2.033.03 1 rem Speisedruck OK
+force %IX2.033.06 1 rem Rücklauffilter
+force %IX2.033.07 1 rem Hydr. Tankinhalt OK
+force %IX2.033.08 1 rem gear oil temperature OK
+force %IW2.041.01 12000 rem content diesel tank
+force %QX2.009.19 1 rem engine running
+force %IW2.041.02 4000 rem system pressure cc winch lifting
+force %IW2.041.06 4000 rem system pressure cc winch lowering
+force %IW2.041.07 4000 rem system pressure leader pump
+force %IW2.041.08 12000 rem inclinometer x-axis
+force %IW2.041.09 12000 rem inclinometer y-axis
+force %IW2.041.14 4000 rem system pressure pump1
+force %IW2.041.15 4000 rem system pressure drilling drive
+
+rem ############################
+
+			
+force %IX2.91.5 0
+force %IX2.33.25 1 rem limit switch Z4 o.k.
+
+force %IW2.41.01  12000
+force %IW2.41.02  4000
+force %IW2.41.07  4000
+force %IW2.41.08  12000
+force %IW2.41.09  12000
+force %IW2.41.10  4000
+force %IW2.41.15  4000
+force %IW2.42.03  4000
+force %IW2.42.04  4000
+force %IW2.42.05  4000
+force %IW2.42.06  4000
+force %IX2.33.07  1
+force %IX2.33.08  1
+force %IX2.91.41  0
+force %IX2.91.03  1
+force %IX2.91.01  1
+force %IX2.91.02  1
+force %IX2.91.06  0
+rem ########################################
+
+force %IW2.92.01  900
+force %IW2.92.02  0
+force %IW2.92.03  0
+force %IW2.92.04  0
+force %IW2.92.05  270
+force %IW2.92.06  70
+force %IW2.92.07  65
+force %IW2.92.08  50
+force %IW2.92.09  450
+force %IW2.92.10  150
+force %IW2.92.11  0
+
+rem ########################################
+
+rem force %MX1.700 1
+force %MX1.800 1
+
+
+

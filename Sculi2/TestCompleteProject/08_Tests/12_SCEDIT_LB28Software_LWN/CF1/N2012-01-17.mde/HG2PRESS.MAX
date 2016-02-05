@@ -1,0 +1,6 @@
+hg2 system pressure in [bar]
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:30
+date-time	hg2 system pressure in [bar]	present engine speed in [rpm]	analog pump signal hg2 in [%]	rope speed hg2 in [m/min]
+	%MD1.15	%MD1.4	%MD1.17	%MD1.48
+	MDropeLenghtFaw	MDpresenEngSpeed	MDfawRopeSpeed	MDkeybx25Poti3

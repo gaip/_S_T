@@ -1,0 +1,121 @@
+%?version 00007
+%?class	llgenpar
+
+%?library llspesym
+(llspesym.ps) run
+%?library llbasic
+(llbasic.ps) run
+%?library llgensym
+(llgensym.ps) run
+
+
+
+%?partdef pageButton001
+%?fn pageButton001
+%?brief message symbol neutral, yellow, red or invisible
+%?bbox 0 0 79 79
+/pageButton001 {
+ /I_msgValidNr exch def %?brief Anzahl aller aktuell relevanten Messages %?use INP %?type REAL %?dflt    0.00
+ /I_msgAcknNr exch def %?brief Anzahl aller aktuell quittierten, aber noch aktiven Messages %?use INP %?type DINT %?dflt 0
+ /I_msgDeactNr exch def %?brief Anzahl aller aktuell relevanten wber nicht mehr aktiven Messages %?use INP %?type DINT %?dflt 0
+ I_msgValidNr 0 gt { 
+  matrix currentmatrix_nlw 
+  currentcolor 
+  Invisible
+  0 0 translate 
+  0 rotate 
+  1 1 scale 
+  symspemenu008 
+  setcolor 
+  setmatrix_nlw 
+  I_msgValidNr I_msgAcknNr gt {
+   matrix currentmatrix_nlw 
+   currentcolor 
+   true setflash 
+   Red
+   0 0 translate 
+   0 rotate 
+   1 1 scale 
+   symspemenu008 
+   false setflash 
+   setcolor 
+   setmatrix_nlw 
+  } { 
+   matrix currentmatrix_nlw 
+   currentcolor 
+   Yellow
+   0 0 translate 
+   0 rotate 
+   1 1 scale 
+   symspemenu008 
+   setcolor 
+   setmatrix_nlw 
+  } ifelse 
+ } { 
+  matrix currentmatrix_nlw 
+  currentcolor 
+  0 0 translate 
+  0 rotate 
+  1 1 scale 
+  symspemenu008 
+  setcolor 
+  setmatrix_nlw 
+ } ifelse 
+} def
+%?partend
+
+
+
+
+
+
+
+%?partdef general001
+%?fn general001
+%?brief	Testsystem Master 4 - Multimeter
+%?bbox	0 0 79 79
+/general001 {
+	60 12 moveto 
+	58 12 2 0 360 arc 
+	stroke 
+	24 12 moveto 
+	22 12 2 0 360 arc 
+	stroke 
+	50 30 moveto 
+	40 30 10 0 360 arc 
+	stroke 
+	18 70 44 -62 rectstroke 
+	22 46 36 20 rectstroke 
+%?manual_beg
+	40 30 translate
+	60 rotate
+	-9 2 moveto 
+	9  2 lineto 
+	-9 -2 moveto 
+	9  -2 lineto 
+	stroke 
+	30 rotate
+	8 {
+		45 rotate
+		10 0 moveto
+		13 0 lineto
+	} repeat
+	-35 rotate
+	6 {
+		10 rotate
+		25 0 moveto
+		30 0 lineto
+	} repeat
+	-55 rotate
+	MDrotate 180 gt {
+		60 MDrotate 180 sub 180 div 60 mul sub rotate
+	} {
+		MDrotate 180 div 60 mul rotate
+	} ifelse
+	22 0 moveto
+	33 0 lineto
+%?manual_end 
+} def
+%?partend
+
+

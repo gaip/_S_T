@@ -1,0 +1,9 @@
+pressure level adjustment section 1 travelling system 1 [bar]
+start time	2012-05-02T11:37:47
+stop time	2012-05-02T14:01:21
+date-time	pressure level adjustment section 1 travelling system 1 [bar]	pressure level adjustment section 2 travelling system 1 [bar]	pressure level adjustment section 3 travelling system 1 [bar]	pressure level adjustment section 4 travelling system 1 [bar]	radius hoisting system 1 [m]	utilisation operation mode [%]	operation mode 1	load hoisting system 1 [to]
+	%MD1.326	%MD1.327	%MD1.328	%MD1.329	%MD1.359	%MD1.405	%MD1.316	%MD1.313
+	MDmdePrLa1TS1	MDmdePrLa2TS1	MDmdePrLa3TS1	MDmdePrLa4TS1	MDmdeRdHS1	MDmdeUtOm	MDmdeOm1	MDmdeLdHS1
+2012-05-02T11:37:47	0	0	0	0	2.340008	999999.9	0	1000
+2012-05-02T11:37:47	0	0	0	0	2.340008	999999.9	0	1000
+2012-05-02T11:37:47	0	0	0	0	2.340008	999999.9	0	1000

@@ -1,0 +1,31 @@
+!version	00065
+
+#
+#	Message configuration
+#
+#	date:	01.03.2012
+#	name:	Rappold Benjamin
+#
+
+# redirection of messages to display
+# boot and battery
+outer.boot.error system >bild/*
+outer.syscheck.0x4300013-0x43000014.* system >bild/*
+
+# application
+applicat.error system >bild/*
+
+# engine
+undefined.error system >bild/*
+
+# climate control
+can.application.0x72000081-0x72000081.info system >bild/*
+can.application.0x72000038-0x72000076.warning system >bild/*
+can.application.0x72000082-0x72000192.warning system >bild/*
+# can modules
+can.application.error system >bild/*
+
+# lidec
+smallsystem.lidec.error system >bild/*
+
+!crc	0xd6a779bd

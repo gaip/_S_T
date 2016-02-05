@@ -1,0 +1,9 @@
+revolutions diesel engine 1 [rpm]
+start time	2012-05-02T11:37:47
+stop time	2012-05-02T14:01:18
+date-time	revolutions diesel engine 1 [rpm]	power diesel engine 1 [kW]	engine exploitation diesel engine 1 [%]	outside temperature 1 [øC]	charge air pressure diesel engine 1 [bar]	charge air temperature diesel engine 1 [øC]	lub oil pressure diesel engine 1 [bar]	cooling water temperature diesel engine 1 [øC]	x-direction left joystick 1 [%]	y-direction left joystick 1 [%]	x-direction right joystick 1 [%]	y-direction right joystick 1 [%]
+	%MD1.362	%MD1.350	%MD1.307	%MD1.387	%MD1.321	%MD1.383	%MD1.330	%MD1.384	%MD1.376	%MD1.377	%MD1.378	%MD1.379
+	MDmdeRvDiEn1	MDmdePwDiEn1	MDmdeExDiEn1	MDmdeTmOut1	MDmdePrChAirEn1	MDmdeTmChAirEn1	MDmdePrLbOilEn1	MDmdeTmCoWaEn1	MDmdeSgLxJs1	MDmdeSgLyJs1	MDmdeSgRxJs1	MDmdeSgRyJs1
+2012-05-02T13:35:22	1306	0	-3.402823e+38	49.99999	0	0	0	0	0	0	0	82.8
+2012-05-02T11:37:47	0	0	0	49.99999	0	0	0	0	0	0	0	0
+2012-05-02T11:37:47	0	0	0	49.99999	0	0	0	0	0	0	0	0

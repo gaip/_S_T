@@ -1,0 +1,534 @@
+!version	00055
+#
+!font	UTF8
+!best-fit-font	iso8859-2
+
+# Language File / Sprachtexte File
+# Romanian / Rumänisch
+!language	ron
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Debit pompare melc [l/min]
+2	Debit pompare melc [g/min]
+3	Debit pomp.cond. [l/min]
+4	Debit pomp.cond. [g/min]
+5	Debit pompare [l/min]
+6	Debit pompare [g/min]
+7	Număr pompe
+8	Pres.cleşte prindere [bar]
+9	Durată regl.excentr. [s]
+10	Îmbin.în foarfece troliu princ.
+11	Masă sonetă [kg]
+12	Masă sonetă [lb]
+13	Lovituri / etapă forare
+14	Nr. cilindri Push & Pull
+15	Lungime melc [cm]
+16	Lungime melc [ft]
+17	Grafic PDE pe imprimantă
+18	Grafic PDE pe hartă
+19	Pas coborâre [cm]
+20	Pas coborâre [in]
+21	Durată decl.PDE [s]
+22	Cant. beton / impuls [l/imp.]
+23	Cant. beton / impuls [g/imp.]
+24	Dom.măs.senz.pres.bet. [bar]
+25	Scalare afişaj pres.beton [bar]
+26	Diametru pilot [cm]
+27	Diametru pilot [in]
+28	Secţ.transv.pilot [cm]
+29	Secţ.transv.pilot [in]
+30	Diam.burlan tubaj [cm]
+31	Diam.burlan tubaj [in]
+32	Factor săpare [%]
+33	Ridicare melc [cm]
+34	Ridicare melc [in]
+35	Sist.aut.extr.porn.pres. [bar]
+36	Sist.aut.extr.opr.pres. [bar]
+37	cant.exc.bet.perm. [%]
+38	Turaţie ecol.
+39	Măs.cantit.prin pres. (1=DA)
+40	Sist.aut.extr.pres.max. [bar]
+41	pres.max.melc [bar]
+42	pres.max.conductă [bar]
+43	pres.max. [bar]
+44	Debit pompare melc 1 [l/min]
+45	Debit pompare melc 1 [g/min]
+46	Debit pompare melc 2 [l/min]
+47	Debit pompare melc 2 [g/min]
+48	Debit pompare melc 3 [l/min]
+49	Debit pompare melc 3 [g/min]
+50	Nr.melci
+51	Debit pomp.maşină tubare [l/min]
+52	Debit pomp.maşină tubare [g/min]
+53	Debit deschidere greifer [l/min]
+54	Debit deschidere greifer [g/min]
+55	Debit închidere greifer [l/min]
+56	Debit închidere greifer [g/min]
+57	Prs. max. deschidere greifer [bar]
+58	Prs. max. închidere greifer [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	Număr secţiuni per coloană
+62	Masă specifică siloz 1 [kg/dm3]
+63	Masă specifică siloz 1 [lb/ft3]
+64	Masă specifică siloz 2 [kg/dm3]
+65	Masă specifică siloz 2 [lb/ft3]
+66	Adâncime [m]
+67	Adâncime [ft]
+68	Pas al avansului [cm/r]
+69	Pas al avansului [in/r]
+70	Masă liant [kg/m]
+71	Masă liant [lb/ft]
+72	minim debit pompare [%]
+
+!LOGGER
+1	Data pornirii
+2	Ora pornirii
+3	Data finalizării
+4	Ora finalizării
+5	dată imprimare
+6	oră imprimare
+
+!PDESERV
+# English is fix in the system
+
+!PDE
+1	Regimul de operare
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Latura
+4	Notare înălţată
+5	Notare micşorată
+6	Raza pilotului [cm]
+7	Raza pilotului [in]
+8	Stil
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Forare Kelly
+200	Găurire cu cap dublu
+300	Forare CFA
+400	Vibrator
+401	Coborâre
+402	Ridicare
+403	Coborâre/ridicare
+404	În timp
+411	Coborâre vibrator
+412	Ridicare vibrator
+413	Cob şi rid vibrator
+414	Vibrator în timp
+500	Ciocan
+600	push&pull
+700	Graifăr hidraulic
+800	Comandă sonetă
+900	Cupa screperului
+1000	Triaj
+1100	Amestec de soluri
+1200	vibrator electric
+1201	fundaţie de coloană compactată
+1202	coloană de rezervă
+1211	vib. el. pt. fundaţie de col. compactată
+1212	vib. el. pt. col. de rezervă
+1300	malaxare uscată
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitudine [in/100]
+7	Presiune beton [bar]
+2	Amplitudine [mm]
+3	Adâncime [cm]
+4	Adâncime [ft]
+5	Număr bătai
+6	Bătăi/nivel adâncime
+8	Presiune forare melc [bar]
+9	Presiune forare ţeavă [bar]
+10	Presiune forare [bar]
+11	Presiune sonetă [bar]
+12	Presiune vibrator [bar]
+13	Avans forare [r/m]
+14	Avans forare [r/ft]
+15	Moment rotaţie forare [kip.ft]
+16	Moment rotaţie forare [kNm]
+17	Energie/bătaie [kip.ft]
+18	Energie/bătaie [kNm]
+19	Energie/avans adâncime [kip.ft]
+20	Energie/avans adâncime [kNm]
+21	Timp [oo:mm:ss]
+22	Forţă apăsare [kN]
+23	Forţă apăsare [kip]
+24	Viteză avans [ft/min]
+25	Viteză avans [m/min]
+26	Frecvenţă [Hz]
+27	Bătăi/min
+28	Unitate vibrator [Pornit/Oprit]
+29	Abatere X [ft]
+30	Abatere X [cm]
+31	Abatere Y [ft]
+32	Abatere Y [cm]
+33	Număr bătaie
+34	Înălţime cursă [m]
+35	Înălţime cursă [ft]
+36	Compactare/bătaie [ft]
+37	Compactare/bătaie [m]
+38	Compactare absolută [ft]
+39	Compactare absolută [m]
+40	Indicaţie înălţime frânare [ft]
+41	Indicaţie înălţime frânare [m]
+42	Viteză maximă troliu 1 [ft/min]
+43	Viteză maximă troliu 1 [m/min]
+44	Viteză maximă troliu 2 [ft/min]
+45	Viteză maximă troliu 2 [m/min]
+46	Data [ZZ:LL:AA]
+47	Durată funcţionare [s]
+48	Cantitate beton [yd3]
+49	Cantitate beton [m3]
+50	Număr poziţie
+51	Timp sonetă până la cablu [s]
+52	Timp ridicare [s]
+53	Timp coborâre [s]
+54	Indicaţie bătăi
+55	Indicaţie înălţime cursă [m]
+56	Indicaţie înălţime cursă [ft]
+57	Indicaţie compactare [m]
+58	Indicaţie compactare [ft]
+59	Timp funcţionare cupă screper [s]
+60	Timp ciclu [s]
+61	Sarcină material granular [t]
+62	Sarcină totală tractată [t]
+63	Timp funcţionare triaj [s]
+64	Sarcină ciclu [t]
+65	Sarcină totală ciclu [t]
+66	Sarcină ciclu material granular [t]
+67	Curent [A]
+68	Micşorare curent [A]
+69	Apă laterală [l/m]
+70	Apă vârf [l/m]
+71	Presiune aer [bar]
+72	Pornire automatizare
+73	Tensiune [V]
+74	Întrerupere
+75	Înclinare [°]
+76	Turaţie [r/min]
+77	Cantitate beton 1 [yd3]
+78	Cantitate beton 1 [m3]
+79	Cantitate beton 2 [yd3]
+80	Cantitate beton 2 [m3]
+81	Cantitate beton 3 [yd3]
+82	Cantitate beton 3 [m3]
+83	Rotire 1 [r]
+84	Rotire 2 [r]
+85	Rotire 3 [r]
+86	Timp [min]
+87	Cantitate beton [l/min]
+88	Cantitate beton [g/min]
+89	Presiune minimă vibrator [bar]
+90	Presiune maximă vibrator [bar]
+91	Viteză minimă de avans [ft/min]
+92	Viteză minimă de avans [m/min]
+93	Viteză maximă de avans [ft/min]
+94	Viteză maximă de avans [m/min]
+95	Presiune maxim de găurire 1 [bar]
+96	Presiune maxim de găurire 2 [bar]
+97	Presiune maxim de găurire 3 [bar]
+98	Progres minim de găurire 1 [r/m]
+99	Progres minim de găurire 1 [r/ft]
+100	Progres minim de găurire 2 [r/m]
+101	Progres minim de găurire 2 [r/ft]
+102	Progres minim de găurire 3 [r/m]
+103	Progres minim de găurire 3 [r/ft]
+104	Amestecare minim [r]
+105	Amestecare 1 [r]
+106	Amestecare 2 [r]
+107	Volum de beton per adâncime [l/m]
+108	Volum de beton per adâncime [g/ft]
+109	Cantitate de beton 1 [l/min]
+110	Cantitate de beton 1 [g/min]
+111	Cantitate de beton 2 [l/min]
+112	Cantitate de beton 2 [g/min]
+113	Cantitate de beton 3 [l/min]
+114	Cantitate de beton 3 [g/min]
+115	Temperatură vibrator [°C]
+116	Temperatură vibrator [°F]
+117	Progres maxim de găurire 1 [r/m]
+118	Progres maxim de găurire 1 [r/ft]
+119	Progres maxim de găurire 2 [r/m]
+120	Progres maxim de găurire 2 [r/ft]
+121	Progres maxim de găurire 3 [r/m]
+122	Progres maxim de găurire 3 [r/ft]
+123	Amestecare 3 [r]
+124	Pas min. 1 [cm/r]
+125	Pas min. 1 [in/r]
+126	Pas min. 2 [cm/r]
+127	Pas min. 2 [in/r]
+128	Pas min. 3 [cm/r]
+129	Pas min. 3 [in/r]
+130	Debit liant [kg/min]
+131	Debit liant [lb/min]
+132	Debit liant 1 [kg/min]
+133	Debit liant 1 [lb/min]
+134	Debit liant 2 [kg/min]
+135	Debit liant 2 [lb/min]
+136	Debit liant 3 [kg/min]
+137	Debit liant 3 [lb/min]
+138	Masă liant 1 [kg]
+139	Masă liant 1 [lb]
+140	Masă liant 2 [kg]
+141	Masă liant 2 [lb]
+142	Masă liant 3 [kg]
+143	Masă liant 3 [lb]
+144	Masă liant per adânc [kg/m]
+145	Masă liant per adânc [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Crştprsvbr [bar]
+1	Amplitudine [in]
+2	Amplitudine [mm]
+3	Bătăi/%s ft
+4	Bătăi/%s mm
+5	Adâncime [ft]
+6	Adâncime [m]
+7	Compactare [m]
+8	Abatere X [cm]
+9	Abatere X [in]
+10	Abatere Y [cm]
+11	Abatere Y [in]
+12	Pres beton [bar]
+13	Presformelc [bar]
+14	Prsforţeavă [bar]
+15	Pres. forare [bar]
+16	Pres sonetă [bar]
+17	Crştprssnt [bar]
+19	Scdpresvbr [bar]
+20	Av.forare [r/m]
+21	Av.forare [r/ft]
+22	Mmrotfr [kip.ft]
+23	Mmrotfr [kNm]
+24	Energie [kip.ft]
+25	Energie [kNm]
+26	Energie/%s ft [kip.ft]
+27	Energie/%s mm [kNm]
+28	Forţă apăsare [kN]
+29	Forţă apăsare [kip]
+30	Viteză avans [ft/min]
+31	Viteză avans [m/min]
+32	Viteză cursă [ft/min]
+33	Viteză cursă [m/min]
+34	Vit coborâre [ft/min]
+35	Vit coborâre [m/min]
+36	Frecvenţă [Hz]
+37	Curent [A]
+38	Micş curent [A]
+39	Apă laterală [l/m]
+40	Apă vârf [l/m]
+41	Timp [s]
+42	Micşorare timp [s]
+43	Bătaie [număr]
+44	Presvibrator [bar]
+45	Amplitudine [%]
+46	Pres. forare1 [bar]
+47	Pres. forare2 [bar]
+48	Pres. forare3 [bar]
+49	Av.forare1 [r/m]
+50	Av.forare1 [r/ft]
+51	Av.forare2 [r/m]
+52	Av.forare2 [r/ft]
+53	Av.forare3 [r/m]
+54	Av.forare3 [r/ft]
+55	Pres.beton1 [bar]
+56	Pres.beton2 [bar]
+57	Pres.beton3 [bar]
+58	Cantit.beton [l/m]
+59	Cantit.beton [g/ft]
+60	Ct. beton1 [l/min]
+61	Ct. beton1 [g/min]
+62	Ct. beton2 [l/min]
+63	Ct. beton2 [g/min]
+64	Ct. beton3 [l/min]
+65	Ct. beton3 [g/min]
+66	Amestecare [r]
+67	Turaţie 1 [r/min]
+68	Turaţie 2 [r/min]
+69	Turaţie 3 [r/min]
+70	Cur. vibrator [A]
+71	Penetrare [cm/r]
+72	Penetrare [in/r]
+73	Pas 1 [cm/r]
+74	Pas 1 [in/r]
+75	Pas 2 [cm/r]
+76	Pas 2 [in/r]
+77	Pas 3 [cm/r]
+78	Pas 3 [in/r]
+79	Liant [kg/m]
+80	Liant [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Şantier
+2	Număr pilot
+3	Tip pilot (1 beton; 2 lemn;3 oţel)
+4	Lungime pilot [m]
+5	Suprafaţă pilot [cm2]
+6	Diametru pilot [cm]
+7	Număr fantă
+8	Număr notare
+9	Număr şofer
+10	Număr comandă
+11	Punct compactare
+12	Număr serie
+13	Număr aparat
+14	Diametru pilot [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Pas coborâre [ft]
+2	Pas coborâre [mm]
+3	Adâncime maximă [cm]
+4	Adâncime maximă [ft]
+5	Total bătăi
+6	Total energie [kip.ft]
+7	Total energie [kNm]
+8	Masă sonetă [lb]
+9	Masă sonetă [kg]
+10	Indicator moment rotaţie
+11	Unităţi US
+12	Unităţi US (kip)
+13	Punct compactare
+14	Troliu 1 activ
+15	Troliu 2 activ
+16	Cantitate totală beton [yd3]
+17	Cantitate totală beton [m3]
+18	Număr imp. (pompă beton)
+19	Litri/imp. (pompă beton)
+20	Indicaţie bătăi
+21	Compactare totală [m]
+22	Indicaţie compactare [m]
+23	Indicaţie înălţime cursă [m]
+24	Indicaţie înălţime frânare [m]
+25	Timp total [s]
+26	Timp [s]
+27	Număr total cicluri
+28	Sarcina cupei screperului, goală [t]
+29	Total material granular [t]
+30	Total cupă screper plină [t]
+31	Număr total trigger
+32	Masa proprie dispozitiv agăţare [t]
+33	Sumă sarcină ciclu [t]
+34	Sumă totală sarcină ciclu [t]
+35	Sumă sarcină ciclu material granular [t]
+36	Timp procedeu coborâre [s]
+37	Curent max. procedeu coborâre [A]
+38	Timp total ciclu [s]
+39	Indicaţie curent max. [A]
+40	Adâncime criteriu tragere [m]
+41	Adâncime criteriu tragere 1 [m]
+42	Adâncime criteriu tragere 2 [m]
+43	Indicaţie timp 1 max. [s]
+44	Indicaţie cale 1 max. [m]
+45	Indicaţie timp 2 max. [s]
+46	Indicaţie cale 2 max. [m]
+47	Indicaţie timp 3 max. [s]
+48	Indicaţie cale 3 max. [m]
+49	Total apă laterală [l]
+50	Total apă vârf [l]
+51	Presiune medie aer [bar]
+52	Funcţionare graifăr
+53	Funcţionare ciocan
+54	Funcţionare hidraulică Push&Pull
+55	Funcţionare forare Kelly
+56	Funcţionare cu cap dublu
+57	Funcţionare forare CFA
+58	Funcţionare vibrator
+59	Unitate vibrator
+60	(kip)
+61	(in / 100)
+62	OPRIT
+63	PORNIT
+64	Surplus [%]
+65	Cantitate beton pilot [yd3]
+66	Cantitate beton pilot [m3]
+67	Galoane/imp. (pompă beton)
+68	Adâncime maximă [m]
+69	Nr.melci
+70	Lungime melc [cm]
+71	Lungime melc [ft]
+72	gps poziţia X [cm]
+73	gps poziţia Y [cm]
+74	Consum [kWh]
+75	Înclinare pornirii [°]
+76	Înclinare finalizării [°]
+77	Lungime pilot [cm]
+78	Lungime pilot [ft]
+79	Liant total [kg]
+80	Liant total [lb]
+81	creştere medie [mm/r]
+82	creştere medie [in/r]
+83	prs. medie găurire [bar]
+84	medie tur. malaxor [r/min]
+85	medie liant [kg/m]
+86	medie liant [lb/ft]
+87	debit mediu liant [kg/min]
+88	debit mediu liant [lb/min]
+89	siloz 1 [kg]
+90	siloz 1 [lb]
+91	siloz 2 [kg]
+92	siloz 2 [lb]
+93	h introducere [cm]
+94	h introducere [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	kelly drilling
+200	double rotary drilling
+300	CFA drilling
+400	vibrator
+401	lowering
+402	lifting
+403	lowering/lifting
+404	over time
+411	vibrator lowering
+412	vibrator lifting
+413	vibrator lowering/lifting
+414	vibrator over time
+500	Hammer
+600	push&pull
+700	hydraulic grab
+800	dyn. compaction
+900	dragline
+1000	duty cycle
+1100	soil mixing
+1200	el. vibrator
+1201	repl. column (compaction)
+1202	repl. column
+1211	el. vibro RCC
+1212	el. vibro RC
+1300	dry mixing
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	job site
+2	pile number
+3	pile type(1concrete;2wood;3steel)
+4	pile length [m]
+5	pile area [cm^2]
+6	pile diameter [cm]
+7	slot number
+8	record number
+9	driver number
+10	job number
+11	compaction point
+12	serial number
+13	machine number
+14	pile diameter [in]

@@ -1,0 +1,220 @@
+# m00004	Version mit SW Versionsnummer für Stepp 2 Geräte 
+# Ab Software 990417414, 990577114 und 992387514
+
+%MW2.705	500	500	CWcraneType	select crane type
+%MW2.706	2	2   CWCraneTyVersion
+%MX2.750	0	CXuseWhlPressSen	[1] use wheel pressure sensors
+%MX2.751	0	CXbypMinTGSpeed	[1] bypass min. travelling speed for steering
+%MX2.752	0	CXbypPoleYMove	[1] correction value bypass move pole y on tower down
+%MX2.755	0	CXwhl01Enabled	wheel set 01 enabled
+%MX2.756	0	CXwhl02Enabled	wheel set 02 enabled
+%MX2.757	1	CXwhl03Enabled	wheel set 03 enabled
+%MX2.758	1	CXwhl04Enabled	wheel set 04 enabled
+%MX2.759	1	CXwhl05Enabled	wheel set 05 enabled
+%MX2.760	1	CXwhl06Enabled	wheel set 06 enabled
+%MX2.761	1	CXwhl07Enabled	wheel set 07 enabled
+%MX2.762	1	CXwhl08Enabled	wheel set 08 enabled
+%MX2.763	1	CXwhl09Enabled	wheel set 09 enabled
+%MX2.764	1	CXwhl10Enabled	wheel set 10 enabled
+%MX2.765	1	CXwhl11Enabled	wheel set 11 enabled
+%MX2.766	1	CXwhl12Enabled	wheel set 12 enabled
+%MX2.767	1	CXwhl13Enabled	wheel set 13 enabled
+%MX2.768	1	CXwhl14Enabled	wheel set 14 enabled
+%MX2.769	1	CXwhl15Enabled	wheel set 15 enabled
+%MX2.770	1	CXwhl16Enabled	wheel set 16 enabled
+%MX2.771	1	CXwhl17Enabled	wheel set 17 enabled
+%MX2.772	1	CXwhl18Enabled	wheel set 18 enabled
+%MX2.773	1	CXwhl19Enabled	wheel set 19 enabled
+%MX2.774	1	CXwhl20Enabled	wheel set 20 enabled
+%MX2.775	1	CXwhl21Enabled	wheel set 21 enabled
+%MX2.776	1	CXwhl22Enabled	wheel set 22 enabled
+%MX2.777	0	CXwhl23Enabled	wheel set 23 enabled
+%MX2.778	0	CXwhl24Enabled	wheel set 24 enabled
+%MX2.779	1	CXcorrBoolOk	correction values in bit memory section ok
+%MX2.780	0	CXwhl71Enable	wheel 71 enabled [mA]
+%MX2.781	0	CXwhl72Enable	wheel 72 enabled [mA]
+%MX2.782	0	CXwhl73Enable	wheel 73 enabled [mA]
+%MX2.783	0	CXwhl74Enable	wheel 74 enabled [mA]
+%MX2.784	0	CXwhl81Enable	wheel 81 enabled [mA]
+%MX2.785	0	CXwhl82Enable	wheel 82 enabled [mA]
+%MX2.786	0	CXwhl83Enable	wheel 83 enabled [mA]
+%MX2.787	0	CXwhl84Enable	wheel 84 enabled [mA]
+%MB2.750	1	1	CBcorrByteOk	correction values in byte memory section ok
+%MW2.750	200	200	CWwhl01MinCurRi	[mA] min. current right
+%MW2.751	200	200	CWwhl02MinCurRi	[mA] min. current right
+%MW2.752	200	200	CWwhl03MinCurRi	[mA] min. current right
+%MW2.753	200	200	CWwhl04MinCurRi	[mA] min. current right
+%MW2.754	200	200	CWwhl05MinCurRi	[mA] min. current right
+%MW2.755	200	200	CWwhl06MinCurRi	[mA] min. current right
+%MW2.756	200	200	CWwhl07MinCurRi	[mA] min. current right
+%MW2.757	200	200	CWwhl08MinCurRi	[mA] min. current right
+%MW2.758	200	200	CWwhl09MinCurRi	[mA] min. current right
+%MW2.759	200	200	CWwhl10MinCurRi	[mA] min. current right
+%MW2.760	200	200	CWwhl11MinCurRi	[mA] min. current right
+%MW2.761	200	200	CWwhl12MinCurRi	[mA] min. current right
+%MW2.762	200	200	CWwhl13MinCurRi	[mA] min. current right
+%MW2.763	200	200	CWwhl14MinCurRi	[mA] min. current right
+%MW2.764	200	200	CWwhl15MinCurRi	[mA] min. current right
+%MW2.765	200	200	CWwhl16MinCurRi	[mA] min. current right
+%MW2.766	200	200	CWwhl17MinCurRi	[mA] min. current right
+%MW2.767	200	200	CWwhl18MinCurRi	[mA] min. current right
+%MW2.768	200	200	CWwhl19MinCurRi	[mA] min. current right
+%MW2.769	200	200	CWwhl20MinCurRi	[mA] min. current right
+%MW2.770	200	200	CWwhl21MinCurRi	[mA] min. current right
+%MW2.771	200	200	CWwhl22MinCurRi	[mA] min. current right
+%MW2.772	200	200	CWwhl23MinCurRi	[mA] min. current right
+%MW2.773	200	200	CWwhl24MinCurRi	[mA] min. current right
+%MW2.774	700	700	CWwhl02MaxCurRi	[mA] max. current right
+%MW2.775	700	700	CWwhl03MaxCurRi	[mA] max. current right
+%MW2.776	700	700	CWwhl04MaxCurRi	[mA] max. current right
+%MW2.777	700	700	CWwhl05MaxCurRi	[mA] max. current right
+%MW2.778	700	700	CWwhl06MaxCurRi	[mA] max. current right
+%MW2.779	700	700	CWwhl07MaxCurRi	[mA] max. current right
+%MW2.780	700	700	CWwhl08MaxCurRi	[mA] max. current right
+%MW2.781	700	700	CWwhl09MaxCurRi	[mA] max. current right
+%MW2.782	700	700	CWwhl10MaxCurRi	[mA] max. current right
+%MW2.783	700	700	CWwhl11MaxCurRi	[mA] max. current right
+%MW2.784	700	700	CWwhl12MaxCurRi	[mA] max. current right
+%MW2.785	700	700	CWwhl13MaxCurRi	[mA] max. current right
+%MW2.786	700	700	CWwhl14MaxCurRi	[mA] max. current right
+%MW2.787	700	700	CWwhl15MaxCurRi	[mA] max. current right
+%MW2.788	700	700	CWwhl16MaxCurRi	[mA] max. current right
+%MW2.789	700	700	CWwhl17MaxCurRi	[mA] max. current right
+%MW2.790	700	700	CWwhl18MaxCurRi	[mA] max. current right
+%MW2.791	700	700	CWwhl19MaxCurRi	[mA] max. current right
+%MW2.792	700	700	CWwhl20MaxCurRi	[mA] max. current right
+%MW2.793	700	700	CWwhl21MaxCurRi	[mA] max. current right
+%MW2.794	700	700	CWwhl22MaxCurRi	[mA] max. current right
+%MW2.795	700	700	CWwhl23MaxCurRi	[mA] max. current right
+%MW2.796	700	700	CWwhl24MaxCurRi	[mA] max. current right
+%MW2.797	200	200	CWwhl01MinCurLe	[mA] min. current left
+%MW2.798	200	200	CWwhl02MinCurLe	[mA] min. current left
+%MW2.799	200	200	CWwhl03MinCurLe	[mA] min. current left
+%MW2.800	200	200	CWwhl04MinCurLe	[mA] min. current left
+%MW2.801	200	200	CWwhl05MinCurLe	[mA] min. current left
+%MW2.802	200	200	CWwhl06MinCurLe	[mA] min. current left
+%MW2.803	200	200	CWwhl07MinCurLe	[mA] min. current left
+%MW2.804	200	200	CWwhl08MinCurLe	[mA] min. current left
+%MW2.805	200	200	CWwhl09MinCurLe	[mA] min. current left
+%MW2.806	200	200	CWwhl10MinCurLe	[mA] min. current left
+%MW2.807	200	200	CWwhl11MinCurLe	[mA] min. current left
+%MW2.808	200	200	CWwhl12MinCurLe	[mA] min. current left
+%MW2.809	200	200	CWwhl13MinCurLe	[mA] min. current left
+%MW2.810	200	200	CWwhl14MinCurLe	[mA] min. current left
+%MW2.811	200	200	CWwhl15MinCurLe	[mA] min. current left
+%MW2.812	200	200	CWwhl16MinCurLe	[mA] min. current left
+%MW2.813	200	200	CWwhl17MinCurLe	[mA] min. current left
+%MW2.814	200	200	CWwhl18MinCurLe	[mA] min. current left
+%MW2.815	200	200	CWwhl19MinCurLe	[mA] min. current left
+%MW2.816	200	200	CWwhl20MinCurLe	[mA] min. current left
+%MW2.817	200	200	CWwhl21MinCurLe	[mA] min. current left
+%MW2.818	200	200	CWwhl22MinCurLe	[mA] min. current left
+%MW2.819	200	200	CWwhl23MinCurLe	[mA] min. current left
+%MW2.820	200	200	CWwhl24MinCurLe	[mA] min. current left
+%MW2.821	700	700	CWwhl01MaxCurRi	[mA] max. current right
+%MW2.822	700	700	CWwhl01MaxCurLe	[mA] max. current left 
+%MW2.823	700	700	CWwhl02MaxCurLe	[mA] max. current left 
+%MW2.824	700	700	CWwhl03MaxCurLe	[mA] max. current left 
+%MW2.825	700	700	CWwhl04MaxCurLe	[mA] max. current left 
+%MW2.826	700	700	CWwhl05MaxCurLe	[mA] max. current left 
+%MW2.827	700	700	CWwhl06MaxCurLe	[mA] max. current left 
+%MW2.828	700	700	CWwhl07MaxCurLe	[mA] max. current left 
+%MW2.829	700	700	CWwhl08MaxCurLe	[mA] max. current left 
+%MW2.830	700	700	CWwhl09MaxCurLe	[mA] max. current left 
+%MW2.831	700	700	CWwhl10MaxCurLe	[mA] max. current left 
+%MW2.832	700	700	CWwhl11MaxCurLe	[mA] max. current left 
+%MW2.833	700	700	CWwhl12MaxCurLe	[mA] max. current left
+%MW2.834	700	700	CWwhl13MaxCurLe	[mA] max. current left
+%MW2.835	700	700	CWwhl14MaxCurLe	[mA] max. current left
+%MW2.836	700	700	CWwhl15MaxCurLe	[mA] max. current left
+%MW2.837	700	700	CWwhl16MaxCurLe	[mA] max. current left
+%MW2.838	700	700	CWwhl17MaxCurLe	[mA] max. current left
+%MW2.839	700	700	CWwhl18MaxCurLe	[mA] max. current left
+%MW2.840	700	700	CWwhl19MaxCurLe	[mA] max. current left
+%MW2.841	700	700	CWwhl20MaxCurLe	[mA] max. current left
+%MW2.842	700	700	CWwhl21MaxCurLe	[mA] max. current left
+%MW2.843	700	700	CWwhl22MaxCurLe	[mA] max. current left
+%MW2.844	700	700	CWwhl23MaxCurLe	[mA] max. current left
+%MW2.845	700	700	CWwhl24MaxCurLe	[mA] max. current left
+%MW2.847	1	1	CWcorrWordOk	correction values in word memory section ok
+%MW2.848	200	200	CWw71MinCurRi	min current right wheel 71 [mA]
+%MW2.849	200	200	CWw72MinCurRi	min current right wheel 72 [mA]
+%MW2.850	200	200	CWw73MinCurRi	min current right wheel 73 [mA]
+%MW2.851	200	200	CWw74MinCurRi	min current right wheel 74 [mA]
+%MW2.852	200	200	CWw81MinCurRi	min current right wheel 81 [mA]
+%MW2.853	200	200	CWw82MinCurRi	min current right wheel 82 [mA]
+%MW2.854	200	200	CWw83MinCurRi	min current right wheel 83 [mA]
+%MW2.855	200	200	CWw84MinCurRi	min current right wheel 84 [mA]
+%MW2.856	700	700	CWw71MaxCurRi	max current right wheel 71 [mA]
+%MW2.857	700	700	CWw72MaxCurRi	max current right wheel 72 [mA]
+%MW2.858	700	700	CWw73MaxCurRi	max current right wheel 73 [mA]
+%MW2.859	700	700	CWw74MaxCurRi	max current right wheel 74 [mA]
+%MW2.860	700	700	CWw81MaxCurRi	max current right wheel 81 [mA]
+%MW2.861	700	700	CWw82MaxCurRi	max current right wheel 82 [mA]
+%MW2.862	700	700	CWw83MaxCurRi	max current right wheel 83 [mA]
+%MW2.863	700	700	CWw84MaxCurRi	max current right wheel 84 [mA]
+%MW2.864	200	200	CWw71MinCurLe	min current left wheel 71 [mA]
+%MW2.865	200	200	CWw72MinCurLe	min current left wheel 72 [mA]
+%MW2.866	200	200	CWw73MinCurLe	min current left wheel 73 [mA]
+%MW2.867	200	200	CWw74MinCurLe	min current left wheel 74 [mA]
+%MW2.868	200	200	CWw81MinCurLe	min current left wheel 81 [mA]
+%MW2.869	200	200	CWw82MinCurLe	min current left wheel 82 [mA]
+%MW2.870	200	200	CWw83MinCurLe	min current left wheel 83 [mA]
+%MW2.871	200	200	CWw84MinCurLe	min current left wheel 84 [mA]
+%MW2.872	700	700	CWw71MaxCurLe	max current left wheel 71 [mA]
+%MW2.873	700	700	CWw72MaxCurLe	max current left wheel 72 [mA]
+%MW2.874	700	700	CWw73MaxCurLe	max current left wheel 73 [mA]
+%MW2.875	700	700	CWw74MaxCurLe	max current left wheel 74 [mA]
+%MW2.876	700	700	CWw81MaxCurLe	max current left wheel 81 [mA]
+%MW2.877	700	700	CWw82MaxCurLe	max current left wheel 82 [mA]
+%MW2.878	700	700	CWw83MaxCurLe	max current left wheel 83 [mA]
+%MW2.879	700	700	CWw84MaxCurLe	max current left wheel 84 [mA]
+%MD2.750	0	           0	CDwhl01AngleOff	[rad] offset angle sensor (wheel 01)
+%MD2.751	0	           0	CDwhl02AngleOff	[rad] offset angle sensor (wheel 02)
+%MD2.752	0	           0	CDwhl03AngleOff	[rad] offset angle sensor (wheel 03)
+%MD2.753	0	           0	CDwhl04AngleOff	[rad] offset angle sensor (wheel 04)
+%MD2.754	0	           0	CDwhl05AngleOff	[rad] offset angle sensor (wheel 05)
+%MD2.755	0	           0	CDwhl06AngleOff	[rad] offset angle sensor (wheel 06)
+%MD2.756	0	           0	CDwhl07AngleOff	[rad] offset angle sensor (wheel 07)
+%MD2.757	0	           0	CDwhl08AngleOff	[rad] offset angle sensor (wheel 08)
+%MD2.758	0	           0	CDwhl09AngleOff	[rad] offset angle sensor (wheel 09)
+%MD2.759	0	           0	CDwhl10AngleOff	[rad] offset angle sensor (wheel 10)
+%MD2.760	0	           0	CDwhl11AngleOff	[rad] offset angle sensor (wheel 11)
+%MD2.761	0	           0	CDwhl12AngleOff	[rad] offset angle sensor (wheel 12)
+%MD2.762	0	           0	CDwhl13AngleOff	[rad] offset angle sensor (wheel 13)
+%MD2.763	0	           0	CDwhl14AngleOff	[rad] offset angle sensor (wheel 14)
+%MD2.764	0	           0	CDwhl15AngleOff	[rad] offset angle sensor (wheel 15)
+%MD2.765	0	           0	CDwhl16AngleOff	[rad] offset angle sensor (wheel 16)
+%MD2.766	0	           0	CDwhl17AngleOff	[rad] offset angle sensor (wheel 17)
+%MD2.767	0	           0	CDwhl18AngleOff	[rad] offset angle sensor (wheel 18)
+%MD2.768	0	           0	CDwhl19AngleOff	[rad] offset angle sensor (wheel 19)
+%MD2.769	0	           0	CDwhl20AngleOff	[rad] offset angle sensor (wheel 20)
+%MD2.770	0	           0	CDwhl21AngleOff	[rad] offset angle sensor (wheel 21)
+%MD2.771	0	           0	CDwhl22AngleOff	[rad] offset angle sensor (wheel 22)
+%MD2.772	0	           0	CDwhl23AngleOff	[rad] offset angle sensor (wheel 23)
+%MD2.773	0	           0	CDwhl24AngleOff	[rad] offset angle sensor (wheel 24)
+%MD2.774	0	           0	CDkd	[1] regulator proportional factor
+%MD2.775	0	           0	CDki	[1] regulator integral factor
+%MD2.776	1065353216	           1	CDkp	[1] regulator differential factor
+%MD2.777	1056964608	         0.5	CDks	[1] set value factor
+%MD2.778	1120403456	         100	CDkeybSpeed	[0...100%] speed for movements with external keyboard
+%MD2.779	1033476506	       0.075	CDmaxSpeed	[rad/sec] max. steering speed
+%MD2.780	1084722486	    5.235988	CDscaleAlpha	[rad/16mA] scaling factor angle sensor
+%MD2.781	1084227584	           5	CDdAlphaMaxPos	[degree] max. pos. angle deviation
+%MD2.782	3231711232	          -5	CDdAlphaMaxNeg	[degree] max. pos. angle deviation
+%MD2.783	1145569280	         800	CDmaxSumSpeed	[%] max. sum speed
+%MD2.784	1073741824	           2	CDdevRedBegin	[deg] angle deviation for begin of speed reduction
+%MD2.785	1051260355	        0.33	CDdevRed	[1/deg] angle deviation speed reduction value
+%MD2.786	1061158912	        0.75	CDjoyRedFact	general joystick reduce factor
+%MD2.787	1065353216	           1	CDintSumSpeed	integrator time sum speed reduction
+%MD2.788	1065353216	           1	CDintDevRed	integrator time deviation speed reduction
+%MD2.789	1112014848	          50	CDwhlPress4Sync	[bar] max. wheel pressure for synchonization
+%MD2.790	1	1	CDcorrDWordOk	correction values double word memory section ok
+%MD2.791	0	           0	CDw71AngleOff	offset angle sensor 71 [rad]
+%MD2.792	0	           0	CDw72AngleOff	offset angle sensor 72 [rad]
+%MD2.793	0	           0	CDw73AngleOff	offset angle sensor 73 [rad]
+%MD2.794	0	           0	CDw74AngleOff	offset angle sensor 74 [rad]
+%MD2.795	0	           0	CDw81AngleOff	offset angle sensor 81 [rad]
+%MD2.796	0	           0	CDw82AngleOff	offset angle sensor 82 [rad]
+%MD2.797	0	           0	CDw83AngleOff	offset angle sensor 83 [rad]
+%MD2.798	0	           0	CDw84AngleOff	offset angle sensor 84 [rad]

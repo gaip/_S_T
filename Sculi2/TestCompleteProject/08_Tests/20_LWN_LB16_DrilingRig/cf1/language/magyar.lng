@@ -1,0 +1,542 @@
+!version	00058
+#
+!font	UTF8
+!best-fit-font	iso8859-2
+
+# Language File / Sprachtexte File
+# Hungarian / Ungarisch
+!language	hun
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Csiga száll. mennyisége [l/min]
+2	Csiga száll. mennyisége [g/min]
+3	Cső száll. mennyisége [l/min]
+4	Cső száll. mennyisége [g/min]
+5	Szállított mennyiség [l/min]
+6	Szállított mennyiség [g/min]
+7	Szivattyúk száma
+8	Megfogó nyomása [bar]
+9	Excenter beáll. idő [s]
+10	Fő csörlő befűzése
+11	Döngölő erő [kg]
+12	Döngölő erő [lb]
+13	Kalapács / mélységi lépés
+14	Henger lökés és húzás szám
+15	Csiga hossza [cm]
+16	Csiga hossza [ft]
+17	PDE grafika a nyomtatóra
+18	PDE grafika kártyára
+19	Mélység lépés [cm]
+20	Mélység lépés [in]
+21	PDE trigger idő [s]
+22	Betonmennyiség/impulzus [l/imp.]
+23	Betonmennyiség/impulzus [g/imp.]
+24	Betonnyomás érz. mér. tart. [bar]
+25	Betonnyomás kijelző skála [bar]
+26	Cölöp átmérője [cm]
+27	Cölöp átmérője [in]
+28	Oszlop keresztmetszet [cm]
+29	Oszlop keresztmetszet [in]
+30	Béléscső átmérő [cm]
+31	Béléscső átmérő [in]
+32	Mélyítési faktor [%]
+33	Csiga emelkedés [cm]
+34	Csiga emelkedés [in]
+35	Húzó automatika ind. nyomás [bar]
+36	Húzó automatika áll. nyomás [bar]
+37	Megengedett beton többlet [%]
+38	Gazdaságos fordulatszám
+39	Menny. mérése nyomással (1=IGEN)
+40	Kihúzó autom. max. nyomás [bar]
+41	Csiga max. nyomás [bar]
+42	Cső max. nyomás [bar]
+43	max. nyomás [bar]
+44	1. csiga száll. mennyisége [l/min]
+45	1. csiga száll. mennyisége [g/min]
+46	2. csiga száll. mennyisége [l/min]
+47	2. csiga száll. mennyisége [g/min]
+48	3. csiga száll. mennyisége [l/min]
+49	3. csiga száll. mennyisége [g/min]
+50	Csigák száma
+51	Csőrendszer száll. menny. [l/min]
+52	Csőrendszer száll. menny. [g/min]
+53	Áramlásszab. kar nyitás [l/min]
+54	Áramlásszab. kar nyitás [g/min]
+55	Áramlásszab. kar zárás [l/min]
+56	Áramlásszab. kar zárás [g/min]
+57	Max. nyomás kar nyitás [bar]
+58	Max. nyomás kar zárás [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	Szakaszok száma oszloponként
+62	1. siló fajsúlya [kg/dm3]
+63	1. siló fajsúlya [lb/ft3]
+64	2. siló fajsúlya [kg/dm3]
+65	2. siló fajsúlya [lb/ft3]
+66	Mélység [m]
+67	Mélység [ft]
+68	Előtolás emelkedése [cm/f]
+69	Előtolás emelkedése [in/f]
+70	kötőanyag súly [kg/m]
+71	kötőanyag súly [lb/ft]
+72	minimális szállított mennyiség [%]
+73	torque limitation (1=YES)
+74	Csőrendszer száll. menny.2 [l/min]
+75	Csőrendszer száll. menny.2 [g/min]
+76	volume main Pump [l/min]
+
+!LOGGER
+1	Indítás dátuma
+2	Indítás ideje
+3	Befejezés dátuma
+4	Befejezés ideje
+5	Nyomtatás dátuma
+6	Nyomtatás időpontja
+
+!PDESERV
+# English is fix in the system
+
+!PDE
+1	Üzemmód
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	oldal
+4	emelés rögzítés
+5	leengedés rögzítés
+6	Cölöp sugara [cm]
+7	Cölöp sugara [in]
+8	Stílus
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly fúrás
+200	dupla forgófúrás
+300	CFA fúrás
+400	rázó
+401	leengedés
+402	felemelés
+403	leengedés/felemelés
+404	idő fölött
+411	rázó leengedése
+412	rázó felemelése
+413	rázó leengedése & felemelése
+414	rázó idő fölött
+500	kalapács
+600	push&pull (tolás&húzás)
+700	hidraulikus markoló
+800	döngölő vezérlés
+900	Földsúroló vödör
+1000	rakodás
+1100	talajkeverés
+1200	elektromos rázógép
+1201	csereoszlop (tömörítés)
+1202	csereoszlop
+1211	el. rázógép csere tömörítőoszlop
+1212	el. rázógép csereoszlop
+1300	száraz keverés
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitudó [in/100]
+7	Betonnyomás [bar]
+2	Amplitudó [mm]
+3	Mélység [cm]
+4	Mélység [ft]
+5	Ütésszám
+6	Ütésszám/mélység lépés
+8	Fúrónyomás csiga [bar]
+9	Fúrónyomás cső [bar]
+10	Fúrónyomás [bar]
+11	Nyomás döngölő [bar]
+12	Nyomás rázó [bar]
+13	Fúrás előrehaladása [f/m]
+14	Fúrás előrehaladása [f/ft]
+15	Fúrási forgatónyomaték [kip.ft]
+16	Fúrási forgatónyomaték [kNm]
+17	Energia/ütés [kip.ft]
+18	Energia/ütés [kNm]
+19	Energia/mélység lépés [kip.ft]
+20	Energia/mélység lépés [kNm]
+21	Idő [hh:mm:ss]
+22	Előtoló erő [kN]
+23	Előtoló erő [kip]
+24	Előtolási sebesség [ft/min]
+25	Előtolási sebesség [m/min]
+26	Frekvencia [Hz]
+27	Ütés/min
+28	Rázóegység [BE/KI]
+29	Eltérés X [ft]
+30	Eltérés X [cm]
+31	Eltérés Y [ft]
+32	Eltérés Y [cm]
+33	Ütés sorszám
+34	Emelési magasság [m]
+35	Emelési magasság [ft]
+36	Tömörítés/ütés [ft]
+37	Tömörítés/ütés [m]
+38	Tömörítés abszolút [ft]
+39	Tömörítés abszolút [m]
+40	Előírás fékmagasság [ft]
+41	Előírás fékmagasság [m]
+42	max. seb. csörlő 1 [ft/min]
+43	max. seb. csörlő 1 [m/min]
+44	max. seb. csörlő 2 [ft/min]
+45	max. seb. csörlő 2 [m/min]
+46	Dátum [nap:hónap:év]
+47	Futási idő [s]
+48	Beton mennyiség [yd3]
+49	Beton mennyiség [m3]
+50	Tételszám
+51	Idő amíg a döngölő a kötélen [s]
+52	Emelési idő [s]
+53	Leengedési idő [s]
+54	Előírás ütésszám
+55	Előírás emelési magasság [m]
+56	Előírás emelési magasság [ft]
+57	Előírás tömörítés [m]
+58	Előírás tömörítés [ft]
+59	Idő földsúroló vödör üzem [s]
+60	Ciklusidő [s]
+61	Terhelés ömlesztett áru [t]
+62	Teljes vontatott teher [t]
+63	Idő rakodási üzem [s]
+64	Ciklus terhelés [t]
+65	Teljes ciklus terhelés [t]
+66	Ciklus terhelés ömlesztett áru [t]
+67	Áram [A]
+68	Leengedés áram [A]
+69	Oldalvíz [l/m]
+70	Csúcsvíz [l/m]
+71	Légnyomás [bar]
+72	Automatika BE
+73	Feszültség [V]
+74	Megszakítás
+75	Dőlés [°]
+76	Fordulatszám [f/min]
+77	Beton mennyiség 1 [yd3]
+78	Beton mennyiség 1 [m3]
+79	Beton mennyiség 2 [yd3]
+80	Beton mennyiség 2 [m3]
+81	Beton mennyiség 3 [yd3]
+82	Beton mennyiség 3 [m3]
+83	fordulat 1 [f]
+84	fordulat 2 [f]
+85	fordulat 3 [f]
+86	Idő [min]
+87	Beton mennyiség [l/min]
+88	Beton mennyiség [g/min]
+89	minimális nyomás rázó [bar]
+90	maximális nyomás rázó [bar]
+91	előtolás min. sebessége [ft/min]
+92	előtolás min. sebessége [m/min]
+93	előtolás max. sebessége [ft/min]
+94	előtolás max. sebessége [m/min]
+95	maximális fúrónyomás 1 [bar]
+96	maximális fúrónyomás 2 [bar]
+97	maximális fúrónyomás 3 [bar]
+98	fúró minimális haladása 1 [f/m]
+99	fúró minimális haladása 1 [f/ft]
+100	fúró minimális haladása 2 [f/m]
+101	fúró minimális haladása 2 [f/ft]
+102	fúró minimális haladása 3 [f/m]
+103	fúró minimális haladása 3 [f/ft]
+104	minimális keverés [f]
+105	keverés 1 [f]
+106	keverés 2 [f]
+107	betonmennyiség mélységenként [l/m]
+108	betonmennyiség mélységenként [g/ft]
+109	csiga betonáramlása 1 [l/min]
+110	csiga betonáramlása 1 [g/min]
+111	csiga betonáramlása 2 [l/min]
+112	csiga betonáramlása 2 [g/min]
+113	csiga betonáramlása 3 [l/min]
+114	csiga betonáramlása 3 [g/min]
+115	Rázógép hőmérs. [°C]
+116	Rázógép hőmérs. [°F]
+117	fúró maximális haladása 1 [f/m]
+118	fúró maximális haladása 1 [f/ft]
+119	fúró maximális haladása 2 [f/m]
+120	fúró maximális haladása 2 [f/ft]
+121	fúró maximális haladása 3 [f/m]
+122	fúró maximális haladása 3 [f/ft]
+123	keverés 3 [f]
+124	1. min emelkedés [cm/f]
+125	1. min emelkedés [in/f]
+126	2. min emelkedés [cm/f]
+127	2. min emelkedés [in/f]
+128	3. min emelkedés [cm/f]
+129	3. min emelkedés [in/f]
+130	kötőanyag mennyiség [kg/min]
+131	kötőanyag mennyiség [lb/min]
+132	1. kötőanyag mennyiség [kg/min]
+133	1. kötőanyag mennyiség [lb/min]
+134	2. kötőanyag mennyiség [kg/min]
+135	2. kötőanyag mennyiség [lb/min]
+136	3. kötőanyag mennyiség [kg/min]
+137	3. kötőanyag mennyiség [lb/min]
+138	1. kötőanyag súly [kg]
+139	1. kötőanyag súly [lb]
+140	2. kötőanyag súly [kg]
+141	2. kötőanyag súly [lb]
+142	3. kötőanyag súly [kg]
+143	3. kötőanyag súly [lb]
+144	Mélység / kötőanyag [kg/m]
+145	Mélység / kötőanyag [lb/ft]
+146	kellyspeed [m/min]
+147	kellyspeed [ft/min]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Rázóny.emel. [bar]
+1	Amplitudó [in]
+2	Amplitudó [mm]
+3	Ütés/%s ft
+4	Ütés/%s mm
+5	Mélység [ft]
+6	Mélység [m]
+7	Tömörítés [m]
+8	Eltérés X [cm]
+9	Eltérés X [in]
+10	Eltérés Y [cm]
+11	Eltérés Y [in]
+12	Betonnyomás [bar]
+13	Fúrónyom.csiga [bar]
+14	Fúrónyom.cső [bar]
+15	Fúrónyomás [bar]
+16	Döng.nyom. [bar]
+17	Döng.ny.emel. [bar]
+19	Rázóny.leer. [bar]
+20	Fúr.haladás [f/m]
+21	Fúr.haladás [f/ft]
+22	Fúrónyomaték [kip.ft]
+23	Fúrónyomaték [kNm]
+24	Energia [kip.ft]
+25	Energia [kNm]
+26	Energ./%s ft [kip.ft]
+27	Energia/%s mm [kNm]
+28	Előtoló erő [kN]
+29	Előtoló erő [kip]
+30	Előtol.seb. [ft/min]
+31	Előtol.seb. [m/min]
+32	Emel.seb. [ft/min]
+33	Emel.seb. [m/min]
+34	Leeng.seb. [ft/min]
+35	Leeng.seb. [m/min]
+36	Frekvencia [Hz]
+37	Áram [A]
+38	Leeng. áram [A]
+39	Oldalvíz [l/m]
+40	Csúcsvíz [l/m]
+41	Idő [s]
+42	Leeng.idő [s]
+43	Ütés [sorszám]
+44	Nyomás rázó [bar]
+45	Amplitudó [%]
+46	Fúrónyomás1 [bar]
+47	Fúrónyomás2 [bar]
+48	Fúrónyomás3 [bar]
+49	Fúr.haladás1 [f/m]
+50	Fúr.haladás1 [f/ft]
+51	Fúr.haladás2 [f/m]
+52	Fúr.haladás2 [f/ft]
+53	Fúr.haladás3 [f/m]
+54	Fúr.haladás3 [f/ft]
+55	Betonnyomás1 [bar]
+56	Betonnyomás2 [bar]
+57	Betonnyomás3 [bar]
+58	Beton menny. [l/m]
+59	Beton menny. [g/ft]
+60	Betonáram1 [l/min]
+61	Betonáram1 [g/min]
+62	Betonáram2 [l/min]
+63	Betonáram2 [g/min]
+64	Betonáram3 [l/min]
+65	Betonáram3 [g/min]
+66	Keverés [f]
+67	Ford.szám1 [f/min]
+68	Ford.szám2 [f/min]
+69	Ford.szám3 [f/min]
+70	Rázógép árama [A]
+71	Behatolás [cm/f]
+72	Behatolás [in/f]
+73	1. emelkedés [cm/f]
+74	1. emelkedés [in/f]
+75	2. emelkedés [cm/f]
+76	2. emelkedés [in/f]
+77	3. emelkedés [cm/f]
+78	3. emelkedés [in/f]
+79	kötőanyag [kg/m]
+80	kötőanyag [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Építési helyszin
+2	Cölöp száma
+3	Cölöp tipusa(1beton;2fa;3acél)
+4	Cölöp hossza [m]
+5	Cölöp felülete [cm2]
+6	Cölöp átmérője [cm]
+7	Hasadék száma
+8	Rögzítés száma
+9	Vezető száma
+10	Megbízás száma
+11	Tömörítési pont
+12	Sorozatszám
+13	Készülékszám
+14	Cölöp átmérője [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Mélység lépés [ft]
+2	Mélység lépés [mm]
+3	maximális mélység [cm]
+4	maximális mélység [ft]
+5	Ütések összesen
+6	Teljes energia [kip.ft]
+7	Teljes energia [kNm]
+8	Döngölő erő [lb]
+9	Döngölő erő [kg]
+10	Forgatónyomaték kijelzés
+11	US mértékegységek
+12	US mértékegységek (kip)
+13	Tömörítési pont
+14	Csörlő 1 aktív
+15	Csörlő 2 aktív
+16	Beadott beton [yd3]
+17	Beadott beton [m3]
+18	Impulzusszám (betonszivattyú)
+19	Liter/impulzus (betonszivattyú)
+20	Előírás ütésszám
+21	Teljes tömörítés [m]
+22	Előírás tömörítés [m]
+23	Előírás emelési magasság [m]
+24	Előírás fékmagasság [m]
+25	Teljes idő [s]
+26	Idő [s]
+27	Összes ciklus száma
+28	Terhelés földsúroló vödör üresen [t]
+29	Összeg ömlesztett áru [t]
+30	Összeg földsúroló vödör tele [t]
+31	Összes Trigger száma
+32	Üressúly függeszték [t]
+33	Összeg ciklus terhelés [t]
+34	Összeg teljes ciklus terhelés [t]
+35	Összeg ciklus terhelés ömlesztett áru [t]
+36	Idő leengedési folyamat [s]
+37	Max. áram leengedési folyamat [A]
+38	Teljes ciklusidő [s]
+39	Előírás max. áram [A]
+40	Mélység [m]
+41	Mélység húzási kritérium 1 [m]
+42	Mélység húzási kritérium 2 [m]
+43	Előírás max. idő 1 [s]
+44	Előírás max. út 1 [m]
+45	Előírás max. idő 2 [s]
+46	Előírás max. út 2 [m]
+47	Előírás max. idő 3 [s]
+48	Előírás max. út 3 [m]
+49	Teljes oldalvíz [l]
+50	Teljes csúcsvíz [l]
+51	Átlagos légnyomás [bar]
+52	Markoló üzem
+53	Kalapács üzem
+54	hidraulika Push&Pull üzem
+55	Kelly fúróüzem
+56	dupla forgófúrás művelete
+57	CFA fúróüzem
+58	Rázó üzemmód
+59	Rázóegység
+60	(kip)
+61	(in / 100)
+62	KI
+63	BE
+64	Mennyiség túllépés [%]
+65	Cölöp bet. menny. [yd3]
+66	Cölöp bet. menny. [m3]
+67	gallon/impulzus (betonszivattyú)
+68	maximális mélység [m]
+69	Csigák száma
+70	Csiga hossza [cm]
+71	Csiga hossza [ft]
+72	gps pozíció, X [cm]
+73	gps pozíció, Y [cm]
+74	Fogyasztás [kWh]
+75	Indítás dőlés [°]
+76	Befejezés dőlés [°]
+77	Cölöp hossza [cm]
+78	Cölöp hossza [ft]
+79	összes kötőanyag [kg]
+80	összes kötőanyag [lb]
+81	átl. dőlésszög [mm/f]
+82	átl. dőlésszög [in/f]
+83	átl. oszl. fúrógép [bar]
+84	átl. hátram. seb. [f/min]
+85	átl. kötőelem [kg/m]
+86	átl. kötőelem [lb/ft]
+87	átl. kötőe. áraml. [kg/min]
+88	átl. kötőe. áraml. [lb/min]
+89	1. siló [kg]
+90	1. siló [lb]
+91	2. siló [kg]
+92	2. siló [lb]
+93	beill. magasság [cm]
+94	beill. magasság [ft]
+95	Üres furat [cm]
+96	Üres furat [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	kelly drilling
+200	double rotary drilling
+300	CFA drilling
+400	vibrator
+401	lowering
+402	lifting
+403	lowering/lifting
+404	over time
+411	vibrator lowering
+412	vibrator lifting
+413	vibrator lowering/lifting
+414	vibrator over time
+500	Hammer
+600	push&pull
+700	hydraulic grab
+800	dyn. compaction
+900	dragline
+1000	duty cycle
+1100	soil mixing
+1200	el. vibrator
+1201	repl. column (compaction)
+1202	repl. column
+1211	el. vibro RCC
+1212	el. vibro RC
+1300	dry mixing
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	job site
+2	pile number
+3	pile type(1concrete;2wood;3steel)
+4	pile length [m]
+5	pile area [cm^2]
+6	pile diameter [cm]
+7	slot number
+8	record number
+9	driver number
+10	job number
+11	compaction point
+12	serial number
+13	machine number
+14	pile diameter [in]

@@ -1,0 +1,25 @@
+%MX2.200	1	1	CXselect2Winches	NRS: select 2 winches
+%MD2.200	1158676480	        2304	CDcountsPerMeter	counts per meter [counts/m]
+%MD2.201	1083933983	        4.86	CDregelFactorTr	regulation factor trimot
+%MD2.202	0	           0	CDhdLoadLimit	heavy duty load [t]
+%MD2.203	1123549184	         124	CDndLoadLimit	normal load [t]
+%MD2.204	1119092736	          90	CDmgLoadLimit	motor grab load [t]
+%MD2.205	1117126656	          75	CDgrLoadLimit	grab load [t]
+%MD2.206	1119092736	          90	CDforceSensScaW1	lmb sensor scaling winch1 [t]
+%MD2.207	1119092736	          90	CDforceSensScaW2	lmb sensor scaling winch2 [t]
+%MD2.208	1123024896	         120	CDmaxSpeedHg	max. speed hg [m/min]
+%MD2.209	1134886912	         330	CDtheoretPowerHg	theoretical power hg [KW]
+%MD2.210	1120568607	      101.26	CD_i_Trimot	iTrimot
+%MD2.211	1063608386	       0.896	CDwinchDiameter	winch diameter
+%MD2.212	1042871747	       0.165	CDtrimotVgMax	trimot volume max
+%MD2.213	1049582633	        0.28	CDpumpVgMax	pump volume max
+%MD2.214	0
+%MD2.215	1082130432	           4	CDnumberOfTrimot	number of Trimots per winch
+%MD2.216	1065353216	           1	CD_i_HD	i HD
+%MD2.217	1089512407	        7.52	CDropeUnitWeight	rope weight per m [kg]
+%MD2.219	1037905691	       0.108	CDaccTr1VgMax	accumulator motor 1 vg max
+%MD2.221	1037905691	       0.108	CDaccTr2VgMax	accumulator motor 2 vg max
+%MD2.222	1073741824	           2	CDaccTrPerWinch	numbers of acc trimots per winch
+%MD2.223	1130070016	       219.5	CDtotalRopeLeng	total rope lenght [m]
+%MW2.704	0	0	CWwinchType	select winch type
+%MW2.706	3	3	CWswCraneTypVers	select software crane type version

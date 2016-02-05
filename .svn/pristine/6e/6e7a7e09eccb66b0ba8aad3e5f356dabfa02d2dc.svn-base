@@ -1,0 +1,9 @@
+temperature hydraulic oil tank 1 [øC]
+start time	2012-05-02T11:37:47
+stop time	2012-05-02T14:01:22
+date-time	temperature hydraulic oil tank 1 [øC]	cooling water temperature diesel engine 1 [øC]	outside temperature 1 [øC]
+	%MD1.386	%MD1.384	%MD1.387
+	MDmdeTmHOilTa1	MDmdeTmCoWaEn1	MDmdeTmOut1
+2012-05-02T11:37:47	0	0	49.99999
+2012-05-02T11:37:47	0	0	49.99999
+2012-05-02T11:37:47	0	0	49.99999

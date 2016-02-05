@@ -1,0 +1,173 @@
+!version	00195
+###############################################################
+# MDE for Dozercontrol
+###############################################################
+#
+#	modification:
+#
+#	version	| date			| author 			| change log
+###############################################################
+#	00195 	| 05.02.2010	| Rappold Benjamin	| initial rev.
+
+###############################################################
+# automatic store
+###############################################################
+# days interval, min space 5000kB, save dir, max space consumption 50000kB
+AUTOSTORE	5	5000	CF1:\	50000
+
+###############################################################
+# TIME based recording
+###############################################################
+
+# group machine mode
+GROUPTIME	grp_machinemode
+ELEMENT	MDMdeMachineMode			active machine mode
+# categories: <1, 1-2,.., 9-10, >10
+STEP	1	1	10
+
+# group drivespeed
+GROUPTIME	grp_drvspeed
+ELEMENT	MRMdeActDriveSpeedLeft		drive speed left track [km/h]
+# categories: <1, 1-2,.., 11-12, >12
+STEP	1	1	13
+ELEMENT	MRMdeActDriveSpeedRight		drive speed right track [km/h]
+# categories: <1, 1-2,.., 11-12, >12
+STEP	1	1	13
+ELEMENT	MRMdeHydOilTemp				hydraulic oil temp [°C]
+STEP	-40	10	20
+
+# group driving steering
+GROUPTIME	grp_drv_steer
+ELEMENT	MRMdeDriveSpeed				selected drive speed [km/h]
+# categories: <1, 1-2,.., 11-12, >12
+STEP	1	1	13
+ELEMENT	MRMdeSteerValue				steer value [+/- Permille]
+# categories: <-800, -800 - -600 ,.., 600-800, >800
+STEP	-800	200		10
+
+# group gearselect
+GROUPTIME	grp_gearsel
+ELEMENT	MDMdeGearSelection			selected gear
+STEP	0	1	5
+
+# group diesel engine speed
+GROUPTIME	grp_engspeed
+ELEMENT	MRMdeActEngSpeed			actual diesel engine speed [1/min]
+STEP	200 200 12
+ELEMENT	MRMdeEngSetSpeed			selected diesel engine speed [1/min]
+STEP	200 200 12
+
+# group hydraulic oil temperature
+GROUPTIME	grp_hydoiltemp
+ELEMENT	MRMdeHydOilTemp				hydraulic oil temp [°C]
+STEP	-40	10	20
+
+# group coolant water temperature
+GROUPTIME	grp_coolwattemp
+ELEMENT	MRMdeCoolWatTemp			coolwater temp [°C]
+STEP	-40	10	20
+
+# group charge air temperature
+GROUPTIME	grp_charairtemp
+ELEMENT	MRMdeCharAirTemp			chargeair temp [°C]
+STEP	-40	10	20
+
+# group batterie voltage
+GROUPTIME	grp_battvolt
+ELEMENT	MRMdeBattVoltage			batterie voltage [V]
+STEP	2	2	18
+ELEMENT	MRMdeActEngSpeed			actual diesel engine speed [1/min]
+STEP	200 200 12
+
+###############################################################
+# CHANGE based recording
+###############################################################
+
+# INPUTS
+###############################################################
+
+GROUPCHANGE	grp_seatcont
+ELEMENT	MXMdeSeatContact
+LIMIT	1
+
+GROUPCHANGE	grp_emergstop
+ELEMENT	MXMdeEmergStop
+LIMIT	1
+
+GROUPCHANGE	grp_safetyswitch
+ELEMENT	MXMdeSafetySwitch
+LIMIT	1
+
+GROUPCHANGE	grp_buttspup
+ELEMENT	MXMdeButtonSpeedUp
+LIMIT	1
+
+GROUPCHANGE	grp_buttspdown
+ELEMENT	MXMdeButtonSpeedDown
+LIMIT	1
+
+GROUPCHANGE	grp_powerbst
+ELEMENT	MXMdePowerBoostWH
+LIMIT	1
+
+GROUPCHANGE	grp_replenish
+ELEMENT	MXMdeReplenishPress
+LIMIT	1
+
+GROUPCHANGE	grp_buckreturn
+ELEMENT	MXMdeWHBucketReturn
+LIMIT	1
+
+GROUPCHANGE	grp_floatpos
+ELEMENT	MXMdeWHFloatPosition
+LIMIT	1
+
+GROUPCHANGE	grp_hoistlim
+ELEMENT	MXMdeWHHoistLimit
+LIMIT	1
+
+# OUTPUTS
+###############################################################
+
+GROUPCHANGE	grp_2ndpath
+ELEMENT	MXMde2ndPath
+LIMIT	1
+
+GROUPCHANGE	grp_parkbreak
+ELEMENT	MXMdeParkBreak
+LIMIT	1
+
+GROUPCHANGE	grp_overspprot
+ELEMENT	MXMdeOverSpProt
+LIMIT	1
+
+GROUPCHANGE	grp_backup
+ELEMENT	MXMdeBackUp
+LIMIT	1
+
+###############################################################
+# MAXIMA recording
+###############################################################
+
+MAXIMUM	MRMdeBattVoltage MdeMaxBattVolt			batterie voltage [V]
+MAX_ELEMENT	MRMdeActEngSpeed					actual diesel engine speed [1/min]
+MAX_ELEMENT	MRMdeCoolWatTemp					coolwater temp [°C]
+
+MAXIMUM	MRMdeActEngSpeed MdeMaxEngSpeed			actual diesel engine speed [1/min]
+MAX_ELEMENT	MRMdeActDriveSpeedLeft				drive speed left track [km/h]
+MAX_ELEMENT	MRMdeActDriveSpeedRight				drive speed right track [km/h]
+MAX_ELEMENT	MRMdeHydOilTemp						hydraulic oil temp [°C]
+
+MAXIMUM	MRMdeCoolWatTemp MdeMaxWatTemp			coolwater temp [°C]
+MAX_ELEMENT	MRMdeHydOilTemp						hydraulic oil temp [°C]
+
+MAXIMUM	MRMdeHydOilTemp MdeMaxHydOilTemp		hydraulic oil temp [°C]
+MAX_ELEMENT	MRMdeCoolWatTemp					coolwater temp [°C]
+
+MAXIMUM	MRMdeActDriveSpeedLeft MdeMaxDrSpLeft	actual drive speed left track [km/h]
+MAX_ELEMENT	MRMdeActEngSpeed					actual diesel engine speed [1/min]
+MAX_ELEMENT	MRMdeHydOilTemp						hydraulic oil temp [°C]
+
+MAXIMUM	MRMdeActDriveSpeedRight MdeMaxDrSpRight	actual drive speed right track [km/h]
+MAX_ELEMENT	MRMdeActEngSpeed					actual diesel engine speed [1/min]
+MAX_ELEMENT	MRMdeHydOilTemp						hydraulic oil temp [°C]

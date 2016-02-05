@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Dutch / Holländisch
+%?language	nld
+
+%section: SCREEN
+/TSoilFlowAuger	(Opbrengst spiraalboor) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Opbrengst spiraalboor)
+/TSoilFlowCase	(Opbrengst buis) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Opbrengst buis)
+/TSoilFlow	(Opbrengst) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Opbrengst)
+/TSnumbOfPumps	(Aantal pompen) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Aantal pompen)
+/TSclampJawPress	(Klemtangdruk) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Klemtangdruk)
+/TSexcAutoTime	(Versteltijd excenter) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Versteltijd excenter)
+/TSramWeight	(Ramgewicht) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Ramgewicht)
+/TSblowsPerDepthStep	(Slagen / dieptestap) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Slagen / dieptestap)
+/TSnumbPuPuCylinder	(Aantal Push & Pull cilinders) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Aantal Push & Pull cilinders)
+/TSaugerLength	(Lengte winding) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Lengte winding)
+/TSconcVolPerImp	(Hoeveelh. beton / impuls) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Hoeveelh. beton / impuls)
+/TSscalConcPresSens	(Meetbereik betondruksensor) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Meetbereik betondruksensor)
+/TSscalConcPresDisp	(Schaalverd. betondrukmeter) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Schaalverd. betondrukmeter)
+/TSpileDiameter	(Paaldiameter) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Paaldiameter)
+/TSmaxPressAuger	(max. druk spiraalboor) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (max. druk spiraalboor)
+/TSmaxPressCase	(max. druk buis) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (max. druk buis)
+/TSmaxPressure	(max. druk) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (max. druk)
+/TSoilFlowAuger1	(Opbrengst spiraalboor 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Opbrengst spiraalboor 1)
+/TSoilFlowAuger2	(Opbrengst spiraalboor 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Opbrengst spiraalboor 2)
+/TSoilFlowAuger3	(Opbrengst spiraalboor 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Opbrengst spiraalboor 3)
+/TSnumbOfAugers	(Aantal windingen) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Aantal windingen)
+/TSoilFlowOscil	(Capac. buizenlegmachine) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Capac. buizenlegmachine)
+/TSoilFlowGrabOpen	(Cap. grijper openen) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Cap. grijper openen)
+/TSoilFlowGrabClose	(Cap. grijper sluiten) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Cap. grijper sluiten)
+/TSmaxPressGrabOpen	(Max. druk grijper openen) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Max. druk grijper openen)
+/TSmaxPressGrabClose	(Max. druk grijper sluiten) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Max. druk grijper sluiten)
+/TSminOilFlow	(min. opbrengst) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. opbrengst)
+/TSoilFlowOscil2	(Capac. buizenlegmachine 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Capac. buizenlegmachine 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

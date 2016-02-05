@@ -1,0 +1,10 @@
+winch 1
+start time	2013-10-15T08:31:18
+stop time	2013-10-15T07:43:19
+category			0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22
+rope force winch 1 [kN]	%MD1.253	MDpdeDgcHightFt	<20	[20..40[	[40..60[	[60..80[	[80..100[	[100..120[	[120..140[	[140..160[	[160..180[	[180..200[	[200..220[	[220..240[	[240..260[	[260..280[	[280..300[	[300..320[	[320..340[	[340..360[	[360..380[	[380..400[	[400..420[	[420..440[	>=440
+operation mode 2	%MD1.259	MDpdeDgcLiftTime	<1	[1..2[	[2..3[	[3..4[	[4..5[	>=5
+rope speed winch 1 [m/min]	%MD1.254	MDpdeDgcHightPre	<0.16	>=0.16
+
+rope force winch 1 [kN]	operation mode 2	rope speed winch 1 [m/min]	sum of time [sek]
+0	0	0	20397.57

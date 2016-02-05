@@ -1,0 +1,5951 @@
+%!PS
+%?head
+
+%?Lisual_ver	1.185
+
+languagelevel 3 lt {
+(PS Language Level 3 required) quit
+} if
+
+product (Litronic Monitor) ne
+product (PME1 Display) ne and
+product (PME1 Monitor5) ne and
+product (PME1 Mining Monitor) ne and
+{
+1 1 scale
+/mousedown false def
+/mouseup false def
+/keypressed false def
+} if
+(store_currentpage) 0 setsysparam
+
+
+%?projecthead
+%?date	2013-03-06
+%?proj_name	lisprj
+%?proj_ver	00263
+%?proj_info	FE GEN 2.xx
+%?bbox	0 0 960 720
+
+%?library llsystem
+(llsystem.ps) run
+%?library llfar012
+(llfar012.ps) run
+%?library llfar016
+(llfar016.ps) run
+%?library llfar020
+(llfar020.ps) run
+%?library llfstd
+(llfstd.ps) run
+%?library llbasic
+(llbasic.ps) run
+%?library llgenpar
+(llgenpar.ps) run
+%?library llspepar
+(llspepar.ps) run
+%?library llusrpar
+(llusrpar.ps) run
+%?library llfar018
+(llfar018.ps) run
+
+%Global Variable List
+
+/_V0000	0 def	%?brief  %?use STC %?type DINT
+/_V0001	false def	%?brief  %?use STC %?type BOOL
+/_V0002	false def	%?brief  %?use STC %?type BOOL
+/_V0003	false def	%?brief  %?use STC %?type BOOL
+/_V0004	false def	%?brief  %?use STC %?type BOOL
+/_V0005	false def	%?brief  %?use STC %?type BOOL
+/_V0006	false def	%?brief  %?use STC %?type BOOL
+/_V0007	false def	%?brief  %?use STC %?type BOOL
+/_V0008	false def	%?brief  %?use STC %?type BOOL
+/_V0009	false def	%?brief  %?use STC %?type BOOL
+/_V0010	false def	%?brief  %?use STC %?type BOOL
+/_V0011	false def	%?brief  %?use STC %?type BOOL
+/_V0012	false def	%?brief  %?use STC %?type BOOL
+/_V0013	false def	%?brief  %?use STC %?type BOOL
+/_V0014	false def	%?brief  %?use STC %?type BOOL
+/_V0015	false def	%?brief  %?use STC %?type BOOL
+/_V0016	false def	%?brief  %?use STC %?type BOOL
+/_V0017	false def	%?brief  %?use STC %?type BOOL
+/_V0018	false def	%?brief  %?use STC %?type BOOL
+/_V0019	false def	%?brief  %?use STC %?type BOOL
+/_V0020	false def	%?brief  %?use STC %?type BOOL
+/_V0021	false def	%?brief  %?use STC %?type BOOL
+/_V0022	false def	%?brief  %?use STC %?type BOOL
+/_V0023	false def	%?brief  %?use STC %?type BOOL
+/_V0024	false def	%?brief  %?use STC %?type BOOL
+/_V0025	false def	%?brief  %?use STC %?type BOOL
+/_V0026	false def	%?brief  %?use STC %?type BOOL
+/_V0027	false def	%?brief  %?use STC %?type BOOL
+/_V0028	false def	%?brief  %?use STC %?type BOOL
+/_V0029	false def	%?brief  %?use STC %?type BOOL
+/_V0030	false def	%?brief  %?use STC %?type BOOL
+/_V0031	false def	%?brief  %?use STC %?type BOOL
+/_V0032	false def	%?brief  %?use STC %?type BOOL
+/_V0033	false def	%?brief  %?use STC %?type BOOL
+/_V0034	false def	%?brief  %?use STC %?type BOOL
+/_V0035	false def	%?brief  %?use STC %?type BOOL
+/_V0036	false def	%?brief  %?use STC %?type BOOL
+/_V0037	false def	%?brief  %?use STC %?type BOOL
+/_V0038	false def	%?brief  %?use STC %?type BOOL
+/_V0039	false def	%?brief  %?use STC %?type BOOL
+/_V0040	false def	%?brief  %?use STC %?type BOOL
+/_V0041	false def	%?brief  %?use STC %?type BOOL
+/_V0042	false def	%?brief  %?use STC %?type BOOL
+/_V0043	false def	%?brief  %?use STC %?type BOOL
+/_V0044	false def	%?brief  %?use STC %?type BOOL
+/_V0045	false def	%?brief  %?use STC %?type BOOL
+/_V0046	false def	%?brief  %?use STC %?type BOOL
+/_V0047	false def	%?brief  %?use STC %?type BOOL
+/_V0048	false def	%?brief  %?use STC %?type BOOL
+/_V0049	false def	%?brief  %?use STC %?type BOOL
+/_V0050	false def	%?brief  %?use STC %?type BOOL
+/_V0051	false def	%?brief  %?use STC %?type BOOL
+/_V0052	false def	%?brief  %?use STC %?type BOOL
+/_V0053	false def	%?brief  %?use STC %?type BOOL
+/_V0054	false def	%?brief  %?use STC %?type BOOL
+/_V0055	false def	%?brief  %?use STC %?type BOOL
+/_V0056	false def	%?brief  %?use STC %?type BOOL
+/_V0057	false def	%?brief  %?use STC %?type BOOL
+/_V0058	false def	%?brief  %?use STC %?type BOOL
+/_V0059	false def	%?brief  %?use STC %?type BOOL
+/_V0060	false def	%?brief  %?use STC %?type BOOL
+/_V0061	false def	%?brief  %?use STC %?type BOOL
+/_V0062	false def	%?brief  %?use STC %?type BOOL
+/_V0063	false def	%?brief  %?use STC %?type BOOL
+/_V0064	false def	%?brief  %?use STC %?type BOOL
+/_V0065	false def	%?brief  %?use STC %?type BOOL
+/_V0066	false def	%?brief  %?use STC %?type BOOL
+/_V0067	false def	%?brief  %?use STC %?type BOOL
+/_V0068	false def	%?brief  %?use STC %?type BOOL
+/_V0069	false def	%?brief  %?use STC %?type BOOL
+/_V0070	false def	%?brief  %?use STC %?type BOOL
+/_V0071	false def	%?brief  %?use STC %?type BOOL
+/_V0072	false def	%?brief  %?use STC %?type BOOL
+/_V0073	false def	%?brief  %?use STC %?type BOOL
+/_V0074	false def	%?brief  %?use STC %?type BOOL
+/_V0075	false def	%?brief  %?use STC %?type BOOL
+/_V0076	false def	%?brief  %?use STC %?type BOOL
+/_V0081	false def	%?brief  %?use STC %?type BOOL
+/_V0082	false def	%?brief  %?use STC %?type BOOL
+/_V0083	0 def	%?brief  %?use STC %?type DINT
+/_V0084	false def	%?brief  %?use STC %?type BOOL
+/_V0085	false def	%?brief  %?use STC %?type BOOL
+/_V0086	false def	%?brief  %?use STC %?type BOOL
+/_V0088	false def	%?brief  %?use STC %?type BOOL
+/_V0089	false def	%?brief  %?use STC %?type BOOL
+/_V0090	0 def	%?brief  %?use STC %?type DINT
+/_V0092	0 def	%?brief  %?use STC %?type DINT
+/_V0093	0 def	%?brief  %?use STC %?type DINT
+/_V0095	0 def	%?brief  %?use STC %?type DINT
+/_V0096	false def	%?brief  %?use STC %?type BOOL
+/_V0097	0 def	%?brief  %?use STC %?type DINT
+/_V0098	false def	%?brief  %?use STC %?type BOOL
+/_V0099	0 def	%?brief  %?use STC %?type DINT
+/_V0100	false def	%?brief  %?use STC %?type BOOL
+/_V0104	0 def	%?brief  %?use STC %?type DINT
+/_V0105	false def	%?brief  %?use STC %?type BOOL
+/_V0107	0 def	%?brief  %?use STC %?type DINT
+/_V0108	0 def	%?brief  %?use STC %?type DINT
+/_V0109	0 def	%?brief  %?use STC %?type DINT
+/_V0110	false def	%?brief  %?use STC %?type BOOL
+/_V0127	0 def	%?brief  %?use STC %?type DINT
+/_V0128	0 def	%?brief  %?use STC %?type DINT
+/_V0129	0 def	%?brief  %?use STC %?type DINT
+/_V0130	0 def	%?brief  %?use STC %?type DINT
+/_V0131	0 def	%?brief  %?use STC %?type DINT
+/_V0132	0 def	%?brief  %?use STC %?type DINT
+/_V0133	0 def	%?brief  %?use STC %?type DINT
+/_V0134	0 def	%?brief  %?use STC %?type DINT
+/_V0135	0 def	%?brief  %?use STC %?type DINT
+/_V0136	0 def	%?brief  %?use STC %?type DINT
+/_V0137	0 def	%?brief  %?use STC %?type DINT
+/_V0138	0 def	%?brief  %?use STC %?type DINT
+/_V0139	0 def	%?brief  %?use STC %?type DINT
+/_V0140	0 def	%?brief  %?use STC %?type DINT
+/_V0141	0 def	%?brief  %?use STC %?type DINT
+/_V0142	0 def	%?brief  %?use STC %?type DINT
+/_V0143	0 def	%?brief  %?use STC %?type DINT
+/_V0144	0 def	%?brief  %?use STC %?type DINT
+/_V0145	0 def	%?brief  %?use STC %?type DINT
+/_V0146	0 def	%?brief  %?use STC %?type DINT
+/_V0147	0 def	%?brief  %?use STC %?type DINT
+/_V0148	0 def	%?brief  %?use STC %?type DINT
+/_V0149	0 def	%?brief  %?use STC %?type DINT
+/_V0150	0 def	%?brief  %?use STC %?type DINT
+/_V0151	0 def	%?brief  %?use STC %?type DINT
+/_V0152	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0153	   0.00 def	%?brief  %?use STC %?type REAL
+/_V0154	0 def	%?brief  %?use STC %?type DINT
+/_V0155	false def	%?brief  %?use STC %?type BOOL
+/_V0156	false def	%?brief  %?use STC %?type BOOL
+/_V0157	false def	%?brief  %?use STC %?type BOOL
+/_V0158	() def	%?brief  %?use STC %?type STRI
+/_V0159	0 def	%?brief  %?use STC %?type DINT
+/_V0160	false def	%?brief  %?use STC %?type BOOL
+/_V0161	0 def	%?brief  %?use STC %?type DINT
+/_V0162	false def	%?brief  %?use STC %?type BOOL
+/_V0163	0 def	%?brief  %?use STC %?type DINT
+/_V0164	false def	%?brief  %?use STC %?type BOOL
+/_V0165	0 def	%?brief  %?use STC %?type DINT
+/_V0166	false def	%?brief  %?use STC %?type BOOL
+/_V0167	0 def	%?brief  %?use STC %?type DINT
+/_V0168	false def	%?brief  %?use STC %?type BOOL
+/_V0169	0 def	%?brief  %?use STC %?type DINT
+/_V0170	false def	%?brief  %?use STC %?type BOOL
+/_V0171	0 def	%?brief  %?use STC %?type DINT
+/_V0172	false def	%?brief  %?use STC %?type BOOL
+/_V0173	0 def	%?brief  %?use STC %?type DINT
+/_V0174	false def	%?brief  %?use STC %?type BOOL
+/_V0175	false def	%?brief  %?use STC %?type BOOL
+/_V0176	0 def	%?brief  %?use STC %?type DINT
+/_V0178	0 def	%?brief  %?use STC %?type DINT
+/_V0179	false def	%?brief  %?use STC %?type BOOL
+/_V0180	0 def	%?brief  %?use STC %?type DINT
+/_V0181	0 def	%?brief  %?use STC %?type DINT
+/_V0182	0 def	%?brief  %?use STC %?type DINT
+/_V0183	0 def	%?brief  %?use STC %?type DINT
+/_V0184	0 def	%?brief  %?use STC %?type DINT
+/_V0185	0 def	%?brief  %?use STC %?type DINT
+/_V0186	0 def	%?brief  %?use STC %?type DINT
+/_V0187	0 def	%?brief  %?use STC %?type DINT
+/_V0188	0 def	%?brief  %?use STC %?type DINT
+/_V0189	0 def	%?brief  %?use STC %?type DINT
+/_V0190	0 def	%?brief  %?use STC %?type DINT
+/_V0191	0 def	%?brief  %?use STC %?type DINT
+/_V0192	0 def	%?brief  %?use STC %?type DINT
+/_V0193	0 def	%?brief  %?use STC %?type DINT
+/_V0194	0 def	%?brief  %?use STC %?type DINT
+/_V0195	0 def	%?brief  %?use STC %?type DINT
+/_V0196	0 def	%?brief  %?use STC %?type DINT
+/_V0197	0 def	%?brief  %?use STC %?type DINT
+/_V0198	0 def	%?brief  %?use STC %?type DINT
+/_V0199	0 def	%?brief  %?use STC %?type DINT
+/_V0201	0 def	%?brief  %?use STC %?type DINT
+/_V0202	0 def	%?brief  %?use STC %?type DINT
+/_V0203	0 def	%?brief  %?use STC %?type DINT
+/_V0204	0 def	%?brief  %?use STC %?type DINT
+/_V0205	0 def	%?brief  %?use STC %?type DINT
+/_V0206	0 def	%?brief  %?use STC %?type DINT
+/_V0207	0 def	%?brief  %?use STC %?type DINT
+/_V0208	0 def	%?brief  %?use STC %?type DINT
+/_V0209	0 def	%?brief  %?use STC %?type DINT
+/_V0210	0 def	%?brief  %?use STC %?type DINT
+/_V0211	false def	%?brief  %?use STC %?type BOOL
+/_V0212	0 def	%?brief  %?use STC %?type DINT
+/_V0213	false def	%?brief  %?use STC %?type BOOL
+/_V0214	0 def	%?brief  %?use STC %?type DINT
+/MDcurrPageNumber	1 def	%?brief actual page number %?use MEM %?type DINT %?dflt 1
+/MDcurrSubPageNumSettings	1 def	%?brief actual page number of settings page %?use MEM %?type DINT %?dflt 1
+/MSpageAtStart	(page0) def	%?brief name of the page at start %?use MEM %?type STRI %?dflt page0
+/MScurrMainPage	(main) def	%?brief name of the current main page %?use MEM %?type STRI %?dflt main
+/MXbeepActStatus1	false def	%?brief beeper activated by status line %?use MEM %?type BOOL %?dflt false
+/MXbeepActMain1	false def	%?brief beeper activated by page main 1 %?use MEM %?type BOOL %?dflt false
+/MXbeepActPower1	false def	%?brief beeper activated by page power %?use MEM %?type BOOL %?dflt false
+/MXsymMainWarn	false def	%?brief symbol on page main warning %?use MEM %?type BOOL %?dflt false
+/MXsymMainWarnBeep	false def	%?brief symbol on page main warning one beep %?use MEM %?type BOOL %?dflt false
+/MXsymMainError	false def	%?brief symbol on page main error %?use MEM %?type BOOL %?dflt false
+/MXsymPowerWarn	false def	%?brief symbol on page powerpack warn %?use MEM %?type BOOL %?dflt false
+/MXsymPowerWarnBeep	false def	%?brief symbol on page powerpack warn one beep %?use MEM %?type BOOL %?dflt false
+/MXsymPowerError	false def	%?brief symbol on page powerpack error %?use MEM %?type BOOL %?dflt false
+/MXsymStatusWarn	false def	%?brief symbol on page part status warning %?use MEM %?type BOOL %?dflt false
+/MXsymStatusWarnBeep	false def	%?brief symbol on page part status warning one beep %?use MEM %?type BOOL %?dflt false
+/MXsymStatusError	false def	%?brief symbol on page part status error %?use MEM %?type BOOL %?dflt false
+/MXbuzzStatusAckn	false def	%?brief buzzer on status line acknowledged %?use MEM %?type BOOL %?dflt false
+/MXbuzzMainAckn	false def	%?brief buzzer on main page acknowledged %?use MEM %?type BOOL %?dflt false
+/MXbuzzPowerAckn	false def	%?brief buzzer on powerpack page acknowledged %?use MEM %?type BOOL %?dflt false
+/MXsymOphWarn	false def	%?brief symbol on page operational hour warning %?use MEM %?type BOOL %?dflt false
+/MXoneBeep	false def	%?brief set one beep %?use MEM %?type BOOL %?dflt false
+/MXwalAnyActive	false def	%?brief any wal is active %?use MEM %?type BOOL %?dflt false
+/MXbutAckNeMoWas0	false def	%?brief SXacknNewMode (acknowledge new mode) was false before (rising slope was on this %?use MEM %?type BOOL %?dflt false
+/MXswitchPageBack	false def	%?brief switch page back from inputkeyboard %?use MEM %?type BOOL %?dflt false
+/MSswitchPageBack	() def	%?brief switch to page back from inputkeyboard %?use MEM %?type STRI %?dflt 
+/MSkbdInputString	() def	%?brief input string for alphanumerical keyboard %?use MEM %?type STRI %?dflt 
+/MSkbdOutputString	() def	%?brief output string of alphanumerical keyboard %?use MEM %?type STRI %?dflt 
+/MXkbdReturned	false def	%?brief alphanumerical keyboard input was done %?use MEM %?type BOOL %?dflt false
+/MSacActKeyName	(unknown) def	%?brief ignition key actual name %?use MEM %?type STRI %?dflt unknown
+/MXremAccessWarn	false def	%?brief remote Access enabling warning %?use MEM %?type BOOL %?dflt false
+/SRcurrentMode	  -1.10 def	%?brief actual selected mode %?use GLO %?type REAL %?dflt   -1.10
+/SXactivateBeep	false def	%?brief activate Beeper %?use GLO %?type BOOL %?dflt false
+/SXMchUnitDistanc	false def	%?brief change unit for distance %?use GLO %?type BOOL %?dflt false
+/SXMchUnitLoad	false def	%?brief change unit for load %?use GLO %?type BOOL %?dflt false
+/SXMchUnitPress	false def	%?brief change unit for pressure %?use GLO %?type BOOL %?dflt false
+/SXMchUnitTemp	false def	%?brief change unit for temperature %?use GLO %?type BOOL %?dflt false
+/SXMchUnitVolume	false def	%?brief change unit for volume %?use GLO %?type BOOL %?dflt false
+/SXMchUnitSpeed	false def	%?brief change unit for speed %?use GLO %?type BOOL %?dflt false
+/SRMactDateFormat	   1.00 def	%?brief actual selected date format %?use GLO %?type REAL %?dflt    1.00
+/SXMtimeFormat12h	false def	%?brief 12h time format selected %?use GLO %?type BOOL %?dflt false
+/SXhydrOilShutOff	false def	%?brief hydraulic oil shut off ball valve not opened %?use GLO %?type BOOL %?dflt false
+/SXgearOilTempErr	false def	%?brief gear oil temperature error %?use GLO %?type BOOL %?dflt false
+/SXfeedPressLow	false def	%?brief feed pressure low %?use GLO %?type BOOL %?dflt false
+/SXfeedPresLowHg1	false def	%?brief feed pressure hg1 low %?use GLO %?type BOOL %?dflt false
+/SXfeedPresLowHg2	false def	%?brief feed pressure hg2 low %?use GLO %?type BOOL %?dflt false
+/SXfeedPressFilt	false def	%?brief feed pressure filter warning %?use GLO %?type BOOL %?dflt false
+/SXhydrOilRetFilt	false def	%?brief hydraulic oil return flow filter warning %?use GLO %?type BOOL %?dflt false
+/SXlidec1	false def	%?brief EDC is lidec 1 (compatibel) %?use GLO %?type BOOL %?dflt false
+/SXdefError	false def	%?brief DEF error %?use GLO %?type BOOL %?dflt false
+/SXdefWarn	false def	%?brief DEF warning %?use GLO %?type BOOL %?dflt false
+/SXmilError	false def	%?brief MIL error %?use GLO %?type BOOL %?dflt false
+/SXmilWarn	false def	%?brief MIL warning %?use GLO %?type BOOL %?dflt false
+/SXdpfError	false def	%?brief diesel particle filter error %?use GLO %?type BOOL %?dflt false
+/SXdpfWarn	false def	%?brief diesel particle filter warning %?use GLO %?type BOOL %?dflt false
+/SXdpfActive	false def	%?brief diesel particle filter active (HEST) %?use GLO %?type BOOL %?dflt false
+/SXdpfRegDisabled	false def	%?brief diesel particle filter regeneration disabled %?use GLO %?type BOOL %?dflt false
+/SXdpfRegManActiv	false def	%?brief diesel particle filter regeneration initiated %?use GLO %?type BOOL %?dflt false
+/SXdpfInitPossib	false def	%?brief diesel particle filter regeneration initiation possible %?use GLO %?type BOOL %?dflt false
+/SXdpfDisabPossib	false def	%?brief diesel particle filter regeneration disabling possible %?use GLO %?type BOOL %?dflt false
+/SRdpfTime	   0.00 def	%?brief diesel particle filter regeneration time %?use GLO %?type REAL %?dflt    0.00
+/SXcoolWaterContE	false def	%?brief cooling water content error %?use GLO %?type BOOL %?dflt false
+/SXcoolWaterContW	false def	%?brief cooling water content warning %?use GLO %?type BOOL %?dflt false
+/SXhydrOilCoLoErr	false def	%?brief hydraulic oil content low error %?use GLO %?type BOOL %?dflt false
+/SXhydrOilCoLoWar	false def	%?brief hydraulic oil content low warning %?use GLO %?type BOOL %?dflt false
+/SXhydrOilCoHiErr	false def	%?brief hydraulic oil content high error %?use GLO %?type BOOL %?dflt false
+/SXhydrOilCoHiWar	false def	%?brief hydraulic oil content high warning %?use GLO %?type BOOL %?dflt false
+/SXhydrOilLeakage	false def	%?brief hydraulic oil leakage %?use GLO %?type BOOL %?dflt false
+/SXengOilCoLowErr	false def	%?brief lub oil content low error %?use GLO %?type BOOL %?dflt false
+/SXengOilCoLowWar	false def	%?brief lub oil content low warning %?use GLO %?type BOOL %?dflt false
+/SXengOilCoHigErr	false def	%?brief lub oil content high error %?use GLO %?type BOOL %?dflt false
+/SXengOilCoHigWar	false def	%?brief lub oil content high warning %?use GLO %?type BOOL %?dflt false
+/SXengOilContAct	false def	%?brief lub oil content is active %?use GLO %?type BOOL %?dflt false
+/SXairFilterWarn	false def	%?brief air filter warning %?use GLO %?type BOOL %?dflt false
+/SXairFilterError	false def	%?brief air filter error %?use GLO %?type BOOL %?dflt false
+/SXwaterInFuel	false def	%?brief water in fuel %?use GLO %?type BOOL %?dflt false
+/SXfuelPressError	false def	%?brief fuel pressure error %?use GLO %?type BOOL %?dflt false
+/SXfuelPressWarn	false def	%?brief fuel pressure warning %?use GLO %?type BOOL %?dflt false
+/SXfuelTempError	false def	%?brief fuel temperature error %?use GLO %?type BOOL %?dflt false
+/SXfuelTempWarn	false def	%?brief fuel temperature warning %?use GLO %?type BOOL %?dflt false
+/SXengHightLimit	false def	%?brief engine power limitation by hight %?use GLO %?type BOOL %?dflt false
+/SXengPowerLimit	false def	%?brief engine power limitation %?use GLO %?type BOOL %?dflt false
+/SXchargeControl	false def	%?brief battery charge control %?use GLO %?type BOOL %?dflt false
+/SXpostHeatActive	false def	%?brief pre heating is active after engine started %?use GLO %?type BOOL %?dflt false
+/SXpreHeatStart	false def	%?brief pre heating ready for engine start %?use GLO %?type BOOL %?dflt false
+/SXpreHeatActive	false def	%?brief pre heating is active %?use GLO %?type BOOL %?dflt false
+/SXfuelContError	false def	%?brief fuel content error %?use GLO %?type BOOL %?dflt false
+/SXfuelContWarn	false def	%?brief fuel content warning %?use GLO %?type BOOL %?dflt false
+/SXengSpeedError	false def	%?brief engine speed error %?use GLO %?type BOOL %?dflt false
+/SXengSpeedWarn	false def	%?brief engine speed warning %?use GLO %?type BOOL %?dflt false
+/SXlubOilPressErr	false def	%?brief lub oil pressure error %?use GLO %?type BOOL %?dflt false
+/SXlubOilPressWar	false def	%?brief lub oil pressure warning %?use GLO %?type BOOL %?dflt false
+/SXhydrOilHeating	false def	%?brief hydraulic oil heating is active %?use GLO %?type BOOL %?dflt false
+/SXhydrOilTempErr	false def	%?brief hydraulic oil temperature error %?use GLO %?type BOOL %?dflt false
+/SXhydrOilTempWar	false def	%?brief hydraulic oil temperature warning %?use GLO %?type BOOL %?dflt false
+/SXchargeAirTempE	false def	%?brief charge air temperature error %?use GLO %?type BOOL %?dflt false
+/SXchargeAirTempW	false def	%?brief charge air temperature warning %?use GLO %?type BOOL %?dflt false
+/SXcoolWaterTempE	false def	%?brief coolant temperature error %?use GLO %?type BOOL %?dflt false
+/SXcoolWaterTempW	false def	%?brief coolant temperature warning %?use GLO %?type BOOL %?dflt false
+/SRlubOilCont	   0.00 def	%?brief lub Oil content %?use GLO %?type REAL %?dflt    0.00
+/SRoutdoorTemp	   0.00 def	%?brief outdoor temperature %?use GLO %?type REAL %?dflt    0.00
+/SRdefCont	   0.00 def	%?brief DEF content %?use GLO %?type REAL %?dflt    0.00
+/SRfuelCont	   0.00 def	%?brief fuel content %?use GLO %?type REAL %?dflt    0.00
+/SRbatteryVoltage	   0.00 def	%?brief battery voltage %?use GLO %?type REAL %?dflt    0.00
+/SRlubOilPress	   0.00 def	%?brief lub oil pressure %?use GLO %?type REAL %?dflt    0.00
+/SRchargeAirPress	   0.00 def	%?brief charge ais presuure %?use GLO %?type REAL %?dflt    0.00
+/SRchargeAirTemp	   0.00 def	%?brief charge air temperature %?use GLO %?type REAL %?dflt    0.00
+/SRhydrOilTemp	   0.00 def	%?brief hydraulic oil temperature %?use GLO %?type REAL %?dflt    0.00
+/SRcoolWaterTemp	   0.00 def	%?brief coolant temperature %?use GLO %?type REAL %?dflt    0.00
+/SRactualTorque	   0.00 def	%?brief engine actual torque %?use GLO %?type REAL %?dflt    0.00
+/SRengineSpeed	   0.00 def	%?brief engine speed %?use GLO %?type REAL %?dflt    0.00
+/SRpageAtStart	   0.00 def	%?brief first screen page at start %?use GLO %?type REAL %?dflt    0.00
+/SXengReqStop	false def	%?brief engine requires stop %?use GLO %?type BOOL %?dflt false
+/SXengReqRep	false def	%?brief engine requires repair %?use GLO %?type BOOL %?dflt false
+/SXlmlPage	false def	%?brief lml page allowed %?use GLO %?type BOOL %?dflt false
+/SXlmlWarnSym	false def	%?brief lml warning symbol %?use GLO %?type BOOL %?dflt false
+/SXlmlStopSym	false def	%?brief lml stop symbol %?use GLO %?type BOOL %?dflt false
+/SXlmlWarnBuzz	false def	%?brief lml warning buzzer %?use GLO %?type BOOL %?dflt false
+/SXlmlStopBuzz	false def	%?brief lml stop buzzer %?use GLO %?type BOOL %?dflt false
+/SXlmlBridged	false def	%?brief lml bridged %?use GLO %?type BOOL %?dflt false
+/SXassemblyOperat	false def	%?brief assembly operation activated %?use GLO %?type BOOL %?dflt false
+/SXemergOperat	false def	%?brief emergency operation activated %?use GLO %?type BOOL %?dflt false
+/SRlgSpeed	   0.00 def	%?brief luffing gear speed selection %?use GLO %?type REAL %?dflt    0.00
+/SRsgSpeed	   0.00 def	%?brief slewing gear speed selection %?use GLO %?type REAL %?dflt    0.00
+/SXrcChangeContro	false def	%?brief remote control change control %?use GLO %?type BOOL %?dflt false
+/SXrcActive	false def	%?brief remote control active %?use GLO %?type BOOL %?dflt false
+/SXrcRadioOk	false def	%?brief remote control radio signal ok %?use GLO %?type BOOL %?dflt false
+/SXhgFreeFallWarn	false def	%?brief hg freefall warning %?use GLO %?type BOOL %?dflt false
+/SXrcContChanged	false def	%?brief remote control control was changed %?use GLO %?type BOOL %?dflt false
+/SXhgFreefUnsec	false def	%?brief hg unsecured freefall preselected %?use GLO %?type BOOL %?dflt false
+/SXhgFreefPresel	false def	%?brief hg freefall preselected %?use GLO %?type BOOL %?dflt false
+/SXneedSuppCrane	false def	%?brief supply crane needed %?use GLO %?type BOOL %?dflt false
+/SXblackboxActive	false def	%?brief blackbox active %?use GLO %?type BOOL %?dflt false
+/SXblackboxInit	false def	%?brief blackbox initializing %?use GLO %?type BOOL %?dflt false
+/SXblackboxError	false def	%?brief blackbox error %?use GLO %?type BOOL %?dflt false
+/SXhg1ClutchOpen	false def	%?brief hg 1 clutch is open %?use GLO %?type BOOL %?dflt false
+/SXhg2ClutchOpen	false def	%?brief hg 2 clutch is open %?use GLO %?type BOOL %?dflt false
+/SXhg1FastSpeed	false def	%?brief hg 1 fast speed %?use GLO %?type BOOL %?dflt false
+/SXhg2FastSpeed	false def	%?brief hg 2 fast speed %?use GLO %?type BOOL %?dflt false
+/SXspecHoistFunc	false def	%?brief special sensitive hoisting function %?use GLO %?type BOOL %?dflt false
+/SRsymNrJoyLeX	   0.00 def	%?brief symbol number display joystick left X %?use GLO %?type REAL %?dflt    0.00
+/SRsymNrJoyLeY	   0.00 def	%?brief symbol number display joystick left Y %?use GLO %?type REAL %?dflt    0.00
+/SRsymNrJoyRiX	   0.00 def	%?brief symbol number display joystick right X %?use GLO %?type REAL %?dflt    0.00
+/SRsymNrJoyRiY	   0.00 def	%?brief symbol number display joystick right Y %?use GLO %?type REAL %?dflt    0.00
+/SX2TjoystAct	false def	%?brief 2-T joystick activated %?use GLO %?type BOOL %?dflt false
+/SXflCouWeiCylAct	false def	%?brief floating counterweight cylinder active %?use GLO %?type BOOL %?dflt false
+/SRlimitSwiNumb	   0.00 def	%?brief limit switch number %?use GLO %?type REAL %?dflt    0.00
+/SXlmlMainBoom	false def	%?brief lml main boom %?use GLO %?type BOOL %?dflt false
+/SXlmlMainReduct	false def	%?brief lml main boom reduction %?use GLO %?type BOOL %?dflt false
+/SXlmlFixedJib	false def	%?brief lml fixed Jib %?use GLO %?type BOOL %?dflt false
+/SXlmlLuffJib	false def	%?brief lml luffing Jib %?use GLO %?type BOOL %?dflt false
+/SXlmlFixLufJib	false def	%?brief lml fixed or luffing Jib %?use GLO %?type BOOL %?dflt false
+/SXlmlLoLocMaMiWJ	false def	%?brief lml load location main boom od Midfall with mounted jib %?use GLO %?type BOOL %?dflt false
+/SXlmlMidfall	false def	%?brief lml midfall %?use GLO %?type BOOL %?dflt false
+/SXlmlDerrick	false def	%?brief lml derrick %?use GLO %?type BOOL %?dflt false
+/SXlmlCouCar	false def	%?brief lml counterweight carrier %?use GLO %?type BOOL %?dflt false
+/SXlmlOkAngPivPie	false def	%?brief lml angle sensor pivot piece OK %?use GLO %?type BOOL %?dflt false
+/SXlmlOkGeometric	false def	%?brief lml geometrical calculation OK %?use GLO %?type BOOL %?dflt false
+/SXlmlOkLoadCalc	false def	%?brief lml load calculation OK %?use GLO %?type BOOL %?dflt false
+/SXlmlOkLoaCalcDe	false def	%?brief lml derrick load calculation OK %?use GLO %?type BOOL %?dflt false
+/SRlmlUtilization	   0.00 def	%?brief lml utlization %?use GLO %?type REAL %?dflt    0.00
+/SRlmlUtilBack	   0.00 def	%?brief lml utlization backwards %?use GLO %?type REAL %?dflt    0.00
+/SRlmlActLoad	   0.00 def	%?brief lml actual load (charge) %?use GLO %?type REAL %?dflt    0.00
+/SRlmlMaxLoad	   0.00 def	%?brief lml maximum load %?use GLO %?type REAL %?dflt    0.00
+/SRlmlActHookLoad	   0.00 def	%?brief lml actual hook load %?use GLO %?type REAL %?dflt    0.00
+/SRlmlActCompLoad	   0.00 def	%?brief lml actual complete load %?use GLO %?type REAL %?dflt    0.00
+/SRlmlJibLoadOLL	   0.00 def	%?brief lml actual jib load at other load location %?use GLO %?type REAL %?dflt    0.00
+/SRlmlActLoadRad	   0.00 def	%?brief lml actual load radius %?use GLO %?type REAL %?dflt    0.00
+/SRlmlActHeadHig	   0.00 def	%?brief lml actual head hight %?use GLO %?type REAL %?dflt    0.00
+/SRlmlBoomAngle	   0.00 def	%?brief lml main boom angle %?use GLO %?type REAL %?dflt    0.00
+/SRlmlJibAngle	   0.00 def	%?brief lml jib angle %?use GLO %?type REAL %?dflt    0.00
+/SRlmlCouCarLoad	   0.00 def	%?brief lml counterweight carrier load %?use GLO %?type REAL %?dflt    0.00
+/SRlmlCouCarRad	   0.00 def	%?brief lml counterweight carrier radius %?use GLO %?type REAL %?dflt    0.00
+/SXophEngRun	false def	%?brief operational hours engine running %?use GLO %?type BOOL %?dflt false
+/SXophHg1Run	false def	%?brief operational hours hg1 running %?use GLO %?type BOOL %?dflt false
+/SXophHg2Run	false def	%?brief operational hours hg2 running %?use GLO %?type BOOL %?dflt false
+/SXophLg1Run	false def	%?brief operational hours lg1 running %?use GLO %?type BOOL %?dflt false
+/SXophLg2Run	false def	%?brief operational hours lg2 running %?use GLO %?type BOOL %?dflt false
+/SXophLg3Run	false def	%?brief operational hours lg3 running %?use GLO %?type BOOL %?dflt false
+/SXophSgRun	false def	%?brief operational hours sg running %?use GLO %?type BOOL %?dflt false
+/SXophTgRun	false def	%?brief operational hours tg running %?use GLO %?type BOOL %?dflt false
+/SXophAdhRun	false def	%?brief operational hours additional hydraulic running %?use GLO %?type BOOL %?dflt false
+/SXophOpModeRun	false def	%?brief operational hours actual operatioanl mode running %?use GLO %?type BOOL %?dflt false
+/SXophCsRun	false def	%?brief operational hours cs running %?use GLO %?type BOOL %?dflt false
+/SXophAuxRun	false def	%?brief operational hours aux running %?use GLO %?type BOOL %?dflt false
+/SXophAdhAct	false def	%?brief operational hours additional hydraulic active %?use GLO %?type BOOL %?dflt false
+/SRophEngAbs	   0.00 def	%?brief operational hours engine absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophHg1Abs	   0.00 def	%?brief operational hours hg1 absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophHg2Abs	   0.00 def	%?brief operational hours hg2 absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophLg1Abs	   0.00 def	%?brief operational hours lg1 absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophLg2Abs	   0.00 def	%?brief operational hours lg2 absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophLg3Abs	   0.00 def	%?brief operational hours lg3 absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophSgAbs	   0.00 def	%?brief operational hours sg absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophTgAbs	   0.00 def	%?brief operational hours tg absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophAdhAbs	   0.00 def	%?brief operational hours additional hydraulic absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophOpModeAbs	   0.00 def	%?brief operational hours actual operatioanl mode absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophCsAbs	   0.00 def	%?brief operational hours cs absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophAuxAbs	   0.00 def	%?brief operational hours aux absolut %?use GLO %?type REAL %?dflt    0.00
+/SRophEngRel	   0.00 def	%?brief operational hours engine relative %?use GLO %?type REAL %?dflt    0.00
+/SRophHg1Rel	   0.00 def	%?brief operational hours hg1 relative %?use GLO %?type REAL %?dflt    0.00
+/SRophHg2Rel	   0.00 def	%?brief operational hours hg2 relative %?use GLO %?type REAL %?dflt    0.00
+/SRophLg1Rel	   0.00 def	%?brief operational hours lg1 relative %?use GLO %?type REAL %?dflt    0.00
+/SRophLg2Rel	   0.00 def	%?brief operational hours lg2 relative %?use GLO %?type REAL %?dflt    0.00
+/SRophLg3Rel	   0.00 def	%?brief operational hours lg3 relative %?use GLO %?type REAL %?dflt    0.00
+/SRophSgRel	   0.00 def	%?brief operational hours sg relative %?use GLO %?type REAL %?dflt    0.00
+/SRophTgRel	   0.00 def	%?brief operational hours tg relative %?use GLO %?type REAL %?dflt    0.00
+/SRophAdhRel	   0.00 def	%?brief operational hours additional hydraulic relative %?use GLO %?type REAL %?dflt    0.00
+/SRophOpModeRel	   0.00 def	%?brief operational hours actual operatioanl mode relative %?use GLO %?type REAL %?dflt    0.00
+/SRophCsRel	   0.00 def	%?brief operational hours cs relative %?use GLO %?type REAL %?dflt    0.00
+/SRophAuxRel	   0.00 def	%?brief operational hours aux relative %?use GLO %?type REAL %?dflt    0.00
+/SRfuelConsPhAbs	   0.00 def	%?brief fuel consumption per hour absolut %?use GLO %?type REAL %?dflt    0.00
+/SRfuelConsPhRel	   0.00 def	%?brief fuel consumption per hour relative %?use GLO %?type REAL %?dflt    0.00
+/SRfuelConsRel	   0.00 def	%?brief fuel consumption relative %?use GLO %?type REAL %?dflt    0.00
+/SRfuelConsAbs	   0.00 def	%?brief fuel consumption absolut %?use GLO %?type REAL %?dflt    0.00
+/SRhg1RopeLength	   0.00 def	%?brief hg1 rope length %?use GLO %?type REAL %?dflt    0.00
+/SRhg2RopeLength	   0.00 def	%?brief hg2 rope length %?use GLO %?type REAL %?dflt    0.00
+/SRhg1RopeSpeed	   0.00 def	%?brief hg1 rope speed %?use GLO %?type REAL %?dflt    0.00
+/SRhg2RopeSpeed	   0.00 def	%?brief hg2 rope speed %?use GLO %?type REAL %?dflt    0.00
+/SXhg1Lift	false def	%?brief hg1 lifting %?use GLO %?type BOOL %?dflt false
+/SXhg1Lower	false def	%?brief hg1 lower %?use GLO %?type BOOL %?dflt false
+/SXhg2Lift	false def	%?brief hg2 lift %?use GLO %?type BOOL %?dflt false
+/SXhg2Lower	false def	%?brief hg2 lower %?use GLO %?type BOOL %?dflt false
+/SXhg1RopeLenMeas	false def	%?brief hg1 rope length measuring preselected %?use GLO %?type BOOL %?dflt false
+/SXhg2RopeLenMeas	false def	%?brief hg2 rope length measuring preselected %?use GLO %?type BOOL %?dflt false
+/SXelectricWarnin	false def	%?brief electrical warning %?use GLO %?type BOOL %?dflt false
+/SXelectricError	false def	%?brief electrical error %?use GLO %?type BOOL %?dflt false
+/SRwindSpeed	   0.00 def	%?brief wind speed [m/s] %?use GLO %?type REAL %?dflt    0.00
+/SXwindSpeedWarn	false def	%?brief wind speed warning %?use GLO %?type BOOL %?dflt false
+/SXwindSpeedAct	false def	%?brief wind speed active %?use GLO %?type BOOL %?dflt false
+/SXwindSpeedError	false def	%?brief wind speed error %?use GLO %?type BOOL %?dflt false
+/SXlmlLoadTared	false def	%?brief lml load tared %?use GLO %?type BOOL %?dflt false
+/SXlmlCantBack	false def	%?brief lml cant back %?use GLO %?type BOOL %?dflt false
+/SXgroundPress	false def	%?brief ground pressure device activated %?use GLO %?type BOOL %?dflt false
+/SXgrouPressValid	false def	%?brief ground pressure values valid %?use GLO %?type BOOL %?dflt false
+/SRgroundPress0	   0.00 def	%?brief ground pressure at 0 degree %?use GLO %?type REAL %?dflt    0.00
+/SRgroundPress45	   0.00 def	%?brief ground pressure at 45 degree %?use GLO %?type REAL %?dflt    0.00
+/SRgroundPress90	   0.00 def	%?brief ground pressure at 90 degree %?use GLO %?type REAL %?dflt    0.00
+/SXwalPresel	false def	%?brief work area limitation preselected %?use GLO %?type BOOL %?dflt false
+/SXwalLgMin	false def	%?brief work area limitation lg minimum %?use GLO %?type BOOL %?dflt false
+/SXwalLgMax	false def	%?brief work area limitation lg maximum %?use GLO %?type BOOL %?dflt false
+/SXwalLg2Min	false def	%?brief work area limitation lg2 minimum %?use GLO %?type BOOL %?dflt false
+/SXwalLg2Max	false def	%?brief work area limitation lg2 maximum %?use GLO %?type BOOL %?dflt false
+/SXwalSgLeft	false def	%?brief work area limitation sg left %?use GLO %?type BOOL %?dflt false
+/SXwalSgRight	false def	%?brief work area limitation sg right %?use GLO %?type BOOL %?dflt false
+/SRactRadMaBo	   0.00 def	%?brief actual Radius main boom [m] %?use GLO %?type REAL %?dflt    0.00
+/SRactRadJib	   0.00 def	%?brief actual Radius main boom [m] %?use GLO %?type REAL %?dflt    0.00
+/SRwalMaxRadMaBo	   0.00 def	%?brief maximum Radius main boom [m] %?use GLO %?type REAL %?dflt    0.00
+/SRwalMaxRadJib	   0.00 def	%?brief maximum Radius jib [m] %?use GLO %?type REAL %?dflt    0.00
+/SRwalMaxRadius	   0.00 def	%?brief maximum Radius [m] %?use GLO %?type REAL %?dflt    0.00
+/SRwalMinRadMaBo	   0.00 def	%?brief minimum Radius main boom [m] %?use GLO %?type REAL %?dflt    0.00
+/SRwalMinRadJib	   0.00 def	%?brief minimum Radius jib [m] %?use GLO %?type REAL %?dflt    0.00
+/SRsgSuperstrAng	   0.00 def	%?brief sg superstructure angle [°] %?use GLO %?type REAL %?dflt    0.00
+/SRwalSlewRight	   0.00 def	%?brief wal slewing limit angle right [°] %?use GLO %?type REAL %?dflt    0.00
+/SRwalSlewLeft	   0.00 def	%?brief wal slewing limit angle left [°] %?use GLO %?type REAL %?dflt    0.00
+/SRwalLi1Int1AngM	   0.00 def	%?brief wal main boom sg angle border line 1 intersection 1 max radius %?use GLO %?type REAL %?dflt    0.00
+/SRwalLi1Int2AngM	   0.00 def	%?brief wal main boom sg angle border line 1 intersection 2 max radius %?use GLO %?type REAL %?dflt    0.00
+/SRwalLi2Int1AngM	   0.00 def	%?brief wal main boom sg angle border line 2 intersection 1 max radius %?use GLO %?type REAL %?dflt    0.00
+/SRwalLi2Int2AngM	   0.00 def	%?brief wal main boom sg angle border line 2 intersection 2 max radius %?use GLO %?type REAL %?dflt    0.00
+/SRwalLi1Int1AngJ	   0.00 def	%?brief wal luffing jib sg angle border line 1 intersection 1 max radius %?use GLO %?type REAL %?dflt    0.00
+/SRwalLi1Int2AngJ	   0.00 def	%?brief wal luffing jib sg angle border line 1 intersection 2 max radius %?use GLO %?type REAL %?dflt    0.00
+/SRwalLi2Int1AngJ	   0.00 def	%?brief wal luffing jib sg angle border line 2 intersection 1 max radius %?use GLO %?type REAL %?dflt    0.00
+/SRwalLi2Int2AngJ	   0.00 def	%?brief wal luffing jib sg angle border line 2 intersection 2 max radius %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P1RadM	   0.00 def	%?brief wal main boom radius sector 1 point 1 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P1AngM	   0.00 def	%?brief wal main boom sg angle sector 1 point 1 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P2RadM	   0.00 def	%?brief wal main boom radius sector 1 point 2 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P2AngM	   0.00 def	%?brief wal main boom sg angle sector 1 point 2 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P3RadM	   0.00 def	%?brief wal main boom radius sector 1 point 3 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P3AngM	   0.00 def	%?brief wal main boom sg angle sector 1 point 3 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P1RadJ	   0.00 def	%?brief wal luffing jib radius sector 1 point 1 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P1AngJ	   0.00 def	%?brief wal luffing jib sg angle sector 1 point 1 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P2RadJ	   0.00 def	%?brief wal luffing jib radius sector 1 point 2 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P2AngJ	   0.00 def	%?brief wal luffing jib sg angle sector 1 point 2 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P3RadJ	   0.00 def	%?brief wal luffing jib radius sector 1 point 3 %?use GLO %?type REAL %?dflt    0.00
+/SRwalSect1P3AngJ	   0.00 def	%?brief wal luffing jib sg angle sector 1 point 3 %?use GLO %?type REAL %?dflt    0.00
+/SXMbuzzStatAckn	false def	%?brief buzzer on status line acknowledged %?use GLO %?type BOOL %?dflt false
+/SXMbuzzMainAckn	false def	%?brief buzzer on main page acknowledged %?use GLO %?type BOOL %?dflt false
+/SXMbuzzPowerAckn	false def	%?brief buzzer on powerpack page acknowledged %?use GLO %?type BOOL %?dflt false
+/SXMresetOpHour	false def	%?brief operational hours RESET %?use GLO %?type BOOL %?dflt false
+/SXMresetFuelCons	false def	%?brief reset fuel consumption %?use GLO %?type BOOL %?dflt false
+/SXMhg1ResRopLen	false def	%?brief hg1 reset rope length %?use GLO %?type BOOL %?dflt false
+/SXMhg2ResRopLen	false def	%?brief hg2 reset rope length %?use GLO %?type BOOL %?dflt false
+/SXMhg1ChanLay1_2	false def	%?brief hg1 change layer 1 - 2 %?use GLO %?type BOOL %?dflt false
+/SXMhg2ChanLay1_2	false def	%?brief hg2 change layer 1 - 2 %?use GLO %?type BOOL %?dflt false
+/SXMhg1ChanLay3_4	false def	%?brief hg1 change layer 3 - 4 %?use GLO %?type BOOL %?dflt false
+/SXMhg2ChanLay3_4	false def	%?brief hg2 change layer 3 - 4 %?use GLO %?type BOOL %?dflt false
+/SXMhg1ChanLay5_6	false def	%?brief hg1 change layer 5 - 6 %?use GLO %?type BOOL %?dflt false
+/SXMhg2ChanLay5_6	false def	%?brief hg2 change layer 5 - 6 %?use GLO %?type BOOL %?dflt false
+/SXMlmlTaraActLoa	false def	%?brief lml tara actual load %?use GLO %?type BOOL %?dflt false
+/SXMoneBeep	false def	%?brief set one beep %?use GLO %?type BOOL %?dflt false
+/SXMwalHigMaBoAct	false def	%?brief work area limitation hight main boom active %?use GLO %?type BOOL %?dflt false
+/SXMwalHigLJibAct	false def	%?brief work area limitation hight luffing jib active %?use GLO %?type BOOL %?dflt false
+/SXMwalRadMaBoAct	false def	%?brief work area limitation radius main boom active %?use GLO %?type BOOL %?dflt false
+/SXMwalRadLJibAct	false def	%?brief work area limitation radius luffing jib active %?use GLO %?type BOOL %?dflt false
+/SXMwalSlewAct	false def	%?brief work area limitation slewing gear active %?use GLO %?type BOOL %?dflt false
+/SXMwalLinMaBoAct	false def	%?brief work area limitation border line main boom active %?use GLO %?type BOOL %?dflt false
+/SXMwalLinLJibAct	false def	%?brief work area limitation border line luffing jib active %?use GLO %?type BOOL %?dflt false
+/SXMwalSecMaBoAct	false def	%?brief work area limitation sector main boom active %?use GLO %?type BOOL %?dflt false
+/SXMwalSecLJibAct	false def	%?brief work area limitation sector luffing jib active %?use GLO %?type BOOL %?dflt false
+/SXMwalSetMiRaMaB	false def	%?brief work area limitation set minimum radius main boom %?use GLO %?type BOOL %?dflt false
+/SXMwalSetMiRaLuJ	false def	%?brief work area limitation set minimum radius luffing jib %?use GLO %?type BOOL %?dflt false
+/SXMwalSetMaRaMaB	false def	%?brief work area limitation set maximum radius main boom %?use GLO %?type BOOL %?dflt false
+/SXMwalSetMaRaLuJ	false def	%?brief work area limitation set maximum radius luffin jib %?use GLO %?type BOOL %?dflt false
+/SXMwalSetSgLeft	false def	%?brief work area limitation set slewing gear angle left %?use GLO %?type BOOL %?dflt false
+/SXMwalSetSgRight	false def	%?brief work area limitation set slewing gear angle right %?use GLO %?type BOOL %?dflt false
+/SXMwalSetLin1P1M	false def	%?brief work area limitation set line 1 point 1 main boom %?use GLO %?type BOOL %?dflt false
+/SXMwalSetLin1P2M	false def	%?brief work area limitation set line 1 point 2 main boom %?use GLO %?type BOOL %?dflt false
+/SXMwalSetLin2P1M	false def	%?brief work area limitation set line 2 point 1 main boom %?use GLO %?type BOOL %?dflt false
+/SXMwalSetLin2P2M	false def	%?brief work area limitation set line 2 point 2 main boom %?use GLO %?type BOOL %?dflt false
+/SXMwalSetLin1P1J	false def	%?brief work area limitation set line 1 point 1 luffing jib %?use GLO %?type BOOL %?dflt false
+/SXMwalSetLin1P2J	false def	%?brief work area limitation set line 1 point 2 luffing jib %?use GLO %?type BOOL %?dflt false
+/SXMwalSetLin2P1J	false def	%?brief work area limitation set line 2 point 1 luffing jib %?use GLO %?type BOOL %?dflt false
+/SXMwalSetLin2P2J	false def	%?brief work area limitation set line 2 point 2 luffing jib %?use GLO %?type BOOL %?dflt false
+/SXMwalSetSec1P1M	false def	%?brief work area limitation set sector 1 point 1 main boom %?use GLO %?type BOOL %?dflt false
+/SXMwalSetSec1P2M	false def	%?brief work area limitation set sector 1 point 2 main boom %?use GLO %?type BOOL %?dflt false
+/SXMwalSetSec1P3M	false def	%?brief work area limitation set sector 1 point 3 main boom %?use GLO %?type BOOL %?dflt false
+/SXMwalSetSec1P1J	false def	%?brief work area limitation set sector 1 point 1 luffing jib %?use GLO %?type BOOL %?dflt false
+/SXMwalSetSec1P2J	false def	%?brief work area limitation set sector 1 point 2 luffing jib %?use GLO %?type BOOL %?dflt false
+/SXMwalSetSec1P3J	false def	%?brief work area limitation set sector 1 point 3 luffing jib %?use GLO %?type BOOL %?dflt false
+/SXMdpfRegInitiat	false def	%?brief diesel particel filter regeneration initiated %?use GLO %?type BOOL %?dflt false
+/SXMdpfRegDisable	false def	%?brief diesel particel filter regeneration disabled %?use GLO %?type BOOL %?dflt false
+/SRMhg1Reeving	   0.00 def	%?brief hg1 reeving %?use GLO %?type REAL %?dflt    0.00
+/SRMhg2Reeving	   0.00 def	%?brief hg2 reeving %?use GLO %?type REAL %?dflt    0.00
+/SRwalDistToStop	   0.00 def	%?brief work area limitation distance to stop %?use GLO %?type REAL %?dflt    0.00
+/SXsuperstrAngle	false def	%?brief superstructure angle %?use GLO %?type BOOL %?dflt false
+/SRsuperstrAngleX	   0.00 def	%?brief superstructure angle X %?use GLO %?type REAL %?dflt    0.00
+/SRsuperstrAngleY	   0.00 def	%?brief superstructure angle Y %?use GLO %?type REAL %?dflt    0.00
+/SRsuperstrAngAbs	   0.00 def	%?brief superstructure angle absolut %?use GLO %?type REAL %?dflt    0.00
+/SDacActKeyPrio	0 def	%?brief ignition key actual priority %?use GLO %?type DINT %?dflt 0
+/SXacAcActive	false def	%?brief AC access control is active %?use GLO %?type BOOL %?dflt false
+/SXacOlActive	false def	%?brief AC operation lock system is active %?use GLO %?type BOOL %?dflt false
+/SXacActKeyValid	false def	%?brief AC actual key is valid %?use GLO %?type BOOL %?dflt false
+/SXacActKeyMaster	false def	%?brief AC actual key is master %?use GLO %?type BOOL %?dflt false
+/SXacKeyChanPrio	false def	%?brief AC actual key has changing priority %?use GLO %?type BOOL %?dflt false
+/SXMacSetNextKey	false def	%?brief AC learn next key to immo %?use GLO %?type BOOL %?dflt false
+/SXMacDelNextKey	false def	%?brief AC delete next key from immo %?use GLO %?type BOOL %?dflt false
+/SXMacDelAllOtKey	false def	%?brief AC delete all other keys from immo %?use GLO %?type BOOL %?dflt false
+/SXacKeyMatched	false def	%?brief AC actual ignition key is kown by IMMO %?use GLO %?type BOOL %?dflt false
+/SXacImmoIsBusy	false def	%?brief AC IMMO or Database is busy %?use GLO %?type BOOL %?dflt false
+/SXacRestart	false def	%?brief AC restart machine %?use GLO %?type BOOL %?dflt false
+/SDacNumberOfKeys	0 def	%?brief Anzahl der angelernten Schlüssel %?use GLO %?type DINT %?dflt 0
+/SXMacKeyNameChan	false def	%?brief Name des aktuellen Schlüsseles wurde geändert %?use GLO %?type BOOL %?dflt false
+/SXserviceWarning	false def	%?brief Service system warning %?use GLO %?type BOOL %?dflt false
+/SXserviceNotAckn	false def	%?brief Service system not acknowledged %?use GLO %?type BOOL %?dflt false
+/SXMservButtAckn	false def	%?brief Service button acknowledged %?use GLO %?type BOOL %?dflt false
+/SRservLastAckn	   0.00 def	%?brief Service hours last service %?use GLO %?type REAL %?dflt    0.00
+/SRservNextAckn	 500.00 def	%?brief Service hours next service %?use GLO %?type REAL %?dflt  500.00
+/SRservAcknBef	 100.00 def	%?brief acknowledge hours before service %?use GLO %?type REAL %?dflt  100.00
+/SRservInterval	 500.00 def	%?brief Interval hours of service %?use GLO %?type REAL %?dflt  500.00
+/SXremAccessState	false def	%?brief actual remote access state %?use GLO %?type BOOL %?dflt false
+/SXMenabRemAccess	false def	%?brief enable remote access %?use GLO %?type BOOL %?dflt false
+/SXclampOpen	false def	%?brief clamping jaw open %?use GLO %?type BOOL %?dflt false
+/SXMnewModeAckn	false def	%?brief new mode selected %?use GLO %?type BOOL %?dflt false
+/SRMpreNewMode	   0.00 def	%?brief preselected new Mode %?use GLO %?type REAL %?dflt    0.00
+/SXpreMainOp	false def	%?brief preselection main operation %?use GLO %?type BOOL %?dflt false
+/SXacknNewMode	false def	%?brief acknoledge new mode %?use GLO %?type BOOL %?dflt false
+/SXprePuPuOp	false def	%?brief preselection push&pull operation %?use GLO %?type BOOL %?dflt false
+/SXpreSobOp	false def	%?brief preselection SOB operation %?use GLO %?type BOOL %?dflt false
+/SXpreVdwOp	false def	%?brief preselection VdW operation %?use GLO %?type BOOL %?dflt false
+/SXpreSmoOp	false def	%?brief preselection SMO operation %?use GLO %?type BOOL %?dflt false
+/SXpreKellyOp	false def	%?brief preselection kelly operation %?use GLO %?type BOOL %?dflt false
+/SXpreHamOp	false def	%?brief preselection hammer operation %?use GLO %?type BOOL %?dflt false
+/SXpreVibOp	false def	%?brief preselection vibrator operation %?use GLO %?type BOOL %?dflt false
+/SXsgAngleSenPres	false def	%?brief sg angle sensor is present %?use GLO %?type BOOL %?dflt false
+/SXsgAngleSenDiff	false def	%?brief sg angle sensor difference %?use GLO %?type BOOL %?dflt false
+/SXMsgSetToZero	false def	%?brief sg set angle to zero degree %?use GLO %?type BOOL %?dflt false
+/SXMsgSetSynchInc	false def	%?brief sg set incremental sensor to angle sensor angle %?use GLO %?type BOOL %?dflt false
+/SRsgAngleAnalog	   0.00 def	%?brief sg angle analog sensor %?use GLO %?type REAL %?dflt    0.00
+/SRsgAngleIncr	   0.00 def	%?brief sg angle incremental sensor %?use GLO %?type REAL %?dflt    0.00
+/SRsgAngleAnaOffs	   0.00 def	%?brief sg angle offset analog sensor %?use GLO %?type REAL %?dflt    0.00
+/SRequPressure1	   0.00 def	%?brief equipment pressure 1 [bar] %?use GLO %?type REAL %?dflt    0.00
+/SRequPressure2	   0.00 def	%?brief equipment pressure 2 [bar] %?use GLO %?type REAL %?dflt    0.00
+/SRequPressure3	   0.00 def	%?brief equipment pressure 3 [bar] %?use GLO %?type REAL %?dflt    0.00
+/SRvibHamFrequ	   0.00 def	%?brief vibrator/hammer frequency %?use GLO %?type REAL %?dflt    0.00
+/SRvibAmpHamEner	   0.00 def	%?brief vibrator amplitude / hammer energy %?use GLO %?type REAL %?dflt    0.00
+/SRMratedVol1	   0.00 def	%?brief rated volume section 1 %?use GLO %?type REAL %?dflt    0.00
+/SRMratedVol2	   0.00 def	%?brief rated volume section 2 %?use GLO %?type REAL %?dflt    0.00
+/SRMusedPumps	   0.00 def	%?brief used pumps %?use GLO %?type REAL %?dflt    0.00
+/SRMratedPres1	   0.00 def	%?brief rated pressure section 1 %?use GLO %?type REAL %?dflt    0.00
+/SRMratedPres2	   0.00 def	%?brief rated pressure section 2 %?use GLO %?type REAL %?dflt    0.00
+/SRMratedAddHyVol	   0.00 def	%?brief rated volume casing oscillator %?use GLO %?type REAL %?dflt    0.00
+/SRMpileDiameter	   0.00 def	%?brief ratet pile diameter [cm] %?use GLO %?type REAL %?dflt    0.00
+/SRMdrillLenghCm	   0.00 def	%?brief drill lengh [cm] %?use GLO %?type REAL %?dflt    0.00
+/SRMscaleConcPres	   0.00 def	%?brief scale concrete pressure [bar] %?use GLO %?type REAL %?dflt    0.00
+/SRMscalConcPrInd	   1.00 def	%?brief scale concrete pressure indication [bar] %?use GLO %?type REAL %?dflt    1.00
+/SRMconcFlowImp	   0.00 def	%?brief concrete volume per impuse [l/imp] %?use GLO %?type REAL %?dflt    0.00
+/SRMvibClampClose	   0.00 def	%?brief vibrator threshold clamping jaw closed %?use GLO %?type REAL %?dflt    0.00
+/SRMvibExcTime	   0.00 def	%?brief vibrator excentric time [s] %?use GLO %?type REAL %?dflt    0.00
+/SRMhamRamWeight	   0.00 def	%?brief hammer ram weight %?use GLO %?type REAL %?dflt    0.00
+/SXstoreAnalSign	false def	%?brief store analog joystick signal %?use GLO %?type BOOL %?dflt false
+/SXhg1Mooring	false def	%?brief hg1 mooring %?use GLO %?type BOOL %?dflt false
+/SXhg2Mooring	false def	%?brief hg2 mooring %?use GLO %?type BOOL %?dflt false
+/SXhg2Syn2Cw	false def	%?brief hg2 synchron to crowd winch %?use GLO %?type BOOL %?dflt false
+/SXz4LimitOut	false def	%?brief maximale Ausladung Z4 %?use GLO %?type BOOL %?dflt false
+/SXcsSlowMotion	false def	%?brief Vorschub langsam %?use GLO %?type BOOL %?dflt false
+/SXcsFastMotion	false def	%?brief Vorschub schnell %?use GLO %?type BOOL %?dflt false
+/SXkellyOverload	false def	%?brief Überlast Kellywinde %?use GLO %?type BOOL %?dflt false
+/SXauxOverload	false def	%?brief Überlast Hilfswinde %?use GLO %?type BOOL %?dflt false
+/SXcsOverload	false def	%?brief Überlast Vorschubsystem %?use GLO %?type BOOL %?dflt false
+/SXauxLoadActive	false def	%?brief load measuring auxillary winch active %?use GLO %?type BOOL %?dflt false
+/SXkellyLoadActiv	false def	%?brief load measuring kelly winch active %?use GLO %?type BOOL %?dflt false
+/SXcsLower	false def	%?brief Vorschubsystem senken %?use GLO %?type BOOL %?dflt false
+/SXcsLift	false def	%?brief Vorschubsystem heben %?use GLO %?type BOOL %?dflt false
+/SXcsPdeHightAct	false def	%?brief PDE Vorschubsystemhöhe aktiv %?use GLO %?type BOOL %?dflt false
+/SDkellyScaleNumb	1 def	%?brief Anzahl der Skalierungsfelder Kellywinde %?use GLO %?type DINT %?dflt 1
+/SDauxScaleNumb	1 def	%?brief Anzahl der Skalierungsfelder Hilfswinde %?use GLO %?type DINT %?dflt 1
+/SRkellyMaxLoad	   1.00 def	%?brief maximal Last Kellywinde %?use GLO %?type REAL %?dflt    1.00
+/SRauxMaxLoad	   1.00 def	%?brief maximal Last Hilfswinde %?use GLO %?type REAL %?dflt    1.00
+/SRcsMaxLoadNeg	  -1.00 def	%?brief maximales Anpressen Vorschubsystem %?use GLO %?type REAL %?dflt   -1.00
+/SRcsMaxLoad	   1.00 def	%?brief maximale Last Vorschubsystem %?use GLO %?type REAL %?dflt    1.00
+/SRcsLoad	   0.00 def	%?brief Last Vorschubsystem %?use GLO %?type REAL %?dflt    0.00
+/SRleaderAngleX	   0.00 def	%?brief X angle of the leader [°] %?use GLO %?type REAL %?dflt    0.00
+/SRleaderAngleY	   0.00 def	%?brief Y angle of the leader [°] %?use GLO %?type REAL %?dflt    0.00
+/SRauxLoad	   0.00 def	%?brief load auxillary winch %?use GLO %?type REAL %?dflt    0.00
+/SRkellyLoad	   0.00 def	%?brief load kelly winch %?use GLO %?type REAL %?dflt    0.00
+/SRcsSpeed	   0.00 def	%?brief Vorschubsystemgeschwindigkeit %?use GLO %?type REAL %?dflt    0.00
+/SRcsHight	   0.00 def	%?brief Vorschubsystemhöhe %?use GLO %?type REAL %?dflt    0.00
+/SRpdeDepth	   0.00 def	%?brief PDE Tiefe %?use GLO %?type REAL %?dflt    0.00
+/SXcsRopeLengAct	false def	%?brief Vorschubseillängenmessung aktiv %?use GLO %?type BOOL %?dflt false
+/SRleaderPumpPres	   0.00 def	%?brief Mäkler Pumpendruck %?use GLO %?type REAL %?dflt    0.00
+/SXhg2PdeDepthAct	false def	%?brief hg2 pde depth active %?use GLO %?type BOOL %?dflt false
+/SXMsetLeaderZero	false def	%?brief set leader to zero position %?use GLO %?type BOOL %?dflt false
+/SXMpreLeaderZero	false def	%?brief preselection set leader to zero position %?use GLO %?type BOOL %?dflt false
+/SRMratedCursXinc	   0.00 def	%?brief rated cursor X inclination %?use GLO %?type REAL %?dflt    0.00
+/SRMratedCursYinc	   0.00 def	%?brief rated cursor Y inclination %?use GLO %?type REAL %?dflt    0.00
+/SXddFreeTurn	false def	%?brief drilling drive free turn %?use GLO %?type BOOL %?dflt false
+/SXadVrmActive	false def	%?brief additional casing oscillator active %?use GLO %?type BOOL %?dflt false
+/SRoscilPressure	   0.00 def	%?brief additional casing oscillator pressure %?use GLO %?type REAL %?dflt    0.00
+/SRoscilPressure2	   0.00 def	%?brief additional casing oscillator pressure 2 %?use GLO %?type REAL %?dflt    0.00
+/SRdd1SpeedRpm	   0.00 def	%?brief drilling drive 1 speed [rpm] %?use GLO %?type REAL %?dflt    0.00
+/SXMcsResRopLen	false def	%?brief crowd system reset rope length %?use GLO %?type BOOL %?dflt false
+/SXpreKellyOpBAT	false def	%?brief preselection Kelly operation with BAT %?use GLO %?type BOOL %?dflt false
+/SXpreSobOpBAT	false def	%?brief preselection SOB operation with BAT %?use GLO %?type BOOL %?dflt false
+/SRddGear	   0.00 def	%?brief drilling drive gear %?use GLO %?type REAL %?dflt    0.00
+/SRddDrillFill	   0.00 def	%?brief drilling drive fill of driller %?use GLO %?type REAL %?dflt    0.00
+/SXequStop	false def	%?brief equipment drive stop %?use GLO %?type BOOL %?dflt false
+/SXequWarning	false def	%?brief equipment warning %?use GLO %?type BOOL %?dflt false
+/SRdrillProgress	   0.00 def	%?brief drilling drive drill progress %?use GLO %?type REAL %?dflt    0.00
+/SRMratCursXinc1	   0.00 def	%?brief rated cursor X inclination 1 %?use GLO %?type REAL %?dflt    0.00
+/SRMratCursYinc1	   0.00 def	%?brief rated cursor Y inclination 1 %?use GLO %?type REAL %?dflt    0.00
+/SXMsetLeaderPos	false def	%?brief set leader rated position %?use GLO %?type BOOL %?dflt false
+/SXMsetLeaderPos1	false def	%?brief set leader rated position 1 %?use GLO %?type BOOL %?dflt false
+/SDcursFormRat1	0 def	%?brief cursor form rated cursor 1 %?use GLO %?type DINT %?dflt 0
+/SXrfVibClampAct	false def	%?brief reinforcement vibrator clamp active/closed %?use GLO %?type BOOL %?dflt false
+/SXadjVibClampClo	false def	%?brief adjust clamping jaw closed pressure %?use GLO %?type BOOL %?dflt false
+/SXadjustVRM	false def	%?brief ajust casing oscillator active %?use GLO %?type BOOL %?dflt false
+/SRddConcretPres	   0.00 def	%?brief concrete pressure drilling drive [bar] %?use GLO %?type REAL %?dflt    0.00
+/SRadConcrPres2	   0.00 def	%?brief concrete pressure drilling drive 2 [bar] %?use GLO %?type REAL %?dflt    0.00
+/SRadConcrPres3	   0.00 def	%?brief concrete pressure drilling drive 3 [bar] %?use GLO %?type REAL %?dflt    0.00
+/SRdd1ConcFloRat	   0.00 def	%?brief drilling drive 1 concrete flow rate [m³] %?use GLO %?type REAL %?dflt    0.00
+/SRdd2ConcFloRat	   0.00 def	%?brief drilling drive 2 concrete flow rate [m³] %?use GLO %?type REAL %?dflt    0.00
+/SRdd3ConcFloRat	   0.00 def	%?brief drilling drive 3 concrete flow rate [m³] %?use GLO %?type REAL %?dflt    0.00
+/SRpileOverGrout	   0.00 def	%?brief rated pile over grouting [\%] %?use GLO %?type REAL %?dflt    0.00
+/SRconcConsump	   0.00 def	%?brief concrete consumption [\%] %?use GLO %?type REAL %?dflt    0.00
+/SRadConcVolume	   0.00 def	%?brief add. concrete volume [m³] %?use GLO %?type REAL %?dflt    0.00
+/SRMratedVol3	   0.00 def	%?brief rated volume section 3 [l/min] %?use GLO %?type REAL %?dflt    0.00
+/SRdd2SpeedRpm	   0.00 def	%?brief drilling drive 2 speed [rpm] %?use GLO %?type REAL %?dflt    0.00
+/SRdd3SpeedRpm	   0.00 def	%?brief drilling drive 3 speed [rpm] %?use GLO %?type REAL %?dflt    0.00
+/SXdd1FastSpeed	false def	%?brief drilling drive 1 fast speed operation %?use GLO %?type BOOL %?dflt false
+/SXdd2FastSpeed	false def	%?brief drilling drive 2 fast speed operation %?use GLO %?type BOOL %?dflt false
+/SXdd1LockTrimot	false def	%?brief drilling drive 1 lock trimot %?use GLO %?type BOOL %?dflt false
+/SXadConcVolume	false def	%?brief add. concrete volume indication %?use GLO %?type BOOL %?dflt false
+/SXconcretPress	false def	%?brief concrete pressure indication %?use GLO %?type BOOL %?dflt false
+/SXconcPresConcVo	false def	%?brief concrete volume indication with pressure sensor aktiv %?use GLO %?type BOOL %?dflt false
+/SXMenaDdTorqLim	false def	%?brief enable drilling drive torque limitation %?use GLO %?type BOOL %?dflt false
+/SXpreDdTorqLimit	false def	%?brief preselection drilling drive torque limitation %?use GLO %?type BOOL %?dflt false
+/SXddTorqLimit	false def	%?brief drilling drive torque limitation active %?use GLO %?type BOOL %?dflt false
+/SXddTorqLimBridg	false def	%?brief drilling drive torque limitation bridged %?use GLO %?type BOOL %?dflt false
+/SRdrillDepthSiR	   0.00 def	%?brief drilling depth since reset [m] %?use GLO %?type REAL %?dflt    0.00
+/SXadSettings	true def	%?brief additional device settings activated %?use GLO %?type BOOL %?dflt true
+/SXexDrPreJoy	false def	%?brief excenter drive with joy stick %?use GLO %?type BOOL %?dflt false
+/SXMlockHg1	false def	%?brief lock hg 1 %?use GLO %?type BOOL %?dflt false
+/SXMlockHg2	false def	%?brief lock hg 2 %?use GLO %?type BOOL %?dflt false
+/SXMlockAux	false def	%?brief lock aux %?use GLO %?type BOOL %?dflt false
+/SXMlockSg	false def	%?brief lock sg %?use GLO %?type BOOL %?dflt false
+/SXMlockTg	false def	%?brief lock tg %?use GLO %?type BOOL %?dflt false
+/SXMlockCw	false def	%?brief lock cw %?use GLO %?type BOOL %?dflt false
+/SXMlockCyl	false def	%?brief lock leader cylinder %?use GLO %?type BOOL %?dflt false
+/SXhg1Locked	false def	%?brief hg 1 locked %?use GLO %?type BOOL %?dflt false
+/SXhg2Locked	false def	%?brief hg 2 locked %?use GLO %?type BOOL %?dflt false
+/SXauxLocked	false def	%?brief auxilliary winch locked %?use GLO %?type BOOL %?dflt false
+/SXsgLocked	false def	%?brief slewing gear locked %?use GLO %?type BOOL %?dflt false
+/SXtgLocked	false def	%?brief travelling gear locked %?use GLO %?type BOOL %?dflt false
+/SXcwLocked	false def	%?brief crowd winch locked %?use GLO %?type BOOL %?dflt false
+/SXcylLocked	false def	%?brief leader cylinder locked %?use GLO %?type BOOL %?dflt false
+/SXddTypeIsBAT	false def	%?brief drilling drive type is BAT %?use GLO %?type BOOL %?dflt false
+/SXmoveWarnDeaPos	false def	%?brief acoustical movement warner deactivatation possible %?use GLO %?type BOOL %?dflt false
+/SXMjoyVibrCsAct	false def	%?brief joystick vibrator cs activated %?use GLO %?type BOOL %?dflt false
+/SXMjoyVibrHg2Act	false def	%?brief joystick vibrator hg2 activated %?use GLO %?type BOOL %?dflt false
+/SXMjoyVibrSgAct	false def	%?brief joystick vibrator sg activated %?use GLO %?type BOOL %?dflt false
+/SXMjoyVibrAuxAct	false def	%?brief joystick vibrator aux activated %?use GLO %?type BOOL %?dflt false
+/SXMmoveWarnDeact	false def	%?brief acoustical movement warner deactivated %?use GLO %?type BOOL %?dflt false
+/database.ActualKey.Name.1	() def	%?brief AC actual key name %?use GLO %?type STRI %?dflt 
+/SXMhg2SlaRopAct	false def	%?brief hg2 slack rope active %?use GLO %?type BOOL %?dflt false
+/SRMhg2SlaRopLim	   0.00 def	%?brief hg2 slack rope limit [kN] %?use GLO %?type REAL %?dflt    0.00
+/SXvibExcAdjActiv	false def	%?brief vibrator excenter adjustment active %?use GLO %?type BOOL %?dflt false
+/SRvibExcAdjust	   0.00 def	%?brief vibrator excenter adjustment [\%] %?use GLO %?type REAL %?dflt    0.00
+/SXludvPresCtrlAc	false def	%?brief ludv pressure control active %?use GLO %?type BOOL %?dflt false
+/SDcursFormAct	0 def	%?brief cursor form actual cursor %?use GLO %?type DINT %?dflt 0
+/SDcursFormRat	0 def	%?brief cursor form rated cursor %?use GLO %?type DINT %?dflt 0
+/SRMusedAugers	   0.00 def	%?brief used augers %?use GLO %?type REAL %?dflt    0.00
+/SXsmoEnaConcPre1	false def	%?brief enable smo concrete pressure 1 %?use GLO %?type BOOL %?dflt false
+/SXsmoEnaConcPre2	false def	%?brief enable smo concrete pressure 2 %?use GLO %?type BOOL %?dflt false
+/SXsmoEnaConcPre3	false def	%?brief enable smo concrete pressure 3 %?use GLO %?type BOOL %?dflt false
+/SXhg2Preselected	false def	%?brief hg2 preselected %?use GLO %?type BOOL %?dflt false
+/SRMhamRatMinVol	   0.00 def	%?brief hammer rated minimum volume %?use GLO %?type REAL %?dflt    0.00
+/SXpreVibPickOp	false def	%?brief enable vibrator with pick up operation %?use GLO %?type BOOL %?dflt false
+/SXtriaWitHoldArm	false def	%?brief triangular kinematics with holding arm %?use GLO %?type BOOL %?dflt false
+/SXparaWitHoldArm	false def	%?brief parallel kinematics with holding arm %?use GLO %?type BOOL %?dflt false
+/SXz11Locked	false def	%?brief bolt Z11 locked %?use GLO %?type BOOL %?dflt false
+/SXz11flashing	false def	%?brief bolt Z11 flashing %?use GLO %?type BOOL %?dflt false
+/SXz12Locked	false def	%?brief bolt Z12 locked %?use GLO %?type BOOL %?dflt false
+/SXz12flashing	false def	%?brief bolt Z12 flashing %?use GLO %?type BOOL %?dflt false
+/SXecoModeActPos	false def	%?brief ECO mode activation possible %?use GLO %?type BOOL %?dflt false
+/SXMecoModeAct	false def	%?brief ECO mode activated %?use GLO %?type BOOL %?dflt false
+/SRMvibRatFrequ	   0.00 def	%?brief vibrator rated frequenz %?use GLO %?type REAL %?dflt    0.00
+/SXvibratWorking	false def	%?brief vibrator working %?use GLO %?type BOOL %?dflt false
+/SXvibGeaOiTemAct	false def	%?brief vibrator gear oil temperature active %?use GLO %?type BOOL %?dflt false
+/SXvibGeaOiTemW	false def	%?brief vibrator gear oil temperature to hight warning %?use GLO %?type BOOL %?dflt false
+/SXvibGeaOiTemE	false def	%?brief vibrator gear oil temperature to hight error %?use GLO %?type BOOL %?dflt false
+/SRvibGearOiTemp	   0.00 def	%?brief vibrator gear oil temperature [C°] %?use GLO %?type REAL %?dflt    0.00
+/SXvibCsPeneW	false def	%?brief vibrator crowd system penetration warning %?use GLO %?type BOOL %?dflt false
+/_V0215	0 def	%?brief  %?use STC %?type DINT
+/_V0216	0 def	%?brief  %?use STC %?type DINT
+/_V0217	0 def	%?brief  %?use STC %?type DINT
+/_V0218	0 def	%?brief  %?use STC %?type DINT
+/_V0219	0 def	%?brief  %?use STC %?type DINT
+/_V0220	0 def	%?brief  %?use STC %?type DINT
+/_V0221	0 def	%?brief  %?use STC %?type DINT
+/_V0222	0 def	%?brief  %?use STC %?type DINT
+/_V0223	0 def	%?brief  %?use STC %?type DINT
+/SRhamBlowPerMin	   0.00 def	%?brief hammer blows per min [1/min] %?use GLO %?type REAL %?dflt    0.00
+/SRhamStrokeHeigh	   0.00 def	%?brief hammer heigth of stroke [cm] %?use GLO %?type REAL %?dflt    0.00
+/SRlrInclinAbs	   0.00 def	%?brief leader inclinatiom absolute [°]*) %?use GLO %?type REAL %?dflt    0.00
+/SXlrhBoomKinem	false def	%?brief LRH boom kinematics %?use GLO %?type BOOL %?dflt false
+/SRMratedAddHyVo2	   0.00 def	%?brief rated volume casing oscillator section 2 [l/min] %?use GLO %?type REAL %?dflt    0.00
+/SXadHydr2Sect	false def	%?brief additional casing oscillator with 2 section %?use GLO %?type BOOL %?dflt false
+/SXcsLoadActive	false def	%?brief load measuring crowd system active %?use GLO %?type BOOL %?dflt false
+
+%?page
+%?fn	page0
+%?brief	page0
+%?bbox	0 0 960 720
+/page0 {
+	
+	%?term_beg
+	
+	SRpageAtStart -1 eq 
+	MScurrentPage (page0) eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		(accessdenied) 
+		FUN_SET_VAR_STRING 
+		/MSpageAtStart exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRpageAtStart 1 eq 
+	MScurrentPage (page0) eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		(main) 
+		FUN_SET_VAR_STRING 
+		/MSpageAtStart exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRpageAtStart 1 eq 
+	MScurrentPage (page0) eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		1 
+		FUN_SET_VAR_INT 
+		/MDcurrPageNumber exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	MSpageAtStart _V0000 
+	GeneralFunctions 
+	/_V0000 exch store 
+	setcolor 
+	setmatrix_nlw 
+	MScurrentPage (page0) eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		10 710 translate 
+		0 rotate 
+		1 1 scale 
+		(visualization is waiting for data ...) 
+		FSstdFont 3 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MScurrentPage (page0) eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 640 translate 
+		0 rotate 
+		0.60 0.60 scale 
+		gpGeneral001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	SXMchUnitDistanc 
+	FUN_SET_VAR_BOOL 
+	/MXchangeUnitDist exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	SXMchUnitLoad 
+	FUN_SET_VAR_BOOL 
+	/MXchangeUnitLoad exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	SXMchUnitPress 
+	FUN_SET_VAR_BOOL 
+	/MXchangeUnitPress exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	SXMchUnitTemp 
+	FUN_SET_VAR_BOOL 
+	/MXchangeUnitTemp exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	SXMchUnitVolume 
+	FUN_SET_VAR_BOOL 
+	/MXchangeUnitVolume exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	SXMchUnitSpeed 
+	FUN_SET_VAR_BOOL 
+	/MXchangeUnitSpeed exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	SXwindSpeedWarn false false false false 
+	FUN_OR_5 
+	/MXsymMainWarn exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	SXchargeControl SXwindSpeedError SXkellyOverload 
+	SXcsOverload SXauxOverload false false false false false false false false false false false false false false false false false false false false 
+	MXbuzzMainAckn _V0001 _V0002 
+	_V0003 _V0004 _V0005 _V0006 
+	_V0007 _V0008 _V0009 _V0010 
+	_V0011 _V0012 _V0013 _V0014 
+	_V0015 _V0016 _V0017 _V0018 
+	_V0019 _V0020 _V0021 _V0022 
+	_V0023 _V0024 _V0025 
+	BeepAct25 
+	/_V0001 exch store 
+	/_V0002 exch store 
+	/_V0003 exch store 
+	/_V0004 exch store 
+	/_V0005 exch store 
+	/_V0006 exch store 
+	/_V0007 exch store 
+	/_V0008 exch store 
+	/_V0009 exch store 
+	/_V0010 exch store 
+	/_V0011 exch store 
+	/_V0012 exch store 
+	/_V0013 exch store 
+	/_V0014 exch store 
+	/_V0015 exch store 
+	/_V0016 exch store 
+	/_V0017 exch store 
+	/_V0018 exch store 
+	/_V0019 exch store 
+	/_V0020 exch store 
+	/_V0021 exch store 
+	/_V0022 exch store 
+	/_V0023 exch store 
+	/_V0024 exch store 
+	/_V0025 exch store 
+	/MXbuzzMainAckn exch store 
+	/MXsymMainError exch store 
+	/MXbeepActMain1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 0 translate 
+	0 rotate 
+	1 1 scale 
+	SXchargeAirTempW SXcoolWaterTempW SXcoolWaterContW 
+	SXhydrOilTempWar SXlubOilPressWar SXfuelTempWarn SXfuelPressWarn 
+	SXengOilCoLowErr SXhydrOilCoLoWar SXhydrOilCoHiWar SXengPowerLimit 
+	SXhydrOilLeakage SXdpfWarn SXdefWarn SXmilWarn 
+	SXfuelContWarn SXengSpeedWarn SXairFilterWarn false false false false false false false 
+	FUN_OR_25 
+	/MXsymPowerWarn exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 0 translate 
+	0 rotate 
+	1 1 scale 
+	SXchargeAirTempE SXcoolWaterTempE SXcoolWaterContE 
+	SXhydrOilTempErr SXlubOilPressErr SXfuelTempError SXfuelPressError 
+	SXengOilCoLowErr SXengOilCoHigErr SXhydrOilCoLoErr SXhydrOilCoHiErr 
+	SXhydrOilShutOff SXfeedPressFilt SXwaterInFuel SXairFilterError 
+	SXgearOilTempErr SXhydrOilRetFilt SXfeedPressLow SXfeedPresLowHg1 
+	SXfeedPresLowHg2 SXdpfError SXdefError SXmilError 
+	SXfuelContError SXengSpeedError MXbuzzPowerAckn _V0026 
+	_V0027 _V0028 _V0029 _V0030 
+	_V0031 _V0032 _V0033 _V0034 
+	_V0035 _V0036 _V0037 _V0038 
+	_V0039 _V0040 _V0041 _V0042 
+	_V0043 _V0044 _V0045 _V0046 
+	_V0047 _V0048 _V0049 _V0050 
+	BeepAct25 
+	/_V0026 exch store 
+	/_V0027 exch store 
+	/_V0028 exch store 
+	/_V0029 exch store 
+	/_V0030 exch store 
+	/_V0031 exch store 
+	/_V0032 exch store 
+	/_V0033 exch store 
+	/_V0034 exch store 
+	/_V0035 exch store 
+	/_V0036 exch store 
+	/_V0037 exch store 
+	/_V0038 exch store 
+	/_V0039 exch store 
+	/_V0040 exch store 
+	/_V0041 exch store 
+	/_V0042 exch store 
+	/_V0043 exch store 
+	/_V0044 exch store 
+	/_V0045 exch store 
+	/_V0046 exch store 
+	/_V0047 exch store 
+	/_V0048 exch store 
+	/_V0049 exch store 
+	/_V0050 exch store 
+	/MXbuzzPowerAckn exch store 
+	/MXsymPowerError exch store 
+	/MXbeepActPower1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 640 translate 
+	0 rotate 
+	1 1 scale 
+	SXelectricWarnin SXengReqRep false false false 
+	FUN_OR_5 
+	/MXsymStatusWarn exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 640 translate 
+	0 rotate 
+	1 1 scale 
+	SXelectricError false false false false 
+	FUN_OR_5 
+	/MXsymStatusError exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 640 translate 
+	0 rotate 
+	1 1 scale 
+	SXengReqStop SXneedSuppCrane SXactivateBeep false false false false false false false false false false false false false false false false false false false false false false 
+	MXbuzzStatusAckn _V0051 _V0052 
+	_V0053 _V0054 _V0055 _V0056 
+	_V0057 _V0058 _V0059 _V0060 
+	_V0061 _V0062 _V0063 _V0064 
+	_V0065 _V0066 _V0067 _V0068 
+	_V0069 _V0070 _V0071 _V0072 
+	_V0073 _V0074 _V0075 
+	BeepAct25 
+	/_V0051 exch store 
+	/_V0052 exch store 
+	/_V0053 exch store 
+	/_V0054 exch store 
+	/_V0055 exch store 
+	/_V0056 exch store 
+	/_V0057 exch store 
+	/_V0058 exch store 
+	/_V0059 exch store 
+	/_V0060 exch store 
+	/_V0061 exch store 
+	/_V0062 exch store 
+	/_V0063 exch store 
+	/_V0064 exch store 
+	/_V0065 exch store 
+	/_V0066 exch store 
+	/_V0067 exch store 
+	/_V0068 exch store 
+	/_V0069 exch store 
+	/_V0070 exch store 
+	/_V0071 exch store 
+	/_V0072 exch store 
+	/_V0073 exch store 
+	/_V0074 exch store 
+	/_V0075 exch store 
+	/MXbuzzStatusAckn exch store 
+	/_unused exch store 
+	/MXbeepActStatus1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	SXserviceWarning SXserviceNotAckn false false false 
+	FUN_OR_5 
+	/MXsymOphWarn exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	SXMoneBeep _V0076 
+	FUB_R_TRIG 
+	/_V0076 exch store 
+	/SXMoneBeep exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	MXsymStatusWarn _V0086 
+	FUB_R_TRIG 
+	/_V0086 exch store 
+	/MXsymStatusWarnBeep exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	MXsymMainWarn _V0084 
+	FUB_R_TRIG 
+	/_V0084 exch store 
+	/MXsymMainWarnBeep exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	MXsymPowerWarn _V0085 
+	FUB_R_TRIG 
+	/_V0085 exch store 
+	/MXsymPowerWarnBeep exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	SXMoneBeep MXsymStatusWarnBeep MXsymMainWarnBeep 
+	MXsymPowerWarnBeep false 
+	FUN_OR_5 
+	/MXoneBeep exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	MXoneBeep true 
+	SXlmlStopBuzz SXlmlWarnBuzz 
+	baBeepPart 
+	/MXoneBeep exch store 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	
+	MScurrentPage (mode) ne 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 0 translate 
+		0 rotate 
+		1 1 scale 
+		SRcurrentMode 
+		FUN_SET_VAR_REAL 
+		/SRMpreNewMode exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MScurrentPage (mode) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		false 
+		FUN_SET_VAR_BOOL 
+		/MXbutAckNeMoWas0 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	pp_menu
+%?brief	Seitenumschaltungen
+%?bbox	0 0 960 720
+/pp_menu {
+	
+	MDcurrPageNumber 8 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		560 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 8 store 
+			/_currentpage (accesscontrol) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	MDcurrPageNumber 5 ne 
+	SXwalPresel and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 5 store 
+			/_currentpage (workarealimit) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	MDcurrPageNumber 9 ne 
+	SRcurrentMode 0 ge and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 9 store 
+			/_currentpage (mode) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MDcurrPageNumber 11 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 11 store 
+			/_currentpage (message) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MDcurrPageNumber 10 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		720 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 10 store 
+			/_currentpage (setting1) store 
+			/_cpindex -1 store 
+			%?usercode_beg
+			
+			MDcurrSubPageNumSettings 1 eq {	
+				/_currentpage (setting1) store 
+				/_cpindex -1 store 
+			} if 
+			MDcurrSubPageNumSettings 2 eq {	
+				/_currentpage (setting2) store 
+				/_cpindex -1 store 
+			} if 
+			MDcurrSubPageNumSettings 3 eq {	
+			} if 
+			MDcurrSubPageNumSettings 4 eq {	
+			} if 
+			MDcurrSubPageNumSettings 5 eq {	
+				/_currentpage (setting5) store 
+				/_cpindex -1 store 
+			} if 
+			MDcurrSubPageNumSettings 6 eq {	
+				/_currentpage (setting6) store 
+				/_cpindex -1 store 
+			} if 
+			MDcurrSubPageNumSettings 7 eq {	
+			} if 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	MDcurrPageNumber 4 ne 
+	SXlmlPage and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 4 store 
+			/_currentpage (lml) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MDcurrPageNumber 3 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 3 store 
+			/_currentpage (ophours) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MDcurrPageNumber 2 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 2 store 
+			/_currentpage (powerpack) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MDcurrPageNumber 1 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 1 store 
+			%?usercode_beg
+			
+			/_currentpage MScurrMainPage store 
+			/_cpindex -1 store 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	MDcurrPageNumber 
+	baPageLine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 0 translate 
+	0 rotate 
+	1 1 scale 
+	false false 
+	gpButtonPage002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	MXsymMainWarn MXsymMainError (gsGeneral043) 
+	gpButtonPage001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 0 translate 
+	0 rotate 
+	1 1 scale 
+	MXsymPowerWarn MXsymPowerError (gsEngine001) 
+	gpButtonPage001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	727 3 translate 
+	0 rotate 
+	0.87 0.87 scale 
+	false false (gsGeneral009) 
+	gpButtonPage001 
+	setcolor 
+	setmatrix_nlw 
+	SXlmlPage true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 -4 translate 
+		0 rotate 
+		1 1 scale 
+		false false (gsGeneral006) 
+		gpButtonPage001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SRcurrentMode 0 ge {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		647 3 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		false false (gsGeneral005) 
+		gpButtonPage001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXwalPresel true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		327 1 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		gsLimit021 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 -5 translate 
+	0 rotate 
+	1 1 scale 
+	MXsymOphWarn false (gsGeneral073) 
+	gpButtonPage001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	562 -3 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral089 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	pp_menu_settings
+%?brief	Seitenumschaltungen Einstellungen Unterseiten
+%?bbox	0 0 960 720
+/pp_menu_settings {
+	
+	%?term_beg
+	
+	MSsysPriority (inspector) eq 
+	MSsysPriority (supervisor) eq or 
+	MDcurrSubPageNumSettings 5 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 400 translate 
+		0 rotate 
+		1 1 scale 
+		false 
+		baTouchButton009 {	
+			/MDcurrSubPageNumSettings 5 store 
+			/_currentpage (setting5) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	MDcurrSubPageNumSettings 2 ne 
+	SXadSettings and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 160 translate 
+		0 rotate 
+		1 1 scale 
+		false 
+		baTouchButton009 {	
+			/MDcurrSubPageNumSettings 2 store 
+			/_currentpage (setting2) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MDcurrSubPageNumSettings 6 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 480 translate 
+		0 rotate 
+		1 1 scale 
+		false 
+		baTouchButton009 {	
+			/MDcurrSubPageNumSettings 6 store 
+			/_currentpage (setting6) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MDcurrSubPageNumSettings 1 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		false 
+		baTouchButton009 {	
+			/MDcurrSubPageNumSettings 1 store 
+			/_currentpage (setting1) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 80 translate 
+	0 rotate 
+	1 1 scale 
+	MDcurrSubPageNumSettings 6 false 0 
+	baPageLine004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 80 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral021 
+	setcolor 
+	setmatrix_nlw 
+	SXadSettings true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		889 163 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		SRcurrentMode (ssGeneral029) (ssGeneral036) (ssGeneral037) (ssGeneral037) (ssDrill002) (ssDrill003) (ssDrill004) (ssDrill001) (ssDrill001) (ssDrill002) (ssGeneral036) (ssGeneral029) (ssGeneral029) (ssGeneral029) (ssGeneral029) 0 
+		baShowSymbol002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	MSsysPriority (service) eq 
+	MSsysPriority (inspector) eq or 
+	MSsysPriority (supervisor) eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		884 399 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral060 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 560 translate 
+	0 rotate 
+	1 1 scale 
+	gpButtonTstsys001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 480 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral098 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	pp_status
+%?brief	Statuszeile
+%?bbox	0 0 960 720
+/pp_status {
+	
+	MXbeepActStatus1 true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MXbuzzStatusAckn true store 
+			/SXMbuzzStatAckn true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXbeepActStatus1 true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral015 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXengReqRep SXengReqStop not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 720 640 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine035 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXengReqStop true eq {	
+		SXengReqStop true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 720 640 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine050 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	SXelectricWarnin SXelectricError or {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 640 translate 
+		0 rotate 
+		1 1 scale 
+		SXelectricError SXelectricWarnin false false (gsGeneral078) 
+		baSwitchSymbolColor004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXassemblyOperat SXemergOperat not and 
+	SXclampOpen not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 640 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral011 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXemergOperat true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 640 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral012 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXclampOpen SXemergOperat not and {	
+		SXclampOpen true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 640 translate 
+		0 rotate 
+		1 1 scale 
+		ssGeneral023 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	SXhgFreefPresel SXhgFreefUnsec and {	
+		SXhgFreeFallWarn true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 640 translate 
+		0 rotate 
+		1 1 scale 
+		gsHook005 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	SXrcActive SXhgFreefPresel not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 640 translate 
+		0 rotate 
+		1 1 scale 
+		SXrcContChanged SXrcChangeContro SXrcRadioOk 
+		spStatus001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhgFreefPresel SXhgFreefUnsec not and {	
+		SXhgFreeFallWarn true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 640 translate 
+		0 rotate 
+		1 1 scale 
+		gsHook002 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	%?term_beg
+	true 
+	%?term_end
+	{	
+		true setflash 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 640 translate 
+	0 rotate 
+	1 1 scale 
+	SRlimitSwiNumb 
+	spStatus004 
+	setcolor 
+	setmatrix_nlw 
+	false setflash 
+	SRlimitSwiNumb 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		885 670 translate 
+		0 rotate 
+		1 1 scale 
+		SXMtimeFormat12h true false 
+		FSfatFont 
+		baClock005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SXhg1FastSpeed SXhg1ClutchOpen or 
+	SXhg1Mooring or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 640 translate 
+		0 rotate 
+		1 1 scale 
+		SXhg1FastSpeed false 
+		SXhg1ClutchOpen SXhg1Mooring 1 
+		spStatus006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SXhg2ClutchOpen SXhg2FastSpeed or 
+	SXhg2Mooring or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 640 translate 
+		0 rotate 
+		1 1 scale 
+		SXhg2FastSpeed false 
+		SXhg2ClutchOpen SXhg2Mooring 2 
+		spStatus006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXstoreAnalSign true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		560 640 translate 
+		0 rotate 
+		1 1 scale 
+		ssGeneral018 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 640 translate 
+	0 rotate 
+	1 1 scale 
+	SRsymNrJoyRiX SRsymNrJoyRiY SRsymNrJoyLeX 
+	SRsymNrJoyLeY SX2TjoystAct SRsgSpeed SRlgSpeed 
+	upStatus001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	3 1 641 956 641 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	main
+%?brief	Hauptseite
+%?bbox	0 0 960 720
+/main {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	580 80 translate 
+	0 rotate 
+	1.75 1 scale 
+	baTouchButton007 {	
+		/SXMhg2ResRopLen true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	580 560 translate 
+	0 rotate 
+	1.75 1 scale 
+	baTouchButton007 {	
+		/SXMcsResRopLen true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	MXbeepActMain1 true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MXbuzzMainAckn true store 
+			/SXMbuzzMainAckn true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXbeepActMain1 true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral015 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 80 translate 
+	0 rotate 
+	1 1 scale 
+	SRengineSpeed SXengSpeedWarn SXengSpeedError 
+	SXfuelContWarn SXfuelContError SXpreHeatActive SXpreHeatStart 
+	SXpostHeatActive SRdpfTime SXdpfRegDisabled SXdpfWarn 
+	SXdpfError SXdpfActive SXmilWarn SXmilError 
+	SXchargeControl SRactualTorque 
+	spEngine007 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Grey 800 80 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 10 0 230 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Grey 720 80 translate 
+	0 rotate 
+	1 1 scale 
+	3 0 10 0 550 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	400 80 translate 
+	0 rotate 
+	1 1 scale 
+	SRpdeDepth SRhg2RopeLength SRhg2RopeSpeed 
+	SRpdeDepth SRcsHight SRcsSpeed SRkellyLoad 
+	SRauxLoad 0 
+	SRcsLoad SRcsMaxLoad SRcsMaxLoadNeg 
+	SRauxMaxLoad SRkellyMaxLoad SDauxScaleNumb SDkellyScaleNumb 
+	SXhg2RopeLenMeas SXhg2PdeDepthAct SXhg2Lift SXhg2Lower 
+	SXcsRopeLengAct SXcsPdeHightAct SXcsLift SXcsLower 
+	SXkellyLoadActiv SXauxLoadActive SXcsOverload SXauxOverload 
+	SXkellyOverload SXcsSlowMotion SXz4LimitOut SXz11Locked 
+	SXz12Locked SXz11flashing SXz12flashing SXparaWitHoldArm 
+	SXtriaWitHoldArm SXcsFastMotion SXvibCsPeneW SXlrhBoomKinem 
+	SXcsLoadActive 
+	upMain101 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	720 80 translate 
+	0 rotate 
+	1 1 scale 
+	SXhydrOilHeating SRleaderPumpPres 
+	spHydraulic001 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	
+	SRcurrentMode 8 eq 
+	SRcurrentMode 9 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRdrillDepthSiR SRddDrillFill SRdrillProgress 
+		SRdd1SpeedRpm SRequPressure1 SRoscilPressure2 SRoscilPressure 
+		SRddGear SXadVrmActive SXddFreeTurn SXequWarning 
+		SXequStop SXddTorqLimit SXddTorqLimBridg SXdd1FastSpeed 
+		SXdd1LockTrimot SXddTypeIsBAT SXadHydr2Sect 
+		upDrill001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRcurrentMode 5 eq 
+	SRcurrentMode 10 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRconcConsump SRpileOverGrout SRMscalConcPrInd 
+		SRdrillProgress SRdd1SpeedRpm SRequPressure1 SRddGear 
+		SRddConcretPres SRadConcrPres2 SRadConcVolume SXconcretPress 
+		SXadConcVolume SXconcPresConcVo SXequWarning SXequStop 
+		SXddTorqLimit SXddTorqLimBridg SXdd1FastSpeed SXdd1LockTrimot 
+		SXddTypeIsBAT 
+		upDrill002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SRcurrentMode 6 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRconcConsump SRpileOverGrout SRMscalConcPrInd 
+		SRdrillProgress SRequPressure2 SRequPressure1 SRddGear 
+		SRdd2SpeedRpm SRdd1SpeedRpm SRddConcretPres SRadConcrPres2 
+		SRadConcVolume SXconcretPress SXadConcVolume SXconcPresConcVo 
+		SXequWarning SXequStop SXdd2FastSpeed SXdd1FastSpeed 
+		upDrill003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRcurrentMode 2 eq 
+	SRcurrentMode 11 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRconcConsump SRpileOverGrout SRMscalConcPrInd 
+		SRequPressure2 SRequPressure1 SRvibExcAdjust SRvibAmpHamEner 
+		SRvibHamFrequ SRddConcretPres SRadConcrPres2 SRadConcVolume 
+		SRvibGearOiTemp SXconcretPress SXadConcVolume SXconcPresConcVo 
+		SXequWarning SXequStop SXvibratWorking SXexDrPreJoy 
+		SXvibExcAdjActiv SXvibGeaOiTemAct SXvibGeaOiTemW SXvibGeaOiTemE 
+		upVib001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SRcurrentMode 7 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRdrillProgress SRdd1SpeedRpm SRdd2SpeedRpm 
+		SRdd3SpeedRpm SRequPressure1 SRequPressure2 SRequPressure3 
+		SRddConcretPres SRadConcrPres2 SRadConcrPres3 SRdd1ConcFloRat 
+		SRdd2ConcFloRat SRdd3ConcFloRat SRMusedAugers SRadConcVolume 
+		SRMscalConcPrInd SXconcretPress SXsmoEnaConcPre2 SXsmoEnaConcPre3 
+		SXadConcVolume SXequWarning SXequStop SXdd1FastSpeed 
+		upDrill004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SRcurrentMode 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRconcConsump SRpileOverGrout SRMscalConcPrInd 
+		SRequPressure1 SRhamStrokeHeigh SRvibAmpHamEner SRhamBlowPerMin 
+		SRddConcretPres SRadConcrPres2 SRadConcVolume SXconcretPress 
+		SXadConcVolume SXconcPresConcVo SXequWarning SXequStop false 
+		upHam001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		723 318 translate 
+		0 rotate 
+		0.98 1 scale 
+		SDcursFormAct SDcursFormRat SDcursFormRat1 
+		SRleaderAngleX SRleaderAngleY SRMratedCursXinc SRMratedCursYinc 
+		SRMratCursXinc1 SRMratCursYinc1 5 10 -5 -20 
+		spInclinat001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		723 318 translate 
+		0 rotate 
+		0.98 1 scale 
+		SDcursFormAct SDcursFormRat SDcursFormRat1 
+		SRleaderAngleX SRleaderAngleY SRMratedCursXinc SRMratedCursYinc 
+		SRMratCursXinc1 SRMratCursYinc1 20 27.30 
+		SRlrInclinAbs true true 
+		spInclinat004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	powerpack
+%?brief	Aggregatseite
+%?bbox	0 0 960 720
+/powerpack {
+	
+	SXdpfInitPossib true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 560 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/SXMdpfRegInitiat true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXdpfDisabPossib true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 560 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/SXMdpfRegDisable true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXbeepActPower1 {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MXbuzzPowerAckn true store 
+			/SXMbuzzPowerAckn true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXecoModeActPos true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SXMecoModeAct 1 
+		_V0213 _V0214 
+		baTouchButPart012 
+		/_V0213 exch store 
+		/_V0214 exch store 
+		/SXMecoModeAct exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXbeepActPower1 true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral015 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	SRengineSpeed SRactualTorque SRcoolWaterTemp 
+	SRhydrOilTemp SRchargeAirTemp SRchargeAirPress SRlubOilPress 
+	SRbatteryVoltage SRdefCont SRfuelCont SRlubOilCont 
+	SRoutdoorTemp SXcoolWaterTempW SXcoolWaterTempE SXchargeAirTempW 
+	SXchargeAirTempE SXhydrOilTempWar SXhydrOilTempErr SXhydrOilHeating 
+	SXlubOilPressWar SXlubOilPressErr SXengSpeedWarn SXengSpeedError 
+	SXfuelContWarn SXfuelContError SXchargeControl SXengPowerLimit 
+	SXengHightLimit SXfuelTempWarn SXfuelTempError SXfuelPressWarn 
+	SXfuelPressError SXwaterInFuel SXairFilterWarn SXairFilterError 
+	SXengOilContAct SXengOilCoHigWar SXengOilCoHigErr SXengOilCoLowWar 
+	SXengOilCoLowErr SXdefWarn SXdefError SXlidec1 
+	SRMactDateFormat SXMtimeFormat12h 
+	spEngine001 
+	setcolor 
+	setmatrix_nlw 
+	SXhydrOilShutOff true eq {	
+		SXhydrOilShutOff true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 560 560 translate 
+		0 rotate 
+		1 1 scale 
+		gsHydraulic015 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	SXfeedPressFilt true eq {	
+		SXfeedPressFilt true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 160 560 translate 
+		0 rotate 
+		1 1 scale 
+		gsHydraulic018 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	SXgearOilTempErr true eq {	
+		SXgearOilTempErr true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 80 560 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine046 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	SXhydrOilRetFilt true eq {	
+		SXhydrOilRetFilt true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 240 560 translate 
+		0 rotate 
+		1 1 scale 
+		gsHydraulic006 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 560 translate 
+	0 rotate 
+	1 1 scale 
+	SXfeedPressLow SXfeedPresLowHg1 SXfeedPresLowHg2 
+	spEngine006 
+	setcolor 
+	setmatrix_nlw 
+	SXhydrOilLeakage SXhydrOilShutOff not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 560 560 translate 
+		0 rotate 
+		1 1 scale 
+		gsHydraulic017 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhydrOilCoLoErr SXhydrOilCoLoWar or {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 560 translate 
+		0 rotate 
+		1 1 scale 
+		SXhydrOilCoLoErr SXhydrOilCoLoWar false false (gsHydraulic004) 
+		baSwitchSymbolColor004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhydrOilCoHiErr SXhydrOilCoHiWar or {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 560 translate 
+		0 rotate 
+		1 1 scale 
+		SXhydrOilCoHiErr SXhydrOilCoHiWar false false (gsHydraulic016) 
+		baSwitchSymbolColor004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXcoolWaterContE SXcoolWaterContW or {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 560 translate 
+		0 rotate 
+		1 1 scale 
+		SXcoolWaterContE SXcoolWaterContW false false (gsEngine014) 
+		baSwitchSymbolColor004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreHeatActive {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 480 560 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine009 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreHeatStart {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 480 560 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine023 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpostHeatActive {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 560 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine009 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	640 560 translate 
+	0 rotate 
+	1 1 scale 
+	SRdpfTime SXdpfRegDisabled SXdpfActive 
+	SXdpfWarn SXdpfError SXmilWarn SXmilError false false 
+	spEngine002 
+	setcolor 
+	setmatrix_nlw 
+	SXdpfDisabPossib true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 560 translate 
+		0 rotate 
+		1 1 scale 
+		false false false 
+		SXdpfRegDisabled (gsAgn003) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXdpfInitPossib true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 560 translate 
+		0 rotate 
+		1 1 scale 
+		false false false 
+		SXdpfRegManActiv (gsAgn001) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXecoModeActPos true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		5 85 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		false false false 
+		SXMecoModeAct (ssGeneral065) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	message
+%?brief	Messageseite
+%?bbox	0 0 960 720
+/message {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	5 false false 0 
+	baMessage001 
+	/_unused exch store 
+	/_unused exch store 
+	/_unused exch store 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	ophours
+%?brief	Betriebsstundenseite
+%?bbox	0 0 960 720
+/ophours {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 385 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/SXMresetFuelCons true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 520 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/SXMresetOpHour true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 470 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 956 0 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 380 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 956 0 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 260 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 956 0 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	640 480 translate 
+	0 rotate 
+	1 1 scale 
+	SXophEngRun SRophEngAbs SRophEngRel (gsEngine001) 
+	spHour001 
+	setcolor 
+	setmatrix_nlw 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 560 translate 
+		0 rotate 
+		1 1 scale 
+		SXophCsRun SRophCsAbs SRophCsRel (ssWinch006) 
+		spHour001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 560 translate 
+		0 rotate 
+		1 1 scale 
+		SXophHg1Run SRophHg1Abs SRophHg1Rel (ssGeneral004) 
+		spHour001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 560 translate 
+	0 rotate 
+	1 1 scale 
+	SXophHg2Run SRophHg2Abs SRophHg2Rel (ssGeneral005) 
+	spHour001 
+	setcolor 
+	setmatrix_nlw 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 560 translate 
+		0 rotate 
+		1 1 scale 
+		SXophAuxRun SRophAuxAbs SRophAuxRel (gsWinch008) 
+		spHour001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 480 translate 
+	0 rotate 
+	1 1 scale 
+	SXophSgRun SRophSgAbs SRophSgRel (gsGeneral065) 
+	spHour001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 480 translate 
+	0 rotate 
+	1 1 scale 
+	SXophTgRun SRophTgAbs SRophTgRel (ssGeneral012) 
+	spHour001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	884 516 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral030 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 380 translate 
+	0 rotate 
+	1 1 scale 
+	SRfuelConsPhAbs SRfuelConsPhRel 
+	spEngine004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 385 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral070 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 160 565 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 65 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 320 565 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 65 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 480 565 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 65 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 640 565 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 65 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 800 480 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 155 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 0 560 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 0 800 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 160 475 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 75 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 320 475 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 75 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 480 475 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 75 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 640 475 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 75 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 160 385 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 75 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 320 385 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 5 0 75 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 380 translate 
+	0 rotate 
+	1 1 scale 
+	SRfuelConsRel SRfuelConsAbs 
+	spEngine005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 380 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 956 0 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 470 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 956 0 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	SXophAdhAct true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 480 translate 
+		0 rotate 
+		1 1 scale 
+		SXophAdhRun SRophAdhAbs SRophAdhRel (ssGeneral050) 
+		spHour001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 480 translate 
+	0 rotate 
+	1 1 scale 
+	SXophOpModeRun SRophOpModeAbs SRophOpModeRel 
+	SRcurrentMode 
+	spHour004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	120 320 translate 
+	0 rotate 
+	1 1 scale 
+	(service system) 
+	FSfatFont 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	
+	SXserviceWarning SXserviceNotAckn or 
+	MSsysPriority (litronic 3) eq 
+	MSsysPriority (service) eq or 
+	MSsysPriority (inspector) eq or 
+	MSsysPriority (supervisor) eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 880 280 translate 
+		0 rotate 
+		1 1 scale 
+		1 
+		_V0159 _V0160 
+		baTouchButton011 
+		/_V0159 exch store 
+		/_V0160 exch store {	
+			/SXMservButtAckn true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SXserviceWarning SXserviceNotAckn or 
+	MSsysPriority (service) eq 
+	MSsysPriority (inspector) eq or 
+	MSsysPriority (supervisor) eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 880 280 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 260 translate 
+	0 rotate 
+	1 1 scale 
+	SXserviceWarning SXserviceNotAckn SRophEngAbs 
+	SRservNextAckn SRservLastAckn SRservInterval SRservAcknBef 25 440 
+	spGeneral005 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	mode
+%?brief	Betriebsartenvorwahl
+%?bbox	0 0 960 720
+/mode {
+	
+	SXacknNewMode false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		true 
+		FUN_SET_VAR_BOOL 
+		/MXbutAckNeMoWas0 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacknNewMode MXbutAckNeMoWas0 and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/SXMnewModeAckn true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 11 ne 
+	SXpreVibPickOp and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 400 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 11 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 10 ne 
+	SXpreSobOpBAT and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 480 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 10 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 9 ne 
+	SXpreKellyOpBAT and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 480 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 9 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 8 ne 
+	SXpreKellyOp and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 480 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 8 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 7 ne 
+	SXpreSmoOp and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 480 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 7 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 6 ne 
+	SXpreVdwOp and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 480 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 6 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 5 ne 
+	SXpreSobOp and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 560 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 5 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 4 ne 
+	SXprePuPuOp and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 560 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 4 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 3 ne 
+	SXpreHamOp and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 560 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 3 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 2 ne 
+	SXpreVibOp and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 560 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 2 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRMpreNewMode 1 ne 
+	SXpreMainOp and 
+	SXMnewModeAckn not and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 560 translate 
+		0 rotate 
+		1 1 scale 
+		2 1 
+		baTouchButton003 {	
+			/SRMpreNewMode 1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	SXMnewModeAckn true ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		(pp_menu) 
+		display_page 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXMnewModeAckn true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		MDcurrPageNumber 
+		baPageLine001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXMnewModeAckn true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		647 3 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		gsGeneral005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXMnewModeAckn true eq {	
+		SXMnewModeAckn true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Blue 880 80 translate 
+		0 rotate 
+		1 1 scale 
+		gsDrive016 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	SXacknNewMode MXbutAckNeMoWas0 and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		false false true false (gsGeneral002) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreKellyOpBAT true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		585 520 translate 
+		0 rotate 
+		1 1 scale 
+		(BAT) 
+		FSfatFont 0 false false false false 
+		baText002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreSobOpBAT true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		745 520 translate 
+		0 rotate 
+		1 1 scale 
+		(BAT) 
+		FSfatFont 0 false false false false 
+		baText002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 80 translate 
+	0 rotate 
+	1 1 scale 
+	1 0 0 0 560 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	SXpreMainOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		5 565 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 1 (ssMachinePart101) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreMainOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		75 565 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 1 (ssMachinePart102) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreVibOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		200 565 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 2 (ssGeneral036) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreHamOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 565 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 3 (ssGeneral037) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXprePuPuOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		520 565 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 4 (ssGeneral037) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreSobOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		680 565 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 5 (ssDrill002) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreVdwOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		40 485 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 6 (ssDrill003) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreSmoOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		200 485 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 7 (ssDrill004) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreKellyOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 485 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 8 (ssDrill001) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreKellyOpBAT true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		485 485 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 9 (ssDrill001) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreSobOpBAT true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		645 485 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 10 (ssDrill002) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreVibPickOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		5 405 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		0 0 0 
+		SRcurrentMode 0 0 0 
+		SRMpreNewMode 0 0 0 0 11 (ssGeneral036) 
+		baSwitchSymbolColor006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreMainOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 560 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreVibOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 560 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreHamOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 560 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXprePuPuOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 560 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreSobOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 560 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreVdwOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 480 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreSmoOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 480 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreKellyOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 480 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreKellyOpBAT true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 480 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreSobOpBAT true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 480 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreVibPickOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 400 translate 
+		0 rotate 
+		1 1 scale 
+		1 0 2 1 0 
+		baFrame003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXpreVibPickOp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		115 440 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		(PICKUP) 
+		FSfatFont 0 false false false false 
+		baText002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	lml
+%?brief	LMB Einstellseite
+%?bbox	0 0 960 720
+/lml {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	setting1
+%?brief	Einstellseite 1
+%?bbox	0 0 960 720
+/setting1 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	640 160 translate 
+	0 rotate 
+	1 1 scale 
+	1 
+	_V0178 _V0179 
+	baTouchButton011 
+	/_V0178 exch store 
+	/_V0179 exch store {	
+		/SXMlockCyl true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 80 translate 
+	0 rotate 
+	1 1 scale 
+	1 
+	_V0173 _V0174 
+	baTouchButton011 
+	/_V0173 exch store 
+	/_V0174 exch store {	
+		/SXMsetLeaderZero true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	440 560 translate 
+	0 rotate 
+	1 1 scale 
+	1 
+	_V0169 _V0170 
+	baTouchButton011 
+	/_V0169 exch store 
+	/_V0170 exch store {	
+		/SXMlockCw true store 
+		/SXMlockHg1 true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	SXhg2Preselected true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		440 480 translate 
+		0 rotate 
+		1 1 scale 
+		1 
+		_V0167 _V0168 
+		baTouchButton011 
+		/_V0167 exch store 
+		/_V0168 exch store {	
+			/SXMlockHg2 true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	440 320 translate 
+	0 rotate 
+	1 1 scale 
+	1 
+	_V0165 _V0166 
+	baTouchButton011 
+	/_V0165 exch store 
+	/_V0166 exch store {	
+		/SXMlockSg true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		720 160 translate 
+		0 rotate 
+		1 1 scale 
+		1 
+		_V0163 _V0164 
+		baTouchButton011 
+		/_V0163 exch store 
+		/_V0164 exch store {	
+			/SXMlockAux true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	720 80 translate 
+	0 rotate 
+	1 1 scale 
+	1 
+	_V0161 _V0162 
+	baTouchButton011 
+	/_V0161 exch store 
+	/_V0162 exch store {	
+		/SXMlockTg true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 80 translate 
+	0 rotate 
+	1 1 scale 
+	1 
+	_V0109 _V0110 
+	baTouchButton011 
+	/_V0109 exch store 
+	/_V0110 exch store {	
+		/SXMsetLeaderPos1 true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	SXhg1RopeLenMeas SXlrhBoomKinem not or {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 560 translate 
+		0 rotate 
+		1 1 scale 
+		1 
+		_V0099 _V0100 
+		baTouchButton011 
+		/_V0099 exch store 
+		/_V0100 exch store {	
+			/SXMcsResRopLen true store 
+			/SXMhg1ResRopLen true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg1RopeLenMeas true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 560 translate 
+		0 rotate 
+		1 1 scale 
+		1 
+		_V0099 _V0100 
+		baTouchButton011 
+		/_V0099 exch store 
+		/_V0100 exch store {	
+			/SXMcsResRopLen true store 
+			/SXMhg1ResRopLen true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 480 translate 
+		0 rotate 
+		1 1 scale 
+		3 
+		_V0097 _V0098 
+		baTouchButton011 
+		/_V0097 exch store 
+		/_V0098 exch store {	
+			/SXMhg2ChanLay1_2 true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 480 translate 
+		0 rotate 
+		1 1 scale 
+		1 
+		_V0095 _V0096 
+		baTouchButton011 
+		/_V0095 exch store 
+		/_V0096 exch store {	
+			/SXMhg2ResRopLen true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected SXlrhBoomKinem not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 400 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			
+			/SRMhg2Reeving SRMhg2Reeving 1 add store 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected SXlrhBoomKinem not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 400 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			
+			/SRMhg2Reeving SRMhg2Reeving 1 sub store 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected SXlrhBoomKinem not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		440 400 translate 
+		0 rotate 
+		1 1 scale 
+		SXMhg2SlaRopAct 
+		baTouchButPart008 
+		/SXMhg2SlaRopAct exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXmoveWarnDeaPos true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 80 translate 
+		0 rotate 
+		1 1 scale 
+		SXMmoveWarnDeact 1 
+		_V0211 _V0212 
+		baTouchButPart012 
+		/_V0211 exch store 
+		/_V0212 exch store 
+		/SXMmoveWarnDeact exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu_settings) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	SXhg2Preselected SXlrhBoomKinem not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 400 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected SXlrhBoomKinem not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 480 translate 
+		180 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected SXlrhBoomKinem not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 400 translate 
+		0 rotate 
+		1 1 scale 
+		ssGeneral016 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected SXlrhBoomKinem not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 440 translate 
+		0 rotate 
+		1 1 scale 
+		SRMhg2Reeving 2 false false 
+		FSbigFont 
+		baValue004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXiaActivated true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		685 318 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		_V0088 _V0089 _V0090 
+		baInpAreaKbd001 
+		/_V0088 exch store 
+		/_V0089 exch store 
+		/_V0090 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SDcursFormRat1 SDcursFormRat SDcursFormAct 
+		SRMratCursXinc1 SRMratCursYinc1 SRMratedCursXinc SRMratedCursYinc 
+		SRleaderAngleX SRleaderAngleY 2 3 5 10 -5 -20 
+		baCursorfield001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SDcursFormRat1 SDcursFormRat SDcursFormAct 
+		SRMratCursXinc1 SRMratCursYinc1 SRMratedCursXinc SRMratedCursYinc 
+		SRleaderAngleX SRleaderAngleY 2 3 20 25 -20 -25 
+		baCursorfield001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXMpreLeaderZero true eq {	
+		true setflash 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	245 260 translate 
+	0 rotate 
+	1 1 scale 
+	SRleaderAngleX 2.10 (Â°) false false 
+	FSmidFont 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	false setflash 
+	SXMpreLeaderZero true eq {	
+		true setflash 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	245 180 translate 
+	0 rotate 
+	1 1 scale 
+	SRleaderAngleY 2.10 (Â°) false false 
+	FSmidFont 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	false setflash 
+	SXsgAngleSenPres true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 320 translate 
+		0 rotate 
+		1 1 scale 
+		1 
+		_V0171 _V0172 
+		baTouchButton011 
+		/_V0171 exch store 
+		/_V0172 exch store {	
+			/SXMsgSetSynchInc true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 80 translate 
+	0 rotate 
+	1 1 scale 
+	ssLeader002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 80 translate 
+	0 rotate 
+	1 1 scale 
+	ssLeader003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 80 translate 
+	0 rotate 
+	1 1 scale 
+	ssLeader004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	281 188 translate 
+	0 rotate 
+	1 1 scale 
+	SRMratedCursYinc true 2.10 -999.90 999.90 
+	FSmidFont 70 
+	_V0092 
+	baInpArea002 
+	/_V0092 exch store 
+	/SRMratedCursYinc exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 260 translate 
+	0 rotate 
+	1 1 scale 
+	(X) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 180 translate 
+	0 rotate 
+	1 1 scale 
+	(Y) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	281 268 translate 
+	0 rotate 
+	1 1 scale 
+	SRMratedCursXinc true 2.10 -999.90 999.90 
+	FSmidFont 70 
+	_V0093 
+	baInpArea002 
+	/_V0093 exch store 
+	/SRMratedCursXinc exch store 
+	setcolor 
+	setmatrix_nlw 
+	SXhg2Preselected SXlrhBoomKinem not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 480 translate 
+		0 rotate 
+		1 1 scale 
+		SRhg2RopeLength 
+		spWinch012 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected SXlrhBoomKinem and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 480 translate 
+		0 rotate 
+		1 1 scale 
+		SRhg2RopeLength 2 
+		spWinch014 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 560 translate 
+		0 rotate 
+		1 1 scale 
+		SRcsHight 
+		spWinch013 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem SXhg1RopeLenMeas and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 560 translate 
+		0 rotate 
+		1 1 scale 
+		SRhg1RopeLength 1 
+		spWinch014 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	361 268 translate 
+	0 rotate 
+	1 1 scale 
+	SRMratCursXinc1 true 2.10 -999.90 999.90 
+	FSmidFont 70 
+	_V0107 
+	baInpArea002 
+	/_V0107 exch store 
+	/SRMratCursXinc1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	361 188 translate 
+	0 rotate 
+	1 1 scale 
+	SRMratCursYinc1 true 2.10 -999.90 999.90 
+	FSmidFont 70 
+	_V0108 
+	baInpArea002 
+	/_V0108 exch store 
+	/SRMratCursYinc1 exch store 
+	setcolor 
+	setmatrix_nlw 
+	SXsgAngleSenPres true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		163 318 translate 
+		0 rotate 
+		1 1 scale 
+		ssGeneral047 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXsgAngleSenPres true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		203 338 translate 
+		0 rotate 
+		1 1 scale 
+		(set) 
+		FSfatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		450 570 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		SXcwLocked false false false (ssGeneral051) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		450 570 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		SXhg1Locked false false false (ssGeneral042) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		450 490 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		SXhg2Locked false false false (ssGeneral043) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	450 330 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	SXsgLocked false false false (ssGeneral045) 
+	baSwitchSymbolColor001 
+	setcolor 
+	setmatrix_nlw 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		730 170 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		SXauxLocked false false false (ssGeneral052) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	730 90 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	SXtgLocked false false false (ssGeneral049) 
+	baSwitchSymbolColor001 
+	setcolor 
+	setmatrix_nlw 
+	SXmoveWarnDeaPos true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		650 90 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		SXMmoveWarnDeact false false false (ssGeneral064) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	650 170 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	SXcylLocked false false false (ssGeneral053) 
+	baSwitchSymbolColor001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Grey 0 560 translate 
+	0 rotate 
+	1 1 scale 
+	1 5 0 640 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Grey 0 400 translate 
+	0 rotate 
+	1 1 scale 
+	1 5 0 640 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Grey 0 320 translate 
+	0 rotate 
+	1 1 scale 
+	1 5 0 640 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+	SXsgAngleSenPres true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 320 translate 
+		0 rotate 
+		1 1 scale 
+		SXsgAngleSenDiff SRsgAngleIncr SRsgAngleAnalog 
+		spGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected SXlrhBoomKinem not eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		435 440 translate 
+		0 rotate 
+		1 1 scale 
+		SRMhg2SlaRopLim SXMhg2SlaRopAct 2.10 0 99.90 
+		FSvalueFont 25 true 6 0 0 0 0 0 
+		_V0176 
+		baInpArea003 
+		/_V0176 exch store 
+		/SRMhg2SlaRopLim exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXhg2Preselected SXlrhBoomKinem not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		445 405 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		false false false 
+		SXMhg2SlaRopAct (gsHook003) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	setting2
+%?brief	Einstellseite 2
+%?bbox	0 0 960 720
+/setting2 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu_settings) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	MXiaActivated true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		685 318 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		_V0081 _V0082 _V0083 
+		baInpAreaKbd001 
+		/_V0081 exch store 
+		/_V0082 exch store 
+		/_V0083 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRcurrentMode 8 eq 
+	SRcurrentMode 9 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRMdrillLenghCm SRMratedAddHyVo2 SRMratedAddHyVol 
+		SRMratedPres2 SRMratedPres1 SRMusedPumps SRMratedVol2 
+		SRMratedVol1 SRMvibClampClose SXadjVibClampClo SXadHydr2Sect 
+		SXadjustVRM SXludvPresCtrlAc _V0127 _V0128 
+		_V0129 _V0130 _V0131 _V0132 
+		_V0133 
+		upDrillAdjust001 
+		/_V0127 exch store 
+		/_V0128 exch store 
+		/_V0129 exch store 
+		/_V0130 exch store 
+		/_V0131 exch store 
+		/_V0132 exch store 
+		/_V0133 exch store 
+		/SRMdrillLenghCm exch store 
+		/SRMratedAddHyVo2 exch store 
+		/SRMratedAddHyVol exch store 
+		/SRMratedPres2 exch store 
+		/SRMratedPres1 exch store 
+		/SRMusedPumps exch store 
+		/SRMratedVol2 exch store 
+		/SRMratedVol1 exch store 
+		/SRMvibClampClose exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRcurrentMode 5 eq 
+	SRcurrentMode 10 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRMpileDiameter SRMconcFlowImp SRMscalConcPrInd 
+		SRMscaleConcPres SRMratedPres2 SRMratedPres1 SRMusedPumps 
+		SRMratedVol2 SRMratedVol1 SRMvibClampClose SXadjVibClampClo 
+		SXadConcVolume SXludvPresCtrlAc SXconcretPress _V0134 
+		_V0135 _V0136 _V0137 _V0138 
+		_V0139 _V0140 _V0141 
+		upDrillAdjust002 
+		/_V0134 exch store 
+		/_V0135 exch store 
+		/_V0136 exch store 
+		/_V0137 exch store 
+		/_V0138 exch store 
+		/_V0139 exch store 
+		/_V0140 exch store 
+		/_V0141 exch store 
+		/SRMpileDiameter exch store 
+		/SRMconcFlowImp exch store 
+		/SRMscalConcPrInd exch store 
+		/SRMscaleConcPres exch store 
+		/SRMratedPres2 exch store 
+		/SRMratedPres1 exch store 
+		/SRMusedPumps exch store 
+		/SRMratedVol2 exch store 
+		/SRMratedVol1 exch store 
+		/SRMvibClampClose exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SRcurrentMode 6 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRMpileDiameter SRMconcFlowImp SRMscalConcPrInd 
+		SRMscaleConcPres SRMratedPres2 SRMratedPres1 SRMusedPumps 
+		SRMratedVol2 SRMratedVol1 SRMvibClampClose SXadjVibClampClo 
+		SXadConcVolume SXludvPresCtrlAc SXconcretPress _V0142 
+		_V0143 _V0144 _V0145 _V0146 
+		_V0147 _V0148 _V0149 _V0150 
+		upDrillAdjust003 
+		/_V0142 exch store 
+		/_V0143 exch store 
+		/_V0144 exch store 
+		/_V0145 exch store 
+		/_V0146 exch store 
+		/_V0147 exch store 
+		/_V0148 exch store 
+		/_V0149 exch store 
+		/_V0150 exch store 
+		/SRMpileDiameter exch store 
+		/SRMconcFlowImp exch store 
+		/SRMscalConcPrInd exch store 
+		/SRMscaleConcPres exch store 
+		/SRMratedPres2 exch store 
+		/SRMratedPres1 exch store 
+		/SRMusedPumps exch store 
+		/SRMratedVol2 exch store 
+		/SRMratedVol1 exch store 
+		/SRMvibClampClose exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRcurrentMode 7 ge 
+	SRcurrentMode 9 le and 
+	SRcurrentMode 4 eq or 
+	SXpreDdTorqLimit true eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 110 translate 
+		0 rotate 
+		1 1 scale 
+		TStorqueLimitation FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SRcurrentMode 7 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRMdrillLenghCm SRMusedAugers SRMconcFlowImp 
+		SRMscalConcPrInd SRMscaleConcPres SRMratedPres2 SRMratedPres1 
+		SRMusedPumps SRMratedVol3 SRMratedVol2 SRMratedVol1 
+		SXadConcVolume SXludvPresCtrlAc SXconcretPress _V0180 
+		_V0181 _V0182 _V0183 _V0184 
+		_V0185 _V0186 _V0187 _V0188 
+		_V0189 
+		upDrillAdjust004 
+		/_V0180 exch store 
+		/_V0181 exch store 
+		/_V0182 exch store 
+		/_V0183 exch store 
+		/_V0184 exch store 
+		/_V0185 exch store 
+		/_V0186 exch store 
+		/_V0187 exch store 
+		/_V0188 exch store 
+		/_V0189 exch store 
+		/SRMdrillLenghCm exch store 
+		/SRMusedAugers exch store 
+		/SRMconcFlowImp exch store 
+		/SRMscalConcPrInd exch store 
+		/SRMscaleConcPres exch store 
+		/SRMratedPres2 exch store 
+		/SRMratedPres1 exch store 
+		/SRMusedPumps exch store 
+		/SRMratedVol3 exch store 
+		/SRMratedVol2 exch store 
+		/SRMratedVol1 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SRcurrentMode 2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRMpileDiameter SRMconcFlowImp SRMscalConcPrInd 
+		SRMscaleConcPres SRMratedPres2 SRMratedPres1 SRMusedPumps 
+		SRMratedVol2 SRMratedVol1 SRMvibClampClose SRMvibExcTime 
+		SRMvibRatFrequ SXadConcVolume SXludvPresCtrlAc SXconcretPress false 
+		_V0190 _V0191 _V0192 
+		_V0193 _V0194 _V0195 _V0196 
+		_V0197 _V0198 _V0199 
+		upVibAdjust001 
+		/_V0190 exch store 
+		/_V0191 exch store 
+		/_V0192 exch store 
+		/_V0193 exch store 
+		/_V0194 exch store 
+		/_V0195 exch store 
+		/_V0196 exch store 
+		/_V0197 exch store 
+		/_V0198 exch store 
+		/_V0199 exch store 
+		/SRMpileDiameter exch store 
+		/SRMconcFlowImp exch store 
+		/SRMscalConcPrInd exch store 
+		/SRMscaleConcPres exch store 
+		/SRMratedPres2 exch store 
+		/SRMratedPres1 exch store 
+		/SRMusedPumps exch store 
+		/SRMratedVol2 exch store 
+		/SRMratedVol1 exch store 
+		/SRMvibClampClose exch store 
+		/SRMvibExcTime exch store 
+		/SRMvibRatFrequ exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SRcurrentMode 11 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRMpileDiameter SRMconcFlowImp SRMscalConcPrInd 
+		SRMscaleConcPres SRMratedPres2 SRMratedPres1 SRMusedPumps 
+		SRMratedVol2 SRMratedVol1 SRMvibClampClose SRMvibExcTime 
+		SRMvibRatFrequ SXadConcVolume SXludvPresCtrlAc SXconcretPress true 
+		_V0201 _V0202 _V0203 
+		_V0204 _V0205 _V0206 _V0207 
+		_V0208 _V0209 _V0210 
+		upVibAdjust001 
+		/_V0201 exch store 
+		/_V0202 exch store 
+		/_V0203 exch store 
+		/_V0204 exch store 
+		/_V0205 exch store 
+		/_V0206 exch store 
+		/_V0207 exch store 
+		/_V0208 exch store 
+		/_V0209 exch store 
+		/_V0210 exch store 
+		/SRMpileDiameter exch store 
+		/SRMconcFlowImp exch store 
+		/SRMscalConcPrInd exch store 
+		/SRMscaleConcPres exch store 
+		/SRMratedPres2 exch store 
+		/SRMratedPres1 exch store 
+		/SRMusedPumps exch store 
+		/SRMratedVol2 exch store 
+		/SRMratedVol1 exch store 
+		/SRMvibClampClose exch store 
+		/SRMvibExcTime exch store 
+		/SRMvibRatFrequ exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SRcurrentMode 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		SRMhamRamWeight SRMhamRatMinVol SRMpileDiameter 
+		SRMconcFlowImp SRMscalConcPrInd SRMscaleConcPres SRMratedPres2 
+		SRMratedPres1 SRMusedPumps SRMratedVol2 SRMratedVol2 
+		SXadConcVolume SXludvPresCtrlAc SXconcretPress _V0215 
+		_V0216 _V0217 _V0218 _V0219 
+		_V0220 _V0221 _V0222 _V0223 
+		upHamAdjust001 
+		/_V0215 exch store 
+		/_V0216 exch store 
+		/_V0217 exch store 
+		/_V0218 exch store 
+		/_V0219 exch store 
+		/_V0220 exch store 
+		/_V0221 exch store 
+		/_V0222 exch store 
+		/_V0223 exch store 
+		/SRMhamRatMinVol exch store 
+		/SRMhamRamWeight exch store 
+		/SRMpileDiameter exch store 
+		/SRMconcFlowImp exch store 
+		/SRMscalConcPrInd exch store 
+		/SRMscaleConcPres exch store 
+		/SRMratedPres2 exch store 
+		/SRMratedPres1 exch store 
+		/SRMusedPumps exch store 
+		/SRMratedVol2 exch store 
+		/SRMratedVol1 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRcurrentMode 7 ge 
+	SRcurrentMode 9 le and 
+	SRcurrentMode 4 eq or 
+	SXpreDdTorqLimit true eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		42 85 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		SXMenaDdTorqLim 
+		baTouchButPart008 
+		/SXMenaDdTorqLim exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SRcurrentMode 7 ge 
+	SRcurrentMode 9 le and 
+	SRcurrentMode 4 eq or 
+	SXpreDdTorqLimit true eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		42 85 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		false false false 
+		SXMenaDdTorqLim (ssDrill006) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	setting5
+%?brief	Einstellseite 5 (Monteurseite)
+%?bbox	0 0 960 720
+/setting5 {
+	
+	SXsgAngleSenPres true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 560 translate 
+		0 rotate 
+		1 1 scale 
+		1 
+		_V0104 _V0105 
+		baTouchButton011 
+		/_V0104 exch store 
+		/_V0105 exch store {	
+			/SXMsgSetToZero true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu_settings) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 560 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral090 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	201 598 translate 
+	0 rotate 
+	1 1 scale 
+	(0Â°) 
+	FSmidFont 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 560 translate 
+	0 rotate 
+	1 1 scale 
+	SRsgAngleAnaOffs SRsgAngleAnalog 
+	spGeneral004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Grey 0 560 translate 
+	0 rotate 
+	1 1 scale 
+	1 5 0 240 0 
+	baPageLine003 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	setting6
+%?brief	Einstellseite 6
+%?bbox	0 0 960 720
+/setting6 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 400 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		%?usercode_beg
+		
+		SXMtimeFormat12h {	
+			/SXMtimeFormat12h false store 
+			} { 
+			/SXMtimeFormat12h true store 
+		} ifelse 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 400 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		%?usercode_beg
+		
+		SRMactDateFormat 1 le {	
+			/SRMactDateFormat 2 store 
+			} { 
+			SRMactDateFormat 2 eq {	
+				/SRMactDateFormat 3 store 
+				} { 
+				SRMactDateFormat 3 eq {	
+					/SRMactDateFormat 1 store 
+				} if 
+			} ifelse 
+		} ifelse 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 560 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		%?usercode_beg
+		
+		SXMchUnitLoad {	
+			/SXMchUnitLoad false store 
+			} { 
+			/SXMchUnitLoad true store 
+		} ifelse 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 560 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		%?usercode_beg
+		
+		SXMchUnitTemp {	
+			/SXMchUnitTemp false store 
+			} { 
+			/SXMchUnitTemp true store 
+		} ifelse 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 560 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		%?usercode_beg
+		
+		SXMchUnitDistanc {	
+			/SXMchUnitDistanc false store 
+			} { 
+			/SXMchUnitDistanc true store 
+		} ifelse 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 480 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		%?usercode_beg
+		
+		SXMchUnitSpeed {	
+			/SXMchUnitSpeed false store 
+			} { 
+			/SXMchUnitSpeed true store 
+		} ifelse 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 480 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		%?usercode_beg
+		
+		SXMchUnitPress {	
+			/SXMchUnitPress false store 
+			} { 
+			/SXMchUnitPress true store 
+		} ifelse 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 480 translate 
+	0 rotate 
+	1 1 scale 
+	2 1 
+	baTouchButton003 {	
+		%?usercode_beg
+		
+		SXMchUnitVolume {	
+			/SXMchUnitVolume false store 
+			} { 
+			/SXMchUnitVolume true store 
+		} ifelse 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu_settings) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 560 translate 
+	0 rotate 
+	1 1 scale 
+	gpButtonTstsys002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	640 560 translate 
+	0 rotate 
+	1 1 scale 
+	gpButtonTstsys003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	720 560 translate 
+	0 rotate 
+	1 1 scale 
+	gpButtonTstsys004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 560 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral077 
+	setcolor 
+	setmatrix_nlw 
+	MXchangeUnitLoad false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 120 600 translate 
+		0 rotate 
+		1 1 scale 
+		(t) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitLoad true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 120 600 translate 
+		0 rotate 
+		1 1 scale 
+		(lb) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 560 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral095 
+	setcolor 
+	setmatrix_nlw 
+	MXchangeUnitTemp false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 280 600 translate 
+		0 rotate 
+		1 1 scale 
+		(Â°C) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitTemp true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 280 600 translate 
+		0 rotate 
+		1 1 scale 
+		(Â°F) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 560 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral094 
+	setcolor 
+	setmatrix_nlw 
+	MXchangeUnitDist false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 440 600 translate 
+		0 rotate 
+		1 1 scale 
+		(m) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitDist true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 440 600 translate 
+		0 rotate 
+		1 1 scale 
+		(ft/in) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	3 475 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral099 
+	setcolor 
+	setmatrix_nlw 
+	MXchangeUnitSpeed false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 120 520 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		(km/h) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitSpeed true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 120 520 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		(mph) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 480 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral096 
+	setcolor 
+	setmatrix_nlw 
+	MXchangeUnitPress false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 280 520 translate 
+		0 rotate 
+		1 1 scale 
+		(bar) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitPress true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 280 520 translate 
+		0 rotate 
+		1 1 scale 
+		(psi) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 480 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral097 
+	setcolor 
+	setmatrix_nlw 
+	MXchangeUnitVolume false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 440 535 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		(l) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitVolume true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 440 535 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		(gal) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitVolume false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 440 505 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		(mÂ³) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXchangeUnitVolume true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 440 505 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		(cyd) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 400 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral085 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Green 115 440 translate 
+	0 rotate 
+	1 1 scale 
+	SRMactDateFormat FSstdFont 
+	baDate003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 410 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	false false 
+	baClock002 
+	setcolor 
+	setmatrix_nlw 
+	SXMtimeFormat12h false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 280 440 translate 
+		0 rotate 
+		1 1 scale 
+		(24h) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXMtimeFormat12h true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 280 445 translate 
+		0 rotate 
+		1 1 scale 
+		(12h) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXMtimeFormat12h true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 280 420 translate 
+		0 rotate 
+		1 1 scale 
+		(a.m./p.m.) 
+		FSminiFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 240 translate 
+		0 rotate 
+		1 1 scale 
+		SXMjoyVibrCsAct 
+		baTouchButPart008 
+		/SXMjoyVibrCsAct exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 240 translate 
+		0 rotate 
+		1 1 scale 
+		SXMjoyVibrHg2Act 
+		baTouchButPart008 
+		/SXMjoyVibrHg2Act exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 240 translate 
+		0 rotate 
+		1 1 scale 
+		SXMjoyVibrAuxAct 
+		baTouchButPart008 
+		/SXMjoyVibrAuxAct exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 240 translate 
+		0 rotate 
+		1 1 scale 
+		SXMjoyVibrSgAct 
+		baTouchButPart008 
+		/SXMjoyVibrSgAct exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 240 translate 
+		0 rotate 
+		1 1 scale 
+		false false false 
+		SXMjoyVibrCsAct (ssGeneral063) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 240 translate 
+		0 rotate 
+		1 1 scale 
+		false false false 
+		SXMjoyVibrHg2Act (ssGeneral057) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 240 translate 
+		0 rotate 
+		1 1 scale 
+		false false false 
+		SXMjoyVibrAuxAct (ssGeneral060) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXlrhBoomKinem false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 240 translate 
+		0 rotate 
+		1 1 scale 
+		false false false 
+		SXMjoyVibrSgAct (ssGeneral059) 
+		baSwitchSymbolColor001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	560 400 translate 
+	0 rotate 
+	1 1 scale 
+	gpButtonControl001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 400 translate 
+	0 rotate 
+	1 1 scale 
+	false 
+	gpButtonControl002 
+	/_unused exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	640 400 translate 
+	0 rotate 
+	1 1 scale 
+	false 
+	gpButtonControl003 
+	/_unused exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 480 translate 
+	0 rotate 
+	1 1 scale 
+	gpButtonControl004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	640 480 translate 
+	0 rotate 
+	1 1 scale 
+	gpButtonControl005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	720 410 translate 
+	0 rotate 
+	0.50 0.75 scale 
+	gpGeneral002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	720 490 translate 
+	0 rotate 
+	0.50 0.75 scale 
+	gpGeneral003 
+	setcolor 
+	setmatrix_nlw 
+	MRpi 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		670 100 translate 
+		0 rotate 
+		0.60 0.60 scale 
+		_V0151 _V0152 _V0153 
+		_V0154 _V0155 
+		baCalculator001 
+		/_V0151 exch store 
+		/_V0152 exch store 
+		/_V0153 exch store 
+		/_V0154 exch store 
+		/_V0155 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	workarealimit
+%?brief	Arbeitsbereichsbegrenzung
+%?bbox	0 0 960 720
+/workarealimit {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	560 80 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/SXMwalSetSgRight true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 80 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/SXMwalSetSgLeft true store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 80 translate 
+	0 rotate 
+	1 1 scale 
+	SXMwalSlewAct 
+	baTouchButPart008 
+	/SXMwalSlewAct exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 80 translate 
+	0 rotate 
+	1 1 scale 
+	false false false 
+	SXMwalSlewAct (ssWal003) 
+	baSwitchSymbolColor001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 80 translate 
+	0 rotate 
+	1 1 scale 
+	gsLimit017 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	390 105 translate 
+	0 rotate 
+	1 1 scale 
+	SRwalSlewLeft 3 () 70 false false false false false 
+	FSstdFont 5 0 
+	baValueText003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	560 80 translate 
+	0 rotate 
+	1 1 scale 
+	gsLimit018 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	610 105 translate 
+	0 rotate 
+	1 1 scale 
+	SRwalSlewRight 3 () 70 false false false false false 
+	FSstdFont 5 0 
+	baValueText003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	480 400 translate 
+	SRsgSuperstrAng 
+	rotate 
+	1 1 scale 
+	SXMwalSlewAct SRwalSlewRight SRwalSlewLeft 
+	spWal008 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	480 400 translate 
+	0 rotate 
+	1 1 scale 
+	ssWal021 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	535 195 translate 
+	0 rotate 
+	1 1 scale 
+	SRsgSuperstrAng 3 () 70 false false false false 
+	FSbigFatFont 7 0 
+	baValueText002 
+	setcolor 
+	setmatrix_nlw 
+	SXwalSgLeft true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		180 365 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXwalSgRight true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		700 365 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral004 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	inputkeyboard
+%?brief	Alphanumerische Eingabtestatur
+%?bbox	0 0 960 720
+/inputkeyboard {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 120 translate 
+	0 rotate 
+	1 1 scale 
+	50 
+	MSkbdInputString () 
+	_V0156 _V0157 _V0158 
+	baTouchKbd102 
+	/_V0156 exch store 
+	/_V0157 exch store 
+	/_V0158 exch store 
+	/MSkbdOutputString exch store 
+	/MXkbdReturned exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	480 560 translate 
+	0 rotate 
+	1 1 scale 
+	MSkbdOutputString FSbigFatFont 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	MXkbdReturned 
+	FUN_SET_VAR_BOOL 
+	/MXswitchPageBack exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	MSswitchPageBack MXswitchPageBack 
+	switch_page 
+	/MXswitchPageBack exch store 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	accesscontrol
+%?brief	Benutzungskontrollsystem
+%?bbox	0 0 960 720
+/accesscontrol {
+	
+	SXacKeyChanPrio SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 240 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/SXMacDelAllOtKey true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacKeyChanPrio SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 320 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/SXMacDelNextKey true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacKeyChanPrio SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 400 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/SXMacSetNextKey true store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacActKeyValid SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 520 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/_currentpage (inputkeyboard) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacActKeyValid SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 520 translate 
+		0 rotate 
+		9.50 1 scale 
+		baTouchButton007 {	
+			/_currentpage (inputkeyboard) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_status) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(pp_menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	SXacActKeyValid false eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 400 translate 
+		0 rotate 
+		2 2 scale 
+		spGeneral006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacActKeyValid SXacRestart not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 400 translate 
+		0 rotate 
+		1 1 scale 
+		SXacAcActive SXacOlActive MSacActKeyName 
+		SDacActKeyPrio SXacActKeyMaster MSsysPriority SDacNumberOfKeys 
+		spGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacKeyMatched true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		database.ActualKey.Name.1 
+		FUN_SET_VAR_STRING 
+		/MSacActKeyName exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	MScurrentPage 
+	FUN_SET_VAR_STRING 
+	/MSswitchPageBack exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 80 translate 
+	0 rotate 
+	1 1 scale 
+	MSacActKeyName 
+	FUN_SET_VAR_STRING 
+	/MSkbdInputString exch store 
+	setcolor 
+	setmatrix_nlw 
+	MXkbdReturned true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		MSkbdOutputString 
+		FUN_SET_VAR_STRING 
+		/MSacActKeyName exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	MSkbdInputString MSkbdOutputString ne 
+	MXkbdReturned and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		MSacActKeyName 
+		FUN_SET_VAR_STRING 
+		/database.ActualKey.Name.1 exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	MSkbdInputString MSkbdOutputString ne 
+	MXkbdReturned and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		true 
+		FUN_SET_VAR_BOOL 
+		/SXMacKeyNameChan exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	MXkbdReturned true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 80 translate 
+		0 rotate 
+		1 1 scale 
+		false 
+		FUN_SET_VAR_BOOL 
+		/MXkbdReturned exch store 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 120 translate 
+	0 rotate 
+	1 1 scale 
+	_V0175 
+	baTouchButPart001 
+	/_V0175 exch store 
+	/SXMenabRemAccess exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 120 translate 
+	0 rotate 
+	1 1 scale 
+	false 
+	MXremAccessWarn false 
+	SXremAccessState (gsGeneral091) 
+	baSwitchSymbolColor001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 280 translate 
+	0 rotate 
+	1 1 scale 
+	SXMenabRemAccess SXremAccessState not 
+	FUN_AND_2 
+	/MXremAccessWarn exch store 
+	setcolor 
+	setmatrix_nlw 
+	SXacKeyChanPrio SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 900 400 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		gsGeneral089 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacKeyChanPrio SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 906 451 translate 
+		0 rotate 
+		1 1 scale 
+		(+) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacKeyChanPrio SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 880 320 translate 
+		0 rotate 
+		1 1 scale 
+		spGeneral006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacKeyChanPrio SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 880 245 translate 
+		0 rotate 
+		0.90 0.90 scale 
+		spGeneral007 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacImmoIsBusy true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 440 translate 
+		0 rotate 
+		1 1 scale 
+		gpGeneral001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacRestart true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		440 400 translate 
+		0 rotate 
+		1 1 scale 
+		(switch ignition off and restart with the correct key) 
+		FSfatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacRestart true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Blue 420 440 translate 
+		0 rotate 
+		1.50 1.50 scale 
+		gsDrive016 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXacActKeyValid SXacImmoIsBusy not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 520 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral101 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	accessdenied
+%?brief	Sperre des Monitors/Gerätes
+%?bbox	0 0 960 720
+/accessdenied {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	486 330 translate 
+	0 rotate 
+	3 3 scale 
+	(key not valid) 
+	FSbigFatFont 0 true false false false 
+	baText002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	486 185 translate 
+	0 rotate 
+	2 2 scale 
+	(machine locked) 
+	FSbigFatFont 0 true false false false 
+	baText002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	486 36 translate 
+	0 rotate 
+	1 1 scale 
+	(machine is locked by access control system, ignition key is not valid) 
+	FSmidFont 0 false false false false 
+	baText002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 400 translate 
+	0 rotate 
+	4 4 scale 
+	spGeneral006 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?main
+
+fontinit
+colorinit
+1 setlinecap
+/_currentpage (page0) store
+(reload_currentpage) 0 setsysparam
+initmatrix
+{
+
+mousedown
+{
+/_myposd exch store
+/_mxposd exch store
+/_mdown true store
+/_mstatus true store
+}
+{
+/_mdown false store
+} ifelse
+
+mouseup
+{
+/_myposd exch store
+/_mxposd exch store
+/_mup true store
+/_mstatus false store
+}
+{
+/_mup false store
+} ifelse
+
+keypressed
+{
+/_keycode exch store
+/_keyhit true store
+}
+{
+/_keyhit false store
+} ifelse
+
+erasepage
+page0
+_currentpage display
+copypage
+} loop
+

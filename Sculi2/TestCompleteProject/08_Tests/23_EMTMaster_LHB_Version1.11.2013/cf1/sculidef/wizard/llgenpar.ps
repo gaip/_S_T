@@ -1,0 +1,1094 @@
+%?class llgenpar
+%?version 00021 vorab
+
+%?library llgensym
+(llgensym.ps) run
+%?library llbasic
+(llbasic.ps) run
+
+
+
+%?partdef gpButtonPage001
+%?fn	gpButtonPage001
+%?brief	Button to switch to another page
+%?bbox	0 0 79 79
+/gpButtonPage001 {
+	/isSymbolName exch def	%?brief name of the symbol-part which has to be displayed %?use INP %?type STRI %?dflt (gsGeneral001)
+	/ixFlashRedBlack exch def	%?brief activate symbol flashing error %?use INP %?type BOOL %?dflt false
+	/ixFlashYelBlack exch def	%?brief activate symbol flashing warning %?use INP %?type BOOL %?dflt false
+%?manual_beg
+	ixFlashYelBlack ixFlashRedBlack not and {	
+		true setflash 
+		currentcolor 
+		Yellow
+		isSymbolName cvx exec
+		setcolor 
+		false setflash 
+	} if 
+	ixFlashRedBlack true eq {	
+		true setflash 
+		currentcolor 
+		Red
+		isSymbolName cvx exec
+		setcolor 
+		false setflash 
+	} if 
+	ixFlashYelBlack not 
+	ixFlashRedBlack not and {	
+		currentcolor 
+		isSymbolName cvx exec
+		setcolor 
+	} if 
+%?manual_end
+} def
+%?partend
+
+%?partdef gpButtonPage002
+%?fn	gpButtonPage002
+%?brief	Button to switch to message page
+%?bbox	0 0 79 79
+/gpButtonPage002 {
+	/ixFlashRedBlack exch def	%?brief activate symbol flashing red %?use INP %?type BOOL %?dflt false
+	/ixFlashWhiBlack exch def	%?brief activate symbol flashing neutral %?use INP %?type BOOL %?dflt false
+%?manual_beg
+  	MDmsgValidNr MDmsgAcknNr sub 0 gt MDmsgDeactNr 0 gt or { /ixFlashRedBlack true store } if
+  	MDmsgAcknNr 0 gt { /ixFlashWhiBlack true store } if
+%?manual_end 
+	
+	ixFlashWhiBlack ixFlashRedBlack not and {	
+		ixFlashWhiBlack true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral044 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	ixFlashRedBlack true eq {	
+		ixFlashRedBlack true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral044 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	ixFlashWhiBlack not 
+	ixFlashRedBlack not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral044 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+
+%?partdef gpButtonAckn001
+%?fn	gpButtonAckn001
+%?brief	acknowledge acoustical warning on the actual page
+%?bbox	0 0 79 79
+/gpButtonAckn001 {
+	/ixFlash exch def	%?brief activate symbol flashing error %?use INP %?type BOOL %?dflt false
+	ixFlash true eq {	
+		ixFlash true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral015 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	ixFlash not 
+	true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral015 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+%?partdef gpButtonTstsys001
+%?fn	gpButtonTstsys001
+%?brief	Button to switch to text based testsystem
+%?bbox	0 0 79 79
+/gpButtonTstsys001 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButTstsys001 {	
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral010 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpButtonTstsys002
+%?fn	gpButtonTstsys002
+%?brief	Button to switch to graphical testsystem
+%?bbox	0 0 79 79
+/gpButtonTstsys002 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButTstsys002 {	
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral059 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpButtonTstsys003
+%?fn	gpButtonTstsys003
+%?brief	Button to switch to language page in testsystem
+%?bbox	0 0 79 79
+/gpButtonTstsys003 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButTstsys003 {	
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral031 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpButtonTstsys004
+%?fn	gpButtonTstsys004
+%?brief	Button to switch to time and date page in testsystem
+%?bbox	0 0 79 79
+/gpButtonTstsys004 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButTstsys004 {	
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral033 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpGeneral001
+%?fn	gpGeneral001
+%?brief	Sanduhr animiert
+%?bbox	0 0 79 79
+/gpGeneral001 {
+	
+%?manual_beg
+	/Ly1 20 def
+	/Ly2 -20 def
+	/Ly3 0 def
+	currentcolor 
+	40 40 translate
+
+	% Drehung der Sanduhr
+	MRrotate 330 gt {
+		MRrotate 330 sub 6 mul rotate
+	} if
+
+	% Fuss zeichnen
+	%?plinebeg
+	newpath
+	-16 -25 moveto 
+	16 -25 lineto 
+	20 -25 20 -30 16 -30 curveto 
+	-16 -30 lineto 
+	-20 -30 -20 -25 -16 -25 curveto 	
+	eofill 
+	%?plineend
+
+	% Kopf zeichnen	
+	%?plinebeg
+	newpath
+	-16 30 moveto 
+	16 30 lineto 
+	20 30 20 25 16 25 curveto 
+	-16 25 lineto 
+	-20 25 -20 30 -16 30 curveto 
+	eofill 
+	%?plineend
+
+	LightGrey
+
+	MRrotate 330 lt {
+		% Oberes Glas zeichnen
+		/Ly1 360 MRrotate sub 72 div 15 add store
+		%?plinebeg
+		newpath
+		-15 15 moveto 
+		-15 Ly1 lineto 
+		15 Ly1 lineto 
+		15 15 lineto 
+		15 5 0 5 1 0 curveto 
+		-1 0 lineto
+		0 5 -15 5 -15 15 curveto 
+		eofill 
+		%?plineend
+
+		% Unteres Glas zeichnen
+		/Ly2 MRrotate 72 div 25 sub store
+		%?plinebeg
+		newpath
+		-15 -25 moveto 
+		15 -25 lineto 
+		15 Ly2 lineto 
+		0 Ly2 12 add lineto 
+		-15 Ly2 lineto 
+		-15 -25 lineto 
+		eofill 
+		%?plineend
+
+		% Tropfen zeichnen
+		/Ly3 MRrotate -36 div 5 add store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+		/Ly3 Ly3 5 sub store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+		/Ly3 Ly3 5 sub store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+		/Ly3 Ly3 5 sub store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+	} if
+	
+	setcolor 
+	
+%?manual_end
+	-15 15 moveto 
+	-15 5 0 5 -1 0 curveto 
+	stroke 
+	-1 0 moveto 
+	0 -5 -15 -5 -15 -15 curveto 
+	stroke 
+	15 15 moveto 
+	15 5 0 5 1 0 curveto 
+	stroke 
+	15 -15 moveto 
+	15 -5 0 -5 1 0 curveto 
+	stroke 
+	-15 15 moveto 
+	-15 25 lineto 
+	stroke 
+	15 15 moveto 
+	15 25 lineto 
+	stroke 
+	15 -15 moveto 
+	15 -25 lineto 
+	stroke 
+	-15 -15 moveto 
+	-15 -25 lineto 
+	stroke 
+} def
+%?partend
+
+%?partdef gpAircond001
+%?fn	gpAircond001
+%?brief	Luftverteilung
+%?bbox	0 0 219 199
+/gpAircond001 {
+	/I_ActMiddleArea exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	/I_ActLowerArea exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	/I_ActUpperArea exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsAircond015 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	I_ActUpperArea true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsAircond016
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_ActMiddleArea true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsAircond017
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_ActLowerArea true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsAircond018
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef gpButtonPage003
+%?fn	gpButtonPage003
+%?brief	Button to switch to another page; external buzzer acknowledge is used
+%?bbox	0 0 79 79
+/gpButtonPage003 {
+	/isSymbolName exch def	%?brief name of the symbol-part which has to be displayed %?use INP %?type STRI %?dflt (gsGeneral001)
+	/idSymErrActCnt exch def	%?brief number of active error symbols %?use INP %?type DINT %?dflt 0
+	/idSymWarnActCnt exch def	%?brief number of active warning symbols %?use INP %?type DINT %?dflt 0
+	/ixBuzzerAckDemand exch def	%?brief buzzer acknowledge demand %?use INP %?type BOOL %?dflt false
+%?manual_beg
+	ixBuzzerAckDemand true eq {	
+		idSymErrActCnt 0 gt {	
+			true setflash 
+			currentcolor 
+			Red
+			isSymbolName cvx exec
+			setcolor 
+			false setflash 
+		}{
+			true setflash 
+			currentcolor 
+			Yellow
+			isSymbolName cvx exec
+			setcolor 
+			false setflash 
+		} ifelse 
+	}{ 
+		idSymErrActCnt 0 gt
+		idSymWarnActCnt 0 gt or {	
+			true setflash 
+			currentcolor 
+			isSymbolName cvx exec
+			setcolor 
+			false setflash 
+		}{
+			currentcolor 
+			isSymbolName cvx exec
+			setcolor 
+		} ifelse 
+	} ifelse 
+%?manual_end
+} def
+%?partend
+
+
+%?partdef gpButtonControl001
+%?fn	gpButtonControl001
+%?brief	Button to switch to invers mode (ATTENTION: this part may only to be setted on a project page directly, not in a other part)
+%?bbox	0 0 79 79
+/gpButtonControl001 {
+	
+%?manual_beg
+	% Hier darf kein currentcolor - setcolor stehen
+	0 0 moveto
+	currentcolor					% Farbumschaltungen des Touchbutton kapseln
+	baTouchButton001
+	exch
+	setcolor
+	{	
+		setcolor 					% das currentcolor der obersten Ebene wird aufgehoben
+		(get_inverse_mode) getsysparam {	
+			(set_inverse_mode) false setsysparam 
+		} { 
+			(set_inverse_mode) true setsysparam 
+		} ifelse 
+		currentcolor			 	% das currentcolor der obersten Ebene wird neu gesetzt
+		colorinit					% colorinit der llsystem aufrufen, damit die Fraben richtig gesetzt werden
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral131 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end
+	
+} def
+%?partend
+
+%?partdef gpButtonControl002
+%?fn	gpButtonControl002
+%?brief	Button to increase brightness
+%?bbox	0 0 79 79
+/gpButtonControl002 {
+	/idSymbolColor exch def	%?brief symbol color %?use INP %?type DINT %?dflt 0
+	/ixChangeBrightness exch def	%?brief change brightness on external order %?use INP %?type BOOL %?dflt false
+	/qdBrightness 0 def	%?brief LCD brightness %?use OUT %?type DINT %?dflt 0
+	/LD_Change 0 def	%?brief change brightness %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	(lcd_get_brightness) getsysparam 
+	/qdBrightness exch store 
+	qdBrightness 40 lt { /LD_Change 16 store } if
+	qdBrightness 40 ge { /LD_Change 26 store } if
+	qdBrightness 90 ge {
+		/idSymbolColor 5 store		% grau
+	} if
+%?manual_end
+	qdBrightness 90 lt {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			/ixChangeBrightness true store
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale  
+	idSymbolColor (gsGeneral087) 
+	baSwitchSymbolColor002 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	ixChangeBrightness true eq {
+		/qdBrightness qdBrightness LD_Change add store 
+		(lcd_set_brightness) 
+		qdBrightness setsysparam 
+	} if
+%?manual_end
+	qdBrightness
+} def
+%?partend
+
+%?partdef gpButtonControl003
+%?fn	gpButtonControl003
+%?brief	Button to decrease brightness
+%?bbox	0 0 79 79
+/gpButtonControl003 {
+	/idSymbolColor exch def	%?brief symbol color %?use INP %?type DINT %?dflt 0
+	/ixChangeBrightness exch def	%?brief change brightness on external order %?use INP %?type BOOL %?dflt false
+	/qdBrightness 0 def	%?brief LCD brightness %?use OUT %?type DINT %?dflt 0
+	/LD_Change 0 def	%?brief change brightness %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	(lcd_get_brightness) getsysparam 
+	/qdBrightness exch store 
+	qdBrightness 60 lt { /LD_Change 16 store } if
+	qdBrightness 60 ge { /LD_Change 26 store } if
+	qdBrightness 10 lt {
+		/idSymbolColor 5 store		% grau
+	} if
+%?manual_end
+	qdBrightness 10 ge {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			/ixChangeBrightness true store
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale  
+	idSymbolColor (gsGeneral088) 
+	baSwitchSymbolColor002 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	ixChangeBrightness true eq {
+		/qdBrightness qdBrightness LD_Change sub store 
+		(lcd_set_brightness) 
+		qdBrightness setsysparam 
+	} if
+%?manual_end
+	qdBrightness
+} def
+%?partend
+
+%?partdef gpButtonControl004
+%?fn	gpButtonControl004
+%?brief	Button to increase volume
+%?bbox	0 0 79 79
+/gpButtonControl004 {
+	/LD_Volume 0 def	%?brief buzzer volume %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	(buzzer_get_volume) getsysparam 
+	/LD_Volume exch store 
+%?manual_end
+	LD_Volume 100 lt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			/LD_Volume LD_Volume 15 add store 
+			(buzzer_set_volume) 
+			LD_Volume setsysparam 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LD_Volume 100 ge {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Grey 10 -10 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral014 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LD_Volume 100 lt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		10 -10 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral014 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LD_Volume 100 ge {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Grey 23 60 translate 
+		0 rotate 
+		1 1 scale 
+		(+) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LD_Volume 100 lt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		23 60 translate 
+		0 rotate 
+		1 1 scale 
+		(+) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+%?partdef gpButtonControl005
+%?fn	gpButtonControl005
+%?brief	Button to decrease volume
+%?bbox	0 0 79 79
+/gpButtonControl005 {
+	/LD_Volume 0 def	%?brief buzzer volume %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	(buzzer_get_volume) getsysparam 
+	/LD_Volume exch store 
+%?manual_end
+	LD_Volume 25 gt {					% ACHTUNG: Der Monitor schneidet die minimale Laustärke bei 25% ab !!! (Monitor 5)
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			/LD_Volume LD_Volume 15 sub store 
+			(buzzer_set_volume) 
+			LD_Volume setsysparam 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LD_Volume 25 le {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Grey 10 -10 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral014 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LD_Volume 25 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		10 -10 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral014 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LD_Volume 25 le {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Grey 23 60 translate 
+		0 rotate 
+		1 1 scale 
+		(-) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	LD_Volume 25 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		23 60 translate 
+		0 rotate 
+		1 1 scale 
+		(-) 
+		FSbigFatFont 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+%?partdef gpGeneral002
+%?fn	gpGeneral002
+%?brief	show actual brightness
+%?bbox	0 0 159 79
+/gpGeneral002 {
+	/LD_Brightness 0 def	%?brief LCD brightness %?use LOC %?type DINT %?dflt 0
+	/LD_Value 0 def	%?brief manipulated value %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	(lcd_get_brightness) getsysparam 
+	/LD_Brightness exch store 
+	LD_Brightness 10 ge { /LD_Value 1 store } if
+	LD_Brightness 25 ge { /LD_Value 2 store } if  
+	LD_Brightness 40 ge { /LD_Value 3 store } if
+	LD_Brightness 60 ge { /LD_Value 4 store } if
+	LD_Brightness 90 ge { /LD_Value 5 store } if
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	11 68 translate 
+	-90 rotate 
+	1 1 scale 
+	LD_Value 0 5 55 135 5 false false true 1 
+	baBar007 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpGeneral003
+%?fn	gpGeneral003
+%?brief	show actual volume
+%?bbox	0 0 159 79
+/gpGeneral003 {
+	/LD_Volume 0 def	%?brief volume %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	(buzzer_get_volume) getsysparam 
+	/LD_Volume exch store 
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	11 68 translate 
+	-90 rotate 
+	1 1 scale 
+	LD_Volume 25 100 55 135 5 false false true 1 
+	baBar007 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpCamera001
+%?fn	gpCamera001
+%?brief	switch camera off
+%?bbox	0 0 79 79
+/gpCamera001 {
+	/isCameraName exch def	%?brief name of camera %?use INP %?type STRI %?dflt cam0
+
+%?manual_beg
+	
+	(camera_select) isCameraName setsysparam 
+	(camera_stop) () setsysparam 
+	(camera_show) 0 setsysparam 
+%?manual_end
+} def
+%?partend
+
+%?partdef gpCamera002
+%?fn	gpCamera002
+%?brief	show camera in quarter VGA
+%?bbox	0 0 319 239
+/gpCamera002 {
+	/isShowText exch def	%?brief camera discription text shown %?use INP %?type STRI %?dflt  
+	/ixFlip exch def	%?brief camera flipped (vertical) %?use INP %?type BOOL %?dflt false
+	/ixMirror exch def	%?brief camera mirrored (horizontal) %?use INP %?type BOOL %?dflt false
+	/isCamSymName exch def	%?brief name of the camera symbol %?use INP %?type STRI %?dflt gsGeneral034
+	/ixUseInternalTuple exch def	%?brief use internal tuple %?use INP %?type BOOL %?dflt    false
+	/idCameraQual exch def	%?brief quality %?use INP %?type DINT %?dflt 0
+	/isCameraName exch def	%?brief name of camera %?use INP %?type STRI %?dflt cam0
+	/qrBoardTemp 0 def	%?brief camera board temperature %?use OUT %?type REAL %?dflt    0.00
+
+%?manual_beg
+	/ldCameraSizeX 320 def	%?brief size of camera image %?use LOC %?type DINT %?dflt 320
+	/ldCameraSizeY 240 def	%?brief size of camera image %?use LOC %?type DINT %?dflt 240
+	/lsCameraSize ()  def	%?brief size of camera image %?use LOC %?type STRI %?dflt 
+	/ldCameraPositionX 80 def	%?brief under left corner of camera image  %?use LOC %?type DINT %?dflt 80
+	/ldCameraPositionY 80 def	%?brief under left corner of camera image  %?use LOC %?type DINT %?dflt 80
+	/lsCameraPosition () def	%?brief under left corner of camera image  %?use LOC %?type STRI %?dflt
+	/LS_Help () def 	%?brief helper string  %?use LOC %?type STRI %?dflt
+
+	0 0
+	matrix currentmatrix
+	transform
+	/ldCameraPositionY exch store
+	/ldCameraPositionX exch store
+	
+	0 0 ldCameraSizeX 1 sub ldCameraSizeY 1 sub rectstroke
+	matrix currentmatrix
+	120 100 translate
+	isCamSymName cvx exec
+	% Kameraname
+	40 -15 moveto
+	FSbigFatFont selectFont
+	isShowText strw 2 div neg strh 2 div neg rmoveto
+	isShowText show_utf8
+	setmatrix
+	
+	ldCameraPositionX LS_Help cvs
+	( ) LS_Help cvs strcat
+	ldCameraPositionY LS_Help cvs strcat
+	/lsCameraPosition exch store
+	
+	ldCameraSizeX LS_Help cvs
+	( ) LS_Help cvs strcat
+	ldCameraSizeY LS_Help cvs strcat
+	/lsCameraSize exch store
+	
+	(camera_select) isCameraName setsysparam 
+	(camera_size) lsCameraSize setsysparam 
+	(camera_pos) lsCameraPosition setsysparam 
+	(camera_quality) idCameraQual setsysparam 
+	ixUseInternalTuple true eq {
+		(camera_internal) 1 setsysparam 
+	} {
+		ixMirror { (camera_mirror) 1 setsysparam }{ (camera_mirror) 0 setsysparam } ifelse
+		ixFlip { (camera_flip) 1 setsysparam }{ (camera_flip) 0 setsysparam } ifelse
+		(camera_tuple_contrast) getsysparam
+		(camera_contrast) exch setsysparam 
+	} ifelse
+	(camera_start) () setsysparam 
+	(camera_show) 1 setsysparam 
+	(camera_board_temp) getsysparam
+	/qrBoardTemp exch store
+%?manual_end
+
+	qrBoardTemp
+} def
+%?partend
+
+%?partdef gpCamera003
+%?fn	gpCamera003
+%?brief	show camera in VGA
+%?bbox	0 0 639 479
+/gpCamera003 {
+	/isShowText exch def	%?brief camera discription text shown %?use INP %?type STRI %?dflt  
+	/ixFlip exch def	%?brief camera flipped (vertical) %?use INP %?type BOOL %?dflt false
+	/ixMirror exch def	%?brief camera mirrored (horizontal) %?use INP %?type BOOL %?dflt false
+	/isCamSymName exch def	%?brief name of the camera symbol	%?use INP %?type STRI %?dflt gsGeneral034
+	/ixUseInternalTuple exch def	%?brief use internal tuple %?use INP %?type BOOL %?dflt    false
+	/idCameraQual exch def	%?brief quality %?use INP %?type DINT %?dflt  0
+	/isCameraName exch def	%?brief name of camera %?use INP %?type STRI %?dflt cam0
+	/qrBoardTemp 0 def	%?brief camera board temperature %?use OUT %?type REAL %?dflt    0.00
+
+%?manual_beg
+	/ldCameraSizeX 640 def	%?brief size of camera image %?use LOC %?type DINT %?dflt 320
+	/ldCameraSizeY 480 def	%?brief size of camera image %?use LOC %?type DINT %?dflt 240
+	/lsCameraSize ()  def	%?brief size of camera image %?use LOC %?type STRI %?dflt 
+	/ldCameraPositionX 80 def	%?brief under left corner of camera image  %?use LOC %?type DINT %?dflt 80
+	/ldCameraPositionY 80 def	%?brief under left corner of camera image  %?use LOC %?type DINT %?dflt 80
+	/lsCameraPosition () def	%?brief under left corner of camera image  %?use LOC %?type STRI %?dflt
+	/LS_Help () def 	%?brief helper string  %?use LOC %?type STRI %?dflt
+	
+	0 0
+	matrix currentmatrix 
+	transform
+	/ldCameraPositionY exch store
+	/ldCameraPositionX exch store
+	
+	0 0 ldCameraSizeX 1 sub ldCameraSizeY 1 sub rectstroke
+	matrix currentmatrix
+	240 200 translate
+	2 2 scale
+	isCamSymName cvx exec
+	% Kameraname
+	40 -10 moveto
+	FSbigFatFont selectFont
+	isShowText strw 2 div neg strh 2 div neg rmoveto
+	isShowText show_utf8
+	setmatrix
+
+	ldCameraPositionX LS_Help cvs
+	( ) LS_Help cvs strcat
+	ldCameraPositionY LS_Help cvs strcat
+	/lsCameraPosition exch store
+	
+	ldCameraSizeX LS_Help cvs
+	( ) LS_Help cvs strcat
+	ldCameraSizeY LS_Help cvs strcat
+	/lsCameraSize exch store
+	
+	(camera_select) isCameraName setsysparam 
+	(camera_size) lsCameraSize setsysparam 
+	(camera_pos) lsCameraPosition setsysparam 
+	(camera_quality) idCameraQual setsysparam 
+	ixUseInternalTuple true eq {
+		(camera_internal) 1 setsysparam 
+	} {
+		ixMirror { (camera_mirror) 1 setsysparam }{ (camera_mirror) 0 setsysparam } ifelse
+		ixFlip { (camera_flip) 1 setsysparam }{ (camera_flip) 0 setsysparam } ifelse
+		(camera_tuple_contrast) getsysparam
+		(camera_contrast) exch setsysparam 
+	} ifelse
+	(camera_start) () setsysparam 
+	(camera_show) 1 setsysparam 
+	(camera_board_temp) getsysparam
+	/qrBoardTemp exch store
+%?manual_end
+
+	qrBoardTemp
+} def
+%?partend
+
+%?partdef gpCamera004
+%?fn	gpCamera004
+%?brief	Button to increase camera contrast
+%?bbox	0 0 79 79
+/gpCamera004 {
+	/idSymbolColor exch def	%?brief symbol color %?use INP %?type DINT %?dflt 0
+	/ixChangeContrast exch def	%?brief change contrast on external order %?use INP %?type BOOL %?dflt false
+	/isCameraName exch def	%?brief name of camera %?use INP %?type STRI %?dflt cam0
+	/qdContrast 0 def	%?brief camera contrast %?use OUT %?type DINT %?dflt 0
+%?manual_beg
+	(camera_select) isCameraName setsysparam 
+	(camera_tuple_contrast) getsysparam
+	/qdContrast exch store 
+	qdContrast 100 ge {
+		/idSymbolColor 5 store		% grau
+	} if
+%?manual_end
+	qdContrast 100 lt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			/ixChangeContrast true store
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-1 -1 translate 
+	0 rotate 
+	1 1 scale  
+	idSymbolColor (gsGeneral028) 
+	baSwitchSymbolColor002 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	ixChangeContrast true eq {
+		/qdContrast qdContrast 5 add store 
+		(camera_tuple_contrast) 
+		qdContrast setsysparam 
+	} if 
+%?manual_end
+
+	qdContrast
+} def
+%?partend
+
+%?partdef gpCamera005
+%?fn	gpCamera005
+%?brief	Button to decrease camera contrast
+%?bbox	0 0 79 79
+/gpCamera005 {
+	/idSymbolColor exch def	%?brief symbol color %?use INP %?type DINT %?dflt 0
+	/ixChangeContrast exch def	%?brief change contrast on external order %?use INP %?type BOOL %?dflt false
+	/isCameraName exch def	%?brief name of camera %?use INP %?type STRI %?dflt cam0
+	/qdContrast 0 def	%?brief camera contrast %?use OUT %?type DINT %?dflt 0
+%?manual_beg
+	(camera_select) isCameraName setsysparam 
+	(camera_tuple_contrast) getsysparam
+	/qdContrast exch store 
+	qdContrast 0 le {
+		/idSymbolColor 5 store		% grau
+	} if
+%?manual_end
+	qdContrast 0 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			/ixChangeContrast true store
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-1 -1 translate 
+	0 rotate 
+	1 1 scale  
+	idSymbolColor (gsGeneral029) 
+	baSwitchSymbolColor002 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	ixChangeContrast true eq {
+		/qdContrast qdContrast 5 sub store 
+		(camera_tuple_contrast) 
+		qdContrast setsysparam 
+	} if 
+%?manual_end
+
+	qdContrast
+} def
+%?partend
+
+%?partdef gpCamera006
+%?fn	gpCamera006
+%?brief	show actual camera contrast
+%?bbox	0 0 199 79
+/gpCamera006 {
+	/isCameraName exch def	%?brief name of camera %?use INP %?type STRI %?dflt cam0
+	/LD_Contrast 0 def	%?brief camera contrast %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	(camera_select) isCameraName setsysparam 
+	(camera_tuple_contrast) getsysparam 
+	/LD_Contrast exch store 
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	2 68 translate 
+	-90 rotate 
+	1 1 scale 
+	LD_Contrast 0 100 55 195 
+	20 false false true 1 
+	baBar007 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpCamera007
+%?fn	gpCamera007
+%?brief	read internal camera activation
+%?bbox	0 0 199 79
+/gpCamera007 {
+	/isCameraName exch def	%?brief name of camera %?use INP %?type STRI %?dflt cam0
+	/qdActivation 0 def	%?brief camera activation %?use OUT %?type DINT %?dflt 0
+%?manual_beg
+	(camera_select) isCameraName setsysparam 
+	(camera_tuple_on) getsysparam
+	/qdActivation exch store 
+%?manual_end 
+
+	qdActivation
+} def
+%?partend

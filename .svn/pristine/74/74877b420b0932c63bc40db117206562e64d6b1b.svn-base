@@ -1,0 +1,27 @@
+!version	00046
+
+#PME1 Inputmodule
+io_outer_2_004.hex	crc1.0xDA7B	name.IO_OUTER	version.2.004	line.*	mod_nr.*	mod_typ.=IA16 loader.10347913
+io_app_pme1_input_2_009.hex	crc1.0xA4DD	name.IOAPPLIC	version.2.009	line.*	mod_nr.*	mod_typ.=IA16 loader.10347913
+
+#PME1 Outputmodule
+io_outer.hex	crc1.0xFB28	name.IO_OUTER	version.2.009	line.*	mod_nr.*	mod_typ.=OA16 loader.10347569
+io_outp.hex	crc1.0xC0B1	name.IOAPPLIC	version.2.030	line.*	mod_nr.*	mod_typ.=OA16 loader.10347569
+io_outer.hex	crc1.0xFB28	name.IO_OUTER	version.2.009	line.*	mod_nr.*	mod_typ.=OA16 loader.10684694
+io_outp.hex	crc1.0xC0B1	name.IOAPPLIC	version.2.030	line.*	mod_nr.*	mod_typ.=OA16 loader.10684694
+
+#Keyboard TB09 
+io_tast.hex	crc1.0x27D2	name.TAAPPLIC	version.2.016	line.* mod_nr.*	mod_typ.=TB09 loader.10426093
+io_tast.hex	crc1.0x27D2	name.TAAPPLIC	version.2.016	line.* mod_nr.*	mod_typ.=TB09 loader.10487270
+io_tast.hex	crc1.0x27D2	name.TAAPPLIC	version.2.016	line.* mod_nr.*	mod_typ.=TB09 loader.10487271
+io_tast.hex	crc1.0x27D2	name.TAAPPLIC	version.2.016	line.* mod_nr.*	mod_typ.=TB09 loader.10487272
+io_tast.hex	crc1.0x27D2	name.TAAPPLIC	version.2.016	line.* mod_nr.*	mod_typ.=TB09 loader.10499813
+io_tast.hex	crc1.0x27D2	name.TAAPPLIC	version.2.016	line.* mod_nr.*	mod_typ.=TB09 loader.10685740
+io_tast.hex	crc1.0x27D2	name.TAAPPLIC	version.2.016	line.* mod_nr.*	mod_typ.=TA21 loader.10428715
+io_tast.hex	crc1.0x27D2	name.TAAPPLIC	version.2.016	line.* mod_nr.*	mod_typ.=TA21 loader.10685744
+
+#Software CC01
+CC01HVAC.BIN	name.CC01HVAC line.* mod_nr.106	mod_typ.=CC01  crc.0x3DEB loader.8928882
+CC01HVAC.BIN	name.CC01HVAC line.* mod_nr.106	mod_typ.=CC01  crc.0x3DEB loader.10664486
+
+upd_io.cnf	crc.0xd6a8be56

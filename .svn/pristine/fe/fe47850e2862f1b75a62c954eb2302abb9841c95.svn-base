@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="item0000000000">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="50"/>
+					<Prp name="click point y" type="I" value="85"/>
+					<Prp name="datetime" type="D" value="42046.7610532407"/>
+					<Prp name="image file name" type="S" value="tcvi2291511114480.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="134"/>
+					<Prp name="object left" type="I" value="23"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.CGlobalActionsRollout.CGlobalActionsPageScroller.CGlobalActionsPanel.btnactCreatableContexts"/>
+					<Prp name="object right" type="I" value="81"/>
+					<Prp name="object top" type="I" value="76"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi2291511114480.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="0"/>
+			</Node>
+			<Node name="item0000000001">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="110"/>
+					<Prp name="click point y" type="I" value="156"/>
+					<Prp name="datetime" type="D" value="42046.7610763889"/>
+					<Prp name="image file name" type="S" value="tcvi2291751414481.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="371"/>
+					<Prp name="object left" type="I" value="18"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.AddressBookForm.pnlTreeData.gboAddresses.pnlAddress.tvwAddresses"/>
+					<Prp name="object right" type="I" value="212"/>
+					<Prp name="object top" type="I" value="149"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi2291751414481.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="1"/>
+			</Node>
+			<Node name="item0000000002">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="628"/>
+					<Prp name="click point y" type="I" value="402"/>
+					<Prp name="datetime" type="D" value="42046.761087963"/>
+					<Prp name="image file name" type="S" value="tcvi2291868414482.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="3"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="411"/>
+					<Prp name="object left" type="I" value="539"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.AddressBookForm.pnlButtons.btnOk"/>
+					<Prp name="object right" type="I" value="679"/>
+					<Prp name="object top" type="I" value="386"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi2291868414482.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="2"/>
+			</Node>
+			<Node name="item0000000003">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="datetime" type="D" value="42046.7614236111"/>
+					<Prp name="image file name" type="S" value="tcvi2294735714484.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="5"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="442"/>
+					<Prp name="object left" type="I" value="21"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CContextActionsRollout.CContextActionsPageScroller.CContextActionsPanel.TSculiToolbarButton"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="object top" type="I" value="381"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi2294735714484.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="3"/>
+			</Node>
+			<Node name="item0000000004">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="310"/>
+					<Prp name="click point y" type="I" value="131"/>
+					<Prp name="datetime" type="D" value="42046.7614814815"/>
+					<Prp name="image file name" type="S" value="tcvi2295223914485.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="145"/>
+					<Prp name="object left" type="I" value="301"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.btnFilterButton"/>
+					<Prp name="object right" type="I" value="335"/>
+					<Prp name="object top" type="I" value="123"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi2295223914485.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="4"/>
+			</Node>
+			<Node name="item0000000005">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="390"/>
+					<Prp name="click point y" type="I" value="157"/>
+					<Prp name="datetime" type="D" value="42046.7614930556"/>
+					<Prp name="image file name" type="S" value="tcvi2295350314486.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="7"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="170"/>
+					<Prp name="object left" type="I" value="340"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.ColumnsFilterPanel.CBAddress.Edit"/>
+					<Prp name="object right" type="I" value="404"/>
+					<Prp name="object top" type="I" value="155"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi2295350314486.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="5"/>
+			</Node>
+			<Node name="item0000000006">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="datetime" type="D" value="42046.7615162037"/>
+					<Prp name="image file name" type="S" value="tcvi2295531314487.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="8"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="170"/>
+					<Prp name="object left" type="I" value="340"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.ColumnsFilterPanel.CBAddress.Edit"/>
+					<Prp name="object right" type="I" value="404"/>
+					<Prp name="object top" type="I" value="155"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi2295531314487.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="6"/>
+			</Node>
+			<Node name="item0000000007">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="658"/>
+					<Prp name="click point y" type="I" value="204"/>
+					<Prp name="datetime" type="D" value="42046.7621875"/>
+					<Prp name="image file name" type="S" value="tcvi23013345144811.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="9"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="910"/>
+					<Prp name="object left" type="I" value="299"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.vstVariables"/>
+					<Prp name="object right" type="I" value="1670"/>
+					<Prp name="object top" type="I" value="177"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23013345144811.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="7"/>
+			</Node>
+			<Node name="item0000000008">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="658"/>
+					<Prp name="click point y" type="I" value="204"/>
+					<Prp name="datetime" type="D" value="42046.7621990741"/>
+					<Prp name="image file name" type="S" value="tcvi23014125144812.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="10"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="910"/>
+					<Prp name="object left" type="I" value="299"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.vstVariables"/>
+					<Prp name="object right" type="I" value="1670"/>
+					<Prp name="object top" type="I" value="177"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23014125144812.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="8"/>
+			</Node>
+			<Node name="item0000000009">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="658"/>
+					<Prp name="click point y" type="I" value="204"/>
+					<Prp name="datetime" type="D" value="42046.7621990741"/>
+					<Prp name="image file name" type="S" value="tcvi23014843144813.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="11"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="910"/>
+					<Prp name="object left" type="I" value="299"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.vstVariables"/>
+					<Prp name="object right" type="I" value="1670"/>
+					<Prp name="object top" type="I" value="177"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23014843144813.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="9"/>
+			</Node>
+			<Node name="item0000000010">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="658"/>
+					<Prp name="click point y" type="I" value="204"/>
+					<Prp name="datetime" type="D" value="42046.7622222222"/>
+					<Prp name="image file name" type="S" value="tcvi23016356144814.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="12"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="910"/>
+					<Prp name="object left" type="I" value="299"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.vstVariables"/>
+					<Prp name="object right" type="I" value="1670"/>
+					<Prp name="object top" type="I" value="177"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23016356144814.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="10"/>
+			</Node>
+			<Node name="item0000000011">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="658"/>
+					<Prp name="click point y" type="I" value="204"/>
+					<Prp name="datetime" type="D" value="42046.7622222222"/>
+					<Prp name="image file name" type="S" value="tcvi23016839144815.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="13"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="910"/>
+					<Prp name="object left" type="I" value="299"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.vstVariables"/>
+					<Prp name="object right" type="I" value="1670"/>
+					<Prp name="object top" type="I" value="177"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23016839144815.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="11"/>
+			</Node>
+			<Node name="item0000000012">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="datetime" type="D" value="42046.7622685185"/>
+					<Prp name="image file name" type="S" value="tcvi23020599144816.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="14"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="214"/>
+					<Prp name="object left" type="I" value="599"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.vstVariables.TVariableValueEdit"/>
+					<Prp name="object right" type="I" value="678"/>
+					<Prp name="object top" type="I" value="196"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23020599144816.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="12"/>
+			</Node>
+			<Node name="item0000000013">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="374"/>
+					<Prp name="click point y" type="I" value="158"/>
+					<Prp name="datetime" type="D" value="42046.7623842593"/>
+					<Prp name="image file name" type="S" value="tcvi23030209144821.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="15"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="170"/>
+					<Prp name="object left" type="I" value="340"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.ColumnsFilterPanel.CBAddress.Edit"/>
+					<Prp name="object right" type="I" value="404"/>
+					<Prp name="object top" type="I" value="155"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23030209144821.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="13"/>
+			</Node>
+			<Node name="item0000000014">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="datetime" type="D" value="42046.7623958333"/>
+					<Prp name="image file name" type="S" value="tcvi23031472144822.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="16"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="170"/>
+					<Prp name="object left" type="I" value="340"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.ColumnsFilterPanel.CBAddress.Edit"/>
+					<Prp name="object right" type="I" value="404"/>
+					<Prp name="object top" type="I" value="155"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23031472144822.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="14"/>
+			</Node>
+			<Node name="item0000000015">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="datetime" type="D" value="42046.7627314815"/>
+					<Prp name="image file name" type="S" value="tcvi23060052144835.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="17"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="1018"/>
+					<Prp name="object left" type="I" value="-8"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm"/>
+					<Prp name="object right" type="I" value="1688"/>
+					<Prp name="object top" type="I" value="-8"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23060052144835.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="15"/>
+			</Node>
+			<Node name="item0000000016">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="86"/>
+					<Prp name="click point y" type="I" value="28"/>
+					<Prp name="datetime" type="D" value="42046.7628009259"/>
+					<Prp name="image file name" type="S" value="tcvi2306632333404.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="20"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="738"/>
+					<Prp name="object left" type="I" value="9"/>
+					<Prp name="object name" type="S" value="Aliases.explorer.wndStartmen_.DesktopProgramsMFU.SysListView32"/>
+					<Prp name="object right" type="I" value="259"/>
+					<Prp name="object top" type="I" value="11"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi2306632333404.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="16"/>
+			</Node>
+			<Node name="item0000000017">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="51"/>
+					<Prp name="click point y" type="I" value="113"/>
+					<Prp name="datetime" type="D" value="42046.7628587963"/>
+					<Prp name="image file name" type="S" value="tcvi23071112110960.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="134"/>
+					<Prp name="object left" type="I" value="23"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.CGlobalActionsRollout.CGlobalActionsPageScroller.CGlobalActionsPanel.btnactCreatableContexts"/>
+					<Prp name="object right" type="I" value="81"/>
+					<Prp name="object top" type="I" value="76"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23071112110960.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="17"/>
+			</Node>
+			<Node name="item0000000018">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="606"/>
+					<Prp name="click point y" type="I" value="393"/>
+					<Prp name="datetime" type="D" value="42046.7628703704"/>
+					<Prp name="image file name" type="S" value="tcvi23073015110961.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="22"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="411"/>
+					<Prp name="object left" type="I" value="539"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.AddressBookForm.pnlButtons.btnOk"/>
+					<Prp name="object right" type="I" value="679"/>
+					<Prp name="object top" type="I" value="386"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23073015110961.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="18"/>
+			</Node>
+			<Node name="item0000000019">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="44"/>
+					<Prp name="click point y" type="I" value="414"/>
+					<Prp name="datetime" type="D" value="42046.7629976852"/>
+					<Prp name="image file name" type="S" value="tcvi23083343110962.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="23"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="442"/>
+					<Prp name="object left" type="I" value="21"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CContextActionsRollout.CContextActionsPageScroller.CContextActionsPanel.TSculiToolbarButton"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="object top" type="I" value="381"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23083343110962.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="19"/>
+			</Node>
+			<Node name="item0000000020">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="310"/>
+					<Prp name="click point y" type="I" value="135"/>
+					<Prp name="datetime" type="D" value="42046.7632638889"/>
+					<Prp name="image file name" type="S" value="tcvi23106696110963.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="24"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="145"/>
+					<Prp name="object left" type="I" value="301"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.btnFilterButton"/>
+					<Prp name="object right" type="I" value="335"/>
+					<Prp name="object top" type="I" value="123"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23106696110963.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="20"/>
+			</Node>
+			<Node name="item0000000021">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="355"/>
+					<Prp name="click point y" type="I" value="155"/>
+					<Prp name="datetime" type="D" value="42046.763275463"/>
+					<Prp name="image file name" type="S" value="tcvi23107835110964.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="25"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="170"/>
+					<Prp name="object left" type="I" value="340"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.ColumnsFilterPanel.CBAddress.Edit"/>
+					<Prp name="object right" type="I" value="404"/>
+					<Prp name="object top" type="I" value="155"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23107835110964.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="21"/>
+			</Node>
+			<Node name="item0000000022">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="datetime" type="D" value="42046.7632986111"/>
+					<Prp name="image file name" type="S" value="tcvi23109145110965.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="line #" type="I" value="26"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="170"/>
+					<Prp name="object left" type="I" value="340"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.SculiForm.MDIClient.PluginsContextForm2.CMainPanel.Panel3.Panel1.CPluginTabsPanel.CPluginTabsList.TNativeVisualPluginPage.VarEditorForm.MasterPanel.pnVarPanels.Panel0.MainVarPanel.ColumnsFilterPanel.CBAddress.Edit"/>
+					<Prp name="object right" type="I" value="404"/>
+					<Prp name="object top" type="I" value="155"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi23109145110965.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="22"/>
+			</Node>
+			<Prp name="key" type="S" value="{7E705667-E0C0-4F48-9A02-DE9FD2D002A3}"/>
+		</Node>
+		<Prp name="signature" type="S" value="{42D2222C-ACA2-405F-8E67-05D5C42EB839}"/>
+		<Prp name="version" type="I" value="1"/>
+	</Node>
+</Nodes>

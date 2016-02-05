@@ -1,0 +1,27 @@
+!version	00004
+dansk.lps	crc1.0x504A	name.lllng	version.00004	client.* language.=dansk server.BILD
+deutsch.lps	crc1.0x2A61	name.lllng	version.00004	client.* language.=deutsch server.BILD
+english.lps	crc1.0x0D5D	name.lllng	version.00004	client.* language.=english server.BILD
+espanol.lps	crc1.0x085C	name.lllng	version.00004	client.* language.=espanol server.BILD
+francais.lps	crc1.0xAD7C	name.lllng	version.00004	client.* language.=francais server.BILD
+greek.lps	crc1.0x13EF	name.lllng	version.00004	client.* language.=greek server.BILD
+italiano.lps	crc1.0xE2FA	name.lllng	version.00004	client.* language.=italiano server.BILD
+nederlan.lps	crc1.0x8B29	name.lllng	version.00004	client.* language.=nederlan server.BILD
+norsk.lps	crc1.0x3403	name.lllng	version.00004	client.* language.=norsk server.BILD
+polski.lps	crc1.0x88D7	name.lllng	version.00004	client.* language.=polski server.BILD
+portugue.lps	crc1.0xAA56	name.lllng	version.00004	client.* language.=portugue server.BILD
+russian.lps	crc1.0xDCF7	name.lllng	version.00004	client.* language.=russian server.BILD
+suomi.lps	crc1.0xE900	name.lllng	version.00004	client.* language.=suomi server.BILD
+svenska.lps	crc1.0x3EFB	name.lllng	version.00004	client.* language.=svenska server.BILD
+turkish.lps	crc1.0x9ECF	name.lllng	version.00004	client.* language.=turkish server.BILD
+lietuviu.lps	crc1.0x1019	name.lllng	version.00004	client.* language.=lietuviu server.BILD
+magyar.lps	crc1.0x12FC	name.lllng	version.00004	client.* language.=magyar server.BILD
+cesky.lps	crc1.0xB4C5	name.lllng	version.00004	client.* language.=cesky server.BILD
+romana.lps	crc1.0x8421	name.lllng	version.00004	client.* language.=romana server.BILD
+slovensc.lps	crc1.0x7104	name.lllng	version.00004	client.* language.=slovensc server.BILD
+slovenci.lps	crc1.0xBD4A	name.lllng	version.00004	client.* language.=slovenci server.BILD
+eesti.lps	crc1.0xBD8A	name.lllng	version.00004	client.* language.=eesti server.BILD
+latviesu.lps	crc1.0xD97C	name.lllng	version.00004	client.* language.=latviesu server.BILD
+bulgaria.lps	crc1.0xDD21	name.lllng	version.00004	client.* language.=bulgaria server.BILD
+
+lllng.cnf	crc.0x2ee10176

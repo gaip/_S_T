@@ -1,0 +1,8 @@
+x-direction left joystick 1
+start time	2013-10-15T08:31:18
+stop time	2013-10-15T07:43:20
+category			0	1	2	3	4	5	6	7	8	9	10
+x-direction left joystick 1 [%]	%MD1.214	MDpdeTimePerTrig	<-80	[-80..-60[	[-60..-40[	[-40..-20[	[-20..-0.2[	[-0.2..0.2[	[0.2..20[	[20..40[	[40..60[	[60..80[	>=80
+
+x-direction left joystick 1 [%]	sum of entries
+5	1

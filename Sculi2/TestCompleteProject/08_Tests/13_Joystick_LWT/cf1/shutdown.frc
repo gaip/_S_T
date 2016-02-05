@@ -1,0 +1,3 @@
+!version	00003
+
+msgstack /t 0x93000001 0x93001000 0x93000002 $MDMachineHour$

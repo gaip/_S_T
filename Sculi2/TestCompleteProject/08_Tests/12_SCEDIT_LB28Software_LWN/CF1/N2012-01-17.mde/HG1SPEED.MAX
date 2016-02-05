@@ -1,0 +1,6 @@
+hg1 rope speed in [m/min]
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:30
+date-time	hg1 rope speed in [m/min]	present engine speed in [rpm]	analog pump signal hg1 in [%]	hg1 system pressure in [bar]
+	%MD1.47	%MD1.4	%MD1.12	%MD1.10
+	MDkeybx25Poti2	MDpresenEngSpeed	MDhg2JoySignal	MDhg1ExtAnalSign

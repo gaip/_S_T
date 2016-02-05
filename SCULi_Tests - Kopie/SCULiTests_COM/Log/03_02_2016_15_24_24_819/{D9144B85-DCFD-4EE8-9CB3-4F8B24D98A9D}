@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="42403.6425497338"/>
+			</Node>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+			<Prp name="length" type="I" value="1"/>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="isinteger" type="B" value="0"/>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="color" type="I" value="0"/>
+			<Prp name="columnindex" type="I" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="description" type="S" value=""/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="date" type="D" value="42403.6422158681"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="message" type="S" value="The object with 'ObjectIdentifier' equal to 'tvFilterVisible' is found"/>
+			<Prp name="line no" type="I" value="120"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 0">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Panel_ContextActions.btn_actM4_MessageAnalyzer"/>
+					<Prp name="object top" type="I" value="479"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="21"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="click point y" type="I" value="509"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="datetime" type="D" value="42403.6003050347"/>
+					<Prp name="object bottom" type="I" value="540"/>
+					<Prp name="click point x" type="I" value="51"/>
+				</Node>
+			</Node>
+			<Prp name="date" type="D" value="42403.641972963"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (30, 30) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.SCULi.Form_Main.Panel_ContextActions.btn_actM4_MessageAnalyzer&#xA;(Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CContextActionsRollout&quot;).VCLObject(&quot;CContextActionsPageScroller&quot;).VCLObject(&quot;CContextActionsPanel&quot;).VCLObject(&quot;btn_actM4_MessageAnalyzer&quot;))"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{FDC00FD5-8764-49BF-9D72-65A2BA3AC304}"/>
+			<Prp name="unit 1" type="S" value="{255CC541-96AA-41AB-B147-18889A6415C1}"/>
+		</Node>
+		<Node name="message 3">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Panel_ContextActions.btn_actM4_MessageAnalyzer"/>
+					<Prp name="object top" type="I" value="479"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="21"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="click point y" type="I" value="129"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="datetime" type="D" value="42403.6005680671"/>
+					<Prp name="object bottom" type="I" value="540"/>
+					<Prp name="click point x" type="I" value="109"/>
+				</Node>
+			</Node>
+			<Prp name="date" type="D" value="42403.6422360417"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (13, 13) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CPageCtrlHeaderPanel&quot;).VCLObject(&quot;pnlFilterActions&quot;).VCLObject(&quot;btnShowFilter&quot;)"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="date" type="D" value="42403.6425497338"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="stack end" type="I" value="2"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="message" type="S" value="The test execution was interrupted."/>
+			<Prp name="line no" type="I" value="17"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="date" type="D" value="42403.6423956713"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="message" type="S" value="The object with 'Text' equal to 'New FilterExists' is found"/>
+			<Prp name="line no" type="I" value="120"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="date" type="D" value="42403.6422158912"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="message" type="S" value="The object has 'false' text"/>
+			<Prp name="line no" type="I" value="124"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 7">
+			<Prp name="date" type="D" value="42403.6425461227"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;a href=&quot;aqa-help://2212&quot;&gt;Learn more about the problem and possible solutions&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;&lt;br /&gt;&lt;br /&gt;Tested object:&lt;br /&gt;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).UIAObject(&quot;New_Filter&quot;)"/>
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="message" type="S" value="The 'New Filter' window is invisible and thus cannot be activated."/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 4">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.SCULi.Form_Main.Panel_ContextActions.btn_actM4_MessageAnalyzer"/>
+					<Prp name="object top" type="I" value="479"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="21"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="click point y" type="I" value="262"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="datetime" type="D" value="42403.6006484838"/>
+					<Prp name="object bottom" type="I" value="540"/>
+					<Prp name="click point x" type="I" value="166"/>
+				</Node>
+			</Node>
+			<Prp name="date" type="D" value="42403.6423164236"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (30, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).UIAObject(&quot;Workspace&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).UIAObject(&quot;Message_Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;pnlMainFilter&quot;).VCLObject(&quot;frmFilterFrame&quot;).VCLObject(&quot;tvFilter&quot;).TextObject(&quot;Workgroup&quot;)"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="stacktext" type="S" value="clickOnChildObjects"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="date" type="D" value="42403.6423956944"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="message" type="S" value="The object has 'true' text"/>
+			<Prp name="line no" type="I" value="124"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="item 2">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="17"/>
+			<Prp name="stacktext" type="S" value="_2_4_1_MCC_AnalyzerFilterNameRename()"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="17"/>
+			<Prp name="stacktext" type="S" value="_2_4_1_MCC_AnalyzerFilterNameRename()"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

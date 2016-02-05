@@ -1,0 +1,19 @@
+!version 00164
+#Config of the optional PME-Inputmodul
+IOCONFIG_IA16_2_45_00031.bin	line.2	name.ioconfig	mod_nr.45	mod_typ.IA16	crc.0xC213
+IOCONFIG_IF02_2_53_00032.bin	line.2	name.ioconfig	mod_nr.53	mod_typ.IF02	crc.0x2042
+
+#Config of the Analog-Outputmodul on the main PME-Outputmodul
+IOCONFIG_IF02_3_49_00054.bin	line.3	name.ioconfig	mod_nr.49	mod_typ.IF02	crc.0xA34A
+IOCONFIG_OA16_3_21_00034.bin	line.3	name.ioconfig	mod_nr.21	mod_typ.OA16	crc.0xDC23
+
+#Config of the TB09 keyboard climate control
+IOCONFIG_TB09_2_93_00093.bin	line.2	name.ioconfig	mod_nr.93	mod_typ.TB09	crc.0xFA6E
+
+#WORKAROUND until TB09 software is included in system class
+TAAPPLIC.HEX	name.TAAPPLIC	line.2	mod_nr.93	mod_typ.TB09	crc.0x6DBF
+
+#WORKAROUND until CC01 software is included in system class
+io_app_cc01_9_98.bin	name.CC01HVAC	line.2	mod_nr.106	mod_typ.CC01	crc.0x5AA2
+
+io_compl.cnf	crc.0xd87c38e7

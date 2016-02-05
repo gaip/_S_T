@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{73900C1E-604F-4CF3-ABEE-30BF7A6D6A3B}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{16DC8186-4DEC-41AF-80A0-F8C655838299}">
+				<Data Description="Runs a test from the project." TestName="_2_1StartSculi" FullName="KeywordTests - _2_1StartSculi" Path="KeywordTests|_2_1StartSculi" />
+			</Operation>
+			<Operation Type="{16DC8186-4DEC-41AF-80A0-F8C655838299}">
+				<Data Description="Runs a test from the project." TestName="_2_3AnalyzerConfirmMessage" FullName="KeywordTests - _2_3AnalyzerConfirmMessage" Path="KeywordTests|_2_3AnalyzerConfirmMessage" />
+			</Operation>
+			<Operation Type="{16DC8186-4DEC-41AF-80A0-F8C655838299}">
+				<Data Description="Runs a test from the project." TestName="_2_4_0CreateNewFilter" FullName="KeywordTests - _2_4_0CreateNewFilter" Path="KeywordTests|_2_4_0CreateNewFilter" />
+			</Operation>
+			<Operation Type="{16DC8186-4DEC-41AF-80A0-F8C655838299}">
+				<Data Description="Runs a test from the project." TestName="_2_4_1AnalyzerFilterNameRename" FullName="KeywordTests - _2_4_1AnalyzerFilterNameRename" Path="KeywordTests|_2_4_1AnalyzerFilterNameRename" />
+			</Operation>
+			<Operation Type="{16DC8186-4DEC-41AF-80A0-F8C655838299}">
+				<Data Description="Runs a test from the project." TestName="_2_4_2SaveFilter" FullName="KeywordTests - _2_4_2SaveFilter" Path="KeywordTests|_2_4_2SaveFilter" />
+			</Operation>
+			<Operation Type="{16DC8186-4DEC-41AF-80A0-F8C655838299}">
+				<Data Description="Runs a test from the project." TestName="_2_4_3_0FilterWithGroupSubgroup" FullName="KeywordTests - _2_4_3_0FilterWithGroupSubgroup" Path="KeywordTests|_2_4_3_0FilterWithGroupSubgroup" />
+			</Operation>
+			<Operation Type="{16DC8186-4DEC-41AF-80A0-F8C655838299}">
+				<Data Description="Runs a test from the project." TestName="_2_4_3_1FilterWithExclusion" FullName="KeywordTests - _2_4_3_1FilterWithExclusion" Path="KeywordTests|_2_4_3_1FilterWithExclusion" />
+			</Operation>
+			<Operation Type="{16DC8186-4DEC-41AF-80A0-F8C655838299}">
+				<Data Description="Runs a test from the project." TestName="_2_6_0AnalyzerTestTopFilterHex" FullName="KeywordTests - _2_6_0AnalyzerTestTopFilterHex" Path="KeywordTests|_2_6_0AnalyzerTestTopFilterHex" />
+			</Operation>
+			<Operation Type="{16DC8186-4DEC-41AF-80A0-F8C655838299}">
+				<Data Description="Runs a test from the project." TestName="_2_5_1MessageAnalyzerFilterdCount" FullName="KeywordTests - _2_5_1MessageAnalyzerFilterdCount" Path="KeywordTests|_2_5_1MessageAnalyzerFilterdCount">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="Item" DefVarType="3" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+						<Parameter Name="FilterValue" DefVarType="3" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword test." TestName="Test1" />
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{3F681158-0932-403C-BDE1-D9AB31783D6A}" />
+	<Parameters Key="{F7A19AE6-8EA6-4C82-B846-94FFD24263C9}" />
+</Root>

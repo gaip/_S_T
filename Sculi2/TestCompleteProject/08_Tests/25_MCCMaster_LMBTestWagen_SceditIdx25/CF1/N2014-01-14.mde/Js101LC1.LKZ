@@ -1,0 +1,8 @@
+left joystick 1 cabin 1 
+start time	2014-01-14T12:16:08
+stop time	2014-01-14T12:30:04
+category			0	1	2	3	4	5	6	7	8	9	10
+x-direction left joystick 1 cabin 1 [%]	%MD1.533	%MD1.533	<-80	[-80..-60[	[-60..-40[	[-40..-20[	[-20..-0.2[	[-0.2..0.2[	[0.2..20[	[20..40[	[40..60[	[60..80[	>=80
+y-direction left joystick 1 cabin 1 [%]	%MD1.534	%MD1.534	<-80	[-80..-60[	[-60..-40[	[-40..-20[	[-20..-0.2[	[-0.2..0.2[	[0.2..20[	[20..40[	[40..60[	[60..80[	>=80
+
+x-direction left joystick 1 cabin 1 [%]	y-direction left joystick 1 cabin 1 [%]	sum of time [sek]

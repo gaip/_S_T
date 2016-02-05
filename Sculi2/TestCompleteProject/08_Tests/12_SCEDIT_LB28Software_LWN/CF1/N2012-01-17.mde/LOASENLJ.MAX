@@ -1,0 +1,6 @@
+load sensor of the luffing jib in [kN]
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:30
+date-time	load sensor of the luffing jib in [kN]	analog pump signal lg2 in [%]	angle of the luffing jib in [°]	load radius luffing jib in [m]	maximum lifting hight luffing jib (head hight) in [m]	load on the luffing jib in [to]	utilization in [%]	utilization backwards in [%] (derrick operation)	number of lml mode
+	%MD1.73	%MD1.22	%MD1.35	%MD1.40	%MD1.42	%MD1.33	%MD1.30	%MD1.31	%MD1.29
+	MDz2CursorSign	MDlmlAngleBoom	MDvibJoySignal	MDaccelLow	MDaccelHigh	MDauxValvSignal	MDfawExtAnalSign	MDfawValvSignal	MDfawJoySignal

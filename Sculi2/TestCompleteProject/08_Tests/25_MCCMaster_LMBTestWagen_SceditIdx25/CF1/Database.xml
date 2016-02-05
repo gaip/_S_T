@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Database.xsd" Version="00001" VersionCompatible="00001">
+  <Header>
+    <Version>00029</Version>
+  </Header>
+  <Table>
+    <TableID>10001</TableID>
+    <TableName>SalesTypeMapping</TableName>
+    <Writeable>false</Writeable>
+    <Column>
+      <ColumnName>CDmachinSpecType</ColumnName>
+      <DataType>
+        <float/>
+      </DataType>
+      <PriorityLevel>
+        <Write>0</Write>
+        <Read>4294967295</Read>
+      </PriorityLevel>
+      <Row>16.01</Row>
+      <Row>20.01</Row>
+      <Row>24.01</Row>
+      <Row>28.01</Row>
+      <Row>36.01</Row>
+      <Row>125.01</Row>
+      <Row>125.02</Row>
+      <Row>125.03</Row>
+      <Row>155.01</Row>
+      <Row>155.02</Row>
+      <Row>155.03</Row>
+      <Row>255.01</Row>
+      <Row>255.03</Row>
+      <Row>1100.01</Row>
+      <Row>1100.02</Row>
+      <Row>1100.03</Row>
+      <Row>1130.01</Row>
+      <Row>1130.02</Row>
+      <Row>1130.03</Row>
+      <Row>1140.01</Row>
+      <Row>1160.01</Row>
+      <Row>1160.02</Row>
+      <Row>1160.03</Row>
+      <Row>1200.01</Row>
+      <Row>1200.03</Row>
+      <Row>1250.01</Row>
+      <Row>1280.01</Row>
+      <Row>1280.02</Row>
+      <Row>1280.03</Row>
+      <Row>1300.01</Row>
+      <Row>1300.03</Row>
+      <Row>825.01</Row>
+      <Row>835.01</Row>
+      <Row>845.01</Row>
+      <Row>845.02</Row>
+      <Row>855.01</Row>
+      <Row>855.02</Row>
+      <Row>875.01</Row>
+      <Row>875.02</Row>
+      <Row>885.01</Row>
+      <Row>885.02</Row>
+      <Row>895.01</Row>
+      <Row>895.02</Row>
+      <Row>895.03</Row>
+      <Row>8045.01</Row>
+      <Row>8050.01</Row>
+      <Row>8065.01</Row>
+      <Row>8100.01</Row>
+      <Row>8120.01</Row>
+      <Row>8160.01</Row>
+      <Row>8200.01</Row>
+    </Column>
+    <Column>
+      <ColumnName>MachineClass</ColumnName>
+      <DataType>
+        <string/>
+      </DataType>
+      <PriorityLevel>
+        <Write>0</Write>
+        <Read>4294967295</Read>
+      </PriorityLevel>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>FoundationEquipment</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>CrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+      <Row>DutyCycleCrawlerCrane</Row>
+    </Column>
+    <Column>
+      <ColumnName>TypeSeries</ColumnName>
+      <DataType>
+        <string/>
+      </DataType>
+      <PriorityLevel>
+        <Write>0</Write>
+        <Read>4294967295</Read>
+      </PriorityLevel>
+      <Row>RotaryDrillingRig</Row>
+      <Row>RotaryDrillingRig</Row>
+      <Row>RotaryDrillingRig</Row>
+      <Row>RotaryDrillingRig</Row>
+      <Row>RotaryDrillingRig</Row>
+      <Row>PilingAndDrillingRig</Row>
+      <Row>PilingAndDrillingRig</Row>
+      <Row>PilingAndDrillingRig</Row>
+      <Row>PilingAndDrillingRig</Row>
+      <Row>PilingAndDrillingRig</Row>
+      <Row>PilingAndDrillingRig</Row>
+      <Row>PilingAndDrillingRig</Row>
+      <Row>PilingAndDrillingRig</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>LiftCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+      <Row>DutyCycleCrane</Row>
+    </Column>
+    <Column>
+      <ColumnName>SalesType</ColumnName>
+      <DataType>
+        <string/>
+      </DataType>
+      <PriorityLevel>
+        <Write>0</Write>
+        <Read>4294967295</Read>
+      </PriorityLevel>
+      <Row>LB 16</Row>
+      <Row>LB 20</Row>
+      <Row>LB 24</Row>
+      <Row>LB 28</Row>
+      <Row>LB 36</Row>
+      <Row>LRB 125</Row>
+      <Row>LRB 125</Row>
+      <Row>LRB 125</Row>
+      <Row>LRB 155</Row>
+      <Row>LRB 155</Row>
+      <Row>LRB 155</Row>
+      <Row>LRB 255</Row>
+      <Row>LRB 255</Row>
+      <Row>LR 1100</Row>
+      <Row>LR 1100</Row>
+      <Row>LR 1100</Row>
+      <Row>LR 1130</Row>
+      <Row>LR 1130</Row>
+      <Row>LR 1130</Row>
+      <Row>LR 1140</Row>
+      <Row>LR 1160</Row>
+      <Row>LR 1160</Row>
+      <Row>LR 1160</Row>
+      <Row>LR 1200</Row>
+      <Row>LR 1200</Row>
+      <Row>LR 1250</Row>
+      <Row>LR 1280</Row>
+      <Row>LR 1280</Row>
+      <Row>LR 1280</Row>
+      <Row>LR 1300</Row>
+      <Row>LR 1300</Row>
+      <Row>HS 825</Row>
+      <Row>HS 835</Row>
+      <Row>HS 845</Row>
+      <Row>HS 845</Row>
+      <Row>HS 855</Row>
+      <Row>HS 855</Row>
+      <Row>HS 875</Row>
+      <Row>HS 875</Row>
+      <Row>HS 885</Row>
+      <Row>HS 885</Row>
+      <Row>HS 895</Row>
+      <Row>HS 895</Row>
+      <Row>HS 895</Row>
+      <Row>HS 8045</Row>
+      <Row>HS 8050</Row>
+      <Row>HS 8065</Row>
+      <Row>HS 8100</Row>
+      <Row>HS 8120</Row>
+      <Row>HS 8160</Row>
+      <Row>HS 8200</Row>
+    </Column>
+  </Table>
+  <Query>
+    <OnInit>SELECT  MachineClass
+INTO MachineClass
+FROM SalesTypeMapping
+WHERE CDmachinSpecType = $CDmachinSpecType$
+
+SELECT TypeSeries
+INTO MachineTypeSeries
+FROM SalesTypeMapping
+WHERE CDmachinSpecType = $CDmachinSpecType$
+
+SELECT  SalesType
+INTO MachineSalesType
+FROM SalesTypeMapping
+WHERE CDmachinSpecType = $CDmachinSpecType$
+
+</OnInit>
+  </Query>
+  <Security>
+    <Checksum>2BF2DCBF</Checksum>
+  </Security>
+</Database>

@@ -1,0 +1,24 @@
+!version 00175
+!safety sm[CF]
+#IOCONFIG File LBH Wheel loader L550-L586 (incl. drive hydraulics pressure sensor 0-20mA)
+#IA16 configs of PME1 input modules
+IOCONFIG_IA16_1_45_00023.BIN	name.IOCONFIG	line.1	mod_nr.45	mod_typ.=IA16	crc.0x229B
+IOCONFIG_IA16_2_46_00022.BIN	name.IOCONFIG	line.2	mod_nr.46	mod_typ.=IA16	crc.0x011A
+IOCONFIG_IA16_1_47_00008.BIN	name.IOCONFIG	line.1	mod_nr.47	mod_typ.=IA16	crc.0xA034
+IOCONFIG_IA16_2_48_00015.BIN	name.IOCONFIG	line.2	mod_nr.48	mod_typ.=IA16	crc.0x1A16
+IOCONFIG_IA16_2_47_00111.BIN	name.IOCONFIG	line.2	mod_nr.47	mod_typ.=IA16	crc.0x3D68
+
+#IF02 configs of PME1 input modules
+IOCONFIG_IF02_1_53_00003.BIN	name.IOCONFIG	line.1	mod_nr.53	mod_typ.=IF02	crc.0xE56A
+IOCONFIG_IF02_2_54_00113.BIN	name.IOCONFIG	line.2	mod_nr.54	mod_typ.=IF02	crc.0xD509
+IOCONFIG_IF02_2_55_00089.BIN	name.IOCONFIG	line.2	mod_nr.55	mod_typ.=IF02	crc.0xE56A
+IOCONFIG_IF02_1_50_00092.BIN	name.IOCONFIG	line.1	mod_nr.50	mod_typ.=IF02	crc.0xB039
+
+
+#OA16 configs of PME1 output modules
+IOCONFIG_OA16_1_22_00038.BIN	name.IOCONFIG	line.1	mod_nr.22	mod_typ.=OA16	crc.0x51BA
+IOCONFIG_OA16_2_21_00039.BIN	name.IOCONFIG	line.2	mod_nr.21	mod_typ.=OA16	crc.0x4FB7
+IOCONFIG_OA16_2_23_00040.BIN	name.IOCONFIG	line.2	mod_nr.23	mod_typ.=OA16	crc.0xD225
+
+
+io_compl.cnf	crc.0xd8855b5b

@@ -1,0 +1,34 @@
+!version 00006
+
+LIH_IOCONFIG_IA16_1_45_00001.bin	line.1	name.ioconfig	mod_nr.45	mod_typ.IA16	crc.0x0E89
+LIH_IOCONFIG_IA16_2_45_00002.bin	line.2	name.ioconfig	mod_nr.45	mod_typ.IA16	crc.0x3F0E condition.%MX2.197=0
+LIH_IOCONFIG_IA16_2_45_00003.bin	line.2	name.ioconfig	mod_nr.45	mod_typ.IA16	crc.0x6D18 condition.%MX2.197=1
+LIH_IOCONFIG_IA16_2_46_00000.bin	line.2	name.ioconfig	mod_nr.46	mod_typ.IA16	crc.0x76EA
+LIH_IOCONFIG_IA16_4_45_00000.bin	line.4	name.ioconfig	mod_nr.45	mod_typ.IA16	crc.0x18D1
+LIH_IOCONFIG_IA16_4_46_00000.bin	line.4	name.ioconfig	mod_nr.46	mod_typ.IA16	crc.0x6CC0
+LIH_IOCONFIG_IA16_4_47_00001.bin	line.4	name.ioconfig	mod_nr.47	mod_typ.IA16	crc.0xA251
+
+LIH_IOCONFIG_IF02_1_49_00000.bin	line.1	name.ioconfig	mod_nr.49	mod_typ.IF02	crc.0x27E6
+LIH_IOCONFIG_IF02_1_50_00000.bin	line.1	name.ioconfig	mod_nr.50	mod_typ.IF02	crc.0x27E6
+LIH_IOCONFIG_IF02_1_53_00000.bin	line.1	name.ioconfig	mod_nr.53	mod_typ.IF02	crc.0x5553
+LIH_IOCONFIG_IF02_2_49_00000.bin	line.2	name.ioconfig	mod_nr.49	mod_typ.IF02	crc.0xED68
+LIH_IOCONFIG_IF02_2_50_00000.bin	line.2	name.ioconfig	mod_nr.50	mod_typ.IF02	crc.0x27E6
+LIH_IOCONFIG_IF02_2_51_00000.bin	line.2	name.ioconfig	mod_nr.51	mod_typ.IF02	crc.0x27E6
+LIH_IOCONFIG_IF02_2_53_00000.bin	line.2	name.ioconfig	mod_nr.53	mod_typ.IF02	crc.0x6662
+LIH_IOCONFIG_IF02_2_54_00000.bin	line.2	name.ioconfig	mod_nr.54	mod_typ.IF02	crc.0x27E6
+LIH_IOCONFIG_IF02_4_53_00000.bin	line.4	name.ioconfig	mod_nr.53	mod_typ.IF02	crc.0x27E6
+LIH_IOCONFIG_IF02_4_54_00000.bin	line.4	name.ioconfig	mod_nr.54	mod_typ.IF02	crc.0x27E6
+LIH_IOCONFIG_IF02_4_55_00000.bin	line.4	name.ioconfig	mod_nr.55	mod_typ.IF02	crc.0x5553
+
+LIH_IOCONFIG_OA16_1_21_00000.bin	line.1	name.ioconfig	mod_nr.21	mod_typ.OA16	crc.0xDC23
+LIH_IOCONFIG_OA16_1_22_00000.bin	line.1	name.ioconfig	mod_nr.22	mod_typ.OA16	crc.0xDC23
+LIH_IOCONFIG_OA16_2_21_00000.bin	line.2	name.ioconfig	mod_nr.21	mod_typ.OA16	crc.0xDC23
+LIH_IOCONFIG_OA16_2_22_00000.bin	line.2	name.ioconfig	mod_nr.22	mod_typ.OA16	crc.0xDC23
+LIH_IOCONFIG_OA16_2_23_00000.bin	line.2	name.ioconfig	mod_nr.23	mod_typ.OA16	crc.0xDC23
+
+LIH_IOCONFIG_TB09_3_93_00000.bin	line.3	name.ioconfig	mod_nr.93	mod_typ.TB09	crc.0xFA6E
+LIH_IOCONFIG_TB09_3_94_00000.bin	line.3	name.ioconfig	mod_nr.94	mod_typ.TB09	crc.0xFA6E
+LIH_IOCONFIG_TB09_3_95_00000.bin	line.3	name.ioconfig	mod_nr.95	mod_typ.TB09	crc.0xFA6E
+IOCONFIG_TB09_3_96_00001_warn.bin	line.3	name.ioconfig	mod_nr.96	mod_typ.TB09	crc.0x4EBD
+
+io_compl.cnf	crc.0x7fbd75f0

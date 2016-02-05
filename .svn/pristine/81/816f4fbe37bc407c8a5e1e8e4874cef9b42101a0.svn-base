@@ -1,0 +1,13 @@
+!version 00035
+
+CLIENT COM1
+SERVER none
+
+# Bridge for Camera
+CLIENT LAN2
+BRIDGE LAN3
+
+# Operatordisplay
+CLIENT	LAN3
+SERVER	bildprog
+OPERATORDISPLAY

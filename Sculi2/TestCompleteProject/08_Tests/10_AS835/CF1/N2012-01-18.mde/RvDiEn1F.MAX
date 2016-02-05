@@ -1,0 +1,6 @@
+revolutions diesel engine 1 [rpm]
+start time	2012-01-18T16:00:13
+stop time	2012-01-18T16:28:17
+date-time	revolutions diesel engine 1 [rpm]	power diesel engine 1 [kW]	torque diesel engine 1 [Nm]	rope force up  crowd winch 1 [kN]	rope speed crowd winch 1 [m/min]	rope force down  crowd winch 1 [kN]	rope force kelly winch 1 [kN]	rope speed kelly winch 1 [m/min]	pressure P1 drilling drive 1 [bar]	pressure P2 drilling drive 1 [bar]	pressure pump 1 leader 1 [bar]	x-direction left joystick 1 cabin 1 [%]	y-direction left joystick 1 cabin 1 [%]	x-direction right joystick 1 cabin 1 [%]	y-direction right joystick 1 cabin 1 [%]	operation mode 1	status brake 1 slewing system 1	status brake 1 auxiliary winch 1	status brake 1  crowd winch 1	status brake 1 kelly winch 1	free turn kelly winch 1	status gear box 1 drilling drive 1	reeving kelly winch 1
+	%MD1.4	%MD1.502	%MD1.501	%MD1.513	%MD1.516	%MD1.515	%MD1.511	%MD1.512	%MD1.525	%MD1.526	%MD1.522	%MD1.533	%MD1.534	%MD1.535	%MD1.536	%MD1.543	%MX1.600	%MX1.601	%MX1.602	%MX1.603	%MD1.540	%MX1.608	%MD1.545
+	MDpresenEngSpeed	%MD1.502	%MD1.501	%MD1.513	%MD1.516	%MD1.515	%MD1.511	%MD1.512	%MD1.525	%MD1.526	%MD1.522	%MD1.533	%MD1.534	%MD1.535	%MD1.536	%MD1.543	MXforceIgnoreEDC	MXecM109Timeout	MXecM110Timeout	MXecM111Timeout	%MD1.540	MXecM116Timeout	%MD1.545

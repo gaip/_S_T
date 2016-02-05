@@ -1,0 +1,873 @@
+%?class llouter
+%?version 99999
+/canmod.1.77.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.77.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.77.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.77.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.77.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.78.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.78.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.78.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.78.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.78.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.79.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.79.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.79.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.79.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.79.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.80.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.80.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.80.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.80.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.80.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.65.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.65.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.65.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.65.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.65.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.66.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.66.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.66.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.66.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.66.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.67.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.67.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.67.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.67.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.67.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.68.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.68.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.68.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.68.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.68.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.69.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.69.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.69.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.69.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.69.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.70.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.70.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.70.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.70.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.70.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.81.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.81.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.81.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.81.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.81.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.82.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.82.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.82.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.82.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.82.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.93.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.93.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.93.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.93.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.93.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.94.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.94.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.94.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.94.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.94.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.107.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.107.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.107.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.107.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.1.107.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.9.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.9.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.9.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.9.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.9.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.17.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.17.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.17.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.17.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.17.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.33.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.33.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.33.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.33.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.33.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.41.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.41.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.41.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.41.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.41.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.42.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.42.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.42.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.42.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.42.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.57.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.57.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.57.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.57.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.57.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.89.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.89.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.89.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.89.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.89.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.90.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.90.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.90.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.90.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.90.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.10.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.10.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.10.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.10.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.10.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.18.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.18.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.18.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.18.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.18.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.34.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.34.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.34.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.34.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.34.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.19.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.19.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.19.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.19.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.19.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.59.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.59.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.59.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.59.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.59.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.48.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.48.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.48.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.48.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.48.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.91.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.91.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.91.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.91.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.91.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.92.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.92.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.92.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.92.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.92.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.47.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.47.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.47.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.47.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.47.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.11.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.11.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.11.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.11.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.11.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.43.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.43.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.43.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.43.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.43.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.58.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.58.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.58.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.58.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.58.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.20.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.20.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.20.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.20.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.2.20.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.9.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.9.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.9.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.9.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.9.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.33.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.33.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.33.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.33.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.33.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.41.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.41.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.41.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.41.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.41.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.109.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.109.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.109.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.109.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.109.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.110.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.110.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.110.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.110.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.110.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.111.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.111.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.111.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.111.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.111.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.113.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.113.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.113.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.113.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.113.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.114.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.114.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.114.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.114.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.114.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.115.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.115.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.115.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.115.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.115.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.116.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.116.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.116.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.116.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.116.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.124.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.124.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.124.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.124.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.3.124.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.109.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.109.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.109.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.109.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.109.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.113.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.113.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.113.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.113.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.113.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.114.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.114.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.114.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.114.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.114.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.117.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.117.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.117.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.117.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.117.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.118.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.118.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.118.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.118.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.118.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.119.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.119.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.119.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.119.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.119.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.120.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.120.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.120.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.120.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.120.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.121.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.121.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.121.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.121.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.121.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.122.timeout	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.122.used	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.122.forced	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.122.rx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+/canmod.4.122.tx_time_10th_ms	0	def	%?brief %?use GLO %?type DINT %?dflt 0
+
+% canmodule_get_count
+%!proc	canmodule_get_count
+%?subproc
+/canmodule_get_count {
+	/I_canline exch def	%?brief  %?use INP %?type DINT %?dflt 1
+	/O_module_count 0 def	%?brief  %?use OUT %?type DINT %?dflt 0
+	I_canline 1 eq {
+		15
+	} if
+	I_canline 2 eq {
+		21
+	} if
+	I_canline 3 eq {
+		11
+	} if
+	I_canline 4 eq {
+		9
+	} if
+} def
+
+% canmodule_get_info
+%!proc	canmodule_get_info
+%?subproc
+/canmodule_get_info {
+	/I_canline exch def	%?brief  %?use INP %?type DINT %?dflt 1
+	/I_module_idx exch def	%?brief  %?use INP %?type DINT %?dflt 1
+	/O_module_nr 0 def	%?brief  %?use OUT %?type DINT %?dflt 0
+	/O_channel_cnt 0 def	%?brief  %?use OUT %?type DINT %?dflt 0
+	I_canline 1 eq {
+		I_module_idx 1 eq {
+			77
+			17
+			canmod.1.77.timeout
+			canmod.1.77.forced
+			canmod.1.77.used
+			canmod.1.77.rx_time_10th_ms
+			canmod.1.77.tx_time_10th_ms
+		} if
+		I_module_idx 2 eq {
+			78
+			18
+			canmod.1.78.timeout
+			canmod.1.78.forced
+			canmod.1.78.used
+			canmod.1.78.rx_time_10th_ms
+			canmod.1.78.tx_time_10th_ms
+		} if
+		I_module_idx 3 eq {
+			79
+			19
+			canmod.1.79.timeout
+			canmod.1.79.forced
+			canmod.1.79.used
+			canmod.1.79.rx_time_10th_ms
+			canmod.1.79.tx_time_10th_ms
+		} if
+		I_module_idx 4 eq {
+			80
+			20
+			canmod.1.80.timeout
+			canmod.1.80.forced
+			canmod.1.80.used
+			canmod.1.80.rx_time_10th_ms
+			canmod.1.80.tx_time_10th_ms
+		} if
+		I_module_idx 5 eq {
+			65
+			21
+			canmod.1.65.timeout
+			canmod.1.65.forced
+			canmod.1.65.used
+			canmod.1.65.rx_time_10th_ms
+			canmod.1.65.tx_time_10th_ms
+		} if
+		I_module_idx 6 eq {
+			66
+			22
+			canmod.1.66.timeout
+			canmod.1.66.forced
+			canmod.1.66.used
+			canmod.1.66.rx_time_10th_ms
+			canmod.1.66.tx_time_10th_ms
+		} if
+		I_module_idx 7 eq {
+			67
+			21
+			canmod.1.67.timeout
+			canmod.1.67.forced
+			canmod.1.67.used
+			canmod.1.67.rx_time_10th_ms
+			canmod.1.67.tx_time_10th_ms
+		} if
+		I_module_idx 8 eq {
+			68
+			22
+			canmod.1.68.timeout
+			canmod.1.68.forced
+			canmod.1.68.used
+			canmod.1.68.rx_time_10th_ms
+			canmod.1.68.tx_time_10th_ms
+		} if
+		I_module_idx 9 eq {
+			69
+			23
+			canmod.1.69.timeout
+			canmod.1.69.forced
+			canmod.1.69.used
+			canmod.1.69.rx_time_10th_ms
+			canmod.1.69.tx_time_10th_ms
+		} if
+		I_module_idx 10 eq {
+			70
+			23
+			canmod.1.70.timeout
+			canmod.1.70.forced
+			canmod.1.70.used
+			canmod.1.70.rx_time_10th_ms
+			canmod.1.70.tx_time_10th_ms
+		} if
+		I_module_idx 11 eq {
+			81
+			19
+			canmod.1.81.timeout
+			canmod.1.81.forced
+			canmod.1.81.used
+			canmod.1.81.rx_time_10th_ms
+			canmod.1.81.tx_time_10th_ms
+		} if
+		I_module_idx 12 eq {
+			82
+			20
+			canmod.1.82.timeout
+			canmod.1.82.forced
+			canmod.1.82.used
+			canmod.1.82.rx_time_10th_ms
+			canmod.1.82.tx_time_10th_ms
+		} if
+		I_module_idx 13 eq {
+			93
+			35
+			canmod.1.93.timeout
+			canmod.1.93.forced
+			canmod.1.93.used
+			canmod.1.93.rx_time_10th_ms
+			canmod.1.93.tx_time_10th_ms
+		} if
+		I_module_idx 14 eq {
+			94
+			35
+			canmod.1.94.timeout
+			canmod.1.94.forced
+			canmod.1.94.used
+			canmod.1.94.rx_time_10th_ms
+			canmod.1.94.tx_time_10th_ms
+		} if
+		I_module_idx 15 eq {
+			107
+			54
+			canmod.1.107.timeout
+			canmod.1.107.forced
+			canmod.1.107.used
+			canmod.1.107.rx_time_10th_ms
+			canmod.1.107.tx_time_10th_ms
+		} if
+	} if
+	I_canline 2 eq {
+		I_module_idx 1 eq {
+			9
+			13
+			canmod.2.9.timeout
+			canmod.2.9.forced
+			canmod.2.9.used
+			canmod.2.9.rx_time_10th_ms
+			canmod.2.9.tx_time_10th_ms
+		} if
+		I_module_idx 2 eq {
+			17
+			14
+			canmod.2.17.timeout
+			canmod.2.17.forced
+			canmod.2.17.used
+			canmod.2.17.rx_time_10th_ms
+			canmod.2.17.tx_time_10th_ms
+		} if
+		I_module_idx 3 eq {
+			33
+			0
+			canmod.2.33.timeout
+			canmod.2.33.forced
+			canmod.2.33.used
+			canmod.2.33.rx_time_10th_ms
+			canmod.2.33.tx_time_10th_ms
+		} if
+		I_module_idx 4 eq {
+			41
+			24
+			canmod.2.41.timeout
+			canmod.2.41.forced
+			canmod.2.41.used
+			canmod.2.41.rx_time_10th_ms
+			canmod.2.41.tx_time_10th_ms
+		} if
+		I_module_idx 5 eq {
+			42
+			24
+			canmod.2.42.timeout
+			canmod.2.42.forced
+			canmod.2.42.used
+			canmod.2.42.rx_time_10th_ms
+			canmod.2.42.tx_time_10th_ms
+		} if
+		I_module_idx 6 eq {
+			57
+			4
+			canmod.2.57.timeout
+			canmod.2.57.forced
+			canmod.2.57.used
+			canmod.2.57.rx_time_10th_ms
+			canmod.2.57.tx_time_10th_ms
+		} if
+		I_module_idx 7 eq {
+			89
+			15
+			canmod.2.89.timeout
+			canmod.2.89.forced
+			canmod.2.89.used
+			canmod.2.89.rx_time_10th_ms
+			canmod.2.89.tx_time_10th_ms
+		} if
+		I_module_idx 8 eq {
+			90
+			16
+			canmod.2.90.timeout
+			canmod.2.90.forced
+			canmod.2.90.used
+			canmod.2.90.rx_time_10th_ms
+			canmod.2.90.tx_time_10th_ms
+		} if
+		I_module_idx 9 eq {
+			10
+			13
+			canmod.2.10.timeout
+			canmod.2.10.forced
+			canmod.2.10.used
+			canmod.2.10.rx_time_10th_ms
+			canmod.2.10.tx_time_10th_ms
+		} if
+		I_module_idx 10 eq {
+			18
+			14
+			canmod.2.18.timeout
+			canmod.2.18.forced
+			canmod.2.18.used
+			canmod.2.18.rx_time_10th_ms
+			canmod.2.18.tx_time_10th_ms
+		} if
+		I_module_idx 11 eq {
+			34
+			0
+			canmod.2.34.timeout
+			canmod.2.34.forced
+			canmod.2.34.used
+			canmod.2.34.rx_time_10th_ms
+			canmod.2.34.tx_time_10th_ms
+		} if
+		I_module_idx 12 eq {
+			19
+			14
+			canmod.2.19.timeout
+			canmod.2.19.forced
+			canmod.2.19.used
+			canmod.2.19.rx_time_10th_ms
+			canmod.2.19.tx_time_10th_ms
+		} if
+		I_module_idx 13 eq {
+			59
+			26
+			canmod.2.59.timeout
+			canmod.2.59.forced
+			canmod.2.59.used
+			canmod.2.59.rx_time_10th_ms
+			canmod.2.59.tx_time_10th_ms
+		} if
+		I_module_idx 14 eq {
+			48
+			24
+			canmod.2.48.timeout
+			canmod.2.48.forced
+			canmod.2.48.used
+			canmod.2.48.rx_time_10th_ms
+			canmod.2.48.tx_time_10th_ms
+		} if
+		I_module_idx 15 eq {
+			91
+			27
+			canmod.2.91.timeout
+			canmod.2.91.forced
+			canmod.2.91.used
+			canmod.2.91.rx_time_10th_ms
+			canmod.2.91.tx_time_10th_ms
+		} if
+		I_module_idx 16 eq {
+			92
+			28
+			canmod.2.92.timeout
+			canmod.2.92.forced
+			canmod.2.92.used
+			canmod.2.92.rx_time_10th_ms
+			canmod.2.92.tx_time_10th_ms
+		} if
+		I_module_idx 17 eq {
+			47
+			24
+			canmod.2.47.timeout
+			canmod.2.47.forced
+			canmod.2.47.used
+			canmod.2.47.rx_time_10th_ms
+			canmod.2.47.tx_time_10th_ms
+		} if
+		I_module_idx 18 eq {
+			11
+			13
+			canmod.2.11.timeout
+			canmod.2.11.forced
+			canmod.2.11.used
+			canmod.2.11.rx_time_10th_ms
+			canmod.2.11.tx_time_10th_ms
+		} if
+		I_module_idx 19 eq {
+			43
+			24
+			canmod.2.43.timeout
+			canmod.2.43.forced
+			canmod.2.43.used
+			canmod.2.43.rx_time_10th_ms
+			canmod.2.43.tx_time_10th_ms
+		} if
+		I_module_idx 20 eq {
+			58
+			4
+			canmod.2.58.timeout
+			canmod.2.58.forced
+			canmod.2.58.used
+			canmod.2.58.rx_time_10th_ms
+			canmod.2.58.tx_time_10th_ms
+		} if
+		I_module_idx 21 eq {
+			20
+			14
+			canmod.2.20.timeout
+			canmod.2.20.forced
+			canmod.2.20.used
+			canmod.2.20.rx_time_10th_ms
+			canmod.2.20.tx_time_10th_ms
+		} if
+	} if
+	I_canline 3 eq {
+		I_module_idx 1 eq {
+			9
+			13
+			canmod.3.9.timeout
+			canmod.3.9.forced
+			canmod.3.9.used
+			canmod.3.9.rx_time_10th_ms
+			canmod.3.9.tx_time_10th_ms
+		} if
+		I_module_idx 2 eq {
+			33
+			0
+			canmod.3.33.timeout
+			canmod.3.33.forced
+			canmod.3.33.used
+			canmod.3.33.rx_time_10th_ms
+			canmod.3.33.tx_time_10th_ms
+		} if
+		I_module_idx 3 eq {
+			41
+			24
+			canmod.3.41.timeout
+			canmod.3.41.forced
+			canmod.3.41.used
+			canmod.3.41.rx_time_10th_ms
+			canmod.3.41.tx_time_10th_ms
+		} if
+		I_module_idx 4 eq {
+			109
+			6
+			canmod.3.109.timeout
+			canmod.3.109.forced
+			canmod.3.109.used
+			canmod.3.109.rx_time_10th_ms
+			canmod.3.109.tx_time_10th_ms
+		} if
+		I_module_idx 5 eq {
+			110
+			6
+			canmod.3.110.timeout
+			canmod.3.110.forced
+			canmod.3.110.used
+			canmod.3.110.rx_time_10th_ms
+			canmod.3.110.tx_time_10th_ms
+		} if
+		I_module_idx 6 eq {
+			111
+			6
+			canmod.3.111.timeout
+			canmod.3.111.forced
+			canmod.3.111.used
+			canmod.3.111.rx_time_10th_ms
+			canmod.3.111.tx_time_10th_ms
+		} if
+		I_module_idx 7 eq {
+			113
+			7
+			canmod.3.113.timeout
+			canmod.3.113.forced
+			canmod.3.113.used
+			canmod.3.113.rx_time_10th_ms
+			canmod.3.113.tx_time_10th_ms
+		} if
+		I_module_idx 8 eq {
+			114
+			7
+			canmod.3.114.timeout
+			canmod.3.114.forced
+			canmod.3.114.used
+			canmod.3.114.rx_time_10th_ms
+			canmod.3.114.tx_time_10th_ms
+		} if
+		I_module_idx 9 eq {
+			115
+			7
+			canmod.3.115.timeout
+			canmod.3.115.forced
+			canmod.3.115.used
+			canmod.3.115.rx_time_10th_ms
+			canmod.3.115.tx_time_10th_ms
+		} if
+		I_module_idx 10 eq {
+			116
+			7
+			canmod.3.116.timeout
+			canmod.3.116.forced
+			canmod.3.116.used
+			canmod.3.116.rx_time_10th_ms
+			canmod.3.116.tx_time_10th_ms
+		} if
+		I_module_idx 11 eq {
+			124
+			8
+			canmod.3.124.timeout
+			canmod.3.124.forced
+			canmod.3.124.used
+			canmod.3.124.rx_time_10th_ms
+			canmod.3.124.tx_time_10th_ms
+		} if
+	} if
+	I_canline 4 eq {
+		I_module_idx 1 eq {
+			109
+			6
+			canmod.4.109.timeout
+			canmod.4.109.forced
+			canmod.4.109.used
+			canmod.4.109.rx_time_10th_ms
+			canmod.4.109.tx_time_10th_ms
+		} if
+		I_module_idx 2 eq {
+			113
+			7
+			canmod.4.113.timeout
+			canmod.4.113.forced
+			canmod.4.113.used
+			canmod.4.113.rx_time_10th_ms
+			canmod.4.113.tx_time_10th_ms
+		} if
+		I_module_idx 3 eq {
+			114
+			7
+			canmod.4.114.timeout
+			canmod.4.114.forced
+			canmod.4.114.used
+			canmod.4.114.rx_time_10th_ms
+			canmod.4.114.tx_time_10th_ms
+		} if
+		I_module_idx 4 eq {
+			117
+			8
+			canmod.4.117.timeout
+			canmod.4.117.forced
+			canmod.4.117.used
+			canmod.4.117.rx_time_10th_ms
+			canmod.4.117.tx_time_10th_ms
+		} if
+		I_module_idx 5 eq {
+			118
+			8
+			canmod.4.118.timeout
+			canmod.4.118.forced
+			canmod.4.118.used
+			canmod.4.118.rx_time_10th_ms
+			canmod.4.118.tx_time_10th_ms
+		} if
+		I_module_idx 6 eq {
+			119
+			8
+			canmod.4.119.timeout
+			canmod.4.119.forced
+			canmod.4.119.used
+			canmod.4.119.rx_time_10th_ms
+			canmod.4.119.tx_time_10th_ms
+		} if
+		I_module_idx 7 eq {
+			120
+			8
+			canmod.4.120.timeout
+			canmod.4.120.forced
+			canmod.4.120.used
+			canmod.4.120.rx_time_10th_ms
+			canmod.4.120.tx_time_10th_ms
+		} if
+		I_module_idx 8 eq {
+			121
+			8
+			canmod.4.121.timeout
+			canmod.4.121.forced
+			canmod.4.121.used
+			canmod.4.121.rx_time_10th_ms
+			canmod.4.121.tx_time_10th_ms
+		} if
+		I_module_idx 9 eq {
+			122
+			8
+			canmod.4.122.timeout
+			canmod.4.122.forced
+			canmod.4.122.used
+			canmod.4.122.rx_time_10th_ms
+			canmod.4.122.tx_time_10th_ms
+		} if
+	} if
+} def
+
+% canmodule_get_ident
+%!proc	canmodule_get_ident
+%?subproc
+/canmodule_get_ident {
+} def
+
+% canmodule_get_doc
+%!proc	canmodule_get_doc
+%?subproc
+/canmodule_get_doc {
+} def
+
+% canmodule_get_value
+%!proc	canmodule_get_value
+%?subproc
+/canmodule_get_value {
+} def
+
+% language_get_all
+%!proc	language_get_all
+%?subproc
+/language_get_all {
+	(TURKISH)
+	(SVENSKA)
+	(SUOMI)
+	(SLOVENSC)
+	(SLOVENCI)
+	(RUSSIAN)
+	(ROMANA)
+	(PORTUGUE)
+	(POLSKI)
+	(NORSK)
+	(NEDERLAN)
+	(MAGYAR)
+	(LIETUVIU)
+	(LATVIESU)
+	(ITALIANO)
+	(GREEK)
+	(FRANCAIS)
+	(ESPANOL)
+	(EESTI)
+	(DEUTSCH)
+	(DANSK)
+	(CESKY)
+	(BULGARIA)
+	(ENGLISH)
+	24
+} def

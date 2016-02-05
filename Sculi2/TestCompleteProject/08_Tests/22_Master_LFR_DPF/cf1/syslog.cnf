@@ -1,0 +1,14 @@
+!version	00058
+#
+#	message-configuration
+#
+#	date:	17.01.2011
+#	name:	lfrnif0
+#
+#
+applicat.error system >bild/*
+can.application.error system >bild/*
+smallsystem.lidec.error system >bild/*
+undefined.undefined.error system >bild/*
+
+!crc	0xaf037ed9

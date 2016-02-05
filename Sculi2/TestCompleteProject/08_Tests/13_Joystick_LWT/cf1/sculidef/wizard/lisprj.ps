@@ -1,0 +1,6380 @@
+%!PS
+%?head
+
+%?Lisual_ver	1.182
+
+languagelevel 3 lt {
+(PS Language Level 3 required) quit
+} if
+
+product (Litronic Monitor) ne
+product (PME1 Display) ne and
+product (PME1 Monitor5) ne and
+product (PME1 Mining Monitor) ne and
+{
+1 1 scale
+/mousedown false def
+/mouseup false def
+/keypressed false def
+} if
+(store_currentpage) 0 setsysparam
+
+
+%?projecthead
+%?date	2012-04-27
+%?proj_name	lisprj
+%?proj_ver	00018
+%?proj_info	wizard project dozercontrol
+%?bbox	0 0 960 720
+
+%?library llsystem
+(llsystem.ps) run
+%?library llbasic
+(llbasic.ps) run
+%?library llfstd
+(llfstd.ps) run
+%?library llfar012
+(llfar012.ps) run
+%?library llfar016
+(llfar016.ps) run
+%?library llfar020
+(llfar020.ps) run
+%?library llgenpar
+(llgenpar.ps) run
+%?library llspepar
+(llspepar.ps) run
+
+%Global Variable List
+
+/_V0000	0 def	%?brief  %?use STC %?type DINT
+/SXstaBreakTestRequest	false def	%?brief request break request %?use GLO %?type BOOL %?dflt false
+/SXstaOverSpProtRequest	false def	%?brief request overspeed protection test %?use GLO %?type BOOL %?dflt false
+/SXstaOverSpProtActive	false def	%?brief status overspeed protection test active %?use GLO %?type BOOL %?dflt false
+/SXstaBreakTestActive	false def	%?brief status break test active %?use GLO %?type BOOL %?dflt false
+/SXstaEnableDrive	false def	%?brief status drive enable %?use GLO %?type BOOL %?dflt false
+/SXstaCalibRequest	false def	%?brief status request calibration %?use GLO %?type BOOL %?dflt false
+/SXstaCalibSaveRequest	false def	%?brief status request save calibration values %?use GLO %?type BOOL %?dflt false
+/SXstaCalibActive	false def	%?brief status calibration request active %?use GLO %?type BOOL %?dflt false
+/SXServiceFunctionActive	false def	%?brief status service request active %?use GLO %?type BOOL %?dflt false
+/SXstaBattVoltLowW	false def	%?brief display var: status batterie voltage low warning %?use GLO %?type BOOL %?dflt false
+/SXstaBattVoltLowS	false def	%?brief display var: status batterie voltage low safety %?use GLO %?type BOOL %?dflt false
+/SXstaCoolWaterTempW	false def	%?brief display var: cool water temp warning %?use GLO %?type BOOL %?dflt false
+/SXstaCoolWaterTempS	false def	%?brief display var: cool water temp safety %?use GLO %?type BOOL %?dflt false
+/SXstaHydOilTempS	false def	%?brief display var: hydraulic oil temp safety %?use GLO %?type BOOL %?dflt false
+/SXstaEngOilPressW	false def	%?brief display var: engine oil pressure warning %?use GLO %?type BOOL %?dflt false
+/SXstaEngOilPressS	false def	%?brief display var: engine oil pressure safety %?use GLO %?type BOOL %?dflt false
+/SXstaChargeAirTempW	false def	%?brief display var: engine charge air temperatur warning %?use GLO %?type BOOL %?dflt false
+/SXstaChargeAirTempS	false def	%?brief display var: engine charge air temperatur safety %?use GLO %?type BOOL %?dflt false
+/SXstaAirFiltPressW	false def	%?brief display var: engine air filter pressure warning %?use GLO %?type BOOL %?dflt false
+/SXstaAirFiltPressS	false def	%?brief display var: engine air filter pressure safety %?use GLO %?type BOOL %?dflt false
+/SXstaFuelLevelW	false def	%?brief display var: status fuel level warning %?use GLO %?type BOOL %?dflt false
+/SXstaCalibHydOilTempLow	false def	%?brief display var: status hydraulic oil temperature low for calib %?use GLO %?type BOOL %?dflt false
+/SXstaCalibEngSpeedLow	false def	%?brief display var: status engine speed low for calib %?use GLO %?type BOOL %?dflt false
+/SXServAcknHydr	false def	%?brief display var: Acknowledge service hydraulic %?use GLO %?type BOOL %?dflt false
+/SXServAcknEng	false def	%?brief display var: Acknowledge service engine %?use GLO %?type BOOL %?dflt false
+/SXServAcknGear	false def	%?brief display var: Acknowledge service gears %?use GLO %?type BOOL %?dflt false
+/SXServEnableAcknHydr	true def	%?brief display var: Enable acknowledge service hydraulic %?use GLO %?type BOOL %?dflt true
+/SXServEnableAcknEng	true def	%?brief display var: Enable acknowledge service engine %?use GLO %?type BOOL %?dflt true
+/SXServEnableAcknGear	true def	%?brief display var: Enable acknowledge service gear %?use GLO %?type BOOL %?dflt true
+/SXServEnableAcknOutWindHydr	true def	%?brief display var: Enable Acknowledge service out of regular time window hydraulic %?use GLO %?type BOOL %?dflt true
+/SXServEnableAcknOutWindEng	true def	%?brief display var: Enable Acknowledge service out of regular time window engine %?use GLO %?type BOOL %?dflt true
+/SXServEnableAcknOutWindGear	true def	%?brief display var: Enable Acknowledge service out of regular time window gear %?use GLO %?type BOOL %?dflt true
+/SXFillingRequest	false def	%?brief display var: Filling mode request %?use GLO %?type BOOL %?dflt false
+/SXFillingActive	true def	%?brief display var: Status Filling mode active %?use GLO %?type BOOL %?dflt true
+/SXExternServFunctionActive	false def	%?brief display var: Indicates that an extern (not application controlled) service func %?use GLO %?type BOOL %?dflt false
+/SXServiceManagEnable	true def	%?brief display var: Service management enabled %?use GLO %?type BOOL %?dflt true
+/SXManContRequest	false def	%?brief display pre: Request manual machine mode %?use GLO %?type BOOL %?dflt false
+/SXManContReqEnabPumpLeft1	true def	%?brief display var: Request enable of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt true
+/SXManContEnabStatePumpLeft1	false def	%?brief display var: Enable state of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt false
+/SXManContReqEnabPumpLeft2	true def	%?brief display var: Request enable of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt true
+/SXManContReqEnabPumpRight1	true def	%?brief display var: Request enable of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt true
+/SXManContReqEnabPumpRight2	true def	%?brief display var: Request enable of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt true
+/SXManContReqEnabMotorLeft1	true def	%?brief display var: Request enable of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt true
+/SXManContReqEnabMotorLeft2	true def	%?brief display var: Request enable of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt true
+/SXManContReqEnabMotorRight1	true def	%?brief display var: Request enable of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt true
+/SXManContReqEnabMotorRight2	true def	%?brief display var: Request enable of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt true
+/SXManContEnabStatePumpLeft2	false def	%?brief display var: Enable state of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt false
+/SXManContEnabStatePumpRight1	false def	%?brief display var: Enable state of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt false
+/SXManContEnabStatePumpRight2	false def	%?brief display var: Enable state of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt false
+/SXManContEnabStateMotorRight1	false def	%?brief display var: Enable state of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt false
+/SXManContEnabStateMotorRight2	false def	%?brief display var: Enable state of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt false
+/SXManContEnabStateMotorLeft1	false def	%?brief display var: Enable state of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt false
+/SXManContEnabStateMotorLeft2	false def	%?brief display var: Enable state of corresponding unit at manual control mode %?use GLO %?type BOOL %?dflt false
+/SXManContEnableStateChange	false def	%?brief Display if state change of manual drive control elements is enabled %?use GLO %?type BOOL %?dflt false
+/SXManContActive	false def	%?brief Manual control enabled %?use GLO %?type BOOL %?dflt false
+/SXManContAnyUnitActive	false def	%?brief Display that the manual drive control can be triggered %?use GLO %?type BOOL %?dflt false
+/SXHasTwinMotorSet	false def	%?brief Displays if the machine has two motors %?use GLO %?type BOOL %?dflt false
+/SXHasTwinPumpSet	false def	%?brief Displays if the machine has two pumps %?use GLO %?type BOOL %?dflt false
+/SXEnableManFanCont	false def	%?brief Manual fan control enabled %?use GLO %?type BOOL %?dflt false
+/SXReqManFanCont	false def	%?brief Request manual fan control %?use GLO %?type BOOL %?dflt false
+/SXManFanContValueIncr	false def	%?brief Manual fan control value in permille  increment %?use GLO %?type BOOL %?dflt false
+/SXManFanContValueDecr	false def	%?brief Manual fan control value in permille  decrement %?use GLO %?type BOOL %?dflt false
+/SXManFanContManTriggerFanRev	false def	%?brief trigger manual fan reverse %?use GLO %?type BOOL %?dflt false
+/SXstaFanReverseEnable	false def	%?brief Reverse fan control is enabled %?use GLO %?type BOOL %?dflt false
+/SXRevFanOutControl	false def	%?brief Control of the reverse ventile %?use GLO %?type BOOL %?dflt false
+/SXstaFanReverseActive	false def	%?brief Reverse fan control is active %?use GLO %?type BOOL %?dflt false
+/SXCCStaPressSwitch	false def	%?brief display var: CC status pressure switch %?use GLO %?type BOOL %?dflt false
+/SXstaClimateManTeachMode	false def	%?brief display var: Enable climate Teach mode %?use GLO %?type BOOL %?dflt false
+/SXStaCalibClimaActive	false def	%?brief display var: display if calibration clima is active %?use GLO %?type BOOL %?dflt false
+/SXCCStaCompressor	false def	%?brief display var: CC ststus compressor %?use GLO %?type BOOL %?dflt false
+/SDactBreakTestTimeRemain	0 def	%?brief display var: Remaining time till braktest stops [ms] %?use GLO %?type DINT %?dflt 0
+/SDactUnitTemperatur	0 def	%?brief display var: Actual selected unit temperatur %?use GLO %?type DINT %?dflt 0
+/SDactUnitSpeed	0 def	%?brief display var: Actual selected unit speed %?use GLO %?type DINT %?dflt 0
+/SDactUnitPressure	0 def	%?brief display var: Actual selected unit pressure %?use GLO %?type DINT %?dflt 0
+/SDstaBreakTest	0 def	%?brief actual state break test %?use GLO %?type DINT %?dflt 0
+/SDstaCalibRight	0 def	%?brief display var: Actual state calibration right track side %?use GLO %?type DINT %?dflt 0
+/SDstaCalibLeft	0 def	%?brief display var: Actual state calibration left track side %?use GLO %?type DINT %?dflt 0
+/SDstaCalibMain	0 def	%?brief display var: Actual state main calibration powertrain %?use GLO %?type DINT %?dflt 0
+/SDstaDriveEnable	0 def	%?brief display var: Status drive enable %?use GLO %?type DINT %?dflt 0
+/SDstaOverSpProtTestTimeRemain	0 def	%?brief display var: Remaining time till overspeed protection test stops [ms] %?use GLO %?type DINT %?dflt 0
+/SRactCalibCurrMotorRight	   0.00 def	%?brief display var: Actual control current calibration motor right %?use GLO %?type REAL %?dflt    0.00
+/SRactCalibCurrMotorLeft	   0.00 def	%?brief display var: Actual control current calibration motor left %?use GLO %?type REAL %?dflt    0.00
+/SRactCalibCurrPumpRightBack	   0.00 def	%?brief display var: Actual control current calibration pump right backward %?use GLO %?type REAL %?dflt    0.00
+/SRactCalibCurrPumpRightForw	   0.00 def	%?brief display var: Actual control current calibration pump right forward %?use GLO %?type REAL %?dflt    0.00
+/SRactCalibCurrPumpLeftBack	   0.00 def	%?brief display var: Actual control current calibration pump left backward %?use GLO %?type REAL %?dflt    0.00
+/SRactCalibCurrPumpLeftForw	   0.00 def	%?brief display var: Actual control current calibration pump left forward %?use GLO %?type REAL %?dflt    0.00
+/SRactHydOilTemp	   0.00 def	%?brief Hydraulik철ltemperatur %?use GLO %?type REAL %?dflt    0.00
+/SRactEngineSpeed	   0.00 def	%?brief display var: actual diesel engine speed %?use GLO %?type REAL %?dflt    0.00
+/SRactFreqTrackRight	   0.00 def	%?brief display var: actual frequency track right %?use GLO %?type REAL %?dflt    0.00
+/SRactFreqTrackLeft	   0.00 def	%?brief display var: actual frequency track left %?use GLO %?type REAL %?dflt    0.00
+/SRactFuelLevel	   0.00 def	%?brief Kraftstoff-F체llstand %?use GLO %?type REAL %?dflt    0.00
+/SRactCoolWaterTemp	   0.00 def	%?brief K체hlwassertemperatur %?use GLO %?type REAL %?dflt    0.00
+/SRactEngOilPressure	   0.00 def	%?brief oil pressure [bar] %?use GLO %?type REAL %?dflt    0.00
+/SRactBattVoltage	   0.00 def	%?brief battery voltage [V] %?use GLO %?type REAL %?dflt    0.00
+/SRactChargeAirTemp	   0.00 def	%?brief Ladelufttemperatur %?use GLO %?type REAL %?dflt    0.00
+/SRactChargeAirPress	   0.00 def	%?brief Ladeluftdruck %?use GLO %?type REAL %?dflt    0.00
+/SRactMachineHour	   0.00 def	%?brief display var: actual machine hour meter %?use GLO %?type REAL %?dflt    0.00
+/SRServLastHydr	   0.00 def	%?brief display var: Last service hydraulic %?use GLO %?type REAL %?dflt    0.00
+/SRServLastEng	   0.00 def	%?brief display var: Last service engine %?use GLO %?type REAL %?dflt    0.00
+/SRServLastGear	   0.00 def	%?brief display var: Last service gears %?use GLO %?type REAL %?dflt    0.00
+/SRServTimeToNextEng	   0.00 def	%?brief display var: Time to next service engine %?use GLO %?type REAL %?dflt    0.00
+/SRServTimeToNextHydr	   0.00 def	%?brief display var: Time to next service hydraulic %?use GLO %?type REAL %?dflt    0.00
+/SRServTimeToNextGear	   0.00 def	%?brief display var: Time to next service gears %?use GLO %?type REAL %?dflt    0.00
+/SRPumpLeftForw1	   0.00 def	%?brief display var: Output solenoid pump left Forward 1 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRMotorLeft1	   0.00 def	%?brief display var: Output solenoid motor left 1 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRMotorLeft2	   0.00 def	%?brief display var: Output solenoid motor left 2 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRMotorRight1	   0.00 def	%?brief display var: Output solenoid motor Right 1 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRMotorRight2	   0.00 def	%?brief display var: Output solenoid motor Right 2 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRPumpLeftBack2	   0.00 def	%?brief display var: Output solenoid pump left backward 2 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRPumpLeftForw2	   0.00 def	%?brief display var: Output solenoid pump left Forward 2 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRPumpRightBack1	   0.00 def	%?brief display var: Output solenoid pump right backward 1 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRPumpRightBack2	   0.00 def	%?brief display var: Output solenoid pump right backward 2 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRPumpRightForw2	   0.00 def	%?brief display var: Output solenoid pump right Forward 2 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRPumpRightForw1	   0.00 def	%?brief display var: Output solenoid pump right Forward 1 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRPumpLeftBack1	   0.00 def	%?brief display var: Output solenoid pump left backward 1 [mA] %?use GLO %?type REAL %?dflt    0.00
+/SRactDriveSpeedLeft	   0.00 def	%?brief display var: Actual drive speed of left track in km/h %?use GLO %?type REAL %?dflt    0.00
+/SRactDriveSpeedRight	   0.00 def	%?brief display var: Actual drive speed of right track in km/h %?use GLO %?type REAL %?dflt    0.00
+/SROverspeedTestTime	15000.00 def	%?brief display var: Overspeed test time [ms] %?use GLO %?type REAL %?dflt 15000.00
+/SREngMaxCurrFan	 200.00 def	%?brief Maximum Value of the Fan Current [mA] %?use GLO %?type REAL %?dflt  200.00
+/SRFanContPermille	   0.00 def	%?brief Fan Control Value [Permille] %?use GLO %?type REAL %?dflt    0.00
+/SRFanRevRemainingTime	   0.00 def	%?brief display var: Remaining duration time of one fan control reverse cycle [ms] %?use GLO %?type REAL %?dflt    0.00
+/SRFanRevCycleTime	  10.00 def	%?brief display var: Duration time of one fan control reverse cycle [ms] %?use GLO %?type REAL %?dflt   10.00
+/SRCCFanSpeed	   0.00 def	%?brief display var: CC fan speed [\%] %?use GLO %?type REAL %?dflt    0.00
+/SRCCCabineTemp	   0.00 def	%?brief display var: cabine temperatur [\%] %?use GLO %?type REAL %?dflt    0.00
+/SRCCStaFlapFeet	   0.00 def	%?brief display var: position flap feet area [\%] %?use GLO %?type REAL %?dflt    0.00
+/SRCCCondensatorTemp	   0.00 def	%?brief display var: condensator temperatur [캜] %?use GLO %?type REAL %?dflt    0.00
+/SRCCMixRateWaterValve	   0.00 def	%?brief display var: CC mix-rate water valve [\%] %?use GLO %?type REAL %?dflt    0.00
+/SRBreakTestTime	  10.00 def	%?brief display var: Duration time of brak test [ms] %?use GLO %?type REAL %?dflt   10.00
+/boot.machineserial	(0) def	%?brief machine serial number %?use GLO %?type STRI %?dflt 0
+/boot.machinesalestype	(UNKNOWN_SALES_TYPE) def	%?brief machine sales type %?use GLO %?type STRI %?dflt UNKNOWN_SALES_TYPE
+/boot.machineclass	(UNKNOWN_CLASS) def	%?brief machine class %?use GLO %?type STRI %?dflt UNKNOWN_CLASS
+/boot.machinespecifictype	(UNKNOWN_SPEC_TYPE) def	%?brief machine specific type %?use GLO %?type STRI %?dflt UNKNOWN_SPEC_TYPE
+/boot.ident	(UNKNOWN_IDENT) def	%?brief software ident number %?use GLO %?type STRI %?dflt UNKNOWN_IDENT
+/boot.ident_index	(UNKNOWN_INDEX) def	%?brief software index number %?use GLO %?type STRI %?dflt UNKNOWN_INDEX
+/IRDriveLevXAxis	0 def	%?brief joystick axis value %?use GLO %?type DINT %?dflt 0
+/IRDriveLevYAxis	0 def	%?brief joystick axis value %?use GLO %?type DINT %?dflt 0
+/IRDriveLeverInchBreak	0 def	%?brief joystick axis value %?use GLO %?type DINT %?dflt 0
+/IRDriveLeverSteerLeft	0 def	%?brief joystick axis value %?use GLO %?type DINT %?dflt 0
+/IRDriveLeverSteerRight	0 def	%?brief joystick axis value %?use GLO %?type DINT %?dflt 0
+/can.2.67.use.01	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.use.02	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.use.03	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.use.04	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.use.05	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.usable.01	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.usable.02	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.usable.03	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.usable.04	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.usable.05	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.ctrl.01	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.ctrl.02	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.ctrl.03	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.ctrl.04	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.ctrl.05	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.state.01	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.state.02	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.state.03	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.state.04	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.state.05	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/can.2.67.identnr	0 def	%?brief joystick variable for calibration %?use GLO %?type DINT %?dflt 0
+/client.8.priority	0 def	%?brief client %?use GLO %?type DINT %?dflt 0
+/MRHydOilTemp	   0.00 def	%?brief Actual active hydraulic oil temperture %?use MEM %?type REAL %?dflt    0.00
+/MRCoolWaterTemp	   0.00 def	%?brief Actual active coolwater temperture %?use MEM %?type REAL %?dflt    0.00
+/MRChargeAirTemp	   0.00 def	%?brief Actual active charge air temperture %?use MEM %?type REAL %?dflt    0.00
+/MREngOilPressure	   0.00 def	%?brief Actual active engine oil pressure %?use MEM %?type REAL %?dflt    0.00
+/MRChargeAirPress	   0.00 def	%?brief Actual active charge air pressure %?use MEM %?type REAL %?dflt    0.00
+/MXServTimeoutEng	false def	%?brief display var: Status service overdue engine %?use MEM %?type BOOL %?dflt false
+/MXServTimeoutHydr	false def	%?brief display var: Status service overdue hydraulic %?use MEM %?type BOOL %?dflt false
+/MXServTimeoutGear	false def	%?brief display var: Status service overdue gears %?use MEM %?type BOOL %?dflt false
+/MXHasLevel	true def	%?brief indicate high user level %?use MEM %?type BOOL %?dflt true
+/QREngCurrFan	   0.00 def	%?brief Engine current fan [mA] %?use GLO %?type REAL %?dflt    0.00
+/MRFanContPercent	   0.00 def	%?brief Actual active hydraulic oil temperture %?use MEM %?type REAL %?dflt    0.00
+/PRCalibContBegTolNeg	   0.00 def	%?brief display var: Calib powertrain set speed tolerances search speed  value motor %?use GLO %?type REAL %?dflt    0.00
+/PRCalibContBegTolPos	   0.00 def	%?brief display var: Calib powertrain set speed tolerances search speed  value motor %?use GLO %?type REAL %?dflt    0.00
+/PRCalibContEndTolNeg	   0.00 def	%?brief display var: Calib powertrain set speed tolerances search speed  value motor %?use GLO %?type REAL %?dflt    0.00
+/PRCalibContEndTolPos	   0.00 def	%?brief display var: Calib powertrain set speed tolerances search speed  value motor %?use GLO %?type REAL %?dflt    0.00
+/SRLeftSpeedPosTol	   0.00 def	%?brief display var: Calibration power train positive tolerance of left track speed at %?use GLO %?type REAL %?dflt    0.00
+/SRLeftSpeedNegTol	   0.00 def	%?brief display var: Calibration power train negative tolerance of left track speed at %?use GLO %?type REAL %?dflt    0.00
+/SRRightSpeedPosTol	   0.00 def	%?brief display var: Calibration power train positive tolerance of right track speed at %?use GLO %?type REAL %?dflt    0.00
+/SRRightSpeedNegTol	   0.00 def	%?brief display var: Calibration power train negative tolerance of right track speed at %?use GLO %?type REAL %?dflt    0.00
+
+%?page
+%?fn	page0
+%?brief	page0
+%?bbox	0 0 960 720
+/page0 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(main) 
+	_V0000 
+	GeneralFunctions 
+	/_V0000 exch store 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	SDactUnitTemperatur 0 eq {
+		SRactHydOilTemp /MRHydOilTemp store
+		SRactCoolWaterTemp /MRCoolWaterTemp store
+		SRactChargeAirTemp /MRChargeAirTemp store
+	} {
+		% Calc 째F from 째C: 째F = 째C*1,8+32
+		SRactHydOilTemp 1.8 mul 32 add	
+		/MRHydOilTemp store
+		SRactCoolWaterTemp 1.8 mul 32 add	
+		/MRCoolWaterTemp store
+		SRactChargeAirTemp 1.8 mul 32 add	
+		/MRChargeAirTemp store
+	} ifelse
+	SDactUnitPressure 0 eq {
+		SRactEngOilPressure /MREngOilPressure store
+		SRactChargeAirPress /MRChargeAirPress store
+	} {
+		% Calc psi from bar: psi = bar*14,504 
+		SRactEngOilPressure 14.504 mul	
+		/MREngOilPressure store
+		SRactChargeAirPress 14.504 mul
+		/MRChargeAirPress store
+
+	} ifelse
+	SRFanContPermille 0.1 mul /MRFanContPercent store
+%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	135 1 translate 
+	0 rotate 
+	1 1 scale 
+	960 720 640 400 80 false 0 0 0 0 0 
+	GeneralDefinition 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	main
+%?brief	Hauptseite
+%?bbox	0 0 960 720
+/main {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 500 translate 
+	0 rotate 
+	1 1 scale 
+	(machine class:) 
+	FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	350 500 translate 
+	0 rotate 
+	1 1 scale 
+	boot.machineclass FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 450 translate 
+	0 rotate 
+	1 1 scale 
+	(sales type:) 
+	FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	350 450 translate 
+	0 rotate 
+	1 1 scale 
+	boot.machinesalestype FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 400 translate 
+	0 rotate 
+	1 1 scale 
+	(specific type:) 
+	FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	350 400 translate 
+	0 rotate 
+	1 1 scale 
+	boot.machinespecifictype FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 350 translate 
+	0 rotate 
+	1 1 scale 
+	(serial number:) 
+	FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	350 350 translate 
+	0 rotate 
+	1 1 scale 
+	boot.machineserial FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Yellow 85 548 translate 
+	0 rotate 
+	0.80 0.80 scale 
+	gsLiebherr001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 300 translate 
+	0 rotate 
+	1 1 scale 
+	(software:) 
+	FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	350 300 translate 
+	0 rotate 
+	1 1 scale 
+	boot.ident FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 250 translate 
+	0 rotate 
+	1 1 scale 
+	(index:) 
+	FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	350 250 translate 
+	0 rotate 
+	1 1 scale 
+	boot.ident_index FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 200 translate 
+	0 rotate 
+	1 1 scale 
+	(hourmeter:) 
+	FSbigFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	470 200 translate 
+	0 rotate 
+	1 1 scale 
+	SRactMachineHour 5 (h) false false 
+	FSbigFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	menu
+%?brief	Seitenumschaltungen
+%?bbox	0 0 960 720
+/menu {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton002 {	
+		/MDcurrPageNumber 2 store 
+		/_currentpage (functions) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	MDcurrPageNumber 1 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 1 store 
+			/_currentpage (main) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_beg
+MDcurrPageNumber 3 ne {	
+	SXServiceManagEnable true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/MDcurrPageNumber 3 store 
+			/_currentpage (service) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if
+} if 
+SXServiceManagEnable true eq {	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral069 
+	setcolor 
+	setmatrix_nlw 
+} if 
+%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	4 2 translate 
+	0 rotate 
+	0.94 0.94 scale 
+	gsGeneral043 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral021 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	MDcurrPageNumber 
+	baPageLine001 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	functions
+%?brief	functions
+%?bbox	0 0 960 720
+/functions {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	400 440 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/_currentpage (function_manual_fan) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	560 440 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/_currentpage (function_CalibClima) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 560 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/_currentpage (function_breaktest) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 560 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral023 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 560 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/_currentpage (function_overspeedtest) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 560 translate 
+	0 rotate 
+	1 1 scale 
+	gsEngine048 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	400 560 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/_currentpage (function_calib_pt) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	475 635 translate 
+	180 rotate 
+	0.19 0.23 scale 
+	ssPowertrain 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	720 560 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/_currentpage (function_fill) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 440 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/_currentpage (function_CalibPed) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 440 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/_currentpage (function_CalibJoy) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	561 560 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/_currentpage (function_ManualDrive) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 440 translate 
+	0 rotate 
+	1 1 scale 
+	ssPedal001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	402 440 translate 
+	0 rotate 
+	1.20 1.20 scale 
+	ssAircond006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	560 440 translate 
+	0 rotate 
+	1 1 scale 
+	gsAircond005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 440 translate 
+	0 rotate 
+	1 1 scale 
+	ssJoystick004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 640 translate 
+	0 rotate 
+	1 1 scale 
+	(3.1) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 640 translate 
+	0 rotate 
+	1 1 scale 
+	(3.2) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	480 640 translate 
+	0 rotate 
+	1 1 scale 
+	(3.3) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 640 translate 
+	0 rotate 
+	1 1 scale 
+	(3.5) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 520 translate 
+	0 rotate 
+	1 1 scale 
+	(3.6) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 520 translate 
+	0 rotate 
+	1 1 scale 
+	(3.7) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	480 520 translate 
+	0 rotate 
+	1 1 scale 
+	(3.8) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	640 520 translate 
+	0 rotate 
+	1 1 scale 
+	(3.9) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	642 640 translate 
+	0 rotate 
+	1 1 scale 
+	(3.4) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	560 560 translate 
+	0 rotate 
+	1 1 scale 
+	ssHydr002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	720 560 translate 
+	0 rotate 
+	1 1 scale 
+	ssHydr003 
+	setcolor 
+	setmatrix_nlw 
+	SXFillingActive true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 800 555 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXManContActive true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 640 555 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXstaCalibActive true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 480 555 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXstaOverSpProtActive true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 320 555 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SXstaFanReverseActive true eq 
+	SXEnableManFanCont true eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 480 435 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXStaCalibClimaActive true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 640 435 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SDstaBreakTest 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 160 555 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	service
+%?brief	Serviceintervall anzeigen und best채tigen
+%?bbox	0 0 960 720
+/service {
+	
+%?manual_beg
+	% show service acknowledge buttons only while service was not acknowledged out of service time
+	SXServEnableAcknOutWindEng true eq {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		290 350 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/SXServAcknEng true store 
+			} { 
+			/SXServAcknEng false store 
+		} ifelse 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	SXServEnableAcknOutWindHydr true eq {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		470 350 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/SXServAcknHydr true store 
+			} { 
+			/SXServAcknHydr false store 
+		} ifelse 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	SXServEnableAcknOutWindGear true eq {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		650 350 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {	
+			/SXServAcknGear true store 
+			} { 
+			/SXServAcknGear false store 
+		} ifelse 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% indicate service time in band with green hook
+	matrix currentmatrix_nlw 
+	currentcolor 
+	SXServEnableAcknEng true eq {
+		Green
+	} if
+	291 345 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor
+	SXServEnableAcknHydr true eq {
+		Green
+	} if
+	471 345 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral002 
+	setcolor 
+	setmatrix_nlw 	
+	matrix currentmatrix_nlw 
+	currentcolor
+	SXServEnableAcknGear true eq {
+		Green
+	} if
+	651 345 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	371 505 translate 
+	0 rotate 
+	1 1 scale 
+	SRServLastEng 6 (h) false false 
+	FSbigFont 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	371 455 translate 
+	0 rotate 
+	1 1 scale 
+	SRServTimeToNextEng 6 (h) false 
+	MXServTimeoutEng FSfatFont 1 
+	baValue012 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	551 505 translate 
+	0 rotate 
+	1 1 scale 
+	SRServLastHydr 6 (h) false false 
+	FSbigFont 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	551 455 translate 
+	0 rotate 
+	1 1 scale 
+	SRServTimeToNextHydr 6 (h) false 
+	MXServTimeoutHydr FSfatFont 1 
+	baValue012 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	731 505 translate 
+	0 rotate 
+	1 1 scale 
+	SRServLastGear 6 (h) false false 
+	FSbigFont 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	731 455 translate 
+	0 rotate 
+	1 1 scale 
+	SRServTimeToNextGear 6 (h) false 
+	MXServTimeoutGear FSfatFont 1 
+	baValue012 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	580 660 translate 
+	0 rotate 
+	1 1 scale 
+	SRactMachineHour 6 (h) false false 
+	FSfatFont 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	290 530 translate 
+	0 rotate 
+	1 1 scale 
+	gsEngine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	372 502 translate 
+	0 rotate 
+	0.25 0.25 scale 
+	gsGeneral002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	552 502 translate 
+	0 rotate 
+	0.25 0.25 scale 
+	gsGeneral002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	732 502 translate 
+	0 rotate 
+	0.25 0.25 scale 
+	gsGeneral002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	358 631 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral068 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	462 528 translate 
+	0 rotate 
+	1.25 1.25 scale 
+	gsHydraulic013 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	658 528 translate 
+	0 rotate 
+	1.20 1.20 scale 
+	gsGear001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	185 488 translate 
+	0 rotate 
+	0.62 0.62 scale 
+	gsGeneral069 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	185 438 translate 
+	0 rotate 
+	0.62 0.62 scale 
+	gsGeneral069 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	214 506 translate 
+	0 rotate 
+	0.37 0.37 scale 
+	gsGeneral002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	203 445 translate 
+	0 rotate 
+	0.62 0.62 scale 
+	gsGeneral068 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	330 700 translate 
+	0 rotate 
+	1 1 scale 
+	0 0 300 0 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	330 640 translate 
+	0 rotate 
+	1 1 scale 
+	0 0 300 0 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	SXServEnableAcknEng true eq 
+	SRServTimeToNextEng 0 lt and {	
+		/MXServTimeoutEng true store 
+		} { 
+		/MXServTimeoutEng false store 
+	} ifelse 
+	SXServEnableAcknHydr true eq 
+	SRServTimeToNextHydr 0 lt and {	
+		/MXServTimeoutHydr true store 
+		} { 
+		/MXServTimeoutHydr false store 
+	} ifelse 
+	SXServEnableAcknGear true eq 
+	SRServTimeToNextGear 0 lt and {	
+		/MXServTimeoutGear true store 
+		} { 
+		/MXServTimeoutGear false store 
+	} ifelse 
+%?manual_end
+	
+} def
+
+
+%?page
+%?fn	function_breaktest
+%?brief	break test page
+%?bbox	0 0 960 720
+/function_breaktest {
+	
+%?manual_beg
+	%%%%%%%%%%%%%%% States of break test activation %%%%%%%%%%%%%%%
+	SDstaBreakTest 2 ge {			% Drive is enabled, Lever is in neutral position
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 520 translate 
+		0 rotate 
+		1 1 scale 
+		1 1 
+		baTouchButton003 {	
+			/SXstaBreakTestRequest true store 
+			} { 
+			/SXstaBreakTestRequest false store 
+		} ifelse 
+		setcolor 
+		setmatrix_nlw 
+		SDstaBreakTest 3 eq {	% break test active
+			matrix currentmatrix_nlw 
+			currentcolor 
+			0 560 translate 
+			0 rotate 
+			1 1 scale 
+			ssJoystick005 
+			setcolor 
+			setmatrix_nlw 
+		} if
+	} if
+	% activation symbol
+	matrix currentmatrix_nlw 
+	currentcolor
+	SDstaBreakTest 3 eq {
+		Green
+	} if
+	800 520 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral071 
+	setcolor 
+	setmatrix_nlw 
+	% Show enable drive symbols
+	SDstaBreakTest 3 ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 640 translate 
+		0 rotate 
+		1 1 scale 
+		SDstaDriveEnable 
+		spEnableDrive002 
+		setcolor 
+		setmatrix_nlw 
+	} if	
+%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 80 translate 
+	0 rotate 
+	1 1 scale 
+	0 20 0 620 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 80 translate 
+	0 rotate 
+	1 1 scale 
+	0 20 0 620 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 620 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral023 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	840 700 translate 
+	0 rotate 
+	1 1 scale 
+	(3.1) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	110 650 translate 
+	0 rotate 
+	0.60 0.60 scale 
+	gsEngine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	110 430 translate 
+	0 rotate 
+	1 1 scale 
+	SRactEngineSpeed (1/min) 0 2000 false false true false false false 2000 2000 0 0 4 15 180 true false 0 false 0 0 true 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	140 410 translate 
+	0 rotate 
+	1 1 scale 
+	SRactEngineSpeed 4 () () false false false false 
+	FSmidFont 1 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 430 translate 
+	0 rotate 
+	1 1 scale 
+	SRactHydOilTemp (째C) 0 120 false false true false false false 120 120 20 0 6 15 180 true false 0 false 0 0 true 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	260 410 translate 
+	0 rotate 
+	1 1 scale 
+	SRactHydOilTemp 4 () () false false false false 
+	FSmidFont 1 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 650 translate 
+	0 rotate 
+	0.60 0.60 scale 
+	gsHydraulic005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	360 600 translate 
+	0 rotate 
+	1.50 1.50 scale 
+	ssGeneral022 
+	setcolor 
+	setmatrix_nlw 
+	SDstaBreakTest 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 360 600 translate 
+		0 rotate 
+		1.50 1.50 scale 
+		ssGeneral023 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	345 634 translate 
+	0 rotate 
+	0.80 0.80 scale 
+	gsGeneral023 
+	setcolor 
+	setmatrix_nlw 
+	SDstaBreakTest 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		87 123 translate 
+		270 rotate 
+		1 1 scale 
+		SDactBreakTestTimeRemain () 0 
+		SRBreakTestTime true false true false false false 90 100 20 10 4 15 766 false false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+
+
+%?page
+%?fn	function_overspeedtest
+%?brief	overspeed protection test
+%?bbox	0 0 960 720
+/function_overspeedtest {
+	
+%?manual_beg
+	%%%%%%%%%%%%%%% States of overspeedprotection test activation %%%%%%%%%%%%%%%
+	SXstaEnableDrive true eq {			% Drive is enabled
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 520 translate 
+		0 rotate 
+		1 1 scale 
+		1 1 
+		baTouchButton003 {	
+			/SXstaOverSpProtRequest true store 
+			} { 
+			/SXstaOverSpProtRequest false store 
+		} ifelse 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% activation symbol
+	matrix currentmatrix_nlw 
+	currentcolor
+	SXstaOverSpProtActive true eq {
+		Green
+	} if
+	800 520 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral071 
+	setcolor 
+	setmatrix_nlw 
+	% Show enable drive symbols
+	SXstaOverSpProtActive false eq {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 640 translate 
+		0 rotate 
+		1 1 scale 
+		SDstaDriveEnable 
+		spEnableDrive002 
+		setcolor 
+		setmatrix_nlw 
+	} if	
+%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 80 translate 
+	0 rotate 
+	1 1 scale 
+	0 20 0 620 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 80 translate 
+	0 rotate 
+	1 1 scale 
+	0 20 0 620 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 620 translate 
+	0 rotate 
+	1 1 scale 
+	gsEngine048 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	840 700 translate 
+	0 rotate 
+	1 1 scale 
+	(3.2) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	110 650 translate 
+	0 rotate 
+	0.60 0.60 scale 
+	gsEngine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	110 430 translate 
+	0 rotate 
+	1 1 scale 
+	SRactEngineSpeed (1/min) 0 2000 false false true false false false 2000 2000 0 0 4 15 180 true false 0 false 0 0 true 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	140 410 translate 
+	0 rotate 
+	1 1 scale 
+	SRactEngineSpeed 4 () () false false false false 
+	FSmidFont 1 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 430 translate 
+	0 rotate 
+	1 1 scale 
+	SRactHydOilTemp (째C) 0 120 false false true false false false 120 120 20 0 6 15 180 true false 0 false 0 0 true 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	260 410 translate 
+	0 rotate 
+	1 1 scale 
+	SRactHydOilTemp 4 () () false false false false 
+	FSmidFont 1 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 650 translate 
+	0 rotate 
+	0.60 0.60 scale 
+	gsHydraulic005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	360 600 translate 
+	0 rotate 
+	1.50 1.50 scale 
+	ssGeneral022 
+	setcolor 
+	setmatrix_nlw 
+	SXstaOverSpProtActive true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 360 600 translate 
+		0 rotate 
+		1.50 1.50 scale 
+		ssGeneral023 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXstaOverSpProtActive true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		87 123 translate 
+		270 rotate 
+		1 1 scale 
+		SDstaOverSpProtTestTimeRemain () 0 
+		SROverspeedTestTime true false true false false false 90 100 20 10 4 15 766 false false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	345 634 translate 
+	0 rotate 
+	0.80 0.80 scale 
+	gsEngine048 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	function_calib_pt
+%?brief	calib powertrain page
+%?bbox	0 0 960 720
+/function_calib_pt {
+	
+%?manual_beg
+	%%%%%%%%%%%%%%% Activation of calibration %%%%%%%%%%%%%%%
+	SXstaEnableDrive true eq {				% Drive enabled
+		SXstaCalibActive false eq {			% Calib not active -> Show flashing "P" to lock drive
+			true setflash
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Yellow 40 680 translate 
+			0 rotate 
+			2.0 2.0 scale 
+			(P) 8 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw
+			false setflash
+		} {
+			% show button for deactivate calib
+			matrix currentmatrix_nlw 
+			currentcolor 
+			800 520 translate 
+			0 rotate 
+			1 1 scale 
+			1 1 
+			baTouchButton003 {	
+				/SXstaCalibRequest true store 
+				} { 
+				/SXstaCalibRequest false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 		
+		} ifelse
+	} { 									% Drive locked
+		SXstaCalibActive true eq {			% Calib active -> Show "P" to enable drive
+			matrix currentmatrix_nlw 
+			currentcolor 
+			0 640 translate 
+			0 rotate 
+			1 1 scale 
+			SDstaDriveEnable 
+			spEnableDrive002
+			setcolor 
+			setmatrix_nlw 
+			% show button for deactivate calib
+			matrix currentmatrix_nlw 
+			currentcolor 
+			800 520 translate 
+			0 rotate 
+			1 1 scale 
+			1 1 
+			baTouchButton003 {	
+				/SXstaCalibRequest true store 
+				} { 
+				/SXstaCalibRequest false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 		
+		} {
+			% show button for activate calib
+			matrix currentmatrix_nlw 
+			currentcolor 
+			800 520 translate 
+			0 rotate 
+			1 1 scale 
+			1 1 
+			baTouchButton003 {	
+				/SXstaCalibRequest true store 
+				} { 
+				/SXstaCalibRequest false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 		
+		} ifelse
+	} ifelse
+	% activation symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	SXstaCalibActive true eq {
+		Green
+	} if
+	800 520 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral071 
+	setcolor 
+	setmatrix_nlw 
+	% Show hydraulic oil temperature
+	% colored when temperature too low
+	SDactUnitTemperatur 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		SXstaCalibHydOilTempLow  true eq {
+			Red
+		} if
+		530 500 translate 
+		0 rotate 
+		1 1 scale 
+		(캟) 0 2 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	% Show engine speed
+	% colored when speed is too low
+	SDactUnitSpeed 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		SXstaCalibEngSpeedLow true eq {
+			Red
+		} if
+		690 415 translate 
+		0 rotate 
+		1 1 scale 
+		(rpm) 0 2 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+
+%?manual_end
+	
+	SDstaCalibMain 14 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 440 translate 
+		0 rotate 
+		1 1 scale 
+		1 1 
+		baTouchButton003 {	
+			/SXstaCalibSaveRequest true store 
+			} { 
+			/SXstaCalibSaveRequest false store 
+		} ifelse 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 425 translate 
+		0 rotate 
+		1 1 scale 
+		SRactCalibCurrPumpLeftForw 4 (mA) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 425 translate 
+		0 rotate 
+		1 1 scale 
+		SRactCalibCurrPumpRightForw 4 (mA) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 330 translate 
+		0 rotate 
+		1 1 scale 
+		SRactCalibCurrPumpLeftBack 4 (mA) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 330 translate 
+		0 rotate 
+		1 1 scale 
+		SRactCalibCurrPumpRightBack 4 (mA) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		695 215 translate 
+		0 rotate 
+		1 1 scale 
+		SRactCalibCurrMotorRight 4 (mA) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		275 215 translate 
+		0 rotate 
+		1 1 scale 
+		SRactCalibCurrMotorLeft 4 (mA) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 80 translate 
+	0 rotate 
+	1 1 scale 
+	0 20 0 620 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	880 80 translate 
+	0 rotate 
+	1 1 scale 
+	0 20 0 620 
+	baPageLine002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	875 680 translate 
+	180 rotate 
+	0.19 0.19 scale 
+	ssPowertrain 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	840 700 translate 
+	0 rotate 
+	1 1 scale 
+	(3.3) 
+	FSmidFont 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	
+	SDstaCalibMain 1 eq 
+	SDstaCalibMain 3 eq or 
+	SDstaCalibMain 7 eq or 
+	SDstaCalibMain 11 eq or 
+	SDstaCalibMain 13 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 560 translate 
+		0 rotate 
+		1 1 scale 
+		ssJoystick006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 5 eq 
+	SDstaCalibMain 9 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 640 translate 
+		180 rotate 
+		1 1 scale 
+		ssJoystick006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	660 445 translate 
+	180 rotate 
+	1 1 scale 
+	ssPowertrain 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	
+	SDstaCalibRight 7 eq 
+	SDstaCalibRight 17 eq or 
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 730 200 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibRight 7 eq 
+	SDstaCalibRight 17 eq or 
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 670 315 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibRight 7 eq 
+	SDstaCalibRight 17 eq or 
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 670 410 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibLeft 7 eq 
+	SDstaCalibLeft 17 eq or 
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 180 200 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibLeft 7 eq 
+	SDstaCalibLeft 17 eq or 
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 250 315 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibLeft 7 eq 
+	SDstaCalibLeft 17 eq or 
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 250 410 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SDstaCalibMain 14 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 440 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral081 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	SXstaCalibHydOilTempLow true eq {	
+		Yellow 
+	} if 330 500 translate 
+	0 rotate 
+	0.60 0.60 scale 
+	gsHydraulic005 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibRight 12 eq 
+	SDstaCalibRight 2 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 670 315 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibRight 5 eq 
+	SDstaCalibRight 6 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 670 315 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibRight 15 eq 
+	SDstaCalibRight 16 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 670 315 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibRight 12 eq 
+	SDstaCalibRight 2 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 730 200 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibRight 5 eq 
+	SDstaCalibRight 6 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 730 200 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibRight 15 eq 
+	SDstaCalibRight 16 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 730 200 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibLeft 5 eq 
+	SDstaCalibLeft 6 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 250 410 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibLeft 2 eq 
+	SDstaCalibLeft 12 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 250 410 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibLeft 15 eq 
+	SDstaCalibLeft 16 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 250 410 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibLeft 15 eq 
+	SDstaCalibLeft 16 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 250 315 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibLeft 2 eq 
+	SDstaCalibLeft 12 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 250 315 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibLeft 5 eq 
+	SDstaCalibLeft 6 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 250 315 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibLeft 5 eq 
+	SDstaCalibLeft 6 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 180 200 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibLeft 2 eq 
+	SDstaCalibLeft 12 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 180 200 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibLeft 15 eq 
+	SDstaCalibLeft 16 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 180 200 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibRight 12 eq 
+	SDstaCalibRight 2 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 670 410 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibRight 5 eq 
+	SDstaCalibRight 6 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 670 410 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibRight 15 eq 
+	SDstaCalibRight 16 eq or and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 670 410 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibRight 2 ne and 
+	SDstaCalibRight 5 ne and 
+	SDstaCalibRight 6 ne and 
+	SDstaCalibRight 7 ne and 
+	SDstaCalibRight 12 ne and 
+	SDstaCalibRight 16 ne and 
+	SDstaCalibRight 15 ne and 
+	SDstaCalibRight 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 700 345 translate 
+		MRrotate 
+		rotate 
+		1 1 scale 
+		ssGear001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibLeft 2 ne and 
+	SDstaCalibLeft 5 ne and 
+	SDstaCalibLeft 6 ne and 
+	SDstaCalibLeft 7 ne and 
+	SDstaCalibLeft 12 ne and 
+	SDstaCalibLeft 16 ne and 
+	SDstaCalibLeft 15 ne and 
+	SDstaCalibLeft 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 280 440 translate 
+		MRrotate 
+		rotate 
+		1 1 scale 
+		ssGear001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibRight 2 ne and 
+	SDstaCalibRight 5 ne and 
+	SDstaCalibRight 6 ne and 
+	SDstaCalibRight 7 ne and 
+	SDstaCalibRight 12 ne and 
+	SDstaCalibRight 16 ne and 
+	SDstaCalibRight 15 ne and 
+	SDstaCalibRight 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 760 230 translate 
+		MRrotate 
+		rotate 
+		1 1 scale 
+		ssGear001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibLeft 2 ne and 
+	SDstaCalibLeft 5 ne and 
+	SDstaCalibLeft 6 ne and 
+	SDstaCalibLeft 7 ne and 
+	SDstaCalibLeft 12 ne and 
+	SDstaCalibLeft 16 ne and 
+	SDstaCalibLeft 15 ne and 
+	SDstaCalibLeft 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 280 345 translate 
+		MRrotate 
+		rotate 
+		1 1 scale 
+		ssGear001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibLeft 2 ne and 
+	SDstaCalibLeft 5 ne and 
+	SDstaCalibLeft 6 ne and 
+	SDstaCalibLeft 7 ne and 
+	SDstaCalibLeft 12 ne and 
+	SDstaCalibLeft 16 ne and 
+	SDstaCalibLeft 15 ne and 
+	SDstaCalibLeft 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 210 230 translate 
+		MRrotate 
+		rotate 
+		1 1 scale 
+		ssGear001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibRight 2 ne and 
+	SDstaCalibRight 5 ne and 
+	SDstaCalibRight 6 ne and 
+	SDstaCalibRight 7 ne and 
+	SDstaCalibRight 12 ne and 
+	SDstaCalibRight 16 ne and 
+	SDstaCalibRight 15 ne and 
+	SDstaCalibRight 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 700 440 translate 
+		MRrotate 
+		rotate 
+		1 1 scale 
+		ssGear001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibLeft 2 eq 
+	SDstaCalibLeft 5 eq or 
+	SDstaCalibLeft 6 eq or 
+	SDstaCalibLeft 12 eq or 
+	SDstaCalibLeft 16 eq or 
+	SDstaCalibLeft 15 eq or 
+	SDstaCalibRight 2 eq or 
+	SDstaCalibRight 5 eq or 
+	SDstaCalibRight 6 eq or 
+	SDstaCalibRight 12 eq or 
+	SDstaCalibRight 16 eq or 
+	SDstaCalibRight 15 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 880 640 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral044 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 880 560 translate 
+		0 rotate 
+		1 1 scale 
+		ssHydr001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 880 560 translate 
+		0 rotate 
+		1 1 scale 
+		ssHydr002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SXHasTwinMotorSet true eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 940 570 translate 
+		0 rotate 
+		0.62 0.62 scale 
+		(1) 7 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SDstaCalibMain 12 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 940 570 translate 
+		0 rotate 
+		0.62 0.62 scale 
+		(2) 7 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SXHasTwinPumpSet true eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 940 570 translate 
+		0 rotate 
+		0.62 0.62 scale 
+		(1) 7 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 6 eq 
+	SDstaCalibMain 8 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 940 570 translate 
+		0 rotate 
+		0.62 0.62 scale 
+		(2) 7 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibLeft 1 eq 
+	SDstaCalibRight 1 eq or 
+	SDstaCalibLeft 2 eq or 
+	SDstaCalibRight 2 eq or 
+	SDstaCalibLeft 3 eq or 
+	SDstaCalibRight 3 eq or 
+	SDstaCalibLeft 4 eq or 
+	SDstaCalibRight 4 eq or 
+	SDstaCalibLeft 5 eq or 
+	SDstaCalibRight 5 eq or 
+	SDstaCalibLeft 6 eq or 
+	SDstaCalibRight 6 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 920 520 translate 
+		0 rotate 
+		1 1 scale 
+		(Imin) 7 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibLeft 11 eq 
+	SDstaCalibRight 11 eq or 
+	SDstaCalibLeft 12 eq or 
+	SDstaCalibRight 12 eq or 
+	SDstaCalibLeft 13 eq or 
+	SDstaCalibRight 13 eq or 
+	SDstaCalibLeft 14 eq or 
+	SDstaCalibRight 14 eq or 
+	SDstaCalibLeft 15 eq or 
+	SDstaCalibRight 15 eq or 
+	SDstaCalibLeft 16 eq or 
+	SDstaCalibRight 16 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 920 520 translate 
+		0 rotate 
+		1 1 scale 
+		(Imax) 7 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibLeft 11 ne and 
+	SDstaCalibLeft 12 ne and 
+	SDstaCalibLeft 13 ne and 
+	SDstaCalibLeft 14 ne and 
+	SDstaCalibLeft 15 ne and 
+	SDstaCalibLeft 16 ne and 
+	SDstaCalibLeft 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 400 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibLeft 11 ne and 
+	SDstaCalibLeft 12 ne and 
+	SDstaCalibLeft 13 ne and 
+	SDstaCalibLeft 14 ne and 
+	SDstaCalibLeft 15 ne and 
+	SDstaCalibLeft 16 ne and 
+	SDstaCalibLeft 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 450 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibLeft 1 ne and 
+	SDstaCalibLeft 2 ne and 
+	SDstaCalibLeft 3 ne and 
+	SDstaCalibLeft 4 ne and 
+	SDstaCalibLeft 5 ne and 
+	SDstaCalibLeft 6 ne and 
+	SDstaCalibLeft 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 400 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibLeft 1 ne and 
+	SDstaCalibLeft 2 ne and 
+	SDstaCalibLeft 3 ne and 
+	SDstaCalibLeft 4 ne and 
+	SDstaCalibLeft 5 ne and 
+	SDstaCalibLeft 6 ne and 
+	SDstaCalibLeft 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 450 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibLeft 11 ne and 
+	SDstaCalibLeft 12 ne and 
+	SDstaCalibLeft 13 ne and 
+	SDstaCalibLeft 14 ne and 
+	SDstaCalibLeft 15 ne and 
+	SDstaCalibLeft 16 ne and 
+	SDstaCalibLeft 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 305 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibLeft 11 ne and 
+	SDstaCalibLeft 12 ne and 
+	SDstaCalibLeft 13 ne and 
+	SDstaCalibLeft 14 ne and 
+	SDstaCalibLeft 15 ne and 
+	SDstaCalibLeft 16 ne and 
+	SDstaCalibLeft 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 355 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibLeft 1 ne and 
+	SDstaCalibLeft 2 ne and 
+	SDstaCalibLeft 3 ne and 
+	SDstaCalibLeft 4 ne and 
+	SDstaCalibLeft 5 ne and 
+	SDstaCalibLeft 6 ne and 
+	SDstaCalibLeft 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 305 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibLeft 1 ne and 
+	SDstaCalibLeft 2 ne and 
+	SDstaCalibLeft 3 ne and 
+	SDstaCalibLeft 4 ne and 
+	SDstaCalibLeft 5 ne and 
+	SDstaCalibLeft 6 ne and 
+	SDstaCalibLeft 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		345 355 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibLeft 11 ne and 
+	SDstaCalibLeft 12 ne and 
+	SDstaCalibLeft 13 ne and 
+	SDstaCalibLeft 14 ne and 
+	SDstaCalibLeft 15 ne and 
+	SDstaCalibLeft 16 ne and 
+	SDstaCalibLeft 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		275 190 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibLeft 11 ne and 
+	SDstaCalibLeft 12 ne and 
+	SDstaCalibLeft 13 ne and 
+	SDstaCalibLeft 14 ne and 
+	SDstaCalibLeft 15 ne and 
+	SDstaCalibLeft 16 ne and 
+	SDstaCalibLeft 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		275 240 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibLeft 1 ne and 
+	SDstaCalibLeft 2 ne and 
+	SDstaCalibLeft 3 ne and 
+	SDstaCalibLeft 4 ne and 
+	SDstaCalibLeft 5 ne and 
+	SDstaCalibLeft 6 ne and 
+	SDstaCalibLeft 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		275 190 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibLeft 1 ne and 
+	SDstaCalibLeft 2 ne and 
+	SDstaCalibLeft 3 ne and 
+	SDstaCalibLeft 4 ne and 
+	SDstaCalibLeft 5 ne and 
+	SDstaCalibLeft 6 ne and 
+	SDstaCalibLeft 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		275 240 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibRight 11 ne and 
+	SDstaCalibRight 12 ne and 
+	SDstaCalibRight 13 ne and 
+	SDstaCalibRight 14 ne and 
+	SDstaCalibRight 15 ne and 
+	SDstaCalibRight 16 ne and 
+	SDstaCalibRight 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 305 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibRight 11 ne and 
+	SDstaCalibRight 12 ne and 
+	SDstaCalibRight 13 ne and 
+	SDstaCalibRight 14 ne and 
+	SDstaCalibRight 15 ne and 
+	SDstaCalibRight 16 ne and 
+	SDstaCalibRight 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 355 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibRight 1 ne and 
+	SDstaCalibRight 2 ne and 
+	SDstaCalibRight 3 ne and 
+	SDstaCalibRight 4 ne and 
+	SDstaCalibRight 5 ne and 
+	SDstaCalibRight 6 ne and 
+	SDstaCalibRight 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 305 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 4 eq 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibRight 1 ne and 
+	SDstaCalibRight 2 ne and 
+	SDstaCalibRight 3 ne and 
+	SDstaCalibRight 4 ne and 
+	SDstaCalibRight 5 ne and 
+	SDstaCalibRight 6 ne and 
+	SDstaCalibRight 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 355 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibRight 11 ne and 
+	SDstaCalibRight 12 ne and 
+	SDstaCalibRight 13 ne and 
+	SDstaCalibRight 14 ne and 
+	SDstaCalibRight 15 ne and 
+	SDstaCalibRight 16 ne and 
+	SDstaCalibRight 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		695 190 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibRight 11 ne and 
+	SDstaCalibRight 12 ne and 
+	SDstaCalibRight 13 ne and 
+	SDstaCalibRight 14 ne and 
+	SDstaCalibRight 15 ne and 
+	SDstaCalibRight 16 ne and 
+	SDstaCalibRight 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		695 240 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibRight 1 ne and 
+	SDstaCalibRight 2 ne and 
+	SDstaCalibRight 3 ne and 
+	SDstaCalibRight 4 ne and 
+	SDstaCalibRight 5 ne and 
+	SDstaCalibRight 6 ne and 
+	SDstaCalibRight 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		695 190 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 10 eq 
+	SDstaCalibMain 12 eq or 
+	SDstaCalibRight 1 ne and 
+	SDstaCalibRight 2 ne and 
+	SDstaCalibRight 3 ne and 
+	SDstaCalibRight 4 ne and 
+	SDstaCalibRight 5 ne and 
+	SDstaCalibRight 6 ne and 
+	SDstaCalibRight 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		695 240 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibRight 11 ne and 
+	SDstaCalibRight 12 ne and 
+	SDstaCalibRight 13 ne and 
+	SDstaCalibRight 14 ne and 
+	SDstaCalibRight 15 ne and 
+	SDstaCalibRight 16 ne and 
+	SDstaCalibRight 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 400 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibRight 11 ne and 
+	SDstaCalibRight 12 ne and 
+	SDstaCalibRight 13 ne and 
+	SDstaCalibRight 14 ne and 
+	SDstaCalibRight 15 ne and 
+	SDstaCalibRight 16 ne and 
+	SDstaCalibRight 17 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 450 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContBegTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibRight 1 ne and 
+	SDstaCalibRight 2 ne and 
+	SDstaCalibRight 3 ne and 
+	SDstaCalibRight 4 ne and 
+	SDstaCalibRight 5 ne and 
+	SDstaCalibRight 6 ne and 
+	SDstaCalibRight 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 400 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolNeg 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibRight 1 ne and 
+	SDstaCalibRight 2 ne and 
+	SDstaCalibRight 3 ne and 
+	SDstaCalibRight 4 ne and 
+	SDstaCalibRight 5 ne and 
+	SDstaCalibRight 6 ne and 
+	SDstaCalibRight 7 ne and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		625 450 translate 
+		0 rotate 
+		1 1 scale 
+		PRCalibContEndTolPos 3 (mA) false false 6 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		214 130 translate 
+		0 rotate 
+		1 1 scale 
+		([) 3 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		470 130 translate 
+		0 rotate 
+		1 1 scale 
+		(]) 3 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		293 127 translate 
+		0 rotate 
+		1 1 scale 
+		(..) 3 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		384 127 translate 
+		0 rotate 
+		1 1 scale 
+		(..) 3 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		500 130 translate 
+		0 rotate 
+		1 1 scale 
+		([) 3 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		750 130 translate 
+		0 rotate 
+		1 1 scale 
+		(]) 3 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		580 127 translate 
+		0 rotate 
+		1 1 scale 
+		(..) 3 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		666 127 translate 
+		0 rotate 
+		1 1 scale 
+		(..) 3 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	SXstaCalibEngSpeedLow true eq {	
+		Yellow 
+	} if 600 500 translate 
+	0 rotate 
+	0.60 0.60 scale 
+	gsEngine048 
+	setcolor 
+	setmatrix_nlw 
+	SXstaCalibEngSpeedLow true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 0 480 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		gsEngine048 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXstaCalibHydOilTempLow true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 0 400 translate 
+		0 rotate 
+		0.87 0.87 scale 
+		gsHydraulic005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXstaCalibEngSpeedLow true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 45 519 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		gsGeneral045 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	SXstaCalibHydOilTempLow true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 45 442 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		gsGeneral045 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		439 120 translate 
+		0 rotate 
+		1 1 scale 
+		SRLeftSpeedPosTol 4 (Hz) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		259 120 translate 
+		0 rotate 
+		1 1 scale 
+		SRLeftSpeedNegTol 4 (Hz) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	349 120 translate 
+	0 rotate 
+	1 1 scale 
+	SRactFreqTrackLeft 4 (Hz) false false 3 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		722 120 translate 
+		0 rotate 
+		1 1 scale 
+		SRRightSpeedPosTol 4 (Hz) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	SDstaCalibMain 2 eq 
+	SDstaCalibMain 4 eq or 
+	SDstaCalibMain 6 eq or 
+	SDstaCalibMain 8 eq or 
+	SDstaCalibMain 10 eq or 
+	SDstaCalibMain 12 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		547 120 translate 
+		0 rotate 
+		1 1 scale 
+		SRRightSpeedNegTol 4 (Hz) false false 3 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	632 120 translate 
+	0 rotate 
+	1 1 scale 
+	SRactFreqTrackRight 4 (Hz) false false 3 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	625 600 translate 
+	0 rotate 
+	1 1 scale 
+	SRactEngineSpeed 30 (1/min) 0 2500 10 10 0 0 0 7 false 10 2 0 0 0 225 -270 95 75 true 0 
+	baRoundDisplay003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	355 600 translate 
+	0 rotate 
+	1 1 scale 
+	SRactHydOilTemp 30 (째C) 0 120 10 10 0 0 0 7 false 12 2 0 0 0 225 -270 95 75 true 0 
+	baRoundDisplay003 
+	setcolor 
+	setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	function_fill
+%?brief	function filling mode hydraulic
+%?bbox	0 0 960 720
+/function_fill {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	800 520 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+%?manual_beg
+		/SXFillingRequest true store 
+		} {
+		/SXFillingRequest false store 
+	} ifelse
+	%?manual_end
+		
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	%%%%%%%%%%%%%%%%%%%%%% MOSTLY SHOWN ELEMENTS %%%%%%%%%%%%%%%%%%%%%%
+	matrix currentmatrix_nlw 		% menu page
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	(menu) 
+	display_page 
+	setcolor 
+	setmatrix_nlw 
+	%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		110 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRactEngineSpeed (1/min) 0 2000 false false true false false false 2000 2000 0 0 4 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		140 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRactEngineSpeed 4 () () false false false false 
+		FSmidFont 1 
+		baValueText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		230 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRactHydOilTemp (째C) 0 120 false false true false false false 120 120 20 0 6 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		260 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRactHydOilTemp 4 () () false false false false 
+		FSmidFont 1 
+		baValueText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		230 650 translate 
+		0 rotate 
+		0.60 0.60 scale 
+		gsHydraulic005 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 520 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+		SXFillingActive true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 800 520 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral071 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 620 translate 
+		0 rotate 
+		1 1 scale 
+		ssHydr003 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		840 700 translate 
+		0 rotate 
+		1 1 scale 
+		(3.5) 
+		FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		110 650 translate 
+		0 rotate 
+		0.60 0.60 scale 
+		gsEngine001 
+		setcolor 
+		setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	function_CalibJoy
+%?brief	Calibration Joystick
+%?bbox	0 0 960 720
+/function_CalibJoy {
+		
+%?manual_beg
+	%%%%%%%%%% List all used variables from joystick below here %%%%%%%%%%
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 100 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.use.01 6 (can.2.67.use.01) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 120 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.use.02 6 (can.2.67.use.02) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 140 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.usable.01 6 (can.2.67.usable.01) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 160 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.usable.02 6 (can.2.67.usable.02) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 180 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.ctrl.01 6 (can.2.67.ctrl.01) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 200 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.ctrl.02 6 (can.2.67.ctrl.02) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 220 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.state.01 6 (can.2.67.state.01) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 240 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.state.02 6 (can.2.67.state.02) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 260 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.identnr 6 (can.2.67.identnr) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	% calculate priority
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		client.8.priority 
+		spUserPriority 
+		/MXHasLevel exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	% indicate no connetion to joystick
+%?manual_end
+		
+		can.2.67.identnr 0 eq {	
+			true setflash 
+			matrix currentmatrix_nlw 
+			currentcolor 
+			920 680 translate 
+			0 rotate 
+			0.25 0.25 scale 
+			gsGeneral054 
+			setcolor 
+			setmatrix_nlw 
+			false setflash 
+		} if 
+%?manual_beg
+	%%%%%%%%%% 4Q lever part calib %%%%%%%%%%
+	can.2.67.identnr 10305810.0 eq  % ID = 10305809 aber real Darstellung 10305810!
+	can.2.67.identnr 10313010.0 eq or {	
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		127 142 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.ctrl.01 can.2.67.ctrl.02 IRDriveLevXAxis 
+		IRDriveLevYAxis can.2.67.state.01 can.2.67.state.02 
+		sp4QLever 
+		/can.2.67.ctrl.01 exch store 
+		/can.2.67.ctrl.02 exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if
+	%%%%%%%%%% V lever part calib %%%%%%%%%%
+	can.2.67.identnr 10307280.0 eq {	% ID = 10307277 aber real Darstellung 10307280!
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		137 223 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.ctrl.02 IRDriveLevYAxis can.2.67.state.02 
+		spVLever 
+		/can.2.67.ctrl.02 exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if	
+	%%%%%%%%%%% 4Q lever %%%%%%%%%%
+	can.2.67.identnr 10305810.0 eq  % ID = 10305809 aber real Darstellung 10305810!
+	can.2.67.identnr 10313010.0 eq or {	
+		%%%%%%%%%% Activate lever axis %%%%%%%%%%
+		can.2.67.state.01 0 eq 			% Activation only possible when no calib is active
+		can.2.67.state.02 0 eq and {		 
+			can.2.67.usable.01 1 eq {	
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		577 518 translate 
+		0 rotate 
+		1 1 scale 
+		MXHasLevel 1 1 0 0 0 
+		can.2.67.ctrl.01 can.2.67.use.01 (ssGeneral051) 
+		spEnabCalib 
+		/can.2.67.ctrl.01 exch store 
+		/can.2.67.use.01 exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+			} if
+			can.2.67.usable.02 1 eq {	
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		577 423 translate 
+		0 rotate 
+		1 1 scale 
+		MXHasLevel 1 1 0 80 90 
+		can.2.67.ctrl.02 can.2.67.use.02 (ssGeneral051) 
+		spEnabCalib 
+		/can.2.67.ctrl.02 exch store 
+		/can.2.67.use.02 exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+			} if 
+		} if 
+	} if
+	%%%%%%%%%% V-lever %%%%%%%%%
+	can.2.67.identnr 10307280.0 eq {	% ID = 10307277 aber real Darstellung 10307280!
+		%%%%%%%%%% Activate lever axis %%%%%%%%%%
+		can.2.67.state.02 0 eq {		 % Activation only possible when no calib is active
+			can.2.67.usable.02 1 eq {	
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		577 518 translate 
+		0 rotate 
+		1 1 scale 
+		MXHasLevel 1 1 0 0 0 
+		can.2.67.ctrl.02 can.2.67.use.02 (ssGeneral050) 
+		spEnabCalib 
+		/can.2.67.ctrl.02 exch store 
+		/can.2.67.use.02 exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+			} if 
+		} if 
+	} if
+%?manual_end
+		
+%?manual_beg
+	can.2.67.state.01 0 ne
+	can.2.67.state.02 0 ne or {
+		/SXExternServFunctionActive true store
+	} {
+		/SXExternServFunctionActive false store	
+	} ifelse
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		(menu) 
+		display_page 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		810 620 translate 
+		0 rotate 
+		1 1 scale 
+		ssJoystick004 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		840 700 translate 
+		0 rotate 
+		1 1 scale 
+		(3.6) 
+		FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	function_CalibPed
+%?brief	Calibration pedals
+%?bbox	0 0 960 720
+/function_CalibPed {
+		
+%?manual_beg
+	%%%%% List all used variables from can module below here %%%%%
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 100 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.use.03 6 (can.2.67.use.03) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 120 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.use.04 6 (can.2.67.use.04) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 140 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.use.05 6 (can.2.67.use.05) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 160 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.usable.03 6 (can.2.67.usable.03) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 180 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.usable.04 6 (can.2.67.usable.04) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 200 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.usable.05 6 (can.2.67.usable.05) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 220 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.ctrl.03 6 (can.2.67.ctrl.03) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 240 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.ctrl.04 6 (can.2.67.ctrl.04) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 260 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.ctrl.05 6 (can.2.67.ctrl.05) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 280 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.state.03 6 (can.2.67.state.03) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 300 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.state.04 6 (can.2.67.state.04) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 320 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.state.05 6 (can.2.67.state.05) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Invisible 200 340 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.identnr 6 (can.2.67.identnr) false false 
+		FSbigFont 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	% calculate priority
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		client.8.priority 
+		spUserPriority 
+		/MXHasLevel exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	% indicate no connetion to joystick
+%?manual_end
+		
+		can.2.67.identnr 0 eq {	
+			true setflash 
+			matrix currentmatrix_nlw 
+			currentcolor 
+			920 680 translate 
+			0 rotate 
+			0.25 0.25 scale 
+			gsGeneral054 
+			setcolor 
+			setmatrix_nlw 
+			false setflash 
+		} if 
+%?manual_beg
+	% inchpedal part calib
+	can.2.67.usable.03 1 eq 	
+	can.2.67.state.04 0 eq and
+	can.2.67.state.05 0 eq and { 
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		124 208 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.ctrl.03 IRDriveLeverInchBreak can.2.67.state.03 
+		spInchpedal 
+		/can.2.67.ctrl.03 exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if
+	% steerpedal part calib
+	can.2.67.usable.04 1 eq
+	can.2.67.usable.05 1 eq and
+	can.2.67.state.03 0 eq and { 
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		124 208 translate 
+		0 rotate 
+		1 1 scale 
+		can.2.67.ctrl.05 can.2.67.ctrl.04 IRDriveLeverSteerRight 
+		IRDriveLeverSteerLeft can.2.67.state.05 can.2.67.state.04 
+		spSteerpedals 
+		/can.2.67.ctrl.05 exch store 
+		/can.2.67.ctrl.04 exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if
+	%%%%%%%%%%% Activate pedal axis %%%%%%%%%%
+	can.2.67.state.03 0 eq			% Activation only possible when no calib is active
+	can.2.67.state.04 0 eq and
+	can.2.67.state.05 0 eq and { 
+		%%%%%%%%%%% Activate inchpedal axis %%%%%%%%%%
+		can.2.67.usable.03 1 eq {	
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		577 518 translate 
+		0 rotate 
+		1 1 scale 
+		MXHasLevel 1 1 0 0 0 
+		can.2.67.ctrl.03 can.2.67.use.03 (ssPedal002) 
+		spEnabCalib 
+		/can.2.67.ctrl.03 exch store 
+		/can.2.67.use.03 exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+		} if
+		%%%%%%%%%%% Activate steerpedal axis %%%%%%%%%%
+		can.2.67.usable.04 1 eq
+		can.2.67.usable.05 1 eq and {
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		577 423 translate 
+		0 rotate 
+		1 1 scale 
+		MXHasLevel 0.23 0.23 20 6 0 
+		can.2.67.ctrl.04 can.2.67.use.05 can.2.67.use.04 (ssSteerPedals001) 
+		spEnabCalibSteerPed 
+		/can.2.67.ctrl.04 exch store 
+		/can.2.67.use.04 exch store 
+		/can.2.67.use.05 exch store 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+		} if
+	} if
+%?manual_end
+		
+%?manual_beg
+	can.2.67.state.03 0 ne
+	can.2.67.state.04 0 ne or
+	can.2.67.state.05 0 ne or {
+		/SXExternServFunctionActive true store
+	} {
+		/SXExternServFunctionActive false store	
+	} ifelse
+%?manual_end
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		(menu) 
+		display_page 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 620 translate 
+		0 rotate 
+		1 1 scale 
+		ssPedal001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		840 700 translate 
+		0 rotate 
+		1 1 scale 
+		(3.7) 
+		FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+} def
+
+
+%?page
+%?fn	function_ManualDrive
+%?brief	Manuelle Fahrantriebssteuerung
+%?bbox	0 0 960 720
+/function_ManualDrive {
+		
+%?manual_beg
+	%%%%%%%%%%%%%%% Activation of calibration %%%%%%%%%%%%%%%
+	SXstaEnableDrive true eq {				% Drive enabled
+		SXManContActive false eq {			% Calib not active -> Show flashing "P" to lock drive
+			true setflash
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Yellow 40 680 translate 
+			0 rotate 
+			2.0 2.0 scale 
+			(P) 8 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw
+			false setflash
+		} {
+			% show button for deactivate calib
+			matrix currentmatrix_nlw 
+			currentcolor 
+			800 520 translate 
+			0 rotate 
+			1 1 scale 
+			1 1 
+			baTouchButton003 {	
+				/SXManContRequest true store 
+				} { 
+				/SXManContRequest false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 		
+		} ifelse
+	} { 									% Drive locked
+		SXManContActive true eq {			% Calib active -> Show "P" to enable drive
+			matrix currentmatrix_nlw 
+			currentcolor 
+			0 640 translate 
+			0 rotate 
+			1 1 scale 
+			SDstaDriveEnable 
+			spEnableDrive002
+			setcolor 
+			setmatrix_nlw 
+			% show button for deactivate calib
+			matrix currentmatrix_nlw 
+			currentcolor 
+			800 520 translate 
+			0 rotate 
+			1 1 scale 
+			1 1 
+			baTouchButton003 {	
+				/SXManContRequest true store 
+				} { 
+				/SXManContRequest false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 		
+		} {
+			% show button for activate calib
+			matrix currentmatrix_nlw 
+			currentcolor 
+			800 520 translate 
+			0 rotate 
+			1 1 scale 
+			1 1 
+			baTouchButton003 {	
+				/SXManContRequest true store 
+				} { 
+				/SXManContRequest false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 		
+		} ifelse
+	} ifelse
+%?manual_end
+		
+		SXManContEnableStateChange true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			641 80 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManContReqEnabMotorRight1 true store 
+				} { 
+				/SXManContReqEnabMotorRight1 false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXHasTwinMotorSet true eq 
+		SXManContEnableStateChange true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			561 80 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManContReqEnabMotorRight2 true store 
+				} { 
+				/SXManContReqEnabMotorRight2 false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXHasTwinPumpSet true eq 
+		SXManContEnableStateChange true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			721 80 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManContReqEnabPumpRight2 true store 
+				} { 
+				/SXManContReqEnabPumpRight2 false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContEnableStateChange true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			801 80 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManContReqEnabPumpRight1 true store 
+				} { 
+				/SXManContReqEnabPumpRight1 false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXHasTwinMotorSet true eq 
+		SXManContEnableStateChange true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			320 80 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManContReqEnabMotorLeft2 true store 
+				} { 
+				/SXManContReqEnabMotorLeft2 false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContEnableStateChange true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			240 80 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManContReqEnabMotorLeft1 true store 
+				} { 
+				/SXManContReqEnabMotorLeft1 false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXHasTwinPumpSet true eq 
+		SXManContEnableStateChange true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			160 80 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManContReqEnabPumpLeft2 true store 
+				} { 
+				/SXManContReqEnabPumpLeft2 false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContEnableStateChange true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			80 80 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManContReqEnabPumpLeft1 true store 
+				} { 
+				/SXManContReqEnabPumpLeft1 false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		2 0 translate 
+		0 rotate 
+		1 1 scale 
+		(menu) 
+		display_page 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 520 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		SRPumpLeftForw1 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			135 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpLeftForw1 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SRPumpLeftBack1 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			135 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpLeftBack1 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 80 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			160 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 80 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			320 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		799 80 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			721 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		641 80 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			561 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SRPumpLeftForw2 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			215 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpLeftForw2 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SRPumpLeftBack2 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			215 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpLeftBack2 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContEnabStateMotorLeft1 true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			293 164 translate 
+			0 rotate 
+			1 1 scale 
+			SRMotorLeft1 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXManContEnabStateMotorLeft2 true eq 
+		SXHasTwinMotorSet true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			371 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRMotorLeft2 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SRPumpRightForw1 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			855 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpRightForw1 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SRPumpRightBack1 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			855 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpRightBack1 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SRPumpRightForw2 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			778 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpRightForw2 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SRPumpRightBack2 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			778 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpRightBack2 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContEnabStateMotorRight1 true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			700 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRMotorRight1 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXManContEnabStateMotorRight2 true eq 
+		SXHasTwinMotorSet true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			625 165 translate 
+			0 rotate 
+			1 1 scale 
+			SRMotorRight2 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContEnabStatePumpLeft1 true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 80 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXManContEnabStatePumpLeft2 true eq 
+		SXHasTwinPumpSet true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 160 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContEnabStateMotorLeft1 true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 240 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXManContEnabStateMotorLeft2 true eq 
+		SXHasTwinMotorSet true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 320 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContEnabStatePumpRight1 true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 799 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXManContEnabStatePumpRight2 true eq 
+		SXHasTwinPumpSet true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 721 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SXManContEnabStateMotorRight1 true eq 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 641 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContEnabStateMotorRight2 true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 561 80 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXManContActive true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 800 520 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral071 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		537 165 translate 
+		0 rotate 
+		1 1 scale 
+		SRactHydOilTemp 3 () false false 
+		FSmidFont 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		453 165 translate 
+		0 rotate 
+		1 1 scale 
+		SRactEngineSpeed 4 () false false 
+		FSmidFont 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		251 180 translate 
+		0 rotate 
+		1 1 scale 
+		SRMotorLeft1 (mA) 0 800 false false false false false false 90 100 20 10 4 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			332 180 translate 
+			0 rotate 
+			1 1 scale 
+			SRMotorLeft2 (mA) 0 800 false false true false false false 90 100 20 10 4 15 180 true false 0 false 0 0 true 1 
+			baBar006 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		655 180 translate 
+		0 rotate 
+		1 1 scale 
+		SRMotorRight1 (mA) 0 800 false false true false false false 90 100 20 10 4 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			577 180 translate 
+			0 rotate 
+			1 1 scale 
+			SRMotorRight2 (mA) 0 800 false false true false false false 90 100 20 10 4 15 180 true false 0 false 0 0 true 1 
+			baBar006 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		89 270 translate 
+		0 rotate 
+		1 1 scale 
+		SRPumpLeftForw1 (mA) 0 800 false false true false false false 90 100 20 10 2 15 90 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		169 290 translate 
+		180 rotate 
+		1 1 scale 
+		SRPumpLeftBack1 () 0 800 false false true false false false 90 100 20 10 2 15 90 true false 180 true 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			165 270 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpLeftForw2 (mA) 0 800 false false true false false false 90 100 20 10 2 15 90 true false 0 false 0 0 true 1 
+			baBar006 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			245 290 translate 
+			180 rotate 
+			1 1 scale 
+			SRPumpLeftBack2 () 0 800 false false true false false false 90 100 20 10 2 15 90 true false 180 true 0 0 true 1 
+			baBar006 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		810 270 translate 
+		0 rotate 
+		1 1 scale 
+		SRPumpRightForw1 (mA) 0 800 false false true false false false 90 100 20 10 2 15 90 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		890 290 translate 
+		180 rotate 
+		1 1 scale 
+		SRPumpRightBack1 () 0 800 false false true false false false 90 100 20 10 2 15 90 true false 180 true 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			731 271 translate 
+			0 rotate 
+			1 1 scale 
+			SRPumpRightForw2 (mA) 0 800 false false true false false false 90 100 20 10 2 15 90 true false 0 false 0 0 true 1 
+			baBar006 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			811 291 translate 
+			180 rotate 
+			1 1 scale 
+			SRPumpRightBack2 () 0 800 false false true false false false 90 100 20 10 2 15 90 true false 180 true 0 0 true 1 
+			baBar006 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		414 410 translate 
+		0 rotate 
+		0.60 0.60 scale 
+		gsEngine001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		494 410 translate 
+		0 rotate 
+		0.60 0.60 scale 
+		gsHydraulic005 
+		setcolor 
+		setmatrix_nlw 
+		SXManContAnyUnitActive true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			1 531 translate 
+			0 rotate 
+			1 1 scale 
+			ssJoystick005 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			111 402 translate 
+			0 rotate 
+			1 1 scale 
+			ssHydr002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			760 402 translate 
+			0 rotate 
+			1 1 scale 
+			ssHydr002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			600 402 translate 
+			0 rotate 
+			1 1 scale 
+			ssHydr001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			279 402 translate 
+			0 rotate 
+			1 1 scale 
+			ssHydr001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		215 493 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		gsDrive001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		658 493 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		gsDrive002 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			112 412 translate 
+			0 rotate 
+			1 1 scale 
+			(1) 0 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			186 411 translate 
+			0 rotate 
+			1 1 scale 
+			(2) 0 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			273 411 translate 
+			0 rotate 
+			1 1 scale 
+			(1) 0 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			358 410 translate 
+			0 rotate 
+			1 1 scale 
+			(2) 0 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		399 80 translate 
+		0 rotate 
+		1 1 scale 
+		1 1 0 400 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		559 80 translate 
+		0 rotate 
+		1 1 scale 
+		1 1 0 400 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		405 180 translate 
+		0 rotate 
+		1 1 scale 
+		SRactEngineSpeed (1/min) 0 2000 false false true false false false 90 100 20 10 4 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		488 180 translate 
+		0 rotate 
+		1 1 scale 
+		SRactHydOilTemp (째C) 0 120 false false true false false false 90 100 20 10 4 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			677 410 translate 
+			0 rotate 
+			1 1 scale 
+			(1) 0 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinMotorSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			600 410 translate 
+			0 rotate 
+			1 1 scale 
+			(2) 0 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			837 410 translate 
+			0 rotate 
+			1 1 scale 
+			(1) 0 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinPumpSet true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			756 410 translate 
+			0 rotate 
+			1 1 scale 
+			(2) 0 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		245 601 translate 
+		0 rotate 
+		1 1 scale 
+		SRactDriveSpeedLeft 30 (km/h) 0 13 10 10 0 0 0 7 false 11 2 0 0 0 225 -270 95 75 true 1 
+		baRoundDisplay003 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		690 601 translate 
+		0 rotate 
+		1 1 scale 
+		SRactDriveSpeedRight 30 (km/h) 0 13 10 10 0 0 0 7 false 11 2 0 0 0 225 -270 95 75 true 1 
+		baRoundDisplay003 
+		setcolor 
+		setmatrix_nlw 
+		SXHasTwinPumpSet false eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			73 402 translate 
+			0 rotate 
+			1 1 scale 
+			ssHydr002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinPumpSet false eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			798 402 translate 
+			0 rotate 
+			1 1 scale 
+			ssHydr002 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinMotorSet false eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			237 402 translate 
+			0 rotate 
+			1 1 scale 
+			ssHydr001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXHasTwinMotorSet false eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			638 402 translate 
+			0 rotate 
+			1 1 scale 
+			ssHydr001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		840 700 translate 
+		0 rotate 
+		1 1 scale 
+		(3.4) 
+		FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 620 translate 
+		0 rotate 
+		1 1 scale 
+		ssHydr002 
+		setcolor 
+		setmatrix_nlw 
+		%?term_beg
+		
+		SRPumpLeftForw1 0 eq 
+		SRPumpLeftBack1 0 eq and 
+		SXManContEnabStatePumpLeft1 true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			135 165 translate 
+			0 rotate 
+			1 1 scale 
+			0 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SRPumpLeftForw2 0 eq 
+		SRPumpLeftBack2 0 eq and 
+		SXManContEnabStatePumpLeft2 true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			215 165 translate 
+			0 rotate 
+			1 1 scale 
+			0 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SRPumpRightForw1 0 eq 
+		SRPumpRightBack1 0 eq and 
+		SXManContEnabStatePumpRight1 true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			855 165 translate 
+			0 rotate 
+			1 1 scale 
+			0 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		%?term_beg
+		
+		SRPumpRightForw2 0 eq 
+		SRPumpRightBack2 0 eq and 
+		SXManContEnabStatePumpRight2 true eq and 
+		%?term_end
+		{	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			778 165 translate 
+			0 rotate 
+			1 1 scale 
+			0 3 () false false 
+			FSmidFont 1 
+			baValue001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+} def
+
+
+%?page
+%?fn	function_manual_fan
+%?brief	manual fan control page
+%?bbox	0 0 960 720
+/function_manual_fan {
+		
+		SXEnableManFanCont true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			675 440 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManFanContValueDecr true store 
+				} { 
+				/SXManFanContValueDecr false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+			matrix currentmatrix_nlw 
+			currentcolor 
+			677 558 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManFanContValueIncr true store 
+				} { 
+				/SXManFanContValueIncr false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXstaFanReverseEnable true eq 
+		SXstaFanReverseActive false eq and 
+		SXEnableManFanCont false eq and {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			800 438 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXManFanContManTriggerFanRev true store 
+				} { 
+				/SXManFanContManTriggerFanRev false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+			} { 
+			/SXManFanContManTriggerFanRev false store 
+		} ifelse 
+		SXstaFanReverseActive false eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			800 520 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXReqManFanCont true store 
+				} { 
+				/SXReqManFanCont false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		(menu) 
+		display_page 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 520 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral071 
+		setcolor 
+		setmatrix_nlw 
+		SXEnableManFanCont true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 800 520 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral071 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		840 700 translate 
+		0 rotate 
+		1 1 scale 
+		(3.8) 
+		FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		805 620 translate 
+		0 rotate 
+		1 1 scale 
+		ssAircond006 
+		setcolor 
+		setmatrix_nlw 
+		SXstaFanReverseEnable true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			804 435 translate 
+			0 rotate 
+			1 1 scale 
+			ssFan001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		350 650 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsHydraulic005 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		110 650 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine005 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		230 650 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine003 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		110 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRactChargeAirTemp (째C) 0 120 false false true false false false 120 120 20 0 6 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		230 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRactCoolWaterTemp (째C) 0 120 false false true false false false 120 120 20 0 6 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		590 430 translate 
+		0 rotate 
+		1 1 scale 
+		QREngCurrFan (mA) 0 
+		SREngMaxCurrFan false false true false false false 120 120 20 0 6 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		SXEnableManFanCont true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			677 558 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral045 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXEnableManFanCont true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			675 440 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral046 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXEnableManFanCont true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			718 534 translate 
+			0 rotate 
+			1 1 scale 
+			MRFanContPercent 0 () (%) false false false false 
+			FSmidFont 1 
+			baValueText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		350 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRactHydOilTemp (째C) 0 120 false false true false false false 120 120 20 0 6 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		SXstaFanReverseActive true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 804 435 translate 
+			0 rotate 
+			1 1 scale 
+			ssFan001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		260 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRactCoolWaterTemp 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		620 410 translate 
+		0 rotate 
+		1 1 scale 
+		QREngCurrFan 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		140 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRactChargeAirTemp 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		380 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRactHydOilTemp 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		584 646 translate 
+		0 rotate 
+		1 1 scale 
+		ssAircond006 
+		setcolor 
+		setmatrix_nlw 
+		SXstaFanReverseEnable true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			472 645 translate 
+			0 rotate 
+			0.75 0.75 scale 
+			ssFan001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXstaFanReverseEnable true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			480 600 translate 
+			0 rotate 
+			1.50 1.50 scale 
+			ssGeneral022 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXRevFanOutControl true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 480 600 translate 
+			0 rotate 
+			1.50 1.50 scale 
+			ssGeneral023 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SXstaFanReverseActive true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			87 123 translate 
+			270 rotate 
+			1 1 scale 
+			SRFanRevRemainingTime () 0 
+			SRFanRevCycleTime true false true false false false 90 100 20 10 4 15 766 false false 0 false 0 0 true 1 
+			baBar006 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+} def
+
+
+%?page
+%?fn	function_CalibClima
+%?brief	overspeed protection test
+%?bbox	0 0 960 720
+/function_CalibClima {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		(menu) 
+		display_page 
+		setcolor 
+		setmatrix_nlw 
+		SXStaCalibClimaActive false eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			800 520 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/SXstaClimateManTeachMode true store 
+				} { 
+				/SXstaClimateManTeachMode false store 
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		880 80 translate 
+		0 rotate 
+		1 1 scale 
+		0 20 0 620 
+		baPageLine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		840 700 translate 
+		0 rotate 
+		1 1 scale 
+		(3.9) 
+		FSmidFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		800 620 translate 
+		0 rotate 
+		1 1 scale 
+		gsAircond005 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		841 559 translate 
+		0 rotate 
+		1 1 scale 
+		(Calib) 7 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		224 646 translate 
+		0 rotate 
+		1 1 scale 
+		ssAircond007 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		100 646 translate 
+		0 rotate 
+		1 1 scale 
+		ssAircond006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		470 650 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsAircond005 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		350 650 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsAircond012 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		110 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCFanSpeed (%) 0 100 false false true false false false 90 100 20 10 5 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		140 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCFanSpeed 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		230 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCCabineTemp (%) 0 100 false false true false false false 90 100 20 10 5 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		260 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCCabineTemp 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		350 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCStaFlapFeet (%) 0 100 false false true false false false 90 100 20 10 5 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		380 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCStaFlapFeet 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 600 translate 
+		0 rotate 
+		1.50 1.50 scale 
+		ssGeneral022 
+		setcolor 
+		setmatrix_nlw 
+		SXCCStaCompressor true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 480 600 translate 
+			0 rotate 
+			1.50 1.50 scale 
+			ssGeneral023 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		590 650 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		ssHydr004 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		590 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCMixRateWaterValve (%) 0 100 false false true false false false 90 100 20 10 5 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		620 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCMixRateWaterValve 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		710 430 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCCondensatorTemp (째C) -40 120 false false true false false false 90 100 20 10 8 15 180 true false 0 false 0 0 true 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		740 410 translate 
+		0 rotate 
+		1 1 scale 
+		SRCCCondensatorTemp 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 450 translate 
+		0 rotate 
+		1.50 1.50 scale 
+		ssGeneral022 
+		setcolor 
+		setmatrix_nlw 
+		SXCCStaPressSwitch true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 480 450 translate 
+			0 rotate 
+			1.50 1.50 scale 
+			ssGeneral023 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		724 641 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsGeneral095 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		687 625 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral051 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		470 490 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		ssSwitch001 
+		setcolor 
+		setmatrix_nlw 
+		SXStaCalibClimaActive true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 841 559 translate 
+			0 rotate 
+			1 1 scale 
+			(Calib) 7 0 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+} def
+
+
+%?page
+%?fn	info
+%?brief	machine info page
+%?bbox	0 0 960 720
+/info {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		10 690 translate 
+		0 rotate 
+		1 1 scale 
+		(Machine Information:) 7 2 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		(menu) 
+		display_page 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		290 490 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 480 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine003 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		290 400 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine004 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		30 310 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine005 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 390 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine006 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		30 225 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine008 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		300 580 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsHydraulic005 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		30 580 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine048 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		450 510 translate 
+		0 rotate 
+		1 1 scale 
+		(%) 
+		FSbigFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		450 420 translate 
+		0 rotate 
+		1 1 scale 
+		(V) 
+		FSbigFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		450 330 translate 
+		0 rotate 
+		1 1 scale 
+		(Hz) 
+		FSbigFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		450 240 translate 
+		0 rotate 
+		1 1 scale 
+		(Hz) 
+		FSbigFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		SDactUnitTemperatur 1 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			450 600 translate 
+			0 rotate 
+			1 1 scale 
+			(캟) 
+			FSbigFont 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitTemperatur 0 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			450 600 translate 
+			0 rotate 
+			1 1 scale 
+			(째C) 
+			FSbigFont 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitTemperatur 1 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 330 translate 
+			0 rotate 
+			1 1 scale 
+			(캟) 
+			FSbigFont 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitTemperatur 0 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 330 translate 
+			0 rotate 
+			1 1 scale 
+			(째C) 
+			FSbigFont 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitTemperatur 1 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 510 translate 
+			0 rotate 
+			1 1 scale 
+			(캟) 
+			FSbigFont 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitTemperatur 0 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 510 translate 
+			0 rotate 
+			1 1 scale 
+			(째C) 
+			FSbigFont 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitPressure 0 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 240 translate 
+			0 rotate 
+			1 1 scale 
+			(bar) 
+			FSbigFont 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitPressure 1 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 240 translate 
+			0 rotate 
+			1 1 scale 
+			(psi) 
+			FSbigFont 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitPressure 0 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 420 translate 
+			0 rotate 
+			1 1 scale 
+			(bar) 4 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitPressure 1 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 420 translate 
+			0 rotate 
+			1 1 scale 
+			(psi) 
+			FSbigFont 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitSpeed 0 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 600 translate 
+			0 rotate 
+			1 1 scale 
+			(1/min) 3 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		SDactUnitSpeed 1 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			200 600 translate 
+			0 rotate 
+			1 1 scale 
+			(rpm) 3 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		280 300 translate 
+		0 rotate 
+		1 1 scale 
+		gsDrive001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		280 210 translate 
+		0 rotate 
+		1 1 scale 
+		gsDrive002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		170 240 translate 
+		0 rotate 
+		1 1 scale 
+		MRChargeAirPress 3.10 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		190 330 translate 
+		0 rotate 
+		1 1 scale 
+		MRChargeAirTemp 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		170 420 translate 
+		0 rotate 
+		1 1 scale 
+		MREngOilPressure 3.10 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		190 510 translate 
+		0 rotate 
+		1 1 scale 
+		MRCoolWaterTemp 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		190 600 translate 
+		0 rotate 
+		1 1 scale 
+		SRactEngineSpeed 4 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		440 240 translate 
+		0 rotate 
+		1 1 scale 
+		SRactFreqTrackRight 4 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		440 330 translate 
+		0 rotate 
+		1 1 scale 
+		SRactFreqTrackLeft 4 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		420 420 translate 
+		0 rotate 
+		1 1 scale 
+		SRactBattVoltage 3.10 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		440 510 translate 
+		0 rotate 
+		1 1 scale 
+		SRactFuelLevel 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		440 600 translate 
+		0 rotate 
+		1 1 scale 
+		MRHydOilTemp 3 () false false 4 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+} def
+
+
+%?main
+
+fontinit
+colorinit
+1 setlinecap
+/_currentpage (page0) store
+(reload_currentpage) 0 setsysparam
+initmatrix
+{
+
+mousedown
+{
+/_myposd exch store
+/_mxposd exch store
+/_mdown true store
+/_mstatus true store
+}
+{
+/_mdown false store
+} ifelse
+
+mouseup
+{
+/_myposd exch store
+/_mxposd exch store
+/_mup true store
+/_mstatus false store
+}
+{
+/_mup false store
+} ifelse
+
+keypressed
+{
+/_keycode exch store
+/_keyhit true store
+}
+{
+/_keyhit false store
+} ifelse
+
+erasepage
+page0
+_currentpage display
+copypage
+} loop
+

@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Finnish / Finnisch
+%?language	fin
+
+%section: SCREEN
+/TSoilFlowAuger	(Ruuvikuljettimen tuotto) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Ruuvikuljettimen tuotto)
+/TSoilFlowCase	(Putken tuotto) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Putken tuotto)
+/TSoilFlow	(Tuotto) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Tuotto)
+/TSnumbOfPumps	(Pumppujen lukumäärä) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Pumppujen lukumäärä)
+/TSclampJawPress	(Puristuspihtien paine) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Puristuspihtien paine)
+/TSexcAutoTime	(Epäkeskolaitteen säätöaika) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Epäkeskolaitteen säätöaika)
+/TSramWeight	(Junttauspaino) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Junttauspaino)
+/TSblowsPerDepthStep	(Iskut/syvyys) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Iskut/syvyys)
+/TSnumbPuPuCylinder	(Push & Pull -sylinterien lukumäärä) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Push & Pull -sylinterien lukumäärä)
+/TSaugerLength	(Ruuvikuljettimen pituus) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Ruuvikuljettimen pituus)
+/TSconcVolPerImp	(Betonimäärä/pulssi) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Betonimäärä/pulssi)
+/TSscalConcPresSens	(Betonipaineanturin mittausalue) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Betonipaineanturin mittausalue)
+/TSscalConcPresDisp	(Betonipainenäytön asteitus) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Betonipainenäytön asteitus)
+/TSpileDiameter	(Paalun halkaisija) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Paalun halkaisija)
+/TSmaxPressAuger	(Ruuvikuljettimen enim.paine) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Ruuvikuljettimen enim.paine)
+/TSmaxPressCase	(Putken enim.paine) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Putken enim.paine)
+/TSmaxPressure	(Enim.paine) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Enim.paine)
+/TSoilFlowAuger1	(Ruuvikuljettimen 1 tuotto) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Ruuvikuljettimen 1 tuotto)
+/TSoilFlowAuger2	(Ruuvikuljettimen 2 tuotto) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Ruuvikuljettimen 2 tuotto)
+/TSoilFlowAuger3	(Ruuvikuljettimen 3 tuotto) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Ruuvikuljettimen 3 tuotto)
+/TSnumbOfAugers	(Ruuvikuljettimien lkm.) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Ruuvikuljettimien lkm.)
+/TSoilFlowOscil	(Putkituskoneen tuotto) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Putkituskoneen tuotto)
+/TSoilFlowGrabOpen	(Syöttömäärä kahmaria avatt.) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Syöttömäärä kahmaria avatt.)
+/TSoilFlowGrabClose	(Syöttöm. kahmaria suljett.) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Syöttöm. kahmaria suljett.)
+/TSmaxPressGrabOpen	(maks.paine kahmaria avatt.) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (maks.paine kahmaria avatt.)
+/TSmaxPressGrabClose	(maks.paine kahmaria suljett.) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (maks.paine kahmaria suljett.)
+/TSminOilFlow	(minimi tuotto) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (minimi tuotto)
+/TSoilFlowOscil2	(Putkituskoneen tuotto 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Putkituskoneen tuotto 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

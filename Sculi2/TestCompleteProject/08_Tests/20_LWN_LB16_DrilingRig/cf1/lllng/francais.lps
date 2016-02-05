@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%French / Französisch
+%?language	fra
+
+%section: SCREEN
+/TSoilFlowAuger	(Débit tarière) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Débit tarière)
+/TSoilFlowCase	(Débit tube) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Débit tube)
+/TSoilFlow	(Débit) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Débit)
+/TSnumbOfPumps	(Nombre pompes) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Nombre pompes)
+/TSclampJawPress	(Pression mâchoires) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Pression mâchoires)
+/TSexcAutoTime	(Temps réglage excentrique) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Temps réglage excentrique)
+/TSramWeight	(Masse de battage) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Masse de battage)
+/TSblowsPerDepthStep	(Coups / Palier de profondeur) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Coups / Palier de profondeur)
+/TSnumbPuPuCylinder	(Nombre vérins Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Nombre vérins Push & Pull)
+/TSaugerLength	(Longueur tarière) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Longueur tarière)
+/TSconcVolPerImp	(Qté béton/Impulsion) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Qté béton/Impulsion)
+/TSscalConcPresSens	(Plage capteur press. béton) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Plage capteur press. béton)
+/TSscalConcPresDisp	(Échelle indic. press. béton) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Échelle indic. press. béton)
+/TSpileDiameter	(Diamètre de pieu) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Diamètre de pieu)
+/TSmaxPressAuger	(Pression max. tarière) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Pression max. tarière)
+/TSmaxPressCase	(Pression max. tube) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Pression max. tube)
+/TSmaxPressure	(Pression max.) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Pression max.)
+/TSoilFlowAuger1	(Débit tarière 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Débit tarière 1)
+/TSoilFlowAuger2	(Débit tarière 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Débit tarière 2)
+/TSoilFlowAuger3	(Débit tarière 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Débit tarière 3)
+/TSnumbOfAugers	(Nombre tarières) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Nombre tarières)
+/TSoilFlowOscil	(Débit tubages) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Débit tubages)
+/TSoilFlowGrabOpen	(Ouvrir débit max. benne) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Ouvrir débit max. benne)
+/TSoilFlowGrabClose	(Fermer débit max. benne) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Fermer débit max. benne)
+/TSmaxPressGrabOpen	(Ouvrir pression max. benne) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Ouvrir pression max. benne)
+/TSmaxPressGrabClose	(Fermer pression max. benne) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Fermer pression max. benne)
+/TSminOilFlow	(Débit min.) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (Débit min.)
+/TSoilFlowOscil2	(Débit tubages 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Débit tubages 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

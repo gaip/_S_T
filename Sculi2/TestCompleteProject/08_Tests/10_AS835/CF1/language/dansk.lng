@@ -1,0 +1,573 @@
+!version	00057
+#
+!font	UTF8
+!best-fit-font	iso8859-1
+
+# Language File / Sprachtexte File
+# Danish / Dänisch
+!language	dan
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Transportmængde snekke [l/min]
+2	Transportmængde snekke [g/min]
+3	Transportmængde rør [l/min]
+4	Transportmængde rør [g/min]
+5	Transportmængde [l/min]
+6	Transportmængde [g/min]
+7	Pumpeantal
+8	Klemmetangstryk [bar]
+9	Excenterjusteringstid [s]
+10	Indføring hovedspil
+11	Ramvaegt [kg]
+12	Ramvaegt [lb]
+13	Slag/dybdetrin
+14	Antal Push & Pull-cylindere
+15	Snekkelængde [cm]
+16	Snekkelængde [ft]
+17	PDE grafik på printer
+18	PDE grafik på kort
+19	Dybdetrin [cm]
+20	Dybdetrin [in]
+21	PDE triggertid [s]
+22	Betonmængde / impuls [l/imp.]
+23	Betonmængde / impuls [g/imp.]
+24	Måleområde betontryksensor [bar]
+25	Skalering betontrykdisplay [bar]
+26	Pæl-diameter [cm]
+27	Pæl-diameter [in]
+28	Pæletværsnit [cm]
+29	Pæletværsnit [in]
+30	Indvendig rørdiameter [cm]
+31	Indvendig rørdiameter [in]
+32	Sænkningsfaktor [%]
+33	Snekkestigning [cm]
+34	Snekkestigning [in]
+35	Trækautomatik start tryk [bar]
+36	Trækautomatik stop tryk [bar]
+37	till. overmængde beton [%]
+38	Økoomdrejningstal
+39	Mængdemåling via tryk (1=JA)
+40	Trækautomatik maks. tryk [bar]
+41	Maks. tryk snekke [bar]
+42	Maks. tryk rør [bar]
+43	Maks. tryk [bar]
+44	Transportmængde snekke 1 [l/min]
+45	Transportmængde snekke 1 [g/min]
+46	Transportmængde snekke 2 [l/min]
+47	Transportmængde snekke 2 [g/min]
+48	Transportmængde snekke 3 [l/min]
+49	Transportmængde snekke 3 [g/min]
+50	Snekkeantal
+51	Transp.mæn. rørfør.m. [l/min]
+52	Transp.mæn. rørfør.m. [g/min]
+53	Transp.mængde åbn griber [l/min]
+54	Transp.mængde åbn griber [g/min]
+55	Transp.mængde luk griber [l/min]
+56	Transp.mængde luk griber [g/min]
+57	maks. tryk åbn griber [bar]
+58	maks. tryk luk griber [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	Antal sektioner pr. pæl
+62	Specifik vægt silo 1 [kg/dm³]
+63	Specifik vægt silo 1 [lb/ft³]
+64	Specifik vægt silo 2 [kg/dm³]
+65	Specifik vægt silo 2 [lb/ft³]
+66	Dybde [m]
+67	Dybde [ft]
+68	Stigning af fremføring [cm/o]
+69	Stigning af fremføring [in/o]
+70	Bindemiddelvægt [kg/m]
+71	Bindemiddelvægt [lb/ft]
+72	min. transportmængde [%]
+73	torque limitation (1=YES)
+74	Transp.mæn. rørfør.m.2 [l/min]
+75	Transp.mæn. rørfør.m.2 [g/min]
+
+!LOGGER
+1	Startdato
+2	Starttid
+3	Slutdato
+4	Sluttid
+5	Printdato
+6	Printtidspunkt
+
+!PDESERV
+# !! max. 40 Zeichen !!
+1	Med tasten Start startes registrering
+3	Med tasten Stop afsluttes registrering
+4	Vent venligst - grafik beregnes
+5	Vent venligst - Trykbillede beregnes
+6	Yderligere punkter
+7	Billede(r) gemt
+8	Med tasten '0' startes udskrivning
+10	ingen PDE-konfiguration
+11	Flere indtastn. nodv. for at starte
+13	Printeren er ikke klar!
+14	PDE-fejl
+15	Tryk pa en tast
+16	Hukommelseskort ikke stukket ind
+17	Drevet blev ikke fundet
+18	For lidt frit lager pa hukommelseskortet
+19	Lagring ikke muligt
+20	Hukom.kort (printer) ikke stukket ind
+21	Drev (printer) ikke fundet
+22	For lidt frit lager (printer-hukom.kort)
+23	Lagring ikke muligt (printerdata)
+24	Drift
+25	Kun ringe lagerplads
+26	Kun lidt fri lagerplads (printer)
+27	PDE registrering stoppet
+28	Taste '.' afbryder, 'Stop' afslutter
+29	'Start' genstarter, 'Stop' afslutter
+30	Datalogger ikke klar
+31	ingen hukommelsesplads, skift datakort
+32	ingen hukomm.plads (printer kort)
+33	PDE initialisering...
+34	Optegnelsen startes...
+35	Optegnelsen stoppes...
+36	Data sendes...
+37	Forbindelsen afbrudt...
+
+!PDE
+1	Driftsart
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Side
+4	Hæv registrering
+5	Sænk registrering
+6	Pæleradius [cm]
+7	Pæleradius [in]
+8	Stil
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly-boring
+200	dobbelt rotationsboring
+300	CFA-boring
+400	Vibrator
+401	Sænk
+402	Hæv
+403	Sænk/Hæv
+404	via tid
+411	Sænk vibrator
+412	Hæv vibrator
+413	Sænk & Hæv vibrator
+414	Vibrator via tid
+500	Hammer
+600	push&pull
+700	Hydraulisk griber
+800	Ramstyring
+900	Scraper
+1000	Omslag
+1100	jordblanding
+1200	elektrisk vibrator
+1201	erstatningskolonne (komprimering)
+1202	erstatningskolonne
+1211	el. vib. erstatningskomprimeringskolonne
+1212	el. vib. erstatningskolonne
+1300	tørblanding
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitude [in/100]
+7	Betontryk [bar]
+2	Amplitude [mm]
+3	Dybde [cm]
+4	Dybde [ft]
+5	Antal slag
+6	Slag/dybdetrin
+8	Boretryk snekke [bar]
+9	Boretryk roer [bar]
+10	Boretryk [bar]
+11	Tryk ramme [bar]
+12	Tryk vibrator [bar]
+13	Borefremgang [o/m]
+14	Borefremgang [o/ft]
+15	Boredrejemoment [kip.ft]
+16	Boredrejemoment [kNm]
+17	Energi/slag [kip.ft]
+18	Energi/slag [kNm]
+19	Energi/dybdetrin [kip.ft]
+20	Energi/dybdetrin [kNm]
+21	Tid [HH:mm:ss]
+22	Pressekraft [kN]
+23	Pressekraft [kip]
+24	Fremfoeringshastighed [ft/min]
+25	Fremfoeringshastighed [m/min]
+26	Frekvens [Hz]
+27	Slag/min
+28	Vibratorenhed [TIL/FRA]
+29	Afvigelse X [ft]
+30	Afvigelse X [cm]
+31	Afvigelse Y [ft]
+32	Afvigelse Y [cm]
+33	Slag nummer
+34	Hejsehoejde [m]
+35	Hejsehoejde [ft]
+36	Kompression/slag [ft]
+37	Kompression/slag [m]
+38	Kompression absolut [ft]
+39	Kompression absolut [m]
+40	Fastsaettelse bremsehoejde [ft]
+41	Fastsaettelse bremsehoejde [m]
+42	maks. hastigh. spil 1 [ft/min]
+43	maks. hastigh. spil 1 [m/min]
+44	maks. hastigh. spil 2 [ft/min]
+45	maks. hastigh. spil 2 [m/min]
+46	Dato [DD:MM:AAAA]
+47	Løbetid [s]
+48	Betonmængde [yd³]
+49	Betonmængde [m³]
+50	Positionsnummer
+51	Tid til ramme paa wire [s]
+52	Haev tid [s]
+53	Saenk tid [s]
+54	Fastsaettelse slag
+55	Fastsaettelse hejsehoejde [m]
+56	Fastsaettelse hejsehoejde [ft]
+57	Fastsaettelse kompression [m]
+58	Fastsaettelse kompression [ft]
+59	Tid scraperdrift [s]
+60	Cyklustid [s]
+61	Last styrtegods [t]
+62	Slaebelast i alt [t]
+63	Tid omslagsdrift [s]
+64	Cykluslast [t]
+65	Cykluslast i alt [t]
+66	Cykluslast styrtegods [t]
+67	Stroem [A]
+68	Saenk stroem [A]
+69	Sidevand [l/m]
+70	Spidsvand [l/m]
+71	Lufttryk [bar]
+72	Automatik ON
+73	Spaending [V]
+74	Afbrydelse
+75	Hældning [°]
+76	Omdrejningstal [o/min]
+77	Betonmængde 1 [yd³]
+78	Betonmængde 1 [m³]
+79	Betonmængde 2 [yd³]
+80	Betonmængde 2 [m³]
+81	Betonmængde 3 [yd³]
+82	Betonmængde 3 [m³]
+83	Omdrejning 1 [o]
+84	Omdrejning 2 [o]
+85	Omdrejning 1 [o]
+86	Tid [min]
+87	Betonmængde [l/min]
+88	Betonmængde [g/min]
+89	min. vibratortryk [bar]
+90	maks. vibratortryk [bar]
+91	min. fremføringshastighed [ft/min]
+92	min. fremføringshastighed [m/min]
+93	maks. fremføringshastighed [ft/min]
+94	maks. fremføringshastighed [m/min]
+95	maks. boretryk 1 [bar]
+96	maks. boretryk 2 [bar]
+97	maks. boretryk 3 [bar]
+98	min. borefremgang 1 [o/m]
+99	min. borefremgang 1 [o/ft]
+100	min. borefremgang 2 [o/m]
+101	min. borefremgang 2 [o/ft]
+102	min. borefremgang 3 [o/m]
+103	min. borefremgang 3 [o/ft]
+104	min. blanding [o]
+105	blanding 1 [o]
+106	blanding 2 [o]
+107	betonvolumen per dybde [l/m]
+108	betonvolumen per dybde [g/ft]
+109	betonmængde 1 [l/min]
+110	betonmængde 1 [g/min]
+111	betonmængde 2 [l/min]
+112	betonmængde 2 [g/min]
+113	betonmængde 3 [l/min]
+114	betonmængde 3 [g/min]
+115	Vibratortemperatur [°C]
+116	Vibratortemperatur [°F]
+117	maks. borefremgang 1 [o/m]
+118	maks. borefremgang 1 [o/ft]
+119	maks. borefremgang 2 [o/m]
+120	maks. borefremgang 2 [o/ft]
+121	maks. borefremgang 3 [o/m]
+122	maks. borefremgang 3 [o/ft]
+123	blanding 3 [o]
+124	min. stigning 1 [cm/o]
+125	min. stigning 1 [in/o]
+126	min. stigning 2 [cm/o]
+127	min. stigning 2 [in/o]
+128	min. stigning 3 [cm/o]
+129	min. stigning 3 [in/o]
+130	Bindemiddelmængde [kg/min]
+131	Bindemiddelmængde [lb/min]
+132	Bindemiddelmængde 1 [kg/min]
+133	Bindemiddelmængde 1 [lb/min]
+134	Bindemiddelmængde 2 [kg/min]
+135	Bindemiddelmængde 2 [lb/min]
+136	Bindemiddelmængde 3 [kg/min]
+137	Bindemiddelmængde 3 [lb/min]
+138	Bindemiddelvægt 1 [kg]
+139	Bindemiddelvægt 1 [lb]
+140	Bindemiddelvægt 2 [kg]
+141	Bindemiddelvægt 2 [lb]
+142	Bindemiddelvægt 3 [kg]
+143	Bindemiddelvægt 3 [lb]
+144	Bindemiddelvægt pr. dybde [kg/m]
+145	Bindemiddelvægt pr. dybde [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Hæv vibratortr. [bar]
+1	Amplitude [in]
+2	Amplitude [mm]
+3	Slag /%s ft
+4	Slag /%s mm
+5	Dybde [ft]
+6	Dybde [m]
+7	Kompression [m]
+8	Afvigelse X [cm]
+9	Afvigelse X [in]
+10	Afvigelse Y [cm]
+11	Afvigelse Y [in]
+12	Betontryk [bar]
+13	Boretr. snekke [bar]
+14	Boretr.rør [bar]
+15	Boretryk [bar]
+16	Ramtryk [bar]
+17	Hæv ramtr. [bar]
+19	Sænk vibrat.tr. [bar]
+20	Borefremg. [o/m]
+21	Borefremg. [o/ft]
+22	Boredrejemom. [kip.ft]
+23	Boredrejemom. [kNm]
+24	Energi [kip.ft]
+25	Energi [kNm]
+26	Energi/%s ft [kip.ft]
+27	Energi/%s mm [kNm]
+28	Pressekraft [kN]
+29	Pressekraft [kip]
+30	Fremfør.hast. [ft/min]
+31	Fremfør.hast. [m/min]
+32	Hejsehast. [ft/min]
+33	Hejsehast. [m/min]
+34	Sænkn.hast. [ft/min]
+35	Sænkn.hast. [m/min]
+36	Frekvens [Hz]
+37	Stroem [A]
+38	Strøm sænkning [A]
+39	Sidevand [l/m]
+40	Spidsvand [l/m]
+41	Tid [s]
+42	Sænk tid [s]
+43	Slag [nummer]
+44	Vibratortryk [bar]
+45	Amplitude [%]
+46	Boretryk 1 [bar]
+47	Boretryk 2 [bar]
+48	Boretryk 3 [bar]
+49	Borefremg.1 [o/m]
+50	Borefremg.1 [o/ft]
+51	Borefremg.2 [o/m]
+52	Borefremg.2 [o/ft]
+53	Borefremg.3 [o/m]
+54	Borefremg.3 [o/ft]
+55	Betontryk 1 [bar]
+56	Betontryk 2 [bar]
+57	Betontryk 3 [bar]
+58	Betonmængde [l/m]
+59	Betonmængde [g/ft]
+60	Betonmæng.1 [l/min]
+61	Betonmæng.1 [g/min]
+62	Betonmæng.2 [l/min]
+63	Betonmæng.2 [g/min]
+64	Betonmæng.3 [l/min]
+65	Betonmæng.3 [g/min]
+66	Blanding [o]
+67	Omdrej.tal1 [o/min]
+68	Omdrej.tal2 [o/min]
+69	Omdrej.tal3 [o/min]
+70	Vibratorstrøm [A]
+71	Indtrængning [cm/o]
+72	Indtrængning [in/o]
+73	Stigning 1 [cm/o]
+74	Stigning 1 [in/o]
+75	Stigning 2 [cm/o]
+76	Stigning 2 [in/o]
+77	Stigning 1 [cm/o]
+78	Stigning 1 [in/o]
+79	Bindemiddel [kg/m]
+80	Bindemiddel [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Byggeplads
+2	Pælnummer
+3	Pæltype (1beton;2trae;3staal)
+4	Pæl længde [m]
+5	Pæl flade [cm²]
+6	Pæl-diameter [cm]
+7	Slotnummer
+8	Registreringsnr.
+9	Førernummer
+10	Ordrenummer
+11	Kompressionspunkt
+12	Serienummer
+13	Apparatnummer
+14	Pæl-diameter [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Dybdetrin [ft]
+2	Dybdetrin [mm]
+3	Maksimal dybde [cm]
+4	Maksimal dybde [ft]
+5	Slag i alt
+6	Energi i alt [kip.ft]
+7	Energi i alt [kNm]
+8	Ramvaegt [lb]
+9	Ramvaegt [kg]
+10	Drejemomentdisplay
+11	US-enheder
+12	US-enheder (kip)
+13	Kompressionspunkt
+14	Spil 1 aktivt
+15	Spil 2 aktivt
+16	Betonmængde i alt [yd³]
+17	Betonmængde i alt [m³]
+18	Antal imp.(betonpumpe)
+19	Liter/imp.(betonpumpe)
+20	Fastsaettelse slag
+21	Kompression i alt [m]
+22	Fastsaettelse kompression [m]
+23	Fastsaettelse hejsehoejde [m]
+24	Fastsaettelse bremsehoejde [m]
+25	Tid i alt [s]
+26	Tid [s]
+27	Antal cykluser i alt
+28	Last scraper tom [t]
+29	Sum styrtegods [t]
+30	Sum scraper fuld [t]
+31	Antal trigger i alt
+32	Egenvaegt talje [t]
+33	Sum cykluslast [t]
+34	Sum cykluslast i alt [t]
+35	Sum cykluslast styrtegods [t]
+36	Tid saenkning [s]
+37	Stroem maks. saenkning [A]
+38	Cyklustid i alt [s]
+39	Fastsaettelse stroem maks. [A]
+40	Dybde traekkriterium [m]
+41	Dybde traekkriterium 1 [m]
+42	Dybde traekkriterium 2 [m]
+43	Fastsaettelse tid 1 maks. [s]
+44	Fastsaettelse vej 1 maks. [m]
+45	Fastsaettelse tid 2 maks. [s]
+46	Fastsaettelse vej 2 maks. [m]
+47	Fastsaettelse tid 3 maks. [s]
+48	Fastsaettelse vej 3 maks. [m]
+49	Sidevand i alt [l]
+50	Spidsvand i alt [l]
+51	Lufttryk gennemsnit [bar]
+52	Griberdrift
+53	Hammerdrift
+54	hyd. Push&Pull-drift
+55	Kelly-boredrift
+56	dobbelt rotationsboringsindgreb
+57	CFA-boredrift
+58	Vibratordrift
+59	Vibratorenhed
+60	(kip)
+61	(in / 100)
+62	OFF
+63	ON
+64	Overmængde [%]
+65	Pælebetonmængde [yd³]
+66	Pælebetonmængde [m³]
+67	gallons/imp.(betonpumpe)
+68	Maksimal dybde [m]
+69	Snegleantal
+70	Snekkelængde [cm]
+71	Snekkelængde [ft]
+72	gps position X [cm]
+73	gps position Y [cm]
+74	Forbrug [kWh]
+75	Starthældning [°]
+76	Sluthældning [°]
+77	Pæl længde [cm]
+78	Pæl længde [ft]
+79	total bindemiddel [kg]
+80	total bindemiddel [lb]
+81	gns. stigning [mm/o]
+82	gns. stigning [in/o]
+83	gns. boretryk [bar]
+84	gns. omdr.hastigh. [o/min]
+85	gns. bindemiddel [kg/m]
+86	gns. bindemiddel [lb/ft]
+87	gns. bindem.-flow [kg/min]
+88	gns. bindem.-flow [lb/min]
+89	silo 1 [kg]
+90	silo 1 [lb]
+91	silo 2 [kg]
+92	silo 2 [lb]
+93	indsætningshøjde [cm]
+94	indsætningshøjde [ft]
+95	empty core [cm]
+96	empty core [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly-boring
+200	VdW-boring
+300	CFA-boring
+400	Vibrator
+401	saenk
+402	haev
+403	saenk/haev
+404	via tid
+411	Saenk vibrator
+412	Haev vibrator
+413	Saenk & haev vibrator
+414	Vibrator via tid
+500	Hammer
+600	push&pull
+700	Hydraulisk griber
+800	Ramstyring
+900	Scraper
+1000	Omslag
+1100	jordblanding
+1200	elektrisk vibrator
+1201	erstatningskolonne (komprimering)
+1202	erstatningskolonne
+1211	el. vib. erstatningskomprimeringskolonne
+1212	el. vib. erstatningskolonne
+1300	dry mixing
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	Byggeplads
+2	Paelnummer
+3	Paeltype (1beton;2trae;3staal)
+4	Pael laengde [m]
+5	Pael flade [cm^2]
+6	Pael-diameter [cm]
+7	Slotnummer
+8	Registreringsnr.
+9	Foerernummer
+10	Ordrenummer
+11	Kompressionspunkt
+12	Serienummer
+13	Apparatnummer
+14	Pael-diameter [in]

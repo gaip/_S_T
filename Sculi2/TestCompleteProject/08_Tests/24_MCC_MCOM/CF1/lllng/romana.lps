@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Romanian / Rumänisch
+%?language	ron
+
+%section: SCREEN
+/TSoilFlowAuger	(Debit pompare melc) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Debit pompare melc)
+/TSoilFlowCase	(Debit pomp.cond.) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Debit pomp.cond.)
+/TSoilFlow	(Debit pompare) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Debit pompare)
+/TSnumbOfPumps	(Număr pompe) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Număr pompe)
+/TSclampJawPress	(Pres.cleşte prindere) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Pres.cleşte prindere)
+/TSexcAutoTime	(Durată regl.excentr.) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Durată regl.excentr.)
+/TSramWeight	(Masă sonetă) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Masă sonetă)
+/TSblowsPerDepthStep	(Lovituri / etapă forare) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Lovituri / etapă forare)
+/TSnumbPuPuCylinder	(Nr. cilindri Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Nr. cilindri Push & Pull)
+/TSaugerLength	(Lungime melc) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Lungime melc)
+/TSconcVolPerImp	(Cant. beton / impuls) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Cant. beton / impuls)
+/TSscalConcPresSens	(Dom.măs.senz.pres.bet.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Dom.măs.senz.pres.bet.)
+/TSscalConcPresDisp	(Scalare afişaj pres.beton) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Scalare afişaj pres.beton)
+/TSpileDiameter	(Diametru pilot) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Diametru pilot)
+/TSmaxPressAuger	(pres.max.melc) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (pres.max.melc)
+/TSmaxPressCase	(pres.max.conductă) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (pres.max.conductă)
+/TSmaxPressure	(pres.max.) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (pres.max.)
+/TSoilFlowAuger1	(Debit pompare melc 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Debit pompare melc 1)
+/TSoilFlowAuger2	(Debit pompare melc 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Debit pompare melc 2)
+/TSoilFlowAuger3	(Debit pompare melc 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Debit pompare melc 3)
+/TSnumbOfAugers	(Nr.melci) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Nr.melci)
+/TSoilFlowOscil	(Debit pomp.maşină tubare) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Debit pomp.maşină tubare)
+/TSoilFlowGrabOpen	(Debit deschidere greifer) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Debit deschidere greifer)
+/TSoilFlowGrabClose	(Debit închidere greifer) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Debit închidere greifer)
+/TSmaxPressGrabOpen	(Prs. max. deschidere greifer) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Prs. max. deschidere greifer)
+/TSmaxPressGrabClose	(Prs. max. închidere greifer) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Prs. max. închidere greifer)
+/TSminOilFlow	(minim debit pompare) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (minim debit pompare)
+/TSoilFlowOscil2	(Debit pomp.maşină tubare 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Debit pomp.maşină tubare 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

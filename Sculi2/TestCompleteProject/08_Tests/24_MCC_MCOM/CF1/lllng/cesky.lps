@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Czech / Tschechisch
+%?language	ces
+
+%section: SCREEN
+/TSoilFlowAuger	(Množ. přepravované šnekem) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Množ. přepravované šnekem)
+/TSoilFlowCase	(Množ. přepravované trubkou) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Množ. přepravované trubkou)
+/TSoilFlow	(Přepravované množ.) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Přepravované množ.)
+/TSnumbOfPumps	(Počet čerpadel) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Počet čerpadel)
+/TSclampJawPress	(Tlak svěr. kleští) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Tlak svěr. kleští)
+/TSexcAutoTime	(Doba nastavení výstředníku) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Doba nastavení výstředníku)
+/TSramWeight	(hmotn.beran.) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (hmotn.beran.)
+/TSblowsPerDepthStep	(Počet úderů / hloubkový krok) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Počet úderů / hloubkový krok)
+/TSnumbPuPuCylinder	(Počet válců Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Počet válců Push & Pull)
+/TSaugerLength	(Délka šneku) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Délka šneku)
+/TSconcVolPerImp	(Množ. betonu / impuls) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Množ. betonu / impuls)
+/TSscalConcPresSens	(Rozsah snímače tlaku bet.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Rozsah snímače tlaku bet.)
+/TSscalConcPresDisp	(Stupnice ukaz. tlaku bet.) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Stupnice ukaz. tlaku bet.)
+/TSpileDiameter	(prům. piloty) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (prům. piloty)
+/TSmaxPressAuger	(Max. tlak šneku) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Max. tlak šneku)
+/TSmaxPressCase	(Max. tlak trubky) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Max. tlak trubky)
+/TSmaxPressure	(Max. tlak) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Max. tlak)
+/TSoilFlowAuger1	(Množ. přeprav. šnekem 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Množ. přeprav. šnekem 1)
+/TSoilFlowAuger2	(Množ. přeprav. šnekem 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Množ. přeprav. šnekem 2)
+/TSoilFlowAuger3	(Množ. přeprav. šnekem 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Množ. přeprav. šnekem 3)
+/TSnumbOfAugers	(Počet šneků) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Počet šneků)
+/TSoilFlowOscil	(Množ. přeprav. potrubím) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Množ. přeprav. potrubím)
+/TSoilFlowGrabOpen	(Přepr. množ. otev. chap.) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Přepr. množ. otev. chap.)
+/TSoilFlowGrabClose	(Přepr. množ. chap. uzav.) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Přepr. množ. chap. uzav.)
+/TSmaxPressGrabOpen	(Max. tlak chap. otev.) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Max. tlak chap. otev.)
+/TSmaxPressGrabClose	(Max. tlak chap. uzav.) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Max. tlak chap. uzav.)
+/TSminOilFlow	(min. přepravované množ.) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. přepravované množ.)
+/TSoilFlowOscil2	(Množ. přeprav. potrubím) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Množ. přeprav. potrubím)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

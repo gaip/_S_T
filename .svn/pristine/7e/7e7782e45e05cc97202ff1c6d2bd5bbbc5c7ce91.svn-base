@@ -1,0 +1,9 @@
+rope force kelly winch 1 [kN]
+start time	2010-07-22T13:05:45
+stop time	2010-11-18T15:49:37
+date-time	rope force kelly winch 1 [kN]	revolutions diesel engine 1 [rpm]	power diesel engine 1 [kW]	torque diesel engine 1 [Nm]	rope force up  crowd winch 1 [kN]	rope speed crowd winch 1 [m/min]	rope speed kelly winch 1 [m/min]	pressure P1 drilling drive 1 [bar]	pressure P2 drilling drive 1 [bar]	pressure pump 1 leader 1 [bar]	x-direction left joystick 1 cabin 1 [%]	y-direction left joystick 1 cabin 1 [%]	x-direction right joystick 1 cabin 1 [%]	y-direction right joystick 1 cabin 1 [%]	operation mode 1	status brake 1 slewing system 1	status brake 1 auxiliary winch 1	status brake 1  crowd winch 1	status brake 1 kelly winch 1	free turn kelly winch 1	status gear box 1 drilling drive 1	reeving kelly winch 1
+	%MD1.511	%MD1.4	%MD1.502	%MD1.501	%MD1.513	%MD1.516	%MD1.512	%MD1.525	%MD1.526	%MD1.522	%MD1.533	%MD1.534	%MD1.535	%MD1.536	%MD1.543	%MX1.600	%MX1.601	%MX1.602	%MX1.603	%MD1.540	%MX1.608	%MD1.545
+	MDmdeFcRoKW1	MDpresenEngSpeed	MDmdeActEngPower	MDmdeTqDiEn1	MDmdeFcRoUpCrW1	MDmdeSpRoCrW1	MDmdeSpRoKW1	MDmdePrP1DDr1	MDmdePrP2DDr1	MDmdePrPu1LE1	MDmdeSgLxJs1C1	MDmdeSgLyJs1C1	MDmdeSgRxJs1C1	MDmdeSgRyJs1C1	MDmdeOm1	MXmdeStBk1SS1	MXmdeStBk1AW1	MXmdeStBk1CrW1	MXmdeStBk1KW1	MDmdeSgFTKW1	MXmdeStG1DDr1	MDmdeReKW1
+2010-11-17T10:15:03	86.60254	1900	1095.416	5505.5	0	0	0	0	0	0	0	0	0	0	15	0	0	0	0	0	0	1
+2010-07-22T13:18:01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	3.204862
+2010-07-22T13:18:01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

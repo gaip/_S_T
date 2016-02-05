@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{6C2D1B6A-9E82-4423-A1B0-C1D717E4863F}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="file_verifyForSameSubString" Unit="file">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="strings" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="[&quot;PME1.ID2:&quot;,&quot;PME1.ID:&quot;]" />
+						<Parameter Name="files" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="[&quot;C:\\Users\\lmbtuh0\\AppData\\Roaming\\Sculi\\88888\\service.err&quot;, &quot;C:\\Users\\lmbtuh0\\AppData\\Roaming\\Sculi\\88888\\service.varx&quot;, &quot;C:\\Users\\lmbtuh0\\AppData\\Roaming\\Sculi\\88888\\service.ver&quot;]" />
+					</Parameters>
+				</Data>
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{90294ACC-7197-4936-A9F9-25610FD990E0}" />
+	<Parameters Key="{2DD2B6F1-6D60-4BC4-AE37-365AB4C0478F}" />
+</Root>

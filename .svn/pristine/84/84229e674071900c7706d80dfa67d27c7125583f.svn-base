@@ -1,0 +1,14 @@
+variable pump 1 winch 1
+start time	2012-05-02T11:37:47
+stop time	2012-05-02T14:01:10
+category			0	1	2	3	4	5	6	7	8	9	10	11
+revolutions pump 1 winch 1 [rpm]	%MD1.372	MDmdeRvPu1W1	<900	[900..1200[	[1200..1500[	[1500..1800[	[1800..2100[	[2100..2400[	[2400..2700[	>=2700
+pressure pump 1 winch 1 [bar]	%MD1.334	MDmdePrPu1W1	<40	[40..80[	[80..120[	[120..160[	[160..200[	[200..240[	[240..280[	[280..320[	[320..360[	[360..400[	[400..440[	>=440
+pivoting range pump 1 winch 1 [%]	%MD1.346	MDmdePvPu1W1	<-80	[-80..-60[	[-60..-40[	[-40..-20[	[-20..-0.1[	[-0.1..0.1[	[0.1..20[	[20..40[	[40..60[	[60..80[	>=80
+
+revolutions pump 1 winch 1 [rpm]	pressure pump 1 winch 1 [bar]	pivoting range pump 1 winch 1 [%]	sum of time [sek]
+0	0	5	2.78
+1	0	5	490.13
+2	0	5	2.25
+3	0	5	28.15
+0	1	5	6512.83

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lidat_cnf Version="00005" xsi:noNamespaceSchemaLocation="lidat_cnf.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Head>
+		<ConfigUniqueID>-vom-Server-zu-ersetzen-</ConfigUniqueID>
+		<Liuip>-vom-Server-zu-ersetzen-</Liuip>
+	</Head>
+	<TriggerProfiles>
+		<TriggerProfile>
+			<TriggerName>application errors 1</TriggerName>
+			<TriggerByMessage>
+				<TriggerGrouping>
+					<applicat>actor</applicat>
+				</TriggerGrouping>
+				<TriggerPriorityMin>error</TriggerPriorityMin>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>application errors 2</TriggerName>
+			<TriggerByMessage>
+				<TriggerGrouping>
+					<applicat>drive</applicat>
+				</TriggerGrouping>
+				<TriggerPriorityMin>error</TriggerPriorityMin>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>application errors 3</TriggerName>
+			<TriggerByMessage>
+				<TriggerGrouping>
+					<applicat>engine</applicat>
+				</TriggerGrouping>
+				<TriggerPriorityMin>error</TriggerPriorityMin>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>application errors 4</TriggerName>
+			<TriggerByMessage>
+				<TriggerGrouping>
+					<applicat>machine</applicat>
+				</TriggerGrouping>
+				<TriggerPriorityMin>error</TriggerPriorityMin>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>application errors 5</TriggerName>
+			<TriggerByMessage>
+				<TriggerGrouping>
+					<applicat>safety</applicat>
+				</TriggerGrouping>
+				<TriggerPriorityMin>error</TriggerPriorityMin>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>application errors 6</TriggerName>
+			<TriggerByMessage>
+				<TriggerGrouping>
+					<applicat>sensor</applicat>
+				</TriggerGrouping>
+				<TriggerPriorityMin>error</TriggerPriorityMin>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>service acknowledge 1</TriggerName>
+			<TriggerByMessage>
+				<TriggerCode>41216</TriggerCode>
+				<TriggerGrouping>
+					<applicat>machine</applicat>
+				</TriggerGrouping>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>service acknowledge 2</TriggerName>
+			<TriggerByMessage>
+				<TriggerCode>41217</TriggerCode>
+				<TriggerGrouping>
+					<applicat>machine</applicat>
+				</TriggerGrouping>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>service acknowledge 3</TriggerName>
+			<TriggerByMessage>
+				<TriggerCode>41218</TriggerCode>
+				<TriggerGrouping>
+					<applicat>machine</applicat>
+				</TriggerGrouping>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>service acknowledge 4</TriggerName>
+			<TriggerByMessage>
+				<TriggerCode>41227</TriggerCode>
+				<TriggerGrouping>
+					<applicat>machine</applicat>
+				</TriggerGrouping>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>service acknowledge 5</TriggerName>
+			<TriggerByMessage>
+				<TriggerCode>2231410947</TriggerCode>
+				<TriggerGrouping>
+					<applicat>machine</applicat>
+				</TriggerGrouping>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>lidat events</TriggerName>
+			<TriggerByMessage>
+				<TriggerGrouping>
+					<lidat>event</lidat>
+				</TriggerGrouping>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>critical errors</TriggerName>
+			<TriggerByMessage>
+				<TriggerPriorityMin>critical</TriggerPriorityMin>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>lidat_manual_default_trigger</TriggerName>
+			<TriggerByMessage>
+				<TriggerGrouping>
+					<undefined>undefined</undefined>
+				</TriggerGrouping>
+				<TriggerCode>0</TriggerCode>
+			</TriggerByMessage>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>daily 9:00</TriggerName>
+			<TriggerByTime>
+				<TriggerInterval>1</TriggerInterval>
+				<TriggerDayTime>09:00:00.0Z</TriggerDayTime>
+			</TriggerByTime>
+		</TriggerProfile>
+		<TriggerProfile>
+			<TriggerName>daily 15:00</TriggerName>
+			<TriggerByTime>
+				<TriggerInterval>1</TriggerInterval>
+				<TriggerDayTime>15:00:00.0Z</TriggerDayTime>
+			</TriggerByTime>
+		</TriggerProfile>
+	</TriggerProfiles>
+	<RecordingProfiles>
+		<RecordingProfile>
+			<RecordingName>messages</RecordingName>
+			<DataSets>
+				<DataSet>
+					<TriggeredMessages/>
+				</DataSet>
+			</DataSets>
+			<TriggerConditions>
+				<TriggerCondition>
+					<TriggerProfileName>application errors 1</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>application errors 2</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>application errors 3</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>application errors 4</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>application errors 5</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>application errors 6</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>service acknowledge 1</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>service acknowledge 2</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>service acknowledge 3</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>service acknowledge 4</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>service acknowledge 5</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>lidat events</TriggerProfileName>
+				</TriggerCondition>
+			</TriggerConditions>
+			<TransferSelection>
+				<TransferProfileName>Qualcomm GPRS</TransferProfileName>
+				<TransferImmediate>false</TransferImmediate>
+			</TransferSelection>
+			<FileType>lidat_packet</FileType>
+		</RecordingProfile>
+		<RecordingProfile>
+			<RecordingName>messages immediate</RecordingName>
+			<DataSets>
+				<DataSet>
+					<TriggeredMessages/>
+				</DataSet>
+			</DataSets>
+			<TriggerConditions>
+				<TriggerCondition>
+					<TriggerProfileName>critical errors</TriggerProfileName>
+				</TriggerCondition>
+			</TriggerConditions>
+			<TransferSelection>
+				<TransferProfileName>Qualcomm GPRS</TransferProfileName>
+				<TransferImmediate>true</TransferImmediate>
+			</TransferSelection>
+			<FileType>lidat_packet</FileType>
+		</RecordingProfile>
+		<RecordingProfile>
+			<RecordingName>all application</RecordingName>
+			<DataSets>
+				<DataSet>
+					<Variables>
+						<Code>2432696321</Code>
+						<Grouping>
+							<lidat>value</lidat>
+						</Grouping>
+						<Priority>info</Priority>
+						<AdditionalInfos>
+							<AdditionalInfo Identity="MDmaInfOpTime"/>
+							<AdditionalInfo Identity="MWmaInfFuel"/>
+							<AdditionalInfo Identity="MDmaFuelConsSum"/>
+							<AdditionalInfo Identity="MDSrvMachStdRemT"/>
+							<AdditionalInfo Identity="gps.latitude_dyn"/>
+							<AdditionalInfo Identity="gps.longitude_dyn"/>
+							<AdditionalInfo Identity="gps.altitude_dyn"/>
+						</AdditionalInfos>
+					</Variables>
+				</DataSet>
+			</DataSets>
+			<TriggerConditions>
+				<TriggerCondition>
+					<TriggerProfileName>daily 9:00</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>daily 15:00</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>critical errors</TriggerProfileName>
+				</TriggerCondition>
+				<TriggerCondition>
+					<TriggerProfileName>lidat_manual_default_trigger</TriggerProfileName>
+				</TriggerCondition>
+			</TriggerConditions>
+			<TransferSelection>
+				<TransferProfileName>Qualcomm GPRS</TransferProfileName>
+				<TransferImmediate>true</TransferImmediate>
+			</TransferSelection>
+			<FileType>lidat_packet</FileType>
+		</RecordingProfile>
+	</RecordingProfiles>
+	<TransferProfiles>
+		<TransferProfile>
+			<TransferName>Qualcomm GPRS</TransferName>
+			<PathDataBuffer>lidat.buf</PathDataBuffer>
+			<Connections>
+				<Connection>
+					<ConnectionChannel>String</ConnectionChannel>
+					<UsageOrder>0</UsageOrder>
+					<RetryStrategy>text</RetryStrategy>
+				</Connection>
+			</Connections>
+		</TransferProfile>
+	</TransferProfiles>
+</lidat_cnf>

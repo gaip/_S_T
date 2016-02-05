@@ -1,0 +1,9 @@
+boom system
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:29
+category			0	1	2	3	4	5
+angle of the main boom in [°]	%MD1.34	MDvibPumpSignal	<20	[20..40[	[40..60[	[60..70[	[70..80[	>=80
+angle of the luffing jib in [°]	%MD1.35	MDvibJoySignal	<20	[20..40[	[40..60[	[60..80[	>=80
+pressure of the fall back support of the luffing jib in [bar]	%MD1.64	MDz6ExtAnalSign	<125	[125..150[	[150..175[	[175..200[	>=200
+
+angle of the main boom in [°]	angle of the luffing jib in [°]	pressure of the fall back support of the luffing jib in [bar]	sum of time [sek]

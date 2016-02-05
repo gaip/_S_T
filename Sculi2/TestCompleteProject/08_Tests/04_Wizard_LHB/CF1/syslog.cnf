@@ -1,0 +1,29 @@
+!version	03999
+#
+#	message-configuration
+#
+#	date:	29.08.2011
+#	name:	Armin Schneider
+#
+#
+applicat.sensor.0x0001-0x325F.error system >bild/*
+applicat.sensor.0x3262-0x334A.error system >bild/*
+applicat.sensor.0x334C-0x40C7.error system >bild/*
+applicat.sensor.0x40C9-0x41E2.error system >bild/*
+applicat.sensor.0x41E4-0xFFFF.error system >bild/*
+
+applicat.actor.0x0001-0x325F.error system >bild/*
+applicat.actor.0x3262-0x334A.error system >bild/*
+applicat.actor.0x334C-0x40C7.error system >bild/*
+applicat.actor.0x40C9-0x41E2.error system >bild/*
+applicat.actor.0x41E4-0xFFFF.error system >bild/*
+
+applicat.undefined.error system >bild/*
+applicat.engine.error system >bild/*
+applicat.machine.error system >bild/*
+can.application.error system >bild/*
+smallsystem.lidec.error system >bild/*
+applicat.safety.error system >bild/*
+j1939.engine.error system >bild/*
+
+!crc	0x307ccc85

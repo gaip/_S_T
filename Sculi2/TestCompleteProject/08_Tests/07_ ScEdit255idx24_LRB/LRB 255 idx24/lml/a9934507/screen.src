@@ -1,0 +1,23 @@
+!Hier wird die Symbolreihenfolge für jede Hauptbetriebsart festgelegt.
+!Bei den Auslegerlängen wird immer das kürzeste Z-Stück angegeben.
+!Die Symbol-Namen stammen aus dem rkz.h File.
+!Wird ein Symbol-Name nicht gefunden (z.B. Schreibfehler) wird ein Fehler ausgelöst.
+
+HBA:1,SEILZUGBEGRENZUNG,HPT_KOPF,HPT_Z_S_K,HPT_EINSCHERUNG,KIPPKANTE,ZENTRALBALLAST,HAUPTBALLAST
+HBA:2
+HBA:3
+HBA:4
+HBA:5
+HBA:6
+HBA:7
+HBA:8
+HBA:9
+HBA:10
+HBA:11
+HBA:12
+HBA:13
+HBA:14
+HBA:15
+HBA:16
+
+$CRC32:screen.src	83f14211

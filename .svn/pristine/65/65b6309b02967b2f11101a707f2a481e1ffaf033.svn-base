@@ -1,0 +1,23 @@
+!version	00277
+!safety sm[CF] 
+ioconfig_if02_2_49_00122.bin	crc1.0x805A	name.IOCONFIG	line.2 mod_nr.49 mod_typ.=IF02
+ioconfig_if02_2_50_00193.bin	crc1.0x42D6	name.IOCONFIG	line.2 mod_nr.50 mod_typ.=IF02
+ioconfig_if08_2_57_00123.bin	crc1.0x80B1	name.IOCONFIG	line.2 mod_nr.57 mod_typ.=IF08
+ioconfig_if08_2_58_00124.bin	crc1.0xAC3D	name.IOCONFIG	line.2 mod_nr.58 mod_typ.=IF08 condition.%MW3.1024=0
+ioconfig_if08_2_58_00126.bin	crc1.0xB75D	name.IOCONFIG	line.2 mod_nr.58 mod_typ.=IF08 condition.%MW3.1024=1
+ioconfig_if08_2_58_00194.bin	crc1.0x8798	name.IOCONFIG	line.2 mod_nr.58 mod_typ.=IF08 condition.%MW3.1024=2
+ioconfig_if08_2_64_00190.bin	crc1.0x5B03	name.IOCONFIG	line.2 mod_nr.64 mod_typ.=IF08
+ioconfig_ja08_00169.bin	crc1.0x5D90	name.IOCONFIG	line.1 mod_nr.68 mod_typ.=JA08 condition.%MW3.1023=0
+ioconfig_ja08_00170.bin	crc1.0x1E68	name.IOCONFIG	line.1 mod_nr.68 mod_typ.=JA08 condition.%MW3.1023=1
+ioconfig_ja08_00171.bin	crc1.0xF74C	name.IOCONFIG	line.1 mod_nr.68 mod_typ.=JA08 condition.%MW3.1023=2
+ioconfig_ja08_00172.bin	crc1.0x1F36	name.IOCONFIG	line.1 mod_nr.68 mod_typ.=JA08 condition.%MW3.1023=3
+ioconfig_ja08_00169.bin	crc1.0x5D90	name.IOCONFIG	line.1 mod_nr.66 mod_typ.=JA08 condition.%MW3.1022=0
+ioconfig_ja08_00170.bin	crc1.0x1E68	name.IOCONFIG	line.1 mod_nr.66 mod_typ.=JA08 condition.%MW3.1022=1
+ioconfig_ja08_00171.bin	crc1.0xF74C	name.IOCONFIG	line.1 mod_nr.66 mod_typ.=JA08 condition.%MW3.1022=2
+ioconfig_ja08_00172.bin	crc1.0x1F36	name.IOCONFIG	line.1 mod_nr.66 mod_typ.=JA08 condition.%MW3.1022=3
+ioconfig_ecu_cal3_00183.bin	crc1.0xD9AD	name.ECU_CAL3	line.2 mod_nr.93 mod_typ.MOD2 condition.%MW3.1021=1
+ioconfig_ecu_cal3_00184.bin	crc1.0x683E	name.ECU_CAL3	line.2 mod_nr.93 mod_typ.MOD2 condition.%MW3.1021=2
+ioconfig_ecu_cal3_00185.bin	crc1.0x2738	name.ECU_CAL3	line.2 mod_nr.93 mod_typ.MOD2 condition.%MW3.1021=3
+ioconfig_ecu_cal3_00186.bin	crc1.0xD9AD	name.ECU_CAL3	line.2 mod_nr.93 mod_typ.MOD2 condition.%MW3.1021=4
+
+io_compl.cnf	crc.0x8cb7acef

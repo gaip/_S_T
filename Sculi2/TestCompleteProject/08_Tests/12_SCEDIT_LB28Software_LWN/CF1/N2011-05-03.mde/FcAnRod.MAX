@@ -1,0 +1,10 @@
+force anchoring rod [kN]
+start time	2011-04-12T08:15:53
+stop time	2011-05-03T08:25:32
+date-time	force anchoring rod [kN]	power diesel engine 1 [kW]	load on the main boom in [to]	load radius main boom in [m]	maximum lifting hight main boom (head hight) in [m]	rope speed hg1 in [m/min]	rope speed hg2 in [m/min]	pressure switch travelling gear	operation mode	number of lml mode	x-direction left joystick 1 cabin 1 [%]	y-direction left joystick 1 cabin 1 [%]	x-direction right joystick 1 cabin 1 [%]	y-direction right joystick 1 cabin 1 [%]
+	%MD1.249	%MD1.201	%MD1.32	%MD1.39	%MD1.41	%MD1.47	%MD1.48	%IX1.77.37	%MD1.205	%MD1.29	%MD1.214	%MD1.215	%MD1.216	%MD1.217
+	MDpdeMaxConcFlow	MD201	MDauxJoySignal	MDspeedHigh	MDaccelMedium	MDkeybx25Poti2	MDkeybx25Poti3	IXswitTravelGear	%MD1.205	MDfawJoySignal	MDpdeVibAmplitud	MD_1_215	MDpdeTimePerTrig	MDpdeLrXaxisInc
+2011-04-12T08:21:12	350	0	0	0	0	0	0	0	1	0	0	0	0	0
+2011-04-12T08:21:12	350	0	0	0	0	0	0	0	1	0	0	0	0	0
+2011-04-12T08:21:12	350	0	0	0	0	0	0	0	1	0	0	0	0	0
+2011-04-18T03:46:56	350	0	27.1	9.861865	9.2	0	0	0	1	1	0	0	0	0

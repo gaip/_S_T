@@ -1,0 +1,481 @@
+%?class llgenpar
+%?version 00018 
+
+%?library llgensym
+(llgensym.ps) run
+%?library llbasic
+(llbasic.ps) run
+
+
+
+%?partdef gpButtonPage001
+%?fn	gpButtonPage001
+%?brief	Button to switch to another page
+%?bbox	0 0 79 79
+/gpButtonPage001 {
+	/isSymbolName exch def	%?brief name of the symbol-part which has to be displayed %?use INP %?type STRI %?dflt (gsGeneral001)
+	/ixFlashRedBlack exch def	%?brief activate symbol flashing error %?use INP %?type BOOL %?dflt false
+	/ixFlashYelBlack exch def	%?brief activate symbol flashing warning %?use INP %?type BOOL %?dflt false
+%?manual_beg
+	ixFlashYelBlack ixFlashRedBlack not and {	
+		true setflash 
+		currentcolor 
+		Yellow
+		isSymbolName cvx exec
+		setcolor 
+		false setflash 
+	} if 
+	ixFlashRedBlack true eq {	
+		true setflash 
+		currentcolor 
+		Red
+		isSymbolName cvx exec
+		setcolor 
+		false setflash 
+	} if 
+	ixFlashYelBlack not 
+	ixFlashRedBlack not and {	
+		currentcolor 
+		isSymbolName cvx exec
+		setcolor 
+	} if 
+%?manual_end
+} def
+%?partend
+
+%?partdef gpButtonPage002
+%?fn	gpButtonPage002
+%?brief	Button to switch to message page
+%?bbox	0 0 79 79
+/gpButtonPage002 {
+	/ixFlashRedBlack exch def	%?brief activate symbol flashing red %?use INP %?type BOOL %?dflt false
+	/ixFlashWhiBlack exch def	%?brief activate symbol flashing neutral %?use INP %?type BOOL %?dflt false
+%?manual_beg
+  	MDmsgValidNr MDmsgAcknNr sub 0 gt MDmsgDeactNr 0 gt or { /ixFlashRedBlack true store } if
+  	MDmsgAcknNr 0 gt { /ixFlashWhiBlack true store } if
+%?manual_end 
+	
+	ixFlashWhiBlack ixFlashRedBlack not and {	
+		ixFlashWhiBlack true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral044 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	ixFlashRedBlack true eq {	
+		ixFlashRedBlack true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral044 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	ixFlashWhiBlack not 
+	ixFlashRedBlack not and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral044 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+
+%?partdef gpButtonAckn001
+%?fn	gpButtonAckn001
+%?brief	acknowledge acoustical warning on the actual page
+%?bbox	0 0 79 79
+/gpButtonAckn001 {
+	/ixFlash exch def	%?brief activate symbol flashing error %?use INP %?type BOOL %?dflt false
+	ixFlash true eq {	
+		ixFlash true eq {	
+			true setflash 
+		} if 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral015 
+		setcolor 
+		setmatrix_nlw 
+		false setflash 
+	} if 
+	ixFlash not 
+	true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral015 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+%?partdef gpButtonTstsys001
+%?fn	gpButtonTstsys001
+%?brief	Button to switch to text based testsystem
+%?bbox	0 0 79 79
+/gpButtonTstsys001 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButTstsys001 {	
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral010 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpButtonTstsys002
+%?fn	gpButtonTstsys002
+%?brief	Button to switch to graphical testsystem
+%?bbox	0 0 79 79
+/gpButtonTstsys002 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButTstsys002 {	
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral059 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpButtonTstsys003
+%?fn	gpButtonTstsys003
+%?brief	Button to switch to language page in testsystem
+%?bbox	0 0 79 79
+/gpButtonTstsys003 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButTstsys003 {	
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral031 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpButtonTstsys004
+%?fn	gpButtonTstsys004
+%?brief	Button to switch to time and date page in testsystem
+%?bbox	0 0 79 79
+/gpButtonTstsys004 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButTstsys004 {	
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral033 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef gpGeneral001
+%?fn	gpGeneral001
+%?brief	Sanduhr animiert
+%?bbox	0 0 79 79
+/gpGeneral001 {
+	
+%?manual_beg
+	/Ly1 20 def
+	/Ly2 -20 def
+	/Ly3 0 def
+	currentcolor 
+	40 40 translate
+
+	% Drehung der Sanduhr
+	MRrotate 330 gt {
+		MRrotate 330 sub 6 mul rotate
+	} if
+
+	% Fuss zeichnen
+	%?plinebeg
+	newpath
+	-16 -25 moveto 
+	16 -25 lineto 
+	20 -25 20 -30 16 -30 curveto 
+	-16 -30 lineto 
+	-20 -30 -20 -25 -16 -25 curveto 	
+	eofill 
+	%?plineend
+
+	% Kopf zeichnen	
+	%?plinebeg
+	newpath
+	-16 30 moveto 
+	16 30 lineto 
+	20 30 20 25 16 25 curveto 
+	-16 25 lineto 
+	-20 25 -20 30 -16 30 curveto 
+	eofill 
+	%?plineend
+
+	LightGrey
+
+	MRrotate 330 lt {
+		% Oberes Glas zeichnen
+		/Ly1 360 MRrotate sub 72 div 15 add store
+		%?plinebeg
+		newpath
+		-15 15 moveto 
+		-15 Ly1 lineto 
+		15 Ly1 lineto 
+		15 15 lineto 
+		15 5 0 5 1 0 curveto 
+		-1 0 lineto
+		0 5 -15 5 -15 15 curveto 
+		eofill 
+		%?plineend
+
+		% Unteres Glas zeichnen
+		/Ly2 MRrotate 72 div 25 sub store
+		%?plinebeg
+		newpath
+		-15 -25 moveto 
+		15 -25 lineto 
+		15 Ly2 lineto 
+		0 Ly2 12 add lineto 
+		-15 Ly2 lineto 
+		-15 -25 lineto 
+		eofill 
+		%?plineend
+
+		% Tropfen zeichnen
+		/Ly3 MRrotate -36 div 5 add store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+		/Ly3 Ly3 5 sub store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+		/Ly3 Ly3 5 sub store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+		/Ly3 Ly3 5 sub store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+	} if
+	
+	setcolor 
+	
+%?manual_end
+	-15 15 moveto 
+	-15 5 0 5 -1 0 curveto 
+	stroke 
+	-1 0 moveto 
+	0 -5 -15 -5 -15 -15 curveto 
+	stroke 
+	15 15 moveto 
+	15 5 0 5 1 0 curveto 
+	stroke 
+	15 -15 moveto 
+	15 -5 0 -5 1 0 curveto 
+	stroke 
+	-15 15 moveto 
+	-15 25 lineto 
+	stroke 
+	15 15 moveto 
+	15 25 lineto 
+	stroke 
+	15 -15 moveto 
+	15 -25 lineto 
+	stroke 
+	-15 -15 moveto 
+	-15 -25 lineto 
+	stroke 
+} def
+%?partend
+
+%?partdef gpAircond001
+%?fn	gpAircond001
+%?brief	Luftverteilung
+%?bbox	0 0 219 199
+/gpAircond001 {
+	/I_ActMiddleArea exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	/I_ActLowerArea exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	/I_ActUpperArea exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsAircond015 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	I_ActUpperArea true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsAircond016
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_ActMiddleArea true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsAircond017
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_ActLowerArea true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsAircond018
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef gpButtonPage003
+%?fn	gpButtonPage003
+%?brief	Button to switch to another page; external buzzer acknowledge is used
+%?bbox	0 0 79 79
+/gpButtonPage003 {
+	/isSymbolName exch def	%?brief name of the symbol-part which has to be displayed %?use INP %?type STRI %?dflt (gsGeneral001)
+	/idSymErrActCnt exch def	%?brief number of active error symbols %?use INP %?type DINT %?dflt 0
+	/idSymWarnActCnt exch def	%?brief number of active warning symbols %?use INP %?type DINT %?dflt 0
+	/ixBuzzerAckDemand exch def	%?brief buzzer acknowledge demand %?use INP %?type BOOL %?dflt false
+%?manual_beg
+	ixBuzzerAckDemand true eq {	
+		idSymErrActCnt 0 gt {	
+			true setflash 
+			currentcolor 
+			Red
+			isSymbolName cvx exec
+			setcolor 
+			false setflash 
+		}{
+			true setflash 
+			currentcolor 
+			Yellow
+			isSymbolName cvx exec
+			setcolor 
+			false setflash 
+		} ifelse 
+	}{ 
+		idSymErrActCnt 0 gt
+		idSymWarnActCnt 0 gt or {	
+			true setflash 
+			currentcolor 
+			isSymbolName cvx exec
+			setcolor 
+			false setflash 
+		}{
+			currentcolor 
+			isSymbolName cvx exec
+			setcolor 
+		} ifelse 
+	} ifelse 
+%?manual_end
+} def
+%?partend
+
+%?partdef gpButtonPage004
+%?fn	gpButtonPage004
+%?brief	Button to switch to another page
+%?bbox	0 0 79 79
+/gpButtonPage004 {
+	/isSymbolName exch def	%?brief name of the symbol-part which has to be displayed %?use INP %?type STRI %?dflt (gsGeneral001)
+	/ixFlashRedBlack exch def	%?brief activate symbol flashing error %?use INP %?type BOOL %?dflt false
+	/ixShowYelBlack exch def	%?brief activate symbol shows warning %?use INP %?type BOOL %?dflt false
+%?manual_beg
+	ixShowYelBlack ixFlashRedBlack not and {	
+		currentcolor 
+		Yellow
+		isSymbolName cvx exec
+		setcolor 
+	} if 
+	ixFlashRedBlack true eq {	
+		true setflash 
+		currentcolor 
+		Red
+		isSymbolName cvx exec
+		setcolor 
+		false setflash 
+	} if 
+	ixShowYelBlack not 
+	ixFlashRedBlack not and {	
+		currentcolor 
+		isSymbolName cvx exec
+		setcolor 
+	} if 
+%?manual_end
+} def
+%?partend
+

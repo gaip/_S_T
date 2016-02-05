@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lidat_cnf Version="00007" xsi:noNamespaceSchemaLocation="lidat_cnf.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Head>
+<ConfigUniqueID>default</ConfigUniqueID>
+<Liuip/>
+</Head>
+<TriggerProfiles>
+<TriggerProfile>
+<TriggerName>lidat_manual_default_trigger</TriggerName>
+<TriggerByMessage>
+<TriggerCode>0</TriggerCode>
+<TriggerGrouping>
+<undefined>undefined</undefined>
+</TriggerGrouping>
+</TriggerByMessage>
+</TriggerProfile>
+<TriggerProfile>
+<TriggerName>daily 9:00</TriggerName>
+<TriggerByTime>
+<TriggerInterval>1</TriggerInterval>
+<TriggerDayTime>09:00:00.0Z</TriggerDayTime>
+</TriggerByTime>
+</TriggerProfile>
+<TriggerProfile>
+<TriggerName>daily 15:00</TriggerName>
+<TriggerByTime>
+<TriggerInterval>1</TriggerInterval>
+<TriggerDayTime>15:00:00.0Z</TriggerDayTime>
+</TriggerByTime>
+</TriggerProfile>
+</TriggerProfiles>
+<RecordingProfiles>
+<RecordingProfile>
+<RecordingName>dummy</RecordingName>
+<DataSets/>
+<TriggerConditions>
+<TriggerCondition>
+<TriggerProfileName>daily 9:00</TriggerProfileName>
+</TriggerCondition>
+<TriggerCondition>
+<TriggerProfileName>daily 15:00</TriggerProfileName>
+</TriggerCondition>
+<TriggerCondition>
+<TriggerProfileName>lidat_manual_default_trigger</TriggerProfileName>
+</TriggerCondition>
+</TriggerConditions>
+<TransferSelection>
+<TransferProfileName>default</TransferProfileName>
+<TransferImmediate>true</TransferImmediate>
+</TransferSelection>
+<FileType>lidat_packet</FileType>
+</RecordingProfile>
+</RecordingProfiles>
+<TransferProfiles>
+<TransferProfile>
+<TransferName>default</TransferName>
+<PathDataBuffer>lidat.buf</PathDataBuffer>
+<Connections>
+<Connection>
+<ConnectionChannel/>
+<UsageOrder>0</UsageOrder>
+<RetryStrategy/>
+</Connection>
+</Connections>
+</TransferProfile>
+</TransferProfiles>
+</lidat_cnf>

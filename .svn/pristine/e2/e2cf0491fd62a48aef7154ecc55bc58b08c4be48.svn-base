@@ -1,0 +1,4 @@
+wait 1000
+sample /r analyzer.smp
+
+spsmon LAN1 /y /r /t

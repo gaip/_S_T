@@ -1,0 +1,125 @@
+(Generated at: 2012-10-15 15:21:28)
+(The error occurs in the middle of the following subset of code lines)
+
+(*********************** C A L L   S T A C K ************************)
+baText001	<-
+tpSystemfile_Service
+
+(**************************** C O D E *******************************)
+0.03 20 selectfont 0.01 10 selectfont 0.03 10 selectfont 0 10 selectfont /idFontSelection exch def	%?brief font %?use INP %?type DINT
+idFontSelection 1 lt 
+idFontSelection 8 gt or {	
+	StdFont 
+} if 
+idFontSelection 1 eq {	
+	StdFont 
+} if 
+idFontSelection 2 eq {	
+	MiniFont 
+} if 
+idFontSelection 3 eq {	
+	MidFont 
+} if 
+idFontSelection 4 eq {	
+	BigFont 
+} if 
+idFontSelection 5 eq {	
+	ValueFont 
+} if 
+idFontSelection 6 eq {	
+	MsgFont 
+} if 
+idFontSelection 7 eq {	
+	FatFont 
+} if 
+idFontSelection 8 eq {	
+	BigFatFont 
+} if 
+idFontSelection 9 eq {	
+	MsgBigFont 
+} if 
+/idOrigin exch def	%?brief origin: 0=center/center, 1=left/bottom, 2=left/center, 3=left/top, 4=center/top %?use INP %?type DINT
+/idFontSelection exch def	%?brief font %?use INP %?type DINT
+/isText exch def	%?brief initial text %?use INP %?type STRI
+idFontSelection 
+selectFont 
+idOrigin 0 le {	
+	isText 
+	strw 
+	2 div neg 
+	strh 
+	2 div neg 
+	moveto 
+} if 
+idOrigin 1 eq {	
+	0 0 moveto 
+} if 
+idOrigin 2 eq {	
+	0 strh 
+	2 div neg 
+	moveto 
+} if 
+idOrigin 3 eq {	
+	0 strh neg 
+	moveto 
+} if 
+idOrigin 4 eq {	
+	isText 
+	strw 
+	2 div neg 
+	strh neg 
+	moveto 
+} if 
+idOrigin 5 eq {	
+	isText 
+	strw neg 
+	strh neg 
+	moveto 
+} if 
+idOrigin 6 eq {	
+	isText 
+	strw neg 
+	strh 
+	2 div neg 
+	moveto 
+} if 
+idOrigin 7 eq {	
+	isText 
+	strw neg 
+	0 moveto 
+} if 
+idOrigin 8 ge {	
+	isText 
+	strw 
+	2 div neg 
+	0 moveto 
+} if 
+isText (******************* FOLLOWING OP TRIGGERS ERROR ********************) 
+show_utf8 
+ColRed 
+setcolor true setflash 
+newpath 
+60 40 moveto 
+40 40 20 0 360 arc 
+eofill false setflash 
+ColGreen 
+setcolor 
+/idY2 exch def	%?brief end point Y %?use INP %?type DINT
+/idX2 exch def	%?brief end point X %?use INP %?type DINT
+/idY1 exch def	%?brief start point Y %?use INP %?type DINT
+/idX1 exch def	%?brief start point X %?use INP %?type DINT
+/idLineWidth exch def	%?brief linewidth %?use INP %?type DINT
+idLineWidth 
+setlinewidth_nlw 
+idX1 idY1 
+moveto 
+idX2 idY2 
+lineto 
+stroke 
+1 setlinewidth_nlw 
+ColLightGrey 
+setcolor 
+/idPageNumber exch def	%?brief number of the active page %?use INP %?type DINT
+/LDx MDsymbolGrid idPageNumber 1 sub mul def	
+3 setlinewidth_nlw 
+idPageNumber 0 

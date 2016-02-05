@@ -1,0 +1,26 @@
+!version 00150
+
+rem --------------------------------------------------
+rem First cycle time
+rem --------------------------------------------------
+sysstat /f 25
+
+rem --------------------------------------------------
+rem Pepperl and Fuchs Ident Control
+rem --------------------------------------------------
+can_conf /u	3	85	          
+
+rem --------------------------------------------------
+rem Radio Remote Control Settings
+rem --------------------------------------------------
+wait 1000
+spsmon COM4 /a /w MDRadioArrowDownShort ARROWDOWNSHORT
+spsmon COM4 /a /w MDRadioArrowLeftShort ARROWLEFTSHORT
+spsmon COM4 /a /w MDRadioArrowRightShort ARROWRIGHTSHORT
+spsmon COM4 /a /w MDRadioArrowUpShort ARROWUPSHORT
+spsmon COM4 /a /w MDRadioMuteShort MUTESHORT
+spsmon COM4 /a /w MDRadioSourceShort SOURCESHORT
+spsmon COM4 /a /w MDRadioVolumeDownShort VOLDOWNSHORT
+spsmon COM4 /a /w MDRadioVolumeUpShort VOLUPSHORT
+spsmon COM4 /t 20
+spsmon COM4 /w

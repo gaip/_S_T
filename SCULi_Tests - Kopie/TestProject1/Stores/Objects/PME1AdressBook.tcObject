@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="children">
+			<Node name="child_0">
+				<Node name="children"/>
+				<Node name="properties">
+					<Node name="property_2">
+						<Prp name="type" type="I" value="2"/>
+						<Prp name="index" type="I" value="2"/>
+						<Prp name="value" type="H" value="4C004800420020004C0069006400690073002000410064006400720065007300730042006F006F006B000D000A004C004D0042002000410064006400720065007300730042006F006F006B000D000A0050004D004500310020006100640064007200650073007300200062006F006F006B00"/>
+						<Prp name="name" type="S" value="wItemList"/>
+						<Prp name="basic" type="B" value="-1"/>
+						<Prp name="category" type="S" value="Extended"/>
+						<Prp name="selected" type="B" value="-1"/>
+						<Prp name="kind" type="I" value="0"/>
+					</Node>
+					<Node name="property_0">
+						<Prp name="type" type="I" value="3"/>
+						<Prp name="index" type="I" value="0"/>
+						<Prp name="value" type="B" value="-1"/>
+						<Prp name="name" type="S" value="Enabled"/>
+						<Prp name="basic" type="B" value="-1"/>
+						<Prp name="selected" type="B" value="-1"/>
+						<Prp name="kind" type="I" value="0"/>
+					</Node>
+					<Node name="property_3">
+						<Prp name="type" type="I" value="2"/>
+						<Prp name="index" type="I" value="3"/>
+						<Prp name="value" type="S" value=""/>
+						<Prp name="name" type="S" value="WndCaption"/>
+						<Prp name="basic" type="B" value="-1"/>
+						<Prp name="selected" type="B" value="-1"/>
+						<Prp name="kind" type="I" value="3"/>
+					</Node>
+					<Node name="property_4">
+						<Prp name="type" type="I" value="2"/>
+						<Prp name="index" type="I" value="4"/>
+						<Prp name="value" type="S" value="PME1 address book"/>
+						<Prp name="name" type="S" value="wText"/>
+						<Prp name="basic" type="B" value="-1"/>
+						<Prp name="category" type="S" value="Extended"/>
+						<Prp name="selected" type="B" value="-1"/>
+						<Prp name="kind" type="I" value="3"/>
+					</Node>
+					<Node name="property_1">
+						<Prp name="type" type="I" value="3"/>
+						<Prp name="index" type="I" value="1"/>
+						<Prp name="value" type="B" value="-1"/>
+						<Prp name="name" type="S" value="Visible"/>
+						<Prp name="basic" type="B" value="-1"/>
+						<Prp name="selected" type="B" value="-1"/>
+						<Prp name="kind" type="I" value="0"/>
+					</Node>
+				</Node>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="group name" type="S" value=""/>
+				<Prp name="class name" type="S" value="TComboBox"/>
+				<Prp name="name" type="S" value="[&quot;Window&quot;](&quot;TComboBox&quot;, &quot;&quot;, 1)"/>
+				<Prp name="objecttype" type="I" value="1"/>
+				<Prp name="selected" type="B" value="-1"/>
+			</Node>
+		</Node>
+		<Node name="properties"/>
+		<Prp name="mode" type="I" value="6"/>
+		<Prp name="group name" type="S" value=""/>
+		<Prp name="class name" type="S" value=""/>
+		<Prp name="name" type="S" value=""/>
+		<Prp name="objecttype" type="I" value="0"/>
+		<Prp name="selected" type="B" value="-1"/>
+		<Prp name="identifier" type="S" value="Stores.Objects"/>
+		<Prp name="version" type="I" value="1"/>
+	</Node>
+</Nodes>

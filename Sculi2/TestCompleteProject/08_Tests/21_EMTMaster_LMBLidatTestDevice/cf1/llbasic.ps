@@ -1,0 +1,1790 @@
+%?version 00021
+%?class	llbasic
+
+%?library llsystem
+(llsystem.ps) run
+%?library llgensym
+(llgensym.ps) run
+
+
+% Global variables used in this library
+/MDfirstActIndex 0 def		% erster Message-Index der angezeigt wird
+/MXmsgShowTop true def		% wird aktuelle gerade immer die neueste Messages angezeigt (erste Seite)
+/MDmsgScrollCounter 1 def	% Nummer der aktiven Dreh-Drück-Message
+/MXscrollOnMsgSym false def		% Dreh-Drück-Auswahl steht auf dem Symbol der Message-Seite
+/testsys_timeout	0	def		%?brief timeout value for testsystem button
+
+
+% *********************************************************************************************************************
+
+% Zeigt einen Messagetext mit variabler Zeilenanzahl auf dem Bildschirm (setzt den Cursor wieder an den Ausgangspunkt)
+%!proc ShowMsgVar
+%?subproc
+/ShowMsgVar {
+	/LI_xPix	exch	def			% maximale Länge einer Zeile in pixel
+	/LI_zeilen	exch	def			% Anzahl der anzuzeigenden Zeilen
+	/LI_text	exch	def			% Anzuzeigender Text
+
+	/LDhightStep strhl def
+	/LDlineCount 1 def
+
+	matrix currentmatrix
+	currentpoint translate
+
+	LI_text LI_xPix LI_zeilen splitstring
+	{
+		0 LDhightStep LDlineCount mul moveto
+		show_utf8				% Zeile einblenden
+		LDlineCount LI_zeilen ge { exit } if
+		/LDlineCount LDlineCount 1 add store
+	} loop
+	0 0 moveto
+	setmatrix
+} def
+
+
+%!proc touch001
+%Touchfläche 80 80, unsichtbar, Gibt true (gedrückt) oder false auf dem Stack zurück (Touch-Fläche ist unsichtbar)
+%?subproc
+/touch001 {
+%?manual_beg
+	% Zeichnung je nach gewünschtem Aussehen toucharea:
+		% unsichtbar
+	% Auswertung:
+	_mdown {
+		_mxposd _myposd itransform
+		newpath		
+		0 0 moveto
+		0 79 rlineto
+		79 0 rlineto
+		0 -79 rlineto
+		ineofill			% hinterlässt true oder false auf dem stack
+	} {
+		false			% keine Touchscreen-Berührung 
+	} ifelse
+%?manual_end
+} def
+
+
+%!proc touch002
+%Touchfläche Kreis 80, unsichtbar, Gibt true (gedrückt) oder false auf dem Stack zurück (Touch-Fläche ist unsichtbar)
+%?subproc
+/touch002 {
+%?manual_beg
+	% Zeichnung je nach gewünschtem Aussehen toucharea:
+		% unsichtbares Part, nur Pfad wird gezeichnet
+	% Auswertung:
+	_mdown {
+		_mxposd _myposd itransform
+		newpath
+		75 40 moveto
+		40 40 35 0 360 arc
+		ineofill			% hinterlässt true oder false auf dem stack
+	} {
+		false			% keine Touchscreen-Berührung 
+	} ifelse
+%?manual_end
+} def
+
+
+% *************************************************************************************************************************
+
+
+%?touchdef touchButton001
+%?fn	touchButton001
+%?brief	touch button 80 x 80
+%?bbox	0 0 79 79
+/touchButton001 {
+	
+%?manual_beg
+	_mstatus {
+		_mxposd _myposd itransform 
+		 newpath 
+		0 0 moveto
+		0 79 rlineto
+		79 0 rlineto
+		0 -79 rlineto 
+		ineofill {
+			TouchAreaInv
+		} {
+			TouchArea 
+		} ifelse
+	} { 
+		TouchArea 
+	} ifelse 
+%?manual_end 
+	newpath 
+	78 6 moveto 
+	73 73 5 0 90 arc 
+	6 73 5 90 180 arc 
+	6 6 5 180 270 arc 
+	73 6 5 270 360 arc 
+	eofill 
+	2 setlinewidth_nlw 
+	currentcolor 
+	TouchAreaInv 75 77 moveto 
+	6 77 lineto 
+	stroke 
+	2 73 moveto 
+	2 5 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+	6 77 moveto 
+	2 setlinewidth_nlw 
+	currentcolor 
+	TouchAreaInv 6 73 4 90 180 arc 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 	
+	_mdown {	
+		_mxposd _myposd itransform 
+		newpath 
+		0 0 moveto 
+		0 79 rlineto 
+		79 0 rlineto 
+		0 -79 rlineto ineofill 
+		} { 
+		false 
+	} ifelse 
+
+	} def
+%?partend
+
+%?touchdef touchButton002
+%?fn	touchButton002
+%?brief	touch button 160 x 80
+%?bbox	0 0 159 79
+/touchButton002 {
+%?manual_beg
+	_mstatus {
+		_mxposd _myposd itransform 
+		 newpath 
+		0 0 moveto
+		0 79 rlineto
+		79 0 rlineto
+		0 -79 rlineto 
+		ineofill {
+			TouchAreaInv
+		} {
+			TouchArea 
+		} ifelse
+	} { 
+		TouchArea 
+	} ifelse 
+%?manual_end 
+	newpath
+	158 6 moveto 
+	153 73 5 0 90 arc 
+	6 73 5 90 180 arc 
+	6 6 5 180 270 arc 
+	153 6 5 270 360 arc 
+	eofill
+	_mdown {	
+		_mxposd _myposd itransform 
+		 newpath 
+		0 0 moveto
+		0 79 rlineto
+		159 0 rlineto
+		0 -79 rlineto 
+		ineofill 
+	} { 
+		false 
+	} ifelse 
+} def
+%?partend
+
+%?touchdef touchButton003
+%?fn	touchButton003
+%?brief	touch button 80 x 80
+%?bbox	0 0 79 79
+/touchButton003 {
+	
+%?manual_beg
+	_mstatus {
+		_mxposd _myposd itransform 
+		 newpath 
+		0 0 moveto
+		0 79 rlineto
+		79 0 rlineto
+		0 -79 rlineto 
+		ineofill {
+			TouchAreaInv
+		} {
+			TouchArea 
+		} ifelse
+	} { 
+		TouchArea 
+	} ifelse 
+%?manual_end 
+	newpath 
+	78 6 moveto 
+	73 69 5 0 90 arc 
+	6 69 5 90 180 arc 
+	6 6 5 180 270 arc 
+	73 6 5 270 360 arc 
+	eofill 
+	2 setlinewidth_nlw 
+	currentcolor 
+	TouchAreaInv 75 73 moveto 
+	6 73 lineto 
+	stroke 
+	2 69 moveto 
+	2 3 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+	6 73 moveto 
+	2 setlinewidth_nlw 
+	currentcolor 
+	TouchAreaInv 6 69 4 90 180 arc 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 	
+	_mdown {	
+		_mxposd _myposd itransform 
+		newpath 
+		0 0 moveto 
+		0 79 rlineto 
+		79 0 rlineto 
+		0 -79 rlineto ineofill 
+		} { 
+		false 
+	} ifelse 
+
+	} def
+%?partend
+
+%?touchdef touchButton004
+%?fn	touchButton004
+%?brief	touch button 80 x 80, visible 74 x 74
+%?bbox	0 0 79 79
+/touchButton004 {
+	
+%?manual_beg
+	_mstatus {
+		_mxposd _myposd itransform 
+		 newpath 
+		0 0 moveto
+		0 79 rlineto
+		79 0 rlineto
+		0 -79 rlineto 
+		ineofill {
+			TouchAreaInv
+		} {
+			TouchArea 
+		} ifelse
+	} { 
+		TouchArea 
+	} ifelse 
+%?manual_end 
+	newpath 
+	76 70 moveto 
+	73 70 3 0 90 arc 
+	6 70 3 90 180 arc 
+	6 3 3 180 270 arc 
+	73 3 3 270 360 arc 
+	eofill 
+	3 setlinewidth_nlw 
+	currentcolor 
+	TouchAreaInv 
+	74 72 moveto 
+	7 72 lineto 
+	stroke 
+	4 69 moveto 
+	4 2 lineto 
+	stroke 
+	7 72 moveto 
+	TouchAreaInv 7 69 3 90 180 arc 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 	
+	_mdown {	
+		_mxposd _myposd itransform 
+		newpath 
+		0 0 moveto 
+		0 79 rlineto 
+		79 0 rlineto 
+		0 -79 rlineto ineofill 
+		} { 
+		false 
+	} ifelse 
+
+} def
+%?partend
+
+%?touchdef touchButton005
+%?fn	touchButton005
+%?brief	touch button 320 x 80, invisible 
+%?bbox	0 0 320 79
+/touchButton005 {
+	
+	1 setlinewidth_nlw 	
+	_mdown {	
+		_mxposd _myposd itransform 
+		newpath 
+		0 0 moveto 
+		0 79 rlineto 
+		318 0 rlineto 
+		0 -79 rlineto ineofill 
+		} { 
+		false 
+	} ifelse 
+
+} def
+%?partend
+
+%?touchdef touchButton006
+%?fn	touchButton006
+%?brief	touch button 60 x 80, invisible 
+%?bbox	0 0 59 79
+/touchButton006 {
+	
+	1 setlinewidth_nlw 	
+	_mdown {	
+		_mxposd _myposd itransform 
+		newpath 
+		0 0 moveto 
+		0 79 rlineto 
+		59 0 rlineto 
+		0 -79 rlineto ineofill 
+		} { 
+		false 
+	} ifelse 
+
+} def
+%?partend
+
+%?touchdef touchButton007
+%?fn	touchButton007
+%?brief	touch button 80 x 80, visible 74 x 74
+%?bbox	0 0 79 79
+/touchButton007 {
+	
+%?manual_beg
+	_mstatus {
+		_mxposd _myposd itransform 
+		 newpath 
+		0 0 moveto
+		0 79 rlineto
+		79 0 rlineto
+		0 -79 rlineto 
+		ineofill {
+			TouchAreaInv
+		} {
+			TouchArea 
+		} ifelse
+	} { 
+		TouchArea 
+	} ifelse 
+%?manual_end 
+	2 setlinewidth_nlw 
+	currentcolor 
+	TouchArea 78 6 moveto 
+	73 73 5 0 90 arc 
+	6 73 5 90 180 arc 
+	6 6 5 180 270 arc 
+	73 6 5 270 360 arc 
+%?manual_beg
+%?manual_end 
+	
+	%?plinebeg
+	
+	newpath 
+	39 77 moveto 
+	39 73 lineto 
+	3 37 lineto 
+	17 37 lineto 
+	17 6 lineto 
+	20 3 lineto 
+	33 3 lineto 
+	36 6 lineto 
+	36 22 lineto 
+	42 22 lineto 
+	42 6 lineto 
+	45 3 lineto 
+	58 3 lineto 
+	61 6 lineto
+	61 7 lineto 
+	77 7 lineto 
+	78 5 lineto 
+	76 2 lineto 
+	73 1 lineto 
+	5 1 lineto 
+	3 2 lineto 
+	1 5 lineto 
+	1 74 lineto 
+	3 76 lineto 
+	7 78 lineto 
+	39 77 lineto 
+	eofill 
+	%?plineend
+	
+	%?plinebeg
+	1 setlinewidth 
+	newpath 
+	39 76 moveto 
+	39 73 lineto 
+	75 37 lineto 
+	61 37 lineto 
+	61 7 lineto 
+	78 7 lineto 
+	78 73 lineto 
+	76 76 lineto 
+	72 78 lineto 
+	39 77 lineto 
+	eofill 
+	%?plineend
+	
+	%?plinebeg
+	
+	newpath 
+	39 67 moveto 
+	13 41 lineto 
+	21 41 lineto 
+	21 8 lineto 
+	22 7 lineto 
+	30 7 lineto 
+	32 8 lineto 
+	32 26 lineto 
+	46 26 lineto 
+	46 8 lineto 
+	47 7 lineto 
+	56 7 lineto 
+	57 8 lineto 
+	57 41 lineto 
+	65 41 lineto 
+	39 67 lineto 
+	eofill 
+	%?plineend
+	3 setlinewidth 
+	White 70 39 moveto 
+	39 70 lineto 
+	stroke 
+	39 70 moveto 
+	8 39 lineto 
+	stroke 
+	8 39 moveto 
+	19 39 lineto 
+	stroke 
+	19 39 moveto 
+	19 7 lineto 
+	stroke 
+	19 7 moveto 
+	21 5 lineto 
+	stroke 
+	21 5 moveto 
+	32 5 lineto 
+	stroke 
+	32 5 moveto 
+	34 7 lineto 
+	stroke 
+	34 7 moveto 
+	34 24 lineto 
+	stroke 
+	34 24 moveto 
+	44 24 lineto 
+	stroke 
+	44 24 moveto 
+	44 7 lineto 
+	stroke 
+	44 7 moveto 
+	46 5 lineto 
+	stroke 
+	46 5 moveto 
+	57 5 lineto 
+	stroke 
+	57 5 moveto 
+	59 7 lineto 
+	stroke 
+	59 7 moveto 
+	59 39 lineto 
+	stroke 
+	59 39 moveto 
+	70 39 lineto 
+	stroke 
+	setcolor 
+
+	_mdown {	
+		_mxposd _myposd itransform 
+		newpath 
+		0 0 moveto 
+		0 79 rlineto 
+		79 0 rlineto 
+		0 -79 rlineto ineofill 
+		} { 
+		false 
+	} ifelse 
+
+} def
+%?partend
+
+%?touchdef touchTestsys
+%?fn	touchTestsys
+%?brief	Touchfläche für Umschaltung auf Master-Testsystem, unsichtbar, Gibt true (gedrückt) oder false auf dem Stack zurück (Touch-Fläche ist unsichtbar)
+%?bbox	0 0 79 79
+/touchTestsys {
+	%?manual_beg
+	testsys_timeout 0 gt { 
+	/testsys_timeout testsys_timeout 1 sub store 
+	false 
+	} { 
+		_mstatus {
+			_mxposd _myposd itransform 
+			 newpath 
+			0 0 moveto
+			0 79 rlineto
+			79 0 rlineto
+			0 -79 rlineto 
+			ineofill {
+				TouchAreaInv
+			} {
+				TouchArea 
+			} ifelse
+		} { 
+			TouchArea 
+		} ifelse 
+		newpath
+			78 7 moveto 
+			73 73 5 0 90 arc 
+			7 73 5 90 180 arc 
+			7 7 5 180 270 arc 
+			73 7 5 270 360 arc 
+		eofill
+			2 setlinewidth_nlw 
+	currentcolor 
+	TouchAreaInv 76 77 moveto 
+	7 77 lineto 
+	stroke 
+	3 73 moveto 
+	3 5 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+	7 77 moveto 
+	3 setlinewidth_nlw 
+	currentcolor 
+	TouchAreaInv 7 73 4 90 180 arc 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 	
+		_mdown {
+			_mxposd _myposd itransform
+			newpath
+			1 1 moveto
+			0 78 rlineto
+			78 0 rlineto
+			0 -78 rlineto
+			ineofill { 
+				(testsys_master_start) 0 setsysparam
+				/testsys_timeout 20 store
+				true
+			} {
+				false
+			} ifelse
+		} {
+			false
+		} ifelse		
+	} ifelse
+	%?manual_end
+} def
+%?partend
+
+
+%?partdef Value001
+%?fn Value001
+%?brief	Digital Anzeigewert am Komma zentriert
+%?bbox	-59 0 60 39
+/Value001 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+    /I_ErrorActive exch def	%?brief Errorstufe %?use INP %?type BOOL %?dflt false
+    /I_WarnActive exch def	%?brief Warnstufe %?use INP %?type BOOL %?dflt false
+    /I_Unit exch def	%?brief Einheit %?use INP %?type STRI %?dflt
+	/I_DeciNumb exch def	%?brief Code der angezeigten Stellen z.B. 3.1 %?use INP %?type REAL %?dflt 3.1
+	/I_Value exch def	%?brief Wert den die Digitalzahl anzeigen soll %?use INP %?type REAL %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LI_leftDigits	0	def
+	/LI_rightDigits	0	def
+
+	I_FontSelection selectFont
+
+	matrix currentmatrix
+
+	% Anzuzeigende Kommastellen ermitteln
+	I_DeciNumb abs cvi
+	/LI_leftDigits exch store						% Vorkommastellen speichern
+	I_DeciNumb LI_leftDigits mod
+	10 mul abs cvi dup 2 gt { pop 2 } if			% Nachkommastellen: Zahl aufbereiten und auf 2 beschränken
+	/LI_rightDigits exch store						% Nachkommastellen speichern
+
+	currentcolor
+	I_WarnActive { Yellow } if
+	I_ErrorActive { Red } if
+	% Koordinaten-Punkt zur Anzeige des Wertes ermitteln
+	(.) strw 2 div neg 0 moveto
+	% Kontrolle wie lange die Zahl links des Komma ist, ACHTUNG ncvs rundet eventuell 9.99 auf 10.0
+	LI_rightDigits 0 eq { I_Value abs round cvi } if
+	LI_rightDigits 1 eq { I_Value abs 10 mul round 10 div cvi } if
+	LS_helps 0 ncvs									% gerundete Zahl in string umwandeln um die Länge zu ermitteln
+	strw
+	neg 0 rmoveto
+	% Numerischen Wert aufbereiten
+	I_Value LS_helps LI_rightDigits ncvs			% in string umwandeln
+	show_utf8										% Wert anzeigen
+	setcolor
+
+	% Einheit anzeigen	
+	2 0 rmoveto										% Punkt zum die Einheit schreiben
+	I_Unit show_utf8								% Einheit anzeigen
+
+	setmatrix
+%?manual_end
+} def
+%?partend
+
+
+%?partdef Value002
+%?fn Value002
+%?brief	Digital Anzeigewert rechtsbündig
+%?bbox	-119 0 0 39
+/Value002 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+    /I_ErrorActive exch def	%?brief Errorstufe %?use INP %?type BOOL %?dflt false
+    /I_WarnActive exch def	%?brief Warnstufe %?use INP %?type BOOL %?dflt false
+    /I_Unit exch def	%?brief Einheit %?use INP %?type STRI %?dflt
+	/I_DeciNumb exch def	%?brief Code der angezeigten Stellen z.B. 3.1 %?use INP %?type REAL %?dflt 3.1
+	/I_Value exch def	%?brief Wert den die Digitalzahl anzeigen soll %?use INP %?type REAL %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LI_leftDigits	0	def
+	/LI_rightDigits	0	def
+
+	I_FontSelection selectFont
+
+	matrix currentmatrix
+
+	% Anzuzeigende Kommastellen ermitteln
+	I_DeciNumb abs cvi
+	/LI_leftDigits exch store						% Vorkommastellen speichern
+	I_DeciNumb LI_leftDigits mod
+	10 mul abs cvi dup 2 gt { pop 2 } if			% Nachkommastellen: Zahl aufbereiten und auf 2 beschränken
+	/LI_rightDigits exch store						% Nachkommastellen speichern
+
+	% Koordinaten-Punkt zwischen Zahlenwert und Einheit ermitteln
+	I_Unit strw										% Länge ermitteln
+	2 add neg 0 translate							% Punkt zwischen Wert und Einheit
+	2 0 moveto										% Punkt zum die Einheit schreiben
+	I_Unit show_utf8								% Einheit anzeigen
+	-2 0 moveto										% ans Ende des Numerischen Wertes springen
+
+	currentcolor
+	I_WarnActive { Yellow } if
+	I_ErrorActive { Red } if
+
+	% Numerischen Wert aufbereiten
+	I_Value LS_helps LI_rightDigits ncvs			% in string umwandeln
+	dup strw										% Länge ermitteln
+	neg 0 rmoveto
+	show_utf8										% Wert anzeigen
+
+	setcolor
+	setmatrix
+%?manual_end
+} def
+%?partend
+
+
+%?partdef Value003
+%?fn Value003
+%?brief	Digital Anzeigewert für Längeneinheiten in m bzw. ft am Komma zentriert
+%?bbox	 -59 0 60 39
+/Value003 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_DeciNumb exch def	%?brief Code der angezeigten Stellen z.B. 3.2 %?use INP %?type REAL %?dflt 3.1
+	/I_Value exch def	%?brief Wert den die Digitalzahl anzeigen soll %?use INP %?type REAL %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LI_leftDigits	0	def
+	/LI_rightDigits	0	def
+	/LI_ValueFt	0	def
+	/LI_ValueIn	0	def
+	/LD_Input	0	def
+
+	I_FontSelection selectFont
+
+	matrix currentmatrix
+	0 0 moveto
+
+	% Anzuzeigende Stellen ermitteln
+	I_DeciNumb abs cvi
+	/LI_leftDigits exch store							% Vorkommastellen speichern
+	I_DeciNumb LI_leftDigits mod
+	10 mul abs cvi dup 2 gt { pop 2 } if				% Nachkommastellen: Zahl aufbereiten und auf 2 beschränken
+	/LI_rightDigits exch store							% Nachkommastellen speichern
+
+	% Cursor vor das Komma setzen
+	(.) strw 2 div
+	neg 0 rmoveto
+
+	SXchangeUnit {
+		% Wenn im metrischen System Kommastellen angegeben werden, so werden im US-System feet und inch angezeigt, ansonsten nur feet
+
+		I_Value 39.37 mul								% Umrechnung in inch
+		/LD_Input exch store							% Inch speichern
+		% Numerischen Wert runden
+		LD_Input cvi 0 eq {								% hier wird eine Division durch null verhindert: mod im else-Teil
+			LD_Input cvi 0.5 ge { 1 }{ 0 } ifelse
+		}{
+			LD_Input LD_Input cvi mod 0.5 ge {
+				LD_Input cvi 1 add
+			}{
+				LD_Input cvi
+			} ifelse
+		} ifelse
+		/LD_Input exch store							% Inch gerundet speichern
+		
+		% Numerischen Wert in feet und inch aufteilen
+		LD_Input 12 div cvi								% ganze Feet ermitteln
+		/LI_ValueFt exch store							% Feet speichern
+		LD_Input LI_ValueFt 12 mul sub					% verbliebene Inch ermitteln
+		/LI_ValueIn exch store							% Inch speichern
+
+		% Wert anzeigen
+		LI_rightDigits 0 gt {
+			LI_ValueFt LS_helps 0 ncvs					% in string umwandeln
+			dup strw			 						% stringlänge der feet-Anzeige
+			neg 0 rmoveto
+			show_utf8									% feet-Wert anzeigen
+			(') show_utf8								% Einheit feet anzeigen
+			(11) strw									% inch-Anzeige von hinten her positionieren, damit der abstand zu feet immer gleich ist,egal ob 1 oder 11 inch angezeigt werden
+			0 rmoveto
+			LI_ValueIn LS_helps 0 ncvs					% in string umwandeln
+			dup strw
+			neg 0 rmoveto
+			show_utf8									% inch-Wert anzeigen
+			(") show_utf8								% Einheit inch anzeigen
+		}{
+			LI_ValueFt LS_helps 0 ncvs					% in string umwandeln
+			dup strw									% stringlänge der feet-Anzeige ermitteln
+			neg 0 rmoveto
+			show_utf8									% feet-Wert anzeigen
+			(') show_utf8								% Einheit feet anzeigen
+		} ifelse
+	}{
+		% Kontrolle wie lange die Zahl links des Komma ist, ACHTUNG ncvs rundet eventuell 9.99 auf 10.0
+		LI_rightDigits 0 eq { I_Value abs round cvi } if
+		LI_rightDigits 1 eq { I_Value abs 10 mul round 10 div cvi } if
+		LS_helps 0 ncvs									% gerundeten Wert in string umwandeln um die Länge zu ermitteln
+		strw
+		neg 0 rmoveto
+		% Numerischen Wert aufbereiten
+		I_Value LS_helps LI_rightDigits ncvs			% in string umwandeln
+		show_utf8										% Wert anzeigen
+	
+		% Einheit anzeigen
+		2 0 rmoveto										% Punkt zum die Einheit schreiben
+		(m) show_utf8									% Einheit anzeigen
+		
+	} ifelse
+	setmatrix
+%?manual_end
+} def
+%?partend
+
+
+%?partdef Value004
+%?fn Value004
+%?brief	Digital Anzeigewert für Längeneinheiten in m bzw. ft rechtsbündig
+%?bbox	 -119 0 0 39
+/Value004 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_DeciNumb exch def	%?brief Code der angezeigten Stellen z.B. 3.2 %?use INP %?type REAL %?dflt 3.1
+	/I_Value exch def	%?brief Wert den die Digitalzahl anzeigen soll %?use INP %?type REAL %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LI_leftDigits	0	def		% wird hier nicht benötigt
+	/LI_rightDigits	0	def
+	/LI_ValueFt	0	def
+	/LI_ValueIn	0	def
+	/LD_Input	0	def
+
+	I_FontSelection selectFont
+
+	matrix currentmatrix
+	0 0 moveto
+
+	% Anzuzeigende Stellen ermitteln
+	I_DeciNumb abs cvi
+	/LI_leftDigits exch store							% Vorkommastellen speichern
+	I_DeciNumb LI_leftDigits mod
+	10 mul abs cvi dup 2 gt { pop 2 } if				% Nachkommastellen: Zahl aufbereiten und auf 2 beschränken
+	/LI_rightDigits exch store							% Nachkommastellen speichern
+
+	SXchangeUnit {
+		% Wenn im metrischen System Kommastellen angegeben werden, so werden im US-System feet und inch angezeigt, ansonsten nur feet
+
+		I_Value 39.37 mul								% Umrechnung in inch
+		/LD_Input exch store							% Inch speichern
+		% Numerischen Wert runden
+		LD_Input cvi 0 eq {								% hier wird eine Division durch null verhindert: mod im else-Teil
+			LD_Input cvi 0.5 ge { 1 }{ 0 } ifelse
+		}{
+			LD_Input LD_Input cvi mod 0.5 ge {
+				LD_Input cvi 1 add
+			}{
+				LD_Input cvi
+			} ifelse
+		} ifelse
+		/LD_Input exch store							% Inch gerundet speichern
+		
+		% Numerischen Wert in feet und inch aufteilen
+		LD_Input 12 div cvi								% ganze Feet ermitteln
+		/LI_ValueFt exch store							% Feet speichern
+		LD_Input LI_ValueFt 12 mul sub					% verbliebene Inch ermitteln
+		/LI_ValueIn exch store							% Inch speichern
+
+		% Wert anzeigen
+		LI_rightDigits 0 gt {
+			LI_ValueFt LS_helps 0 ncvs					% in string umwandeln
+			dup strw			 						% stringlänge der feet-Anzeige
+			('11") strw add								% stringlänge der Einheiten und der inch-Anzeige
+			neg 0 rmoveto
+			show_utf8										% feet-Wert anzeigen
+			(') show_utf8									% Einheit feet anzeigen
+			(11) strw									% inch-Anzeige von hinten her positionieren, damit der abstand zu feet immer gleich ist,egal ob 1 oder 11 inch angezeigt werden
+			0 rmoveto
+			LI_ValueIn LS_helps 0 ncvs					% in string umwandeln
+			dup strw
+			neg 0 rmoveto
+			show_utf8										% inch-Wert anzeigen
+			(") show_utf8									% Einheit inch anzeigen
+		}{
+			LI_ValueFt LS_helps 0 ncvs					% in string umwandeln
+			dup strw									% stringlänge der feet-Anzeige ermitteln
+			(') strw add								% stringlänge der feet-Einheit addieren
+			neg 0 rmoveto
+			show_utf8										% feet-Wert anzeigen
+			(') show_utf8									% Einheit feet anzeigen
+		} ifelse
+	}{
+		% Koordinaten-Punkt zwischen Zahlenwert und Einheit ermitteln
+		(m) strw										% Länge ermitteln
+		2 add neg 0 translate								% Punkt zwischen Wert und Einheit
+		2 0 moveto										% Punkt zum die Einheit schreiben
+		(m) show_utf8										% Einheit anzeigen
+		-2 0 moveto										% ans Ende des Numerischen Wertes springen
+
+		% Numerischen Wert aufbereiten
+		I_Value LS_helps LI_rightDigits ncvs			% in string umwandeln
+		dup strw										% Länge ermitteln
+		neg 0 rmoveto
+		show_utf8											% Wert anzeigen
+	} ifelse
+	setmatrix
+%?manual_end
+} def
+%?partend
+
+
+%?partdef Value005
+%?fn Value005
+%?brief	Digital Anzeigewert für Last am Komma zentriert
+%?bbox	-59 0 60 39
+/Value005 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+    /I_ErrorActive exch def	%?brief Errorstufe %?use INP %?type BOOL %?dflt false
+    /I_WarnActive exch def	%?brief Warnstufe %?use INP %?type BOOL %?dflt false
+	/I_DeciNumb exch def	%?brief Code der angezeigten Stellen z.B. 3.1 %?use INP %?type REAL %?dflt 3.1
+	/I_Value exch def	%?brief Wert den die Digitalzahl anzeigen soll %?use INP %?type REAL %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LI_leftDigits	0	def
+	/LI_rightDigits	0	def
+	/LS_unit	(t)	def
+
+	SXchangeUnit { /LS_unit (lb) store } if
+
+	I_FontSelection selectFont
+
+	matrix currentmatrix
+
+	% Anzuzeigende Kommastellen ermitteln
+	I_DeciNumb abs cvi
+	/LI_leftDigits exch store						% Vorkommastellen speichern
+	I_DeciNumb LI_leftDigits mod
+	10 mul abs cvi dup 2 gt { pop 2 } if			% Nachkommastellen: Zahl aufbereiten und auf 2 beschränken
+	/LI_rightDigits exch store						% Nachkommastellen speichern
+
+	currentcolor
+	I_WarnActive { Yellow } if
+	I_ErrorActive { Red } if
+	% Numerischen Wert aufbereiten
+	SXchangeUnit { I_Value 2.20462 mul }{ I_Value } ifelse
+	% Koordinaten-Punkt zur Anzeige des Wertes ermitteln
+	(.) strw 2 div neg 0 moveto
+	dup
+	% Kontrolle wie lange die Zahl links des Komma ist, ACHTUNG ncvs rundet eventuell 9.99 auf 10.0
+	LI_rightDigits 0 eq { abs round cvi } if
+	LI_rightDigits 1 eq { abs 10 mul round 10 div cvi } if
+	LS_helps 0 ncvs									% in string umwandeln um die Länge zu ermitteln
+	strw
+	neg 0 rmoveto
+	LS_helps LI_rightDigits ncvs					% in string umwandeln
+	show_utf8										% Wert anzeigen
+	setcolor
+
+	% Einheit anzeigen	
+	2 0 rmoveto										% Punkt zum die Einheit schreiben
+	LS_unit show_utf8								% Einheit anzeigen
+
+	setmatrix
+%?manual_end
+} def
+%?partend
+
+
+%?partdef Value006
+%?fn Value006
+%?brief	Digital Anzeigewert für Last rechtsbündig
+%?bbox	-119 0 0 39
+/Value006 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+    /I_ErrorActive exch def	%?brief Errorstufe %?use INP %?type BOOL %?dflt false
+    /I_WarnActive exch def	%?brief Warnstufe %?use INP %?type BOOL %?dflt false
+	/I_DeciNumb exch def	%?brief Code der angezeigten Stellen z.B. 3.1 %?use INP %?type REAL %?dflt 3.1
+	/I_Value exch def	%?brief Wert den die Digitalzahl anzeigen soll %?use INP %?type REAL %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LI_leftDigits	0	def
+	/LI_rightDigits	0	def
+	/LS_unit	(t)	def
+
+	SXchangeUnit { /LS_unit (lb) store } if
+
+	I_FontSelection selectFont
+
+	matrix currentmatrix
+
+	% Anzuzeigende Kommastellen ermitteln
+	I_DeciNumb abs cvi
+	/LI_leftDigits exch store						% Vorkommastellen speichern
+	I_DeciNumb LI_leftDigits mod
+	10 mul abs cvi dup 2 gt { pop 2 } if			% Nachkommastellen: Zahl aufbereiten und auf 2 beschränken
+	/LI_rightDigits exch store						% Nachkommastellen speichern
+
+	% Koordinaten-Punkt zwischen Zahlenwert und Einheit ermitteln
+	LS_unit strw										% Länge ermitteln
+	2 add neg 0 translate							% Punkt zwischen Wert und Einheit
+	2 0 moveto										% Punkt zum die Einheit schreiben
+	LS_unit show_utf8								% Einheit anzeigen
+	-2 0 moveto										% ans Ende des Numerischen Wertes springen
+
+	currentcolor
+	I_WarnActive { Yellow } if
+	I_ErrorActive { Red } if
+
+	% Numerischen Wert aufbereiten
+	SXchangeUnit { I_Value 2.20462 mul }{ I_Value } ifelse
+	LS_helps LI_rightDigits ncvs			% in string umwandeln
+	dup strw										% Länge ermitteln
+	neg 0 rmoveto
+	show_utf8											% Wert anzeigen
+
+	setcolor
+	setmatrix
+%?manual_end
+} def
+%?partend
+
+
+
+%?partdef Clock001
+%?fn Clock001
+%?brief	Digitale Uhr
+%?bbox	0 0 79 19
+/Clock001 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_Value_h exch def	%?brief Stunden %?use INP %?type DINT %?dflt 0
+	/I_Value_m exch def	%?brief Minuten %?use INP %?type DINT %?dflt 0
+	/I_Value_s exch def	%?brief Sekunden %?use INP %?type DINT %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LX_xMax 	0	def			% maximale Breite eines Anzeigewertes
+
+	I_FontSelection selectFont
+
+	matrix currentmatrix currentcolor
+
+	% Zahlengrösse ermitteln
+	(88) strw						% Länge ermitteln
+	/LX_xMax exch store				% X-Wert speichern
+	% Stunden anzeigen
+	LX_xMax 0 translate				% Ursprung zum ersten Trennzeichen versetzen
+	I_Value_h LS_helps 2 0 nncvs	% Stunden in String umwandeln
+	dup strw						% Länge ermitteln
+	neg 0 moveto show_utf8				% um die Stringbreite nach links springen und den Wert anzeigen
+	0 0 moveto
+	(:) show_utf8						% erstes Trennzeichen setzen
+	% Minuten anzeigen
+	LX_xMax 0 rmoveto
+	currentpoint translate			% Ursprung zum zweiten Trennzeichen versetzen
+	I_Value_m LS_helps 2 0 nncvs	% Minuten in String umwandeln
+	dup strw						% Länge ermitteln
+	neg 0 moveto show_utf8				% um die Stringbreite nach links springen und den Wert anzeigen
+	0 0 moveto
+	(:) show_utf8						% erstes Trennzeichen setzen
+	% Sekunden anzeigen
+	LX_xMax 0 rmoveto
+	currentpoint translate			% Ursprung hinter die Sekundenanzeige versetzen
+	I_Value_s LS_helps 2 0 nncvs	% Sekunden in String umwandeln
+	dup strw						% Länge ermitteln
+	neg 0 moveto show_utf8				% um die Stringbreite nach links springen und den Wert anzeigen
+
+	setcolor setmatrix
+%?manual_end
+} def
+%?partend
+
+
+%?partdef Date001
+%?fn Date001
+%?brief	Digitale Datumsanzeige
+%?bbox	0 0 99 19
+/Date001 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_Value_y exch def	%?brief Jahr %?use INP %?type DINT %?dflt 0
+	/I_Value_m exch def	%?brief Monat %?use INP %?type DINT %?dflt 0
+	/I_Value_d exch def	%?brief Tag %?use INP %?type DINT %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LX_xMax 	0	def			% maximale Breite eines Anzeigewertes
+
+	I_FontSelection selectFont
+
+	matrix currentmatrix currentcolor
+
+	% Zahlengrösse ermitteln
+	(88) strw							% Länge ermitteln
+	/LX_xMax exch store					% X-Wert speichern
+	% Tage anzeigen (oder USA: Monate)
+	LX_xMax 0 translate					% Ursprung zum ersten Trennzeichen versetzen
+	SXchangeUnit {
+		I_Value_m LS_helps 2 0 nncvs	% Monate in String umwandeln
+	}{
+		I_Value_d LS_helps 2 0 nncvs	% Tage in String umwandeln
+	} ifelse
+	dup strw							% Länge ermitteln
+	neg 0 moveto show_utf8					% um die Stringbreite nach links springen und den Wert anzeigen
+	0 0 moveto
+	(.) show_utf8							% erstes Trennzeichen setzen
+	% Monate anzeigen (oder USA: Tage)
+	LX_xMax 0 rmoveto
+	currentpoint translate				% Ursprung zum zweiten Trennzeichen versetzen
+	SXchangeUnit {
+		I_Value_d LS_helps 2 0 nncvs	% Tage in String umwandeln
+	}{
+		I_Value_m LS_helps 2 0 nncvs	% Monate in String umwandeln
+	} ifelse
+	dup strw							% Länge ermitteln
+	neg 0 moveto show_utf8					% um die Stringbreite nach links springen und den Wert anzeigen
+	0 0 moveto
+	(.) show_utf8							% erstes Trennzeichen setzen
+	% Jahre anzeigen
+	I_Value_y LS_helps 4 0 nncvs		% Jahre in String umwandeln
+	show_utf8								% Wert anzeigen
+
+	setcolor setmatrix
+%?manual_end
+} def
+%?partend
+
+%?partdef date003
+%?fn	date003
+%?brief	Digitale Datumsanzeige; 1:TT.MM.YYYY 2:YYYY.MM.TT 3:MM.TT.YYYY
+%?bbox	0 0 99 19
+/date003 {
+	
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_FormatSelect	exch def	%?brief Anzeigeformatumschaltung (1: dd.mm.yyyy, 2: yyyy.mm.dd, 3: mm.dd.yyyy) %?use INP %?type DINT %?dflt 1
+	/I_Separator	exch	def	%?brief	Trennzeichen (1: ., 2: -, 3: /)	%?use	INP	%?type	DINT	%?dflt	1
+	/I_Value_y exch def	%?brief Jahr %?use INP %?type DINT %?dflt 0
+	/I_Value_m exch def	%?brief Monat %?use INP %?type DINT %?dflt 0
+	/I_Value_d exch def	%?brief Tag %?use INP %?type DINT %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LS_tag		(.)	def			% Trennzeichen für Datum
+
+	I_FontSelection selectFont
+
+	matrix currentmatrix currentcolor
+
+%	I_FormatSelect 10 gt I_FormatSelect 20 le and { /LS_tag (-) store } if
+%	I_FormatSelect 20 gt I_FormatSelect 30 le and { /LS_tag (/) store } if
+	I_Separator 1 eq {
+		/LS_tag (.) store
+	} if
+	I_Separator 2 eq {
+		/LS_tag (-) store
+	} if	
+		I_Separator 3 eq {
+		/LS_tag (/) store
+	} if
+	I_FormatSelect 1 eq I_FormatSelect 11 eq or {
+		% Tage anzeigen
+		(88) strw 0 translate
+		I_Value_d LS_helps 2 0 nncvs		% Tage in String umwandeln
+		dup strw							% Länge ermitteln
+		neg 0 moveto show_utf8				% um die Stringbreite nach links springen und den Wert anzeigen
+		0 0 moveto
+		LS_tag show_utf8					% Trennzeichen setzen
+		% Monate anzeigen
+		(88) strw 0 rmoveto
+		currentpoint translate				% Ursprung zum zweiten Trennzeichen versetzen
+		I_Value_m LS_helps 2 0 nncvs		% Monate in String umwandeln
+		dup strw							% Länge ermitteln
+		neg 0 moveto show_utf8				% um die Stringbreite nach links springen und den Wert anzeigen
+		0 0 moveto
+		LS_tag show_utf8					% Trennzeichen setzen
+		% Jahre anzeigen
+		I_Value_y LS_helps 4 0 nncvs		% Jahre in String umwandeln
+		show_utf8
+	} if
+	
+	I_FormatSelect 2 eq I_FormatSelect 12 eq or {
+		% Jahre anzeigen
+		(8888) strw 0 translate
+		I_Value_y LS_helps 4 0 nncvs		% Jahre in String umwandeln
+		dup strw							% Länge ermitteln
+		neg 0 moveto show_utf8				% um die Stringbreite nach links springen und den Wert anzeigen
+		0 0 moveto
+		LS_tag show_utf8					% Trennzeichen setzen
+		% Monate anzeigen
+		(88) strw 0 rmoveto
+		currentpoint translate				% Ursprung zum zweiten Trennzeichen versetzen
+		I_Value_m LS_helps 2 0 nncvs		% Monate in String umwandeln
+		dup strw							% Länge ermitteln
+		neg 0 moveto show_utf8				% um die Stringbreite nach links springen und den Wert anzeigen
+		0 0 moveto
+		LS_tag show_utf8					% Trennzeichen setzen
+		% Tage anzeigen
+		I_Value_d LS_helps 2 0 nncvs		% Tage in String umwandeln
+		show_utf8
+	} if
+	
+	I_FormatSelect 3 eq I_FormatSelect 13 eq or {
+		% Monate anzeigen
+		(88) strw 0 translate
+		I_Value_m LS_helps 2 0 nncvs		% Monate in String umwandeln
+		dup strw							% Länge ermitteln
+		neg 0 moveto show_utf8				% um die Stringbreite nach links springen und den Wert anzeigen
+		0 0 moveto
+		LS_tag show_utf8					% Trennzeichen setzen
+		% Tage anzeigen
+		(88) strw 0 rmoveto
+		currentpoint translate				% Ursprung zum zweiten Trennzeichen versetzen
+		I_Value_d LS_helps 2 0 nncvs		% Tage in String umwandeln
+		dup strw							% Länge ermitteln
+		neg 0 moveto show_utf8				% um die Stringbreite nach links springen und den Wert anzeigen
+		0 0 moveto
+		LS_tag show_utf8					% Trennzeichen setzen
+		% Jahre anzeigen
+		I_Value_y LS_helps 4 0 nncvs		% Jahre in String umwandeln
+		show_utf8
+	} if
+
+	setcolor setmatrix
+%?manual_end
+	
+} def
+%?partend
+
+%?partdef message001
+%?fn	message001
+%?brief	Part für Messageseite: Anzahl der Messages vorwählbar, neueste Message wird als erste angezeigt, inclusive Dreh-Drückradfunktion, mit Rahmen
+%?bbox	0 0 639 479
+/message001 {
+%?manual_beg
+	/I_scroll				exch	def		%?brief Veränderung durch Dreh-Drückfunktion -1 / 0 / +1	%?use INP	%?type DINT	%?dflt 0
+	/I_pressAckn			exch	def		%?brief Quittierung durch Dreh-Drückfunktion 	%?use INP	%?type BOOL	%?dflt false
+	/I_scrollActive			exch	def		%?brief Dreh-Drückfunktion aktiviert	%?use INP	%?type BOOL	%?dflt false
+	/I_MsgNumPerPage		exch	def		%?brief Anzahl der anzuzeigenden Messages pro Seite	%?use INP	%?type DINT	%?dflt 5
+	/O_scroll				0		def		%?brief Veränderte Dreh-Drückfunktion	%?use OUT	%?type DINT	%?dflt 0
+	/O_scrollAckn			0		def		%?brief Dreh-Drückfunktion quittierung erledigt	%?use OUT	%?type DINT	%?dflt 0
+	/O_scrollFocusExt		false	def		%?brief Dreh-Drückfunktion Auswahl extern des Messageparts	%?use OUT	%?type BOOL	%?dflt false
+	
+	% Variablen zur Message
+	/LSmsgText () def				% Message-Text
+	/LXmsgValid false def			% ist dieser Index relevant (gibt es diesen index)
+	/LXmsgAvail false def			% ist Message mit diesem Index relevant (ist die dazugehörige Message relevant)
+	/LXmsgActive false def			% ist Message noch aktiv
+	/LXmsgAckn false def			% wurde Message bereits quittiert
+
+	% Variablen
+	/LXlastMsgScrAct false def		% steht die Auswahl des Dreh-Drück auf der letzten Message?
+	/LDcounter 0 def				% Message Zähler pro Seite
+	/LDmsgCountBef 0 def			% Message Zähler auf vorhergehenden Seite
+	/LDredCountBef 0 def			% Zähler der nicht quitierten und noch vorhandenen Messages auf vorhergehenden Seiten
+	/LDyelCountBef 0 def			% Zähler der quitierten und noch vorhandenen Messages auf vorhergehenden Seiten
+	/LDmsgCountAft 0 def			% Message Zähler auf Folgeseiten
+	/LDredCountAft 0 def			% Zähler der nicht quitierten und noch vorhandenen Messages auf folgenden Seiten
+	/LDyelCountAft 0 def			% Zähler der quitierten und noch vorhandenen Messages auf folgenden Seiten
+	/LDlastActIndex 0 def			% Index der letzten Message der aktuellen Seite
+	/LDmsgActIndex 0 def			% aktueller Message Index
+	/LDmsgNexFirIndex 0 def			% erster Index der Anzeigeseite nach dem Blättern
+	/LDbarPosition 0 def			% Anfangspunkt des Positionsbalken
+	/LDbarLength 0 def				% Länge des Positionsbalken
+	/LDbarWide 60 def				% Balkenbreite des Positionsbalken
+	/LDbarAreaY 236 def				% Größe des Balkenfeldes Y in Pixel
+	/LDmsgLineLen 600 def			% maximale Zeilenlänge einer Message
+	/LDmsgLines 5 def				% Anzahl der Messages pro Seite
+	/LDmsgPixelStep 80 def			% Anzahl Pixel in Y pro Message
+	/LDx1 -5 def					% linker Rand der Touchumrandung (Abstand)
+	/LDy1 -1 def					% oberer Rand der Touchumrandung (Abstand)
+	/LDyMsg 0 def					% Y-Position der aktuellen Message
+	
+	% Definitionen
+	/LDmsgAreaX 638 def				% Größe des Messagefeldes X in Pixel (Achtung auf die Trennlinien rechts und links)
+	/LDmsgAreaY 400 def				% Größe des Messagefeldes Y in Pixel
+	/LDsymGrid 80 def				% Größe des Symbolrasters in Pixel
+
+	matrix currentmatrix
+	1 0 translate					% Messagepart um 1 Pixel verschieben, damit die Trennlinie zu den Statussymbolen Platz findet
+
+	% Font
+	MsgFont
+
+	% Berechnungen für die Texteinblendung
+	/LDmsgLineLen LDmsgAreaX LDsymGrid sub LDsymGrid 2 div sub 25 sub store					% Textlänge = Gesamtbreite - Pfeiltaste - Statussymbol - Randabstand
+	/LDmsgPixelStep LDmsgAreaY I_MsgNumPerPage div cvi store		% Schrittbreite einer Message zur nächsten
+	/LDmsgLines LDmsgPixelStep 5 sub strhl neg div cvi store		% mindestend 5 pixel Abstand zwischen den Messages (diese werden in die Pixelanzahl pro Message miteingerechnet)
+	% Berechnungen für die Touchumrandung und Text-Abstand (immer relativ ausgehend vom Ursprung links oben der aktuellen Textanzeige)
+	/LDx1 LDsymGrid 2 div 10 add store											% X Abstand des Textes zum Rand (Achtung auf Statusbalken)
+	/LDy1 0 store											% Y Abstand des Textes zum Rand
+	/LDxtouch LDmsgAreaX LDsymGrid 2 add sub store			% Länge der Touchumrandung
+	/LDytouch LDmsgPixelStep 3 sub store					% Höhe der Touchumrandung
+
+	matrix currentmatrix currentcolor
+	0 0 translate
+	% Positionierung für die erste Message
+	1 LDmsgAreaY 1 sub translate							% Startpunkt oberhalb der ersten Zeile, Cursorposition für Rahmen
+	0 0 moveto												% Startpunkt (ACHTUNG: Cursorpunkt für Textanzeige siehe ShowMsgVar)
+
+
+	% DREH - DRÜCK
+
+	% Berechnungen für Dreh-Drückfunktion
+	I_scrollActive {
+		I_scroll 0 gt {
+			/MDmsgScrollCounter MDmsgScrollCounter 1 add store
+			/O_scroll I_scroll 1 sub store
+			} if
+		I_scroll 0 lt {
+			/MDmsgScrollCounter MDmsgScrollCounter 1 sub store
+			/O_scroll I_scroll 1 add store
+		} if
+
+		% Wenn es nur eine Messageseite gibt, muß durch Dreh-Drück nicht weitergeschoben werden.		
+		MDmsgScrollCounter I_MsgNumPerPage le MDmsgScrollCounter MDmsgValidNr gt and {			% wenn es nur eine (die erste) Messageseite gibt
+			MDmsgScrollCounter MDmsgValidNr 1 add eq {
+				/MXscrollOnMsgSym true store				% Die Auswahl steht auf dem Symbol der Message-Seite
+				/MDmsgScrollCounter 0 store					% Aktuellen Scrollindex auf 0 stellen -> Focus auf dem Symbol Messageseite
+			} if
+		} if
+		% Verschieben der gesamten Messageanzeige um eine Message zurück
+		MXscrollOnMsgSym not MDmsgScrollCounter 1 lt and {
+			/LDmsgActIndex MDfirstActIndex store
+			{
+				/LDmsgActIndex LDmsgActIndex 1 add store
+				LDmsgActIndex MDmsgHighIndex gt {
+					/MXscrollOnMsgSym true store				% Auswahl steht auf dem Symbol der Message-Seite
+					/MDmsgScrollCounter 0 store					% Aktuellen Scrollindex auf 0 stellen -> Focus auf dem Symbol Messageseite
+					exit
+				} if
+				LDmsgActIndex getmessageinfo						% Message von der Steuerung holen
+				dup {												% Kontrolle, ob die Antwort der Funktion bereits "valid" ist
+					/LXmsgValid exch store							% valid: Messageinformation ist übertragen worden und kann gechecked werden
+					/LXmsgAvail exch store							% Message für diesen Client relevant
+					pop pop
+					LXmsgValid LXmsgAvail and {
+						/MDmsgScrollCounter MDmsgScrollCounter 1 add store
+						/MDfirstActIndex LDmsgActIndex store
+						MDmsgScrollCounter 1 ge {
+							exit
+						} if
+					} if
+					MDfirstActIndex MDmsgHighIndex gt {				% Wenn die Auswahl auf der obersten Msg steht und weiter nach oben gerdeht wurde (also der geünschte Index höher wäre als der höchste der Anzeige)
+						exit
+					} if
+				} {
+					pop pop pop pop									% Message ist noch nicht valid, kann also noch nicht ausgewertet werden; übergebene Parameter vom stack löschen
+					exit
+				} ifelse
+			} loop
+		} if
+		% Verschieben der gesamten Messageanzeige um eine Message vor
+		/LDcounter 0 store
+		MDmsgScrollCounter I_MsgNumPerPage gt {						% Die Dreh-Drück-Auswahl soll weiterspringen und steht schon auf der untersten Message die angezeigt wird
+			/LDmsgActIndex MDfirstActIndex store
+			{
+				/LDmsgActIndex LDmsgActIndex 1 sub store
+				LDmsgActIndex getmessageinfo						% Message von der Steuerung holen
+				dup {												% Kontrolle, ob die Antwort der Funktion bereits "valid" ist
+					/LXmsgValid exch store							% valid: Messageinformation ist übertragen worden und kann gechecked werden
+					/LXmsgAvail exch store							% Message für diesen Client relevant
+					pop pop
+					LXmsgValid LXmsgAvail and {
+						/LDcounter LDcounter 1 add store				
+						LDcounter 1 eq { /LDmsgNexFirIndex LDmsgActIndex store } if				% vorher zweite angezeigte Message in Zwischenspeicher
+						/MXmsgShowTop false store												% keinesfalls kann nun mehr der Show Top true sein
+						LDmsgActIndex MDmsgLowIndex ge LDcounter I_MsgNumPerPage ge and {		% Messages wurden um 1 weitergeschoben
+							/MDmsgScrollCounter MDmsgScrollCounter 1 sub store
+							/MDfirstActIndex LDmsgNexFirIndex store								% vorher zweite angezeigte Message zur jetzigen ersten machen
+							exit
+						} if
+						LDmsgActIndex MDmsgLowIndex lt LDcounter I_MsgNumPerPage le and {		% aktuelle Seite würde nicht mehr voll nach dem weiterschieben
+							/MXscrollOnMsgSym true store			% Auswahl steht auf dem Symbol der Message-Seite
+							/MDmsgScrollCounter 0 store				% Aktuellen Scrollindex auf 0 stellen -> Focus auf dem Symbol Messageseite
+							exit
+						} if
+					} if
+					LDmsgActIndex MDmsgLowIndex lt {				% Wenn die Auswahl auf der untersten Msg steht und weiter nach unten gerdeht wurde (also der geünschte Index kleiner wäre als der niedrigste der Anzeige)
+						/MXscrollOnMsgSym true store				% Auswahl steht auf dem Symbol der Message-Seite
+						/MDmsgScrollCounter 0 store					% Aktuellen Scrollindex auf 0 stellen -> Focus auf dem Symbol Messageseite
+						exit
+					} if
+				} {
+					pop pop pop pop									% Message ist noch nicht valid, kann also noch nicht ausgewertet werden; übergebene Parameter vom stack löschen
+					exit
+				} ifelse
+			} loop
+		} if
+
+		% Die Auswahl der Dreh-Drückfunktion wird von extern wieder ins Messagepart übernommen:
+		MXscrollOnMsgSym MDmsgScrollCounter 1 eq and {
+			/MXscrollOnMsgSym false store
+			/MDfirstActIndex MDmsgHighIndex store
+			/MXmsgShowTop true store
+		} if
+		MXscrollOnMsgSym MDmsgScrollCounter -1 eq and {
+			/MXscrollOnMsgSym false store
+			/LDcounter 0 store
+			% Check der letzten Messages um die letzte Messageseite zu füllen
+			/LDmsgActIndex MDmsgLowIndex store					% hier wird von der aktuellen Seite um I_MsgNumPerPage zurückgesucht
+			{
+		 		% aktuellen Message Index für nächsten Schleifendurchlauf erhöhen, da hier von der aktuellen Seite bis zur obersten Message zurückgesucht wird (Messages davor haben den höheren Index)
+				LDmsgActIndex getmessageinfo						% Message von der Steuerung holen
+				dup {												% Kontrolle, ob die Antwort der Funktion bereits "valid" ist
+					/LXmsgValid exch store							% valid: Messageinformation ist übertragen worden und kann gechecked werden
+					/LXmsgAvail exch store							% Message für diesen Client relevant
+					pop pop											% überflüssige Info vom stack löschen, da dieser hier nicht benötigt wird
+					% Index der zum Zurückblättern suchen
+					LXmsgValid LXmsgAvail and {
+						/LDcounter LDcounter 1 add store
+						/MDfirstActIndex LDmsgActIndex store
+					} if
+					% Schleife abbrechen wenn die Indexes für die letzte Seite gefunden wurden
+					LDcounter I_MsgNumPerPage ge {
+						exit
+					} if
+				} {
+					pop pop pop pop
+					exit												% Schleife abbrechen, wenn die Message nicht valid übergeben wurde
+				} ifelse
+				% Schleife abbrechen, wenn keine weiteren Messages mehr vorhanden sind
+				LDmsgActIndex MDmsgHighIndex ge {
+					exit
+				} if
+				/LDmsgActIndex LDmsgActIndex 1 add store
+			} loop
+			/MDmsgScrollCounter LDcounter store							% Anzahl der Messages auf dieser Seite in den Scrollcounrter schreiben, damit dieser auf der letzten Message steht
+			MDmsgHighIndex MDfirstActIndex eq {
+				/MXmsgShowTop true store
+			} {
+				/MXmsgShowTop false store
+			} ifelse
+		} if
+
+		% Kontrolle ob auf der aktuellen Messageseite aktuell noch soviele Messages angezeigt werden, wie die Nummer der Dreh-Drückauswahl den Focus hat
+		/LDcounter 0 store
+		/LDmsgActIndex MDfirstActIndex store
+		{
+			LDmsgActIndex getmessageinfo						% Message von der Steuerung holen
+			dup {												% Kontrolle, ob die Antwort der Funktion bereits "valid" ist
+				/LXmsgValid exch store							% valid: Messageinformation ist übertragen worden und kann gechecked werden
+				/LXmsgAvail exch store							% Message für diesen Client relevant
+				pop pop
+				LXmsgValid LXmsgAvail and {
+					/LDcounter LDcounter 1 add store				
+					LDmsgActIndex MDmsgLowIndex le LDcounter I_MsgNumPerPage le and {		% aktuelle Seite ist nicht mehr voll
+						MDmsgScrollCounter LDcounter gt {
+							/MXscrollOnMsgSym true store			% Auswahl steht auf dem Symbol der Message-Seite
+							/MDmsgScrollCounter 0 store				% Aktuellen Scrollindex auf 0 stellen -> Focus auf dem Symbol Messageseite
+						} if
+						exit
+					} if
+				} if
+				LDmsgActIndex MDmsgLowIndex lt {				% Wenn die Auswahl auf der untersten Msg steht und weiter nach unten gerdeht wurde (also der geünschte Index kleiner wäre als der niedrigste der Anzeige)
+					exit
+				} if
+			} {
+				pop pop pop pop									% Message ist noch nicht valid, kann also noch nicht ausgewertet werden; übergebene Parameter vom stack löschen
+				exit
+			} ifelse
+			/LDmsgActIndex LDmsgActIndex 1 sub store
+		} loop
+
+		/O_scrollFocusExt MXscrollOnMsgSym store
+		
+	} if
+
+
+	%Messages
+	
+	% Wenn keine Messages angezeigt werden
+	MDmsgValidNr 0 eq {
+		/MDfirstActIndex 0 store
+		LDx1 strhl moveto
+		(0 Messages) show_utf8
+	} if
+	MDmsgValidNr -1 eq {
+		/MDfirstActIndex 0 store
+		LDx1 strhl moveto
+		(waiting for Message Information) show_utf8
+	} if
+
+	% Aktueller MessageIndex auf den Startwert setzen
+	/LDmsgActIndex MDmsgHighIndex store
+	/LDlastActIndex LDmsgActIndex store
+	/LDcounter 0 store
+
+	% Bei fehlerhaftem Index diesen zurücksetzen und die Messages von Anfang an anzeigen
+	MDfirstActIndex 0 eq MDfirstActIndex MDmsgHighIndex gt or {
+		/MDfirstActIndex MDmsgHighIndex store
+	} if
+	MDfirstActIndex MDmsgLowIndex lt {
+		/MDfirstActIndex MDmsgLowIndex store
+	} if
+
+	MXmsgShowTop {
+		/MDfirstActIndex MDmsgHighIndex store
+	} if
+
+	% Messages zur Anzeige für das aktuelle Blatt suchen (Messages auf den darüberliegenden Blättern durchchecken, um an den benötigten Index der aktuellen Seite zu kommen)
+	{
+		LDmsgActIndex getmessagetext						% Message von der Steuerung holen
+		dup {												% Kontrolle, ob die Antwort der Funktion bereits "valid" ist
+			/LXmsgValid exch store							% valid: Messageinformation ist übertragen worden und kann gechecked werden
+			/LXmsgAvail exch store							% Message für diesen Client relevant
+			/LXmsgActive exch store							% Fehler noch vorhanden
+			/LXmsgAckn exch store							% Fehler bereits quittiert
+			/LSmsgText exch store							% Fehlertext
+
+			LXmsgValid LXmsgAvail and {
+				/LDlastActIndex LDmsgActIndex store			% Letzten gültigen Messageindex speichern
+				LDmsgActIndex MDfirstActIndex gt {			% check der Messages vor der aktuellen Anzeige (aber nicht wenn die oberste Seite (auf der die neueste Message sich oben einschiebt) angezeigt wird)
+					/LDmsgCountBef LDmsgCountBef 1 add store										% Gesamtanzahl der vor der aktuellen Anzeige liegenden Messages speichern
+					LXmsgActive LXmsgAckn not and { /LDredCountBef LDredCountBef 1 add store } if	% Zähler der nicht quittierten und noch vorhandenen Meldungen erhöhen
+ 					LXmsgActive LXmsgAckn and { /LDyelCountBef LDyelCountBef 1 add store } if		% Zähler der quittierten und noch vorhandenen Meldungen erhöhen
+				} if
+			} if
+			% Aktuell anzuzeigender Messageindex wurde nicht erreicht
+			LDmsgActIndex MDmsgLowIndex lt {
+				/MDfirstActIndex LDlastActIndex store		% aktuell anzuzeigender Messageindex auf den zuletzt gültigen setzen
+			} if
+			% Aktuell anzuzeigende Message wurde erreicht, Message anzeigen
+			LDmsgActIndex MDfirstActIndex le LXmsgValid LXmsgAvail and and {
+				% Position für die Anzeige der aktuellen Message setzen
+				/LDyMsg LDmsgPixelStep LDcounter mul neg store
+				0 LDyMsg moveto
+				% Index aktualisieren
+				/LDcounter LDcounter 1 add store				% Zähler der relevanten Messages die angezeigt werden erhöhen
+				/LDlastActIndex LDmsgActIndex store				% Index der aktuell letzten Message dieser Seite speichern
+				LDcounter 1 eq LDmsgCountBef 0 eq and {			% auf der ersten Seite ist die neueste Message immer die erste, auf den folgeseiten bleibt die Anzeige gleich, auch wenn darüber zusätzlich eine neuere Message erscheint
+					/MDfirstActIndex LDmsgActIndex store		% auf der aktuellen Seite ist immer die neueste Message die erste
+				} if
+				% Farbauswahl zur Rahmenanzeige
+ 				currentcolor
+ 				LXmsgActive not LXmsgAckn not and { LightGrey } if
+ 				LXmsgActive LXmsgAckn and { Yellow } if
+ 				LXmsgActive LXmsgAckn not and { Red } if
+				0 LDyMsg LDxtouch LDytouch neg rectstroke
+				% Symbolfläche zur Statusanzeige
+				0 LDyMsg LDsymGrid 2 div LDytouch neg rectfill
+				setcolor
+ 				% Symbol einblenden
+ 				currentcolor
+ 				Invisible
+				LXmsgAckn not {
+	 				matrix currentmatrix
+					0 LDyMsg LDmsgPixelStep 2 div LDsymGrid 4 div add sub translate
+					0.50 0.50 scale
+					symgeneral003
+					setmatrix
+ 				} if
+				LXmsgAckn {
+					matrix currentmatrix
+					0 LDyMsg LDmsgPixelStep 4 div LDsymGrid 4 div add sub translate
+					0.50 0.50 scale
+					symgeneral003
+					setmatrix
+					matrix currentmatrix
+					0 LDyMsg LDmsgPixelStep 4 div 3 mul LDsymGrid 4 div 5 sub add sub translate
+					0.50 0.50 scale
+					symgeneral002
+					setmatrix
+				} if
+ 				setcolor
+				% Textanzeige der Message
+				LDx1 LDy1 neg LDyMsg add moveto
+				LSmsgText LDmsgLines LDmsgLineLen ShowMsgVar	% Anzeige der Message mittels Unterfunktion
+				% Dreh-Drück: Ausgewählte Message für Dreh-Drückfunktion bestimmen und Rahmen für Dreh-Drückfunktion zeichnen
+				matrix currentmatrix
+				2 setlinewidth
+				I_scrollActive MDmsgScrollCounter LDcounter eq and {
+					2 LDyMsg 2 sub LDxtouch 4 sub LDytouch 4 sub neg rectstroke
+					I_pressAckn I_scroll 0 eq and {
+						LDmsgActIndex setmessageack
+						/O_scrollAckn true store
+					} {
+						/O_scrollAckn false store
+					} ifelse
+				} if
+				1 setlinewidth
+				setmatrix 
+				% Touch für diese Message kontrollieren
+				0 LDyMsg moveto
+ 				_mdown {
+ 					_mxposd _myposd itransform
+ 					newpath 0 LDytouch neg rlineto LDxtouch 0 rlineto 0 LDytouch rlineto ineofill			% Touchbereich festlegen: hinterlässt true oder false auf dem stack
+ 				} {
+ 					false										% keine Touchscreen-Berührung
+				} ifelse {										% die Touchfunktion hinterlässt true oder false auf dem stack, deswegen liegt nach dem ifelse ein bollscher Wert auf dem stack
+					LDmsgActIndex setmessageack
+				} if
+			} if
+			% aktuellen Message index für nächsten Schleifendurchlauf vermindern
+			/LDmsgActIndex LDmsgActIndex 1 sub store
+			% Schleife abbrechen, wenn die Seite voll ist, oder keine weiteren Messages mehr vorhanden sind
+			LDcounter I_MsgNumPerPage ge LDmsgActIndex MDmsgLowIndex lt or {
+				exit
+			} if
+		} {
+			pop pop pop pop pop								% Message ist noch nicht valid, kann also noch nicht ausgewertet werden; übergebene Parameter vom stack löschen
+			exit
+		} ifelse
+	} loop
+	setcolor setmatrix
+
+	% TOUCH
+
+	% Messages quittieren und weiterblättern auf der Message Seite
+	% Variablen zurücksetzen, wenn die Message-Seite verändert wird (bei jedem Touch auf dieser Seite!)
+
+	% Startwerte neu setzen
+	/LDcounter 0 store
+	/LDmsgActIndex MDmsgHighIndex store
+	% Page up
+	MDfirstActIndex MDmsgHighIndex lt {
+		% Check der Messages auf den davorliegenden Seiten um zurückblättern zu können
+		/LDmsgActIndex MDfirstActIndex store					% hier wird von der aktuellen Seite um I_MsgNumPerPage zurückgesucht
+		{
+	 		% aktuellen Message Index für nächsten Schleifendurchlauf erhöhen, da hier von der aktuellen Seite bis zur obersten Message zurückgesucht wird (Messages davor haben den höheren Index)
+			/LDmsgActIndex LDmsgActIndex 1 add store
+			LDmsgActIndex getmessageinfo						% Message von der Steuerung holen
+			dup {												% Kontrolle, ob die Antwort der Funktion bereits "valid" ist
+				/LXmsgValid exch store							% valid: Messageinformation ist übertragen worden und kann gechecked werden
+				/LXmsgAvail exch store							% Message für diesen Client relevant
+				pop pop											% überflüssige Info vom stack löschen, da dieser hier nicht benötigt wird
+				% Index der zum Zurückblättern suchen
+				LXmsgValid LXmsgAvail and {
+					/LDcounter LDcounter 1 add store
+					/LDmsgNexFirIndex LDmsgActIndex store
+				} if
+				% Schleife abbrechen wenn die Indexes zum zurückblättern gefunden wurden
+				LDcounter I_MsgNumPerPage ge {
+					exit
+				} if
+			} {
+				pop pop pop pop
+				exit												% Schleife abbrechen, wenn die Message nicht valid übergeben wurde
+			} ifelse
+			% Schleife abbrechen, wenn keine weiteren Messages mehr vorhanden sind
+			LDmsgActIndex MDmsgHighIndex ge {
+				exit
+			} if
+		} loop
+
+		% Symbol
+		matrix currentmatrix currentcolor
+		LDmsgAreaX LDsymGrid sub LDmsgAreaY LDsymGrid sub translate
+		touchButton001 {
+			/MDfirstActIndex LDmsgNexFirIndex store					% Anfangsindex des nächsten Blattes setzen
+		} if
+		setcolor setmatrix
+	} if
+	matrix currentmatrix currentcolor
+	% Farbumschaltung des Symbols
+	LDyelCountBef 0 gt { Yellow } if
+	LDredCountBef 0 gt { Red } if
+	LDmsgAreaX LDmsgAreaY translate
+	180 rotate
+	symgeneral001											% Pfeil Zeichnen
+	setcolor setmatrix
+
+	% Startwerte neu setzen
+	/LDcounter 0 store
+	/LDmsgActIndex MDmsgLowIndex store
+	% Page down
+	LDlastActIndex MDmsgLowIndex gt MDmsgValidNr I_MsgNumPerPage gt and {
+		% Check der Messages auf den nachfolgenden Seiten für den Farbwechsel des Symboles
+		/LDmsgActIndex LDlastActIndex store
+		{
+	 		% aktuellen Message Index für nächsten Schleifendurchlauf verringern
+			/LDmsgActIndex LDmsgActIndex 1 sub store
+			LDmsgActIndex getmessageinfo						% Message von der Steuerung holen
+			dup {												% Kontrolle, ob die Antwort der Funktion bereits "valid" ist
+				/LXmsgValid exch store							% valid: Messageinformation ist übertragen worden und kann gechecked werden
+				/LXmsgAvail exch store							% Message für diesen Client relevant
+				/LXmsgActive exch store							% Fehler noch vorhanden
+				/LXmsgAckn exch store							% Fehler bereits quittiert
+				% Kontrolle ob nicht quitierte Messages vorhanden sind
+				LXmsgValid LXmsgAvail and {
+					/LDcounter LDcounter 1 add store
+					LDcounter 1 eq { /LDmsgNexFirIndex LDmsgActIndex store } if						% ersten der nachfolgenden Messages speichern, da dieser der ersten nach dem Weiterblättern sein wird
+					/LDmsgCountAft LDmsgCountAft 1 add store										% Gesamtanzahl der vor der aktuellen Anzeige liegenden Messages speichern
+					LXmsgActive LXmsgAckn not and { /LDredCountAft LDredCountAft 1 add store } if	% Zähler der nicht quittierten und noch vorhandenen Meldungen erhöhen
+					LXmsgActive LXmsgAckn and { /LDyelCountAft LDyelCountAft 1 add store } if		% Zähler der quittierten und noch vorhandenen Meldungen erhöhen
+				} if
+			} {
+				pop pop pop pop
+				exit												% Schleife abbrechen, wenn die Message nicht valid übergeben wurde
+			} ifelse
+			% Schleife abbrechen, wenn keine weiteren Messages mehr vorhanden sind
+			LDmsgActIndex MDmsgLowIndex le {
+				exit
+			} if
+		} loop
+				
+		% Symbol
+		matrix currentmatrix currentcolor
+		LDmsgAreaX LDsymGrid sub 0 translate
+		touchButton001 {
+			/MDfirstActIndex LDmsgNexFirIndex store					% Anfangsindex des nächsten Blattes setzen
+		} if
+		setcolor setmatrix
+	} if
+	matrix currentmatrix currentcolor
+	% Farbumschaltung des Symbols
+	LDyelCountAft 0 gt { Yellow } if
+	LDredCountAft 0 gt { Red } if
+	LDmsgAreaX LDsymGrid sub 0 translate
+	symgeneral001
+	setcolor setmatrix
+
+	% check ob aktuell die neuesten Messages angezeigt werden, oder ob eine darunterliegende Seite mit älteren Messages angezeigt wird
+	MDfirstActIndex MDmsgHighIndex eq {
+		/MXmsgShowTop true store
+	} {
+		/MXmsgShowTop false store
+	} ifelse
+
+
+	% BALKEN
+
+	% Positionsbalken zeichnen
+	matrix currentmatrix currentcolor
+	LDmsgAreaX LDsymGrid 10 sub sub LDmsgAreaY LDsymGrid 1 add sub translate			% Koordinatenursprung Position auf Balkenrahmen links oben
+	/LDbarWide LDsymGrid 20 sub store
+ 	/LDbarAreaY LDmsgAreaY LDsymGrid 2 mul 4 add sub store								% Rahmenhöhe ist Msg-Area minus zwei Pfeilsymbole minus Abstand
+	LightGrey
+ 	0 0 LDbarWide LDbarAreaY 2 add neg rectstroke
+	% Berechnen der Balkenlänge und der Balkenposition
+	MDmsgValidNr I_MsgNumPerPage gt LDmsgCountBef 0 gt or {
+		/LDbarLength LDbarAreaY MDmsgValidNr div I_MsgNumPerPage mul store				% Balkenlänge über die Message Gesamanzahl herausrechnen
+		/LDbarPosition LDmsgCountBef I_MsgNumPerPage div LDbarLength mul 2 add store	% Balkenposition im Verhältnis LDbarLength/MDmsgValidNr = LDbarPosition/LDmsgCountBef herausrechnen; Ursprung ist links oben: deshalb nochmals vom Gesamtbereich abziehen (und 2 pixel Abstand vom Rahmen)
+		LDbarPosition LDbarLength add LDbarAreaY gt {
+			/LDbarLength LDbarAreaY LDbarPosition sub store								% Korrektur der Balkenlänge, wenn die angezeigte Seite nicht mit Messages voll ist
+		} if
+	} {
+ 		/LDbarLength LDbarAreaY 2 sub store												% wenn nur eine Seite angezeigt wird füllt der Balken alles, Rahmen und Abstand zum Rahmen oben und unten abziehen
+ 		/LDbarPosition 2 store															% Balkenursprung ist links oben, Rahmen und Absatnd zum Rahmen abziehen
+	} ifelse
+	% Balken zeichnen
+	LightGrey
+	2 LDbarPosition neg LDbarWide 4 sub LDbarLength neg rectfill
+	setcolor setmatrix	
+
+	setmatrix	
+
+	% OUTPUT
+	
+	% Ausgangsvariablen
+	O_scrollFocusExt																	% Ausgangsvariable auf den stack legen
+	O_scrollAckn																		% Ausgangsvariable auf den stack legen
+	O_scroll																			% Ausgangsvariable auf den stack legen
+	
+%?manual_end
+
+} def
+%?partend
+
+
+%?partdef Text001
+%?fn Text001
+%?brief	Text mit variabler Schriftart, Ursprung: links, unten
+%?bbox	0 0 39 39
+/Text001 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_Text exch def	%?brief Text  %?use INP %?type STRI %?dflt text
+	
+	I_FontSelection selectFont
+	0 0 moveto
+	I_Text show_utf8
+%?manual_end
+} def
+%?partend
+
+%?partdef Text002
+%?fn Text002
+%?brief	Text mit variabler Schriftart, Ursprung: mitte, mitte
+%?bbox	0 0 39 39
+/Text002 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_Text exch def	%?brief Text  %?use INP %?type STRI %?dflt text
+	
+	I_FontSelection selectFont
+	I_Text stringwidth pop 2 div neg strh 2 div neg rmoveto
+	I_Text show_utf8
+%?manual_end
+} def
+%?partend
+
+%?partdef Text003
+%?fn Text003
+%?brief	Text mit variabler Schriftart, Ursprung: rechts, unten
+%?bbox	0 0 39 39
+/Text003 {
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_Text exch def	%?brief Text  %?use INP %?type STRI %?dflt text
+	
+	I_FontSelection selectFont
+	I_Text stringwidth pop neg 0 rmoveto
+	I_Text show_utf8
+%?manual_end
+} def
+%?partend
+
+

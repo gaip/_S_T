@@ -1,0 +1,191 @@
+!**************************************************************************************************
+! Konfigurationsfile
+!**************************************************************************************************
+!
+! Beschreibung:Diese Datei wurde automatisch erstellt! 
+! Gerät:HS8030HD_KRAN_AUF_GS
+! LMB-Identnummer:10566161
+! Änderungsnummer:M106948
+! Status:PF
+! Mode:MODE_1
+! Erstellt am:07.11.2011 um 08:36:38
+! Quelldateidatum:04.11.2011/14:57:36
+! Quelldateiname:\\LWNSV42068\Traglasttabellen\LMB\onlineLmb\Elektro\lmb_dat\10566161\M106948\10566161_A.txt
+! Zieldateiname:C:\workdir\lmb_projekte\HS8030_CE\Lmb\a10566161\M106948\\a10566161.cnf
+! Nachbearbeitet am:           von:    Grund:
+!**************************************************************************************************
+
+
+[Betriebsart_1]
+
+[Vormontage]
+
+!Auslegerteile:
+
+!Halteelement:
+
+!Auslegerkopf:
+
+!Heckballast:
+#Vor_heckballast=HAUPTBALLAST_1*hb_0_0_T+HAUPTBALLAST_2*hb_3_9_T+HAUPTBALLAST_3*hb_5_9_T
+
+!Zentralballast:
+#Vor_zentralballast=ZENTRALBALLAST_1*zb_0_0_T
+
+[Montage]
+
+!Grundgeraet:
+
+!Ausleger:
+
+!Halteelement:
+
+[Kran_Montage]
+
+[Ketten]
+
+[Vorgabewerte]
+
+
+!Vorgabewerte Stahl für Betriebsart 1
+
+#ALPHA_MAX_TLT                          $84             ! Dezimal in Grad
+#MIN_SWL_AUF                            $0.3            ! Min. SWL beim Aufrichten (Standard 0.3 ohne Haken)
+#SMALLEST_VALUE_SWL                     $2              ! minimale SWL welche bei der Traglastabelle noch angezeigt wird
+#SCHLAPPSEIL_HALTESTRANG                $0
+#MOMENT_ROD_FORWARD                     $1
+#MOMENT_ROD_BACKWARD                    $0              ! nur bei Derrick
+#STRUKTUR                               $1
+#KIPPLAST                               $0              ! logisch
+#PROZENT_UNTER_250FT                    $75             ! Prozent fuer die Kipplast bei Auslegerlaenge unter 250ft
+#PROZENT_OBER_250FT                     $75             ! Prozent fuer die Kipplast bei Auslegerlaenge ueber 250ft
+#ISO_4305_TAB_1                         $0              ! logisch
+#ISO_4305_TAB_2_WIND                    $0              ! logisch
+#Q_ISOKI                                $250            ! 0.625*16*16
+#PREN_13000_TAB_1_FORWARDS              $0              ! logisch
+#PREN_13000_TAB_1_BACKWARDS             $0              ! logisch
+#PREN_13000_DER_BACKWARDS               $0              ! logisch
+#DIN_15019_TAB_1_FORWARDS               $0              ! logisch
+#DIN_15019_TAB_2_FORWARDS               $0              ! logisch 
+#ISO_4305_15_PROZENT_BACKWARDS          $0              ! logisch
+#ISO_4305_15_PROZENT_DER_BACKWARDS      $0              ! logisch nur bei Derrick Zahlenwert min.SWL
+#GEW_AUF                                $1.1            ! Gewichtung der Massen beim Aufrichten
+#ALPHA_MIN                              $0              ! Dezimal in Grad
+#RFS1_FKT_ENDSCHALTER                   $0              ! logisch
+#rp_1                                   $0              ! Einscherung Rollenpaket 1, früher "rp_1"
+#HUBWERK_LEISTUNG                       $120            ! Hubwerksleistung in [kW] fuer die Ueberwachung des ROD
+#WIRKUNGSGRAD_SEILROLLE                 $0.98           ! LR=0.99, HS=0.98
+#ZUGKRAFT_WINDE                         $10.4           ! in [t]
+#KIPP_WINKEL                            $4.0
+#HUBSEIL_TANGENTE                       $1              ! logisch (1== hier wird der Rollendurchmesser der HW bei der Berechnung der aktuellen Last beruecksichtigt)
+#MAX_SWL_SCALE                          $100            ! Gewichtung der max. Traglast ( Traglasttabelle )in [%]
+#SLEWING_ANGLE_LIMITATION               $1              ! slewing angle limitation aktiv
+#KML_HPT_0808				$400	        ! Drucksensor Zylinder 400bar
+#ANGLE_HPT				$90		! Geberbereich	[°]	
+#ANGLE_NDL				$90		! Geberbereich  [°]
+#DIFF_ANGLE_HPT				$6		! Max. zulässige Winkeldifferenz [°]
+#DIFF_ANGLE_NDL				$6		! Max. zulässige Winkeldifferenz [°]
+#DIFF_KML_HPT                           $5              ! Max. zulässige Kraftdiffernz [%] von #KML_HPT_XXXX 		
+#DIFF_KML_NDL                           $5              ! Max. zulässige Kraftdiffernz [%] von #KML_NDL_XXXX 	
+#DIFF_ANG_RFS1                          $5              ! Zulaessige Winkeltoleranz (plus,minus) zum theoretisch berechnetem Eingriffswinkel RFS1
+#KML_HPT_REDUNDANT                      $0
+#ANSI_NORM				$0		! LMB-Überbrückung möglich (USA): 1, LMB-Überbrückung NICHT möglich (EU): 0; Betrifft nur LR!
+#DUTY_CYCLE				$1		! Baggerbetrieb: 1, Kranbetrieb: 0
+
+
+!Vorgabewerte Statik für Betriebsart 1
+
+#HUBLAST_MAX_WERT                       $10.00          ! Maximal zulaessiger Hublastbeiwert fuer die Ueberwachung des ROD	[ MAX_MOMENT_ROD=SWL * psi * Xswl             ]  
+#OFFSET_HUBLAST                         $1.05           ! Offset der Funktion fuer die Berechnung des Hublastbeiwertes		[ psi=OFFSET_HUBLAST + STEIGUNG_HUBLAST * Vh  ]
+#STEIGUNG_HUBLAST                       $0.001417       ! Steigung in [min/m] der Funktion fuer die Berechnung des Hublastbeiwertes [ Vh=(HUBWERK_LEISTUNG*60)/(SWL*g)        ]  
+#MAX_MOMENT_ROD                         $1400           ! Maximal zulassiges Moment um den ROD in [kNm]				[ SWL2                                        ]   
+#INTERPOL_PARAM_ALPHA                   $0.2
+#GEW_ANGLE_HPT                          $1.5
+#GEW_KML_HPT                            $1
+#MOMENT_AUF                             $1400		!Max. Moment beim Aufrichten
+
+!Vorgabewerte Elektro für Betriebsart 1
+
+#GERAETE_TYP				$HS8030HD EUROPA Kran auf GS
+#AB_SYSTEM				$AB_WIPPZYL
+#SW_VERSION				$4.0xx
+
+#FEET_RATIO				$3.28084	! Umrechnungskonstante *m
+#LBS_RATIO				$2.20462	! Umrechnungskonstante *t
+#MOMENT_ROLLENDREHKRANZ                 $1
+#EIGENLAST_WERT				$1.1		! Eigenlastwert laut DIN 15018T1
+#hubseil_ow				$1
+
+
+!Vorgabewerte automatisch für Betriebsart 1
+
+#SEILZUGBEGRENZUNG_MAX                  $2
+#SEILZUGBEGRENZUNG_1                    $1
+#SEILZUGBEGRENZUNG_2                    $1
+
+#ZENTRALBALLAST_1                        $0.0
+#ZENTRALBALLAST_MAX                      $1
+
+#HAUPTBALLAST_1                        $0.0
+#HAUPTBALLAST_2                        $3.9
+#HAUPTBALLAST_3                        $5.9
+#HAUPTBALLAST_MAX                       $3
+
+#KIPPKANTE_MAX                          $3
+#KIPPKANTE_1                            $0
+#KIPPKANTE_2                            $1
+#KIPPKANTE_3                            $0
+
+!HB/ZB/KK
+#BALLAST_VAR_MAX                        $3
+#BALLAST_VAR_1                          $1/1/2
+#BALLAST_VAR_2                          $2/1/2
+#BALLAST_VAR_3                          $3/1/2
+
+!Systemmaß/relLo1/relLo2/relLo3/absLo1/absLo2/absLo3
+#KORREKTUR_TABELLE_MAX                  $1
+#KORREKTUR_TABELLE_1                    $0808/0/0/0/0/0/0
+
+#OFFSET_HPT_ANLSTK_1%0/0/0		$
+#HPT_Z_S_K%1/0/0			$
+#HPT_Z_S_M%1/0/0			$
+#HPT_Z_S_L%1/0/0			$
+#OFFSET_HPT_KOPF_1%1/0/0		$
+
+!Systemgroesse
+#SYS_OFFSET_HPT_ANLSTK_1%0/0/0		$
+#SYS_HPT_Z_S_K%1/0/0			$
+#SYS_HPT_Z_S_M%1/0/0			$
+#SYS_HPT_Z_S_L%1/0/0			$
+#SYS_OFFSET_HPT_KOPF_1%1/0/0		$
+
+#IDENTNR_STRFILE			$a10573806       !MODE_1
+#AENDNR_STRFILE				$00000
+#IDENTNR_LMB				$a10566161
+#AENDNR_LMB				$106948
+#IDENTNR_TLT				$10573808
+#AENDNR_TLT				$00000
+#STATUS					$PF
+
+
+
+!**************************************************************************************************
+
+[Geofiles]
+
+#uw_600_mm_3_steg                                  $a10573708        !M00000/KF
+#ow_180_kw                                         $a10573709        !M00000/KF
+#rod_1198_mm_hs8030hd                              $a10573710        !M00000/KF
+#hubwinde_100_kn                                   $a10573711        !M00000/KF
+#wippzylinder_240-140-2330/3050_hs8030hd           $a10573712        !M00000/KF
+#hubseil_24_mm                                     $a10573713        !M00000/KF
+#auslegerkopf_3_5_m_hs8030hd                       $a10573714        !M00000/KF
+#anlenkstk_6_m_hs8030hd                            $a10573715        !M00000/KF
+#z_stueck_3_m_0808.24                              $a10573716        !M00000/KF
+#hb_3_9t                                           $a10573717        !M00000/KF
+#hb_5_9_t                                          $a10573718        !M00000/KF
+#hb_0_t                                            $a9831518        !M26639/PF
+#klappgelenk_ausleger_0.5_m_0808                   $a10577227        !M00000/KF
+
+
+$CRC32:a10566161.lik	dd3cae46

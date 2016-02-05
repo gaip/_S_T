@@ -1,0 +1,110 @@
+
+
+rem Simulator HS/LR with Liebherr ECU
+
+rem ########### CAN LINE 1 Cab ##########
+
+can_conf /r 1 65 
+can_conf /r 1 66 
+can_conf /r 1 67 
+can_conf /r 1 68 
+rem can_conf /r 1 77
+rem can_conf /r 1 78
+
+
+can_conf /r 1 73
+can_conf /r 1 74
+can_conf /r 1 107
+
+can_conf /r 1 29
+can_conf /r 1 97
+
+                         
+rem ############ CAN LINE 2 Upper ########
+
+can_conf /r 2 9
+
+can_conf /r 2 58
+can_conf /r 2 5
+can_conf /r 2 13
+can_conf /r 2 14
+can_conf /r 2 15
+can_conf /r 2 93
+can_conf /r 2 94
+
+can_conf /r 2 10
+can_conf /r 2 17
+can_conf /r 2 18
+can_conf /r 2 19
+can_conf /r 2 33
+can_conf /r 2 34
+can_conf /r 2 42
+can_conf /r 2 43
+can_conf /r 2 57
+can_conf /r 2 91
+can_conf /r 2 92
+
+rem ############################
+
+rem force %IX1.077.34 1	rem cab safety lever
+
+force %IX2.033.03 1	rem feed pressure filter ok
+force %IX2.033.06 1	rem hyd return filter
+force %IX2.033.07 1	rem hyd level ok
+force %IX2.033.08 1	rem gear oil temperature OK
+force %IX2.033.15 1	rem HG2 feed pressure ok
+force %IX2.033.11 1	rem HG1 feed pressure ok
+
+force %QX2.009.19 1	rem engine running
+
+rem force %IW2.041.01 12000	rem content diesel tank
+force %IW2.041.02 4000	rem system pressure HG1
+force %IW2.041.03 4000	rem system pressure HG2
+force %IW2.041.04 4000	rem system pressure right 1
+force %IW2.041.05 4000	rem system pressure left 1
+force %IW2.041.06 4000	rem brake pressure HG1
+force %IW2.041.07 4000	rem brake pressure HG2
+force %IW2.041.08 12000	rem left load sensor main boom
+force %IW2.041.09 12000 rem lower angle sensor main boom
+force %IW2.041.10 4000	rem left load sensor luffing jib
+force %IW2.041.11 4000	rem lower angle sensor luffing jib
+force %IW2.041.13 4000	rem pressure 1 luffing jib back stop
+force %IW2.041.14 4000	rem system pressure ludv pump1
+force %IW2.041.15 4000	rem system pressure ludv pump 2
+
+force %IW2.041.01 %IW2.041.12 rem force temp sensor input 12 on fuel gauge
+
+force %IW2.042.01 4000	rem system pressure right 2
+force %IW2.042.02 4000	rem system pressure left 2
+force %IW2.042.03 12000	rem right load sensore main boom
+force %IW2.042.04 12000 rem top angle sensore main boom
+force %IW2.042.05 4000	rem right load sensor luffing jib
+force %IW2.042.06 4000	rem top angel sensor luffing jib
+force %IW2.042.07 8000	rem wind speed luffing jib
+force %IW2.042.08 4000	rem pressure 2 luffing jib back stop
+force %IW2.042.10 9000	rem wind speed main boom
+
+rem ############################
+
+rem force %IX2.091.02 1	rem engine battery charging
+rem force %IX2.091.03 1	rem enable engine			
+rem force %IX2.091.05 0	rem ECU asynchron error	
+rem force %IX2.091.41 0	rem error engine cooling water
+
+rem ########################################
+
+force %IW2.092.01 900	rem engine rpm
+force %IW2.092.02 0	rem engine torque %
+force %IW2.092.03 0	rem engine max torque
+force %IW2.092.05 270	rem engine battery voltage
+force %IW2.092.06 70	rem engine air temp
+force %IW2.092.07 45	rem engine cooling water temp
+force %IW2.092.08 50	rem hydraulic temp
+force %IW2.092.09 450	rem engine lub pressure (1/100 bar)
+force %IW2.092.10 150	rem engine air pressure
+force %IW2.092.11 0	rem engine fuel consumption
+
+rem ########################################
+
+force %MX1.600 1	rem force no engine ECU
+

@@ -1,0 +1,7203 @@
+%?class llspepar
+%?version 00058
+
+%?library llbasic
+(llbasic.ps) run
+%?library llspesym
+(llspesym.ps) run
+
+%?partdef actempfill
+%?fn	actempfill
+%?brief	Symbol Balken Temperatur
+%?bbox	0 0 159 79
+/actempfill {
+	/I_Temp exch def	%?brief temperature %?use INP %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	5 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Blue 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		Blue 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		Blue 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		Blue 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		Blue 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		Blue 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	30 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 2.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill2 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	55 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 3.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 4.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	105 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 5.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	130 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 6.0 eq {	
+		currentcolor 
+		Red 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	sym_balken_luefter 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef acblowerfill
+%?fn	acblowerfill
+%?brief	Symbol Balken Luefter
+%?bbox	0 0 159 79
+/acblowerfill {
+	/I_Temp exch def	%?brief blower speed %?use INP %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	5 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 1.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill1 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	30 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 2.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill2
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill2 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	55 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 3.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill3
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 4.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill4 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	105 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 5.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 6.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill5 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	130 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 6.0 eq {	
+		currentcolor 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 0.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 1.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 2.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 3.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 4.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	I_Temp 5.0 eq {	
+		currentcolor 
+		Invisible 
+		sym_ac_balk_fill6
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	sym_balken_luefter 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen001
+%?fn	parspegen001
+%?brief	Luefter
+%?bbox	0 0 79 79
+/parspegen001 {
+	
+%?manual_beg
+	2 setlinewidth
+	40 41 moveto 
+	35 41 5 0 360 arc 
+	stroke 
+
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-14 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen035 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	76 -8 translate 
+	90 rotate 
+	1 1 scale 
+	symspegen035 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-7 90 translate 
+	-90 rotate 
+	1 1 scale 
+	symspegen035 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	84 82 translate 
+	180 rotate 
+	1 1 scale 
+	symspegen035 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+
+%?partdef IPointerR90
+%?fn	IPointerR90
+%?brief	Zeiger f�r Rundinstrumente mit Radius=90
+%?bbox	-100 -100 99 99
+/IPointerR90 {
+	/MaxValue exch def	%?brief  %?use INP %?type REAL %?dflt  100.00
+	/MaxAngle exch def	%?brief  %?use INP %?type REAL %?dflt  360.00
+	/MinAngle exch def	%?brief  %?use INP %?type REAL %?dflt    0.00
+	/Value exch def	%?brief  %?use INP %?type REAL %?dflt    0.00
+	/tmpValue 0 def	
+	/tmpAngle 0 def	
+%?manual_beg
+	Value 0 lt {				% �berwachung der Grenzwerte
+		0 
+	}{ 
+		Value MaxValue gt {	
+			MaxValue 
+		}{ 
+			Value 
+		} ifelse 
+	} ifelse 
+	/tmpValue store 
+	
+	360 					% Berechnung des Zeigerwinkels 
+	MaxAngle sub 
+	MinAngle sub 
+	tmpValue mul 
+	MaxValue 0 eq {	
+		1 
+	}{ 
+		MaxValue 
+	} ifelse div 
+	-1 mul 
+	MinAngle sub
+	/tmpAngle store
+
+	0 0 translate 				% Zeiger zeichnen
+	tmpAngle rotate
+	%?plinebeg
+	newpath
+	-4 -35 moveto 
+	-4 -75 lineto 
+	0 -75 4 180 360 arc 
+	4 -35 lineto 
+	-4 -35 lineto 
+	eofill
+	stroke 
+	%?plineend
+
+	1 setlinewidth 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef IPointerR160
+%?fn	IPointerR160
+%?brief	Zeiger f�r Rundinstrumente mit Radius=160
+%?bbox	-170 -170 169 169
+/IPointerR160 {
+	/MaxValue exch def	%?brief  %?use INP %?type REAL %?dflt  100.00
+	/MaxAngle exch def	%?brief  %?use INP %?type REAL %?dflt  360.00
+	/MinAngle exch def	%?brief  %?use INP %?type REAL %?dflt    0.00
+	/Value exch def	%?brief  %?use INP %?type REAL %?dflt    0.00
+	/tmpValue 0 def	
+	/tmpAngle 0 def	
+%?manual_beg
+	Value 0 lt {				% �berwachung der Grenzwerte
+		0 
+	}{ 
+		Value MaxValue gt {	
+			MaxValue 
+		}{ 
+			Value 
+		} ifelse 
+	} ifelse 
+	/tmpValue store 
+	
+	360 					% Berechnung des Zeigerwinkels 
+	MaxAngle sub 
+	MinAngle sub 
+	tmpValue mul 
+	MaxValue 0 eq {	
+		1 
+	}{ 
+		MaxValue 
+	} ifelse div 
+	-1 mul 
+	MinAngle sub
+	/tmpAngle store
+
+	0 0 translate 				% Zeiger zeichnen
+	tmpAngle rotate
+	%?plinebeg
+	newpath
+	-4 -105 moveto 
+	-4 -148 lineto 
+	0 -148 4 180 360 arc 
+	4 -105 lineto 
+	-4 -105 lineto 
+	eofill
+	stroke 
+	%?plineend
+
+	1 setlinewidth 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef IPointerR160_1
+%?fn	IPointerR160_1
+%?brief	Zeiger f�r Rundinstrumente mit Radius=160
+%?bbox	-170 -170 169 169
+/IPointerR160_1 {
+	/MaxValue exch def	%?brief  %?use INP %?type REAL %?dflt  100.00
+	/MaxAngle exch def	%?brief  %?use INP %?type REAL %?dflt  360.00
+	/MinAngle exch def	%?brief  %?use INP %?type REAL %?dflt    0.00
+	/Value exch def	%?brief  %?use INP %?type REAL %?dflt    0.00
+	/tmpValue 0 def	
+	/tmpAngle 0 def	
+%?manual_beg
+	Value 0 lt {				% �berwachung der Grenzwerte
+		80 
+	}{ 
+		Value MaxValue gt {	
+			0 
+		}{ 
+			Value 
+		} ifelse 
+	} ifelse 
+	/tmpValue store 
+	
+	360 					% Berechnung des Zeigerwinkels 
+	MaxAngle sub 
+	MinAngle sub 
+	tmpValue mul 
+	MaxValue 0 eq {	
+		1 
+	}{ 
+		MaxValue 
+	} ifelse div 
+	-1 mul 
+	MinAngle sub
+	/tmpAngle store
+
+	0 0 translate 				% Zeiger zeichnen
+	tmpAngle rotate
+	%?plinebeg
+	newpath
+	-4 -105 moveto 
+	-4 -148 lineto 
+	0 -148 4 180 360 arc 
+	4 -105 lineto 
+	-4 -105 lineto 
+	eofill
+	stroke 
+	%?plineend
+
+	1 setlinewidth 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale001
+%?fn	parspescale001
+%?brief	Skala, Radius=90, 220 Grad, 8 Felder, Kreismittelpunkt = Rotationszentrum
+%?bbox	-100 -100 99 99
+/parspescale001 {
+	12 setlinewidth_nlw 
+	currentcolor 
+	87 -21 moveto 
+	0 0 90 -15 172 arc 
+	Blue 0 0 90 172 195 arc 
+	stroke 
+	setcolor 
+	2 setlinewidth_nlw 
+	currentcolor 
+	Invisible 0 0 moveto 
+	-95 15 lineto 
+	stroke 
+	0 0 moveto 
+	-77 56 lineto 
+	stroke 
+	0 0 moveto 
+	-48 94 lineto 
+	stroke 
+	0 0 moveto 
+	0 95 lineto 
+	stroke 
+	0 0 moveto 
+	48 94 lineto 
+	stroke 
+	0 0 moveto 
+	77 56 lineto 
+	stroke 
+	0 0 moveto 
+	95 15 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale002
+%?fn	parspescale002
+%?brief	Skala, Radius=90, 220 Grad, 8 Felder, Kreismittelpunkt = Rotationszentrum
+%?bbox	-100 -100 99 99
+/parspescale002 {
+	12 setlinewidth_nlw 
+	currentcolor 
+	89 14 moveto 
+	0 0 90 8 195 arc 
+	87 -21 moveto 
+	Red 0 0 90 -15 7 arc 
+	stroke 
+	setcolor 
+	2 setlinewidth_nlw 
+	currentcolor 
+	Invisible 0 0 moveto 
+	-95 15 lineto 
+	stroke 
+	0 0 moveto 
+	-77 56 lineto 
+	stroke 
+	0 0 moveto 
+	-48 94 lineto 
+	stroke 
+	0 0 moveto 
+	0 95 lineto 
+	stroke 
+	0 0 moveto 
+	48 94 lineto 
+	stroke 
+	0 0 moveto 
+	77 56 lineto 
+	stroke 
+	0 0 moveto 
+	95 15 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale003
+%?fn	parspescale003
+%?brief	Skala, Radius=90, 220 Grad, 8 Felder, Kreismittelpunkt = Rotationszentrum
+%?bbox	-100 -100 99 99
+/parspescale003 {
+	12 setlinewidth_nlw 
+	currentcolor 
+	87 -21 moveto 
+	0 0 90 -15 195 arc 
+	stroke 
+	setcolor 
+	2 setlinewidth_nlw 
+	currentcolor 
+	Invisible 0 0 moveto 
+	-95 15 lineto 
+	stroke 
+	0 0 moveto 
+	-77 56 lineto 
+	stroke 
+	0 0 moveto 
+	-48 94 lineto 
+	stroke 
+	0 0 moveto 
+	0 95 lineto 
+	stroke 
+	0 0 moveto 
+	48 94 lineto 
+	stroke 
+	0 0 moveto 
+	77 56 lineto 
+	stroke 
+	0 0 moveto 
+	95 15 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale004
+%?fn	parspescale004
+%?brief	Skala, Radius=160, 60 Grad, 5 Felder, ROT, Kreismittelpunkt = Rotationszentrum
+%?bbox	-170 -170 169 169
+/parspescale004 {
+	15 setlinewidth_nlw 
+	currentcolor 
+	-137 80 moveto 
+	0 0 160 150 203 arc 
+	stroke 
+	-138 -81 moveto 
+	Red 0 0 160 203 210 arc 
+	stroke 
+	setcolor 
+	4 setlinewidth_nlw 
+	currentcolor 
+	Invisible 0 0 moveto 
+	-158 44 lineto 
+	stroke 
+	0 0 moveto 
+	-166 0 lineto 
+	stroke 
+	0 0 moveto 
+	-158 -44 lineto 
+	stroke 
+	setcolor 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale005
+%?fn	parspescale005
+%?brief	Skala, Radius=160, 60 Grad, 6 Felder, ROT, BLAU, Kreismittelpunkt = Rotationszentrum
+%?bbox	-170 -170 169 169
+/parspescale005 {
+	15 setlinewidth_nlw 
+	currentcolor 
+	160 0 moveto 
+	0 0 160 0 340 arcn 
+	149 -57 moveto 
+	Blue 0 0 160 331 330 arcn 
+	stroke 
+	setcolor 
+	currentcolor 
+	160 0 moveto 
+	0 0 160 0 20 arc 
+	149 57 moveto 
+	Red 0 0 160 24 30 arc 
+	stroke 
+	setcolor 
+	4 setlinewidth_nlw 
+	currentcolor 
+	Invisible 0 0 moveto 
+	161 44 lineto 
+	stroke 
+	0 0 moveto 
+	171 0 lineto 
+	stroke 
+	0 0 moveto 
+	161 -44 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	setcolor 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+
+%?partdef parspescale006
+%?fn	parspescale006
+%?brief	Skala, Radius=90, 270 Grad, 10 Felder, Kreismittelpunkt = Rotationszentrum
+%?bbox	-100 -100 99 99
+/parspescale006 {
+	10 setlinewidth_nlw 
+	currentcolor 
+	68 -59 moveto 
+	0 0 90 -35 220 arc 
+	stroke 
+	setcolor 
+	4 setlinewidth_nlw 
+	currentcolor 
+	Invisible 0 0 moveto 
+	-95 15 lineto 
+	stroke 
+	0 0 moveto 
+	-48 94 lineto 
+	stroke 
+	0 0 moveto 
+	48 94 lineto 
+	stroke 
+	0 0 moveto 
+	95 15 lineto 
+	stroke 
+	0 0 moveto 
+	73 53 lineto 
+	stroke 
+	0 0 moveto 
+	-73 53 lineto 
+	stroke 
+	0 0 moveto 
+	86 -25 lineto 
+	stroke 
+	0 0 moveto 
+	-86 -25 lineto 
+	stroke 
+	stroke 
+	0 0 moveto 
+	0 90 lineto 
+	setcolor 
+	1 setlinewidth_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale007
+%?fn	parspescale007
+%?brief	Skala, Radius=90, 270 Grad, 10 Felder, Kreismittelpunkt = Rotationszentrum
+%?bbox	-100 -100 99 99
+/parspescale007 {
+	8 setlinewidth_nlw 
+	currentcolor 
+	0 90 moveto 
+	0 0 90 90 -43 arcn 
+	stroke 
+	0 90 moveto 
+	0 0 90 90 223 arc 
+	stroke 
+	setcolor 
+	2 setlinewidth_nlw 
+	currentcolor 
+	Invisible 0 0 moveto 
+	-95 -31 lineto 
+	stroke 
+	0 0 moveto 
+	-95 15 lineto 
+	stroke 
+	0 0 moveto 
+	-77 56 lineto 
+	stroke 
+	0 0 moveto 
+	-48 94 lineto 
+	stroke 
+	0 0 moveto 
+	0 95 lineto 
+	stroke 
+	0 0 moveto 
+	48 94 lineto 
+	stroke 
+	0 0 moveto 
+	77 56 lineto 
+	stroke 
+	0 0 moveto 
+	95 15 lineto 
+	stroke 
+	0 0 moveto 
+	95 -31 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+
+%?partdef parspescale008
+%?fn	parspescale008
+%?brief	Zeigerinstrument zur Anzeige des Krafspeoff-Fuellstands
+%?bbox	0 0 339 339
+/parspescale008 {
+	/LI_FuelLevel exch def	%?brief Krafspeoff-Fuellstand [Prozent] %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	0 rotate 
+	1 1 scale 
+	parspescale004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	175 170 translate 
+	0 rotate 
+	1 1 scale 
+	LI_FuelLevel 60 240 100 
+	IPointerR160 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale009
+%?fn	parspescale009
+%?brief	Zeigerinstrument zur Anzeige der Wassertemperatur
+%?bbox	0 0 339 339
+/parspescale009 {
+	/LI_TempLimitRed exch def	%?brief Temperaturgrenze zum roten Bereich %?use INP %?type REAL %?dflt  120.00
+	/LI_WaterTemp exch def	%?brief Wassertemperatur [�C] %?use INP %?type REAL %?dflt    0.00
+	/LD_MaxTemp 120 def	
+%?manual_beg
+	/LD_MaxTemp LI_TempLimitRed 5 div 6 mul store		% Skalenende berechnen
+	/LI_WaterTemp LD_MaxTemp LI_WaterTemp sub store 	% Wassertemperatur berechnen wegen gedrehter Darstellung
+
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	90 rotate 
+	1 1 scale 
+	parspescale005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	165 167 translate 
+	270 rotate 						% Anzeige drehen
+	1 1 scale 
+	LI_WaterTemp 30 240 LD_MaxTemp 
+	IPointerR160 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale010
+%?fn	parspescale010
+%?brief	Zeigerinstrument zur Anzeige von Temperaturen
+%?bbox	0 0 339 339
+/parspescale010 {
+	/LI_EngineSpeedStep exch def	%?brief Temperatur %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	/LI_EngineSpeedStep LI_EngineSpeedStep 40 sub store 	% Drehzahl berechnen f�r Segmentmitte
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	0 rotate 
+	1 1 scale 
+	parspescale001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	-72 rotate 
+	1 1 scale 
+	LI_EngineSpeedStep 0 35 120 
+	IPointerR90 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale011
+%?fn	parspescale011
+%?brief	Zeigerinstrument zur Anzeige der Batteriespannung
+%?bbox	0 0 339 339
+/parspescale011 {
+	/LI_BatVolt exch def	%?brief Voltage %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	/LI_BatVolt LI_BatVolt 22 sub store 	% Spannung berechnen f�r Segmentmitte
+	/LI_BatVolt LI_BatVolt 10 mul store 	% Spannung berechnen f�r Segmentmitte
+
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	0 rotate 
+	1 1 scale 
+	parspescale002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	-72 rotate 
+	1 1 scale 
+	LI_BatVolt 0 35 120
+	IPointerR90 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef parspescale012
+%?fn	parspescale012
+%?brief	Zeigerinstrument zur Anzeige des Motoroeldrucks
+%?bbox	0 0 339 339
+/parspescale012 {
+	/LI_EngineOilPress exch def	%?brief Oeldruck %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	/LI_EngineOilPress LI_EngineOilPress 20 mul 20 sub store 	% Oeldruck berechnen f�r Segmentmitte
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	0 rotate 
+	1 1 scale 
+	parspescale003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	-73 rotate 
+	1 1 scale 
+	LI_EngineOilPress 0 35 120
+	IPointerR90 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale013
+%?fn	parspescale013
+%?brief	Zeigerinstrument zur Anzeige des Ladeluftdrucks
+%?bbox	0 0 339 339
+/parspescale013 {
+	/LI_EngineAirPress exch def	%?brief Ladeluftdruck %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	/LI_EngineAirPress LI_EngineAirPress 20 mul  store 	% Oeldruck berechnen f�r Segmentmitte
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	0 rotate 
+	1 1 scale 
+	parspescale003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	-72 rotate 
+	1 1 scale 
+	LI_EngineAirPress 0 35 120 
+	IPointerR90 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale014
+%?fn	parspescale014
+%?brief	Zeigerinstrument zur Anzeige der Drehzahl in 10 Stufen
+%?bbox	0 0 339 339
+/parspescale014 {
+	/LI_EngineSpeedStep exch def	%?brief Maschine Speed (0-50 km/h) %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	/LI_EngineSpeedStep LI_EngineSpeedStep 2 mul store 	% Maschinengeschwindigkeit berechnen f�r Segmentmitte
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	0 rotate 
+	1 1 scale 
+	parspescale006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	-48 rotate 
+	1 1 scale 
+	LI_EngineSpeedStep 0 35 120 
+	IPointerR90 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale020
+%?fn	parspescale020
+%?brief	Skala, Radius=160, 60 Grad, 6 Felder, ROT, BLAU, Kreismittelpunkt = Rotationszentrum
+%?bbox	-170 -170 169 169
+/parspescale020 {
+	15 setlinewidth_nlw 
+	currentcolor 
+	160 0 moveto 
+	0 0 160 0 340 arcn 
+	149 -57 moveto 
+	Red 0 0 160 331 330 arcn 
+	stroke 
+	setcolor 
+	currentcolor 
+	160 0 moveto 
+	0 0 160 0 20 arc 
+	149 57 moveto 
+	Blue 0 0 160 24 30 arc 
+	stroke 
+	setcolor 
+	4 setlinewidth_nlw 
+	currentcolor 
+	Invisible 0 0 moveto 
+	161 44 lineto 
+	stroke 
+	0 0 moveto 
+	171 0 lineto 
+	stroke 
+	0 0 moveto 
+	161 -44 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	setcolor 
+} def
+%?partend
+
+
+%?partdef parspescale021
+%?fn	parspescale021
+%?brief	3 Zeigerinstrumente zur Anzeige des F�llstands, der Wassertemp. und der Geschw.
+%?bbox	0 0 599 339
+/parspescale021 {
+	/LI_TempLimitRed exch def	%?brief Temperaturgrenze zum roten Bereich %?use INP %?type REAL %?dflt    0.00
+	/LI_WaterTemp exch def	%?brief Wassertemperatur [�C] %?use INP %?type REAL %?dflt    0.00
+	/LI_FuelLevel exch def	%?brief Krafspeoff-Fuellstand [Prozent] %?use INP %?type REAL %?dflt    0.00
+	/LI_EngineSpeedStep exch def	%?brief Temperatur %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-30 45 translate 
+	0 rotate 
+	0.8 0.8 scale 
+	LI_FuelLevel 
+	parspescale008
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	37 95 translate 
+	0 rotate 
+	0.8 0.8 scale 
+	LI_WaterTemp LI_TempLimitRed
+	parspescale009 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-15 -10 translate 
+	0 rotate 
+	1.1 1.1 scale 
+	LI_EngineSpeedStep 
+	parspescale014 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale022
+%?fn	parspescale022
+%?brief	Zeigerinstrument zur Anzeige der Wassertemperatur
+%?bbox	0 0 339 339
+/parspescale022 {
+	/LI_TempLimitRed exch def	%?brief Temperaturgrenze zum roten Bereich %?use INP %?type REAL %?dflt  120.00
+	/LI_WaterTemp exch def	%?brief Wassertemperatur [�C] %?use INP %?type REAL %?dflt    0.00
+	/LD_MaxTemp 120 def	
+%?manual_beg
+	/LD_MaxTemp LI_TempLimitRed 5 div 6 mul store		% Skalenende berechnen
+	/LI_WaterTemp LD_MaxTemp LI_WaterTemp sub store 	% Wassertemperatur berechnen wegen gedrehter Darstellung
+
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	90 rotate 
+	1 1 scale 
+	parspescale020 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	165 167 translate 
+	270 rotate 						% Anzeige drehen
+	1 1 scale 
+	LI_WaterTemp 30 240 LD_MaxTemp 
+	IPointerR160
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspescale015
+%?fn	parspescale015
+%?brief	3 Zeigerinstrumente zur Anzeige des F�llstands, der Wassertemp. und der Geschw.
+%?bbox	0 0 599 339
+/parspescale015 {
+	/LI_TempLimitRed exch def	%?brief Temperaturgrenze zum roten Bereich %?use INP %?type REAL %?dflt    0.00
+	/LI_WaterTemp exch def	%?brief Wassertemperatur [�C] %?use INP %?type REAL %?dflt    0.00
+	/LI_FuelLevel exch def	%?brief Krafspeoff-Fuellstand [Prozent] %?use INP %?type REAL %?dflt    0.00
+	/LI_EngineSpeedStep exch def	%?brief Temperatur %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-30 45 translate 
+	0 rotate 
+	0.8 0.8 scale 
+	LI_FuelLevel 
+	parspescale008
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	37 95 translate 
+	0 rotate 
+	0.8 0.8 scale 
+	LI_WaterTemp LI_TempLimitRed
+	parspescale022 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-15 -10 translate 
+	0 rotate 
+	1.1 1.1 scale 
+	LI_EngineSpeedStep 
+	parspescale014 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspeac001
+%?fn	parspeac001
+%?brief	Luftverteilung oben
+%?bbox	0 0 79 79
+/parspeac001 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 10 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac005 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac002
+%?fn	parspeac002
+%?brief	Luftverteilung mitte
+%?bbox	0 0 79 79
+/parspeac002 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 10 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac006 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac003
+%?fn	parspeac003
+%?brief	Luftverteilung unten
+%?bbox	0 0 79 79
+/parspeac003 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 10 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac007 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac004
+%?fn	parspeac004
+%?brief	Scheiben Defrosting
+%?bbox	0 0 79 79
+/parspeac004 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 10 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac008 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac005
+%?fn	parspeac005
+%?brief	Umluftbetrieb
+%?bbox	0 0 79 79
+/parspeac005 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 20 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac009 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac006
+%?fn	parspeac006
+%?brief	Economy Mode
+%?bbox	0 0 79 79
+/parspeac006 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac011 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac007
+%?fn	parspeac007
+%?brief	Klimaanlage AUTO
+%?bbox	0 0 79 79
+/parspeac007 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac010 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac008
+%?fn	parspeac008
+%?brief	Kabine mit aktiver Bereichsanzeige
+%?bbox	0 0 319 319
+/parspeac008 {
+	/I_ActMiddleArea exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	/I_ActLowerArea exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	/I_ActUpperArea exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	1 setlinewidth_nlw 
+	currentcolor 
+	8.92 3.87 moveto 
+	-5.63 56.87 -1.10 110.76 22.52 165.52 curveto 
+	stroke 
+	22.52 165.52 moveto 
+	25.28 171.92 31.18 176.43 38.08 177.41 curveto 
+	stroke 
+	38.08 177.41 moveto 
+	79.55 183.29 123.95 185.35 181.25 183.59 curveto 
+	stroke 
+	181.25 183.59 moveto 
+	190.35 183.25 198.08 176.81 200.04 167.92 curveto 
+	stroke 
+	200.35 5.19 moveto 
+	200.35 2.43 198.11 0.19 195.35 0.19 curveto 
+	stroke 
+	195.35 0.19 moveto 
+	134.81 0.19 74.28 0.19 13.74 0.19 curveto 
+	stroke 
+	13.74 0.19 moveto 
+	11.49 0.19 9.52 1.69 8.92 3.87 curveto 
+	stroke 
+	2 setlinewidth_nlw 
+	103.77 76.13 moveto 
+	107.54 86.51 111.32 96.89 115.10 107.27 curveto 
+	stroke 
+	115.10 107.27 moveto 
+	116.80 111.94 121.97 114.35 126.64 112.65 curveto 
+	stroke 
+	126.64 112.65 moveto 
+	131.31 110.95 133.72 105.79 132.02 101.12 curveto 
+	stroke 
+	132.02 101.12 moveto 
+	128.53 91.53 125.04 81.95 121.55 72.37 curveto 
+	stroke 
+	121.55 72.37 moveto 
+	119.11 65.66 112.73 61.19 105.58 61.19 curveto 
+	stroke 
+	105.58 61.19 moveto 
+	98.35 61.19 91.13 61.19 83.91 61.19 curveto 
+	stroke 
+	83.91 61.19 moveto 
+	81.38 61.19 79.13 59.61 78.27 57.24 curveto 
+	stroke 
+	78.27 57.24 moveto 
+	73.97 45.43 69.67 33.62 65.37 21.81 curveto 
+	stroke 
+	65.37 21.81 moveto 
+	64.33 18.95 61.18 17.48 58.32 18.52 curveto 
+	stroke 
+	58.32 18.52 moveto 
+	55.47 19.56 54 22.72 55.03 25.57 curveto 
+	stroke 
+	55.03 25.57 moveto 
+	59.33 37.38 63.63 49.19 67.93 61 curveto 
+	stroke 
+	67.93 61 moveto 
+	70.37 67.72 76.76 72.19 83.91 72.19 curveto 
+	stroke 
+	83.91 72.19 moveto 
+	88.65 72.19 93.39 72.19 98.13 72.19 curveto 
+	stroke 
+	98.13 72.19 moveto 
+	100.65 72.19 102.90 73.76 103.77 76.13 curveto 
+	stroke 
+	setcolor 
+	currentcolor 
+	1 setlinewidth_nlw 
+	I_ActUpperArea true eq {	
+		currentcolor 
+		newpath 
+		194.35 120.92 moveto 
+		194.35 136.15 194.35 151.39 194.35 166.63 curveto 
+		194.81 172.85 181.40 177.36 171.03 177.60 curveto 
+		124.04 179.34 80 177.29 38.92 171.47 curveto 
+		34.09 170.78 29.96 167.63 28.03 163.15 curveto 
+		21.96 149.07 17.19 135.08 13.70 121.18 curveto 
+		13.39 119.92 14.34 118.70 15.64 118.70 curveto 
+		49.28 118.70 82.92 118.70 116.56 118.70 curveto 
+		117.62 118.70 117.95 120.13 117 120.60 curveto 
+		110.65 123.66 107.27 130.70 108.84 137.56 curveto 
+		110.41 144.43 116.52 149.30 123.56 149.30 curveto 
+		130.60 149.30 136.71 144.43 138.28 137.57 curveto 
+		139.85 130.70 136.47 123.66 130.12 120.60 curveto 
+		129.16 120.13 129.49 118.70 130.56 118.70 curveto 
+		150.30 118.70 170.04 118.70 189.79 118.70 curveto 
+		190.98 118.70 191.91 119.73 194.35 120.92 curveto 
+		eofill 
+		closepath 
+		stroke 
+		setcolor 
+	} if 
+	I_ActUpperArea false eq {	
+		currentcolor 
+		newpath 
+		Invisible 194.35 120.92 moveto 
+		194.35 136.15 194.35 151.39 194.35 166.63 curveto 
+		194.81 172.85 181.40 177.36 171.03 177.60 curveto 
+		124.04 179.34 80 177.29 38.92 171.47 curveto 
+		34.09 170.78 29.96 167.63 28.03 163.15 curveto 
+		21.96 149.07 17.19 135.08 13.70 121.18 curveto 
+		13.39 119.92 14.34 118.70 15.64 118.70 curveto 
+		49.28 118.70 82.92 118.70 116.56 118.70 curveto 
+		117.62 118.70 117.95 120.13 117 120.60 curveto 
+		110.65 123.66 107.27 130.70 108.84 137.56 curveto 
+		110.41 144.43 116.52 149.30 123.56 149.30 curveto 
+		130.60 149.30 136.71 144.43 138.28 137.57 curveto 
+		139.85 130.70 136.47 123.66 130.12 120.60 curveto 
+		129.16 120.13 129.49 118.70 130.56 118.70 curveto 
+		150.30 118.70 170.04 118.70 189.79 118.70 curveto 
+		190.98 118.70 191.91 119.73 194.35 120.92 curveto 
+		eofill 
+		closepath 
+		stroke 
+		setcolor 
+	} if 
+	I_ActMiddleArea true eq {	
+		currentcolor 
+		newpath 
+		190.51 115.70 moveto 
+		172.21 115.70 153.92 115.70 135.63 115.70 curveto 
+		134.77 115.70 134.31 114.69 134.88 114.04 curveto 
+		138.46 109.92 139.52 104.19 137.65 99.06 curveto 
+		134.17 89.48 130.68 79.90 127.19 70.32 curveto 
+		126.24 67.71 124.93 65.46 123.14 63.34 curveto 
+		122.60 62.69 123.06 61.69 123.91 61.69 curveto 
+		146.72 61.69 169.53 61.69 192.35 61.69 curveto 
+		194.35 61.69 194.35 62.59 194.35 63.69 curveto 
+		194.35 67.35 194.35 71.01 194.35 74.67 curveto 
+		194.35 87.74 194.35 100.81 194.35 113.88 curveto 
+		192.40 114.91 191.54 115.70 190.51 115.70 curveto 
+		eofill 
+		closepath 
+		stroke 
+		setcolor 
+	} if 
+	I_ActMiddleArea false eq {	
+		currentcolor 
+		newpath 
+		Invisible 190.51 115.70 moveto 
+		172.21 115.70 153.92 115.70 135.63 115.70 curveto 
+		134.77 115.70 134.31 114.69 134.88 114.04 curveto 
+		138.46 109.92 139.52 104.19 137.65 99.06 curveto 
+		134.17 89.48 130.68 79.90 127.19 70.32 curveto 
+		126.24 67.71 124.93 65.46 123.14 63.34 curveto 
+		122.60 62.69 123.06 61.69 123.91 61.69 curveto 
+		146.72 61.69 169.53 61.69 192.35 61.69 curveto 
+		194.35 61.69 194.35 62.59 194.35 63.69 curveto 
+		194.35 67.35 194.35 71.01 194.35 74.67 curveto 
+		194.35 87.74 194.35 100.81 194.35 113.88 curveto 
+		192.40 114.91 191.54 115.70 190.51 115.70 curveto 
+		eofill 
+		closepath 
+		stroke 
+		setcolor 
+	} if 
+	I_ActMiddleArea true eq {	
+		currentcolor 
+		newpath 
+		6.60 63.68 moveto 
+		6.57 70.28 6.83 76.90 7.39 83.53 curveto 
+		8.24 93.69 9.79 103.88 12.04 114.12 curveto 
+		12.24 115.04 13.06 115.70 14 115.70 curveto 
+		46.49 115.70 78.99 115.70 111.48 115.70 curveto 
+		112.34 115.70 112.80 114.69 112.24 114.04 curveto 
+		111 112.62 110.11 111.10 109.46 109.33 curveto 
+		105.68 98.95 101.91 88.57 98.13 78.19 curveto 
+		93.39 78.19 88.65 78.19 83.91 78.19 curveto 
+		74.24 78.19 65.60 72.14 62.29 63.05 curveto 
+		62.21 62.82 62.12 62.58 62.04 62.35 curveto 
+		61.86 61.87 61.60 61.69 61.10 61.69 curveto 
+		43.60 61.69 26.10 61.69 8.60 61.69 curveto 
+		eofill 
+		closepath 
+		stroke 
+		setcolor 
+	} if 
+	I_ActMiddleArea false eq {	
+		currentcolor 
+		newpath 
+		Invisible 6.60 63.68 moveto 
+		6.57 70.28 6.83 76.90 7.39 83.53 curveto 
+		8.24 93.69 9.79 103.88 12.04 114.12 curveto 
+		12.24 115.04 13.06 115.70 14 115.70 curveto 
+		46.49 115.70 78.99 115.70 111.48 115.70 curveto 
+		112.34 115.70 112.80 114.69 112.24 114.04 curveto 
+		111 112.62 110.11 111.10 109.46 109.33 curveto 
+		105.68 98.95 101.91 88.57 98.13 78.19 curveto 
+		93.39 78.19 88.65 78.19 83.91 78.19 curveto 
+		74.24 78.19 65.60 72.14 62.29 63.05 curveto 
+		62.21 62.82 62.12 62.58 62.04 62.35 curveto 
+		61.86 61.87 61.60 61.69 61.10 61.69 curveto 
+		43.60 61.69 26.10 61.69 8.60 61.69 curveto 
+		eofill 
+		closepath 
+		stroke 
+		setcolor 
+	} if 
+	I_ActLowerArea true eq {	
+		currentcolor 
+		newpath 
+		192.35 58.69 moveto 
+		167.59 58.69 142.83 58.69 118.07 58.69 curveto 
+		117.88 58.69 117.71 58.65 117.55 58.55 curveto 
+		113.75 56.23 110.03 55.18 105.58 55.18 curveto 
+		98.59 55.18 91.60 55.18 84.61 55.18 curveto 
+		84.10 55.18 83.84 55 83.67 54.53 curveto 
+		79.45 42.94 75.23 31.35 71.01 19.76 curveto 
+		68.84 13.79 62.24 10.71 56.27 12.88 curveto 
+		50.30 15.06 47.22 21.65 49.40 27.62 curveto 
+		53 37.53 56.61 47.44 60.22 57.35 curveto 
+		60.45 58 59.97 58.69 59.28 58.69 curveto 
+		42.43 58.69 25.59 58.69 8.75 58.69 curveto 
+		7.62 58.69 6.71 57.75 6.75 56.62 curveto 
+		7.37 40.23 9.82 23.93 14.11 7.68 curveto 
+		14.39 6.60 14.92 6.19 16.04 6.19 curveto 
+		74.81 6.19 133.58 6.19 192.35 6.19 curveto 
+		193.45 6.19 194.35 7.08 194.35 8.19 curveto 
+		194.35 24.36 194.35 40.52 194.35 56.69 curveto 
+		194.35 57.80 193.45 58.69 192.35 58.69 curveto 
+		eofill 
+		closepath 
+		stroke 
+		setcolor 
+	} if 
+	I_ActLowerArea false eq {	
+		currentcolor 
+		newpath 
+		Invisible 192.35 58.69 moveto 
+		167.59 58.69 142.83 58.69 118.07 58.69 curveto 
+		117.88 58.69 117.71 58.65 117.55 58.55 curveto 
+		113.75 56.23 110.03 55.18 105.58 55.18 curveto 
+		98.59 55.18 91.60 55.18 84.61 55.18 curveto 
+		84.10 55.18 83.84 55 83.67 54.53 curveto 
+		79.45 42.94 75.23 31.35 71.01 19.76 curveto 
+		68.84 13.79 62.24 10.71 56.27 12.88 curveto 
+		50.30 15.06 47.22 21.65 49.40 27.62 curveto 
+		53 37.53 56.61 47.44 60.22 57.35 curveto 
+		60.45 58 59.97 58.69 59.28 58.69 curveto 
+		42.43 58.69 25.59 58.69 8.75 58.69 curveto 
+		7.62 58.69 6.71 57.75 6.75 56.62 curveto 
+		7.37 40.23 9.82 23.93 14.11 7.68 curveto 
+		14.39 6.60 14.92 6.19 16.04 6.19 curveto 
+		74.81 6.19 133.58 6.19 192.35 6.19 curveto 
+		193.45 6.19 194.35 7.08 194.35 8.19 curveto 
+		194.35 24.36 194.35 40.52 194.35 56.69 curveto 
+		194.35 57.80 193.45 58.69 192.35 58.69 curveto 
+		eofill 
+		closepath 
+		stroke 
+		setcolor 
+	} if 
+%?manual_beg
+%?manual_end 
+	2 setlinewidth_nlw 
+	133 134 moveto 
+	123 134 10 0 360 arc 
+	stroke 
+	1 setlinewidth_nlw 
+	setcolor 
+	194.35 120.92 moveto 
+	194.35 136.15 194.35 151.39 194.35 166.63 curveto 
+	194.81 172.85 181.40 177.36 171.03 177.60 curveto 
+	124.04 179.34 80 177.29 38.92 171.47 curveto 
+	34.09 170.78 29.96 167.63 28.03 163.15 curveto 
+	21.96 149.07 17.19 135.08 13.70 121.18 curveto 
+	13.39 119.92 14.34 118.70 15.64 118.70 curveto 
+	49.28 118.70 82.92 118.70 116.56 118.70 curveto 
+	117.62 118.70 117.95 120.13 117 120.60 curveto 
+	110.65 123.66 107.27 130.70 108.84 137.56 curveto 
+	110.41 144.43 116.52 149.30 123.56 149.30 curveto 
+	130.60 149.30 136.71 144.43 138.28 137.57 curveto 
+	139.85 130.70 136.47 123.66 130.12 120.60 curveto 
+	129.16 120.13 129.49 118.70 130.56 118.70 curveto 
+	150.30 118.70 170.04 118.70 189.79 118.70 curveto 
+	190.98 118.70 191.91 119.73 194.35 120.92 curveto 
+	stroke 
+	190.51 115.70 moveto 
+	172.21 115.70 153.92 115.70 135.63 115.70 curveto 
+	134.77 115.70 134.31 114.69 134.88 114.04 curveto 
+	138.46 109.92 139.52 104.19 137.65 99.06 curveto 
+	134.17 89.48 130.68 79.90 127.19 70.32 curveto 
+	126.24 67.71 124.93 65.46 123.14 63.34 curveto 
+	122.60 62.69 123.06 61.69 123.91 61.69 curveto 
+	146.72 61.69 169.53 61.69 192.35 61.69 curveto 
+	194.35 61.69 194.35 62.59 194.35 63.69 curveto 
+	194.35 67.35 194.35 71.01 194.35 74.67 curveto 
+	194.35 87.74 194.35 100.81 194.35 113.88 curveto 
+	192.40 114.91 191.54 115.70 190.51 115.70 curveto 
+	stroke 
+	6.60 63.68 moveto 
+	6.57 70.28 6.83 76.90 7.39 83.53 curveto 
+	8.24 93.69 9.79 103.88 12.04 114.12 curveto 
+	12.24 115.04 13.06 115.70 14 115.70 curveto 
+	46.49 115.70 78.99 115.70 111.48 115.70 curveto 
+	112.34 115.70 112.80 114.69 112.24 114.04 curveto 
+	111 112.62 110.11 111.10 109.46 109.33 curveto 
+	105.68 98.95 101.91 88.57 98.13 78.19 curveto 
+	93.39 78.19 88.65 78.19 83.91 78.19 curveto 
+	74.24 78.19 65.60 72.14 62.29 63.05 curveto 
+	62.21 62.82 62.12 62.58 62.04 62.35 curveto 
+	61.86 61.87 61.60 61.69 61.10 61.69 curveto 
+	43.60 61.69 26.10 61.69 8.60 61.69 curveto 
+	stroke 
+	192.35 58.69 moveto 
+	167.59 58.69 142.83 58.69 118.07 58.69 curveto 
+	117.88 58.69 117.71 58.65 117.55 58.55 curveto 
+	113.75 56.23 110.03 55.18 105.58 55.18 curveto 
+	98.59 55.18 91.60 55.18 84.61 55.18 curveto 
+	84.10 55.18 83.84 55 83.67 54.53 curveto 
+	79.45 42.94 75.23 31.35 71.01 19.76 curveto 
+	68.84 13.79 62.24 10.71 56.27 12.88 curveto 
+	50.30 15.06 47.22 21.65 49.40 27.62 curveto 
+	53 37.53 56.61 47.44 60.22 57.35 curveto 
+	60.45 58 59.97 58.69 59.28 58.69 curveto 
+	42.43 58.69 25.59 58.69 8.75 58.69 curveto 
+	7.62 58.69 6.71 57.75 6.75 56.62 curveto 
+	7.37 40.23 9.82 23.93 14.11 7.68 curveto 
+	14.39 6.60 14.92 6.19 16.04 6.19 curveto 
+	74.81 6.19 133.58 6.19 192.35 6.19 curveto 
+	193.45 6.19 194.35 7.08 194.35 8.19 curveto 
+	194.35 24.36 194.35 40.52 194.35 56.69 curveto 
+	194.35 57.80 193.45 58.69 192.35 58.69 curveto 
+	stroke 
+	200 5 moveto 
+	200 168 lineto 
+	stroke 
+} def
+%?partend
+
+%?partdef parspeac009
+%?fn	parspeac009
+%?brief	Temperatur minus
+%?bbox	0 0 79 79
+/parspeac009 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	5 5 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac002 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac010
+%?fn	parspeac010
+%?brief	Temperatur plus
+%?bbox	0 0 79 79
+/parspeac010 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	5 5 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac011
+%?fn	parspeac011
+%?brief	Luefterstaerke minus
+%?bbox	0 0 79 79
+/parspeac011 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 10 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac004 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspeac012
+%?fn	parspeac012
+%?brief	Luefterstaerke plus
+%?bbox	0 0 79 79
+/parspeac012 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 10 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspeac003 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen002
+%?fn	parspegen002
+%?brief	Plus Symbol
+%?bbox	0 0 79 79
+/parspegen002 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen037 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen003
+%?fn	parspegen003
+%?brief	Minus Symbol
+%?bbox	0 0 79 79
+/parspegen003 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen038 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen004
+%?fn	parspegen004
+%?brief	Pfeil rechts ausgefuellt
+%?bbox	0 0 79 79
+/parspegen004 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen030 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen005
+%?fn	parspegen005
+%?brief	Pfeil links ausgefuellt
+%?bbox	0 0 79 79
+/parspegen005 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen031 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen006
+%?fn	parspegen006
+%?brief	Bestaetigung
+%?bbox	0 0 79 79
+/parspegen006 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen028 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen007
+%?fn	parspegen007
+%?brief	STOP
+%?bbox	0 0 79 79
+/parspegen007 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+		currentcolor 
+		Red 
+		symspeframe018 
+		setcolor 
+	} if 
+	I_Aktiv false eq {	
+		currentcolor 
+		Invisible 
+		symspeframe018 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Invisible 0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen016 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen008
+%?fn	parspegen008
+%?brief	Motoroeldruck
+%?bbox	0 0 79 79
+/parspegen008 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+		currentcolor 
+		Red 
+		symspeframe018 
+		setcolor 
+	} if 
+	I_Aktiv false eq {	
+		currentcolor 
+		Invisible 
+		symspeframe018 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Invisible 0 3 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen011 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen009
+%?fn	parspegen009
+%?brief	Batterieladekontrolle
+%?bbox	0 0 79 79
+/parspegen009 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+		currentcolor 
+		Red 
+		symspeframe018 
+		setcolor 
+	} if 
+	I_Aktiv false eq {	
+		currentcolor 
+		Invisible 
+		symspeframe018 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Invisible
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen008 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen010
+%?fn	parspegen010
+%?brief	Bremsspeicherdruck
+%?bbox	0 0 79 79
+/parspegen010 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+		currentcolor 
+		Red 
+		symspeframe018 
+		setcolor 
+	} if 
+	I_Aktiv false eq {	
+		currentcolor 
+		Invisible 
+		symspeframe018 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Invisible 0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen015 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen011
+%?fn	parspegen011
+%?brief	Notlenkpumpe
+%?bbox	0 0 79 79
+/parspegen011 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+		currentcolor 
+		Red 
+		symspeframe018 
+		setcolor 
+	} if 
+	I_Aktiv false eq {	
+		currentcolor 
+		Invisible 
+		symspeframe018 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Invisible 0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen012 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen012
+%?fn	parspegen012
+%?brief	Notlenkpumpe Check
+%?bbox	0 0 79 79
+/parspegen012 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+		currentcolor 
+		Red 
+		symspeframe018 
+		setcolor 
+	} if 
+	I_Aktiv false eq {	
+		currentcolor 
+		Invisible 
+		symspeframe018 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Invisible 0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen013 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen013
+%?fn	parspegen013
+%?brief	Sanduhr animiert
+%?bbox	0 0 79 79
+/parspegen013 {
+	
+%?manual_beg
+	/Ly1 20 def
+	/Ly2 -20 def
+	/Ly3 0 def
+	currentcolor 
+	40 40 translate
+	MDrotate 330 gt {
+		MDrotate 330 sub 6 mul rotate
+	} if
+
+	%?plinebeg
+	newpath
+	-16 -25 moveto 
+	16 -25 lineto 
+	20 -25 20 -30 16 -30 curveto 
+	-16 -30 lineto 
+	-20 -30 -20 -25 -16 -25 curveto 	
+	eofill 
+	%?plineend
+	
+	%?plinebeg
+	newpath
+	-16 30 moveto 
+	16 30 lineto 
+	20 30 20 25 16 25 curveto 
+	-16 25 lineto 
+	-20 25 -20 30 -16 30 curveto 
+	eofill 
+	%?plineend
+
+	LightGrey
+
+	MDrotate 330 lt {
+		/Ly1 360 MDrotate sub 72 div 20 add store
+		%?plinebeg
+		newpath
+		-15 15 moveto 
+		-15 Ly1 lineto 
+		0 Ly1 12 sub lineto 
+		15 Ly1 lineto 
+		15 15 lineto 
+		15 5 0 5 1 0 curveto 
+		-1 0 lineto
+		0 5 -15 5 -15 15 curveto 
+		eofill 
+		%?plineend
+
+		/Ly2 MDrotate 72 div 25 sub store
+		%?plinebeg
+		newpath
+		-15 -25 moveto 
+		15 -25 lineto 
+		15 Ly2 lineto 
+		0 Ly2 12 add lineto 
+		-15 Ly2 lineto 
+		-15 -25 lineto 
+		eofill 
+		%?plineend
+
+		/Ly3 MDrotate -72 div store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+		/Ly3 Ly3 10 sub store
+		0 Ly3 moveto
+		0 Ly3 1 sub lineto
+	} if
+	
+	setcolor 
+	
+%?manual_end
+	-15 15 moveto 
+	-15 5 0 5 -1 0 curveto 
+	stroke 
+	-1 0 moveto 
+	0 -5 -15 -5 -15 -15 curveto 
+	stroke 
+	15 15 moveto 
+	15 5 0 5 1 0 curveto 
+	stroke 
+	15 -15 moveto 
+	15 -5 0 -5 1 0 curveto 
+	stroke 
+	-15 15 moveto 
+	-15 25 lineto 
+	stroke 
+	15 15 moveto 
+	15 25 lineto 
+	stroke 
+	15 -15 moveto 
+	15 -25 lineto 
+	stroke 
+	-15 -15 moveto 
+	-15 -25 lineto 
+	stroke 
+} def
+%?partend
+
+%?partdef parspetest001
+%?fn	parspetest001
+%?brief	Batterieladekontrolle
+%?bbox	0 0 79 79
+/parspetest001 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+		currentcolor 
+		Red 
+		symspeframe018 
+		setcolor 
+	} if 
+	I_Aktiv false eq {	
+		currentcolor 
+		Invisible 
+		symspeframe018 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	White 0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen008 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef parspetest002
+%?fn	parspetest002
+%?brief	Batterieladekontrolle
+%?bbox	0 0 79 79
+/parspetest002 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+		currentcolor 
+		Red 
+		symspeframe018 
+		setcolor 
+	} if 
+	I_Aktiv false eq {	
+		currentcolor 
+		Invisible 
+		symspeframe018 
+		setcolor 
+	} if 
+	%?manual_end
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	LightGrey 0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen008 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef parspegen014
+%?fn	parspegen014
+%?brief	purge mode
+%?bbox	0 0 79 79
+/parspegen014 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+%?manual_beg
+	matrix currentmatrix_nlw 
+	currentcolor 
+	White
+	I_Activation true eq {	
+		Green 
+	} if 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen045 
+	false setflash
+	setcolor 
+	setmatrix_nlw 
+%?manual_end	
+	
+} def
+%?partend
+
+%?partdef language001
+%?fn	language001
+%?brief	Text mit variabler Schriftart, Ursprung: links, unten
+%?bbox	0 0 39 39
+/language001 {
+	/I_Activ exch def	%?brief language set %?use INP %?type BOOL %?dflt false
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_Text exch def	%?brief Text  %?use INP %?type STRI %?dflt text
+	
+	I_FontSelection selectFont
+
+	currentcolor
+	I_Activ true eq {
+	Green
+	} if
+	0 0 moveto
+	I_Text show_utf8
+setcolor
+%?manual_end
+	
+} def
+%?partend
+
+
+%?partdef parspegrease001
+%?fn	parspegrease001
+%?brief	Symbol Schmiermodus 3
+%?bbox	0 0 79 79
+/parspegrease001 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	I_Activation true eq {	
+		Green 
+	} if 0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegrease001 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegrease002
+%?fn	parspegrease002
+%?brief	Symbol Schmiermodus 2
+%?bbox	0 0 79 79
+/parspegrease002 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	I_Activation true eq {	
+		Green 
+	} if 0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegrease002 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegrease003
+%?fn	parspegrease003
+%?brief	Symbol Schmiermodus 1
+%?bbox	0 0 79 79
+/parspegrease003 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	I_Activation true eq {	
+		Green 
+	} if 0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegrease003 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+
+
+%?partdef parspevalue001
+%?fn	parspevalue001
+%?brief	Value
+%?bbox	0 0 79 79
+/parspevalue001 {
+	
+%?manual_beg
+	/I_FontSelection exch def	%?brief Schriftart %?use INP %?type DINT %?dflt 1
+	/I_Text exch def	%?brief Text  %?use INP %?type REAL%?dflt text
+	/LS_STRI 	()	def	
+	/LI_rightDigits	0	def
+
+	0 0 moveto
+	I_Text LS_STRI LI_rightDigits ncvs
+	show_utf8
+%?manual_end
+	
+} def
+%?partend
+
+
+
+
+%?partdef parspegen015
+%?fn	parspegen015
+%?brief	�ldruck Symbol
+%?bbox	0 0 79 79
+/parspegen015 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Red 
+	} if 
+%?manual_end
+	
+	symspegen011 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen016
+%?fn	parspegen016
+%?brief	K�hlmitteltemperatur Symbol
+%?bbox	0 0 79 79
+/parspegen016 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Red 
+	} if 
+%?manual_end
+	
+	symspegen007 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen017
+%?fn	parspegen017
+%?brief	Hydraulik�l Symbol
+%?bbox	0 0 79 79
+/parspegen017 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Red 
+	} if 
+%?manual_end
+	
+	symspegen009 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegrease004
+%?fn	parspegrease004
+%?brief	F�llstand Zentralschmieranlage
+%?bbox	0 0 119 159
+/parspegrease004 {
+	/I_Level exch def	%?brief grease level %?use INP %?type BOOL %?dflt false
+%?manual_beg
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	I_Level false eq {	
+		Invisible 
+	} if 
+	I_Level true eq {	
+		Green 
+	} if 
+	symspegrease008 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	I_Level false eq {	
+		Red true setflash 
+	} if 
+	I_Level true eq {	
+		Invisible 
+	} if 
+	symspegrease010 false setflash 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegrease009 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen018
+%?fn	parspegen018
+%?brief	Batterie Symbol
+%?bbox	0 0 79 79
+/parspegen018 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Red 
+	} if 
+%?manual_end
+	
+	symspegen008 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef parspegrease005
+%?fn	parspegrease005
+%?brief	Zeit bis zur n�chsten Schmierung
+%?bbox	0 0 159 79
+/parspegrease005 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-10 8 translate 
+	0 rotate 
+	0.80 0.80 scale 
+	symspegen036 
+	setcolor 
+	setmatrix_nlw 
+	2 setlinewidth_nlw 
+	43 40 moveto 
+	95 40 lineto 
+	stroke 
+	95 40 moveto 
+	80 46 lineto 
+	stroke 
+	95 40 moveto 
+	80 34 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	92 6 translate 
+	0 rotate 
+	1 1 scale 
+	symspegrease007 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef parspegen019
+%?fn	parspegen019
+%?brief	Einheitenumschaltung 1
+%?bbox	0 0 79 79
+/parspegen019 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen049 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen020
+%?fn	parspegen020
+%?brief	Einheitenumschaltung 2
+%?bbox	0 0 79 79
+/parspegen020 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen050 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+
+%?partdef parspegen021
+%?fn	parspegen021
+%?brief	L�fterumkehr
+%?bbox	0 0 79 79
+/parspegen021 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	5 -5 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen034 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen022
+%?fn	parspegen022
+%?brief	3. Steuerkreis
+%?bbox	0 0 79 79
+/parspegen022 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen052 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen053 
+	setcolor 
+	setmatrix_nlw 
+	} def
+%?partend
+
+
+%?partdef parspegen023
+%?fn	parspegen023
+%?brief	4. Steuerkreis
+%?bbox	0 0 79 79
+/parspegen023 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen052 
+	setcolor 
+	setmatrix_nlw 
+		matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen054 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspescale016
+%?fn	parspescale016
+%?brief	Zeigerinstrument zur Anzeige der Wassertemperatur
+%?bbox	0 0 339 339
+/parspescale016 {
+	/LI_TempLimitRed exch def	%?brief Temperaturgrenze zum roten Bereich %?use INP %?type REAL %?dflt  120.00
+	/LI_WaterTemp exch def	%?brief Wassertemperatur [�C] %?use INP %?type REAL %?dflt    0.00
+	/LD_MaxTemp 120 def	
+%?manual_beg
+	/LD_MaxTemp LI_TempLimitRed 5 div 6 mul store		% Skalenende berechnen
+	/LI_WaterTemp LD_MaxTemp LI_WaterTemp sub store 	% Wassertemperatur berechnen wegen gedrehter Darstellung
+
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	0 rotate 
+	1 1 scale 
+	parspescale005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	165 170 translate 
+	180 rotate 						% Anzeige drehen
+	1 1 scale 
+	LI_WaterTemp 30 240 LD_MaxTemp 
+	IPointerR160 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 	
+	
+} def
+%?partend
+
+%?partdef parspescale017
+%?fn	parspescale017
+%?brief	3 Zeigerinstrumente zur Anzeige des F�llstands, der Wassertemp. und der Geschw.
+%?bbox	0 0 599 339
+/parspescale017 {
+	/LI_TempLimitRed exch def	%?brief Temperaturgrenze zum roten Bereich %?use INP %?type REAL %?dflt    0.00
+	/LI_WaterTemp exch def	%?brief Wassertemperatur [�C] %?use INP %?type REAL %?dflt    0.00
+	/LI_FuelLevel exch def	%?brief Krafspeoff-Fuellstand [Prozent] %?use INP %?type REAL %?dflt    0.00
+	/LI_EngineSpeedStep exch def	%?brief Temperatur %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-60 45 translate 
+	0 rotate 
+	0.8 0.8 scale 
+	LI_FuelLevel 
+	parspescale008
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	130 45 translate 
+	0 rotate 
+	0.8 0.8 scale 
+	LI_WaterTemp LI_TempLimitRed
+	parspescale016 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-15 -10 translate 
+	0 rotate 
+	1.1 1.1 scale 
+	LI_EngineSpeedStep 
+	parspescale014 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+
+
+
+%?partdef parspescale018
+%?fn	parspescale018
+%?brief	Skala Kontrast Kamera
+%?bbox	0 0 159 79
+/parspescale018 {
+	/I_Value exch def	%?brief Eingangswert %?use INP %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-20 0 translate 
+	0 rotate 
+	1 1 scale 
+	I_Value 0 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill1
+		setcolor
+	} if 
+	I_Value 1 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill1
+		setcolor
+	} if 
+	I_Value 2 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill1
+		setcolor	
+	} if 
+	I_Value 3 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill1
+		setcolor
+	} if 
+	I_Value 4 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill1
+		setcolor
+	} if 	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 0 translate 
+	0 rotate 
+	1 1 scale 	
+	I_Value 0 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill2
+		setcolor
+	} if 
+	I_Value 1 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill2
+		setcolor
+	} if 
+	I_Value 2 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill2
+		setcolor	
+	} if 
+	I_Value 3 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill2
+		setcolor
+	} if 
+	I_Value 4 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill2
+		setcolor
+	} if 	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	60 0 translate 
+	0 rotate 
+	1 1 scale 
+	I_Value 0 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill3
+		setcolor
+	} if 
+	I_Value 1 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill3
+		setcolor
+	} if 
+	I_Value 2 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill3
+		setcolor	
+	} if 
+	I_Value 3 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill3
+		setcolor
+	} if 
+	I_Value 4 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill3
+		setcolor
+	} if 		
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	100 0 translate 
+	0 rotate 
+	1 1 scale 
+	I_Value 0 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill4
+		setcolor
+	} if 
+	I_Value 1 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill4
+		setcolor
+	} if 
+	I_Value 2 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill4
+		setcolor	
+	} if 
+	I_Value 3 eq {	
+		currentcolor
+		Invisible 
+		sym_rnd_fill4
+		setcolor
+	} if 
+	I_Value 4 eq {	
+		currentcolor
+		White 
+		sym_rnd_fill4
+		setcolor
+	} if 		
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	sym_balken_bright 
+	setcolor 
+	setmatrix_nlw 
+	} def
+%?partend
+
+
+%?partdef parspegen024
+%?fn	parspegen024
+%?brief	Spiegelung Kamerabild 1
+%?bbox	0 0 79 79
+/parspegen024 {
+	/I_Activ exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	I_Activ true eq {	
+		currentcolor 
+		Green 
+		symspegen057 
+		setcolor 
+	} if 
+	I_Activ false eq {	
+		currentcolor 
+		White
+		symspegen057 
+		setcolor 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	42 24 translate 
+	0 rotate 
+	0.30 0.30 scale 
+	I_Activ true eq {	
+		currentcolor 
+		Green 
+		symspegen058 
+		setcolor 
+	} if 
+	I_Activ false eq {	
+		currentcolor 
+		White
+		symspegen058 
+		setcolor 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	11 43 translate 
+	0 rotate 
+	0.30 0.30 scale 
+	I_Activ true eq {	
+		currentcolor 
+		Green 
+		symspegen058 
+		setcolor 
+	} if 
+	I_Activ false eq {	
+		currentcolor 
+		White
+		symspegen058 
+		setcolor 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen025
+%?fn	parspegen025
+%?brief	Spiegelung Kamerabild 1
+%?bbox	0 0 79 79
+/parspegen025 {
+	/I_Activ exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	I_Activ true eq {	
+		currentcolor 
+		White
+		symspegen057 
+		setcolor 
+	} if 
+	I_Activ false eq {	
+		currentcolor 
+		Green 
+		symspegen057 
+		setcolor 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	42 24 translate 
+	0 rotate 
+	0.30 0.30 scale 
+	I_Activ true eq {	
+		currentcolor 
+		White
+		symspegen058 
+		setcolor 
+	} if 
+	I_Activ false eq {	
+		currentcolor 
+		Green 
+		symspegen058 
+		setcolor 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	35 57 translate 
+	180 rotate 
+	0.30 0.30 scale 
+	I_Activ true eq {	
+		currentcolor
+		White 
+		symspegen058 
+		setcolor 
+	} if 
+	I_Activ false eq {	
+		currentcolor 
+		Green 
+		symspegen058 
+		setcolor 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef parspedate001
+%?fn	parspedate001
+%?brief	Datumsformat dd-mm-yyyy
+%?bbox	0 0 159 79
+/parspedate001 {
+	/I_Activation exch def	%?brief change color %?use INP %?type DINT %?dflt 0
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+ 	I_Activation 1 eq {	
+ 	Green 
+ 	} if 
+%?manual_end
+	
+	symspedate001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspedate002
+%?fn	parspedate002
+%?brief	Datumsformat mm-dd-yyyy
+%?bbox	0 0 159 79
+/parspedate002 {
+	/I_Activation exch def	%?brief change color %?use INP %?type DINT %?dflt 0
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation 3 eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspedate002 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspedate003
+%?fn	parspedate003
+%?brief	Datumsformat yyyy-mm-dd
+%?bbox	0 0 159 79
+/parspedate003 {
+	/I_Activation exch def	%?brief change color %?use INP %?type DINT %?dflt 0
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation 2 eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspedate003 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen026
+%?fn	parspegen026
+%?brief	Einstellung Joysticklenkung
+%?bbox	0 0 359 119
+/parspegen026 {
+	/I_Value exch def	%?brief move segment %?use INP %?type DINT %?dflt 0
+	/I_x 0 def	%?brief x Value %?use LOC %?type DINT %?dflt 0
+	I_Value 800 eq {	
+		/I_x -17 store 
+	} if 
+	I_Value 820 eq {	
+		/I_x -1 store 
+	} if 
+	I_Value 840 eq {	
+		/I_x 15 store 
+	} if 
+	I_Value 860 eq {	
+		/I_x 31 store 
+	} if 
+	I_Value 880 eq {	
+		/I_x 47 store 
+	} if 
+	I_Value 900 eq {	
+		/I_x 63 store 
+	} if 
+	I_Value 920 eq {	
+		/I_x 79 store 
+	} if 
+	I_Value 940 eq {	
+		/I_x 95 store 
+	} if 
+	I_Value 960 eq {	
+		/I_x 111 store 
+	} if 
+	I_Value 980 eq {	
+		/I_x 127 store 
+	} if 
+	I_Value 1000 eq {	
+		/I_x 143 store 
+	} if 
+	I_Value 1020 eq {	
+		/I_x 159 store 
+	} if 
+	I_Value 1040 eq {	
+		/I_x 175 store 
+	} if 
+	I_Value 1060 eq {	
+		/I_x 191 store 
+	} if 
+	I_Value 1080 eq {	
+		/I_x 207 store 
+	} if 
+	I_Value 1100 eq {	
+		/I_x 223 store 
+	} if 
+	I_Value 1120 eq {	
+		/I_x 239 store 
+	} if 
+	I_Value 1140 eq {	
+		/I_x 255 store 
+	} if 
+	I_Value 1160 eq {	
+		/I_x 271 store 
+	} if 
+	I_Value 1180 eq {	
+		/I_x 287 store 
+	} if 
+	I_Value 1200 eq {	
+		/I_x 303 store 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen059 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	I_x 25 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen060 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen027
+%?fn	parspegen027
+%?brief	Umschaltung Trennzeichen Datumsanzeige
+%?bbox	0 0 79 79
+/parspegen027 {
+	/I_Separator exch def	%?brief separator symbol %?use INP %?type DINT %?dflt 1
+	/LS_tag () def	
+	I_Separator 1 eq {	
+		/LS_tag (.) store 
+	} if 
+	I_Separator 2 eq {	
+		/LS_tag (-) store 
+	} if 
+	I_Separator 3 eq {	
+		/LS_tag (/) store 
+	} if 30 30 moveto 
+	LS_tag 
+	show_utf8 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef parspegen028
+%?fn	parspegen028
+%?brief	Einheit km/h
+%?bbox	0 0 79 79
+/parspegen028 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen061 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef parspegen029
+%?fn	parspegen029
+%?brief	Einheit mph
+%?bbox	0 0 79 79
+/parspegen029 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+%?manual_beg
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen062 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+
+%?partdef parspegen030
+%?fn	parspegen030
+%?brief	Einheit bar
+%?bbox	0 0 79 79
+/parspegen030 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+%?manual_beg
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen063 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+
+%?partdef parspegen031
+%?fn	parspegen031
+%?brief	Einheit psi
+%?bbox	0 0 79 79
+/parspegen031 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+%?manual_beg
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen064 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+
+%?partdef parspegen032
+%?fn	parspegen032
+%?brief	Einheit �C
+%?bbox	0 0 79 79
+/parspegen032 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+%?manual_beg
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen065 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+
+%?partdef parspegen033
+%?fn	parspegen033
+%?brief	Einheit �F
+%?bbox	0 0 79 79
+/parspegen033 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+%?manual_beg
+%?manual_end 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen066 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen034
+%?fn	parspegen034
+%?brief	Einstellung fixe Dieseldrehzal
+%?bbox	0 0 339 119
+/parspegen034 {
+	/I_Value exch def	%?brief move segment %?use INP %?type DINT %?dflt 0
+	/I_x 0 def	%?brief x Value %?use LOC %?type DINT %?dflt 0
+	I_Value 1000 eq {	
+		/I_x 15 store 
+	} if 
+	I_Value 1050 eq {	
+		/I_x 31 store 
+	} if 
+	I_Value 1100 eq {	
+		/I_x 47 store 
+	} if 
+	I_Value 1150 eq {	
+		/I_x 63 store 
+	} if 
+	I_Value 1200 eq {	
+		/I_x 79 store 
+	} if 
+	I_Value 1250 eq {	
+		/I_x 95 store 
+	} if 
+	I_Value 1300 eq {	
+		/I_x 111 store 
+	} if 
+	I_Value 1350 eq {	
+		/I_x 127 store 
+	} if 
+	I_Value 1400 eq {	
+		/I_x 143 store 
+	} if 
+	I_Value 1450 eq {	
+		/I_x 159 store 
+	} if 
+	I_Value 1500 eq {	
+		/I_x 175 store 
+	} if 
+	I_Value 1550 eq {	
+		/I_x 191 store 
+	} if 
+	I_Value 1600 eq {	
+		/I_x 207 store 
+	} if 
+	I_Value 1650 eq {	
+		/I_x 223 store 
+	} if 
+	I_Value 1700 eq {	
+		/I_x 239 store 
+	} if 
+	I_Value 1750 eq {	
+		/I_x 255 store 
+	} if 
+	I_Value 1800 eq {	
+		/I_x 271 store 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen070 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	I_x 25 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen060 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef parspegen035
+%?fn	parspegen035
+%?brief	Symbol Aktivierung Modus fixe Dieseldrehzahl
+%?bbox	0 0 79 79
+/parspegen035 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	9 2 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspemenu027 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef parspegen036
+%?fn	parspegen036
+%?brief	Symbol Aktivierung Kameragro�bild bei R�ckw�rtsfahrt
+%?bbox	0 0 79 79
+/parspegen036 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspegen074 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspescale019
+%?fn	parspescale019
+%?brief	Zeigerinstrument zur Anzeige von Hydraulik�ltemperaturen
+%?bbox	0 0 339 339
+/parspescale019 {
+	/LI_EngineSpeedStep exch def	%?brief Temperatur %?use INP %?type REAL %?dflt    0.00
+%?manual_beg
+	/LI_EngineSpeedStep LI_EngineSpeedStep 20 sub store 	% Drehzahl berechnen f�r Segmentmitte
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	0 rotate 
+	1 1 scale 
+	parspescale001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 170 translate 
+	-72 rotate 
+	1 1 scale 
+	LI_EngineSpeedStep 0 35 120 
+	IPointerR90 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+
+
+
+
+
+%?partdef parspegen037
+%?fn	parspegen037
+%?brief	manuelle Aktivierung R�ckfahrkamera
+%?bbox	0 0 79 79
+/parspegen037 {
+	/I_Aktiv exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Aktiv true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	symspemenu011 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef acblowerfill1
+%?fn	acblowerfill1
+%?brief	Symbol Balken Luefter
+%?bbox	0 0 199 79
+/acblowerfill1 {
+	/I_Temp exch def	%?brief blower speed %?use INP %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-30 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 0.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse
+%?manual_end 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-15 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 1.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse
+%?manual_end 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 2.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	15 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 3.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse
+%?manual_end 	
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	30 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 4.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse	
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	45 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 5.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse	
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	60 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 6.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse
+%?manual_end 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	75 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 7.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse
+%?manual_end 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 8.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	105 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 9.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse
+%?manual_end 	
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	120 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 10.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse	
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	135 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 11.0 le {	
+	currentcolor
+	Invisible
+	sym_rnd_fill_elem 
+	setcolor
+	} {
+	currentcolor
+	sym_rnd_fill_elem 
+	setcolor
+	} ifelse	
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	sym_balken_luefter1 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef acblowerfill2
+%?fn	acblowerfill2
+%?brief	Symbol Balken Luefter
+%?bbox	0 0 199 79
+/acblowerfill2 {
+	/I_Temp exch def	%?brief blower speed %?use INP %?type REAL %?dflt    0.00
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 0.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1 
+	setcolor
+	} {
+	currentcolor
+	Blue
+	sym_ac_balk_fill1 
+	setcolor
+	} ifelse
+%?manual_end 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	13 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 1.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1
+	setcolor
+	} ifelse
+%?manual_end 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	26 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 2.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1 
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1
+	setcolor
+	} ifelse
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	39 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 3.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1 
+	setcolor
+	} ifelse
+%?manual_end 	
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	52 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 4.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1 
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1
+	setcolor
+	} ifelse	
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	65 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 5.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1 
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1
+	setcolor
+	} ifelse	
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	78 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 6.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1 
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1
+	setcolor
+	} ifelse
+%?manual_end 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	91 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 7.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1 
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1 
+	setcolor
+	} ifelse
+%?manual_end 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	104 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 8.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1 
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1 
+	setcolor
+	} ifelse
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	117 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 9.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1 
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1
+	setcolor
+	} ifelse
+%?manual_end 	
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	130 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 10.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1
+	setcolor
+	} {
+	currentcolor
+	sym_ac_balk_fill1 
+	setcolor
+	} ifelse	
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	143 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Temp 11.0 le {	
+	currentcolor
+	Invisible
+	sym_ac_balk_fill1 
+	setcolor
+	} {
+	currentcolor
+	Red
+	sym_ac_balk_fill1 
+	setcolor
+	} ifelse	
+%?manual_end 	 
+	
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	sym_balken_luefter2 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef parspegen038
+%?fn	parspegen038
+%?brief	Service Intervall Best�tigung
+%?bbox	0 0 79 79
+/parspegen038 {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	2 4 translate 
+	0 rotate 
+	0.70 0.70 scale 
+	symspegen076 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	23 34 translate 
+	0 rotate 
+	0.60 0.60 scale 
+	symspegen079 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	44 20 translate 
+	0 rotate 
+	0.50 0.50 scale 
+	symspegen028 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+
+
+%?partdef spGeneral001
+%?fn	spGeneral001
+%?brief	Symbol Balken Luefter
+%?bbox	0 0 159 79
+/spGeneral001 {
+	/Switch exch def	%?brief key teach/delete %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	25 7 translate 
+	50 rotate 
+	0.60 0.60 scale 
+	ssGeneral007 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	88 21 translate 
+	0 rotate 
+	0.23 0.23 scale 
+	symspegen041 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	60 37 translate 
+	0 rotate 
+	0.90 0.90 scale 
+	ssGeneral016 
+	setcolor 
+	setmatrix_nlw 
+	Switch true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		29 5 translate 
+		0 rotate 
+		0.80 0.80 scale 
+		ssGeneral018 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+%?partdef parspegen039
+%?fn	parspegen039
+%?brief	Luftverteilung oben
+%?bbox	0 0 79 79
+/parspegen039 {
+	/I_Activation exch def	%?brief change color %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+%?manual_beg
+	I_Activation true eq {	
+	Green 
+	} if 
+%?manual_end
+	
+	ssGeneral001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+% Berechnet die Anzahl der Vor- und der Nachkommastellen anhand des �bergebenen Codes, und ermittelt die Zahlenl�nge vor dem Komma in Pixel
+%!proc sp_getDigitInfo
+%?subproc
+/sp_getDigitInfo {
+	/LI_digits	exch	def			% Kommacode f�r die Anzeige
+	/LI_Value	exch	def			% Zahlenwert
+	/LO_riDig	1	def				% Anzahl Stellen nach dem Komma
+	/LO_leDig	1	def				% Anzahl Stellen vor dem Komma
+	/LO_leLen	1	def				% L�nge der Anzeige vor dem Komma
+	/LS_helps 	()	def				% String definieren
+
+	% Anzuzeigende Kommastellen ermitteln
+	LI_digits abs cvi
+	/LO_leDig exch store							% Vorkommastellen speichern
+	LI_digits LO_leDig sub							% Nachkommastellen ermitteln
+	10 mul abs cvi dup 2 gt { pop 2 } if			% Nachkommastellen: Zahl aufbereiten und auf 2 beschr�nken
+	/LO_riDig exch store							% Nachkommastellen speichern
+
+	% Kontrolle wie lange die Zahl links des Komma ist, ACHTUNG ncvs rundet eventuell 9.99 auf 10.00
+	LO_riDig 0 eq { LI_Value round } if
+	LO_riDig 1 eq { LI_Value 10 mul round 10 div } if
+	LO_riDig 2 ge { LI_Value 100 mul round 100 div } if
+	dup 0 lt 1 index -1 gt and { pop -1 } { cvi } ifelse			% gerunderter Zahl das Komma abschneiden damit nur der Werte links des Komma �brigbleibt, bei einer Zahl zwischen 0 und -1 mu� das "-" durch "10 mul" mitplatziert werden, da nach cvi 0 herauskommt, und NULL kein Vorzeichen hat
+	LS_helps 0 ncvs									% Zahl in string umwandeln um die L�nge zu ermitteln
+	strw
+	/LO_leLen exch store
+
+	LO_riDig LO_leDig LO_leLen
+
+} def
+
+
+% Berechnet die Anzahl der Kommastellen eines �bergebenen Wertes
+%!proc sp_getDeciPoint
+%?subproc
+/sp_getDeciPoint {
+	/LI_Value	exch	def			% zu analysierender Wert
+	/LO_rightDigit	1	def			% Anzahl Stellen nach dem Komma
+
+	/LR_help 0 def
+
+	LI_Value dup cvi sub
+	/LR_help exch store
+	LR_help 0 eq {
+		/LO_rightDigit 0 store
+	} {
+		LR_help 10 mul cvi 0 eq {						% 0.01...0.09
+			/LO_rightDigit 2 store
+		} {
+			LR_help 10 mul cvi LR_help 10 mul eq {		% 0.1, 0.2, 0.3, ... 0.9
+				/LO_rightDigit 1 store
+			} {
+				/LO_rightDigit 2 store
+			} ifelse
+		} ifelse
+	} ifelse
+	LO_rightDigit
+} def
+
+
+% shows text strings on screen (horizontally and vertically centered)
+%!proc sp_textCenterCenter
+/sp_textCenterCenter {
+	/isText exch def	%?brief Text  %?use INP %?type STRI %?dflt text
+	isText stringwidth pop 2 div neg strh 2 div neg rmoveto
+	isText show_utf8
+} def
+
+
+% sp_scaleProc
+% Skaliert den gew�nschten Wert in die Anzeige
+% Stack�bergabe: Anzeigel�nge, Anzeigeanfang, Anzeigeende, Wert (z.B.: YbarLen, YbarMin, YbarMax, Yvalue)
+% Stackr�ckgabe: Skalierter Wert
+%!proc sp_scaleProc
+%?subproc
+/sp_scaleProc {
+	/Li_value exch def
+	/Li_maxValue exch def
+	/Li_minValue exch def
+	/Li_BarLenPxl exch def
+	/Lq_ValuePxl 0 def
+
+	Li_maxValue 0 ge {
+		Li_maxValue Li_value lt {
+			/Lq_ValuePxl Li_BarLenPxl store
+		} {
+			Li_value Li_minValue lt {
+				/Lq_ValuePxl 0 store
+			} {
+				Li_value Li_minValue sub
+				Li_maxValue Li_minValue sub div
+				Li_BarLenPxl mul
+				/Lq_ValuePxl exch store
+			} ifelse
+		} ifelse
+	} {
+		Li_value Li_maxValue lt {
+			/Lq_ValuePxl Li_BarLenPxl store
+		} {
+			Li_value Li_minValue gt {
+				/Lq_ValuePxl 0 store
+			} {
+				Li_value Li_minValue sub
+				Li_maxValue Li_minValue sub div
+				Li_BarLenPxl mul
+				/Lq_ValuePxl exch store
+			} ifelse
+		} ifelse
+	} ifelse
+	Lq_ValuePxl
+} def
+
+
+% Zeichnet die Skala zu einem Balken (auf der rechten Seite)
+%!proc sp_drawScale001
+%?subproc
+/sp_drawScale001 {
+	/LX_scaleLeft	exch	def		% Skalierung soll nach links zeigen
+	/LI_deciNum	exch	def			% Anzahl der Kommastellen des Textes der Skalierung
+	/LD_txtAngle	exch	def		% Winkel des Textes (um eventuelle Globale Drehungen zu korrigieren)
+	/LX_fineScale	exch	def		% Fine-Skalierung eingeschalten
+	/LI_fields	exch	def			% Anzahl Skalierungsfelder
+	/LD_maxVal	exch	def			% maximaler Balkenwert in der Einheit
+	/LD_minVal	exch	def			% minimaler Balkenwert in der Einheit
+	/LI_maxBar	exch	def			% maximaler Balkenwert in Koordinaten
+
+	% Interne Variablen
+	/LI_scaleDist	5	def			% Abstand der Skalierung zum Balken
+	/LI_scaleLen	5	def				% L�nge der Skalierungsstriche
+	/LI_scaleLenFine	2	def			% L�nge der Skalierungsstriche der Fine-Skalierung
+	/LS_helps	() def				% String definieren
+	/LI_fieldNum	0 def				% Variable f�r die Anzahl der Skalierungsfelder anlegen
+	/LI_fieldstep 0 def				% Variable f�r die Gr��e des Skalierungsschrittes in Koordinaten
+	/LI_fieldstepNum 0 def			% Variable f�r die Gr��e des Skalierungsschrittes in Einheit
+	/LI_actY	0	def
+	/LS_text	()	def
+
+	% setze Var f�r andere Berechnung des Drehpunktes f�r die Skalenbeschriftung
+	/LXvertBar LD_txtAngle 45 lt LD_txtAngle -45 gt LD_txtAngle 315 gt or and LD_txtAngle 135 gt LD_txtAngle 225 lt and LD_txtAngle -135 lt LD_txtAngle -225 gt and or or def
+
+
+	% diverse Vorgaben negieren, wenn sie nach links gezeichnet werden sollen
+	LX_scaleLeft {
+		/LI_scaleDist LI_scaleDist neg store
+		/LI_scaleLen LI_scaleLen neg store
+		/LI_scaleLenFine LI_scaleLenFine neg store
+	} if
+	% Skalierung zeichnen
+	0 0 moveto
+	0 LI_maxBar lineto stroke				% Balkengrundlinie zeichnen
+	0 0 moveto
+	LI_scaleLen 0 lineto stroke				% Nullinie zeichnen
+	LI_maxBar LI_fields div
+	/LI_fieldstep exch store			% L�nge eines Skalierungsfeldes in Koordinaten berechnen
+	% Beschriftung errechnen
+	LD_maxVal LD_minVal sub
+	LI_fields div
+	/LI_fieldstepNum exch store
+	/LI_fieldNum LD_minVal store		% ersten Anzeigewert speichern
+
+	% 1. Beschriftungspunkt
+	matrix currentmatrix
+	LI_fieldNum LS_helps LI_deciNum ncvs	% Anzeigewert in String umwandeln
+	/LS_text exch store
+	LI_scaleLen LI_scaleDist add			% X-Wert auf den Textanfang setzen
+	LXvertBar { LS_text strw 2 div } { strh 2 div } ifelse		% X-Wert f�r Drehung in die Textmitte setzen, wenn die Skala im Senkrechten Bereich steht
+	LX_scaleLeft { neg } if add
+	0								% Y-Wert ist 0: Drehpunkt f�r den Text ist also beim Skalenstrich
+	translate						% Ursprung dorthin setzen um zu rotieren
+	LD_txtAngle rotate				% System drehen
+	LS_text strwh					% L�nge und H�he des string ermitteln
+	exch 2 div neg					% L�nge halbieren und invertieren
+	exch 2 div neg					% H�he halbieren und invertieren
+	moveto							% zum Textursprung springen
+	LS_text show_utf8				% text ausgeben
+	setmatrix
+
+	/LI_actY 0 store					% aktuellen Y-Wert f�r die Schleife definieren
+	LI_fields {						% Skalierungsschritt-Anzahl f�r die Schleife auf den Stack legen (Bisher nur position 0 gezeichnet)
+		LI_fieldNum LI_fieldstepNum add
+		/LI_fieldNum exch store		% Variable Anzeigewert laden
+		LI_actY LI_fieldstep add		% aktueller y-Wert erh�hen
+		/LI_actY exch store			% y-Wert f�r den n�chsten Schleifendurchlauf speichern
+
+		0 LI_actY moveto
+		LI_scaleLen 0 rlineto stroke		% Skalierungstrich zeichnen
+		% Beschriftung
+		matrix currentmatrix
+		LI_fieldNum LS_helps LI_deciNum ncvs	% Anzeigewert in String umwandeln
+		/LS_text exch store
+		LI_scaleLen LI_scaleDist add
+		LXvertBar { LS_text strw 2 div } { strh 2 div } ifelse		% X-Wert f�r Drehung in die Textmitte setzen, wenn die Skala im Senkrechten Bereich steht
+		LX_scaleLeft { neg } if add
+		LI_actY					% Textmitte (x und y) definieren
+		translate					% Ursprung dorthin setzen um zu rotieren
+		LD_txtAngle rotate			% System drehen
+		LS_text strwh					% L�nge und H�he des string ermitteln
+		exch 2 div neg					% L�nge halbieren und invertieren
+		exch 2 div neg				% H�he halbieren und invertieren
+		moveto						% zum Textursprung springen
+		LS_text show_utf8						% text ausgeben
+		setmatrix
+
+		% Fine-Skalierung zeichnen
+		LX_fineScale {
+			LI_actY					% y-Wert f�r die FineScale-Schleife auf den stack legen
+			9 {
+				LI_fieldstep 10 div	% Skalierungsschritt der FineScale in Koordinaten berechnen
+				sub					% um den Fine-Skalierungsschritt vom letzte Y-Wert nach unten springen
+				dup					% y-Wert f�r den n�chsten Schleifendurchlauf auf den Stack verdoppeln
+				0 exch moveto
+				LI_scaleLenFine 0 rlineto stroke			% FineScale zeichnen
+			} repeat
+			pop						% letzten y-Wert der Fine-Skalierung vom Stack poppen
+		} if
+	} repeat
+	stroke
+} def
+
+
+%?partdef baFrame003
+%?fn	baFrame003
+%?brief	scaleable Frame with selectable color and linewidth
+%?bbox	0 0 239 159
+/baFrame003 {
+	/idDummy exch def	%?brief dummy %?use INP %?type REAL %?dflt 0.0
+	/irScaleY exch def	%?brief scale Y (1 = grid unit)	%?use INP %?type REAL %?dflt 1.0
+	/irScaleX exch def	%?brief scale X (1 = grid unit)	%?use INP %?type REAL %?dflt 1.0
+	/idColor exch def	%?brief activate any color %?use INP %?type DINT %?dflt 0
+	/idLineWidth exch def	%?brief linewidth	%?use INP %?type DINT %?dflt 1
+
+%?manual_beg
+	currentcolor
+	idColor -1 eq { Invisible } if
+	idColor 0 eq { White } if
+	idColor 1 eq { Green } if
+	idColor 2 eq { Blue } if
+	idColor 3 eq { Yellow } if
+	idColor 4 eq { Red } if
+	idColor 5 eq { Grey } if
+	idColor 6 eq { LightGrey } if
+%	idColor 7 eq { DarkGreen } if
+%	idColor 8 eq { Orange } if
+%	idColor 9 eq { Brown } if
+%	idColor 10 eq { LightBlue } if
+
+	idLineWidth setlinewidth_nlw
+
+	/LD_X2 80 irScaleX mul 1 sub def
+	/LD_Y2 80 irScaleY mul 1 sub def
+	/LD_X2Arc LD_X2 7 sub def
+	/LD_Y2Arc LD_Y2 7 sub def
+	7 2 moveto
+	LD_X2Arc 7 5 270 360 arc
+	LD_X2Arc LD_Y2Arc 5 0 90 arc
+	7 LD_Y2Arc 5 90 180 arc
+	7 7 5 180 270 arc
+	stroke
+
+	1 setlinewidth
+	setcolor
+%?manual_end
+} def
+%?partend
+
+
+%?partdef baValueText001
+%?fn baValueText001
+%?brief	digital value with text prefix and postfix, origin selectable, signed/unsigned selectable, leading zero selectable
+%?bbox	-59 0 60 39
+/baValueText001 {
+%?manual_beg
+	/idOrigin	exch 	def		%?brief origin: 0=center/center, 9=comma, 1=left/bottom, 2=left/center, 3=left/top, 4=center/top, ...	%?use INP %?type DINT %?dflt 0
+	/idFontSelection exch def	%?brief font								%?use INP %?type DINT %?dflt FSstdFont
+	/ixErrorActive exch def		%?brief error color active					%?use INP %?type BOOL %?dflt false
+	/ixWarnActive exch def		%?brief warning color active				%?use INP %?type BOOL %?dflt false
+	/ixLeadZero exch def		%?brief show value with leading zero		%?use INP %?type BOOL %?dflt false
+	/ixSigned exch def			%?brief show value signed					%?use INP %?type BOOL %?dflt false
+	/isPostfix exch def			%?brief postfix (text to show after value)	%?use INP %?type STRI %?dflt ()
+	/isPrefix exch def			%?brief prefix (text to show before value)	%?use INP %?type STRI %?dflt ()
+	/irDeciNumb exch def		%?brief code of the shown decimal places	%?use INP %?type REAL %?dflt 3.1
+	/irValue exch def			%?brief value to be shown					%?use INP %?type REAL %?dflt 0
+
+	/LS_helps 	()	def			% String definieren
+	/LS_text	()	def
+	/LI_leftDigits	0	def
+	/LI_leftLength 	0	def
+	/LI_rightDigits	0	def
+
+	idFontSelection selectFont
+
+	matrix currentmatrix
+	currentcolor
+	ixWarnActive { Yellow } if
+	ixErrorActive { Red } if
+
+	% Anzuzeigende Stellen ermitteln
+	irValue irDeciNumb
+	sp_getDigitInfo
+	/LI_leftLength exch store
+	/LI_leftDigits exch store
+	/LI_rightDigits exch store
+
+
+	% Numerischen Wert aufbereiten
+	ixLeadZero {
+		irValue LS_helps LI_leftDigits LI_rightDigits nncvs		% in string umwandeln
+	}{
+		irValue LS_helps LI_rightDigits ncvs			% in string umwandeln
+	} ifelse
+	ixSigned irValue 0 gt and {
+		(+) exch strcat
+	} if
+	% gesamten Text mit prefix und postfix erstellen
+	isPostfix strcat
+	isPrefix exch strcat
+	/LS_text exch store
+
+	% Text anzeigen
+	% Koordinatenpunkt ermitteln
+	idOrigin 0 le { LS_text strw 2 div neg	strh 2 div neg	moveto } if
+	idOrigin 1 eq { 0						0				moveto } if
+	idOrigin 2 eq { 0						strh 2 div neg	moveto } if
+	idOrigin 3 eq { 0						strh neg		moveto } if
+	idOrigin 4 eq { LS_text strw 2 div neg	strh neg		moveto } if
+	idOrigin 5 eq { LS_text strw neg			strh neg		moveto } if
+	idOrigin 6 eq { LS_text strw neg			strh 2 div neg	moveto } if
+	idOrigin 7 eq { LS_text strw neg			0				moveto } if
+	idOrigin 8 ge { LS_text strw 2 div neg	0				moveto } if
+	idOrigin 9 ge {
+		isPrefix strw
+		ixLeadZero { (8) strw LI_leftDigits mul add } { LI_leftLength add } ifelse
+		ixSigned { (+) strw add } if
+		neg 0 moveto
+	} if
+	LS_text show_utf8
+
+	setcolor
+	setmatrix
+%?manual_end
+} def
+%?partend
+
+%?partdef baText001
+%?fn baText001
+%?brief	text with variable font, origin selectable
+%?bbox	-40 -20 39 19
+/baText001 {
+%?manual_beg
+	/idOrigin	exch 	def		%?brief origin: 0=center/center, 1=left/bottom, 2=left/center, 3=left/top, 4=center/top, ...	%?use INP %?type DINT %?dflt 0
+	/idFontSelection exch def	%?brief font	 %?use INP %?type DINT %?dflt FSstdFont
+	/isText exch def			%?brief text 	 %?use INP %?type STRI %?dflt text
+
+	idFontSelection selectFont
+	idOrigin 0 le { isText strw 2 div neg	strh 2 div neg	moveto } if
+	idOrigin 1 eq { 0						0				moveto } if
+	idOrigin 2 eq { 0						strh 2 div neg	moveto } if
+	idOrigin 3 eq { 0						strh neg		moveto } if
+	idOrigin 4 eq { isText strw 2 div neg	strh neg		moveto } if
+	idOrigin 5 eq { isText strw neg			strh neg		moveto } if
+	idOrigin 6 eq { isText strw neg			strh 2 div neg	moveto } if
+	idOrigin 7 eq { isText strw neg			0				moveto } if
+	idOrigin 8 ge { isText strw 2 div neg	0				moveto } if
+	isText show_utf8
+%?manual_end
+} def
+%?partend
+
+
+%?touchdef baTouchButton001
+%?fn	baTouchButton001
+%?brief	touch button 80 x 80
+%?bbox	0 0 79 79
+/baTouchButton001 {
+	TouchAreaInv
+	newpath
+	6 4 moveto
+	70 9 5 270 360 arc
+	70 73 5 0 90 arc
+	6 73 5 90 180 arc
+	6 9 5 180 270 arc
+	eofill
+%?manual_beg
+	_mxposd _myposd itransform
+	newpath
+	0 0 moveto
+	0 79 rlineto
+	79 0 rlineto
+	0 -79 rlineto
+	ineofill
+	/LX_InArea exch def
+	/LX_Active false def
+	LX_InArea _mstatus and {
+		/LX_Active true store
+	} if
+	LX_Active not {
+		TouchArea
+		newpath
+		9 1 moveto
+		73 6 5 270 360 arc
+		73 70 5 0 90 arc
+		9 70 5 90 180 arc
+		9 6 5 180 270 arc
+		eofill
+	} if
+	_mdown {
+		LX_InArea { /_mdown false store } if
+		LX_InArea
+	} {
+		false
+	} ifelse
+	stroke
+%?manual_end
+} def
+%?partend
+
+
+%?touchdef baTouchButton003
+%?fn	baTouchButton003
+%?brief	touch button 80 x 80 scaleable
+%?bbox	0 0 239 159
+/baTouchButton003 {
+	/irScaleY exch def	%?brief scale Y (1 = grid unit)	%?use INP %?type REAL %?dflt 1.0
+	/irScaleX exch def	%?brief scale X (1 = grid unit)	%?use INP %?type REAL %?dflt 1.0
+
+%?manual_beg
+	/LD_X2 80 irScaleX mul 1 sub def
+	/LD_Y2 80 irScaleY mul 1 sub def
+	/LD_X2Arc LD_X2 9 sub def
+	/LD_Y2Arc LD_Y2 6 sub def
+
+	TouchAreaInv
+	newpath
+	6 4 moveto
+	LD_X2Arc 9 5 270 360 arc
+	LD_X2Arc LD_Y2Arc 5 0 90 arc
+	6 LD_Y2Arc 5 90 180 arc
+	6 9 5 180 270 arc
+	eofill
+	_mxposd _myposd itransform
+	newpath
+	0 0 moveto
+	0 LD_Y2 rlineto
+	LD_X2 0 rlineto
+	0 LD_Y2 neg rlineto
+	ineofill
+	/LX_InArea exch def
+	/LX_Active false def
+	LX_InArea _mstatus and {
+		/LX_Active true store
+	} if
+	LX_Active not {
+		TouchArea
+		newpath
+		9 1 moveto
+		LD_X2Arc 3 add 6 5 270 360 arc
+		LD_X2Arc 3 add LD_Y2Arc 3 sub 5 0 90 arc
+		9 LD_Y2Arc 3 sub 5 90 180 arc
+		9 6 5 180 270 arc
+		eofill
+	} if
+	_mdown {
+		LX_InArea { /_mdown false store } if
+		LX_InArea
+	} {
+		false
+	} ifelse
+	stroke
+%?manual_end
+} def
+%?partend
+
+%?touchdef baTouchButton008
+%?fn	baTouchButton008
+%?brief	touch button 80 x 80, leaves true on the stack while the button is pressed
+%?bbox	0 0 79 79
+/baTouchButton008 {
+	TouchAreaInv
+	newpath
+	6 4 moveto
+	70 9 5 270 360 arc
+	70 73 5 0 90 arc
+	6 73 5 90 180 arc
+	6 9 5 180 270 arc
+	eofill
+%?manual_beg
+	_mxposd _myposd itransform
+	newpath
+	0 0 moveto
+	0 79 rlineto
+	79 0 rlineto
+	0 -79 rlineto
+	ineofill
+	/LX_InArea exch def
+	/LX_Active false def
+	LX_InArea _mstatus and {
+		/LX_Active true store
+	} if
+	LX_Active not {
+		TouchArea
+		newpath
+		9 1 moveto
+		73 6 5 270 360 arc
+		73 70 5 0 90 arc
+		9 70 5 90 180 arc
+		9 6 5 180 270 arc
+		eofill
+	} if
+	_mdown _mstatus or {
+		LX_InArea { /_mdown false store } if
+		LX_InArea
+	} {
+		false
+	} ifelse
+	stroke
+%?manual_end
+} def
+%?partend
+
+
+%?touchdef baTouchButton020
+%?fn	baTouchButton020
+%?brief	touch button 80 x 80 invisible, visible during touch button is active
+%?bbox	0 0 79 79
+/baTouchButton020 {
+%?manual_beg
+	_mxposd _myposd itransform
+	newpath
+	0 0 moveto
+	0 79 rlineto
+	79 0 rlineto
+	0 -79 rlineto
+	ineofill
+	/LX_InArea exch def
+	/LX_Active false def
+	LX_InArea _mstatus and {
+		/LX_Active true store
+	} if
+	LX_Active {
+		TouchArea
+		newpath
+		9 1 moveto
+		73 6 5 270 360 arc
+		73 70 5 0 90 arc
+		9 70 5 90 180 arc
+		9 6 5 180 270 arc
+		eofill
+	} if
+	_mdown _mstatus or {
+		LX_InArea { /_mdown false store } if
+		LX_InArea
+	} {
+		false
+	} ifelse
+	stroke
+%?manual_end
+} def
+%?partend
+
+
+%?partdef baTouchKbd002
+%?fn	baTouchKbd002
+%?brief	numerical keyboard used for positive real numbers 0.0 ... xmax
+%?bbox	0 0 319 319
+/baTouchKbd002 {
+	/MEM_Init	exch def		%?brief internal: store init 											%?use STATIC 	%?type BOOL %?dflt false
+	/MEM_DecimalPoint exch def	%?brief internal: input decade position (1 --> first decimal place)	%?use STATIC 	%?type DINT %?dflt 0
+	/MEM_Comma	exch def		%?brief comma pressed by the user										%?use STATIC	%?type BOOL %?dflt false
+	/irNumber	exch	def		%?brief actual value													%?use INP	%?type REAL	%?dflt 0.0
+	/irMinNumber exch def		%?brief min. value (value is limited by x >= xmin)						%?use INP	%?type REAL	%?dflt 0.0
+	/irMaxNumber exch def		%?brief max. value (value is limited by x <= xmax)						%?use INP	%?type REAL	%?dflt 999.9
+	/idMaxDecCount exch def		%?brief max. number of decimal places									%?use INP	%?type DINT	%?dflt 2
+	/qxEnter false def			%?brief enter key pressed												%?use OUT 	%?type BOOL %?dflt false
+	/qrNumber	0.0		def		%?brief modificated value												%?use OUT	%?type REAL	%?dflt 0.0
+	/qsNumber () def			%?brief modificated value (as string)									%?use OUT	%?type STRI %?dflt (0.00)
+%?manual_beg
+	%check border low
+	irNumber 0.0 lt {
+		/irNumber 0.0 store
+	} if
+	%check border high
+	qrNumber irMaxNumber le {
+		/qrNumber irNumber store
+	} {
+		/qrNumber irMaxNumber store
+	} ifelse
+	%check borders of numbers of decimal places
+	/qxEnter false store
+	idMaxDecCount 2 gt {
+		/idMaxDecCount 2 store
+	} if
+	idMaxDecCount 0 lt {
+		/idMaxDecCount 0 store
+	} if
+	%deactive comma selection if number of decimal points is zero
+	idMaxDecCount 0 eq {
+		/MEM_Comma false store
+	} if
+	%initial condition (analyse actual number)
+	MEM_Init not {
+		/MEM_Init true store
+
+		%round number to max. count of digits
+		/qrNumber qrNumber 100 mul cvi 100 div store
+
+		qrNumber sp_getDeciPoint
+		/MEM_DecimalPoint exch store
+		MEM_DecimalPoint 0 eq { /MEM_Comma false store } { /MEM_Comma true store } ifelse
+	} if
+	%temporary variables
+	/L_helpS () def
+	/LDnumIn -1 def
+	%draw keyboard keys and handle mouse events
+	currentcolor
+	matrix currentmatrix
+	0 0 translate
+	2 1 baTouchButton003 { /LDnumIn 0 store } if
+	setmatrix
+	matrix currentmatrix
+	0 80 translate
+	baTouchButton001 { /LDnumIn 1 store } if
+	setmatrix
+	matrix currentmatrix
+	80 80 translate
+	baTouchButton001 { /LDnumIn 2 store } if
+	setmatrix
+	idMaxDecCount 0 ne {
+		matrix currentmatrix
+		160 0 translate
+		baTouchButton001 { /MEM_Comma true store } if
+		setmatrix
+	} if
+	matrix currentmatrix
+	160 80 translate
+	baTouchButton001 { /LDnumIn 3 store } if
+	setmatrix
+	matrix currentmatrix
+	0 160 translate
+	baTouchButton001 { /LDnumIn 4 store } if
+	setmatrix
+	matrix currentmatrix
+	80 160 translate
+	baTouchButton001 { /LDnumIn 5 store } if
+	setmatrix
+	matrix currentmatrix
+	160 160 translate
+	baTouchButton001 { /LDnumIn 6 store } if
+	setmatrix
+	matrix currentmatrix
+	0 240 translate
+	baTouchButton001 { /LDnumIn 7 store } if
+	setmatrix
+	matrix currentmatrix
+	80 240 translate
+	baTouchButton001 { /LDnumIn 8 store } if
+	setmatrix
+	matrix currentmatrix
+	160 240 translate
+	baTouchButton001 { /LDnumIn 9 store } if
+	setmatrix
+	setcolor
+	%calculate new number
+	/LD_number qrNumber cvi store
+	/LD_fraction qrNumber LD_number sub 100 mul cvi store
+	/LS_number () store
+	/LS_fraction () store
+	/LS_number LD_number LS_number 0 ncvs store
+	/LS_fraction LD_fraction LS_fraction 0 ncvs store
+	% handling of numerical key hit
+	LDnumIn -1 ne {
+		MEM_Comma {
+			MEM_DecimalPoint 1 eq idMaxDecCount 1 gt and {
+				/LD_fraction LD_fraction LDnumIn add store
+				/LS_fraction LD_fraction LS_fraction 0 ncvs store
+				/MEM_DecimalPoint 2 store
+			} if
+			MEM_DecimalPoint 0 eq idMaxDecCount 0 gt and {
+				/LD_fraction LD_fraction LDnumIn 10 mul add store
+				/LS_fraction LD_fraction LS_fraction 0 ncvs store
+				/MEM_DecimalPoint 1 store
+			} if
+		} {
+			LD_number 10 mul LDnumIn add irMaxNumber le {
+				/LD_number LD_number 10 mul LDnumIn add store
+				/LS_number LD_number LS_number 0 ncvs store
+			} {
+				/MXfailureBeep true store
+			} ifelse
+		} ifelse
+	} if
+	% handling of key hit BACKSPACE
+	currentcolor
+	matrix currentmatrix
+	240 160 translate
+	1 2 baTouchButton003 {
+		MEM_Comma {
+			MEM_DecimalPoint 0 eq {
+				/MEM_Comma false store
+			} if
+			MEM_DecimalPoint 1 eq {
+				/LD_fraction 0 store
+				/LS_fraction () store
+				/MEM_DecimalPoint 0 store
+			} if
+			MEM_DecimalPoint 2 eq {
+				/LD_fraction LD_fraction 10 div cvi 10 mul store
+				/LS_fraction LD_fraction LS_fraction 0 ncvs store
+				/MEM_DecimalPoint 1 store
+			} if
+		} {
+			/LD_number LD_number 10 div cvi store
+		} ifelse
+	} if
+	setmatrix
+	setcolor
+	% handling of key ENTER
+	currentcolor
+	matrix currentmatrix
+	240 0 translate
+ 	1 2 baTouchButton003 {
+ 		/qxEnter true store
+		/MEM_Init false store
+	} if
+	setmatrix
+	setcolor
+	% calculation of output number
+	/qrNumber LD_number LD_fraction 100 div add store
+	% set output variables
+	qxEnter {
+		qrNumber irMinNumber lt {
+			/qrNumber irMinNumber store
+			qrNumber sp_getDeciPoint
+			/MEM_DecimalPoint exch store
+			MEM_DecimalPoint 0 eq { /MEM_Comma false store } { /MEM_Comma true store } ifelse
+		} if
+	} if
+	% set output variable (string)
+	/LD_number qrNumber cvi store
+	/LD_fraction qrNumber LD_number sub 100 mul cvi store
+	/qsNumber () store
+	/LS_fraction () store
+	/qsNumber LD_number qsNumber 0 ncvs store
+	MEM_Comma {
+		/qsNumber qsNumber (.) strcat store
+		MEM_DecimalPoint 1 eq {
+			/LS_fraction LD_fraction 10 div cvi LS_fraction 0 ncvs store
+			/qsNumber qsNumber LS_fraction strcat store
+		} if
+		MEM_DecimalPoint 2 eq {
+			/LS_fraction LD_fraction LS_fraction 0 ncvs store
+			LD_fraction 10 lt {
+				/qsNumber qsNumber (0) strcat store
+			} if
+			/qsNumber qsNumber LS_fraction strcat store
+		} if
+	} if
+	% show keyboard symbols
+	/xpos 40 def
+	BigFatFont
+	xpos 40 moveto (0) sp_textCenterCenter
+	xpos 120 moveto	(1) sp_textCenterCenter
+	xpos 200 moveto	(4) sp_textCenterCenter
+	xpos 280 moveto	(7) sp_textCenterCenter
+	/xpos xpos 80 add store
+	xpos 120 moveto	(2) sp_textCenterCenter
+	xpos 200 moveto	(5) sp_textCenterCenter
+	xpos 280 moveto	(8) sp_textCenterCenter
+	/xpos xpos 80 add store
+	xpos 40 moveto	(.) sp_textCenterCenter
+	xpos 120 moveto	(3) sp_textCenterCenter
+	xpos 200 moveto	(6) sp_textCenterCenter
+	xpos 280 moveto	(9) sp_textCenterCenter
+	/xpos xpos 80 add store
+	xpos 240 moveto	(←) sp_textCenterCenter
+	xpos 80 moveto (↲) sp_textCenterCenter
+	% store values on stack
+	qxEnter
+	qrNumber
+	qsNumber
+	MEM_Init
+	MEM_DecimalPoint
+	MEM_Comma
+%?manual_end
+} def
+%?partend
+
+%?partdef parusrWght001
+%?fn	parusrWght001
+%?brief	Weighing system: Display feedback symbol
+%?bbox	0 0 79 79
+/parusrWght001 {
+	/idWghtDispSymb exch def	%?brief Weighing system: Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	idWghtDispSymb 2 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght009
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 3 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		gsWork003
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 4 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght026
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		Green 0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght026
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 6 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght025
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 12 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght010
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 13 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght005
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 14 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght006
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 15 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		Green 0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght006
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 19 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght024
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSymb 20 eq {
+		idWghtDispSymb 20 eq {
+			true setflash
+		} if
+		matrix currentmatrix_nlw
+		currentcolor
+		Yellow 0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght012
+		setcolor
+		setmatrix_nlw
+		false setflash
+	} if
+	idWghtDispSymb 21 eq {
+		idWghtDispSymb 21 eq {
+			true setflash
+		} if
+		matrix currentmatrix_nlw
+		currentcolor
+		Yellow 0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght013
+		setcolor
+		setmatrix_nlw
+		false setflash
+	} if
+	idWghtDispSymb 22 eq {
+		idWghtDispSymb 22 eq {
+			true setflash
+		} if
+		matrix currentmatrix_nlw
+		currentcolor
+		Yellow 0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght014
+		setcolor
+		setmatrix_nlw
+		false setflash
+	} if
+	idWghtDispSymb 23 eq {
+		idWghtDispSymb 23 eq {
+			true setflash
+		} if
+		matrix currentmatrix_nlw
+		currentcolor
+		Yellow 0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght015
+		setcolor
+		setmatrix_nlw
+		false setflash
+	} if
+	idWghtDispSymb 24 eq {
+		idWghtDispSymb 24 eq {
+			true setflash
+		} if
+		matrix currentmatrix_nlw
+		currentcolor
+		Yellow 0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght016
+		setcolor
+		setmatrix_nlw
+		false setflash
+	} if
+	idWghtDispSymb 25 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght023
+		setcolor
+		setmatrix_nlw
+	} if
+} def
+%?partend
+
+%?partdef parusrWght002
+%?fn	parusrWght002
+%?brief	Weighing system: Display feedback symbol 2
+%?bbox	0 0 79 79
+/parusrWght002 {
+	/idWghtDispSym2 exch def	%?brief Weighing system: 2nd Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	idWghtDispSym2 1 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		Green 0 0 translate
+		0 rotate
+		1 1 scale
+		symgeneral002
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSym2 2 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		Yellow 0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght003
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSym2 3 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght027
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispSym2 4 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		Yellow 0 0 translate
+		0 rotate
+		1 1 scale
+		symspewght018
+		setcolor
+		setmatrix_nlw
+	} if
+} def
+%?partend
+
+%?partdef parspWght001
+%?fn	parspWght001
+%?brief	Weighing system: mode selector window (main)
+%?bbox	0 0 639 399
+/parspWght001 {
+	/idWghtState exch def	%?brief Weighing system: status from the module %?use INP %?type DINT %?dflt 0
+	/qdWghtButton 0 def	%?brief Weighing system: Indicates the button pressed %?use OUT %?type DINT %?dflt 0
+	matrix currentmatrix_nlw
+	currentcolor
+	520 220 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 2 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	40 220 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 3 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	200 220 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 4 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	360 220 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 5 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	280 320 translate
+	0 rotate
+	1 1 scale
+	symspewght001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	40 220 translate
+	0 rotate
+	1 1 scale
+	symspewght008
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	200 220 translate
+	0 rotate
+	1 1 scale
+	symspewght002
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	360 220 translate
+	0 rotate
+	1 1 scale
+	symspewght035
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	520 220 translate
+	0 rotate
+	1 1 scale
+	symspewght022
+	setcolor
+	setmatrix_nlw
+	qdWghtButton
+} def
+%?partend
+
+%?partdef parspWght002
+%?fn	parspWght002
+%?brief	Weighing system: Statistics
+%?bbox	0 0 639 399
+/parspWght002 {
+	/irWghtGlobSum exch def	%?brief Weighing system: global sum of all weighted Buckets [t] %?use INP %?type REAL %?dflt    0.00
+	/idWghtGlobAdds exch def	%?brief Weighing system: global number of all weighted Buckets %?use INP %?type DINT %?dflt 0
+	/irWghtDaySum exch def	%?brief Weighing system: daily sum of all weighted Buckets [t] %?use INP %?type REAL %?dflt    0.00
+	/idWghtDayNr exch def	%?brief Weighing system: daily number of all weighted Buckets %?use INP %?type DINT %?dflt 0
+	/irWghtDayTpL exch def	%?brief Weighing system: Tons of weighted buckets per Liter of diesel � daily value. %?use INP %?type REAL %?dflt    0.00
+	/irWghtCDCSum exch def	%?brief Weighing system: Sum of all weighted Buckets in current cycle [t] %?use INP %?type REAL %?dflt    0.00
+	/idWghtCDCNr exch def	%?brief Weighing system: Number of all weighted Buckets in current cycle %?use INP %?type DINT %?dflt 0
+	/irWghtCDCTpL exch def	%?brief Weighing system: Tons of weighted buckets per Liter in current cycle %?use INP %?type REAL %?dflt    0.00
+	/idWghtStatDayD exch def	%?brief Weighing system: current day for daily statistics - Day %?use INP %?type DINT %?dflt 0
+	/idWghtStatDayM exch def	%?brief Weighing system: current day for daily statistics - Month %?use INP %?type DINT %?dflt 0
+	/idWghtStatDayY exch def	%?brief Weighing system: current day for daily statistics - Year %?use INP %?type DINT %?dflt 0
+	/iLanguage exch def	%?brief  %?use INP %?type STRI %?dflt 
+	/qdWghtButton 0 def	%?brief Weighing system: Indicates the button pressed %?use OUT %?type DINT %?dflt 0
+	/qxstaResetFuel false def	%?brief display var: reset fuel measurment %?use OUT %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/qdWghtButton 1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	560 160 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/qdWghtButton 30 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	symspewght032 
+	setcolor 
+	setmatrix_nlw 
+	colorinit 3 setlinewidth_nlw 
+	310 94 moveto 
+	1 setlinewidth_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	220 280 translate 
+	0 rotate 
+	1 1 scale 
+	idWghtCDCNr 5 (#) () false false false false 7 6 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	300 280 translate 
+	0 rotate 
+	1 1 scale 
+	irWghtCDCSum 6.20 () (t) false false false false 7 2 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	460 280 translate 
+	0 rotate 
+	1 1 scale 
+	irWghtCDCTpL 3.20 () (t/l) false false false false 7 2 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 190 translate 
+	0 rotate 
+	1 1 scale 
+	idWghtStatDayD idWghtStatDayM idWghtStatDayY 5 
+	Date001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	220 200 translate 
+	0 rotate 
+	1 1 scale 
+	idWghtDayNr 5 (#) () false false false false 7 6 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	300 200 translate 
+	0 rotate 
+	1 1 scale 
+	irWghtDaySum 6.20 () (t) false false false false 7 2 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	460 200 translate 
+	0 rotate 
+	1 1 scale 
+	irWghtDayTpL 3.20 () (t/l) false false false false 7 2 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	220 120 translate 
+	0 rotate 
+	1 1 scale 
+	idWghtGlobAdds 5 (#) () false false false false 7 6 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	300 120 translate 
+	0 rotate 
+	1 1 scale 
+	irWghtGlobSum 6.20 () (t) false false false false 7 2 
+	baValueText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	280 320 translate 
+	0 rotate 
+	1 1 scale 
+	symspewght022 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	560 160 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral079 
+	setcolor 
+	setmatrix_nlw 
+	currentcolor 
+	0 320 moveto 
+	640 320 lineto 
+	stroke 
+	0 240 moveto 
+	640 240 lineto 
+	stroke 
+	0 160 moveto 
+	640 160 lineto 
+	stroke 
+	0 80 moveto 
+	640 80 lineto 
+	stroke 
+	setcolor 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 240 translate 
+	0 rotate 
+	1 1 scale 
+	symspegen081 
+	setcolor 
+	setmatrix_nlw 
+	qdWghtButton qxstaResetFuel 
+} def
+%?partend
+
+%?partdef parspWght003
+%?fn	parspWght003
+%?brief	Weighing system: Normal operation - Sum mode
+%?bbox	0 0 639 399
+/parspWght003 {
+	/ixWghtIsGauge exch def	%?brief Weighing system: is officially calibrated (eichf�hig) %?use INP %?type BOOL %?dflt false
+	/idWghtNrAdds exch def	%?brief Weighing system: Number of successfully weighed buckets %?use INP %?type DINT %?dflt 0
+	/idWghtDispSym2 exch def	%?brief Weighing system: 2nd Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/idWghtDispSymb exch def	%?brief Weighing system: Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/ixWghtPause exch def	%?brief Weighing system: pause %?use INP %?type BOOL %?dflt false
+	/idWghtState exch def	%?brief Weighing system: status from the module %?use INP %?type DINT %?dflt 0
+	/irWghtSum exch def	%?brief Compound Weight Value (for Sum/Missing Target Value) %?use INP %?type REAL %?dflt    0.00
+	/irWghtBucket exch def	%?brief Weight Value for the Bucket %?use INP %?type REAL %?dflt    0.00
+	/qdWghtButton 0 def	%?brief Button pressed %?use OUT %?type DINT %?dflt 0
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 1 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	80 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 19 store
+	} if
+	setcolor
+	setmatrix_nlw
+	idWghtState 4 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		160 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton001 {
+			/qdWghtButton 23 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtState 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		240 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton001 {
+			/qdWghtButton 12 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtState 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		320 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton001 {
+			/qdWghtButton 13 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	ixWghtIsGauge true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		480 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton008 {
+			/qdWghtButton 10 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	560 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton008 {
+		/qdWghtButton 11 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	symspewght032
+	setcolor
+	setmatrix_nlw
+	ixWghtPause true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		80 0 translate
+		0 rotate
+		1 1 scale
+		symspegen030
+		setcolor
+		setmatrix_nlw
+	} if
+	ixWghtPause true ne {
+		matrix currentmatrix_nlw
+		currentcolor
+		80 0 translate
+		0 rotate
+		1 1 scale
+		symspewght024
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	160 0 translate
+	0 rotate
+	1 1 scale
+	symspewght003
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	240 0 translate
+	0 rotate
+	1 1 scale
+	symspewght030
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 0 translate
+	0 rotate
+	1 1 scale
+	symspewght027
+	setcolor
+	setmatrix_nlw
+	ixWghtIsGauge true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		480 0 translate
+		0 rotate
+		1 1 scale
+		symspegen022
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	560 0 translate
+	0 rotate
+	1 1 scale
+	gsGeneral079
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	80 320 translate
+	0 rotate
+	1 1 scale
+	idWghtDispSymb
+	parusrWght001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 320 translate
+	0 rotate
+	1 1 scale
+	idWghtDispSym2
+	parusrWght002
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	360 100 translate
+	0 rotate
+	1 1 scale
+	symspewght020
+	setcolor
+	setmatrix_nlw
+	idWghtState 5 ne {
+		matrix currentmatrix_nlw
+		currentcolor
+		Blue
+		360 180 translate
+		0 rotate
+		1 1 scale
+		symspewght031
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtState 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		Green
+		360 180 translate
+		0 rotate
+		1 1 scale
+		symspewght031
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	620 220 translate
+	0 rotate
+	1 1 scale
+	irWghtBucket 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	620 140 translate
+	0 rotate
+	1 1 scale
+	irWghtSum 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	398 211 translate
+	0 rotate
+	1 1 scale
+	idWghtNrAdds 3 () () false false false false 7 0
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	qdWghtButton
+} def
+%?partend
+
+%?partdef parspWght004
+%?fn	parspWght004
+%?brief	Weighing system: Target Weighing
+%?bbox	0 0 639 399
+/parspWght004 {
+	/ixWghtIsGauge exch def	%?brief Weighing system: is officially calibrated (eichf�hig) %?use INP %?type BOOL %?dflt false
+	/irWghtRem exch def	%?brief Weighing system: remaining mass %?use INP %?type REAL %?dflt    0.00
+	/irWghtTarget exch def	%?brief Weighing system: goal mass to be loaded %?use INP %?type REAL %?dflt    0.00
+	/idWghtNrAdds exch def	%?brief Weighing system: Number of successfully weighed buckets %?use INP %?type DINT %?dflt 0
+	/idWghtDispSym2 exch def	%?brief Weighing system: 2nd Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/idWghtDispSymb exch def	%?brief Weighing system: Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/ixWghtPause exch def	%?brief Weighing system: pause %?use INP %?type BOOL %?dflt false
+	/idWghtState exch def	%?brief Weighing system: status from the module %?use INP %?type DINT %?dflt 0
+	/irWghtSum exch def	%?brief Compound Weight Value (for Sum/Missing Target Value) %?use INP %?type REAL %?dflt    0.00
+	/irWghtBucket exch def	%?brief Weight Value for the Bucket %?use INP %?type REAL %?dflt    0.00
+	/qdWghtButton 0 def	%?brief Button pressed %?use OUT %?type DINT %?dflt 0
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 1 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	80 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 19 store
+	} if
+	setcolor
+	setmatrix_nlw
+	idWghtState 4 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		160 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton001 {
+			/qdWghtButton 23 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtState 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		240 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton001 {
+			/qdWghtButton 12 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtState 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		320 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton001 {
+			/qdWghtButton 13 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	ixWghtIsGauge true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		480 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton008 {
+			/qdWghtButton 10 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	560 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton008 {
+		/qdWghtButton 11 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	symspewght032
+	setcolor
+	setmatrix_nlw
+	ixWghtPause true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		80 0 translate
+		0 rotate
+		1 1 scale
+		symspegen030
+		setcolor
+		setmatrix_nlw
+	} if
+	ixWghtPause true ne {
+		matrix currentmatrix_nlw
+		currentcolor
+		80 0 translate
+		0 rotate
+		1 1 scale
+		symspewght024
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	160 0 translate
+	0 rotate
+	1 1 scale
+	symspewght003
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	240 0 translate
+	0 rotate
+	1 1 scale
+	symspewght030
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 0 translate
+	0 rotate
+	1 1 scale
+	symspewght027
+	setcolor
+	setmatrix_nlw
+	ixWghtIsGauge true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		480 0 translate
+		0 rotate
+		1 1 scale
+		symspegen022
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	560 0 translate
+	0 rotate
+	1 1 scale
+	gsGeneral079
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 320 translate
+	0 rotate
+	1 1 scale
+	idWghtDispSym2
+	parusrWght002
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	80 320 translate
+	0 rotate
+	1 1 scale
+	idWghtDispSymb
+	parusrWght001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	60 180 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 21 store
+	} if
+	setcolor
+	setmatrix_nlw
+	idWghtState 5 ne {
+		matrix currentmatrix_nlw
+		currentcolor
+		Blue
+		60 100 translate
+		0 rotate
+		1 1 scale
+		symspewght031
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtState 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		Green
+		60 100 translate
+		0 rotate
+		1 1 scale
+		symspewght031
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	60 180 translate
+	0 rotate
+	1 1 scale
+	symspewght002
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	360 100 translate
+	0 rotate
+	1 1 scale
+	symspewght020
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	360 180 translate
+	0 rotate
+	1 1 scale
+	symspewght033
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	98 131 translate
+	0 rotate
+	1 1 scale
+	idWghtNrAdds 3 () () false false false false 7 0
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 140 translate
+	0 rotate
+	1 1 scale
+	irWghtBucket 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	620 140 translate
+	0 rotate
+	1 1 scale
+	irWghtSum 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 220 translate
+	0 rotate
+	1 1 scale
+	irWghtTarget 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	620 220 translate
+	0 rotate
+	1 1 scale
+	irWghtRem 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	qdWghtButton
+} def
+%?partend
+
+%?partdef parspWght005
+%?fn	parspWght005
+%?brief	Weighing system: trailer weighing
+%?bbox	0 0 639 399
+/parspWght005 {
+	/ixWghtIsTrail exch def	%?brief Weighing system: next bucket is added to the trailer (vs. main vehicle) %?use INP %?type BOOL %?dflt false
+	/irWghtMVeh exch def	%?brief Weighing system: mass of the main vehicle %?use INP %?type REAL %?dflt    0.00
+	/irWghtTrailer exch def	%?brief Weighing system: mass of the trailer %?use INP %?type REAL %?dflt    0.00
+	/ixWghtIsGauge exch def	%?brief Weighing system: is officially calibrated (eichf�hig) %?use INP %?type BOOL %?dflt false
+	/idWghtNrAdds exch def	%?brief Weighing system: Number of successfully weighed buckets %?use INP %?type DINT %?dflt 0
+	/idWghtDispSym2 exch def	%?brief Weighing system: 2nd Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/idWghtDispSymb exch def	%?brief Weighing system: Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/ixWghtPause exch def	%?brief Weighing system: pause %?use INP %?type BOOL %?dflt false
+	/idWghtState exch def	%?brief Weighing system: status from the module %?use INP %?type DINT %?dflt 0
+	/irWghtSum exch def	%?brief Compound Weight Value (for Sum/Missing Target Value) %?use INP %?type REAL %?dflt    0.00
+	/irWghtBucket exch def	%?brief Weight Value for the Bucket %?use INP %?type REAL %?dflt    0.00
+	/qdWghtButton 0 def	%?brief Button pressed %?use OUT %?type DINT %?dflt 0
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 1 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	80 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 19 store
+	} if
+	setcolor
+	setmatrix_nlw
+	idWghtState 4 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		160 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton001 {
+			/qdWghtButton 23 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtState 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		240 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton001 {
+			/qdWghtButton 12 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtState 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		320 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton001 {
+			/qdWghtButton 13 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	ixWghtIsGauge true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		480 0 translate
+		0 rotate
+		1 1 scale
+		baTouchButton008 {
+			/qdWghtButton 10 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	560 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton008 {
+		/qdWghtButton 11 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	symspewght032
+	setcolor
+	setmatrix_nlw
+	ixWghtPause true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		80 0 translate
+		0 rotate
+		1 1 scale
+		symspegen030
+		setcolor
+		setmatrix_nlw
+	} if
+	ixWghtPause true ne {
+		matrix currentmatrix_nlw
+		currentcolor
+		80 0 translate
+		0 rotate
+		1 1 scale
+		symspewght024
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	160 0 translate
+	0 rotate
+	1 1 scale
+	symspewght003
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	240 0 translate
+	0 rotate
+	1 1 scale
+	symspewght030
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 0 translate
+	0 rotate
+	1 1 scale
+	symspewght027
+	setcolor
+	setmatrix_nlw
+	ixWghtIsGauge true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		480 0 translate
+		0 rotate
+		1 1 scale
+		symspegen022
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	560 0 translate
+	0 rotate
+	1 1 scale
+	gsGeneral079
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	80 320 translate
+	0 rotate
+	1 1 scale
+	idWghtDispSymb
+	parusrWght001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 320 translate
+	0 rotate
+	1 1 scale
+	idWghtDispSym2
+	parusrWght002
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	60 180 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 14 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	360 180 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 15 store
+	} if
+	setcolor
+	setmatrix_nlw
+	idWghtState 5 ne {
+		matrix currentmatrix_nlw
+		currentcolor
+		Blue
+		60 100 translate
+		0 rotate
+		1 1 scale
+		symspewght031
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtState 5 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		Green
+		60 100 translate
+		0 rotate
+		1 1 scale
+		symspewght031
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	60 180 translate
+	0 rotate
+	1 1 scale
+	symspewght011
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	360 100 translate
+	0 rotate
+	1 1 scale
+	symspewght007
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	360 180 translate
+	0 rotate
+	1 1 scale
+	symspewght035
+	setcolor
+	setmatrix_nlw
+	ixWghtIsTrail true ne {
+		matrix currentmatrix_nlw
+		currentcolor
+		139 180 translate
+		0 rotate
+		1 1 scale
+		2 1 2.35 1 0
+		baFrame003
+		setcolor
+		setmatrix_nlw
+	} if
+	ixWghtIsTrail true eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		439 180 translate
+		0 rotate
+		1 1 scale
+		2 1 2.35 1 0
+		baFrame003
+		setcolor
+		setmatrix_nlw
+	} if
+	matrix currentmatrix_nlw
+	currentcolor
+	98 131 translate
+	0 rotate
+	1 1 scale
+	idWghtNrAdds 3 () () false false false false 7 0
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 140 translate
+	0 rotate
+	1 1 scale
+	irWghtBucket 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	620 140 translate
+	0 rotate
+	1 1 scale
+	irWghtSum 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 220 translate
+	0 rotate
+	1 1 scale
+	irWghtMVeh 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	620 220 translate
+	0 rotate
+	1 1 scale
+	irWghtTrailer 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	qdWghtButton
+} def
+%?partend
+
+
+%?partdef parspWght008
+%?fn	parspWght008
+%?brief	Weighing system: Reset to zero (Nullung)
+%?bbox	0 0 639 399
+/parspWght008 {
+	/irWghtBucket exch def	%?brief Weight Value for the Bucket %?use INP %?type REAL %?dflt    0.00
+	/idWghtDesTool exch def	%?brief Weighing system: Desired Tool %?use INP %?type DINT %?dflt -1
+	/iwWghtDispSymb exch def	%?brief Weighing system: Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/iwWghtDispSym2 exch def	%?brief Weighing system: 2nd Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/qdWghtButton 0 def	%?brief Weighing system: Indicates the button pressed %?use OUT %?type DINT %?dflt 0
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 1 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	symspewght032
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 320 translate
+	0 rotate
+	1 1 scale
+	iwWghtDispSym2
+	parusrWght002
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	80 320 translate
+	0 rotate
+	1 1 scale
+	iwWghtDispSymb
+	parusrWght001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	280 320 translate
+	0 rotate
+	1 1 scale
+	symspewght003
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	Blue
+	60 100 translate
+	0 rotate
+	1 1 scale
+	symspewght031
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	180 160 translate
+	0 rotate
+	1 1 scale
+	symspewght004
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 140 translate
+	0 rotate
+	1 1 scale
+	irWghtBucket 4.20 () (t) false false false false 8 6
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	qdWghtButton
+} def
+%?partend
+
+
+%?partdef parspWght009
+%?fn	parspWght009
+%?brief	Weighing system: Warm Up Cycles
+%?bbox	0 0 639 399
+/parspWght009 {
+	/idWghtNrStart exch def	%?brief Weighing system: number of warmup lifts %?use INP %?type DINT %?dflt 0
+	/qdWghtButton 0 def	%?brief Weighing system: Indicates the button pressed %?use OUT %?type DINT %?dflt 0
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 1 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	180 160 translate
+	0 rotate
+	1 1 scale
+	symspewght004
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	symspewght032
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	Green 378 163 translate
+	0 rotate
+	1 1 scale
+	symgeneral001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	Green 458 345 translate
+	180 rotate
+	1 1 scale
+	symgeneral001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 140 translate
+	0 rotate
+	1 1 scale
+	idWghtNrStart 3 (#) () false false false false 8 0
+	baValueText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	280 320 translate
+	0 rotate
+	1 1 scale
+	symspewght036
+	setcolor
+	setmatrix_nlw
+	qdWghtButton
+} def
+%?partend
+
+%?partdef parspWght010
+%?fn	parspWght010
+%?brief	Weighing system: Num Lock to enter target weight
+%?bbox	0 0 639 399
+/parspWght010 {
+	/MEM_rWghtTarget exch def	%?brief Weighing system: target weight %?use STATIC %?type REAL
+	/MEM_ChFlag exch def	%?brief Value changed flag %?use STATIC %?type BOOL
+	/MEM_Comma_01 exch def	%?brief  %?use STATIC %?type BOOL
+	/MEM_DecimalPoint_01 exch def	%?brief  %?use STATIC %?type DINT
+	/MEM_Init_01 exch def	%?brief  %?use STATIC %?type BOOL
+	/irWghtTarget exch def	%?brief Weighing system: target weight %?use INP %?type REAL %?dflt    0.00
+	/ixWghtPgInit exch def	%?brief Weighing system: Page Change flag %?use INP %?type BOOL %?dflt false
+	/lxWghtEnter false def	%?brief Enter button pressed! %?use LOC %?type BOOL %?dflt false
+	/lsWghtValStr () def	%?brief Value String %?use LOC %?type STRI %?dflt
+	/qrWghtTarget 0 def	%?brief Weighing system: target weight %?use OUT %?type REAL %?dflt    0.00
+	/qdWghtButton 0 def	%?brief Weighing system: Indicates the button pressed %?use OUT %?type DINT %?dflt 0
+%?manual_beg
+	ixWghtPgInit {
+		/MEM_ChFlag true store
+		/MEM_Init_01 false store
+		/MEM_rWghtTarget 0 store
+	} if
+	/qrWghtTarget irWghtTarget store
+%?manual_end
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/qdWghtButton 1 store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	80 0 translate
+	0 rotate
+	1 1 scale
+	baTouchButton001 {
+		/MEM_Init_01 false store
+		/MEM_rWghtTarget 0 store
+		/MEM_ChFlag false store
+	} if
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	0 0 translate
+	0 rotate
+	1 1 scale
+	symspewght032
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	80 0 translate
+	0 rotate
+	1 1 scale
+	gsGeneral079
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	60 180 translate
+	0 rotate
+	1 1 scale
+	symspewght002
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	320 0 translate
+	0 rotate
+	1 1 scale
+	2 9999.99 0
+	MEM_rWghtTarget MEM_Comma_01 MEM_DecimalPoint_01
+	MEM_Init_01
+	baTouchKbd002
+	/MEM_Comma_01 exch store
+	/MEM_DecimalPoint_01 exch store
+	/MEM_Init_01 exch store
+	/lsWghtValStr exch store
+	/MEM_rWghtTarget exch store
+	/lxWghtEnter exch store
+	setcolor
+	setmatrix_nlw
+%?manual_beg
+	lxWghtEnter true eq	{
+	    /qdWghtButton 20 store
+	    MEM_rWghtTarget 0.0 ne {
+    	    /qrWghtTarget MEM_rWghtTarget store
+	    } if
+	} if
+	MEM_ChFlag	{
+        lsWghtValStr (0) eq {
+        	/lsWghtValStr irWghtTarget () 2 ncvs store
+        }{
+        	/MEM_ChFlag false store
+        } ifelse
+	} if
+	/lsWghtValStr lsWghtValStr (t) strcat store
+%?manual_end
+	matrix currentmatrix_nlw
+	currentcolor
+	320 220 translate
+	0 rotate
+	1 1 scale
+	lsWghtValStr 8 6
+	baText001
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	139 180 translate
+	0 rotate
+	1 1 scale
+	1 0 2.32 1 0
+	baFrame003
+	setcolor
+	setmatrix_nlw
+	qrWghtTarget qdWghtButton MEM_rWghtTarget
+	MEM_ChFlag MEM_Comma_01 MEM_DecimalPoint_01 MEM_Init_01
+} def
+%?partend
+
+%?partdef parspWght255
+%?fn	parspWght255
+%?brief	Weighing system: error page
+%?bbox	0 0 639 399
+/parspWght255 {
+	matrix currentmatrix_nlw
+	currentcolor
+	180 160 translate
+	0 rotate
+	1 1 scale
+	symspewght004
+	setcolor
+	setmatrix_nlw
+	matrix currentmatrix_nlw
+	currentcolor
+	280 320 translate
+	0 rotate
+	1 1 scale
+	symspewght023
+	setcolor
+	setmatrix_nlw
+} def
+%?partend
+
+
+%?partdef parspWght300
+%?fn	parspWght300
+%?brief	Weighing system: Main page status
+%?bbox	0 0 319 47
+/parspWght300 {
+	/idWghtDispSym2 exch def	%?brief Weighing system: 2nd Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/idWghtDispSymb exch def	%?brief Weighing system: Feedback symbol to be displayed %?use INP %?type DINT %?dflt 0
+	/idWghtState exch def	%?brief Weighing system: status from the module %?use INP %?type DINT %?dflt 0
+	/irWghtSum exch def	%?brief Compound Weight Value (for Sum/Missing Target Value) %?use INP %?type REAL %?dflt    0.00
+	/irWghtBucket exch def	%?brief Weight Value for the Bucket %?use INP %?type REAL %?dflt    0.00
+	/idWghtDispWnd exch def	%?brief Weighing system: Window to be displayed %?use INP %?type DINT %?dflt 0
+	/LSadWghtMainInfo (0.0/0.0t) def	%?brief Weighing system: string for bucket and sum value %?use LOC %?type STRI %?dflt 0.0/0.0t
+	/qdWghtButton 0 def	%?brief Button pressed %?use OUT %?type DINT %?dflt 0
+	%?term_beg
+
+	idWghtDispWnd 3 ge
+	idWghtDispWnd 10 le and
+	%?term_end
+	{
+		matrix currentmatrix_nlw
+		currentcolor
+		210 0 translate
+		0 rotate
+		1.30 0.80 scale
+		baTouchButton020 {
+			/qdWghtButton 11 store
+		} if
+		setcolor
+		setmatrix_nlw
+	} if
+	qdWghtButton 11 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		260 0 translate
+		0 rotate
+		0.60 0.60 scale
+		gsGeneral079
+		setcolor
+		setmatrix_nlw
+	} if
+	idWghtDispWnd 8 eq {
+		matrix currentmatrix_nlw
+		currentcolor
+		200 0 translate
+		0 rotate
+		0.60 0.60 scale
+		symspewght003
+		setcolor
+		setmatrix_nlw
+	} if
+	%?term_beg
+
+	idWghtDispWnd 3 ge
+	idWghtDispWnd 10 le and
+	qdWghtButton 11 ne and
+	%?term_end
+	{
+		matrix currentmatrix_nlw
+		currentcolor
+		272 0 translate
+		0 rotate
+		0.60 0.60 scale
+		idWghtDispSymb
+		parusrWght001
+		setcolor
+		setmatrix_nlw
+	} if
+%?manual_beg
+	irWghtBucket () 2 ncvs (t ) strcat irWghtSum () 2 ncvs strcat (t) strcat
+	/LSadWghtMainInfo exch store
+%?manual_end
+
+	%?term_beg
+
+	idWghtDispWnd 3 ge
+	idWghtDispWnd 7 le and
+	%?term_end
+	{
+		matrix currentmatrix_nlw
+		currentcolor
+		268 14 translate
+		0 rotate
+		1 1 scale
+		LSadWghtMainInfo FSfatFont 7
+		baText001
+		setcolor
+		setmatrix_nlw
+	} if
+	qdWghtButton
+} def
+%?partend

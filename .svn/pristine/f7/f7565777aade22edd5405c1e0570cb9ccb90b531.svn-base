@@ -1,0 +1,534 @@
+!version	00055
+#
+!font	UTF8
+!best-fit-font	iso8859-4
+
+# Language File / Sprachtexte File
+# Lithuanian / Litauisch
+!language	lit
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Sraigto tiekimo kiekis [l/min]
+2	Sraigto tiekimo kiekis [g/min]
+3	Vamzdžių tiekimo kiekis [l/min]
+4	Vamzdžių tiekimo kiekis [g/min]
+5	Tiekimo kiekis [l/min]
+6	Tiekimo kiekis [g/min]
+7	Siurblių skaičius
+8	Replių slėgis [bar]
+9	Ekscentriko reguliavimo laikas [s]
+10	Pagrindinės gervės įtempimas
+11	Šliaužiklio svoris [kg]
+12	Šliaužiklio svoris [lb]
+13	Smūgiai/gylis
+14	Stūmimo ir traukimo cil. kiekis
+15	Sraigto ilgis [cm]
+16	Sraigto ilgis [ft]
+17	PDE grafikas spausdintuve
+18	PDE grafikas kortelėje
+19	Gylis [cm]
+20	Gylis [in]
+21	PDE trigerio laikas [s]
+22	Betono kiekis / impulsas [l/imp.]
+23	Betono kiekis / impulsas [g/imp.]
+24	Bet. slėgio jut. matav. diap. [bar]
+25	Betono slėgio rodmens skalė [bar]
+26	Stulpelio skersmuo [cm]
+27	Stulpelio skersmuo [in]
+28	Stulpelio įstrižainė [cm]
+29	Stulpelio įstrižainė [in]
+30	Vidinių vamzdžių skersmuo [cm]
+31	Vidinių vamzdžių skersmuo [in]
+32	Gręžimo faktorius [%]
+33	Sraigto posvyris [cm]
+34	Sraigto posvyris [in]
+35	Traukimo aut. pradinis slėgis [bar]
+36	Traukimo aut. stabdymo slėgis [bar]
+37	Leist. per didelis bet. kiekis [%]
+38	Ek. apsisukimų skaičius
+39	Masės matavimas per slėgį (1=TAIP)
+40	Traukimo aut. maks. slėgis [bar]
+41	maks. sraigto slėgis [bar]
+42	maks. vamzdžio slėgis [bar]
+43	maks. slėgis [bar]
+44	Sraigto 1 tiekimo kiekis [l/min]
+45	Sraigto 1 tiekimo kiekis [g/min]
+46	Sraigto 2 tiekimo kiekis [l/min]
+47	Sraigto 2 tiekimo kiekis [g/min]
+48	Sraigto 3 tiekimo kiekis [l/min]
+49	Sraigto 3 tiekimo kiekis [g/min]
+50	Sraigtų skaičius
+51	Vamzdyno m. tiek. kiekis [l/min]
+52	Vamzdyno m. tiek. kiekis [g/min]
+53	Tiek.greitis,atidar.griebt. [l/min]
+54	Tiek.greitis,atidar.griebt. [g/min]
+55	Tiek.greitis,uždar.griebt. [l/min]
+56	Tiek.greitis,uždar.griebt. [g/min]
+57	Maks.slėgis,atidar.griebt. [bar]
+58	Maks.slėgis,uždar.griebt. [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	Sekcijų skaičius stulpe
+62	bunkerio spec. svoris 1 [kg/dm3]
+63	bunkerio spec. svoris 1 [lb/ft3]
+64	bunkerio spec. svoris 2 [kg/dm3]
+65	bunkerio spec. svoris 2 [lb/ft3]
+66	Gylis [m]
+67	Gylis [ft]
+68	Pastūmos nuolydis [cm/sk]
+69	Pastūmos nuolydis [in/sk]
+70	Rišiklio svoris [kg/m]
+71	Rišiklio svoris [lb/ft]
+72	min. tiekimo kiekis [%]
+
+!LOGGER
+1	Įjungimo data
+2	Įjungimo laikas
+3	Baigimo data
+4	Baigimo laikas
+5	Spausdinimo data
+6	Spausdinimo laikas
+
+!PDESERV
+# English is fix in the system
+
+!PDE
+1	Eksploatacijos būdas
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Puslapis
+4	Užrašą pakelti
+5	Užrašą nuleisti
+6	Stulpo spindulys [cm]
+7	Stulpo spindulys [in]
+8	Stilius
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Sukamasis gręžimas
+200	Dvigubas sūkusis gręžimas
+300	CFA gręžimas
+400	Vibratorius
+401	nuleisti
+402	pakelti
+403	nuleisti/pakelti
+404	per laiką
+411	Vibratorių nuleisti
+412	Vibratorių pakelti
+413	Vibratorių nuleisti ir pakelti
+414	Vibratorių per laiką
+500	Plaktukas
+600	Stumti ir traukti
+700	Hidraulinis griebtuvas
+800	Bokštinio antstato valdymas
+900	Šurfų kasimo kaušas
+1000	Perkrovimas
+1100	Grunto maišymas
+1200	el. vibratorius
+1201	atsarginė kolona (tankinimo)
+1202	atsarginė kolona
+1211	el. vibr. atsarginė tankinimo kolona
+1212	el. vibr. atsarginė kolona
+1300	maišymas sausuoju būdu
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitudė [in/100]
+7	Betono slėgis [bar]
+2	Amplitudė [mm]
+3	Gylis [cm]
+4	Gylis [ft]
+5	Smūgių skaičius
+6	Smūgiai/gylis
+8	Gręžimo slėgis sraigtas [bar]
+9	Gręžimo slėgis vamzdis [bar]
+10	Gręžimo slėgis [bar]
+11	Slėgis šliaužiklis [bar]
+12	Slėgis vibratorius [bar]
+13	Gręžimo greitis [sk/m]
+14	Gręžimo greitis [sk/ft]
+15	Gręžimo sukimo momentas [kip.ft]
+16	Gręžimo sukimo momentas [kNm]
+17	Energija/smūgis [kip.ft]
+18	Energija/smūgis [kNm]
+19	Energija/gylis [kip.ft]
+20	Energija/gylis [kNm]
+21	Laikas [hh:mm:ss]
+22	Spaudimo jėga [kN]
+23	Spaudimo jėga [kip]
+24	Pastūmos greitis [ft/min]
+25	Pastūmos greitis [m/min]
+26	Dažnis [Hz]
+27	Smūgiai/min.
+28	Vibratoriaus mechanizmas [įjungtas/išjungtas]
+29	Nuokrypis x [ft]
+30	Nuokrypis x [cm]
+31	Nuokrypis Y [ft]
+32	Nuokrypis Y [cm]
+33	Smūgio numeris
+34	Kėlimo aukštis [m]
+35	Kėlimo aukštis [ft]
+36	Tankėjimas/smūgį [ft]
+37	Tankėjimas/smūgį [m]
+38	Absoliutus tankėjimas [ft]
+39	Absoliutus tankėjimas [m]
+40	Numatytas stabdymo aukštis [ft]
+41	Numatytas stabdymo aukštis [m]
+42	Maks. gervės 1 greitis [ft/min]
+43	Maks. gervės 1 greitis [m/min]
+44	Maks. gervės 2 greitis [ft/min]
+45	Maks. gervės 2 greitis [m/min]
+46	Data [dd:mm:mm]
+47	Eigos laikas [s]
+48	Betono kiekis [yd3]
+49	Betono kiekis [m3]
+50	Padėties numeris
+51	Laikas iki šliaužiklio prie lyno [s]
+52	Kėlimo laikas [s]
+53	Leidimo laikas [s]
+54	Numatyti smūgiai
+55	Numatytas kėlimo aukštis [m]
+56	Numatytas kėlimo aukštis [ft]
+57	Numatytas tankėjimas [m]
+58	Numatytas tankėjimas [ft]
+59	Šurfų kasimo kaušo režimo laikas [s]
+60	Ciklo laikas [s]
+61	Krovinys statybinis laužas [t]
+62	Traukiamas krovinys iš viso [t]
+63	Perkrovimo laikas [s]
+64	Ciklo krovinys [t]
+65	Ciklo krovinys iš viso [t]
+66	Ciklo krovinys statybinis laužas [t]
+67	Srovė [A]
+68	Leidimo srovė [A]
+69	Šoninis vanduo [l/m]
+70	Viršūnės vanduo [l/m]
+71	Oro slėgis [bar]
+72	Automatika įjungta
+73	Įtampa [V]
+74	Pertraukimas
+75	Polinkis [°]
+76	Sūkių skaičius [sk/min]
+77	Betono kiekis 1 [yd3]
+78	Betono kiekis 1 [m3]
+79	Betono kiekis 2 [yd3]
+80	Betono kiekis 2 [m3]
+81	Betono kiekis 3 [yd3]
+82	Betono kiekis 3 [m3]
+83	Sūkis 1 [sk]
+84	Sūkis 2 [sk]
+85	Sūkis 3 [sk]
+86	Laikas [min]
+87	Betono kiekis [l/min]
+88	Betono kiekis [g/min]
+89	min. vibratoriaus slėgis [bar]
+90	maks. vibratoriaus slėgis [bar]
+91	min. pastūmos greitis [ft/min]
+92	min. pastūmos greitis [m/min]
+93	maks. pastūmos greitis [ft/min]
+94	maks. pastūmos greitis [m/min]
+95	maks. gręžimo slėgis 1 [bar]
+96	maks. gręžimo slėgis 2 [bar]
+97	maks. gręžimo slėgis 3 [bar]
+98	min. gręžimo postūmis 1 [sk/m]
+99	min. gręžimo postūmis 1 [sk/ft]
+100	min. gręžimo postūmis 2 [sk/m]
+101	min. gręžimo postūmis 2 [sk/ft]
+102	min. gręžimo postūmis 3 [sk/m]
+103	min. gręžimo postūmis 3 [sk/ft]
+104	min. maišymas [sk]
+105	maišymas 1 [sk]
+106	maišymas 2 [sk]
+107	betono kiekis gyliui [l/m]
+108	betono kiekis gyliui [g/ft]
+109	betono kiekis 1 [l/min]
+110	betono kiekis 1 [g/min]
+111	betono kiekis 2 [l/min]
+112	betono kiekis 2 [g/min]
+113	betono kiekis 3 [l/min]
+114	betono kiekis 3 [g/min]
+115	Virpinimo temp. [°C]
+116	Virpinimo temp. [°F]
+117	maks. gręžimo postūmis 1 [sk/m]
+118	maks. gręžimo postūmis 1 [sk/ft]
+119	maks. gręžimo postūmis 2 [sk/m]
+120	maks. gręžimo postūmis 2 [sk/ft]
+121	maks. gręžimo postūmis 3 [sk/m]
+122	maks. gręžimo postūmis 3 [sk/ft]
+123	maišymas 3 [sk]
+124	min. nuolydis 1 [cm/sk]
+125	min. nuolydis 1 [in/sk]
+126	min. nuolydis 2 [cm/sk]
+127	min. nuolydis 2 [in/sk]
+128	min. nuolydis 3 [cm/sk]
+129	min. nuolydis 3 [in/sk]
+130	Rišiklio kiekis [kg/min]
+131	Rišiklio kiekis [lb/min]
+132	Rišiklio kiekis 1 [kg/min]
+133	Rišiklio kiekis 1 [lb/min]
+134	Rišiklio kiekis 2 [kg/min]
+135	Rišiklio kiekis 2 [lb/min]
+136	Rišiklio kiekis 3 [kg/min]
+137	Rišiklio kiekis 3 [lb/min]
+138	Rišiklio svoris 1 [kg]
+139	Rišiklio svoris 1 [lb]
+140	Rišiklio svoris 2 [kg]
+141	Rišiklio svoris 2 [lb]
+142	Rišiklio svoris 3 [kg]
+143	Rišiklio svoris 3 [lb]
+144	Rišiklio svoris / gyliui [kg/m]
+145	Rišiklio svoris / gyliui [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Vibratoriaus slėgis keliant [bar]
+1	Amplitudė [in]
+2	Amplitudė [mm]
+3	Smūgiai/%s ft
+4	Smūgiai/%s mm
+5	Gylis [ft]
+6	Gylis [m]
+7	Tankėjimas [m]
+8	Nuokrypis x [cm]
+9	Nuokrypis x [in]
+10	Nuokrypis Y [cm]
+11	Nuokrypis Y [in]
+12	Betono slėgis [bar]
+13	Gręžimo slėgis sraigtas [bar]
+14	Gręžimo slėgis vamzdis [bar]
+15	Gręžimo slėgis [bar]
+16	Šliaužiklio slėgis [bar]
+17	Šliaužiklio slėgis keliant [bar]
+19	Vibratoriaus slėgis leidžiant [bar]
+20	Gręžimo greitis [sk/m]
+21	Gręžimo greitis [sk/ft]
+22	Gręžimo sukimo momentas [kip.ft]
+23	Gręžimo sukimo momentas [kNm]
+24	Energija [kip.ft]
+25	Energija [kNm]
+26	Energija /%s ft [kip.ft]
+27	Energija /%s mm [kNm]
+28	Spaudimo jėga [kN]
+29	Spaudimo jėga [kip]
+30	Pastūmos greitis [ft/min]
+31	Pastūmos greitis [m/min]
+32	Kėlimo greitis [ft/min]
+33	Kėlimo greitis [m/min]
+34	Leidimo greitis [ft/min]
+35	Leidimo greitis [m/min]
+36	Dažnis [Hz]
+37	Srovė [A]
+38	Leidimo srovė [A]
+39	Šoninis vanduo [l/m]
+40	Viršūnės vanduo [l/m]
+41	Laikas [s]
+42	Leidimo laikas [s]
+43	Smūgis [numeris]
+44	Vibratoriaus slėgis [bar]
+45	Amplitudė [%]
+46	Gręž.slėgis 1 [bar]
+47	Gręž.slėgis.2 [bar]
+48	Gręž.slėgis.3 [bar]
+49	Gręž.greit.1 [sk/m]
+50	Gręž.greit.1 [sk/ft]
+51	Gręž.greit.2 [sk/m]
+52	Gręž.greit.2 [sk/ft]
+53	Gręž.greit.3 [sk/m]
+54	Gręž.greit.3 [sk/ft]
+55	Betono slėg.1 [bar]
+56	Betono slėg.2 [bar]
+57	Betono slėg.3 [bar]
+58	Betono kiek. [l/m]
+59	Betono kiek. [g/ft]
+60	Bet.kiek.1 [l/min]
+61	Bet.kiek.1 [g/min]
+62	Bet.kiek.2 [l/min]
+63	Bet.kiek.2 [g/min]
+64	Bet.kiek.3 [l/min]
+65	Bet.kiek.3 [g/min]
+66	Maišymas 1 [sk]
+67	Sūk.skč.1 [sk/min]
+68	Sūk.skč.2 [sk/min]
+69	Sūk.skč.3 [sk/min]
+70	Virpinimo srovė [A]
+71	Įsiskverb. [cm/sk]
+72	Įsiskverb. [in/sk]
+73	Nuolydis 1 [cm/sk]
+74	Nuolydis 1 [in/sk]
+75	Nuolydis 2 [cm/sk]
+76	Nuolydis 2 [in/sk]
+77	nuolydis 3 [cm/sk]
+78	nuolydis 3 [in/sk]
+79	Rišiklis [kg/m]
+80	Rišiklis [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Statybų aikštelė
+2	Stulpelio numeris
+3	Stulpelio tipas (1 betonas;2 medis;3 plienas)
+4	Stulpelio ilgis [m]
+5	Stulpelio plotas [cm2]
+6	Stulpelio skersmuo [cm]
+7	Griovelio numeris
+8	Įrašymo numeris
+9	Vairuotojo numeris
+10	Užsakymo numeris
+11	Tankėjimo taškas
+12	Serijos numeris
+13	Įtaiso numeris
+14	Stulpelio skersmuo [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Gylis [ft]
+2	Gylis [mm]
+3	Maksimalus gylis [cm]
+4	Maksimalus gylis [ft]
+5	Smūgiai iš viso
+6	Energija iš viso [kip.ft]
+7	Energija iš viso [kNm]
+8	Šliaužiklio svoris [lb]
+9	Šliaužiklio svoris [kg]
+10	Sukimo momento rodmuo
+11	JAV matų vienetai
+12	JAV matų vienetai (kip)
+13	Tankėjimo taškas
+14	Gervė 1 aktyvi
+15	Gervė 2 aktyvi
+16	Betono kiekis iš viso [yd3]
+17	Betono kiekis iš viso [m3]
+18	Imp. kiekis (betono siurblys)
+19	Litrai/imp. (betono siurblys)
+20	Numatyti smūgiai
+21	Tankėjimas iš viso [m]
+22	Numatytas tankėjimas [m]
+23	Numatytas kėlimo aukštis [m]
+24	Numatytas stabdymo aukštis [m]
+25	Laikas iš viso [s]
+26	Laikas [s]
+27	Ciklų kiekis iš viso
+28	Krūvis tuščias šurfų kasimo kaušas [t]
+29	Suma statybinis laužas [t]
+30	Suma pilnas šurfų kasimo kaušas [t]
+31	Strekčių kiekis iš viso
+32	Tuščio kablio svoris [t]
+33	Suma ciklo krovinys [t]
+34	Suma ciklo krovinys iš viso [t]
+35	Suma ciklo krovinys statybinis laužas [t]
+36	Leidimo laikas [s]
+37	Maksimali leidimo srovė [A]
+38	Ciklo laikas iš viso [s]
+39	Numatyta maks. srovė [A]
+40	Gylis traukimo kriterijus [m]
+41	Gylis traukimo kriterijus 1 [m]
+42	Gylis traukimo kriterijus 2 [m]
+43	Numatytas maks. laikas 1 [s]
+44	Numatytas maks. kelias 1 [m]
+45	Numatytas maks. laikas 2 [s]
+46	Numatytas maks. kelias 2 [m]
+47	Numatytas maks. laikas 3 [s]
+48	Numatytas maks. kelias 3 [m]
+49	Šoninis vanduo iš viso [l]
+50	Viršūnės vanduo iš viso [l]
+51	Vidutiniškas oro slėgis [bar]
+52	Griebtuvo veikimas
+53	Plaktuko veikimas
+54	Hidraulinis stūmimas ir traukimas
+55	Sukamasis gręžimas
+56	Dvigubo sūkiojo gręžimo veika
+57	SOB gręžimas
+58	Vibratoriaus veikimas
+59	Vibratoriaus mechanizmas
+60	(kip)
+61	(in / 100)
+62	IŠJUNGTA
+63	ĮJUNGTA
+64	Per didelis kiekis [%]
+65	Stulpelių betono kiekis [yd3]
+66	Stulpelių betono kiekis [m3]
+67	galonai/imp. (betono siurblys)
+68	Maksimalus gylis [m]
+69	Sraigtų skaičius
+70	Sraigto ilgis [cm]
+71	Sraigto ilgis [ft]
+72	gps padėtis X [cm]
+73	gps padėtis Y [cm]
+74	suvartojimas [kWh]
+75	Įjungimo polinkis [°]
+76	Baigimo polinkis [°]
+77	Stulpelio ilgis [cm]
+78	Stulpelio ilgis [ft]
+79	Iš viso rišiklių [kg]
+80	Iš viso rišiklių [lb]
+81	vid. žingsnis [mm/sk]
+82	vid. žingsnis [in/sk]
+83	vid.grąžto slėgis [bar]
+84	vid.sukim.greitis [sk/min]
+85	vid.rišiklis [kg/m]
+86	vid.rišiklis [lb/ft]
+87	vid.rišikl.srautas [kg/min]
+88	vid.rišikl.srautas [lb/min]
+89	1 bunkeris [kg]
+90	1 bunkeris [lb]
+91	2 bunkeris [kg]
+92	2 bunkeris [lb]
+93	įterpimo aukštis [cm]
+94	įterpimo aukštis [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	kelly drilling
+200	double rotary drilling
+300	CFA drilling
+400	vibrator
+401	lowering
+402	lifting
+403	lowering/lifting
+404	over time
+411	vibrator lowering
+412	vibrator lifting
+413	vibrator lowering/lifting
+414	vibrator over time
+500	Hammer
+600	push&pull
+700	hydraulic grab
+800	dyn. compaction
+900	dragline
+1000	duty cycle
+1100	soil mixing
+1200	el. vibrator
+1201	repl. column (compaction)
+1202	repl. column
+1211	el. vibro RCC
+1212	el. vibro RC
+1300	dry mixing
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	job site
+2	pile number
+3	pile type(1concrete;2wood;3steel)
+4	pile length [m]
+5	pile area [cm^2]
+6	pile diameter [cm]
+7	slot number
+8	record number
+9	driver number
+10	job number
+11	compaction point
+12	serial number
+13	machine number
+14	pile diameter [in]

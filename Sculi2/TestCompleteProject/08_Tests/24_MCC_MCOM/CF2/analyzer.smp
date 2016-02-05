@@ -1,0 +1,15 @@
+Trigger options:
+Sample options:
+Scan time [ms]	0
+Number of samples	20000
+Samples after trigger	20000
+automatic save	CF2:\analyzer
+
+Sample Data:
+Trigger time	2010-10-12T15:42:20
+Time [ms]	spsmon.8.txcmd.seq_idx	spsmon.8.rxcmd.seq_idx
+
+
+
+
+Time [ms]	spsmon.2.rxcmd.tm	spsmon.2.rxcmd.seq_idx	spsmon.2.txcmd.tm	spsmon.2.txcmd.seq_idx	spsmon.2.rxcmd.ch1	spsmon.2.rxcmd.ch1

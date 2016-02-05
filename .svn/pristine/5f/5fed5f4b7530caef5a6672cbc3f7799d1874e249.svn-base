@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Bulgarian / Bulgarisch
+%?language	bul
+
+%section: SCREEN
+/TSoilFlowAuger	(подаван обем червяк) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (подаван обем червяк)
+/TSoilFlowCase	(подаван обем тръба) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (подаван обем тръба)
+/TSoilFlow	(подаван обем) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (подаван обем)
+/TSnumbOfPumps	(брой помпи) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (брой помпи)
+/TSclampJawPress	(налягане на щипците) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (налягане на щипците)
+/TSexcAutoTime	(време за настр. на ексц.) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (време за настр. на ексц.)
+/TSramWeight	(Тегло сонетка) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Тегло сонетка)
+/TSblowsPerDepthStep	(удари / ход в дълбочина) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (удари / ход в дълбочина)
+/TSnumbPuPuCylinder	(брой бутащи и дърпащи цилиндри) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (брой бутащи и дърпащи цилиндри)
+/TSaugerLength	(дължина на червяка) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (дължина на червяка)
+/TSconcVolPerImp	(бетон обем / импулс) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (бетон обем / импулс)
+/TSscalConcPresSens	(обхват сензор нал. бетон) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (обхват сензор нал. бетон)
+/TSscalConcPresDisp	(скала уред за нал. бетон) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (скала уред за нал. бетон)
+/TSpileDiameter	(Диаметър на пилот) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Диаметър на пилот)
+/TSmaxPressAuger	(макс. нал. червяк) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (макс. нал. червяк)
+/TSmaxPressCase	(макс. нал. тръба) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (макс. нал. тръба)
+/TSmaxPressure	(макс. налягане) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (макс. налягане)
+/TSoilFlowAuger1	(подаван обем червяк 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (подаван обем червяк 1)
+/TSoilFlowAuger2	(подаван обем червяк 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (подаван обем червяк 2)
+/TSoilFlowAuger3	(подаван обем червяк 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (подаван обем червяк 3)
+/TSnumbOfAugers	(брой червяци) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (брой червяци)
+/TSoilFlowOscil	(подаван обем тр. сист.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (подаван обем тр. сист.)
+/TSoilFlowGrabOpen	(Дебит на отворен грайфер) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Дебит на отворен грайфер)
+/TSoilFlowGrabClose	(Дебит на затворен грайфер) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Дебит на затворен грайфер)
+/TSmaxPressGrabOpen	(Макс.наляг.на отв.грайфер) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Макс.наляг.на отв.грайфер)
+/TSmaxPressGrabClose	(Макс.наляг.на затв.грайфер) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Макс.наляг.на затв.грайфер)
+/TSminOilFlow	(Мин. масло поток) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (Мин. масло поток)
+/TSoilFlowOscil2	(подаван обем тр. сист.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (подаван обем тр. сист.2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

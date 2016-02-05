@@ -1,0 +1,151 @@
+rem autoexec.frc
+rem  location:		master 4
+rem  direction:	sending data from master 4 to PDE
+
+!version	00103
+
+rem define baudrate of CAN line 4
+can_conf /b 4 1000
+
+
+rem  add virtual module to CAN bus (master modules)
+
+can_conf /a 4 109 MA_X
+can_conf /u 4 109
+can_conf /a 4 113 MA_W
+can_conf /u 4 113
+can_conf /a 4 114 MA_W
+can_conf /u 4 114
+can_conf /a 4 117 MA_D
+can_conf /u 4 117
+can_conf /a 4 118 MA_D
+can_conf /u 4 118
+can_conf /a 4 119 MA_D
+can_conf /u 4 119
+can_conf /a 4 120 MA_D
+can_conf /u 4 120
+can_conf /a 4 121 MA_D
+can_conf /u 4 121
+can_conf /a 4 122 MA_D
+can_conf /u 4 122
+
+rem set standard configuration (independent of the operation mode)
+rem destination source
+
+force	%QX4.109.1	CXunits_for_USA
+force	%QX4.109.6	CXddTorqueInd
+force	%QX4.109.7	CXconcreFlowRate
+force	%QX4.109.21	MXpdeConnection
+force	%QX4.109.23	CXadVibExcReg
+force	%QX4.109.24	MXpdeSetBreak
+force	%QX4.109.25	MXpdeSetStart
+force	%QX4.109.26	MXpdeSetStop
+force %QX4.109.27	MXenDsmOperMode
+force %QX4.109.28	MXdsmStartMix
+
+force	%QD4.117.1	MDpdeDepth
+force	%QD4.117.2	MDpdeCounTriggM1
+force	%QD4.117.3	MDpdeConcConsump
+force	%QD4.117.4	MDpdeFeedActPres
+force	%QD4.117.5	MDpdeDepthStepCm
+force	%QD4.117.6	MDpdeMaxDepth
+force	%QD4.117.7	CDmachinSerialNr
+force	%QD4.117.8	MDpdeFeedSpeedCM
+
+force	%QD4.118.2	MDpdeCounConcPum
+force	%QD4.118.3	MDconcFlowImp
+force	%QD4.118.4	MDddTorquekNm
+force	%QD4.118.6	MDpdeDd1Revlut
+force	%QD4.118.7	MDpdeDd2Revlut
+force	%QD4.118.8	MDpdeDd3Revlut
+
+force	%QD4.119.4	MDpdeConcVol3
+force	%QD4.119.5	MDpdeConcVol1
+force	%QD4.119.6	MDpdeConcVol2
+force	%QD4.119.7	MDvibrFrequency
+force	%QD4.119.8	MDvibrAmplitude
+
+force	%QD4.120.1	MDpdeHamBlowDept
+force	%QD4.120.2	MDpdeHamEnergy
+force	%QD4.120.3	MDpdeHamEnerDept
+force	%QD4.120.4	MDhamBlowPerMin
+force	%QD4.120.5	MDpdeHamTotBlows
+force	%QD4.120.6	MDpdeHamTotEnerg
+force	%QD4.120.7	MDlrXaxisDigInc
+force	%QD4.120.8	MDlrYaxisDigInc
+
+force	%QD4.121.1 MDdsmRefDep1Cm
+force	%QD4.121.2 MDdsmRefSusp1
+force	%QD4.121.3 MDdsmRefDep2Cm
+force	%QD4.121.4 MDdsmRefSusp2
+force	%QD4.121.5 MDdsmRefDep3Cm
+force	%QD4.121.6 MDdsmRefSusp3
+force	%QD4.121.7 MDpdeDsmSi1Con
+force	%QD4.121.8 MDpdeDsmSi2Con
+
+
+force	%QW4.113.1	MWpdeSetMode
+force	%QW4.113.2	MWpileDiameter
+force	%QW4.113.3	MWhamRamWeightKg
+force	%QW4.113.5	MWsmoUsedAugers
+force	%QW4.113.6	MWdrillLenghCm
+force	%QW4.113.7	MWpdeSysPress1
+force	%QW4.113.8	MWpdeSysPress2
+force	%QW4.113.9	MWpdeSysPress3
+force	%QW4.113.10	MWpdeConPresFilt
+force	%QW4.113.11	MWpdeConPresFil2
+force	%QW4.113.12	MWpdeDd1Rpm
+force	%QW4.113.13	MWpdeDd2Rpm
+force	%QW4.113.14	MWpdeDd3Rpm
+force	%QW4.113.15	IWkeybX25Poti3
+force	%QW4.113.16	MWpdeConPresFil3
+
+force	%QW4.114.3	MWdsmUsedAugers
+force	%QW4.114.4	MWdsmPileSec
+
+force	MDpdeCounTrigWri	%ID4.117.1
+force	MDpdeCounTrigLos	%ID4.117.3
+force	MDpdeTrigStepCm	%ID4.117.4
+force MDpdeActualSusp %ID4.117.5
+
+force	MWpdeGetSubmode	%IW4.113.1
+
+force	MXpdeStart	%IX4.109.1
+force	MXpdeStop	%IX4.109.2
+force	MXpdeGetBreak	%IX4.109.3
+force	MXpdeGetInitOk	%IX4.109.7
+force	MXpdeEnaDeptTrig	%IX4.109.8
+
+rem Adjustments for external control
+
+_if MXenExtOperMode EQ 1
+
+rem set RX spare time 
+	rem forcen der RX spare time in ms
+	can_rxtime /c $CWecRXspareTime$
+	
+rem  set Baudrate 
+	_if CWecMaxBaudRate EQ 1
+		rem define baudrate of CAN line 3
+		can_conf /b 3 125
+	_endif
+	_if CWecMaxBaudRate EQ 2
+		rem define baudrate of CAN line 3
+		can_conf /b 3 250
+	_endif
+	_if CWecMaxBaudRate EQ 3
+		rem define baudrate of CAN line 3
+		can_conf /b 3 500
+	_endif
+	_if CWecMaxBaudRate EQ 4
+		rem define baudrate of CAN line 3
+		can_conf /b 3 1000
+	_endif
+
+rem set startup directly with adjusted baudrate	
+	_if	CXecBaudrateDire EQ 1
+		rem starts CAN line 3 direct with defined baudrate
+		can_conf /d	3
+	_endif
+_endif
+

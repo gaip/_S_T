@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Greek / Griechisch
+%?language	ell
+
+%section: SCREEN
+/TSoilFlowAuger	(Ρυθμός παροχής ατέρμ.κοχλ.) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Ρυθμός παροχής ατέρμ.κοχλ.)
+/TSoilFlowCase	(Ρυθμός παροχής σωλήνα) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Ρυθμός παροχής σωλήνα)
+/TSoilFlow	(Ρυθμός παροχής) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Ρυθμός παροχής)
+/TSnumbOfPumps	(Αριθμός αντλιών) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Αριθμός αντλιών)
+/TSclampJawPress	(Πίεση τανάλιας) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Πίεση τανάλιας)
+/TSexcAutoTime	(Χρόνος ρύθμισης έκκεντρου) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Χρόνος ρύθμισης έκκεντρου)
+/TSramWeight	(Βάρος κρούσης) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Βάρος κρούσης)
+/TSblowsPerDepthStep	(Χτυπήματα / Βήμα καταγραφής) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Χτυπήματα / Βήμα καταγραφής)
+/TSnumbPuPuCylinder	(Αριθμός κυλίνδρων Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Αριθμός κυλίνδρων Push & Pull)
+/TSaugerLength	(Μήκος ατέρμονα κοχλία) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Μήκος ατέρμονα κοχλία)
+/TSconcVolPerImp	(Ποσότητα σκυροδ. / ώθηση) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Ποσότητα σκυροδ. / ώθηση)
+/TSscalConcPresSens	(Περιοχή μέτρ.αισθ.πίεσ. σκυρ.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Περιοχή μέτρ.αισθ.πίεσ. σκυρ.)
+/TSscalConcPresDisp	(Παράμ.κλίμακ.ένδ.πίεσης σκυρ.) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Παράμ.κλίμακ.ένδ.πίεσης σκυρ.)
+/TSpileDiameter	(Διάμετρος πασσάλου) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Διάμετρος πασσάλου)
+/TSmaxPressAuger	(μεγ. πίεση ατέρμονα κοχλία) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (μεγ. πίεση ατέρμονα κοχλία)
+/TSmaxPressCase	(μεγ. πίεση σωλήνα) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (μεγ. πίεση σωλήνα)
+/TSmaxPressure	(μεγ. πίεση) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (μεγ. πίεση)
+/TSoilFlowAuger1	(Ρυθμ.παροχής ατέρμ.κοχλ. 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Ρυθμ.παροχής ατέρμ.κοχλ. 1)
+/TSoilFlowAuger2	(Ρυθμ.παροχής ατέρμ.κοχλ. 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Ρυθμ.παροχής ατέρμ.κοχλ. 2)
+/TSoilFlowAuger3	(Ρυθμ.παροχής ατέρμ.κοχλ. 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Ρυθμ.παροχής ατέρμ.κοχλ. 3)
+/TSnumbOfAugers	(Αριθμός ατέρμονων κοχλιών) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Αριθμός ατέρμονων κοχλιών)
+/TSoilFlowOscil	(Παροχή μηχαν. διασωλήνωσης) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Παροχή μηχαν. διασωλήνωσης)
+/TSoilFlowGrabOpen	(Ρυθμός μεταφ.αρπάγη ανοιχτή) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Ρυθμός μεταφ.αρπάγη ανοιχτή)
+/TSoilFlowGrabClose	(Ρυθμός μεταφ.αρπάγη κλειστή) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Ρυθμός μεταφ.αρπάγη κλειστή)
+/TSmaxPressGrabOpen	(μεγ. πίεση αρπάγη ανοιχτή) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (μεγ. πίεση αρπάγη ανοιχτή)
+/TSmaxPressGrabClose	(μεγ. πίεση αρπάγη κλειστή) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (μεγ. πίεση αρπάγη κλειστή)
+/TSminOilFlow	(Ελάχ Ρυθμός παροχής) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (Ελάχ Ρυθμός παροχής)
+/TSoilFlowOscil2	(Παροχή μηχαν. διασωλήνωσης 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Παροχή μηχαν. διασωλήνωσης 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

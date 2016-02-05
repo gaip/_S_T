@@ -1,0 +1,576 @@
+!version	00058
+#
+!font	UTF8
+!best-fit-font	iso8859-1
+
+# Language File / Sprachtexte File
+# Swedish / Schwedisch
+!language	swe
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Forslingsvolym matarskruv [l/min]
+2	Forslingsvolym matarskruv [g/min]
+3	Forslingsvolym rör [l/min]
+4	Forslingsvolym rör [g/min]
+5	Forslingsvolym [l/min]
+6	Forslingsvolym [g/min]
+7	Pumpantal
+8	Klämtångstryck [bar]
+9	Excenterns omställningstid [s]
+10	Lyftblock huvudvinsch
+11	Hejarvikt [kg]
+12	Hejarvikt [lb]
+13	Slag / djupsteg
+14	Antal push-and-pullcylindrar
+15	Matarskruvslängd [cm]
+16	Matarskruvslängd [ft]
+17	PDE grafik på skrivare
+18	PDE grafik på kort
+19	Djupgång [cm]
+20	Djupgång [in]
+21	PDE utlösningstid [s]
+22	Betongmängd / puls [l/puls]
+23	Betongmängd / puls [g/puls]
+24	Mätområde betongtrycksensor [bar]
+25	Skaldelning betongtrycksindikator [bar]
+26	Påldiameter [cm]
+27	Påldiameter [in]
+28	Pålarea [cm]
+29	Pålarea [in]
+30	Innerrörsdiameter [cm]
+31	Innerrörsdiameter [in]
+32	Avsänkningsfaktor [%]
+33	Matarskruvens stigning [cm]
+34	Matarskruvens stigning [in]
+35	Dragautomatik start tryck [bar]
+36	Dragautomatik stopp tryck [bar]
+37	till. överkvantitet betong [%]
+38	Ekovarvtal
+39	Mängdmätning via tryck (1=JA)
+40	Dragautomatik max. tryck [bar]
+41	max. tryck snäcka [bar]
+42	max. tryck rör [bar]
+43	max. tryck [bar]
+44	Forslingsvolym matarskruv 1 [l/min]
+45	Forslingsvolym matarskruv 1 [g/min]
+46	Forslingsvolym matarskruv 2 [l/min]
+47	Forslingsvolym matarskruv 2 [g/min]
+48	Forslingsvolym matarskruv 3 [l/min]
+49	Forslingsvolym matarskruv 3 [g/min]
+50	Antal matarskruvar
+51	Forslingsvol. höljesoscill. [l/min]
+52	Forslingsvol. höljesoscill. [g/min]
+53	öppna gripare bef. kvant. [l/min]
+54	öppna gripare bef. kvant. [g/min]
+55	bef. kvant. stäng gripare [l/min]
+56	bef. kvant. stäng gripare [g/min]
+57	max. tryck öppna gripare [bar]
+58	max. tryck stäng gripare [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	antal sektioner per spalt
+62	specifik vikt silo 1 [kg/dm³]
+63	specifik vikt silo 1 [lb/ft³]
+64	specifik vikt silo 2 [kg/dm³]
+65	specifik vikt silo 2 [lb/ft³]
+66	Djup [m]
+67	Djup [ft]
+68	stigning på matningen [cm/r]
+69	stigning på matningen [in/r]
+70	bindemedelsvikt [kg/m]
+71	bindemedelsvikt [lb/ft]
+72	min. forslingsvolym [%]
+73	torque limitation (1=YES)
+74	Forslingsvol. höljesoscill.2 [l/min]
+75	Forslingsvol. höljesoscill.2 [g/min]
+76	volume main Pump [l/min]
+
+!LOGGER
+1	Startdatum
+2	Starttid
+3	Slutdatum
+4	Sluttid
+5	Tryckdatum
+6	Trycktid
+
+!PDESERV
+# !! max. 40 Zeichen !!
+1	Tangent start startar inlasning
+3	Tangent stopp avslutar inlasning
+4	Vanta - berakning bild
+5	Vanta - berakning tryckbild
+6	ivriga punkter
+7	Bild/bilder sparade
+8	Tangent '0' startar utskrift
+10	ingen PDE konfiguration
+11	Fïr start krávs fler inmatningar
+13	Skrivare ej redo!
+14	PDE fel
+15	Tryck pa en tangent
+16	Minneskort ej insatt
+17	Igangssattningsverk ej funnet
+18	Fïr liten plats pa minneskort
+19	Sparande ej mijligt
+20	Minneskort (skrivare) ej insatt
+21	Igangsáttningsverk (skrivare) ej funnet
+22	Fïr liten plats(skrivare-minneskort)
+23	Sparande ej mijligt (skrivardata)
+24	Drift
+25	Endast liten plats fri pa minneskort
+26	Endast liten plats fri (skrivare)
+27	PDE registrering stoppad
+28	Tangent '.' avbryter, 'Stop' avslutar
+29	'Start' fortsátter, 'Stop' avslutar
+30	datalogen inte beredd
+31	minnet fullt, byt datakort
+32	minnet fullt, (printkort)
+33	PDE initialisering...
+34	registreringen startas...
+35	registreringen startas...
+36	datauppgifterna skickas...
+37	förbindelsen avbruten...
+
+!PDE
+1	Driftsätt
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Sida
+4	Inläsning lyft
+5	Inläsning sänk
+6	Pålradie [cm]
+7	Pålradie [in]
+8	Stil
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kellyborrning
+200	Dubbelhuvudborrning
+300	Betongspiralborrning
+400	Vibrator
+401	Saenka
+402	Hoeja
+403	Saenka/lyfta
+404	Oever tid
+411	Saenka vibrator
+412	Lyfta vibrator
+413	Saenka & lyfta vibrator
+414	Vibrator oever tid
+500	Hammare
+600	push&pull
+700	Hydraulgripskopa
+800	Hejarstyrning
+900	Malmletartraag
+1000	Omslag
+1100	Markblandning
+1200	elvibrator
+1201	utbyteskolonn (packning)
+1202	utbyteskolonn
+1211	elvibrator utbyteskolonn (packning)
+1212	elvibrator utbyteskolonn
+1300	Torrblandning
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitud [in/100]
+7	Betongtryck [bar]
+2	Amplitud [mm]
+3	Djup [cm]
+4	Djup [ft]
+5	Slagantal
+6	Slag/djupgång
+8	Borrtryck snäcka [bar]
+9	Borrtryck [bar]
+10	Borrtryck [bar]
+11	Tryck hejare [bar]
+12	Tryck vibrator [bar]
+13	Borrsjunkhastighet [r/m]
+14	Borrsjunkhastighet [r/ft]
+15	Borrvridmoment [kip.ft]
+16	Borrvridmoment [kNm]
+17	Energi/slag [kip.ft]
+18	Energi/slag [kNm]
+19	Energi/djupgång [kip.ft]
+20	Energi/djupgång [kNm]
+21	Tid [HH:mm:ss]
+22	Anliggn.kraft [kN]
+23	Anliggn.kraft [kip]
+24	Matningshastighet [ft/min]
+25	Matningshastighet [m/min]
+26	Frekvens [Hz]
+27	Slag/min
+28	Vibratorenhet [TILL/FRÅN]
+29	Avvikelse X [ft]
+30	Avvikelse X [cm]
+31	Avvikelse Y [ft]
+32	Avvikelse Y [cm]
+33	Slag nummer
+34	Lyfthöjd [m]
+35	Lyfthöjd [ft]
+36	Packning/slag [ft]
+37	Packning/slag [m]
+38	Packning absolut [ft]
+39	Packning absolut [m]
+40	Krav bromshöjd [ft]
+41	Krav bromshöjd [m]
+42	Max. hast. vinsch 1 [ft/min]
+43	Max. hast. vinsch 1 [m/min]
+44	Max. hast. vinsch 2 [ft/min]
+45	Max. hast. vinsch 2 [m/min]
+46	Datum [TT:MM:AA]
+47	Gångtid [s]
+48	Betongmängd [yd³]
+49	Betongmängd [m³]
+50	Positionsnummer
+51	Tid till hejare vid lina [s]
+52	Lyft tid [s]
+53	Sänk tid [s]
+54	Krav slag
+55	Krav lyfthöjd [m]
+56	Krav lyfthöjd [ft]
+57	Krav packning [m]
+58	Krav packning [ft]
+59	Tid malmletartrågdrift [s]
+60	Cykeltid [s]
+61	Last massgods [t]
+62	Släpplast totalt [t]
+63	Tid avbrottsdrift [s]
+64	Cykellast [t]
+65	Cykellast totalt [t]
+66	Cykellast massgods [t]
+67	Ström [A]
+68	Ström sänkn. [A]
+69	Sidovatten [l/m]
+70	Spetsvatten [l/m]
+71	Lufttryck [bar]
+72	Automatik TILL
+73	Spänning [V]
+74	Avbrott
+75	Lutning [°]
+76	Varvtal [r/min]
+77	Betongmängd 1 [yd³]
+78	Betongmängd 1 [m³]
+79	Betongmängd 2 [yd³]
+80	Betongmängd 2 [m³]
+81	Betongmängd 3 [yd³]
+82	Betongmängd 3 [m³]
+83	Varv 1 [r]
+84	Varv 2 [r]
+85	Varv 3 [r]
+86	Tid [min]
+87	Betongmängd [l/min]
+88	Betongmängd [g/min]
+89	min. vibrator-tryck [bar]
+90	max. vibrator-tryck [bar]
+91	min. matningshastighet [ft/min]
+92	min. matningshastighet [m/min]
+93	max. matningshastighet [ft/min]
+94	max. matningshastighet [m/min]
+95	max. borrtryck 1 [bar]
+96	max. borrtryck 2 [bar]
+97	max. borrtryck 3 [bar]
+98	min. borr framsteg 1 [r/m]
+99	min. borr framsteg 1 [r/ft]
+100	min. borr framsteg 2 [r/m]
+101	min. borr framsteg 2 [r/ft]
+102	min. borr framsteg 3 [r/m]
+103	min. borr framsteg 3 [r/ft]
+104	min. Blandning [r]
+105	Blandning 1 [r]
+106	Blandning 2 [r]
+107	Betongvolym per djup [l/m]
+108	Betongvolym per djup [g/ft]
+109	Betongmängd 1 [l/min]
+110	Betongmängd 1 [g/min]
+111	Betongmängd 2 [l/min]
+112	Betongmängd 2 [g/min]
+113	Betongmängd 3 [l/min]
+114	Betongmängd 3 [g/min]
+115	Vibratortemperatur [°C]
+116	Vibratortemperatur [°F]
+117	max. borr framsteg 1 [r/m]
+118	max. borr framsteg 1 [r/ft]
+119	max. borr framsteg 2 [r/m]
+120	max. borr framsteg 2 [r/ft]
+121	max. borr framsteg 3 [r/m]
+122	max. borr framsteg 3 [r/ft]
+123	Blandning 3 [r]
+124	min. Stigning 1 [cm/r]
+125	min. Stigning 1 [in/r]
+126	min. Stigning 2 [cm/r]
+127	min. Stigning 2 [in/r]
+128	min. Stigning 3 [cm/r]
+129	min. Stigning 3 [in/r]
+130	Bindemedelsmängd [kg/min]
+131	Bindemedelsmängd [lb/min]
+132	Bindemedelsmängd 1 [kg/min]
+133	Bindemedelsmängd 1 [lb/min]
+134	Bindemedelsmängd 2 [kg/min]
+135	Bindemedelsmängd 2 [lb/min]
+136	Bindemedelsmängd 3 [kg/min]
+137	Bindemedelsmängd 3 [lb/min]
+138	Bindemedelsvikt 1 [kg]
+139	Bindemedelsvikt 1 [lb]
+140	Bindemedelsvikt 2 [kg]
+141	Bindemedelsvikt 2 [lb]
+142	Bindemedelsvikt 3 [kg]
+143	Bindemedelsvikt 3 [lb]
+144	Bindemedelsvikt per djup [kg/m]
+145	Bindemedelsvikt per djup [lb/ft]
+146	kellyspeed [m/min]
+147	kellyspeed [ft/min]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Vibratortr. lyft [bar]
+1	Amplitud [in]
+2	Amplitud [mm]
+3	Slag/%s ft
+4	Slag/%s mm
+5	Djup [ft]
+6	Djup [m]
+7	Packning [m]
+8	Avvikelse X [cm]
+9	Avvikelse X [in]
+10	Avvikelse Y [cm]
+11	Avvikelse Y [in]
+12	Betongtryck [bar]
+13	Borrtr. snäcka [bar]
+14	Borrtr. rör [bar]
+15	Borrtryck [bar]
+16	Påltryck [bar]
+17	Påltr. lyft [bar]
+19	Vibratortr. sänk [bar]
+20	Borrsjunkhast. [r/m]
+21	Borrsjunkhast. [r/ft]
+22	Borrvridmome. [kip.ft]
+23	Borrvridmome. [kNm]
+24	Energi [kip.ft]
+25	Energi [kNm]
+26	Energi/%s ft [kip.ft]
+27	Energi/%s mm [kNm]
+28	Anliggn.kraft [kN]
+29	Anliggn.kraft [kip]
+30	Matningshast. [ft/min]
+31	Matningshast. [m/min]
+32	Lyfthast. [ft/min]
+33	Lyfthast. [m/min]
+34	Sänkhast. [ft/min]
+35	Sänkhast. [m/min]
+36	Frekvens [Hz]
+37	Ström [A]
+38	Ström sänkn. [A]
+39	Sidovatten [l/m]
+40	Spetsvatten [l/m]
+41	Tid [s]
+42	Tid sänkn. [s]
+43	Slag [nummer]
+44	Vibratortryck [bar]
+45	Amplitud [%]
+46	Borrtryck1 [bar]
+47	Borrtryck2 [bar]
+48	Borrtryck3 [bar]
+49	Borrsjunkh.1 [r/m]
+50	Borrsjunkh.1 [r/ft]
+51	Borrsjunkh.2 [r/m]
+52	Borrsjunkh.2 [r/ft]
+53	Borrsjunkh.3 [r/m]
+54	Borrsjunkh.3 [r/ft]
+55	Betongtryck1 [bar]
+56	Betongtryck2 [bar]
+57	Betongtryck3 [bar]
+58	Betongmängd [l/m]
+59	Betongmängd [g/ft]
+60	Betongmän.1 [l/min]
+61	Betongmän.1 [g/min]
+62	Betongmän.2 [l/min]
+63	Betongmän.2 [g/min]
+64	Betongmän.3 [l/min]
+65	Betongmän.3 [g/min]
+66	Blandning [r]
+67	Varvtal1 [r/min]
+68	Varvtal2 [r/min]
+69	Varvtal3 [r/min]
+70	Vibratorström [A]
+71	Inträngning [cm/r]
+72	Inträngning [in/r]
+73	Stigning 1 [cm/r]
+74	Stigning 1 [in/r]
+75	Stigning 2 [cm/r]
+76	Stigning 2 [in/r]
+77	Stigning 3 [cm/r]
+78	Stigning 3 [in/r]
+79	Bindemedel [kg/m]
+80	Bindemedel [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	Byggplats
+2	Pålnummer
+3	Påltyp (1betong,2trae,3staal)
+4	Påle laengd [m]
+5	Påle yta [cm²]
+6	Påldiameter [cm]
+7	Rännummer
+8	Inlåsningsnr.
+9	Foerarnummer
+10	Uppdragsnummer
+11	Packningspunkt
+12	Seriennummer
+13	Maskinnummer
+14	Påldiameter [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Djupgång [ft]
+2	Djupgång [mm]
+3	Maximalt djup [cm]
+4	Maximalt djup [ft]
+5	Slag totalt
+6	Energi totalt [kip.ft]
+7	Energi totalt [kNm]
+8	Hejarvikt [lb]
+9	Hejarvikt [kg]
+10	Vridmomentdisplay
+11	US-enheter
+12	US-enheter (kip)
+13	Packningspunkt
+14	Vinsch 1 Aktiv
+15	Vinsch 2 Aktiv
+16	Betongmängd totalt [yd³]
+17	Betongmängd totalt [m³]
+18	Antal imp.(betongpump)
+19	Liter/imp.(betongpump)
+20	Krav slag
+21	Packning totalt [m]
+22	Krav packning [m]
+23	Krav lyfthöjd [m]
+24	Krav bromshöjd [m]
+25	Tid totalt [s]
+26	Tid [s]
+27	Antal cykler totalt
+28	Last malmletartråg tomt [t]
+29	Summa massgods [t]
+30	Summa malmletartråg fullt [t]
+31	Antal triggers totalt
+32	Tomvikt hänge [t]
+33	Summa cykellast [t]
+34	Summa cykellast totalt [t]
+35	Summa cykellast massgods [t]
+36	Tid sänkprocess [s]
+37	Ström max. sänkprocess [A]
+38	Cykeltid totalt [s]
+39	Krav ström max. [A]
+40	Djup dragkriterium [m]
+41	Djup dragkriterium 1 [m]
+42	Djup dragkriterium 2 [m]
+43	Krav tid 1 max. [s]
+44	Krav väg 1 max. [m]
+45	Krav tid 2 max. [s]
+46	Krav väg 2 max. [m]
+47	Krav tid 3 max. [s]
+48	Krav väg 3 max. [m]
+49	Sidovatten totalt [l]
+50	Spetsvatten totalt [l]
+51	Lufttryck genomsnitt [bar]
+52	Drift med gripskopa
+53	Hammardrift
+54	hyd. Push&Pull-drift
+55	Kellyborrdrift
+56	Dubbelhuvudborrdrift
+57	Betongspiralborrdrift
+58	Vibratordrift
+59	Vibratorenhet
+60	(kip)
+61	(in / 100)
+62	FRÅN
+63	TILL
+64	Övermängd [%]
+65	Pålbetongmängd [yd³]
+66	Pålbetongmängd [m³]
+67	gallons/puls (betongpump)
+68	Maximalt djup [m]
+69	Antal matarskruvar
+70	Matarskruvslängd [cm]
+71	Matarskruvslängd [ft]
+72	gps-position X [cm]
+73	gps-position Y [cm]
+74	Förbrukning [kWh]
+75	Startlutning [°]
+76	Slutlutning [°]
+77	Påle laengd [cm]
+78	Påle laengd [ft]
+79	Bindemedel totalt [kg]
+80	Bindemedel totalt [lb]
+81	med. Stigning [mm/r]
+82	med. Stigning [in/r]
+83	med. Borrtryck [bar]
+84	med. Varvtal [r/min]
+85	med. Bindemedel [kg/m]
+86	med. Bindemedel [lb/ft]
+87	med. Bindemedelsmängd [kg/min]
+88	med. Bindemedelsmängd [lb/min]
+89	silo 1 [kg]
+90	silo 1 [lb]
+91	silo 2 [kg]
+92	silo 2 [lb]
+93	isättningshöjd [cm]
+94	isättningshöjd [ft]
+95	tomborrning [cm]
+96	tomborrning [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kellyborrning
+200	Dubbelhuvudborrning
+300	Betongspiralborrning
+400	Vibrator
+401	Saenka
+402	Hoeja
+403	Saenka/lyfta
+404	Oever tid
+411	Saenka vibrator
+412	Lyfta vibrator
+413	Saenka & lyfta vibrator
+414	Vibrator oever tid
+500	Hammare
+600	push&pull
+700	Hydraulgripskopa
+800	Hejarstyrning
+900	Malmletartraag
+1000	Omslag
+1100	Markblandning
+1200	elvibrator
+1201	utbyteskolonn (packning)
+1202	utbyteskolonn
+1211	elvibrator utbyteskolonn (packning)
+1212	elvibrator utbyteskolonn
+1300	Torrblandning
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	Byggplats
+2	Paalnummer
+3	Paaltyp (betong, trae, staal)
+4	Paale laengd [m]
+5	Paale yta [cm^2]
+6	Paaldiameter [cm]
+7	Rännummer
+8	Inlaasningsnr.
+9	Foerarnummer
+10	Uppdragsnummer
+11	Packningspunkt
+12	Seriennummer
+13	Maskinnummer
+14	Paaldiameter [in]

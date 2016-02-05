@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{A1410BF1-0F95-4082-9A4A-B0BD48733D7A}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="file_Exists" Unit="file">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="file" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="C:\Users\lmbtuh0\Documents\httpsubversion.lmb.liebherr.isvnSculiCUI\Trunk\KeywordTests\2013.03.01 V8 SCR.hzmb" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickOnChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;Dialog&quot;](&quot;Öffnen&quot;)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="WndCaption" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Ö&amp;ffnen" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{6A1B4CEE-4FB8-46E2-BFBD-403C84342301}">
+				<Data Description="Delays the test execution for the specified time period.">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="ms" DefVarType="3" VarType="3" ValueType="1" ValueValue="5000" />
+						<Parameter Name="Str" DefVarType="8" DefValueType="6" DefValueValue="" VarType="8" ValueType="6" ValueValue="" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="findChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;AcroRd32&quot;, 3)[&quot;UIAObject&quot;](&quot;Data_Protocol_ECU_Lidec_1_2000_00_0000_pdf_Adobe_Reader&quot;)[&quot;UIAObject&quot;](&quot;AVSplitterView&quot;)[&quot;UIAObject&quot;](&quot;AVSplitationPageView&quot;)[&quot;UIAObject&quot;](&quot;AVSplitterView&quot;)[&quot;UIAObject&quot;](&quot;AVScrolledPageView&quot;)[&quot;UIAObject&quot;](&quot;AVScrollView&quot;)[&quot;Document&quot;](0)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Text" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="2000 Speed" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="findChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;AcroRd32&quot;, 3)[&quot;UIAObject&quot;](&quot;Data_Protocol_ECU_Lidec_1_2000_00_0000_pdf_Adobe_Reader&quot;)[&quot;UIAObject&quot;](&quot;AVSplitterView&quot;)[&quot;UIAObject&quot;](&quot;AVSplitationPageView&quot;)[&quot;UIAObject&quot;](&quot;AVSplitterView&quot;)[&quot;UIAObject&quot;](&quot;AVScrolledPageView&quot;)[&quot;UIAObject&quot;](&quot;AVScrollView&quot;)[&quot;Document&quot;](0)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Text" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="82000 DQEffective" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="findChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;AcroRd32&quot;, 3)[&quot;UIAObject&quot;](&quot;Data_Protocol_ECU_Lidec_1_2000_00_0000_pdf_Adobe_Reader&quot;)[&quot;UIAObject&quot;](&quot;AVSplitterView&quot;)[&quot;UIAObject&quot;](&quot;AVSplitationPageView&quot;)[&quot;UIAObject&quot;](&quot;AVSplitterView&quot;)[&quot;UIAObject&quot;](&quot;AVScrolledPageView&quot;)[&quot;UIAObject&quot;](&quot;AVScrollView&quot;)[&quot;Document&quot;](0)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Text" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="32780 ClantTVal" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="findChildObject" Unit="object">
+					<Parameters LangId="{90813F19-086D-4670-83BC-DB51386DC224}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Sys[&quot;Process&quot;](&quot;AcroRd32&quot;, 3)[&quot;UIAObject&quot;](&quot;Data_Protocol_ECU_Lidec_1_2000_00_0000_pdf_Adobe_Reader&quot;)[&quot;UIAObject&quot;](&quot;AVSplitterView&quot;)[&quot;UIAObject&quot;](&quot;AVSplitationPageView&quot;)[&quot;UIAObject&quot;](&quot;AVSplitterView&quot;)[&quot;UIAObject&quot;](&quot;AVScrolledPageView&quot;)[&quot;UIAObject&quot;](&quot;AVScrollView&quot;)[&quot;Document&quot;](0)" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Text" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="122901 PowerSupplyRawValue" />
+					</Parameters>
+				</Data>
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{7B066B60-231F-48EB-B722-BACAC3E1AD1E}" />
+	<Parameters Key="{E85EF816-66C9-4FF1-8105-2635B5205BBE}" />
+</Root>

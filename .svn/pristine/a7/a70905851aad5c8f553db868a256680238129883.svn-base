@@ -1,0 +1,50 @@
+!ident	94055483
+!ident_index	006
+
+!environment	06301
+!target	EMT01
+!state	released
+!machineserial	CDmachinSerialNr
+
+!machinespecifictype	CDmachinSpecType
+
+!machinesalestype	database.MachineSalesType.1.1
+
+!machinetypeseries	database.MachineTypeSeries.1.1
+
+!machineclass	database.MachineClass.1.1
+
+
+# outer core
+out_emt01.hex	crc1.0xDA265114	crc2.0xF3F46223	crc3.0x8D7CADFC	crc4.0xA1C47682	crc5.0x44003462	crc6.0xC3210424	crc7.0xFA4DA3A4	crc8.0x4A8B8801	crc9.0x5A50FC7A	crc10.0xF132393E	crc11.0x92087114	crc12.0x0BE4C706	crc13.0xEC3C7742	crc14.0xC5F8E1CB	crc15.0x9457F2C5	crc16.0xE60EDAB6	crc17.0xB0E25B82	crc18.0x22FE7D64	crc19.0xB105259E	name.out	version.4.340
+system.cnf	crc1.0xC672D3FF	name.include	version.4.340
+projectx.xml	crc1.0x65C6A6ED	version.00002
+mon_init.s	crc1.0x93BE	version.00000	client.* server.BILD
+mon1251.s	crc1.0x3251	name.mon_font	version.00003	client.* server.BILD language.=russian language.=bulgaria
+mon88591.s	crc1.0xDC85	name.mon_font	version.00003	client.* server.BILD language.=american language.=dansk language.=deutsch language.=english language.=espanol language.=francais language.=italiano language.=nederlan language.=norsk language.=portugue language.=suomi language.=svenska
+mon88592.s	crc1.0x718B	name.mon_font	version.00003	client.* server.BILD language.=polski language.=magyar language.=cesky language.=romana language.=slovenci language.=slovensc
+mon88594.s	crc1.0xAD0B	name.mon_font	version.00003	client.* server.BILD language.=lietuviu language.=latviesu language.=eesti
+mon88597.s	crc1.0x8FFD	name.mon_font	version.00003	client.* server.BILD language.=greek
+mon88599.s	crc1.0x44ED	name.mon_font	version.00003	client.* server.BILD language.=turkish
+syslog.cnf	crc1.0x307CCC85	version.03999
+$message
+$language
+client.cnf	version.00017
+lisprj.ps	crc1.0xE65C	version.00000	client.* server.BILD
+llbasic.ps	crc1.0x9912	version.00041	client.* server.BILD
+llfar012.ps	crc1.0xC943	version.00002	client.* server.BILD
+llfar016.ps	crc1.0xF455	version.00002	client.* server.BILD
+llfar020.ps	crc1.0xD5B7	version.00006	client.* server.BILD
+llfstd.ps	crc1.0x406A	version.00004	client.* server.BILD
+llgenpar.ps	crc1.0xB9E5	version.00014	client.* server.BILD
+llgensym.ps	crc1.0x1131	version.00023	client.* server.BILD
+llspepar.ps	crc1.0x329C	version.00016	client.* server.BILD
+llspesym.ps	crc1.0x28D2	version.00017	client.* server.BILD
+llsystem.ps	crc1.0x440B	version.00026	client.* server.BILD
+io_compl.cnf	crc1.0x59AB14FD	name.include	version.00005
+autoexec.frc	version.00002
+applicat_emt01.out	crc1.0xD4D96F13	crc2.0xC9ACD43D	crc3.0xABB6346F	crc4.0x9E042449	crc5.0x94BF7EB9	crc6.0x2F168DBC	crc7.0xA4B1A22F	crc8.0x84A844F2	crc9.0xB22B8C60	crc10.0xEA58614D	name.applicat
+database.xml	crc1.0x75315460	version.00003
+shutdown.frc	version.00002
+
+boot.cnf	crc.0x1d79e65d

@@ -1,0 +1,4 @@
+!version	00176
+!safety sm[CF]
+
+io_compl.cnf	crc.0x06f45dec

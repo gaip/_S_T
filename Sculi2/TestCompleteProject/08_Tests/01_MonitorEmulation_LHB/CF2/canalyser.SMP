@@ -1,0 +1,17 @@
+Trigger options:
+Trigger variable	cantime.slave_lock
+Trigger level	0
+Trigger edge	undefined
+
+Sample options:
+Scan time [ms]	0
+Number of samples	50000
+Samples after trigger	50000
+automatic save	CF2:\canalyser
+maximum space	
+
+crc	0x8B81E688
+
+Sample Data:
+Trigger time	2005-03-13T18:30:25
+Index	canalyser.line	canalyser.dlc	canalyser.data.0	canalyser.data.1	canalyser.data.2	canalyser.data.3	canalyser.data.4	canalyser.data.5	canalyser.data.6	canalyser.data.7	canalyser.identifier	canalyser.lec	canalyser.msg_type	canalyser.timestamp	canalyser.module_nr

@@ -1,0 +1,18 @@
+Trigger options:																																																																																																																			
+Trigger variable	MDhydrOilLevel																																																																																																																		
+Trigger level	1																																																																																																																		
+Trigger edge	undefined																																																																																																																		
+																																																																																																																			
+Sample options:																																																																																																																			
+Scan time [ms]	25																																																																																																																		
+Number of samples	5000																																																																																																																		
+Samples after trigger	5000																																																																																																																		
+automatic save	CF2:\Cycle																																																																																																																		
+minimum space	10000																																																																																																																		
+maximum space	14000000																																																																																																																		
+																																																																																																																			
+crc	0xBCD9324D																																																																																																																		
+																																																																																																																			
+Sample Data:																																																																																																																			
+Trigger time	2009-10-13T09:09:37																																																																																																																		
+Time [ms]	%MD2.1000	MDoperationMode	%IW1.66.1	%IW1.66.2	%IW1.68.1	%IW1.68.2	MDloadFilteredHW	MDloadFilteredCW	MDhgLoadLMLW1	MDhgLoadLMLW2	MDloadLML	MDhgSpeedW1	MDhgSpeedW2	MDhgRopeLengthW1	MDhgRopeLengthW2	MDropeIncW1	MDropeIncW2	%ID1.58.1	%ID1.57.1	MDhgForcLimSigW1	MDhgForcLimSigW2	MDhgAnalogSigW1	MDhgAnalogSigW2	QXhgBrakeW1NDuty	QXhgBrakeW2NDuty	SDaccTrPressStVa	SDaccOilPress	SDhgAccSuckPress	MDloadCorrW1	MDloadCorrW2	MDw1Tq	MDw1TrTqSum	MDw2Tq	MDw2TrTqSum	MDaccTrqPercW1	MDaccTrqPercW2	MDw1TrTqReqSum	MDw1AcTrTqReqSum	MDaccTorquePerc1	SXaccReduc2	MDw2TrTqReqSum	MDw2AcTrTqReqSum	MDaccTorquePerc2	SXaccReduc3	MDw1AccTrVgReq	MDw1AccTrSigReq	MDw2AccTrVgReq	MDw2AccTrSigReq	MDw1TrSigReq	MDw2TrSigReq	%IW1.43.8	%IW1.43.7	%IW1.43.10	MDlgJoyStick	QXlgValve4EY13	QXlgValve4EY14	MDjibAngleLML	MDoutreachLML	MDoutreachInkr	%ID1.58.7	MDlgAnalogSignal	MDsgJoyStick	MDsgAnalogSignal	QXsgBrake	MDsgPosition	SDsgPosition	SDsgAngleSpeed	SDspeedJibHead	%ID1.57.7	MDjibHeadHight	MDutilizationLML	MDengineTorqueD1	MDengineSpeed	MDdiffRopeLength	MDdiffGrabOpen	MXgrabOpened	MDdiffGrabClose	MXgrabClosed	MXgrabOpen	MXgrabClose	MXopenGrUpOrDo	%IX1.35.3	%IX1.35.4	%IX1.35.5	MDstartTime	MDstartPosX	MDstartPosY	MDstartPosZ	MDstopTime	MDstopPosX	MDstopPosY	MDstopPosZ	MDloadWeight	MDlsmWeight	MWstartDetected	MWstopDetected	%QW4.17.1	%QW4.17.2	%QW4.17.3	%QW4.17.4	%QW4.17.5	%QW4.17.6	%QW4.17.7	%QW4.17.8	%QW1.18.1	%QW1.18.2	%QW1.18.3	%QW1.18.4	%QW1.18.5	%QW1.18.6	%QW1.18.7	%QW1.18.8	%QW1.18.9	%QW1.18.10	%QW1.18.15

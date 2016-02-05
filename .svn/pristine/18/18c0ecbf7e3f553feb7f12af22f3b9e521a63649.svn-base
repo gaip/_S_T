@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{94977513-AD8D-4187-8224-E48EAE2437E1}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="ClickOnMFinder" Unit="ClickOnMFinder" />
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{F5C6C8D5-F986-4EFA-A301-EED7F5030095}" />
+	<Parameters Key="{78D4554C-88AD-4B62-848E-C962889D4AE8}" />
+</Root>

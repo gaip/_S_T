@@ -1,0 +1,18 @@
+Trigger options:	
+Trigger variable	%QW1.17.1
+Trigger level	1000
+Trigger edge	rising
+
+Sample options:	
+Scan time [ms]	25
+Number of samples	20000
+Samples after trigger	20000
+automatic save	CF2:\sample
+minimum space	5000
+maximum space	100000
+
+crc	0xB46A0F3A
+
+Sample Data:	
+Trigger time	2008-08-25T17:12:31																																																																																																																																																																																																																																				
+Time [ms]	%MD2.1000	IWSforceSensorW1	IWSforceSensorW2	IWhgForceSensW1	IWhgForceSensW2	IWjsRightYsignal	IXjsRightDeadMan	IXjsLeftDeadMan	MDhgSpeedW1	MDhgSumPressW1	MDhgSumPressW2	MDhgAnalogSigW1	MDhgAnalogSigW2	MDhgJsNewW1	MDutilizationTip	MDutilizationLML	MDhgRopeLengthW1	MDhgRopeLengthW2	MDenginePosFac	MDengineNegFac	MDtheoreticSpeed	MDschluckVolumen	MDdieselEngSpeed	MDengineTorqueD1	MDhgJoyStick	MDhydrOilTemp	MDpowerLimFacHW	MDhgLoadLMLW1	MDcompPumpW1	MDcompTrimotW1	MDhgSumPrePu1Ag1	MDhgSumPrePu2Ag1	MDloadFilteredHW	MDpowerPu1Hg	MDpowerPu2Hg	MWhgPu1LiftW1	MWhgPu1LowW1	MWhgTrimoNDutyW1	MWhgTrim2NDutyW1	QXhgBrakeW1NDuty	CWMinCurTr3NdW1	CWMaxCuTr3UpNdW1	CWMaxCuTr3DoNdW1	CWMaxCuTr3UpEmW1	CWMaxCuTr3DoEmW1	CWminCurTr2NdW2	CWmaxCuTr2UpNdW2	CWmaxCuTr2DoNdW2	CWmaxCuTr2UpEmW2	CWmaxCuTr2DoEmW2	MDhgTrimotSigW1	MDhgTrimotSigW2	CXenable2StepTr	CDpercAllTrMaxCu	CWcurTr3W1Ste2Up	CWcurTr3W1Ste2Do	MWhgTrimoNDutyW1	MWhgTri1NdW1Agg1	MWhgTrim2NDutyW1	MWhgTri2NdW1Agg1	MWhgTrim3NDutyW1	MWhgTri3NdW1Agg1	%QW1.17.1	%QW1.17.2	%QW1.17.3	%QW1.17.4	%QW1.17.5	%QW1.17.6	%QW1.17.7	%QW1.17.8	%QW1.17.9	%QW1.17.10	%QW1.17.11	%QW1.17.12	%QW1.17.13	%QW1.17.14	%QW1.17.15	%QW1.17.16	%QW1.18.1	%QW1.18.2	%QW1.18.3	%QW1.18.4	%QW1.18.5	%QW1.18.6	%QW1.18.7	%QW1.18.8	%QW1.18.9	%QW1.18.10	%QW1.18.11	%QW1.18.12	%QW1.18.13	%QW1.18.14	%QW1.18.15	%QW1.18.16	%QW4.17.1	%QW4.17.2	%QW4.17.3	%QW4.17.4	%QW4.17.5	%QW4.17.6	%QW4.17.7	%QW4.17.8	%QW4.17.9	%QW4.17.10	%QW4.17.11	%QW4.17.12	%QW4.17.13	%QW4.17.14	%QW4.17.15	%QW4.17.16	%QW4.18.1	%QW4.18.2	%QW4.18.3	%QW4.18.4	%QW4.18.5	%QW4.18.6	%QW4.18.7	%QW4.18.8	%QW4.18.9	%QW4.18.10	%QW4.18.11	%QW4.18.12	%QW4.18.13	%QW4.18.14	%QW4.18.15	%QW4.18.16	%IW1.41.1	%IW1.41.2	%IW1.41.3	%IW1.41.4	%IW1.41.5	%IW1.41.6	%IW1.41.7	%IW1.41.8	%IW1.41.9	%IW1.41.10	%IW1.41.11	%IW1.41.12	%IW1.41.13	%IW1.41.14	%IW1.41.15	%IW1.41.16	%IW1.42.1	%IW1.42.2	%IW1.42.3	%IW1.42.4	%IW1.42.5	%IW1.42.6	%IW1.42.7	%IW1.42.8	%IW1.42.9	%IW1.42.10	%IW1.42.11	%IW1.42.12	%IW1.42.13	%IW1.42.14	%IW1.42.15	%IW1.42.16

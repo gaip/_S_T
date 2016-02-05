@@ -1,0 +1,1852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Groups
+  Modified="18.08.2011 06:33:05"
+  Kind="Volatile"
+  Created="18.08.2011 06:33:05"
+  Version="2"
+  Liuip="PME1.ID::::::::::">
+  <Group
+    Modified="18.08.2011 06:33:05"
+    Feature="">
+    <GroupLocale
+      Lang="ger">
+      <Name>Machine</Name>
+      <Description />
+    </GroupLocale>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Machinedata</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="CDDriveControlDevice" />
+      <Item
+        Identity="CDmachinCodingKey" />
+      <Item
+        Identity="CDmachinSerialNr" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Engine</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IREngActualSpeed" />
+      <Item
+        Identity="IREngActualTorque" />
+      <Item
+        Identity="IREngMaxTorque" />
+      <Item
+        Identity="IREngThrottle" />
+      <Item
+        Identity="IREngBattVolt" />
+      <Item
+        Identity="IREngChargeAirTemp" />
+      <Item
+        Identity="IREngCoolWTemp" />
+      <Item
+        Identity="IREngHydOilTemp" />
+      <Item
+        Identity="IREngOilPress" />
+      <Item
+        Identity="IREngChargeAirPress" />
+      <Item
+        Identity="IREngFuelCoAct" />
+      <Item
+        Identity="IREngOilLevel" />
+      <Item
+        Identity="QREngSpeedRef" />
+      <Item
+        Identity="QREngTorque" />
+      <Item
+        Identity="QREngCurrFan" />
+      <Item
+        Identity="IXRequestEngineStart" />
+      <Item
+        Identity="IXErrorECU" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Exhaust treatment</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IDAgnMode" />
+      <Item
+        Identity="IRAgnSootLoadLevel" />
+      <Item
+        Identity="IRAgnEngTorqueRequest" />
+      <Item
+        Identity="IRAgnRemainTimeRegEnd" />
+      <Item
+        Identity="IRAgnAdBlueLevel" />
+      <Item
+        Identity="IXAgnErrFail" />
+      <Item
+        Identity="IXAgnErrPblFail" />
+      <Item
+        Identity="IXAgnHEST" />
+      <Item
+        Identity="IXAgnAdBlueLevelWarn" />
+      <Item
+        Identity="IXAgnAdBlueLevelSafety" />
+      <Item
+        Identity="QXAgnDPFRegenEnable" />
+      <Item
+        Identity="QXAgnDPFRegenInitiate" />
+      <Item
+        Identity="IXAgnEnableAuto" />
+      <Item
+        Identity="IXAgnTriggerManual" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Backup alarm</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="QXBackUpBuzzer" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Break</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXBreakOilPressure" />
+      <Item
+        Identity="QXParkBreak" />
+      <Item
+        Identity="IXSafetySwitch" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Cabine buzzer</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="QRCabineBuzzer" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>2nd Path</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="QX2ndPath" />
+      <Item
+        Identity="IXDiagVoltAft2ndPath" />
+      <Item
+        Identity="IXDiagVoltBef2ndPath" />
+      <Item
+        Identity="IXDiagVoltBefParkBreak" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Overspeed protection</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="QXOverSpProtect" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Wiper</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXWiperAfterWipe" />
+      <Item
+        Identity="IXWiperInterval" />
+      <Item
+        Identity="QRWiperInterval" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Climate control</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IDCCMode" />
+      <Item
+        Identity="IRCCCabineTemp" />
+      <Item
+        Identity="IRCCCondensatorTemp" />
+      <Item
+        Identity="IRCCFanSpeed" />
+      <Item
+        Identity="IRCCMixRateWaterValve" />
+      <Item
+        Identity="IRCCOpenPosWaterValve" />
+      <Item
+        Identity="IRCCOutsideTemp" />
+      <Item
+        Identity="IRCCStaFlapFeet" />
+      <Item
+        Identity="IXCCStaCirculation" />
+      <Item
+        Identity="IXCCStaClimaAutomatic" />
+      <Item
+        Identity="IXCCStaCompressor" />
+      <Item
+        Identity="IXCCStaDustFilterActive" />
+      <Item
+        Identity="IXCCStaHeaterActive" />
+      <Item
+        Identity="IXCCStaOnlyHeating" />
+      <Item
+        Identity="IXCCStaPressSwitch" />
+      <Item
+        Identity="QDCCMode" />
+      <Item
+        Identity="QDCCOpenSelect" />
+      <Item
+        Identity="QDCCRegulatorSelect" />
+      <Item
+        Identity="QRCCCoolantTemp" />
+      <Item
+        Identity="QRCCFanSpeed" />
+      <Item
+        Identity="QRCCFlapFeet" />
+      <Item
+        Identity="QRCCPositionWaterValve" />
+      <Item
+        Identity="QRCCTemperature" />
+      <Item
+        Identity="QXCCCirculation" />
+      <Item
+        Identity="QXCCCompressorTest" />
+      <Item
+        Identity="QXCCCondensatorFan" />
+      <Item
+        Identity="QXCCDIntExtCondensatorFan" />
+      <Item
+        Identity="QXCCDustFilterFan" />
+      <Item
+        Identity="QXCCExtPressSwitch" />
+      <Item
+        Identity="QXCCSelectWaterValve" />
+      <Item
+        Identity="QXCCStaDieselEngine" />
+      <Item
+        Identity="QXCCintExtCompressPressSwitch" />
+      <Group
+        Modified="18.08.2011 06:33:05"
+        Feature="">
+        <GroupLocale
+          Lang="ger">
+          <Name>Climate control keyboard</Name>
+          <Description />
+        </GroupLocale>
+        <Item
+          Identity="IXKeyCCTempUp" />
+        <Item
+          Identity="IXKeyCCTempDown" />
+        <Item
+          Identity="IXKeyCCFanSpeedUp" />
+        <Item
+          Identity="IXKeyCCFanSpeedDown" />
+        <Item
+          Identity="IXKeyCCDeforstEnable" />
+        <Item
+          Identity="IXKeyCCCompEnable" />
+      </Group>
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Drive unit</Name>
+        <Description />
+      </GroupLocale>
+      <Group
+        Modified="18.08.2011 06:33:05"
+        Feature="">
+        <GroupLocale
+          Lang="ger">
+          <Name>Outputs</Name>
+          <Description />
+        </GroupLocale>
+        <Item
+          Identity="QRPumpLeftForw1" />
+        <Item
+          Identity="QRPumpLeftBack1" />
+        <Item
+          Identity="QRPumpRightForw1" />
+        <Item
+          Identity="QRPumpRightBack1" />
+        <Item
+          Identity="QRMotorLeft1" />
+        <Item
+          Identity="QRMotorRight1" />
+        <Item
+          Identity="QRMotorLeft2" />
+        <Item
+          Identity="QRMotorRight2" />
+        <Item
+          Identity="QRPumpLeftForw2" />
+        <Item
+          Identity="QRPumpLeftBack2" />
+        <Item
+          Identity="QRPumpRightForw2" />
+        <Item
+          Identity="QRPumpRightBack2" />
+      </Group>
+      <Group
+        Modified="18.08.2011 06:33:05"
+        Feature="">
+        <GroupLocale
+          Lang="ger">
+          <Name>Rotation speed measure</Name>
+          <Description />
+        </GroupLocale>
+        <Item
+          Identity="IDFreqTurasLeft" />
+        <Item
+          Identity="IDFreqTurasRight" />
+        <Item
+          Identity="PRActualDriveSpeedLeft" />
+        <Item
+          Identity="PRActualDriveSpeedRight" />
+        <Item
+          Identity="PRActualTurasFreqLeft" />
+        <Item
+          Identity="PRActualTurasFreqRight" />
+        <Item
+          Identity="CRMotor1LeftImax" />
+        <Item
+          Identity="CRMotor1LeftImin" />
+        <Item
+          Identity="CRMotor1RightImax" />
+        <Item
+          Identity="CRMotor1RightImin" />
+        <Item
+          Identity="CRMotor2LeftImax" />
+        <Item
+          Identity="CRMotor2LeftImin" />
+        <Item
+          Identity="CRMotor2RightImax" />
+        <Item
+          Identity="CRMotor2RightImin" />
+        <Item
+          Identity="CRPump1LeftBackImax" />
+        <Item
+          Identity="CRPump1LeftBackImin" />
+        <Item
+          Identity="CRPump1LeftForwImax" />
+        <Item
+          Identity="CRPump1LeftForwImin" />
+        <Item
+          Identity="CRPump1RightBackImax" />
+        <Item
+          Identity="CRPump1RightBackImin" />
+        <Item
+          Identity="CRPump1RightForwImax" />
+        <Item
+          Identity="CRPump1RightForwImin" />
+        <Item
+          Identity="CRPump2LeftBackImax" />
+        <Item
+          Identity="CRPump2LeftBackImin" />
+        <Item
+          Identity="CRPump2LeftForwImax" />
+        <Item
+          Identity="CRPump2LeftForwImin" />
+        <Item
+          Identity="CRPump2RightBackImax" />
+        <Item
+          Identity="CRPump2RightBackImin" />
+        <Item
+          Identity="CRPump2RightForwImax" />
+        <Item
+          Identity="CRPump2RightForwImin" />
+      </Group>
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Fuel level sensor</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IRFuelSensor" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Drive lever</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IRDriveLevXAxis" />
+      <Item
+        Identity="IRDriveLevYAxis" />
+      <Group
+        Modified="18.08.2011 06:33:05"
+        Feature="">
+        <GroupLocale
+          Lang="ger">
+          <Name>Pedals</Name>
+          <Description />
+        </GroupLocale>
+        <Item
+          Identity="IRDriveLeverInchBreak" />
+        <Item
+          Identity="IRDriveLeverSteerLeft" />
+        <Item
+          Identity="IRDriveLeverSteerRight" />
+      </Group>
+      <Group
+        Modified="18.08.2011 06:33:05"
+        Feature="">
+        <GroupLocale
+          Lang="ger">
+          <Name>Buttons</Name>
+          <Description />
+        </GroupLocale>
+        <Item
+          Identity="IXDriveLev3VStep3" />
+        <Item
+          Identity="IXDriveLev3VStep2" />
+        <Item
+          Identity="IXDriveLev3VStep1" />
+        <Item
+          Identity="IXDriveLevButtHorn" />
+        <Item
+          Identity="IXDriveLevButtSpeedDown" />
+        <Item
+          Identity="IXDriveLevButtSpeedUp" />
+      </Group>
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Drive enable</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXSeatContact" />
+      <Item
+        Identity="IXSafetySwitch" />
+      <Item
+        Identity="IXEmergencyStop" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Fan control</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXManFanReverse" />
+      <Item
+        Identity="QREngCurrFan" />
+      <Item
+        Identity="QXLidEngControlDO3" />
+      <Item
+        Identity="IREngChargeAirTemp" />
+      <Item
+        Identity="IREngCoolWTemp" />
+      <Item
+        Identity="IREngHydOilTemp" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Digital inputs</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXSeatContact" />
+      <Item
+        Identity="IXSafetySwitch" />
+      <Item
+        Identity="IXEmergencyStop" />
+      <Item
+        Identity="IXReplenishPressure" />
+      <Item
+        Identity="IXBreakOilPressure" />
+      <Item
+        Identity="IXWiperAfterWipe" />
+      <Item
+        Identity="IXWiperInterval" />
+      <Item
+        Identity="IXResDigInp08" />
+      <Item
+        Identity="IXErrorECU" />
+      <Item
+        Identity="IXReturnFilter" />
+      <Item
+        Identity="IXManFanReverse" />
+      <Item
+        Identity="IXFloatPosition" />
+      <Item
+        Identity="IXHoistLimit" />
+      <Item
+        Identity="IXBucketReturn" />
+      <Item
+        Identity="IXPowerBoostWH" />
+      <Item
+        Identity="IXWinchRelease" />
+      <Item
+        Identity="IXHydOilLevel" />
+      <Item
+        Identity="IXFATTempLeft" />
+      <Item
+        Identity="IXFATTempRight" />
+      <Item
+        Identity="IXAgnEnableAuto" />
+      <Item
+        Identity="IXAgnTriggerManual" />
+      <Item
+        Identity="IXRequestEngineStart" />
+      <Item
+        Identity="IX2ndFuncPrimaryWH" />
+      <Item
+        Identity="IX2ndFuncSecondWH" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Working hydraulic</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXFloatPosition" />
+      <Item
+        Identity="IXHoistLimit" />
+      <Item
+        Identity="IXBucketReturn" />
+      <Item
+        Identity="IXPowerBoostWH" />
+      <Item
+        Identity="IXWinchRelease" />
+      <Item
+        Identity="IX2ndFuncPrimaryWH" />
+      <Item
+        Identity="IX2ndFuncSecondWH" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>Hour meter</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="SRactMachineHour" />
+      <Item
+        Identity="SRactDailyHour" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>LIDAT</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="MRLidatMachineHour" />
+      <Item
+        Identity="MRLidatFuelConsSum" />
+      <Item
+        Identity="MDLidatFuelLevel" />
+      <Item
+        Identity="MXLidatApplTrigger" />
+    </Group>
+  </Group>
+  <Group
+    Modified="18.08.2011 06:33:05"
+    Feature="">
+    <GroupLocale
+      Lang="ger">
+      <Name>Parameter</Name>
+      <Description />
+    </GroupLocale>
+  </Group>
+  <Group
+    Modified="18.08.2011 06:33:05"
+    Feature="">
+    <GroupLocale
+      Lang="ger">
+      <Name>Options</Name>
+      <Description />
+    </GroupLocale>
+    <Item
+      Identity="CDEcoModeEnable" />
+    <Item
+      Identity="CDFanReverseEnable" />
+    <Item
+      Identity="CDWHPowerBoostEnable" />
+    <Item
+      Identity="CXFanControlEnable" />
+    <Item
+      Identity="CXHydOilSensorEnable" />
+    <Item
+      Identity="CXAccelPowerBoostEnable" />
+    <Item
+      Identity="CXPurgeEnable" />
+    <Item
+      Identity="CXInputOptionEnable" />
+    <Item
+      Identity="CXAggressSelectEnable" />
+    <Item
+      Identity="CXDecelPedalEnable" />
+    <Item
+      Identity="CXFuelConsEnable" />
+    <Item
+      Identity="CXRearCamEnable" />
+    <Item
+      Identity="CXCCKeyboardEnable" />
+    <Item
+      Identity="CXLidatEnable" />
+  </Group>
+  <Group
+    Modified="18.08.2011 06:33:05"
+    Feature="">
+    <GroupLocale
+      Lang="ger">
+      <Name>CAN Modules</Name>
+      <Description />
+    </GroupLocale>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN1_MOD_91</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXPldEngStaStarter" />
+      <Item
+        Identity="IXPldEngStaBatCharge" />
+      <Item
+        Identity="IXPldEngRun" />
+      <Item
+        Identity="IXPldEngRes04" />
+      <Item
+        Identity="IXPldEngStaErrAsynch" />
+      <Item
+        Identity="IXPldEngPowReductHP" />
+      <Item
+        Identity="IXPldEngPowReductActive" />
+      <Item
+        Identity="IXPldEngPowReductHigh" />
+      <Item
+        Identity="IXPldEngStaPreHeat1" />
+      <Item
+        Identity="IXPldEngStaPreHeat2" />
+      <Item
+        Identity="IXPldEngExhBraActive" />
+      <Item
+        Identity="IXPldEngMaxFanSpeed" />
+      <Item
+        Identity="IXPldEngMinFanSpeed" />
+      <Item
+        Identity="IXPldEngEmergStop" />
+      <Item
+        Identity="IXPldEngSendMinSpeed" />
+      <Item
+        Identity="IXPldEngSendMaxSpeed" />
+      <Item
+        Identity="IXPldEngCoolWTempW" />
+      <Item
+        Identity="IXPldEngCoolWTempS" />
+      <Item
+        Identity="IXPldEngCharAirTempW" />
+      <Item
+        Identity="IXPldEngCharAirTempS" />
+      <Item
+        Identity="IXPldEngFuelTempW" />
+      <Item
+        Identity="IXPldEngFuelTempS" />
+      <Item
+        Identity="IXPldEngWatInFuel" />
+      <Item
+        Identity="IXPldEngRes24" />
+      <Item
+        Identity="IXPldEngHydOilTempW" />
+      <Item
+        Identity="IXPldEngHydOilTempS" />
+      <Item
+        Identity="IXPldEngOilPressW" />
+      <Item
+        Identity="IXPldEngOilPressS" />
+      <Item
+        Identity="IXPldEngFuelPressMinW" />
+      <Item
+        Identity="IXPldEngFuelPressMinS" />
+      <Item
+        Identity="IXPldEngAirFiltPressW" />
+      <Item
+        Identity="IXPldEngAirFiltPressS" />
+      <Item
+        Identity="IXPldEngFuelPressRail1W" />
+      <Item
+        Identity="IXPldEngFuelPressRail1S" />
+      <Item
+        Identity="IXPldEngFuelPressRail2W" />
+      <Item
+        Identity="IXPldEngFuelPressRail2S" />
+      <Item
+        Identity="IXPldEngResPressSensor1W" />
+      <Item
+        Identity="IXPldEngResPressSensor1S" />
+      <Item
+        Identity="IXPldEngOilLevelW" />
+      <Item
+        Identity="IXPldEngOilLevelS" />
+      <Item
+        Identity="IXPldEngCoolWaterLevel" />
+      <Item
+        Identity="IXPldEngSupVolHig" />
+      <Item
+        Identity="IXPldEngSupVolLow" />
+      <Item
+        Identity="IXPldEngSpeedW" />
+      <Item
+        Identity="IXPldEngSpeedS" />
+      <Item
+        Identity="IXPldEngFuelPressMaxW" />
+      <Item
+        Identity="IXPldEngFuelPressMaxS" />
+      <Item
+        Identity="IXPldEngRes48" />
+      <Item
+        Identity="IXPldEngErrStaSyn" />
+      <Item
+        Identity="IXPldEngErrSpeedSensor12" />
+      <Item
+        Identity="IXPldEngErrInj" />
+      <Item
+        Identity="IXPldEngErrEDC" />
+      <Item
+        Identity="IXPldEngRes53" />
+      <Item
+        Identity="IXPldEngRes54" />
+      <Item
+        Identity="IXPldEngRes55" />
+      <Item
+        Identity="IXPldEngEDCTimeOut" />
+      <Item
+        Identity="QXPldEngStart" />
+      <Item
+        Identity="QXPldEngInjSetTo0" />
+      <Item
+        Identity="QXPldEngEnableRun" />
+      <Item
+        Identity="QXPldEngEnableThrottle" />
+      <Item
+        Identity="QXPldEngForceIdle" />
+      <Item
+        Identity="QXPldEngDemExhBr" />
+      <Item
+        Identity="QXPldEngLockExhBr" />
+      <Item
+        Identity="QXPldEngFanSpCAN" />
+      <Item
+        Identity="QXPldEngBRes1" />
+      <Item
+        Identity="QXPldEngBRes2" />
+      <Item
+        Identity="QXPldEngPurge" />
+      <Item
+        Identity="QXPldEngRes12" />
+      <Item
+        Identity="QXPldEngRegType" />
+      <Item
+        Identity="QXPldEngOpMode" />
+      <Item
+        Identity="QXPldEngMinNSpeed" />
+      <Item
+        Identity="QXPldEngMaxNSpeed" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN1_MOA_92</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IREngRes12" />
+      <Item
+        Identity="IREngActualSpeed" />
+      <Item
+        Identity="IREngActualTorque" />
+      <Item
+        Identity="IREngMaxTorque" />
+      <Item
+        Identity="IREngThrottle" />
+      <Item
+        Identity="IREngBattVolt" />
+      <Item
+        Identity="IREngChargeAirTemp" />
+      <Item
+        Identity="IREngCoolWTemp" />
+      <Item
+        Identity="IREngHydOilTemp" />
+      <Item
+        Identity="IREngOilPress" />
+      <Item
+        Identity="IREngChargeAirPress" />
+      <Item
+        Identity="IREngFuelCoAct" />
+      <Item
+        Identity="IREngOilLevel" />
+      <Item
+        Identity="IREngRes13" />
+      <Item
+        Identity="QREngSpeedRef" />
+      <Item
+        Identity="QREngTorque" />
+      <Item
+        Identity="QREngCurrFan" />
+      <Item
+        Identity="QREngRes04" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN1_MOD2_93</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXLidEngStaStarter" />
+      <Item
+        Identity="IXLidEngStaBatCharge" />
+      <Item
+        Identity="IXLidEngRun" />
+      <Item
+        Identity="IXLidEngStaRetarder" />
+      <Item
+        Identity="IXLidEngStartLock" />
+      <Item
+        Identity="IXLidEngRes06" />
+      <Item
+        Identity="IXLidEngPowReductActive" />
+      <Item
+        Identity="IXLidEngPowReductHigh" />
+      <Item
+        Identity="IXLidEngStaPreHeatActive" />
+      <Item
+        Identity="IXLidEngStaPreHeatStartReady" />
+      <Item
+        Identity="IXLidEngStaPostHeatActive" />
+      <Item
+        Identity="IXLidEngRes12" />
+      <Item
+        Identity="IXLidEngDiagDO3" />
+      <Item
+        Identity="IXLidEngDiagDO4" />
+      <Item
+        Identity="IXLidEngSendMinSpeed" />
+      <Item
+        Identity="IXLidEngSendMaxSpeed" />
+      <Item
+        Identity="IXLidEngCoolWTempW" />
+      <Item
+        Identity="IXLidEngCoolWTempS" />
+      <Item
+        Identity="IXLidEngCharIntAirTempW" />
+      <Item
+        Identity="IXLidEngCharIntAirTempS" />
+      <Item
+        Identity="IXLidEngFuelTempW" />
+      <Item
+        Identity="IXLidEngFuelTempS" />
+      <Item
+        Identity="IXLidEngWatInFuel" />
+      <Item
+        Identity="IXLidEngRes24" />
+      <Item
+        Identity="IXLidEngHydOilTempW" />
+      <Item
+        Identity="IXLidEngHydOilTempS" />
+      <Item
+        Identity="IXLidEngOilPressW" />
+      <Item
+        Identity="IXLidEngOilPressS" />
+      <Item
+        Identity="IXLidEngFuelPressW" />
+      <Item
+        Identity="IXLidEngFuelPressS" />
+      <Item
+        Identity="IXLidEngAirFiltPressW" />
+      <Item
+        Identity="IXLidEngAirFiltPressS" />
+      <Item
+        Identity="IXLidEngFuelPressRail12W" />
+      <Item
+        Identity="IXLidEngFuelPressRail12S" />
+      <Item
+        Identity="IXLidEngCoolWatLevelW" />
+      <Item
+        Identity="IXLidEngCoolWatLevelS" />
+      <Item
+        Identity="IXLidEngPVGTempW" />
+      <Item
+        Identity="IXLidEngPVGTempS" />
+      <Item
+        Identity="IXLidEngOilLevelW" />
+      <Item
+        Identity="IXLidEngOilLevelS" />
+      <Item
+        Identity="IXLidEngSpeedW" />
+      <Item
+        Identity="IXLidEngSpeedS" />
+      <Item
+        Identity="IXLidEngRes43" />
+      <Item
+        Identity="IXLidEngRes44" />
+      <Item
+        Identity="IXLidEngRes45" />
+      <Item
+        Identity="IXLidEngRes46" />
+      <Item
+        Identity="IXLidEngRes47" />
+      <Item
+        Identity="IXLidEngRes48" />
+      <Item
+        Identity="IXLidEngEmergCutout" />
+      <Item
+        Identity="IXLidEngErrFail" />
+      <Item
+        Identity="IXLidEngErrPblFail" />
+      <Item
+        Identity="IXLidEngStaErrAsynch" />
+      <Item
+        Identity="IXLidEngMIL" />
+      <Item
+        Identity="IXLidEngRes54" />
+      <Item
+        Identity="IXLidEngRes55" />
+      <Item
+        Identity="IXLidEngRes56" />
+      <Item
+        Identity="IXLidEngRes57" />
+      <Item
+        Identity="IXLidEngRes58" />
+      <Item
+        Identity="IXLidEngRes59" />
+      <Item
+        Identity="IXLidEngRes60" />
+      <Item
+        Identity="IXLidEngRes61" />
+      <Item
+        Identity="IXLidEngRes62" />
+      <Item
+        Identity="IXLidEngRes63" />
+      <Item
+        Identity="IXLidEngRes64" />
+      <Item
+        Identity="QXLidEngStart" />
+      <Item
+        Identity="QXLidEngInjSetTo0" />
+      <Item
+        Identity="QXLidEngEnableRun" />
+      <Item
+        Identity="QXLidEngEnableThrottle" />
+      <Item
+        Identity="QXLidEngRes05" />
+      <Item
+        Identity="QXLidEngDemExhBr" />
+      <Item
+        Identity="QXLidEngLockExhBr" />
+      <Item
+        Identity="QXLidEngFanSpCAN" />
+      <Item
+        Identity="QXLidEngControlDO3" />
+      <Item
+        Identity="QXLidEngControlDO4" />
+      <Item
+        Identity="QXLidEngPurge" />
+      <Item
+        Identity="QXLidEngRes12" />
+      <Item
+        Identity="QXLidEngRegType" />
+      <Item
+        Identity="QXLidEngOpMode" />
+      <Item
+        Identity="QXLidEngMinNSpeed" />
+      <Item
+        Identity="QXLidEngMaxNSpeed" />
+      <Item
+        Identity="QXLidEngRes17" />
+      <Item
+        Identity="QXLidEngRes18" />
+      <Item
+        Identity="QXLidEngRes19" />
+      <Item
+        Identity="QXLidEngRes20" />
+      <Item
+        Identity="QXLidEngRes21" />
+      <Item
+        Identity="QXLidEngRes22" />
+      <Item
+        Identity="QXLidEngRes23" />
+      <Item
+        Identity="QXLidEngRes24" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN1_AGN_94</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IDAgnMode" />
+      <Item
+        Identity="IRAgnSootLoadLevel" />
+      <Item
+        Identity="IRAgnRes11" />
+      <Item
+        Identity="IRAgnEngTorqueRequest" />
+      <Item
+        Identity="IRAgnRemainTimeRegEnd" />
+      <Item
+        Identity="IRAgnAdBlueLevel" />
+      <Item
+        Identity="IRAgnRes15" />
+      <Item
+        Identity="IXAgnErrFail" />
+      <Item
+        Identity="IXAgnErrPblFail" />
+      <Item
+        Identity="IXAgnHEST" />
+      <Item
+        Identity="IXAgnAdBlueLevelWarn" />
+      <Item
+        Identity="IXAgnAdBlueLevelSafety" />
+      <Item
+        Identity="IXAgnRes06" />
+      <Item
+        Identity="IXAgnRes07" />
+      <Item
+        Identity="IXAgnRes08" />
+      <Item
+        Identity="QXAgnDPFRegenEnable" />
+      <Item
+        Identity="QXAgnDPFRegenInitiate" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN2_DE32_33</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXCoolantLevelEngine" />
+      <Item
+        Identity="IXDPFManual" />
+      <Item
+        Identity="IXDPFAuto" />
+      <Item
+        Identity="IXSeatContact" />
+      <Item
+        Identity="IXSafetySwitch" />
+      <Item
+        Identity="IXEmergencyStop" />
+      <Item
+        Identity="IXReplenishPressure" />
+      <Item
+        Identity="IXBreakOilPressure" />
+      <Item
+        Identity="IXWiperAfterWipe" />
+      <Item
+        Identity="IXWiperInterval" />
+      <Item
+        Identity="IXResDigInp08" />
+      <Item
+        Identity="IXErrorECU" />
+      <Item
+        Identity="IXReturnFilter" />
+      <Item
+        Identity="IXManFanReverse" />
+      <Item
+        Identity="IXFloatPosition" />
+      <Item
+        Identity="IXHoistLimit" />
+      <Item
+        Identity="IXBucketReturn" />
+      <Item
+        Identity="IXPowerBoostWH" />
+      <Item
+        Identity="IXWinchRelease" />
+      <Item
+        Identity="IXHydOilLevel" />
+      <Item
+        Identity="IXFATTempLeft" />
+      <Item
+        Identity="IXFATTempRight" />
+      <Item
+        Identity="IXAgnEnableAuto" />
+      <Item
+        Identity="IXAgnTriggerManual" />
+      <Item
+        Identity="IXRequestEngineStart" />
+      <Item
+        Identity="IXResDigInp23" />
+      <Item
+        Identity="IX2ndFuncPrimaryWH" />
+      <Item
+        Identity="IX2ndFuncSecondWH" />
+      <Item
+        Identity="IXResDigInp26" />
+      <Item
+        Identity="IXResDigInp27" />
+      <Item
+        Identity="IXResDigInp28" />
+      <Item
+        Identity="IXResDigInp29" />
+      <Item
+        Identity="IXResDigInp30" />
+      <Item
+        Identity="IXResDigInp31" />
+      <Item
+        Identity="IXResDigInp32" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN2_JD_67</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IXDriveLevButtSpeedUp" />
+      <Item
+        Identity="IXDriveLevButtSpeedDown" />
+      <Item
+        Identity="IXDriveLevButtHorn" />
+      <Item
+        Identity="IXDriveLevButt04" />
+      <Item
+        Identity="IXDriveLevButt05" />
+      <Item
+        Identity="IXDriveLevButt06" />
+      <Item
+        Identity="IXDriveLev3VStep1" />
+      <Item
+        Identity="IXDriveLev3VStep2" />
+      <Item
+        Identity="IXDriveLev3VStep3" />
+      <Item
+        Identity="IXDriveLevRes10" />
+      <Item
+        Identity="IXDriveLevRes11" />
+      <Item
+        Identity="IXDriveLevRes12" />
+      <Item
+        Identity="IXDriveLevRes13" />
+      <Item
+        Identity="IXDriveLevUseSteerRight" />
+      <Item
+        Identity="IXDriveLevUseSteerLeft" />
+      <Item
+        Identity="IXDriveLevUseInchBreak" />
+      <Item
+        Identity="IXDriveLevUseYAxis" />
+      <Item
+        Identity="IXDriveLevUseXAxis" />
+      <Item
+        Identity="IXDiagDriveLevSteerRight" />
+      <Item
+        Identity="IXDiagDriveLevSteerLeft" />
+      <Item
+        Identity="IXDiagDriveLevInchBreak" />
+      <Item
+        Identity="IXDiagDriveLevYAxis" />
+      <Item
+        Identity="IXDiagDriveLevXAxis" />
+      <Item
+        Identity="IXDiagDriveLev3VStep3" />
+      <Item
+        Identity="IXDiagDriveLev3VStep2" />
+      <Item
+        Identity="IXDiagDriveLev3VStep1" />
+      <Item
+        Identity="IXDiagDriveLevButt06" />
+      <Item
+        Identity="IXDiagDriveLevButt05" />
+      <Item
+        Identity="IXDiagDriveLevButt04" />
+      <Item
+        Identity="IXDiagDriveLevButtHorn" />
+      <Item
+        Identity="IXDiagDriveLevButtSpeedDown" />
+      <Item
+        Identity="IXDiagDriveLevButtSpeedUp" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN2_JA_68</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IRDriveLevXAxis" />
+      <Item
+        Identity="IRDriveLevYAxis" />
+      <Item
+        Identity="IRDriveLeverInchBreak" />
+      <Item
+        Identity="IRDriveLeverSteerLeft" />
+      <Item
+        Identity="IRDriveLeverSteerRight" />
+      <Item
+        Identity="QRDriveLeverVibr01" />
+      <Item
+        Identity="QRDriveLeverVibr02" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN2_TB09_93</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="QXKeyCCBacklight" />
+      <Item
+        Identity="QXKeyCCTempUpLed3" />
+      <Item
+        Identity="QXKeyCCTempUpLed2" />
+      <Item
+        Identity="QXKeyCCTempUpLed1" />
+      <Item
+        Identity="QXKeyCCTempDownLed3" />
+      <Item
+        Identity="QXKeyCCTempDownLed2" />
+      <Item
+        Identity="QXKeyCCTempDownLed1" />
+      <Item
+        Identity="QXKeyCCFanSpeedUpLed3" />
+      <Item
+        Identity="QXKeyCCFanSpeedUpLed2" />
+      <Item
+        Identity="QXKeyCCFanSpeedUpLed1" />
+      <Item
+        Identity="QXKeyCCFanSpeedDownLed3" />
+      <Item
+        Identity="QXKeyCCFanSpeedDownLed2" />
+      <Item
+        Identity="QXKeyCCDefrostEnableLed3" />
+      <Item
+        Identity="QXKeyCCDefrostEnableLed2" />
+      <Item
+        Identity="QXKeyCCDefrostEnableLed1" />
+      <Item
+        Identity="QXKeyCCEnableLed3" />
+      <Item
+        Identity="QXKeyCCEnableLed2" />
+      <Item
+        Identity="QXKeyCCEnableLed1" />
+      <Item
+        Identity="IXKeyCCTempUp" />
+      <Item
+        Identity="IXKeyCCTempDown" />
+      <Item
+        Identity="IXKeyCCFanSpeedUp" />
+      <Item
+        Identity="IXKeyCCFanSpeedDown" />
+      <Item
+        Identity="IXKeyCCDeforstEnable" />
+      <Item
+        Identity="IXKeyCCCompEnable" />
+      <Item
+        Identity="IXKeyCCCompEnable" />
+      <Item
+        Identity="IXKeyCCDeforstEnable" />
+      <Item
+        Identity="IXKeyCCFanSpeedDown" />
+      <Item
+        Identity="IXKeyCCFanSpeedUp" />
+      <Item
+        Identity="IXKeyCCTempDown" />
+      <Item
+        Identity="IXKeyCCTempUp" />
+      <Item
+        Identity="IXKeyCCDiagOut01" />
+      <Item
+        Identity="IXKeyCCDiagOut02" />
+      <Item
+        Identity="IXKeyCCDiagOut03" />
+      <Item
+        Identity="IXKeyCCDiagOut04" />
+      <Item
+        Identity="IXKeyCCDiagOut05" />
+      <Item
+        Identity="IXKeyCCDiagOut06" />
+      <Item
+        Identity="IXKeyCCDiagOut07" />
+      <Item
+        Identity="IXKeyCCDiagOut08" />
+      <Item
+        Identity="IXKeyCCDiagOut09" />
+      <Item
+        Identity="IXKeyCCDigInp02" />
+      <Item
+        Identity="QXKeyCCEnableLed1" />
+      <Item
+        Identity="QXKeyCCEnableLed2" />
+      <Item
+        Identity="QXKeyCCEnableLed3" />
+      <Item
+        Identity="QXKeyCCDefrostEnableLed1" />
+      <Item
+        Identity="QXKeyCCDefrostEnableLed2" />
+      <Item
+        Identity="QXKeyCCDefrostEnableLed3" />
+      <Item
+        Identity="QXKeyCCFanSpeedDownLed1" />
+      <Item
+        Identity="QXKeyCCFanSpeedDownLed2" />
+      <Item
+        Identity="QXKeyCCFanSpeedDownLed3" />
+      <Item
+        Identity="QXKeyCCFanSpeedUpLed1" />
+      <Item
+        Identity="QXKeyCCFanSpeedUpLed2" />
+      <Item
+        Identity="QXKeyCCFanSpeedUpLed3" />
+      <Item
+        Identity="QXKeyCCTempDownLed1" />
+      <Item
+        Identity="QXKeyCCTempDownLed2" />
+      <Item
+        Identity="QXKeyCCTempDownLed3" />
+      <Item
+        Identity="QXKeyCCTempUpLed1" />
+      <Item
+        Identity="QXKeyCCTempUpLed2" />
+      <Item
+        Identity="QXKeyCCTempUpLed3" />
+      <Item
+        Identity="QXKeyCCDigOut01" />
+      <Item
+        Identity="QXKeyCCDigOut02" />
+      <Item
+        Identity="QXKeyCCDigOut03" />
+      <Item
+        Identity="QXKeyCCDigOut04" />
+      <Item
+        Identity="QXKeyCCDigOut05" />
+      <Item
+        Identity="QXKeyCCDigOut06" />
+      <Item
+        Identity="QXKeyCCDigOut07" />
+      <Item
+        Identity="QXKeyCCDigOut08" />
+      <Item
+        Identity="QXKeyCCDigOut09" />
+      <Item
+        Identity="QXKeyCCBacklight" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN2_CC01_106</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IRCCCabineTemp" />
+      <Item
+        Identity="IRCCFanSpeed" />
+      <Item
+        Identity="IRCCOutsideTemp" />
+      <Item
+        Identity="IRCCMixRateWaterValve" />
+      <Item
+        Identity="IRCCCondensatorTemp" />
+      <Item
+        Identity="IRCCOpenPosWaterValve" />
+      <Item
+        Identity="IRCCStaFlapHead" />
+      <Item
+        Identity="IRCCStaFlapFeet" />
+      <Item
+        Identity="IRCCStaFlapMiddle" />
+      <Item
+        Identity="IRCCStaFlap5" />
+      <Item
+        Identity="IRCCStaFlapCirculation" />
+      <Item
+        Identity="IDCCMode" />
+      <Item
+        Identity="IXCCRes01" />
+      <Item
+        Identity="IXCCRes02" />
+      <Item
+        Identity="IXCCRes03" />
+      <Item
+        Identity="IXCCRes04" />
+      <Item
+        Identity="IXCCRes05" />
+      <Item
+        Identity="IXCCStaCirculation" />
+      <Item
+        Identity="IXCCStaCompressor" />
+      <Item
+        Identity="IXCCStaPressSwitch" />
+      <Item
+        Identity="IXCCStaClimaAutomatic" />
+      <Item
+        Identity="IXCCStaOnlyHeating" />
+      <Item
+        Identity="IXCCStaHeaterActive" />
+      <Item
+        Identity="IXCCStaDustFilterActive" />
+      <Item
+        Identity="IXCCRes13" />
+      <Item
+        Identity="IXCCRes14" />
+      <Item
+        Identity="IXCCRes15" />
+      <Item
+        Identity="IXCCRes16" />
+      <Item
+        Identity="QRCCTemperature" />
+      <Item
+        Identity="QRCCFanSpeed" />
+      <Item
+        Identity="QRCCCoolantTemp" />
+      <Item
+        Identity="QRCCPositionWaterValve" />
+      <Item
+        Identity="QRCCFlapHead" />
+      <Item
+        Identity="QRCCFlapFeet" />
+      <Item
+        Identity="QRCCFlapMiddle" />
+      <Item
+        Identity="QRCCFlap5" />
+      <Item
+        Identity="QRCCFlapCirculation" />
+      <Item
+        Identity="QDCCMode" />
+      <Item
+        Identity="QDCCRegulatorSelect" />
+      <Item
+        Identity="QDCCOpenSelect" />
+      <Item
+        Identity="QXCCStaDieselEngine" />
+      <Item
+        Identity="QXCCCondensatorFan" />
+      <Item
+        Identity="QXCCDustFilterFan" />
+      <Item
+        Identity="QXCCExtPressSwitch" />
+      <Item
+        Identity="QXCCSelectWaterValve" />
+      <Item
+        Identity="QXCCCirculation" />
+      <Item
+        Identity="QXCCCompressorTest" />
+      <Item
+        Identity="QXCCDIntExtCondensatorFan" />
+      <Item
+        Identity="QXCCintExtCompressPressSwitch" />
+      <Item
+        Identity="QXCCRes10" />
+      <Item
+        Identity="QXCCRes11" />
+      <Item
+        Identity="QXCCRes12" />
+      <Item
+        Identity="QXCCRes13" />
+      <Item
+        Identity="QXCCRes14" />
+      <Item
+        Identity="QXCCRes15" />
+      <Item
+        Identity="QXCCRes16" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN3_SFTY_5</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="QDSafety_3_5_2" />
+      <Item
+        Identity="QDSafety_3_5_1" />
+      <Item
+        Identity="IDSafety_3_5_2" />
+      <Item
+        Identity="IDSafety_3_5_1" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN3_OD04_13</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="QXBackUpBuzzer" />
+      <Item
+        Identity="QXParkBreak" />
+      <Item
+        Identity="QXOverSpProtect" />
+      <Item
+        Identity="QX2ndPath" />
+      <Item
+        Identity="IXDiagOverCurrBackUp" />
+      <Item
+        Identity="IXDiagChannErrBackUp" />
+      <Item
+        Identity="IXDiagVoltAftBackUp" />
+      <Item
+        Identity="IXDiagVoltBefBackUp" />
+      <Item
+        Identity="IXDiagOverCurrParkBreak" />
+      <Item
+        Identity="IXDiagChannErrParkBreak" />
+      <Item
+        Identity="IXDiagVoltAftParkBreak" />
+      <Item
+        Identity="IXDiagVoltBefParkBreak" />
+      <Item
+        Identity="IXDiagOverCurrOverSpProt" />
+      <Item
+        Identity="IXDiagChannErrOverSpProt" />
+      <Item
+        Identity="IXDiagVoltAftOverSpProt" />
+      <Item
+        Identity="IXDiagVoltBefOverSpProt" />
+      <Item
+        Identity="IXDiagOverCurr2ndPath" />
+      <Item
+        Identity="IXDiagChannErr2ndPath" />
+      <Item
+        Identity="IXDiagVoltAft2ndPath" />
+      <Item
+        Identity="IXDiagVoltBef2ndPath" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN3_OA16_21</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="QRWiperInterval" />
+      <Item
+        Identity="QRCabineBuzzer" />
+      <Item
+        Identity="QRResAnaOut14" />
+      <Item
+        Identity="QRResAnaOut13" />
+      <Item
+        Identity="QRPumpRightBack2" />
+      <Item
+        Identity="QRPumpRightForw2" />
+      <Item
+        Identity="QRPumpLeftBack2" />
+      <Item
+        Identity="QRPumpLeftForw2" />
+      <Item
+        Identity="QRMotorRight2" />
+      <Item
+        Identity="QRMotorLeft2" />
+      <Item
+        Identity="QRMotorRight1" />
+      <Item
+        Identity="QRMotorLeft1" />
+      <Item
+        Identity="QRPumpRightBack1" />
+      <Item
+        Identity="QRPumpRightForw1" />
+      <Item
+        Identity="QRPumpLeftBack1" />
+      <Item
+        Identity="QRPumpLeftForw1" />
+      <Item
+        Identity="IXDiagVoltWipInt" />
+      <Item
+        Identity="IXDiagCurrOverWipInt" />
+      <Item
+        Identity="IXDiagCurrErrWipInt" />
+      <Item
+        Identity="IXDiagCurrAboWipInt" />
+      <Item
+        Identity="IXDiagCurrInWipInt" />
+      <Item
+        Identity="IXDiagCurrBelWipInt" />
+      <Item
+        Identity="IXDiagVoltCabBuzz" />
+      <Item
+        Identity="IXDiagCurrOverCabBuzz" />
+      <Item
+        Identity="IXDiagCurrErrCabBuzz" />
+      <Item
+        Identity="IXDiagCurrAboCabBuzz" />
+      <Item
+        Identity="IXDiagCurrInCabBuzz" />
+      <Item
+        Identity="IXDiagCurrBelCabBuzz" />
+      <Item
+        Identity="IXDiagVoltResAnaOut14" />
+      <Item
+        Identity="IXDiagCurrOverResAnaOut14" />
+      <Item
+        Identity="IXDiagCurrErrResAnaOut14" />
+      <Item
+        Identity="IXDiagCurrAboResAnaOut14" />
+      <Item
+        Identity="IXDiagCurrInResAnaOut14" />
+      <Item
+        Identity="IXDiagCurrBelResAnaOut14" />
+      <Item
+        Identity="IXDiagVoltResAnaOut13" />
+      <Item
+        Identity="IXDiagCurrOverResAnaOut13" />
+      <Item
+        Identity="IXDiagCurrErrResAnaOut13" />
+      <Item
+        Identity="IXDiagCurrAboResAnaOut13" />
+      <Item
+        Identity="IXDiagCurrInResAnaOut13" />
+      <Item
+        Identity="IXDiagCurrBelResAnaOut13" />
+      <Item
+        Identity="IXDiagVoltPRB2" />
+      <Item
+        Identity="IXDiagCurrOverPRB2" />
+      <Item
+        Identity="IXDiagCurrErrPRB2" />
+      <Item
+        Identity="IXDiagCurrAboPRB2" />
+      <Item
+        Identity="IXDiagCurrInPRB2" />
+      <Item
+        Identity="IXDiagCurrBelPRB2" />
+      <Item
+        Identity="IXDiagVoltPRF2" />
+      <Item
+        Identity="IXDiagCurrOverPRF2" />
+      <Item
+        Identity="IXDiagCurrErrPRF2" />
+      <Item
+        Identity="IXDiagCurrAboPRF2" />
+      <Item
+        Identity="IXDiagCurrInPRF2" />
+      <Item
+        Identity="IXDiagCurrBelPRF2" />
+      <Item
+        Identity="IXDiagVoltPLB2" />
+      <Item
+        Identity="IXDiagCurrOverPLB2" />
+      <Item
+        Identity="IXDiagCurrErrPLB2" />
+      <Item
+        Identity="IXDiagCurrAboPLB2" />
+      <Item
+        Identity="IXDiagCurrInPLB2" />
+      <Item
+        Identity="IXDiagCurrBelPLB2" />
+      <Item
+        Identity="IXDiagVoltPLF2" />
+      <Item
+        Identity="IXDiagCurrOverPLF2" />
+      <Item
+        Identity="IXDiagCurrErrPLF2" />
+      <Item
+        Identity="IXDiagCurrAboPLF2" />
+      <Item
+        Identity="IXDiagCurrInPLF2" />
+      <Item
+        Identity="IXDiagCurrBelPLF2" />
+      <Item
+        Identity="IXDiagVoltMotorRight2" />
+      <Item
+        Identity="IXDiagCurrOverMotorRight2" />
+      <Item
+        Identity="IXDiagCurrErrMotorRight2" />
+      <Item
+        Identity="IXDiagCurrAboMotorRight2" />
+      <Item
+        Identity="IXDiagCurrInMotorRight2" />
+      <Item
+        Identity="IXDiagCurrBelMotorRight2" />
+      <Item
+        Identity="IXDiagVoltMotorLeft2" />
+      <Item
+        Identity="IXDiagCurrOverMotorLeft2" />
+      <Item
+        Identity="IXDiagCurrErrMotorLeft2" />
+      <Item
+        Identity="IXDiagCurrAboMotorLeft2" />
+      <Item
+        Identity="IXDiagCurrInMotorLeft2" />
+      <Item
+        Identity="IXDiagCurrBelMotorLeft2" />
+      <Item
+        Identity="IXDiagVoltMotorRight1" />
+      <Item
+        Identity="IXDiagCurrOverMotorRight1" />
+      <Item
+        Identity="IXDiagCurrErrMotorRight1" />
+      <Item
+        Identity="IXDiagCurrAboMotorRight1" />
+      <Item
+        Identity="IXDiagCurrInMotorRight1" />
+      <Item
+        Identity="IXDiagCurrBelMotorRight1" />
+      <Item
+        Identity="IXDiagVoltMotorLeft1" />
+      <Item
+        Identity="IXDiagCurrOverMotorLeft1" />
+      <Item
+        Identity="IXDiagCurrErrMotorLeft1" />
+      <Item
+        Identity="IXDiagCurrAboMotorLeft1" />
+      <Item
+        Identity="IXDiagCurrInMotorLeft1" />
+      <Item
+        Identity="IXDiagCurrBelMotorLeft1" />
+      <Item
+        Identity="IXDiagVoltPRB1" />
+      <Item
+        Identity="IXDiagCurrOverPRB1" />
+      <Item
+        Identity="IXDiagCurrErrPRB1" />
+      <Item
+        Identity="IXDiagCurrAboPRB1" />
+      <Item
+        Identity="IXDiagCurrInPRB1" />
+      <Item
+        Identity="IXDiagCurrBelPRB1" />
+      <Item
+        Identity="IXDiagVoltPRF1" />
+      <Item
+        Identity="IXDiagCurrOverPRF1" />
+      <Item
+        Identity="IXDiagCurrErrPRF1" />
+      <Item
+        Identity="IXDiagCurrAboPRF1" />
+      <Item
+        Identity="IXDiagCurrInPRF1" />
+      <Item
+        Identity="IXDiagCurrBelPRF1" />
+      <Item
+        Identity="IXDiagVoltPLB1" />
+      <Item
+        Identity="IXDiagCurrOverPLB1" />
+      <Item
+        Identity="IXDiagCurrErrPLB1" />
+      <Item
+        Identity="IXDiagCurrAboPLB1" />
+      <Item
+        Identity="IXDiagCurrInPLB1" />
+      <Item
+        Identity="IXDiagCurrBelPLB1" />
+      <Item
+        Identity="IXDiagVoltPLF1" />
+      <Item
+        Identity="IXDiagCurrOverPLF1" />
+      <Item
+        Identity="IXDiagCurrErrPLF1" />
+      <Item
+        Identity="IXDiagCurrAboPLF1" />
+      <Item
+        Identity="IXDiagCurrInPLF1" />
+      <Item
+        Identity="IXDiagCurrBelPLF1" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN3_IF02_49</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IDFreqTurasLeft" />
+      <Item
+        Identity="IRDiagTurasLeft" />
+      <Item
+        Identity="IDFreqTurasRight" />
+      <Item
+        Identity="IRDiagTurasRight" />
+    </Group>
+    <Group
+      Modified="18.08.2011 06:33:05"
+      Feature="">
+      <GroupLocale
+        Lang="ger">
+        <Name>CAN3_KTSX_105</Name>
+        <Description />
+      </GroupLocale>
+      <Item
+        Identity="IRFuelSensor" />
+    </Group>
+  </Group>
+</Groups>

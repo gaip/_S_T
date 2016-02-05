@@ -1,0 +1,539 @@
+!version	00057
+#
+!font	UTF8
+!best-fit-font	iso8859-2
+
+# Language File / Sprachtexte File
+# Czech / Tschechisch
+!language	ces
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Množ. přepravované šnekem [l/min]
+2	Množ. přepravované šnekem [g/min]
+3	Množ. přepravované trubkou [l/min]
+4	Množ. přepravované trubkou [g/min]
+5	Přepravované množ. [l/min]
+6	Přepravované množ. [g/min]
+7	Počet čerpadel
+8	Tlak svěr. kleští [bar]
+9	Doba nastavení výstředníku [s]
+10	Vinutí hl. navijáku
+11	hmotn.beran. [kg]
+12	hmotn.beran. [lb]
+13	Počet úderů / hloubkový krok
+14	Počet válců Push & Pull
+15	Délka šneku [cm]
+16	Délka šneku [ft]
+17	Obrázek PDE z tiskárny
+18	Obrázek PDE z karty
+19	hloubkový krok [cm]
+20	hloubkový krok [in]
+21	PDE Doba spínání [s]
+22	Množ. betonu / impuls [l/imp.]
+23	Množ. betonu / impuls [g/imp.]
+24	Rozsah snímače tlaku bet. [bar]
+25	Stupnice ukaz. tlaku bet. [bar]
+26	prům. piloty [cm]
+27	prům. piloty [in]
+28	Průřez piloty [cm]
+29	Průřez piloty [in]
+30	Průměr jádrové trubky [cm]
+31	Průměr jádrové trubky [in]
+32	Koef. hloubení [%]
+33	Stoupání šneku [cm]
+34	Stoupání šneku [in]
+35	Poč. tlak automatiky tahu [bar]
+36	Kon. tlak automatiky tahu [bar]
+37	Povol. přebytek betonu [%]
+38	Ekol. počet otáček
+39	Měř. množství tlakem (1=ANO)
+40	Max. tlak automatiky tahu [bar]
+41	Max. tlak šneku [bar]
+42	Max. tlak trubky [bar]
+43	Max. tlak [bar]
+44	Množ. přeprav. šnekem 1 [l/min]
+45	Množ. přeprav. šnekem 1 [g/min]
+46	Množ. přeprav. šnekem 2 [l/min]
+47	Množ. přeprav. šnekem 2 [g/min]
+48	Množ. přeprav. šnekem 3 [l/min]
+49	Množ. přeprav. šnekem 3 [g/min]
+50	Počet šneků
+51	Množ. přeprav. potrubím [l/min]
+52	Množ. přeprav. potrubím [g/min]
+53	Přepr. množ. otev. chap. [l/min]
+54	Přepr. množ. otev. chap. [g/min]
+55	Přepr. množ. chap. uzav. [l/min]
+56	Přepr. množ. chap. uzav. [g/min]
+57	Max. tlak chap. otev. [bar]
+58	Max. tlak chap. uzav. [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	počet sekcí na pilot
+62	specif. hmotnost silo 1 [kg/dm3]
+63	specif. hmotnost silo 1 [lb/ft3]
+64	specif. hmotnost silo 2 [kg/dm3]
+65	specif. hmotnost silo 2 [lb/ft3]
+66	hloubka [m]
+67	hloubka [ft]
+68	sklon posuvu [cm/ot]
+69	sklon posuvu [in/ot]
+70	hmotnost pojiva [kg/m]
+71	hmotnost pojiva [lb/ft]
+72	min. přepravované množ. [%]
+73	torque limitation (1=YES)
+74	Množ. přeprav. potrubím [l/min]
+75	Množ. přeprav. potrubím [g/min]
+
+!LOGGER
+1	datum zahájení
+2	čas zahájení
+3	datum ukončení
+4	čas ukončení
+5	datum tisku
+6	čas tisku
+
+!PDESERV
+# English is fix in the system
+
+!PDE
+1	Druh provozu
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Strana
+4	Nákres zvednout
+5	Nákres spustit dolů
+6	Poloměr piloty [cm]
+7	Poloměr piloty [in]
+8	Styl
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Vrtání Kelly
+200	dvojité rotační vrtání
+300	Vrtání-CFA
+400	Vibrátor
+401	spustit dolů
+402	zvednout
+403	spustit/zvednout
+404	přes čas
+411	spustit dolů vibrátor
+412	zvednout vibrátor
+413	vibr. spus. & zved.
+414	vibrátor přes čas
+500	kladivo
+600	push&pull
+700	hydraulický drapák
+800	řízení beranidla
+900	vlečný koreček
+1000	překládka
+1100	zemní míchání
+1200	el. vibrátor
+1201	náhr. pěchovaný pilíř (zhutňování)
+1202	náhr. pilíř
+1211	el. vibrátor náhr. pěchovaný pilíř
+1212	el. vibrátor náhr. pilíř
+1300	míchaní za sucha
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	amplituda [in/100]
+7	tlak v betonu [bar]
+2	amplituda [mm]
+3	hloubka [cm]
+4	hloubka [ft]
+5	počet úderů
+6	údery/hloubkový krok
+8	tlak vrtání šnek [bar]
+9	tlak vrt. trubka [bar]
+10	tlak vrtání [bar]
+11	tlak beranidlo [bar]
+12	tlak vibrátor [bar]
+13	vrtní postup [ot/m]
+14	vrtní postup [ot/ft]
+15	mom.vrt. [kip.ft]
+16	mom.vrt. [kNm]
+17	en./úder [kip.ft]
+18	en./úder [kNm]
+19	en./krok [kip.ft]
+20	energie/hl.krok [kNm]
+21	čas [hh:mm:ss]
+22	přitlačná síla [kN]
+23	přitlačná síla [kip]
+24	rychlost posuvu [ft/min]
+25	rychlost posuvu [m/min]
+26	kmitočet [Hz]
+27	údery/min.
+28	vibr. jedn. [ZAP/VYP]
+29	odchylka X [ft]
+30	odchylka X [cm]
+31	odchylka Y [ft]
+32	odchylka Y [cm]
+33	číslo úderu
+34	výška zdvihu [m]
+35	výška zdvihu [ft]
+36	stlačení/úder [ft]
+37	stlačení/úder [m]
+38	stlačení absolut. [ft]
+39	stlačení absolut. [m]
+40	zadání brzd. výš. [ft]
+41	zadání brzd. výš. [m]
+42	max. rychl.naviják 1 [ft/min]
+43	max. rychl.naviják 1 [m/min]
+44	max. rychl.naviják 2 [ft/min]
+45	max. rychl.naviják 2 [m/min]
+46	datum [DD:MM:RR]
+47	doba běhu [s]
+48	množství betonu [yd3]
+49	množství betonu [m3]
+50	pořadové číslo
+51	čas do ber.na laně [s]
+52	zvedání čas [s]
+53	spuštění čas [s]
+54	zadání údery
+55	zadání výš.zdvihu [m]
+56	zadání výš.zdvihu [ft]
+57	zadání stlačení [m]
+58	zadání stlačení [ft]
+59	čas provoz korečku [s]
+60	doba cyklu [s]
+61	zatíž. sypký mat. [t]
+62	vleč.zatíž.celkem [t]
+63	čas překlád. prov. [s]
+64	zatížení cyklu [t]
+65	zatíž.cyklu celkem [t]
+66	zat.cyklu syp.mat. [t]
+67	proud [A]
+68	spouštění proud [A]
+69	boční voda [l/m]
+70	špičková voda [l/m]
+71	tlak vzduchu [bar]
+72	automatika ZAP
+73	napětí [V]
+74	přerušení.
+75	sklon [°]
+76	Otáčky [ot/min]
+77	množství betonu 1 [yd3]
+78	množství betonu 1 [m3]
+79	množství betonu 2 [yd3]
+80	množství betonu 2 [m3]
+81	množství betonu 3 [yd3]
+82	množství betonu 3 [m3]
+83	Otáčka 1 [ot]
+84	Otáčka 2 [ot]
+85	Otáčka 3 [ot]
+86	čas [min]
+87	množství betonu [l/min]
+88	množství betonu [g/min]
+89	min. tlak vibrátoru [bar]
+90	max. tlak vibrátoru [bar]
+91	min. rychlost posunu [ft/min]
+92	min. rychlost posunu [m/min]
+93	max. rychlost posunu [ft/min]
+94	max. rychlost posunu [m/min]
+95	max. vrtací tlak 1 [bar]
+96	max. vrtací tlak 2 [bar]
+97	max. vrtací tlak 3 [bar]
+98	min. vrtací tlak 1 [ot/m]
+99	min. vrtací tlak 1 [ot/ft]
+100	min. vrtací tlak 2 [ot/m]
+101	min. vrtací tlak 2 [ot/ft]
+102	min. vrtací tlak 3 [ot/m]
+103	min. vrtací tlak 3 [ot/ft]
+104	min. míchání [ot]
+105	Míchání 1 [ot]
+106	Míchání 2 [ot]
+107	Objem betonu na hloubku [l/m]
+108	Objem betonu na hloubku [g/ft]
+109	Množství betonu 1 [l/min]
+110	Množství betonu 1 [g/min]
+111	Množství betonu 2 [l/min]
+112	Množství betonu 2 [g/min]
+113	Množství betonu 3 [l/min]
+114	Množství betonu 3 [g/min]
+115	Teplota setřásače [°C]
+116	Teplota setřásače [°F]
+117	max. vrtací tlak 1 [ot/m]
+118	max. vrtací tlak 1 [ot/ft]
+119	max. vrtací tlak 2 [ot/m]
+120	max. vrtací tlak 2 [ot/ft]
+121	max. vrtací tlak 3 [ot/m]
+122	max. vrtací tlak 3 [ot/ft]
+123	Míchání 3 [ot]
+124	min. sklon 1 [cm/ot]
+125	min. sklon 1 [in/ot]
+126	min. sklon 2 [cm/ot]
+127	min. sklon 2 [in/ot]
+128	min. sklon 3 [cm/ot]
+129	min. sklon 3 [in/ot]
+130	množství pojiva [kg/min]
+131	množství pojiva [lb/min]
+132	množství pojiva 1 [kg/min]
+133	množství pojiva 1 [lb/min]
+134	množství pojiva 2 [kg/min]
+135	množství pojiva 2 [lb/min]
+136	množství pojiva 3 [kg/min]
+137	množství pojiva 3 [lb/min]
+138	hmotnost pojiva 1 [kg]
+139	hmotnost pojiva 1 [lb]
+140	hmotnost pojiva 2 [kg]
+141	hmotnost pojiva 2 [lb]
+142	hmotnost pojiva 3 [kg]
+143	hmotnost pojiva 3 [lb]
+144	hmotn. pojiva na hloubku [kg/m]
+145	hmotn. pojiva na hloubku [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	tlak vib.zve. [bar]
+1	amplituda [in]
+2	amplituda [mm]
+3	údery/%s ft
+4	údery/%s mm
+5	hloubka [ft]
+6	hloubka [m]
+7	stlačení [m]
+8	odchylka X [cm]
+9	odchylka X [in]
+10	odchylka Y [cm]
+11	odchylka Y [in]
+12	tlak v betonu [bar]
+13	tlak vrt.šnek [bar]
+14	tlak vrt.trub [bar]
+15	tlak vrtání [bar]
+16	tlak beran. [bar]
+17	tlak ber.zve. [bar]
+19	tlak vib.spu. [bar]
+20	vrt.postup [ot/m]
+21	vrt.postup [ot/ft]
+22	mom.vrtání [kip.ft]
+23	mom.vrtání [kNm]
+24	energie [kip.ft]
+25	energie [kNm]
+26	ene./%s ft [kip.ft]
+27	energ./%s mm [kNm]
+28	přítlačná síla [kN]
+29	přítlačná síla [kip]
+30	rychl.posuvu [ft/min]
+31	rychl.posuvu [m/min]
+32	rych. zdvihu [ft/min]
+33	rych. zdvihu [m/min]
+34	rychl. spouš. [ft/min]
+35	rychl. spouš. [m/min]
+36	kmitočet [Hz]
+37	proud [A]
+38	proud spoušt. [A]
+39	boční voda [l/m]
+40	špičk. voda [l/m]
+41	čas [s]
+42	čas spouštění [s]
+43	úder [číslo]
+44	tlak vibrát. [bar]
+45	amplituda [%]
+46	tlak vrtání 1 [bar]
+47	tlak vrtání 2 [bar]
+48	tlak vrtání 3 [bar]
+49	vrt.postup.1 [ot/m]
+50	vrt.postup.1 [ot/ft]
+51	vrt.postup.2 [ot/m]
+52	vrt.postup.2 [ot/ft]
+53	vrt.postup.3 [ot/m]
+54	vrt.postup.3 [ot/ft]
+55	tlak v beto.1 [bar]
+56	tlak v beto.2 [bar]
+57	tlak v beto.3 [bar]
+58	Množ.betonu [l/m]
+59	Množ.betonu [g/ft]
+60	Množ.beton1 [l/min]
+61	Množ.beton1 [g/min]
+62	Množ.beton2 [l/min]
+63	Množ.beton2 [g/min]
+64	Množ.beton3 [l/min]
+65	Množ.beton3 [g/min]
+66	Míchání [ot]
+67	Otáčky 1 [ot/min]
+68	Otáčky 2 [ot/min]
+69	Otáčky 3 [ot/min]
+70	Proud setřásače [A]
+71	Průnik [cm/ot]
+72	Průnik [in/ot]
+73	sklon 1 [cm/ot]
+74	sklon 1 [in/ot]
+75	sklon 2 [cm/ot]
+76	sklon 2 [in/ot]
+77	sklon 3 [cm/ot]
+78	sklon 3 [in/ot]
+79	pojivo [kg/m]
+80	pojivo [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	staveniště
+2	počet pilot
+3	pilota(1be;2dř;3oc)
+4	délka piloty [m]
+5	plocha pil. [cm2]
+6	prům. piloty [cm]
+7	číslo výřezu
+8	číslo nákresu
+9	číslo řidiče
+10	číslo zakázky
+11	bod stlačení
+12	sériové číslo
+13	číslo zařízení
+14	prům. piloty [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	hloubkový krok [ft]
+2	hloubkový krok [mm]
+3	max. hloubka [cm]
+4	max. hloubka [ft]
+5	údery celkem
+6	ener.celk. [kip.ft]
+7	ener.celk. [kNm]
+8	hmotn.beran. [lb]
+9	hmotn.beran. [kg]
+10	údaj toč. momentu
+11	US jednotky
+12	US jedn.(kip)
+13	bod stlačení
+14	naviják 1 aktivní
+15	naviják 2 aktivní
+16	množ.bet.cel. [yd3]
+17	množ.bet.cel. [m3]
+18	poč.rázů(bet.čer.)
+19	litr/ráz(bet.čer.)
+20	zadání údery
+21	stlačení celkem [m]
+22	zadání stlačení [m]
+23	zadání výš.zdvihu [m]
+24	zadání brzd. výš. [m]
+25	čas celkem [s]
+26	čas [s]
+27	počet cyklů celkem
+28	zat.koreč.práz. [t]
+29	součet syp.mat. [t]
+30	součet kor.plný [t]
+31	poč.spouš.imp.celk
+32	práz.hmot.závěs [t]
+33	souč.zat.cyklu [t]
+34	souč.zat.cy.cel [t]
+35	souč.zat.cy.syp [t]
+36	čas proc.spouš. [s]
+37	max.proud spouš [A]
+38	doba cyklu celkem [s]
+39	zad. proud max. [A]
+40	hloub.tah.krit. [m]
+41	hlou.tah.krit.1 [m]
+42	hlou.tah.krit.2 [m]
+43	zad. čas 1 max. [s]
+44	zad.dráha 1 max [m]
+45	zad. čas 2 max [s]
+46	zad.dráha 2 max [m]
+47	zad. čas 3 max [s]
+48	zad.dráha 3 max [m]
+49	boč.voda celkem [l]
+50	špič.voda celk. [l]
+51	tlak vzd.prům. [bar]
+52	provoz drapáku
+53	provoz kladiva
+54	prov.hyd.Push&Pull
+55	režim vrtání Kelly
+56	provoz dvoj. rot. vrtání
+57	režim vrtání CFA
+58	vibrační režim
+59	vibr. jedn.
+60	(kip)
+61	(in / 100)
+62	VYP
+63	ZAP
+64	nadm. množství [%]
+65	množ.bet.pil. [yd3]
+66	množ.bet.pil. [m3]
+67	galony/ráz(bet.č.)
+68	max. hloubka [m]
+69	Počet šneků
+70	Délka šneku [cm]
+71	Délka šneku [ft]
+72	Poloha gps X [cm]
+73	Poloha gps Y [cm]
+74	spotřeba [kWh]
+75	sklon zahájení [°]
+76	sklon ukončení [°]
+77	délka piloty [cm]
+78	délka piloty [ft]
+79	pojivo celkem [kg]
+80	pojivo celkem [lb]
+81	prům.rozteč [mm/ot]
+82	prům.rozteč [in/ot]
+83	prům.tlak vrt. [bar]
+84	prům.rychl.ot. [ot/min]
+85	prům.vazač [kg/m]
+86	prům.vazač [lb/ft]
+87	prům.tok vazače [kg/min]
+88	prům.tok vazače [lb/min]
+89	silo 1 [kg]
+90	silo 1 [lb]
+91	silo 2 [kg]
+92	silo 2 [lb]
+93	výška vložení [cm]
+94	výška vložení [ft]
+95	empty core [cm]
+96	empty core [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	kelly drilling
+200	double rotary drilling
+300	CFA drilling
+400	vibrator
+401	lowering
+402	lifting
+403	lowering/lifting
+404	over time
+411	vibrator lowering
+412	vibrator lifting
+413	vibrator lowering/lifting
+414	vibrator over time
+500	Hammer
+600	push&pull
+700	hydraulic grab
+800	dyn. compaction
+900	dragline
+1000	duty cycle
+1100	soil mixing
+1200	el. vibrator
+1201	repl. column (compaction)
+1202	repl. column
+1211	el. vibro RCC
+1212	el. vibro RC
+1300	dry mixing
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	job site
+2	pile number
+3	pile type(1concrete;2wood;3steel)
+4	pile length [m]
+5	pile area [cm^2]
+6	pile diameter [cm]
+7	slot number
+8	record number
+9	driver number
+10	job number
+11	compaction point
+12	serial number
+13	machine number
+14	pile diameter [in]

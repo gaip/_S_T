@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%English / Englisch
+%?language	eng
+
+%section: SCREEN
+/TSoilFlowAuger	(flow rate auger) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (flow rate auger)
+/TSoilFlowCase	(flow rate casing) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (flow rate casing)
+/TSoilFlow	(flow rate) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (flow rate)
+/TSnumbOfPumps	(number of pumps) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (number of pumps)
+/TSclampJawPress	(clamping tong pressure) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (clamping tong pressure)
+/TSexcAutoTime	(eccentric adjustment time) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (eccentric adjustment time)
+/TSramWeight	(ram weight) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (ram weight)
+/TSblowsPerDepthStep	(blows / depth step) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (blows / depth step)
+/TSnumbPuPuCylinder	(number of Push & Pull cylinders) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (number of Push & Pull cylinders)
+/TSaugerLength	(auger length) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (auger length)
+/TSconcVolPerImp	(concrete volume / impulse) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (concrete volume / impulse)
+/TSscalConcPresSens	(range concrete press. sensor) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (range concrete press. sensor)
+/TSscalConcPresDisp	(scale conc. press. indication) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (scale conc. press. indication)
+/TSpileDiameter	(pile diameter) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (pile diameter)
+/TSmaxPressAuger	(max. pressure auger) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (max. pressure auger)
+/TSmaxPressCase	(max. pressure casing) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (max. pressure casing)
+/TSmaxPressure	(max. pressure) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (max. pressure)
+/TSoilFlowAuger1	(flow rate auger 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (flow rate auger 1)
+/TSoilFlowAuger2	(flow rate auger 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (flow rate auger 2)
+/TSoilFlowAuger3	(flow rate auger 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (flow rate auger 3)
+/TSnumbOfAugers	(number of augers) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (number of augers)
+/TSoilFlowOscil	(flow rate case oscillator) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (flow rate case oscillator)
+/TSoilFlowGrabOpen	(flow rate grab open) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (flow rate grab open)
+/TSoilFlowGrabClose	(flow rate grab close) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (flow rate grab close)
+/TSmaxPressGrabOpen	(max. pressure grab open) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (max. pressure grab open)
+/TSmaxPressGrabClose	(max. pressure grab close) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (max. pressure grab close)
+/TSminOilFlow	(min. flow rate) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. flow rate)
+/TSoilFlowOscil2	(flow rate case oscillator 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (flow rate case oscillator 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

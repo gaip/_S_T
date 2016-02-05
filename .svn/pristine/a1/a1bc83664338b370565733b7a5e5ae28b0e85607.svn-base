@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="{0088061b-fbfd-4076-8eaf-8fa59f332068}">
+				<Prp name="relpath" type="S" value="SCULi_Safe\SCULi_Safe.mds.tcLS"/>
+			</Node>
+			<Node name="{025576ba-a253-4ec6-b82d-b1cd3157d165}">
+				<Prp name="relpath" type="S" value="SCULiTests_Alias\SCULiTests_Alias.mds.tcLS"/>
+			</Node>
+			<Node name="{03c705ec-22fd-4544-bfb4-ff3d3f2d7527}">
+				<Prp name="relpath" type="S" value="TestProjectAutomationID\TestProjectAutomationID.mds.tcLS"/>
+			</Node>
+			<Node name="{24b6fa0b-0143-461a-9758-aeb9e9a9428b}">
+				<Prp name="default project" type="S" value="{03C705EC-22FD-4544-BFB4-FF3D3F2D7527}"/>
+			</Node>
+			<Node name="{26bd4366-1bed-4653-8c22-48e4be31a5c5}">
+				<Prp name="relpath" type="S" value="..\..\httpsubversion.lmb.liebherr.isvnSculiCUI\Pams\SCULi\Sculi_Pams_CheckLicense.mds.tcLS"/>
+			</Node>
+			<Node name="{29c57899-00f8-417c-b861-5b0d99dc7ca6}">
+				<Prp name="relpath" type="S" value="TestProject1\SCULi_Tests.mds.tcLS"/>
+			</Node>
+			<Node name="{453e3616-47ce-41d0-a126-81a48ed1028c}">
+				<Prp name="relpath" type="S" value="TestProject1\SCULi_Tests.mds.tcLS"/>
+			</Node>
+			<Node name="{56abd2b7-9712-45c3-9c15-c02d92d2e732}">
+				<Prp name="relpath" type="S" value="..\..\httpsubversion.lmb.liebherr.isvnSculiCUI\Trunk\Sculi_Delphi.mds.tcLS"/>
+			</Node>
+			<Node name="{7a11c021-8c13-43dc-b890-493f6a2d3e4a}">
+				<Prp name="relpath" type="S" value="TestProjectConnectedApp\TestProjectConnectedApp.mds.tcLS"/>
+			</Node>
+			<Node name="{98fadfa4-1eb3-427b-a8bd-fcaf596e2e45}">
+				<Prp name="relpath" type="S" value="TestProjectConnectedApp\TestProjectConnectedApp.mds.tcLS"/>
+			</Node>
+			<Node name="{d5703507-35de-478a-84e2-e1b33ce99af8}">
+				<Prp name="relpath" type="S" value="SCULi_Tests_2\SCULi_Tests_2.mds.tcLS"/>
+			</Node>
+			<Node name="logs">
+				<Prp name="key" type="S" value="{6F83E752-2A32-4703-981B-8F38407E14BD}"/>
+				<Prp name="relpath" type="S" value="Log"/>
+			</Node>
+			<Node name="variables"/>
+		</Node>
+		<Prp name="signature" type="S" value="{71078212-FAEB-4856-A901-B237C89E6B5C}"/>
+	</Node>
+</Nodes>

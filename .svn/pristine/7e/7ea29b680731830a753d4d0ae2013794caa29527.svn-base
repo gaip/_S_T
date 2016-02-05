@@ -1,0 +1,5 @@
+!version	4.387
+upd_io.cnf	crc.0x9f180a30	name.include	version.00042
+upd_mon.cnf	crc1.0x6FF703D0	name.include	version.00045
+
+system.cnf	crc.0x6b8fe60b

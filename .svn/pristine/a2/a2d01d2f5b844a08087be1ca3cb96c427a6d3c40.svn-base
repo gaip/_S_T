@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 29">
+			<Prp name="picture" type="S" value="Picture26.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="29"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="29"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807033449"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="29"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 60">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 29">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 46">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 17">
+			<Prp name="picture" type="S" value="Picture14.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="15"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805426968"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="15"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 53">
+			<Prp name="picture" type="S" value="Picture50.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="54"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="53"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808795139"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Window&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="54"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 22">
+			<Prp name="picture" type="S" value="Picture19.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="20"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805602894"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;).VCLObject(&quot;FilterTreePanel&quot;).VCLObject(&quot;FilterTree&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="20"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 44">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 23">
+			<Prp name="picture" type="S" value="Picture20.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="21"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="23"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805638773"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;FindChild&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;).VCLObject(&quot;FilterTreePanel&quot;).VCLObject(&quot;FilterTree&quot;).VCLObject(&quot;CList&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="83"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="22"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 61">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 17">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 54">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.7803826273"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="message" type="S" value="The object doesn't exists"/>
+			<Prp name="stack end" type="I" value="3"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 53">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 52">
+			<Prp name="picture" type="S" value="Picture49.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="53"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="52"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808762732"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="53"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 9">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 13">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 12">
+			<Prp name="picture" type="S" value="Picture9.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="10"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805254514"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="10"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 33">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 37">
+			<Prp name="picture" type="S" value="Picture34.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="37"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="37"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807313542"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="37"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 8">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 27">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 38">
+			<Prp name="picture" type="S" value="Picture35.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="38"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="38"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807348264"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="38"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 10">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 62">
+			<Prp name="picture" type="S" value="Picture59.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="63"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="62"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.7809108796"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The test execution was interrupted."/>
+			<Prp name="stack end" type="I" value="63"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 42">
+			<Prp name="picture" type="S" value="Picture39.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="42"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="42"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807485995"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;TextObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;).VCLObject(&quot;FilterTreePanel&quot;).VCLObject(&quot;FilterTree&quot;).VCLObject(&quot;CList&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="42"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 36">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 47">
+			<Prp name="picture" type="S" value="Picture44.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="48"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="47"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808591435"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="48"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 21">
+			<Prp name="picture" type="S" value="Picture18.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="19"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805567014"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;).VCLObject(&quot;FilterTreePanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="19"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="2"/>
+		</Node>
+		<Node name="message 39">
+			<Prp name="picture" type="S" value="Picture36.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="39"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="39"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807382986"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="39"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="4"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.7805043866"/>
+			<Prp name="remarks" type="S" value="Name = SCULi, Index = -1"/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The process &quot;SCULi&quot; was not found."/>
+			<Prp name="stack end" type="I" value="4"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 19">
+			<Prp name="picture" type="S" value="Picture16.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="17"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805497569"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="17"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 42">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 31">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="item 62">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 43">
+			<Prp name="picture" type="S" value="Picture40.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="43"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="43"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.780751956"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="line no" type="I" value="136"/>
+			<Prp name="message" type="S" value="The control 'undefined' is NOT found"/>
+			<Prp name="stack end" type="I" value="44"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.7803542014"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;TextObject&quot;](&quot;Workgroup&quot;)"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The window is disabled. The action cannot be executed."/>
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 43">
+			<Prp name="stacktext" type="S" value="ClickOnObjectUseFullName"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="136"/>
+		</Node>
+		<Node name="item 45">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 12">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="picture" type="S" value="Picture4.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="5"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805077431"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="5"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 13">
+			<Prp name="picture" type="S" value="Picture10.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="11"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805289236"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="11"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 60">
+			<Prp name="picture" type="S" value="Picture57.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="61"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="60"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7809039352"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;).VCLObject(&quot;FilterObjectPanel&quot;).VCLObject(&quot;FilterObjects&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="61"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 35">
+			<Prp name="picture" type="S" value="Picture32.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="35"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="35"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807241782"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Panel&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="35"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 39">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 28">
+			<Prp name="picture" type="S" value="Picture25.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="28"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="28"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7806998727"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="28"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 45">
+			<Prp name="picture" type="S" value="Picture42.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="46"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="45"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808520833"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="46"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 25">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 49">
+			<Prp name="picture" type="S" value="Picture46.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="50"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="49"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808658565"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="50"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 31">
+			<Prp name="picture" type="S" value="Picture28.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="31"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="31"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807102894"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="31"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 11">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 28">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 5">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 7">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 6">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 35">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.7803506482"/>
+			<Prp name="remarks" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;panelArbeitsbereich&quot;][&quot;PluginsContextForm&quot;][&quot;CMainPanel&quot;][&quot;Panel3&quot;][&quot;Panel1&quot;][&quot;CPluginTabsPanel&quot;][&quot;CPluginTabsList&quot;][&quot;TNativeVisualPluginPage&quot;][&quot;TVisualPluginWindow&quot;][&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;TextObject&quot;](&quot;Workgroup&quot;)"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The action may be performed incorrectly, because the control is not visible."/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 48">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 59">
+			<Prp name="picture" type="S" value="Picture56.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="60"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="59"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.780900463"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;).VCLObject(&quot;FilterObjectPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="60"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 46">
+			<Prp name="picture" type="S" value="Picture43.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="47"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="46"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808556713"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Panel&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="47"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 22">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="picture" type="S" value="Picture6.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="7"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805150347"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="7"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 40">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 23">
+			<Prp name="stacktext" type="S" value="findChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="88"/>
+		</Node>
+		<Node name="message 54">
+			<Prp name="picture" type="S" value="Picture51.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="55"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="54"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808828704"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Panel&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="55"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 52">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 36">
+			<Prp name="picture" type="S" value="Picture33.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="36"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="36"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807277662"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="36"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 32">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 4">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 50">
+			<Prp name="picture" type="S" value="Picture47.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="51"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="50"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808693287"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="51"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 56">
+			<Prp name="picture" type="S" value="Picture53.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="57"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="56"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808900463"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="57"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 20">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 40">
+			<Prp name="picture" type="S" value="Picture37.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="40"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="40"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807417708"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;).VCLObject(&quot;FilterTreePanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="40"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 58">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 44">
+			<Prp name="picture" type="S" value="Picture41.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="45"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="44"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.7808484954"/>
+			<Prp name="remarks" type="S" value="Name = SCULi, Index = -1"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The process &quot;SCULi&quot; was not found."/>
+			<Prp name="stack end" type="I" value="45"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 37">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="3"/>
+		</Node>
+		<Node name="item 34">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 59">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 10">
+			<Prp name="picture" type="S" value="Picture7.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="8"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805183912"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="8"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 56">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 25">
+			<Prp name="picture" type="S" value="Picture22.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="25"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="25"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.780689456"/>
+			<Prp name="remarks" type="S" value="Name = SCULi, Index = -1"/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The process &quot;SCULi&quot; was not found."/>
+			<Prp name="stack end" type="I" value="25"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 19">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 30">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="item 18">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="message 11">
+			<Prp name="picture" type="S" value="Picture8.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="9"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805218634"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="9"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 0">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="line #" type="I" value="6"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="version" type="I" value="1"/>
+					<Prp name="object bottom" type="I" value="564"/>
+					<Prp name="object top" type="I" value="503"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="533"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object name" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;panelArbeitsbereich&quot;][&quot;PluginsContextForm&quot;][&quot;VCLObject&quot;](&quot;CContextActionsRollout&quot;)[&quot;VCLObject&quot;](&quot;CContextActionsPageScroller&quot;)[&quot;VCLObject&quot;](&quot;CContextActionsPanel&quot;)[&quot;Panel&quot;](&quot;Analyzer&quot;)"/>
+					<Prp name="click point x" type="I" value="51"/>
+					<Prp name="datetime" type="D" value="42067.7386538079"/>
+					<Prp name="object right" type="I" value="82"/>
+					<Prp name="object left" type="I" value="21"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.7803215509"/>
+			<Prp name="remarks" type="S" value="A click at point (30, 30) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CContextActionsRollout&quot;)[&quot;VCLObject&quot;](&quot;CContextActionsPageScroller&quot;)[&quot;VCLObject&quot;](&quot;CContextActionsPanel&quot;)[&quot;Panel&quot;](&quot;Analyzer&quot;)"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 21">
+			<Prp name="stacktext" type="S" value="findChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="83"/>
+		</Node>
+		<Node name="message 41">
+			<Prp name="picture" type="S" value="Picture38.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="41"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="41"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807452431"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;).VCLObject(&quot;FilterTreePanel&quot;).VCLObject(&quot;FilterTree&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="41"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 24">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="42067.7809108796"/>
+			</Node>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="length" type="I" value="1"/>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="isinteger" type="B" value="0"/>
+			<Prp name="color" type="I" value="0"/>
+			<Prp name="description" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="columnindex" type="I" value="0"/>
+		</Node>
+		<Node name="message 26">
+			<Prp name="picture" type="S" value="Picture23.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="26"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="26"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7806928125"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="26"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 50">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="stacktext" type="S" value="clickOnChildObject"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="8"/>
+		</Node>
+		<Node name="item 63">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 24">
+			<Prp name="picture" type="S" value="Picture21.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="23"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="24"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.7805674653"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="line no" type="I" value="88"/>
+			<Prp name="message" type="S" value="The object with 'Text' equal to 'New FilterSet' is NOT found"/>
+			<Prp name="stack end" type="I" value="24"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 27">
+			<Prp name="picture" type="S" value="Picture24.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="27"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="27"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7806965162"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Panel&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="27"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 47">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 33">
+			<Prp name="picture" type="S" value="Picture30.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="33"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="33"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807172338"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="33"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 14">
+			<Prp name="picture" type="S" value="Picture11.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="12"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805323958"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="12"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 57">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="item 41">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 57">
+			<Prp name="picture" type="S" value="Picture54.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="58"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="57"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808935185"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="58"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 32">
+			<Prp name="picture" type="S" value="Picture29.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="32"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="32"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807137616"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="32"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 15">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{D13F3F80-8F89-47AA-8C3C-1BF211220DBF}"/>
+			<Prp name="unit 1" type="S" value="{DF77F361-F718-4EDC-934E-765346ADD2ED}"/>
+		</Node>
+		<Node name="item 55">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 55">
+			<Prp name="picture" type="S" value="Picture52.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="56"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="55"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808863426"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="56"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 49">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.780350625"/>
+			<Prp name="remarks" type="S" value="Aliases[&quot;Sculi&quot;][&quot;SculiForm&quot;][&quot;panelArbeitsbereich&quot;][&quot;PluginsContextForm&quot;][&quot;CMainPanel&quot;][&quot;Panel3&quot;][&quot;Panel1&quot;][&quot;CPluginTabsPanel&quot;][&quot;CPluginTabsList&quot;][&quot;TNativeVisualPluginPage&quot;][&quot;TVisualPluginWindow&quot;][&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CMainFilterPanel&quot;)[&quot;VCLObject&quot;](&quot;FilterFrame&quot;)[&quot;VCLObject&quot;](&quot;FilterTreePanel&quot;)[&quot;VCLObject&quot;](&quot;FilterTree&quot;)[&quot;VCLObject&quot;](&quot;CList&quot;)[&quot;TextObject&quot;](&quot;Workgroup&quot;)"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The action may be performed incorrectly, because the control is disabled."/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 14">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Node name="item 26">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 20">
+			<Prp name="picture" type="S" value="Picture17.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="18"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805532292"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="18"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 58">
+			<Prp name="picture" type="S" value="Picture55.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="59"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="58"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808969907"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="59"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 51">
+			<Prp name="picture" type="S" value="Picture48.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="52"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="51"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808728009"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="52"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 34">
+			<Prp name="picture" type="S" value="Picture31.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="34"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="34"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.780720706"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Window&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="34"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 38">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="5"/>
+		</Node>
+		<Node name="message 15">
+			<Prp name="picture" type="S" value="Picture12.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="13"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805358681"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Window&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="13"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 51">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="6"/>
+		</Node>
+		<Node name="message 61">
+			<Prp name="picture" type="S" value="Picture58.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="62"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="61"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7809072917"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;).VCLObject(&quot;CMainFilterPanel&quot;).VCLObject(&quot;FilterFrame&quot;).VCLObject(&quot;FilterObjectPanel&quot;).VCLObject(&quot;FilterObjects&quot;).VCLObject(&quot;jvdtntscrlbx1&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="62"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 48">
+			<Prp name="picture" type="S" value="Picture45.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="49"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="48"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7808625"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="49"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 30">
+			<Prp name="picture" type="S" value="Picture27.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="30"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="30"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7807068171"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="30"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="42067.7803451505"/>
+			<Prp name="remarks" type="S" value="A click at point (13, 13) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys[&quot;Process&quot;](&quot;SCULi&quot;)[&quot;VCLObject&quot;](&quot;SculiForm&quot;)[&quot;Panel&quot;](&quot;Arbeitsbereich&quot;)[&quot;VCLObject&quot;](&quot;PluginsContextForm&quot;)[&quot;VCLObject&quot;](&quot;CMainPanel&quot;)[&quot;VCLObject&quot;](&quot;Panel3&quot;)[&quot;VCLObject&quot;](&quot;Panel1&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsPanel&quot;)[&quot;VCLObject&quot;](&quot;CPluginTabsList&quot;)[&quot;Window&quot;](&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)[&quot;Panel&quot;](&quot;Message Analyzer&quot;)[&quot;VCLObject&quot;](&quot;CLowerArea&quot;)[&quot;VCLObject&quot;](&quot;CPageCtrlHeaderPanel&quot;)[&quot;VCLObject&quot;](&quot;pnlFilterActions&quot;)[&quot;VCLObject&quot;](&quot;btnShowFilter&quot;)"/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="picture" type="S" value="Picture5.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="6"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805114468"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Panel&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="6"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 16">
+			<Prp name="picture" type="S" value="Picture13.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="14"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805392245"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;Panel&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="14"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 18">
+			<Prp name="picture" type="S" value="Picture15.png"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="16"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="date" type="D" value="42067.7805462847"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;Process(&quot;SCULi&quot;).VCLObject(&quot;SculiForm&quot;).Panel(&quot;Arbeitsbereich&quot;).VCLObject(&quot;PluginsContextForm&quot;).VCLObject(&quot;CMainPanel&quot;).VCLObject(&quot;Panel3&quot;).VCLObject(&quot;Panel1&quot;).VCLObject(&quot;CPluginTabsPanel&quot;).VCLObject(&quot;CPluginTabsList&quot;).Window(&quot;TNativeVisualPluginPage&quot;, &quot;&quot;, 1).Panel(&quot;Message Analyzer&quot;).VCLObject(&quot;CLowerArea&quot;)&quot; object that does not exist."/>
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="stack end" type="I" value="16"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 16">
+			<Prp name="stacktext" type="S" value="filterWithExclusion()"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="4"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

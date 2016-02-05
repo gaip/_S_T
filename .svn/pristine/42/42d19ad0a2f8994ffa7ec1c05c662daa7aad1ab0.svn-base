@@ -1,0 +1,10 @@
+leader 1
+start time	2012-01-18T16:00:13
+stop time	2012-01-18T16:28:14
+category			0	1	2	3	4	5	6	7	8	9	10	11	12
+rope force kelly winch 1 [kN]	%MD1.511	%MD1.511	<40	[40..80[	[80..120[	[120..160[	[160..200[	[200..240[	[240..280[	[280..320[	[320..360[	[360..400[	[400..440[	>=440
+reeving kelly winch 1	%MD1.545	%MD1.545	<1	[1..2[	[2..3[	[3..4[	>=4
+force crowd winch 1 [kN]	%MD1.546	%MD1.546	<-440	[-440..-360[	[-360..-280[	[-280..-200[	[-200..-120[	[-120..-40[	[-40..40[	[40..120[	[120..200[	[200..280[	[280..360[	[360..440[	>=440
+pressure support leader 1 [bar]	%MD1.544	%MD1.544	<40	[40..80[	[80..120[	[120..160[	[160..200[	[200..240[	[240..280[	[280..320[	[320..360[	[360..400[	>=400
+
+rope force kelly winch 1 [kN]	reeving kelly winch 1	force crowd winch 1 [kN]	pressure support leader 1 [bar]	sum of time [sek]

@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Slovak / Slowakisch
+%?language	slk
+
+%section: SCREEN
+/TSoilFlowAuger	(Dopr. množstvo závitovka) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Dopr. množstvo závitovka)
+/TSoilFlowCase	(Dopr. množstvo rúra) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Dopr. množstvo rúra)
+/TSoilFlow	(Dopr. množstvo) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Dopr. množstvo)
+/TSnumbOfPumps	(Počet čerpadiel) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Počet čerpadiel)
+/TSclampJawPress	(Tlak zvieracích klieští) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Tlak zvieracích klieští)
+/TSexcAutoTime	(Doba prestavenia excentra) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Doba prestavenia excentra)
+/TSramWeight	(Hm. baranidla) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Hm. baranidla)
+/TSblowsPerDepthStep	(Nárazy / hĺbkový záznam) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Nárazy / hĺbkový záznam)
+/TSnumbPuPuCylinder	(Počet valcov Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Počet valcov Push & Pull)
+/TSaugerLength	(Dĺžka závitovky) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Dĺžka závitovky)
+/TSconcVolPerImp	(Množstvo betónu / impulz) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Množstvo betónu / impulz)
+/TSscalConcPresSens	(Mer.rozsah senz.tlaku bet.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Mer.rozsah senz.tlaku bet.)
+/TSscalConcPresDisp	(Mierka indik. tlaku betónu) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Mierka indik. tlaku betónu)
+/TSpileDiameter	(Priemer piloty) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Priemer piloty)
+/TSmaxPressAuger	(Max. tlak závitovky) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Max. tlak závitovky)
+/TSmaxPressCase	(Max. tlak rúry) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Max. tlak rúry)
+/TSmaxPressure	(Max. tlak) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Max. tlak)
+/TSoilFlowAuger1	(Dopr. množstvo záv. 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Dopr. množstvo záv. 1)
+/TSoilFlowAuger2	(Dopr. množstvo záv. 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Dopr. množstvo záv. 2)
+/TSoilFlowAuger3	(Dopr. množstvo záv. 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Dopr. množstvo záv. 3)
+/TSnumbOfAugers	(Počet závitoviek) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Počet závitoviek)
+/TSoilFlowOscil	(Dopr. množstvo potrubie) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Dopr. množstvo potrubie)
+/TSoilFlowGrabOpen	(Otvor uchopenie prietoku) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Otvor uchopenie prietoku)
+/TSoilFlowGrabClose	(Zatvor uchopenie prietoku) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Zatvor uchopenie prietoku)
+/TSmaxPressGrabOpen	(Otvor uchopenie max. tlaku) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Otvor uchopenie max. tlaku)
+/TSmaxPressGrabClose	(Zatvor uchopenie max. tlaku) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Zatvor uchopenie max. tlaku)
+/TSminOilFlow	(Minimálny dopr. množstvo) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (Minimálny dopr. množstvo)
+/TSoilFlowOscil2	(Dopr. množstvo potrubie 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Dopr. množstvo potrubie 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

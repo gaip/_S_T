@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Estonian / Estnisch
+%?language	est
+
+%section: SCREEN
+/TSoilFlowAuger	(Edastuskogus tigu) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Edastuskogus tigu)
+/TSoilFlowCase	(Edastuskogus toru) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Edastuskogus toru)
+/TSoilFlow	(Edastuskogus) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Edastuskogus)
+/TSnumbOfPumps	(Pumpade arv) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Pumpade arv)
+/TSclampJawPress	(Kinnitusrakise rõhk) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Kinnitusrakise rõhk)
+/TSexcAutoTime	(Ekstsentri seadistusaeg) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Ekstsentri seadistusaeg)
+/TSramWeight	(Rammimismass) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Rammimismass)
+/TSblowsPerDepthStep	(Lööki / sügavussamm) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Lööki / sügavussamm)
+/TSnumbPuPuCylinder	(Push & Pull silindrite arv) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Push & Pull silindrite arv)
+/TSaugerLength	(Teo pikkus) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Teo pikkus)
+/TSconcVolPerImp	(Betoonikogus / impulss) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Betoonikogus / impulss)
+/TSscalConcPresSens	(Bet-rõhu sens. mõõtmisvahem.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Bet-rõhu sens. mõõtmisvahem.)
+/TSscalConcPresDisp	(Betoonirõhu näidiku skaala) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Betoonirõhu näidiku skaala)
+/TSpileDiameter	(Vaia laebimoeoet) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Vaia laebimoeoet)
+/TSmaxPressAuger	(maks. rõhk tigu) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (maks. rõhk tigu)
+/TSmaxPressCase	(maks. rõhk toru) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (maks. rõhk toru)
+/TSmaxPressure	(maks. rõhk) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (maks. rõhk)
+/TSoilFlowAuger1	(Edastuskogus tigu 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Edastuskogus tigu 1)
+/TSoilFlowAuger2	(Edastuskogus tigu 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Edastuskogus tigu 2)
+/TSoilFlowAuger3	(Edastuskogus tigu 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Edastuskogus tigu 3)
+/TSnumbOfAugers	(Tigude arv) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Tigude arv)
+/TSoilFlowOscil	(Edastuskogus torustamism.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Edastuskogus torustamism.)
+/TSoilFlowGrabOpen	(Teisaldus-kgs haar. avam.) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Teisaldus-kgs haar. avam.)
+/TSoilFlowGrabClose	(Teisalduskgs haar. sulgem.) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Teisalduskgs haar. sulgem.)
+/TSmaxPressGrabOpen	(Maks. rõhk haar. avam.) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Maks. rõhk haar. avam.)
+/TSmaxPressGrabClose	(Maks. rõhk haar. sulgem.) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Maks. rõhk haar. sulgem.)
+/TSminOilFlow	(min. edastuskogus) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. edastuskogus)
+/TSoilFlowOscil2	(Edastuskogus torustamism.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Edastuskogus torustamism.2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

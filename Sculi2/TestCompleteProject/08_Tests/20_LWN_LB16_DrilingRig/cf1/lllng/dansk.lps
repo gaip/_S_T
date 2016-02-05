@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Danish / Dänisch
+%?language	dan
+
+%section: SCREEN
+/TSoilFlowAuger	(Transportmængde snekke) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Transportmængde snekke)
+/TSoilFlowCase	(Transportmængde rør) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Transportmængde rør)
+/TSoilFlow	(Transportmængde) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Transportmængde)
+/TSnumbOfPumps	(Pumpeantal) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Pumpeantal)
+/TSclampJawPress	(Klemmetangstryk) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Klemmetangstryk)
+/TSexcAutoTime	(Excenterjusteringstid) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Excenterjusteringstid)
+/TSramWeight	(Ramvaegt) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Ramvaegt)
+/TSblowsPerDepthStep	(Slag/dybdetrin) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Slag/dybdetrin)
+/TSnumbPuPuCylinder	(Antal Push & Pull-cylindere) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Antal Push & Pull-cylindere)
+/TSaugerLength	(Snekkelængde) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Snekkelængde)
+/TSconcVolPerImp	(Betonmængde / impuls) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Betonmængde / impuls)
+/TSscalConcPresSens	(Måleområde betontryksensor) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Måleområde betontryksensor)
+/TSscalConcPresDisp	(Skalering betontrykdisplay) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Skalering betontrykdisplay)
+/TSpileDiameter	(Pæl-diameter) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Pæl-diameter)
+/TSmaxPressAuger	(Maks. tryk snekke) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Maks. tryk snekke)
+/TSmaxPressCase	(Maks. tryk rør) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Maks. tryk rør)
+/TSmaxPressure	(Maks. tryk) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Maks. tryk)
+/TSoilFlowAuger1	(Transportmængde snekke 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Transportmængde snekke 1)
+/TSoilFlowAuger2	(Transportmængde snekke 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Transportmængde snekke 2)
+/TSoilFlowAuger3	(Transportmængde snekke 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Transportmængde snekke 3)
+/TSnumbOfAugers	(Snekkeantal) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Snekkeantal)
+/TSoilFlowOscil	(Transp.mæn. rørfør.m.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Transp.mæn. rørfør.m.)
+/TSoilFlowGrabOpen	(Transp.mængde åbn griber) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Transp.mængde åbn griber)
+/TSoilFlowGrabClose	(Transp.mængde luk griber) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Transp.mængde luk griber)
+/TSmaxPressGrabOpen	(maks. tryk åbn griber) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (maks. tryk åbn griber)
+/TSmaxPressGrabClose	(maks. tryk luk griber) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (maks. tryk luk griber)
+/TSminOilFlow	(min. transportmængde) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. transportmængde)
+/TSoilFlowOscil2	(Transp.mæn. rørfør.m.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Transp.mæn. rørfør.m.2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

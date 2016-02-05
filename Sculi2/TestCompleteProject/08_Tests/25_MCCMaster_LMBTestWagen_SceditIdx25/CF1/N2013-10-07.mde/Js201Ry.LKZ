@@ -1,0 +1,8 @@
+y-direction right joystick 1
+start time	2013-10-06T16:59:57
+stop time	2013-10-07T02:39:36
+category			0	1	2	3	4	5	6	7	8	9	10
+y-direction right joystick 1 [%]	%MD1.217	MDpdeMaxConFlowY	<-80	[-80..-60[	[-60..-40[	[-40..-20[	[-20..-0.2[	[-0.2..0.2[	[0.2..20[	[20..40[	[40..60[	[60..80[	>=80
+
+y-direction right joystick 1 [%]	sum of entries
+5	1

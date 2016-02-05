@@ -1,0 +1,8 @@
+battery 1
+start time	2012-05-02T11:37:47
+stop time	2012-05-02T14:01:16
+category			0	1	2	3	4	5	6	7	8	9	10	11
+voltage battery 1 [V]	%MD1.409	MDmdeVoBat1	<14	[14..16[	[16..18[	[18..20[	[20..22[	[22..24[	[24..26[	[26..28[	[28..30[	[30..32[	[32..34[	>=34
+
+voltage battery 1 [V]	sum of time [sek]
+6	7036.13

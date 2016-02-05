@@ -1,0 +1,6 @@
+rem autoexec.frc
+rem  location:	Dozercontrol
+
+!version	00116
+
+can_conf /t /x 4

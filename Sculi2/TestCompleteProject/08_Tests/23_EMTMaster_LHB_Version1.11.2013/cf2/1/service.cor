@@ -1,0 +1,974 @@
+%MX2.1	1	1	CXadAcAirCondition	Option AirCondition assembled
+%MX2.2	1	1	CXAcCondenserFanExtern	Option Climate select extern condenser fan
+%MX2.3	1	1	CXAcCompressorExtern	Option Climate select extern compressor
+%MX2.4	0	0	CXAcCompressorAbsent	Option Climate no extern compressor installed
+%MX2.5	0	0	CXadGreaseAutomatic	Greasing, enable option automatic greaseing
+%MX2.6	0	0	CXGreaseLevelSenssor	Greasing, enable Option grease level monitoring
+%MX2.7	0	0	CXEngineStopEnableChaAirTempHigh	Diesel engine - stop enable at high intercooler temp.
+%MX2.8	0	0	CXEngineStopEnableCoolLevelLow	Diesel engine - stop enable at low coolant level
+%MX2.9	0	0	CXEngineStopEnableCoolTempHigh	Diesel engine - stop enable at high coolant temp.
+%MX2.10	0	0	CXEngineStopEnableEmyStopRequest	Diesel engine - stop enable at emergany stop request
+%MX2.11	0	0	CXEngineStopEnableFuelTempHigh	Diesel engine - stop enable at high fuel temperature
+%MX2.12	0	0	CXEngineStopEnableOilPressLow	Diesel engine - stop enable at low oil pressure
+%MX2.13	0	0	CXEngineStopEnableSpeedHigh	Diesel engine - stop enable at high speed
+%MX2.14	1	1	CXCoolACEnable	cooling: enable the function cooling of the air condition.
+%MX2.15	1	1	CXCoolAirIntakeEnable	cooling: enable the function cooling the air intake.
+%MX2.16	0	0	CXCoolFuelTempEnable	cooling: enable the function cooling the fuel temperature.
+%MX2.17	1	1	CXCoolHydraulicEnable	cooling: enable the function cooling the hydraulic oil.
+%MX2.18	1	1	CXCoolWaterTempEnable	cooling: enable the function cooling the water temperature.
+%MX2.19	0	0	CXadCoolAutomaticCleanInterval	cooling: option automatic cleaning interval
+%MX2.20	0	0	CXCooladTropicMode	cooling: activation of the option tropical cooling.
+%MX2.21	1	1	CXadSenorContactRing	Optional sensor contact ring
+%MX2.22	1	1	CXLrEnableLeading	LR: general enable of the engine leading function
+%MX2.23	1	1	CXadPstLimit	Option pilot pressure limitation
+%MX2.24	0	0	CXLrEnableOpenLoop	LR: Enable open loop of LR power
+%MX2.25	0	0	CXSwingBrakeAutomaticEnable	SwingBrake: enable the automatic mode of the slewing gear swing brake
+%MX2.26	1	1	CXadAutoIdleMenuEnable	AutoId: enable display setting menu for auto idling
+%MX2.27	0	0	CXadFloodLightFront	Activation of the node floot light front.
+%MX2.28	0	0	CXadFloodLightBoom	Activation of the node floot light boom
+%MX2.29	1	1	CXadFloodLightBack	Flood Light Back, option flood Light back enable
+%MX2.30	0	0	CXadWWasherTop	windscreen washer, option enable wiper top
+%MX2.31	0	0	CXadWWasherBack	windscreen washer, option enable wiper back
+%MX2.32	0	0	CXToolCtrlTool1OutCylProtActive	Activation Cylinder Protec for tool 1
+%MX2.33	0	0	CXToolCtrlTool1OutCylProtManuel	Manuel Cylinder Protec for tool 1
+%MX2.34	0	0	CXToolCtrlTool1OutFlowDivActive	Activation Flow Divider for tool 1
+%MX2.35	1	1	CXToolCtrlTool2OutFlowDivActive	Activation Flow Divider for tool 2
+%MX2.36	0	0	CXToolCtrlTool2OutCylProtManuel	Manuel Cylinder Protec for tool 2
+%MX2.37	0	0	CXToolCtrlTool2OutCylProtActive	Activation Cylinder Protec for tool 2
+%MX2.38	0	0	CXToolCtrlTool3OutFlowDivActive	Activation Flow Divider for tool 3
+%MX2.39	1	1	CXToolCtrlTool3OutCylProtManuel	Manuel Cylinder Protec for tool 3
+%MX2.40	0	0	CXToolCtrlTool3OutCylProtActive	Activation Cylinder Protec for tool 3
+%MX2.41	1	1	CXToolCtrlTool4OutFlowDivActive	Activation Flow Divider for tool 4
+%MX2.42	1	1	CXToolCtrlTool4OutCylProtManuel	Manuel Cylinder Protec for tool 4
+%MX2.43	0	0	CXToolCtrlTool4OutCylProtActive	Activation Cylinder Protec for tool 4
+%MX2.44	0	0	CXToolCtrlTool5OutFlowDivActive	Activation Flow Divider for tool 5
+%MX2.45	0	0	CXToolCtrlTool5OutCylProtManuel	Manuel Cylinder Protec for tool 5
+%MX2.46	0	0	CXToolCtrlTool5OutCylProtActive	Activation Cylinder Protec for tool 5
+%MX2.47	0	0	CXToolCtrlTool6OutFlowDivActive	Activation Flow Divider for tool 6
+%MX2.48	0	0	CXToolCtrlTool6OutCylProtManuel	Manuel Cylinder Protec for tool 6
+%MX2.49	0	0	CXToolCtrlTool6OutCylProtActive	Activation Cylinder Protec for tool 6
+%MX2.50	0	0	CXToolCtrlTool7OutFlowDivActive	Activation Flow Divider for tool 7
+%MX2.51	0	0	CXToolCtrlTool7OutCylProtManuel	Manuel Cylinder Protec for tool 7
+%MX2.52	0	0	CXToolCtrlTool7OutCylProtActive	Activation Cylinder Protec for tool 7
+%MX2.53	0	0	CXToolCtrlTool8OutFlowDivActive	Activation Flow Divider for tool 8
+%MX2.54	0	0	CXToolCtrlTool8OutCylProtManuel	Manuel Cylinder Protec for tool 8
+%MX2.55	0	0	CXToolCtrlTool8OutCylProtActive	Activation Cylinder Protec for tool 8
+%MX2.56	0	0	CXToolCtrlTool9OutFlowDivActive	Activation Flow Divider for tool 9
+%MX2.57	0	0	CXToolCtrlTool9OutCylProtManuel	Manuel Cylinder Protec for tool 9
+%MX2.58	0	0	CXToolCtrlTool9OutCylProtActive	Activation Cylinder Protec for tool 9
+%MX2.59	0	0	CXToolCtrlTool10OutFlowDivActive	Activation Flow Divider for tool 10
+%MX2.60	0	0	CXToolCtrlTool10OutCylProtManuel	Manuel Cylinder Protec for tool 10
+%MX2.61	0	0	CXToolCtrlTool10OutCylProtActive	Activation Cylinder Protec for tool 10
+%MX2.62	1	1	CXadToolCtrlCylProtect	enable the functionality of the Cylinder Protection
+%MX2.63	1	1	CXadToolCtrlFlowDivider	enable the functionality of the Flow Divider
+%MX2.64	0	0	CXToolCtrlEnablePump4	enabel the use of the pump4 ( piston valve4)
+%MX2.65	0	0	CXToolCtrlEnablePump3	enabel the use of the pump3 ( piston valve3)
+%MX2.66	1	1	CXToolCtrlEnablePump2	enabel the use of the pump2 ( piston valve2)
+%MX2.67	1	1	CXToolCtrlEnablePump1	enabel the use of the pump1 ( piston valve1)
+%MX2.68	1	1	CXadToolCtrl	Add Tool Control (general enable)
+%MX2.69	1	1	CXadCabinLift	cabin lift general enable flag to add the cabin lift option
+%MX2.70	0	0	CXCabinLiftCushoinDownEnable	Cabin lift end cushoining down enable
+%MX2.71	0	0	CXCabinLiftCushoinUpEnable	Cabin lift end cushoining up enable
+%MX2.72	0	0	CXCabinLiftSftyBeltEnable	cabin lift enable the safety belt function
+%MX2.73	0	0	CXCabinLiftCtrlSelectDigital	Cabin lift, digitalized input control with hysteresis
+%MX2.74	0	0	CXOptionL2M23M15M51Used	Option Modul A62
+%MX2.75	0	0	CXadQChangerMH40	Option Quick Changer MH40
+%MX2.76	0	0	CXadQChangerSWA	Option Quick Changer SWA
+%MX2.77	0	0	CXadBoomActiveMovementDown	Add the boom active movement down functionality
+%MX2.78	0	0	CXadBoomPresSensorLeft	Add the boom pressure sensor left
+%MX2.79	0	0	CXChangeTrackAngleBoom	Angle sensor boom not mounted on standard side
+%MX2.80	0	0	CXadCylCutOffBoomDown	Option boom cutoff position down
+%MX2.81	0	0	CXadCylCutOffBoomUp	Option boom cutoff position up
+%MX2.82	0	0	CXadCylCutOffBoomCushioning	Option boom cylinder cushioning enable
+%MX2.83	0	0	CXCylCutOffBoomUserAdjustEnable	Enable the boom cutoff up/ down adjustment by the drive
+%MX2.84	0	0	CXCylCutOffBoomUserProtect	Enable key button: protection boom cutoff ON/OFF
+%MX2.85	0	0	CXadSplitBladeOption	Add option split blade support
+%MX2.86	1	1	CXCylCutOffStickUserProtect	Enable key button: protection stick cutoff ON/OFF
+%MX2.87	0	0	CXadGrease2Circuit	Add option second grease circuit
+%MX2.88	0	0	CXGrease2LevelSensor	Add grease level sensor of second grease circuit
+%MX2.89	1	1	CXadToolCtrlPressureB	Add DRE valve at pressure site B of tool control
+%MX2.90	0	0	CXadSwingAxlePosSuperstructure	Add swing axle superstructure position control
+%MX2.91	0	0	CXadSlewGearFineTorqCtrl	Add slew gear precision/ torque control
+%MX2.92	1	1	CXadLudvLsMachine	Select the featchers of a LUDV-LS hydraulic system, else a throttle system is installed
+%MX2.93	0	0	CXadQChangerLIKUFIX	Option Quick Changer with LIKUFIX
+%MX2.94	0	0	CXadBoomCylMonitoring	Monitoring pressure boom cylinder
+%MX2.95	1	1	CXadOLW	Overload warning on machine
+%MX2.96	0	0	CXCamMirrorHorizontal	Camera mirroring at horizontal axis
+%MX2.97	1	1	CXCamMirrorVertical	Camera mirroring at vertical axis
+%MX2.98	1	1	CXadHydPowerLimitHydOilTemp	Add option hydraulic power limitation by hydraulic oil temperature
+%MX2.99	1	1	CXadIdSelectUserMenuEnable	Display menu enable, selct 5 machine user
+%MX2.100	1	1	CXadIdSelectUserMenuOnStart	Display menu enable, select machine user on display start
+%MX2.101	0	0	CXadCamera02Enable	option camera screen on display
+%MX2.102	0	0	CXadRotDirContinuousDuty	Rotatory drive, add continiuous operation for rotatory drive
+%MX2.103	0	0	CXRotDirContinuousDirRight	Rotatory drive, direction right in continuous operation
+%MX2.104	0	0	CXRotDrCtrlSelectDigital	Rotatory drive, digitalized a analog control request signal
+%MX2.105	1	1	CXFuelConsEnable	Enable fuel consumption display menu
+%MX2.106	0	0	CXCam02MirrorHorizontal	Camera 02 mirroring at horizontal axis
+%MX2.107	0	0	CXCam02MirrorVertical	Camera 02 mirroring at vertical axis
+%MX2.108	1	1	CXadCameraEnable	option camera screen on display
+%MX2.109	1	1	CXadIdSelectUserNameInputEnable	enable user setting name input (M-->D)
+%MX2.110	0	0	CXadOneGearParkingBrake	One gear gearbox with parking brake (no second gear)
+%MX2.111	1	1	CXadCylCutOffStickDown	Option stick cutoff position down
+%MX2.112	1	1	CXadCylCutOffStickUp	Option stick cutoff position up
+%MX2.113	0	0	CXadCylCutOffStickCushioning	Option stick cylinder cushioning enable
+%MX2.114	1	1	CXCylCutOffStickUserAdjustEnable	Enable the stick cutoff up/ down adjustment by the drive
+%MX2.115	0	0	CXChangeTrackAngleStick	Stick angle sensor is not mounted on the standard side
+%MX2.116	0	0	CXadRadioRemoteControl	display menu enable: radio remote control
+%MX2.117	1	1	CXadConfigUnitsMenu	display menu enable: config_units
+%MX2.118	1	1	CXadBraceCtrlMonitoring	Add monitoring of the brace support control
+%MX2.119	1	1	CXadOlwExtendedFront	Add option of the front brace support extended overload warning
+%MX2.120	1	1	CXadOlwExtendedBack	Add option of the back brace support extended overload warning
+%MX2.121	1	1	CXPmeCameraUsed	PME-Camera is assembled
+%MX2.122	0	0	CXOptionL2M22M14M50Used	Set Modul OA22, OD14, IF50 on line 2 to used
+%MX2.123	0	0	CXOptionL2M46M82M54Used	Set Modul IA46, IR82, IF54 on line 2 to used
+%MX2.124	1	1	CXOptionL2M45M81M53Used	Set Modul IA45, IR81, IF53 on line 2 to used
+%MX2.125	1	1	CXadSplittngGearboxSpeedSensor	Splitting gearbox speed sensor is assembled
+%MX2.126	1	1	CXadDrivePressureSensor	Drive pressure HD sensor is assembled
+%MX2.127	0	0	CXDriveSpeedEnGearboxInpSensor	drive speed enable gearbox inputside sensor
+%MX2.128	0	0	CXDriveSpeedLimitEnable	drive speed limiter enable
+%MX2.129	1	1	CXEcoDriveEnable	eco drive enable
+%MX2.130	0	0	CXSpeederEnable	enable speeder
+%MX2.131	0	0	CXHydMotorVariableEnable	hydro motor variable enable
+%MX2.132	1	1	CXDriveCurrentMaxReduceEnable	drive current max reduce enable
+%MX2.133	0	0	CXadWorkingDrive	Option working drive to over control the servo engine speed steps
+%MX2.134	0	0	CXadJoystickSteering	Option joystick steering active
+%MX2.135	0	0	CXadSteeringWheelAbsent	Option steering wheel not assembled
+%MX2.136	1	1	CXDriveSpeedBoostEnable	drive speed boost enable
+%MX2.137	1	1	CXadAGN	Add option exhaust gas treatment
+%MX2.138	0	0	CXadMagnetSystem	Add option magnet system
+%MX2.139	0	0	CXadMagCtrlToggle	Add option magnet system with toggle magnetization signal
+%MX2.140	0	0	CXadMagCtrlLIKUFIX	Add option magnet system with LIKUFIX
+%MX2.141	0	0	CXadMagCtrlVeeBelt	Add option magnet system with generator drive via Vee-belt
+%MX2.142	0	0	CXadMagCtrlTwoHandOperating	Add option magnet system with two hand operating
+%MX2.143	1	1	CXHydMotVarEnableSpeedCtrl	hydro motor variable enable drive speed control
+%MX2.144	0	0	CXadBypassConsumptionReduction	Add option to bypass the consumption reduction
+%MX2.145	0	0	CXadMotorstopAutomatic	Option automatic motorstop if not working
+%MX2.146	1	1	CXadDrivingLight	Enable driving light
+%MX2.147	0	0	CXadCabinRotBeaconButton	Option cabin rotating beacon select by keyboard button
+%MX2.148	0	0	CXadCabinRotBeaconBackupAlarm	Option cabin rotating beacon select by backup alarm
+%MX2.149	0	0	CXadCabinRotBeaconASMESlew	Option cabin rotating beacon select by ASME slewing gear motion
+%MX2.150	0	0	CXadCabinRotBeaconASMEDrive	Option cabin rotating beacon select by ASME drive mode
+%MX2.151	0	0	CXadBallastRotBeaconButton	Option ballast rotating beacon select by keyboard button
+%MX2.152	0	0	CXadBallastRotBeaconBackupAlarm	Option ballast rotating beacon select by backup alarm
+%MX2.153	0	0	CXadBallastRotBeaconASMESlew	Option ballast rotating beacon select by ASME slewing gear motion
+%MX2.154	0	0	CXadBallastRotBeaconASMEDrive	Option ballast rotating beacon select by ASME drive mode
+%MX2.155	0	0	CXadGrease1Circuit	Option greasing curcuit 1, general enable
+%MX2.156	0	0	CXadBackupAlarm	Option backup alarm
+%MX2.157	1	1	CXadDriverAlert	Option driver alert forward/ backward
+%MX2.158	0	0	CXDriverAlertAutoMute	Automatic mute of the driver alert
+%MX2.159	0	0	CXadCrawlerDrive	Crawler drive configuration
+%MX2.160	0	0	CXadCoolVariablePump	cooling: option fan cooling system with a variable pump
+%MX2.161	0	0	CXadBucketDumpCylPermanent	Option, permanent bucket dump cylinder protection
+%MX2.162	1	1	CXadBucketDumpCylSwitchOn	Option, bucket dump cylinder protection switch ON
+%MX2.163	0	0	CXadOlwCamDisc	Add option of cam disc characteristic overload warning
+%MX2.164	0	0	CXadErgCylinder	Add option ERG cylinder
+%MX2.165	0	0	CXadBraceMonitoringDriveLock	Option warning brace monitoring lock the drive mode
+%MX2.166	1	1	CXOptionL4M47M83M55Used	Set Modul IA47, IR83, IF55 on line 4 to used if configured
+%MX2.167	1	1	CXadAgnButtonEnable	Option, AGN display control button enable
+%MX2.168	1	1	CXadTeleserviceAccess	Option, teleservice remote write acces enable
+%MX2.169	0	0	CXadBraceMonitorFrontSensors	Add brace monitoring sensors front
+%MX2.170	0	0	CXadBraceMonitorBackSensors	Add brace monitoring sensors back
+%MX2.171	0	0	CXChangeTrackAngleAdjBoom	Angle sensor adjustable boom not on standard side
+%MX2.172	0	0	CXadStrokeLimitationDepth	Add stroke depth limitation management
+%MX2.173	0	0	CXadStrokeLimitationHigh	Add stroke height limitation management
+%MX2.174	0	0	CXadGrabLsControl	Add option grab LS signal control
+%MX2.175	0	0	CXGrabLsPropOutput	Grab LS control via proportional output
+%MX2.176	0	0	CXGreasePump2StandAlone	Second greasing pump is a stand alone system
+%MX2.177	1	1	CXBoomActiveDownContServo	Continuous operation of boom active down release by servo
+%MX2.178	0	0	CXadDriveModePumpFlowLimitActive	Add drive mode sum pump flow limitation active
+%MX2.179	0	0	CXadFloodLightBallast	Add flood light on ballast
+%MX2.180	0	0	CXadToolManagement	Option tool management
+%MX2.181	0	0	CXToolMgtUserAcknowledge	Tool management acknowlwdge by user
+%MD2.1	1	1	CDmachinSerialNr	LIUID serial machine number
+%MD2.2	1189	1189	CDmachinSpecType	LIUID specific machine number
+%MD2.5	1120403456	         100	CRDsplCoolantTempWarningLevel	Dspl - Warning level of the display coolant temperature in [°C]
+%MD2.6	200	200	CDHydrOilTempTable	HydrOil - Table ID of the hydraulic oil temperature sensor characteristic
+%MD2.7	1157234688	        2000	CRHydrOilTempSensErrorLevelHigh	HydrOil - high error level of hydraulic oil temperature sensor in [dOhm]
+%MD2.8	1140457472	         500	CRHydrOilTempSensErrorLevelLow	HydrOil - low error level of hydraulic oil temperature sensor in [dOhm]
+%MD2.9	1119748096	          95	CRHydrOilTempSafetyLevel	HydrOil - hydraulic oil temperature saftey level in [°C]
+%MD2.10	1119092736	          90	CRHydrOilTempWarningLevel	HydrOil - hydraulic oil temperature warning level in [°C]
+%MD2.11	101	101	CDFuelLevelTable	FuelLevel - Table ID of the fuel level sensor characteristic
+%MD2.12	1166843904	        4500	CRFuelLevelSensErrorLevelHigh	FuelLevel - high error level of fuel level sensor in [mV]
+%MD2.13	1140457472	         500	CRFuelLevelSensErrorLevelLow	FuelLevel - low error level of fuel level sensor in [mV]
+%MD2.19	0	0	CDAcBlowerStep0	blower set value of blower step 0 [%]
+%MD2.20	12	12	CDAcBlowerStep1	blower set value of blower step 1 [%]
+%MD2.21	22	22	CDAcBlowerStep2	blower set value of blower step 2 [%]
+%MD2.22	40	40	CDAcBlowerStep3	blower set value of blower step 3 [%]
+%MD2.23	52	52	CDAcBlowerStep4	blower set value of blower step 4 [%]
+%MD2.24	65	65	CDAcBlowerStep5	blower set value of blower step 5 [%]
+%MD2.25	100	100	CDAcBlowerStep6	blower set value of blower step 5 [%]
+%MD2.26	30	30	CDGreaseHTcyc	Greasing, Param Greasing HTcyc [min]
+%MD2.27	20	20	CDGreaseHTon	Greasing, Param Greasing HTon [min]
+%MD2.28	2	2	CDGreaseHCnt	Greasing, Param Greasing Hcnt
+%MD2.29	45	45	CDGreaseNTcyc	Greasing, Param Greasing NTcyc [min]
+%MD2.30	30	30	CDGreaseNTon	Greasing, Param Greasing NTon [min]
+%MD2.31	2	2	CDGreaseNCnt	Greasing, Param Greasing Ncnt
+%MD2.32	60	60	CDGreaseLTcyc	Greasing, Param Greasing LTcyc [min]
+%MD2.33	40	40	CDGreaseLTon	Greasing, Param Greasing LTon [min]
+%MD2.34	2	2	CDGreaseLCnt	Greasing, Param Greasing Lcnt
+%MD2.35	500	500	CDWorkingModeSpeedStepTable	Param selection of the working mode engine speed step table ID
+%MD2.36	400	400	CDWorkingModeTorqueStepTable	Param selection of the working mode engine torque step table ID
+%MD2.37	1155596288	        1800	CREngineHighIdleSpeed	Param engine high idle speed [rpm]
+%MD2.38	1143930880	         700	CREngineLowIdleSpeed	Param engine low idle speed [rpm]
+%MD2.39	1153138688	        1500	CREngineMaxTorque	Param engine maximal torque [Nm]
+%MD2.40	1112014848	          50	CREngineMinTorque	Param engine mimimal torque [Nm]
+%MD2.41	3000	3000	CDEngineBleedingStopTime	Param engine maximal bleeding duration in [ms]
+%MD2.42	15	15	CDEngineStartPhaseExtension	Param engine start phase extension in [ms]
+%MD2.43	1000	1000	CDEngineStopPhaseDuration	Param engine turn OFF delay during stop phase in [ms]
+%MD2.44	1140457472	         500	CREngineBleedingStopSpeed	Param engine bleeding stop speed [rpm]
+%MD2.45	3000	3000	CDTravelRampDampTimeGear1	Drive Mode, damped clinging time of gear 1 in [ms]
+%MD2.46	2000	2000	CDTravelRampDampTimeGear2	Drive Mode: damped clinging time of gear 2 in [ms]
+%MD2.47	1500	1500	CDTravelRampHighAccelTimeGear1	Drive Mode, high treshold acceleration time of gear 1 in [ms]
+%MD2.48	500	500	CDTravelRampHighAccelTimeGear2	Drive Mode, high treshold acceleration time of gear 2 in [ms]
+%MD2.49	1500	1500	CDTravelRampHighBrakeTimeGear1	Drive Mode, high treshold deceleration time of gear 1 in [ms]
+%MD2.50	500	500	CDTravelRampHighBrakeTimeGear2	Drive Mode, high treshold deceleration time of gear 2 in [ms]
+%MD2.51	1000	1000	CDTravelRampHighReversTimeGear1	Drive Mode, high treshold reversing time of gear 1 in [ms]
+%MD2.52	500	500	CDTravelRampHighReversTimeGear2	Drive Mode, high treshold reversing time of gear 2 in  [ms]
+%MD2.53	2500	2500	CDTravelRampLowAccelTimeGear1	Drive Mode, low treshold acceleration time of gear 1 in [ms]
+%MD2.54	500	500	CDTravelRampLowAccelTimeGear2	Drive Mode, low treshold acceleration time of gear 2 in [ms]
+%MD2.55	2500	2500	CDTravelRampLowBrakeTimeGear1	Drive Mode, low treshold deceleration time of gear 1 in [ms]
+%MD2.56	1000	1000	CDTravelRampLowBrakeTimeGear2	Drive Mode, low treshold deceleration time of gear 2 in [ms]
+%MD2.57	1000	1000	CDTravelRampLowReversTimeGear1	Drive Mode, low treshold reversing time of gear 1 in [ms]
+%MD2.58	2000	2000	CDTravelRampLowReversTimeGear2	Drive Mode, low treshold reversing time of gear 2 in [ms]
+%MD2.59	1101004800	          20	CRTravelRampDampDifference	Drive Mode, damped clinging difference of travel ramp in [per mille]
+%MD2.60	1133903872	         300	CRTravelRampThreshold	Drive Mode, travel ramp treshold low/ high in [per mille]
+%MD2.65	1128792064	         200	CRTravelSpeedOutCurrBase	Drive Mode, Y353 base current of travel speed output [mA]
+%MD2.66	1128792064	         200	CRTravelSpeedOutCurrStart	not used
+%MD2.67	1143930880	         700	CRTravelSpeedOutCurrMaxForw1	Drive Mode, Y353 max. current forward gear 1 of travel speed output [mA]
+%MD2.68	1142292480	         600	CRTravelSpeedOutCurrMaxForw2	Drive Mode, Y353 max. current forward gear 2 of travel speed output [mA]
+%MD2.69	1143930880	         700	CRTravelSpeedOutCurrMaxBackw1	Drive Mode, Y353 max. current backward gear 1 of travel speed output [mA]
+%MD2.70	1142292480	         600	CRTravelSpeedOutCurrMaxBackw2	Drive Mode, Y353 max. current backward gear 2 of travel speed output [mA]
+%MD2.71	1148846080	        1000	CRCoolForceFanNeedVal	cooling: chosen fan need with the force-function. [%]
+%MD2.72	1000	1000	CDCoolACRampAccel	cooling: ramp value accel. cooling air condition temperature [msec]
+%MD2.73	1000	1000	CDCoolACRampBreak	cooling: ramp value break cooling air condition temperature [msec]
+%MD2.74	1141555200	         555	CRCoolACFanNeed	cooling: fan request at actived air condition [permille].
+%MD2.75	1000	1000	CDCoolAirIntakeRampAccel	cooling: ramp value accel. cooling air intake temperature [msec]
+%MD2.76	1000	1000	CDCoolAirIntakeRampBreak	cooling: ramp value break cooling air intake temperature [msec]
+%MD2.77	1110704128	          45	CRCoolAirIntakeLowLimitTemp	cooling: low limit of the air intake temperature. [°C] default value: 60.0
+%MD2.78	1114636288	          60	CRCoolAirIntakeHighLimitTemp	cooling: high limit of the air intake temperature. [°C] default value: 70.0
+%MD2.79	1000	1000	CDCoolFuelRampAccel	cooling: ramp value accel. cooling fuel temperature [msec]
+%MD2.80	1000	1000	CDCoolFuelRampBreak	cooling: ramp value break. cooling fuel temperature [msec]
+%MD2.81	1115815936	          65	CRCoolFuelLowLimitTemp	cooling: low limit of the fuel temperature. [°C] default value: 65.0
+%MD2.82	1117126656	          75	CRCoolFuelHighLimitTemp	cooling: high limit of the fuel temperature. [°C]  default value: 75.0
+%MD2.83	1000	1000	CDCoolHydraulicRampAccel	cooling: ramp value accel. cooling fuel temperature [msec]
+%MD2.84	1000	1000	CDCoolHydraulicRampBreak	cooling: ramp value break cooling fuel temperature [msec]
+%MD2.85	1113325568	          55	CRCoolHydraulicLowLimitTemp	cooling: low limit of the hydraulic oil temperature. [°C] default value: 65.0
+%MD2.86	1117126656	          75	CRCoolHydraulicHighLimitTemp	cooling: high limit of the hydraulic oil temperature. [°C] default value: 75.0
+%MD2.87	1000	1000	CDCoolWaterRampAccel	cooling: ramp value accel. cooling water temperature [msec]
+%MD2.88	1000	1000	CDCoolWaterRampBreak	cooling: ramp value break cooling water temperature [msec]
+%MD2.89	1118437376	          85	CRCoolWaterLowLimitTemp	cooling: low limit of the water temperature. [°C] default value: 85.0
+%MD2.90	1119748096	          95	CRCoolWaterHighLimitTemp	cooling: high limit of the water temperature. [°C] default value: 95.0
+%MD2.91	10	10	CDCoolFanRevDurationCleaning	cooling: duration of the cleaning phasis [sec]
+%MD2.92	10	10	CDCoolFanRevDurationStart	cooling: duration of the preparation phasis to cleaning [sec]
+%MD2.93	10	10	CDCoolFanRevDurationStop	cooling: duration of the preparation phasis to cooling [sec]
+%MD2.94	40	40	CDCoolFanRevIntervalStart	cooling: shortest duration between 2 preparation phasis to cleaning [sec]
+%MD2.95	3000	3000	CDCoolTimeFanStop	cooling: duration of the fan locking after the motor start [ms]
+%MD2.96	1143111680	         650	CRCoolFanMinSpeedCurr	cooling: lowest value of the the current's control for the fan (Y347) [mA]
+%MD2.97	1128792064	         200	CRCoolFanMaxSpeedCurr	cooling: highest value of the the current's control for the fan (Y347) [mA]
+%MD2.98	1128792064	         200	CRCoolFanMaxSpeedTropicCurr	cooling: highest value of the the current's control for the fan in tropical mode (Y347) [mA]
+%MD2.99	1128792064	         200	CRCoolFanReversibleCurr	cooling: value of the current's control for the reversible fan (Y347) [mA]
+%MD2.100	1120403456	         100	CRCoolFanReversibleTropicCurr	cooling: value of the current's control for the reversible fan in tropical mode (Y347) [mA]
+%MD2.101	1000	1000	CDLrFallingTime1	LR: time rampe at falling power under the threshold level [ms]
+%MD2.102	100	100	CDLrRiseTime1	LR: time rampe at rising power under the threshold level [ms]
+%MD2.103	100	100	CDLrRiseTime2	LR: time rampe at rising power over the threshold level [ms]
+%MD2.104	1137180672	         400	CRLrThresholdChangeRisingTime	LR: power limit threshold at witch the rising ramp time alternates [promille]
+%MD2.105	1120403456	         100	CRLrMaxFanValuation	LR: fan caracteristic of LR power, valuation factor at maximal condenser fan control [%]
+%MD2.106	1120403456	         100	CRLrMinFanValuation	LR: fan caracteristic of LR power, valuation factor at minimal condenser fan control [%]
+%MD2.107	1117782016	          80	CRLrOffsetEORD	LR: leading caracteristic of LR power, Offset over setting in EORD point
+%MD2.108	1114636288	          60	CRLrOffsetMORD	LR: leading caracteristic of LR power, Offset over setting in MORD point
+%MD2.109	1109393408	          40	CRLrOffsetSORD	LR: leading caracteristic of LR power, Offset over setting in SORD point
+%MD2.110	1101004800	          20	CRLrOffsetVORD	LR: leading caracteristic of LR power, Offset over setting in VORD point
+%MD2.111	1120403456	         100	CRLrLimitEORD	LR: leading caracteristic of LR power, limiting factor at EORD point in [%]
+%MD2.112	1117782016	          80	CRLrLimitMORD	LR: leading caracteristic of LR power, limiting factor at MORD point in [%]
+%MD2.113	1114636288	          60	CRLrLimitSORD	LR: leading caracteristic of LR power, limiting factor at SORD point in [%]
+%MD2.114	1101004800	          20	CRLrLimitVORD	LR: leading caracteristic of LR power, limiting factor at VORD point in [%]
+%MD2.115	0	           0	CRLrPowerGRB	LR: hydraulic base power (Grundregelbedarf) in [permille]
+%MD2.116	1143111680	         650	CRLrPowerLimitModeE	LR: power limit of working Mode E in [permille]
+%MD2.117	1140457472	         500	CRLrPowerLimitModeS	LR: power limit of working Mode S in [permille]
+%MD2.118	1143111680	         650	CRLrPowerLimitModeP	LR: power limit of working Mode P in [permille]
+%MD2.119	1142292480	         600	CRLrPowerLimitModePP	LR: power limit of working Mode P+ in [permille]
+%MD2.120	1120403456	         100	CRLrFactorKiMinHydTemp	LR: hydr. oil temp. characteristic of integral parameter, factor at low temp. in [%]
+%MD2.121	1120403456	         100	CRLrFactorKpMinHydTemp	LR: hydr. oil temp. characteristic of proportional parameter, factor at low temp. in [%]
+%MD2.122	1056964608	         0.5	CRLrKd	LR: differential control parameter Kd of the load limit control
+%MD2.123	1069547520	         1.5	CRLrKiNegFalling	LR: integral parameter of the load limit Control at a negative deviation and falling engine speed
+%MD2.124	1065353216	           1	CRLrKiPosRising	LR: integral parameter of the load limit Control at a positive deviation and rising engine speed
+%MD2.125	0	           0	CRLrKiPosLeading	LR: integral parameter of the load limit Control at a positive deviation and active speed leading
+%MD2.126	1061997772	         0.8	CRLrKpNegFalling	LR: propotional parameter of the load limit Control at negative deviation and falling engine speed
+%MD2.127	1053609164	         0.4	CRLrKpNegRising	LR: propotional parameter of the load limit Control at negative deviation and rising engine speed
+%MD2.128	0	           0	CRLrKpPosFalling	LR: propotional parameter of the load limit Control at positive deviation and falling engine speed
+%MD2.129	0	           0	CRLrKpPosRising	LR: propotional parameter of the load limit Control at positive deviation and rising engine speed
+%MD2.130	1101004800	          20	CRLrMaxHydTempKi	LR: hydr oil temp. characteristic of integral parameter, high hydraulic oil temperature in [°C]
+%MD2.131	1101004800	          20	CRLrMaxHydTempKp	LR: hydr. oil temp. characteristic of proportional parameter, high hydraulic oil temperature in [°C]
+%MD2.132	0	           0	CRLrMinHydTempKi	LR: hydr. oil temp. characteristic of integral parameter, low hydraulic oil temperature in [°C]
+%MD2.133	0	           0	CRLrMinHydTempKp	LR: hydr. oil temp. characteristic of proportional parameter, low hydraulic oil temperature in [°C]
+%MD2.134	1069547520	         1.5	CRLrMinKiNegFalling	LR: speed band characteristic of integral parameter, minimal integral parameter at negativ deviation and falling engine speed
+%MD2.135	1084227584	           5	CRLrMinKiPosRising	LR: speed band characteristic of integral parameter, minimal integral parameter at positiv deviation and rising engine speed
+%MD2.136	1075838976	         2.5	CRLrMinKpNeg	LR: speed band characteristic of proportional parameter, minimal proportional parameter at negativ deviation
+%MD2.137	0	           0	CRLrMinKpPos	LR: speed band characteristic of proportional parameter, minimal proportional parameter at positiv deviation
+%MD2.138	1073741824	           2	CRLrRangeOverhead	LR: internal overhead of the load limit control range in [%]
+%MD2.139	1120403456	         100	CRLrSpeedBandKiNeg	LR: speed band characteristic of integral parameter, engine speed band at negativ deviation in [rpm]
+%MD2.140	1112014848	          50	CRLrSpeedBandKiPos	LR: speed band characteristic of integral parameter, engine speed band at positiv deviation in [rpm]
+%MD2.141	1120403456	         100	CRLrSpeedBandKpNeg	LR: speed band characteristic of proportional parameter, engine speed band at negativ deviation in [rpm]
+%MD2.142	1143603200	         680	CRLrValveMaxCurrent	LR: maximal current of the LR valve Y50 in [mA]
+%MD2.143	1133903872	         300	CRLrValveMinCurrent	LR: minimal current of the LR valve Y50 in [mA]
+%MD2.144	1120403456	         100	CRLrLoadOffset	LR: engine load offset for the hydraulic in [rpm]
+%MD2.145	1148846080	        1000	CRLrPowerLimitModeDriveEco	LR: Power limit of the ECO drive mode [permille]
+%MD2.146	1157234688	        2000	CREngineTorqueDriveMode	Diesel engine: torque at drive mode in [Nm]
+%MD2.147	1000	1000	CDWWasherWaitTime	windscreen washer, wait time for water function in [ms]
+%MD2.148	500	500	CDWWasherActiveTime	windscreen washer, time for wiper active function in [ms]
+%MD2.149	3000	3000	CDWWasherDelay	windscreen washer, delay time for water active function in [ms]
+%MD2.150	1133903872	         300	CRToolCtrlTool1FlowRate1	flow rate limit 1 for tool 1 [liter]
+%MD2.151	1133903872	         300	CRToolCtrlTool1FlowRate2	flow rate limit 2 for tool 1 [liter]
+%MD2.152	0	           0	CRToolCtrlTool1FlowRate3	flow rate limit 3 for tool 1 [liter]
+%MD2.153	0	           0	CRToolCtrlTool1FlowRate4	flow rate limit 4 for tool 1 [liter]
+%MD2.154	1120403456	         100	CRToolCtrlTool1Pressure1	pressure value 1 for tool 1 [bar]
+%MD2.155	0	           0	CRToolCtrlTool1Pressure2	pressure value 2 for tool 1 [bar]
+%MD2.156	0	0	CDToolCtrlTool1Code	Code tool 1
+%MD2.157	1128923136	         202	CRToolCtrlTool2Pressure2	pressure value 2 for tool 2 [bar]
+%MD2.158	1128857600	         201	CRToolCtrlTool2Pressure1	pressure value 1 for tool 2 [bar]
+%MD2.159	0	           0	CRToolCtrlTool2FlowRate4	flow rate limit 4 for tool 2 [liter]
+%MD2.160	0	           0	CRToolCtrlTool2FlowRate3	flow rate limit 3 for tool 2 [liter]
+%MD2.161	1102053376	          22	CRToolCtrlTool2FlowRate2	flow rate limit 2 for tool 2 [liter]
+%MD2.162	1101529088	          21	CRToolCtrlTool2FlowRate1	flow rate limit 1 for tool 2 [liter]
+%MD2.163	0	0	CDToolCtrlTool2Code	Code tool 2
+%MD2.164	1133969408	         302	CRToolCtrlTool3Pressure2	pressure value 2 for tool 3 [bar]
+%MD2.165	1133936640	         301	CRToolCtrlTool3Pressure1	pressure value 1 for tool 3 [bar]
+%MD2.166	0	           0	CRToolCtrlTool3FlowRate4	flow rate limit 4 for tool 3 [liter]
+%MD2.167	0	           0	CRToolCtrlTool3FlowRate3	flow rate limit 3 for tool 3 [liter]
+%MD2.168	1107296256	          32	CRToolCtrlTool3FlowRate2	flow rate limit 2 for tool 3 [liter]
+%MD2.169	1106771968	          31	CRToolCtrlTool3FlowRate1	flow rate limit 1 for tool 3 [liter]
+%MD2.170	0	0	CDToolCtrlTool3Code	Code tool 3
+%MD2.171	1134100480	         306	CRToolCtrlTool4Pressure2	pressure value 2 for tool 4 [bar]
+%MD2.172	1134034944	         304	CRToolCtrlTool4Pressure1	pressure value 1 for tool 4 [bar]
+%MD2.173	0	           0	CRToolCtrlTool4FlowRate4	flow rate limit 4 for tool 4 [liter]
+%MD2.174	0	           0	CRToolCtrlTool4FlowRate3	flow rate limit 3 for tool 4 [liter]
+%MD2.175	1109917696	          42	CRToolCtrlTool4FlowRate2	flow rate limit 2 for tool 4 [liter]
+%MD2.176	1109655552	          41	CRToolCtrlTool4FlowRate1	flow rate limit 1 for tool 4 [liter]
+%MD2.177	0	0	CDToolCtrlTool4Code	Code tool 4
+%MD2.178	0	           0	CRToolCtrlTool5Pressure2	pressure value 2 for tool 5 [bar]
+%MD2.179	0	           0	CRToolCtrlTool5Pressure1	pressure value 1 for tool 5 [bar]
+%MD2.180	0	           0	CRToolCtrlTool5FlowRate4	flow rate limit 4 for tool 5 [liter]
+%MD2.181	0	           0	CRToolCtrlTool5FlowRate3	flow rate limit 3 for tool 5 [liter]
+%MD2.182	0	           0	CRToolCtrlTool5FlowRate2	flow rate limit 2 for tool 5 [liter]
+%MD2.183	0	           0	CRToolCtrlTool5FlowRate1	flow rate limit 1 for tool 5 [liter]
+%MD2.184	0	0	CDToolCtrlTool5Code	Code tool 5
+%MD2.185	0	           0	CRToolCtrlTool6Pressure2	pressure value 2 for tool 6 [bar]
+%MD2.186	0	           0	CRToolCtrlTool6Pressure1	pressure value 1 for tool 6 [bar]
+%MD2.187	0	           0	CRToolCtrlTool6FlowRate4	flow rate limit 4 for tool 6 [liter]
+%MD2.188	0	           0	CRToolCtrlTool6FlowRate3	flow rate limit 3 for tool 6 [liter]
+%MD2.189	0	           0	CRToolCtrlTool6FlowRate2	flow rate limit 2 for tool 6 [liter]
+%MD2.190	0	           0	CRToolCtrlTool6FlowRate1	flow rate limit 1 for tool 6 [liter]
+%MD2.191	0	0	CDToolCtrlTool6Code	Code tool 6
+%MD2.192	0	           0	CRToolCtrlTool7Pressure2	pressure value 2 for tool 7 [bar]
+%MD2.193	0	           0	CRToolCtrlTool7Pressure1	pressure value 1 for tool 7 [bar]
+%MD2.194	0	           0	CRToolCtrlTool7FlowRate4	flow rate limit 4 for tool 7 [liter]
+%MD2.195	0	           0	CRToolCtrlTool7FlowRate3	flow rate limit 3 for tool 7 [liter]
+%MD2.196	0	           0	CRToolCtrlTool7FlowRate2	flow rate limit 2 for tool 7 [liter]
+%MD2.197	0	           0	CRToolCtrlTool7FlowRate1	flow rate limit 1 for tool 7 [liter]
+%MD2.198	0	0	CDToolCtrlTool7Code	Code tool 7
+%MD2.199	0	           0	CRToolCtrlTool8Pressure2	pressure value 2 for tool 8 [bar]
+%MD2.200	0	           0	CRToolCtrlTool8Pressure1	pressure value 1 for tool 8 [bar]
+%MD2.201	0	           0	CRToolCtrlTool8FlowRate4	flow rate limit 4 for tool 8 [liter]
+%MD2.202	0	           0	CRToolCtrlTool8FlowRate3	flow rate limit 3 for tool 8 [liter]
+%MD2.203	0	           0	CRToolCtrlTool8FlowRate2	flow rate limit 2 for tool 8 [liter]
+%MD2.204	0	           0	CRToolCtrlTool8FlowRate1	flow rate limit 1 for tool 8 [liter]
+%MD2.205	0	0	CDToolCtrlTool8Code	Code tool 8
+%MD2.206	0	           0	CRToolCtrlTool9Pressure2	pressure value 2 for tool 9 [bar]
+%MD2.207	0	           0	CRToolCtrlTool9Pressure1	pressure value 1 for tool 9 [bar]
+%MD2.208	0	           0	CRToolCtrlTool9FlowRate4	flow rate limit 4 for tool 9 [liter]
+%MD2.209	0	           0	CRToolCtrlTool9FlowRate3	flow rate limit 3 for tool 9 [liter]
+%MD2.210	0	           0	CRToolCtrlTool9FlowRate2	flow rate limit 2 for tool 9 [liter]
+%MD2.211	0	           0	CRToolCtrlTool9FlowRate1	flow rate limit 1 for tool 9 [liter]
+%MD2.212	0	0	CDToolCtrlTool9Code	Code tool 9
+%MD2.213	0	           0	CRToolCtrlTool10Pressure2	pressure value 2 for tool 10 [bar]
+%MD2.214	0	           0	CRToolCtrlTool10Pressure1	pressure value 1 for tool 10 [bar]
+%MD2.215	0	           0	CRToolCtrlTool10FlowRate4	flow rate limit 4 for tool 10 [liter]
+%MD2.216	0	           0	CRToolCtrlTool10FlowRate3	flow rate limit 3 for tool 10 [liter]
+%MD2.217	0	           0	CRToolCtrlTool10FlowRate2	flow rate limit 2 for tool 10 [liter]
+%MD2.218	0	           0	CRToolCtrlTool10FlowRate1	flow rate limit 1 for tool 10 [liter]
+%MD2.219	0	0	CDToolCtrlTool10Code	Code tool 10
+%MD2.220	0	           0	CRToolCtrlAHS2Pressure2	pressure value 2 for AHS2 [bar]
+%MD2.221	0	           0	CRToolCtrlAHS2Pressure1	pressure value 1 for AHS2 [bar]
+%MD2.222	0	           0	CRToolCtrlAHS2FlowRate4	flow rate limit 4 for AHS2 [liter]
+%MD2.223	0	           0	CRToolCtrlAHS2FlowRate3	flow rate limit 3 for AHS2 [liter]
+%MD2.224	0	           0	CRToolCtrlAHS2FlowRate2	flow rate limit 2 for AHS2 [liter]
+%MD2.225	0	           0	CRToolCtrlAHS2FlowRate1	flow rate limit 1 for AHS2 [liter]
+%MD2.226	0	           0	CRToolCtrlAHS3Pressure2	pressure value 2 for AHS3 [bar]
+%MD2.227	0	           0	CRToolCtrlAHS3Pressure1	pressure value 1 for AHS3 [bar]
+%MD2.228	0	           0	CRToolCtrlAHS3FlowRate4	flow rate limit 4 for AHS3 [liter]
+%MD2.229	0	           0	CRToolCtrlAHS3FlowRate3	flow rate limit 3 for AHS3 [liter]
+%MD2.230	0	           0	CRToolCtrlAHS3FlowRate1	flow rate limit 1 for AHS3 [liter]
+%MD2.231	1137180672	         400	CRToolCtrlMaxPressure2	Maximal pressure value 2 [bar]
+%MD2.232	1137180672	         400	CRToolCtrlMaxPressure1	Maximal pressure value 1 [bar]
+%MD2.233	0	           0	CRToolCtrlMaxFlowRate4	Maximal flow rate limit 4 [liter]
+%MD2.234	0	           0	CRToolCtrlMaxFlowRate3	Maximal flow rate limit 3 [liter]
+%MD2.235	1128792064	         200	CRToolCtrlMaxFlowRate2	Maximal flow rate limit 2 [liter]
+%MD2.236	1128792064	         200	CRToolCtrlMaxFlowRate1	Maximal flow rate limit 1 [liter]
+%MD2.237	0	           0	CRToolCtrlAHS3FlowRate2	flow rate limit 2 for AHS3 [liter]
+%MD2.238	2	2	CDToolCtrlPressureAmount	Set the amount of the ajustable pressures
+%MD2.239	1134559232	         320	CRToolCtrlProz80Pressure1	Value of the characteristic curve at 80 percent current [bar]
+%MD2.240	1133248512	         280	CRToolCtrlProz60Pressure1	Value of the characteristic curve at 60 percent current [bar]
+%MD2.241	1130102784	         220	CRToolCtrlProz40Pressure1	Value of the characteristic curve at 40 percent current [bar]
+%MD2.242	1126170624	         160	CRToolCtrlProz20Pressure1	Value of the characteristic curve at 20 percent current [bar]
+%MD2.243	1137180672	         400	CRToolCtrlProz100MaxPressure1	Value of the characteristic curve at maximal current [bar]
+%MD2.244	1120403456	         100	CRToolCtrlProz0MinPressure1	Value of the characteristic curve at minimal current [bar]
+%MD2.245	1112014848	          50	CRToolCtrlPress1MinCurrentTol	tolernce range to ajust the minimal current of the pressure valve solenoid 1 in [mA]
+%MD2.246	0	           0	CRToolCtrlPress1MinCurrentOffset	offset current to ajust the minimal current of the pressure valve solenoid 1 in [mA]
+%MD2.247	1125515264	         150	CRToolCtrlPress1MinCurrent	minimal current of the pressure valve solenoid 1 [mA]
+%MD2.248	1145569280	         800	CRToolCtrlPress1MaxCurrent	maximal current of the pressure valve solenoid 1 [mA]
+%MD2.249	1056964608	         0.5	CRToolCtrlPress1CurrentGainTol	tolerance range of the pressure 1 gain factor
+%MD2.250	1065353216	           1	CRToolCtrlPress1CurrentGain	gain factor to ajust the maximal current of the pressure valve solenoid 1
+%MD2.251	0	0	CDToolCtrlPress1RampBrake	(Ouput 1) Duration to reach zero for the PressureReliefValve 1 [ms]
+%MD2.252	0	0	CDToolCtrlPress1RampAccel	(Ouput 1) Duration to reach the set value for the PressureReliefValve 1 [ms]
+%MD2.253	1134559232	         320	CRToolCtrlProz80Pressure2	Value of the characteristic curve at 80 percent current [bar]
+%MD2.254	1131413504	         240	CRToolCtrlProz60Pressure2	Value of the characteristic curve at 60 percent current [bar]
+%MD2.255	1126170624	         160	CRToolCtrlProz40Pressure2	Value of the characteristic curve at 40 percent current [bar]
+%MD2.256	1117782016	          80	CRToolCtrlProz20Pressure2	Value of the characteristic curve at 20 percent current [bar]
+%MD2.257	1137180672	         400	CRToolCtrlProz100MaxPressure2	Value of the characteristic curve at maximal current [bar]
+%MD2.258	0	           0	CRToolCtrlProz0MinPressure2	Value of the characteristic curve at minimal current [bar]
+%MD2.259	1112014848	          50	CRToolCtrlPress2MinCurrentTol	tolernce range to ajust the minimal current of the pressure valve solenoid 2 in [mA]
+%MD2.260	0	           0	CRToolCtrlPress2MinCurrentOffset	offset current to ajust the minimal current of the pressure valve solenoid 2 in [mA]
+%MD2.261	0	           0	CRToolCtrlPress2MinCurrent	minimal current of the pressure valve solenoid 2 [mA]
+%MD2.262	1140490240	         501	CRToolCtrlPress2MaxCurrent	maximal current of the pressure valve solenoid 2 [mA]
+%MD2.263	1056964608	         0.5	CRToolCtrlPress2CurrentGainTol	tolerance range of the pressure 2 gain factor
+%MD2.264	1065353216	           1	CRToolCtrlPress2CurrentGain	gain factor to ajust the maximal current of the pressure valve solenoid 2
+%MD2.265	0	0	CDToolCtrlPress2RampBrake	(Ouput 2) Duration to reach zero for the PressureReliefValve 2 [ms]
+%MD2.266	0	0	CDToolCtrlPress2RampAccel	(Ouput 2) Duration to reach the set value for the PressureReliefValve 2 [ms]
+%MD2.267	600	600	CDAdjBoomCylPistonTableID	Adjustable boom cylinder, table ID for pedal/ piston characteristic
+%MD2.268	10	10	CDAdjBoomCylRampDampTime	Adjustable boom cylinder, pedal damp ramp time in [ms]
+%MD2.269	1200	1200	CDAdjBoomCylRampHighAccelTime	Adjustable boom cylinder, pedal acceleration ramp time at high difference in [ms]
+%MD2.270	500	500	CDAdjBoomCylRampHighBrakeTime	Adjustable boom cylinder, pedal brake ramp time at high difference in [ms]
+%MD2.271	100	100	CDAdjBoomCylRampHighReversTime	Adjustable boom cylinder, pedal reverse ramp time at high difference in [ms]
+%MD2.272	800	800	CDAdjBoomCylRampLowAccelTime	Adjustable boom cylinder, pedal acceleration ramp time at low difference in [ms]
+%MD2.273	200	200	CDAdjBoomCylRampLowBrakeTime	Adjustable boom cylinder, pedal brake ramp time at low difference in [ms]
+%MD2.274	100	100	CDAdjBoomCylRampLowReversTime	Adjustable boom cylinder, pedal reverse ramp time at low difference in [ms]
+%MD2.275	1120403456	         100	CRAdjBoomCylRampDampDifference	Adjustable boom cylinder, pedal difference for damp in [permille]
+%MD2.276	1128792064	         200	CRAdjBoomCylRampThreshold	Adjustable boom cylinder, pedal threshhold to select high/low range [permille]
+%MD2.277	1128792064	         200	CRToolCtrlMaxPistonFlow	Maximal piston flow of the tool attachement piston in [liter]
+%MD2.279	7	7	CDWorkingModeSpeedStepModeS	WorkingMode, speed step in working mode S
+%MD2.280	8	8	CDWorkingModeSpeedStepModeE	WorkingMode, speed step in working mode E
+%MD2.281	9	9	CDWorkingModeSpeedStepModeP	WorkingMode, speed step in working mode P
+%MD2.282	2	2	CDWorkingModeSpeedStepModeGRB	WorkingMode, speed step in working mode GRB
+%MD2.283	5000	5000	CDCoolTestRampAccel	Cooling, fan test ramp acceleration time [ms]
+%MD2.284	5000	5000	CDCoolTestRampBreak	Cooling, fan test ramp break time [ms]
+%MD2.285	5000	5000	CDCoolTestRampWaitOnTop	Cooling, fan test ramp waiting on top time [ms]
+%MD2.286	5000	5000	CDCoolTestRampWaitOnEnd	Cooling, fan test ramp waiting on end time [ms]
+%MD2.287	1000	1000	CDPump1FlowCurrentTableID	Flow limit Table ID of pump 1 Y51
+%MD2.288	8	8	CDMagnetEngineSpeedMinLimit	Working Mode, minimal speed step at active magnetic system [step]
+%MD2.289	1100	1100	CDCabinLiftPistonTableID	Cabin lift Table ID of the joystick/ piston characteristic, normed control =f (normed flow)
+%MD2.290	1146388480	         850	CRCabinLiftDownCurrentMax	Cabin lift, maximal cabin lift down valve control current in [mA]
+%MD2.291	1132068864	         250	CRCabinLiftDownCurrentMin	Cabin lift, minimal cabin lift down valve control current in [mA]
+%MD2.292	100	100	CDCabinLiftRampDampTime	Cabin lift damp time in [ms]
+%MD2.293	100	100	CDCabinLiftRampUpAccelTime	Cabin lift acceleration time up in [ms]
+%MD2.294	100	100	CDCabinLiftRampUpBrakeTime	Cabin lift brake time up in [ms]
+%MD2.295	100	100	CDCabinLiftRampHighReversTime	Cabin lift reversing time at high difference in [ms]
+%MD2.296	100	100	CDCabinLiftRampDownAccelTime	Cabin lift acceleration time down in [ms]
+%MD2.297	100	100	CDCabinLiftRampDownBrakeTime	Cabin lift brake time down in [ms]
+%MD2.298	100	100	CDCabinLiftRampLowReversTime	Cabin lift reversing time at low difference in [ms]
+%MD2.299	1000	1000	CDEngStopSpeedDuration	Engine stop phase duration for ramp down [ms]
+%MD2.300	1148846080	        1000	CRCabinLiftCushoinFlowLimitDown	Cabin lift Maximal flow limit for end cushoining down in [permille]
+%MD2.301	1148846080	        1000	CRCabinLiftCushoinFlowLimitUp	Cabin lift Maximal flow limit for end cushoining up in [permille]
+%MD2.302	1065353216	           1	CRCabinLiftRampDampDifference	Cabin lift damp difference  from set value in [promille]
+%MD2.303	1140457472	         500	CRCabinLiftRampThreshold	Cabin lift threshold for time switching in [promille]
+%MD2.304	0	           0	CRCabinLiftJoyOffset	Cabin liftX-axle offset of the joystick in [promille]
+%MD2.305	1148846080	        1000	CRCabinLiftJoyEnd	Cabin liftX-axle end point of the joystick in [promille]
+%MD2.306	1145569280	         800	CRQChangerJoyDigOn	Quick Changer, digital switch On point in [promille]
+%MD2.307	1128792064	         200	CRQChangerJoyDigOff	Quick Changer, digital switch Off point in [promille]
+%MD2.308	1073741824	           2	CRCabinLiftJoyDigOn	Cabin lift Y-axle digital switch On point of the joystick in [promille]
+%MD2.309	1065353216	           1	CRCabinLiftJoyDigOff	Cabin lift Y-axle digital switch Off point of the joystick in [promille]
+%MD2.310	1000	1000	CDBoomDelayActiveOff	Boom down, delay active movement Off in [ms]
+%MD2.311	1000	1000	CDBoomDelayActiveOn	Boom down, delay active movement On in [ms]
+%MD2.312	1133903872	         300	CRBoomPressureActiveOff	Boom down, pressure level active movement Off in [bar]
+%MD2.313	1120403456	         100	CRBoomPressureActiveOn	Boom down, pressure level active movement On in [bar]
+%MD2.314	316	316	CDEngineDynTorqueTable	Table ID of the dynamic engine torque characteristic
+%MD2.315	1065353216	           1	CRLrParameterSensibility	LR, sensibility of the load limit control PID parameter
+%MD2.316	1120403456	         100	CRLrSpeedBandKpPosFalling	LR, speed band characteristic of proportional parameter, engine speed band at positiv deviation and falling speed in [rpm]
+%MD2.317	1120403456	         100	CRLrSpeedBandKpPosRising	LR, speed band characteristic of proportional parameter, engine speed band at positiv deviation and rising speed in [rpm]
+%MD2.318	30	30	CDGrease2HTcyc	Greasing 2, Param Greasing HTcyc [min]
+%MD2.319	20	20	CDGrease2HTon	Greasing 2, Param Greasing HTon [min]
+%MD2.320	2	2	CDGrease2HCnt	Greasing 2, Param Greasing Hcnt
+%MD2.321	45	45	CDGrease2NTcyc	Greasing 2, Param Greasing NTcyc [min]
+%MD2.322	30	30	CDGrease2NTon	Greasing 2, Param Greasing NTon [min]
+%MD2.323	2	2	CDGrease2NCnt	Greasing 2, Param Greasing Ncnt
+%MD2.324	60	60	CDGrease2LTcyc	Greasing 2, Param Greasing LTcyc [min]
+%MD2.325	40	40	CDGrease2LTon	Greasing 2, Param Greasing LTon [min]
+%MD2.326	2	2	CDGrease2LCnt	Greasing 2, Param Greasing Lcnt
+%MD2.327	0	           0	CRToolCtrlAHS4Pressure2	pressure value 2 for AHS4 [bar]
+%MD2.328	0	           0	CRToolCtrlAHS4Pressure1	pressure value 1 for AHS4 [bar]
+%MD2.329	0	           0	CRToolCtrlAHS4FlowRate4	flow rate limit 4 for AHS4 [liter]
+%MD2.330	0	           0	CRToolCtrlAHS4FlowRate3	flow rate limit 3 for AHS4 [liter]
+%MD2.331	0	           0	CRToolCtrlAHS4FlowRate2	flow rate limit 2 for AHS4 [liter]
+%MD2.332	0	           0	CRToolCtrlAHS4FlowRate1	flow rate limit 1 for AHS4 [liter]
+%MD2.333	1092616192	          10	CRBrakeDiffPressLevel	Brake, allowed differece pressure of the redundant brake pressure signals in [bar]
+%MD2.334	1101004800	          20	CRBrakePressOnLevel	Brake, brake pressure level to indicate braking state in [bar]
+%MD2.335	1126498304	         165	CRSwingAxlePositionBackLeft	Swing Axle, superstructure position sector back left in [degree]
+%MD2.336	1128464384	         195	CRSwingAxlePositionBackRight	Swing Axle, superstructure position sector back right in [degree]
+%MD2.337	1097859072	          15	CRSwingAxlePositionFrontLeft	Swing Axle, superstructure position sector front left in [degree]
+%MD2.338	1135378432	         345	CRSwingAxlePositionFrontRight	Swing Axle, superstructure position sector front right in [degree]
+%MD2.339	1148846080	        1000	CRQChangerMaxFlow	Quick Changer, maximal flow in [permille]
+%MD2.340	1	1	CDIdSelectUserAmount	Amount (1...5) of the selectable user
+%MD2.341	10	10	CDRotDrRampDampTime	Rotatory drive, damp time in [ms]
+%MD2.342	80	80	CDRotDrRampHighAccelTime	Rotatory drive, acceleration time at high difference in [ms]
+%MD2.343	40	40	CDRotDrRampHighBrakeTime	Rotatory drive, brake time at high difference in [ms]
+%MD2.344	20	20	CDRotDrRampHighReversTime	Rotatory drive, reversing time at high difference in [ms]
+%MD2.345	600	600	CDRotDrRampLowAccelTime	Rotatory drive, acceleration time at low difference in [ms]
+%MD2.346	100	100	CDRotDrRampLowBrakeTime	Rotatory drive, brake time at low difference in [ms]
+%MD2.347	50	50	CDRotDrRampLowReversTime	Rotatory drive, reversing time at low difference in [ms]
+%MD2.348	1133903872	         300	CRRotDrJoyDigOff	Rotatory drive, switch Off level of the analog control request signal in [promille]
+%MD2.349	1140457472	         500	CRRotDrJoyDigOn	Rotatory drive, switch On level of the analog control request signal in [promille]
+%MD2.350	1117782016	          80	CRRotDrMaxPistonFlow	Rotatory drive, maximal flow at the piston of rotatory drive section in [liter]
+%MD2.351	1120403456	         100	CRRotDrRampDampDifference	Rotatory drive, damp difference from set value in [promille]
+%MD2.352	1140457472	         500	CRRotDrRampThreshold	Rotatory drive, threshold for time switching in [promille]
+%MD2.353	1142292480	         600	CRRotDrTurnLeftCurrentMax	Rotatory drive, maximal current turn left in [mA]
+%MD2.354	1133903872	         300	CRRotDrTurnLeftCurrentMin	Rotatory drive, minimal current turn left in [mA]
+%MD2.355	1141964800	         580	CRRotDrTurnRightCurrentMax	Rotatory drive, maximal current turn right in [mA]
+%MD2.356	1133903872	         300	CRRotDrTurnRightCurrentMin	Rotatory drive, minimal current turn right in [mA]
+%MD2.357	30	30	CDEngSpeedTestRampAccel	Test the engine speed with a ramp function, accelaration in [s]
+%MD2.358	30	30	CDEngSpeedTestRampBreak	Test the engine speed with a ramp function, brake time in [s]
+%MD2.359	5	5	CDEngSpeedTestRampWaitOnEnd	Test engine speed ramp function, waittime on the end of the ramp [s]
+%MD2.360	5	5	CDEngSpeedTestRampWaitOnTop	Test engine speed ramp funktion, waittime on the top of the ramp [s]
+%MD2.361	500	500	CDServiceAxleGearInterval	Service, axle/ gear service interval time in [hours]
+%MD2.362	100	100	CDServiceAxleGearUnblock	Service, axle/ gear service unblock time in [hours]
+%MD2.363	500	500	CDServiceEngineInterval	Service, engine service interval time in [hours]
+%MD2.364	100	100	CDServiceEngUnblock	Service, engine service unblock time in [hours]
+%MD2.365	500	500	CDServiceHydaulicInterval	Service, hydraulic service interval time in [hours]
+%MD2.366	100	100	CDServiceHydraulicUnblock	Service, hydraulic service unblock time in [hours]
+%MD2.367	1201	1201	CDRotDrPistonTableID	Rotatory drive Table ID of the joystick/ piston characteristic, normed control =f (normed flow)
+%MD2.368	0	0	CDCam02RotationAngle	camera 02 rotation angle (0,90,180,270) [degree]
+%MD2.369	19	19	CDKeyShunterA171ConfigKey1	The key 1 of the  TB09 A171 is assign to a application function (see function table)
+%MD2.370	10	10	CDKeyShunterA171ConfigKey2	The key 2 of the  TB09 A171 is assign to a application function (see function table)
+%MD2.371	18	18	CDKeyShunterA171ConfigKey3	The key 3 of the  TB09 A171 is assign to a application function (see function table)
+%MD2.372	0	0	CDKeyShunterA171ConfigKey4	The key 4 of the  TB09 A171 is assign to a application function (see function table)
+%MD2.373	0	0	CDKeyShunterA171ConfigKey5	The key 5 of the  TB09 A171 is assign to a application function (see function table)
+%MD2.374	2	2	CDKeyShunterA171ConfigKey6	The key 6 of the  TB09 A171 is assign to a application function (see function table)
+%MD2.375	0	0	CDKeyShunterA172ConfigKey1	The key 1 of the  TB09 A172 is assign to a application function (see function table)
+%MD2.376	0	0	CDKeyShunterA172ConfigKey2	The key 2 of the  TB09 A172 is assign to a application function (see function table)
+%MD2.377	0	0	CDKeyShunterA172ConfigKey3	The key 3 of the  TB09 A172 is assign to a application function (see function table)
+%MD2.378	0	0	CDKeyShunterA172ConfigKey4	The key 4 of the  TB09 A172 is assign to a application function (see function table)
+%MD2.379	0	0	CDKeyShunterA172ConfigKey5	The key 5 of the  TB09 A172 is assign to a application function (see function table)
+%MD2.380	0	0	CDKeyShunterA172ConfigKey6	The key 6 of the  TB09 A172 is assign to a application function (see function table)
+%MD2.381	1132068864	         250	CRStickUpPreCutoffMinCurrent	Minimal current of the stick up Pre-cutoff valve in [mA]
+%MD2.382	1142292480	         600	CRStickUpPreCutoffMaxCurrent	Maximal current of the stick up Pre-cutoff valve in [mA]
+%MD2.383	1101004800	          20	CRCylCutOffStickDynOffsetMaxDown	Dynamic characteristic stick down: maximal offset [degree]
+%MD2.384	1101004800	          20	CRCylCutOffStickDynOffsetMaxUp	Dynamic characteristic stick up: maximal offset [degree]
+%MD2.385	1092616192	          10	CRCylCutOffStickDynOffsetMinDown	Dynamic characteristic stick down: minimal offset [degree]
+%MD2.386	1092616192	          10	CRCylCutOffStickDynOffsetMinUp	Dynamic characteristic stick up: minimal offset [degree]
+%MD2.387	1112014848	          50	CRCylCutOffStickDynSpeedMaxDown	Dynamic characteristic stick down: maximal speed [degree/sec]
+%MD2.388	1112014848	          50	CRCylCutOffStickDynSpeedMaxUp	Dynamic characteristic stick up: maximal speed [degree/sec]
+%MD2.389	1092616192	          10	CRCylCutOffStickDynSpeedMinDown	Dynamic characteristic stick down: minimal speed [degree/sec]
+%MD2.390	1092616192	          10	CRCylCutOffStickDynSpeedMinUp	Dynamic characteristic stick up: minimal speed [degree/sec]
+%MD2.391	1065353216	           1	CRMaxLimitStickDownEnd	end point delta angle of the cylinder protection: stick down [°]
+%MD2.392	1077936128	           3	CRMaxLimitStickDownStart	start point delta angle of the cylinder protection: stick down [°]
+%MD2.393	1065353216	           1	CRMaxLimitStickUpEnd	end point delta angle of the cylinder protection: stick up [°]
+%MD2.394	1090519040	           8	CRMaxLimitStickUpStart	start point delta angle of the cylinder protection: stick up [°]
+%MD2.395	2	2	CDShunterAnalogConfigAxis01	Mini rocker X left, axis 01 is linkt to the selected Analog Shunter function
+%MD2.396	3	3	CDShunterAnalogConfigAxis02	Mini rocker Y left, axis 02 is linkt to the selected Analog Shunter function
+%MD2.397	0	0	CDShunterAnalogConfigAxis03	Mini rocker X right, axis 03 is linkt to the selected Analog Shunter function
+%MD2.398	0	0	CDShunterAnalogConfigAxis04	Mini rocker Y right, axis 04 is linkt to the selected Analog Shunter function
+%MD2.399	0	0	CDShunterAnalogConfigAxis05	Double pedal left, axis 05 is linkt to the selected Analog Shunter function
+%MD2.400	0	0	CDShunterAnalogConfigAxis06	Joystick/ pedal axis 06 is linkt to the selected Analog Shunter function
+%MD2.401	0	0	CDShunterAnalogConfigAxis07	Joystick/ pedal axis 07 is linkt to the selected Analog Shunter function
+%MD2.402	0	0	CDShunterAnalogConfigAxis08	Joystick/ pedal axis 08 is linkt to the selected Analog Shunter function
+%MD2.403	0	0	CDShunterAnalogConfigAxis09	Joystick/ pedal axis 09 is linkt to the selected Analog Shunter function
+%MD2.404	0	0	CDShunterAnalogConfigAxis10	Joystick/ pedal axis 10 is linkt to the selected Analog Shunter function
+%MD2.405	0	0	CDShunterAnalogConfigAxis11	Joystick/ pedal axis 11 is linkt to the selected Analog Shunter function
+%MD2.406	0	0	CDShunterAnalogConfigAxis12	Joystick/ pedal axis 12 is linkt to the selected Analog Shunter function
+%MD2.407	0	0	CDShunterAnalogConfigAxis13	Joystick/ pedal axis 13 is linkt to the selected Analog Shunter function
+%MD2.408	0	0	CDShunterAnalogConfigAxis14	Joystick/ pedal axis 14 is linkt to the selected Analog Shunter function
+%MD2.409	0	0	CDShunterDigitalConfigKey01	Joystick left push button left is linkt to the selected Digital Shunter function
+%MD2.410	0	0	CDShunterDigitalConfigKey02	Joystick left Push button middle is linkt to the selected Digital Shunter function
+%MD2.411	0	0	CDShunterDigitalConfigKey03	Joystick left Push button right is linkt to the selected Digital Shunter function
+%MD2.412	0	0	CDShunterDigitalConfigKey04	Joystick left switch up is linkt to the selected Digital Shunter function
+%MD2.413	0	0	CDShunterDigitalConfigKey05	Joystick left switch down is linkt to the selected Digital Shunter function
+%MD2.414	0	0	CDShunterDigitalConfigKey06	Joystick right push button left is linkt to the selected Digital Shunter function
+%MD2.415	0	0	CDShunterDigitalConfigKey07	Joystick right push button middle is linkt to the selected Digital Shunter function
+%MD2.416	0	0	CDShunterDigitalConfigKey08	Joystick right push button right is linkt to the selected Digital Shunter function
+%MD2.417	3	3	CDShunterDigitalConfigKey09	Joystick right switch up is linkt to the selected Digital Shunter function
+%MD2.418	4	4	CDShunterDigitalConfigKey10	Joystick right switch down is linkt to the selected Digital Shunter function
+%MD2.419	1132068864	         250	CRAdjBoomCylDownCurrentMin	Adjustable boom cylinder, minimal current move down in [mA]
+%MD2.420	1143603200	         680	CRAdjBoomCylDownCurrentMax	Adjustable boom cylinder, maximal current move down in [mA]
+%MD2.421	1133903872	         300	CRAdjBoomCylUpCurrentMin	Adjustable boom cylinder, minimal current move up in [mA]
+%MD2.422	1145569280	         800	CRAdjBoomCylUpCurrentMax	Adjustable boom cylinder, maximal current move up in [mA]
+%MD2.423	1000	1000	CDSlewGearAccelHigh	slewing gear torque: ramp accel high [ms]
+%MD2.424	2000	2000	CDSlewGearAccelLow	slewing gear torque: ramp accel low [ms]
+%MD2.425	2000	2000	CDSlewGearAccelTestRamp	slewing gear torque: accel test ramp [ms]
+%MD2.426	1000	1000	CDSlewGearBreakHigh	slewing gear torque: ramp break high [ms]
+%MD2.427	1500	1500	CDSlewGearBreakLow	slewing gear torque: ramp break low [ms]
+%MD2.428	2000	2000	CDSlewGearBreakTestRamp	slewing gear torque: break test ramp [ms]
+%MD2.429	3000	3000	CDSlewGearStartDelayTestRamp	slewing gear torque: start delay test ramp [ms]
+%MD2.430	1000	1000	CDSlewGearWaitOnEndTestRamp	slewing gear torque: wait on end test ramp [ms]
+%MD2.431	2000	2000	CDSlewGearWaitOnTopTestRamp	slewing gear torque: wait on top test ramp [ms]
+%MD2.432	1147207680	         900	CRSlewGearCurrTestSecondary	slewing gear torque: current test secondary [mA]
+%MD2.433	1140457472	         500	CRSlewGearErrPressSensorCurr	slewing gear torque: error pressure sensor output current [mA]
+%MD2.434	1112014848	          50	CRSlewGearHOilTempMaxCurrOffset	slewing gear torque: maximal current offset hydraulic oiltemperature [mA]
+%MD2.435	1117782016	          80	CRSlewGearHOilTempMaxTemp	slewing gear torque: maximal hydraulic oiltemperature offset [°C]
+%MD2.436	1114636288	          60	CRSlewGearHOiltempMinTemp	slewing gear torque: minimal hydraulic oiltemperature offset [°C]
+%MD2.437	1133903872	         300	CRSlewGearOutputMaxCurrent	slewing gear torque: output maximal current slewing gear torque [mA]
+%MD2.438	1120403456	         100	CRSlewGearOutputMinCurrent	slewing gear torque: output minimal current slewing gear torque [mA]
+%MD2.439	1104674816	          27	CRSlewGearPressureMax	slewing gear torque: minimal pilot pressure [bar]
+%MD2.440	1091567616	           9	CRSlewGearPressureMin	slewing gear torque: minimal pilot pressure [bar]
+%MD2.441	1133903872	         300	CRSlewGearThreshold	slewing gear torque: ramp threshold [permille]
+%MD2.442	1133903872	         300	CRSlewGearTorqueMaxCurrOffset	slewing gear torque: maximal current offset torque [mA]
+%MD2.443	1137180672	         400	CRMonitoringBoomPressureOn	Pressure boom monitoring on [bar]
+%MD2.444	1120403456	         100	CRMonitoringBoomPressureOff	Pressure boom monitoring off [bar]
+%MD2.445	300	300	CDMonitoringBoomDelayOn	Delay time boom monitoring on [ms]
+%MD2.446	700	700	CDMonitoringBoomDelayOff	Delay time boom monitoring off [ms]
+%MD2.447	1137180672	         400	CROLWBoomPressureOn	Preassure boom overload warning on [bar]
+%MD2.448	1120403456	         100	CROLWBoomPressureOff	Preassure boom overload warning off [bar]
+%MD2.449	10	10	CDOLWBoomDelayOn	Delay time overload warning on [ms]
+%MD2.450	200	200	CDOLWBoomDelayOff	Delay time overload warning off [ms]
+%MD2.451	1144750080	         750	CRPstLimitCurrMax	Maximal current of pilot pressure Pst limit valve in [mA]
+%MD2.452	1133248512	         280	CRPstLimitCurrMin	Minimal current of pilot pressure Pst limit valve in [mA]
+%MD2.453	1145569280	         800	CRStickSagSpeedCurrMax	Maximal current of stick sagging speed valve in [mA]
+%MD2.454	1128792064	         200	CRStickSagSpeedCurrMin	Minimal current of stick sagging speed valve in [mA]
+%MD2.455	1145569280	         800	CRBoomSagSpeedCurrMax	Maximal current of boom sagging speed valve in [mA]
+%MD2.456	1128792064	         200	CRBoomSagSpeedCurrMin	Minimal current of boom sagging speed valve in [mA]
+%MD2.457	1144258560	         720	CRToolCtrlRightCurrMax	Maximal current of the right tool contol valve in [mA]
+%MD2.458	1128792064	         200	CRToolCtrlRightCurrMin	Minimal current of the right tool control valve in [mA]
+%MD2.459	1300	1300	CDHydPowerLimitHydOilTempTableID	Hydraulic power limit/ hydraulik oil temperature characteristic Table ID
+%MD2.460	900	900	CDSlewGearTorquePstLimitTableID	Slewing gear torque pressure/ pilot pressure limit characteristic Table ID
+%MD2.461	800	800	CDSlewGearTorqueCurveTableID	Slewing gear torque characteristic curve Table ID
+%MD2.462	1400	1400	CDLatMovPistonTableID	Lateral movement, table ID for pedal/ piston characteristic
+%MD2.463	400	400	CDLatMovRampDampTime	Lateral movement, pedal damp ramp time in [ms]
+%MD2.464	500	500	CDLatMovRampHighAccelTime	Lateral movement, pedal acceleration ramp time at high difference in [ms]
+%MD2.465	250	250	CDLatMovRampHighBrakeTime	Lateral movement, pedal brake ramp time at high difference in [ms]
+%MD2.466	300	300	CDLatMovRampHighReversTime	Lateral movement, pedal reverse ramp time at high difference in [ms]
+%MD2.467	800	800	CDLatMovRampLowAccelTime	Lateral movement, pedal acceleration ramp time at low difference in [ms]
+%MD2.468	400	400	CDLatMovRampLowBrakeTime	Lateral movement, pedal brake ramp time at low difference in [ms]
+%MD2.469	300	300	CDLatMovRampLowReversTime	Lateral movement, pedal reverse ramp time at low difference in [ms]
+%MD2.470	1065353216	           1	CRLatMovRampDampDifference	Lateral movement, pedal difference for damp in [permille]
+%MD2.471	1133903872	         300	CRLatMovRampThreshold	Lateral movement, pedal threshhold to select high/low range [permille]
+%MD2.472	1500	1500	CDRotMovPistonTableID	Rotatory movement, table ID for pedal/ piston characteristic
+%MD2.473	1000	1000	CDRotMovRampDampTime	Rotatory movement, pedal damp ramp time in [ms]
+%MD2.474	1000	1000	CDRotMovRampHighAccelTime	Rotatory movement, pedal acceleration ramp time at high difference in [ms]
+%MD2.475	1000	1000	CDRotMovRampHighBrakeTime	Rotatory movement, pedal brake ramp time at high difference in [ms]
+%MD2.476	1000	1000	CDRotMovRampHighReversTime	Rotatory movement, pedal reverse ramp time at high difference in [ms]
+%MD2.477	1000	1000	CDRotMovRampLowAccelTime	Rotatory movement, pedal acceleration ramp time at low difference in [ms]
+%MD2.478	1000	1000	CDRotMovRampLowBrakeTime	Rotatory movement, pedal brake ramp time at low difference in [ms]
+%MD2.479	1000	1000	CDRotMovRampLowReversTime	Rotatory movement, pedal reverse ramp time at low difference in [ms]
+%MD2.480	1065353216	           1	CRRotMovRampDampDifference	Rotatory movement, pedal difference for damp in [permille]
+%MD2.481	1140457472	         500	CRRotMovRampThreshold	Rotatory movement, pedal threshhold to select high/low range [permille]
+%MD2.482	1601	1601	CDToolCtrlPistonTableID	Tool attachement control, table ID for pedal/ piston characteristic
+%MD2.483	50	50	CDToolCtrlRampDampTime	Tool attachement control, pedal damp ramp time in [ms]
+%MD2.484	50	50	CDToolCtrlRampHighAccelTime	Tool attachement control, pedal acceleration ramp time at high difference in [ms]
+%MD2.485	50	50	CDToolCtrlRampHighBrakeTime	Tool attachement control, pedal brake ramp time at high difference in [ms]
+%MD2.486	50	50	CDToolCtrlRampHighReversTime	Tool attachement control, pedal reverse ramp time at high difference in [ms]
+%MD2.487	50	50	CDToolCtrlRampLowAccelTime	Tool attachement control, pedal acceleration ramp time at low difference in [ms]
+%MD2.488	50	50	CDToolCtrlRampLowBrakeTime	Tool attachement control, pedal brake ramp time at low difference in [ms]
+%MD2.489	50	50	CDToolCtrlRampLowReversTime	Tool attachement control, pedal reverse ramp time at low difference in [ms]
+%MD2.490	1065353216	           1	CRToolCtrlRampDampDifference	Tool attachement control, pedal difference for damp in [permille]
+%MD2.491	1140457472	         500	CRToolCtrlRampThreshold	Tool attachement control, pedal threshhold to select high/low range [permille]
+%MD2.492	540	540	CDFlasherFaultTime	Flasher fault time (half periodical time of normel signal) in [ms]
+%MD2.493	0	0	CDCamRotationAngle	camera rotation angle (0,90,180,270) [degree]
+%MD2.494	1134886912	         330	CRLatMovLeftCurrentMin	Lateral movement, minimal current move left in [mA]
+%MD2.495	1143111680	         650	CRLatMovLeftCurrentMax	Lateral movement, maximal current move left in [mA]
+%MD2.496	1134886912	         330	CRLatMovRightCurrentMin	Lateral movement, minimal current move right in [mA]
+%MD2.497	1143111680	         650	CRLatMovRightCurrentMax	Lateral movement, maximal current move right in [mA]
+%MD2.498	1128792064	         200	CRRotMovLeftCurrentMin	Stick rotatory movement, minimal current move left in [mA]
+%MD2.499	1142292480	         600	CRRotMovLeftCurrentMax	Stick rotatory movement, maximal current move left in [mA]
+%MD2.500	1128792064	         200	CRRotMovRightCurrentMin	Stick rotatory movement, minimal current move right in [mA]
+%MD2.501	1142292480	         600	CRRotMovRightCurrentMax	Stick rotatory movement, maximal current move right in [mA]
+%MD2.502	2000	2000	CDOlwExtendedBraceDelayOff	Brace support switch Off delay time in [ms]
+%MD2.503	2000	2000	CDOlwExtendedBraceDelayOn	Brace support switch On delay time in [ms]
+%MD2.504	1119748096	          95	CROlwExtendedBracePressureOff	Brace support pressure of the switch Off level in [bar]
+%MD2.505	1120403456	         100	CROlwExtendedBracePressureOn	Brace support pressure of the switch On level in [bar]
+%MD2.506	0	           0	CROlwExtBoomOffsetPressureOff	Extended overload warning boom offset pressure OFF in [bar]
+%MD2.507	1065353216	           1	CROlwExtBoomPressureOnBack	Extended back overload warning boom pressure ON in [bar]
+%MD2.508	1065353216	           1	CROlwExtBoomPressureOnFront	Extended front overload warning boom pressure ON [bar]
+%MD2.509	1065353216	           1	CROlwExtBoomPressureOnFrontBack	Extended front/ back overload warning boom pressure ON in [bar]
+%MD2.510	1139179520	         461	CRToolCtrlRightCurrMiddle	Tool control side right, middle current in [mA]
+%MD2.511	1128792064	         200	CRToolCtrlLeftCurrMin	Tool control side left, minimal current in [mA]
+%MD2.512	1139212288	         462	CRToolCtrlLeftCurrMiddle	Tool control side left, middle current in [mA]
+%MD2.513	1144274944	         721	CRToolCtrlLeftCurrMax	Tool control side left, maximal current in [mA]
+%MD2.514	1086324736	           6	CRShiftCtrlPilotPressureLevel	Shift control bucket dump pilot pressure level in [bar]
+%MD2.515	1700	1700	CDPstLimitValveTableID	Pilot pressure limitation valve characteristic table ID
+%MD2.516	55	55	CDDriveSpeedNumOfTeeth	drive speed number of teeth
+%MD2.517	1078984704	        3.25	CRDriveSpeedWheelCircumference	drive speed wheel circumference [m]
+%MD2.518	1098907648	          16	CRDriveSpeedAxleRatio	drive speed axle ratio
+%MD2.519	1101109657	        20.2	CRDriveSpeedMaxSpeedRange	drive speed max speed range [km/h]
+%MD2.520	1083952857	       4.869	CRDriveSpeedGearRatioGear1	drive speed gear ratio gear 1
+%MD2.521	1066997383	       1.196	CRDriveSpeedGearRatioGear2	drive speed gear ratio gear 2
+%MD2.522	1120403456	         100	CRDriveSpeedLimitMaxSpeedKp	drive speed limiter Kp
+%MD2.523	1148846080	        1000	CRDriveSpeedLimitMaxSpeedKi	drive speed limiter Ki
+%MD2.524	1120403456	         100	CRDriveSpeedLimitMaxSpeedKd	drive speed limiter Kd
+%MD2.525	1088421888	           7	CRDriveSpeedEnChangeDirGear2	drive speed enable gear 2 change direction [km/h]
+%MD2.526	1077936128	           3	CRDriveSpeedEnChangeDirGear1	drive speed enable gear 1
+%MD2.527	1151090688	        1250	CREcoDriveReducedSpeed	eco drive reduced speed [rpm]
+%MD2.528	1119092736	          90	CREcoDriveTorqueMax	eco drive torque max [%]
+%MD2.529	1116471296	          70	CREcoDriveTorqueMin	eco drive torque min [%]
+%MD2.530	1073741824	           2	CREcoDriveEngineRpmUpMax	eco drive engine rpm up max
+%MD2.531	1056964608	         0.5	CREcoDriveEngineRpmUpMin	eco drive engine rpm up min
+%MD2.532	5000	5000	CDTravelPedalAccelTestRamp	travel pedal LMS command, accel test ramp [ms]
+%MD2.533	5000	5000	CDTravelPedalBreakTestRamp	travel pedal LMS command, break test ramp [ms]
+%MD2.534	0	0	CDTravelPedalTimeOutUp	travel pedal timeout gearshift up [ms]
+%MD2.535	1148846080	        1000	CRTravelPedalGearShiftUp	travel pedal gearshift up [per mille]
+%MD2.536	600	600	CDTravelPedalTimeOutDown	travel pedal timeout gearshift down [ms]
+%MD2.537	1082130432	           4	CRDriveSpeedEnableShiftDown	drive speed enable gearshift down [km/h]
+%MD2.538	1140457472	         500	CRTravelPedalShiftDownMin	travel pedal gearshift down min [per mille]
+%MD2.539	1143930880	         700	CRTravelPedalShiftDownMax	travel pedal gearshift down max [per mille]
+%MD2.540	1106247680	          30	CRTravelSpeedSensorErrorReduce	travel speed error rpm sensor, reduced max. current [%]
+%MD2.541	1065353216	           1	CRDriveDynamicAccelMinGear1	not used
+%MD2.542	1065353216	           1	CRDriveDynamicAccelMaxGear1	not used
+%MD2.543	1065353216	           1	CRDriveDynamicBrakeMinGear1	not used
+%MD2.544	1065353216	           1	CRDriveDynamicBrakeMaxGear1	not used
+%MD2.545	1065353216	           1	CRDriveDynamicAccelMinGear2	not used
+%MD2.546	1065353216	           1	CRDriveDynamicAccelMaxGear2	not used
+%MD2.547	1065353216	           1	CRDriveDynamicBrakeMinGear2	not used
+%MD2.548	1065353216	           1	CRDriveDynamicBrakeMaxGear2	not used
+%MD2.549	1048576000	        0.25	CRDriveRampBrakeFactorGear1	drive ramp brake factor gear1
+%MD2.550	1048576000	        0.25	CRDriveRampBrakeFactorGear2	drive ramp brake factor gear2
+%MD2.551	1065353216	           1	CRDriveDynamicDampMinGear1	not used
+%MD2.552	1065353216	           1	CRDriveDynamicDampMaxGear1	not used
+%MD2.553	1065353216	           1	CRDriveDynamicDampMinGear2	not used
+%MD2.554	1065353216	           1	CRDriveDynamicDampMaxGear2	not used
+%MD2.555	1145241600	         780	CRTravelSpeedMaxForw2Speeder	maximal output current in [mA] of travel speed output forward gear 2 speeder
+%MD2.556	1144750080	         750	CRTravelSpeedMaxBackw2Speeder	maximal output current in [mA] of travel speed output backward gear 2 speeder
+%MD2.557	1803	1803	CDDriveCharGear1	drive characteristic gear 1
+%MD2.558	1803	1803	CDDriveCharGear2	drive characteristic gear 2
+%MD2.559	1803	1803	CDDriveCharSpeederGear1	drive characteristic speeder gear 1
+%MD2.560	1803	1803	CDDriveCharSpeederGear2	drive characteristic speeder gear 2
+%MD2.561	1106247680	          30	CRDriveSpeedMaxSpeedRangeSpeeder	drive speed max speed range speeder [km/h]
+%MD2.562	1128792064	         200	CRTravelSpeedOutCurrMaxBoost	travel speed current max [mA] boost
+%MD2.563	1148026880	         950	CRTravelPedalKickDownPosition	travel pedal kick down position [per mille]
+%MD2.564	1088421888	           7	CRDriveSpeedMaxSpeedRangeGear1	drive speed max speed range gear1 [km/h]
+%MD2.565	1056964608	         0.5	CRDriveDynDriverRangeMinAccel	drive dynamic driver factor range min
+%MD2.566	1073741824	           2	CRDriveDynDriverRangeMaxAccel	drive dynamic driver factor range max
+%MD2.567	1112014848	          50	CRDrivePressureHDMin	drive pressure min  [bar]
+%MD2.568	1132068864	         250	CRDrivePressureHDMax	drive pressure max  [bar]
+%MD2.569	1045220556	         0.2	CRDrivePressureFactorMinGear1	drive pressure factor min gear1
+%MD2.570	1065353216	           1	CRDrivePressureFactorMaxGear1	drive pressure factor max gear1
+%MD2.571	1045220556	         0.2	CRDrivePressureFactorMinGear2	drive pressure factor min gear2
+%MD2.572	1065353216	           1	CRDrivePressureFactorMaxGear2	drive pressure factor max gear2
+%MD2.573	1084227584	           5	CRDriveSpeedBoostRedStart	drive speed boost current reduce start [km/h]
+%MD2.574	1050253721	         0.3	CRDriveSpeedBoostRedEnd	drive speed boost current reduce end [km/h]
+%MD2.575	1130102784	         220	CRDrivePressureBoostStart	drive pressure current boost start [bar]
+%MD2.576	500	500	CDDrivePressureBoostStartDelay	drive pressure boost start delay [ms]
+%MD2.577	1092616192	          10	CRDriveSpeedDeltaAcceleration	not used
+%MD2.578	1092616192	          10	CRDriveSpeedReduceMaxSpeed	not used
+%MD2.579	0	           0	CRDriveSpeedControlHighLimit	drive speed control high limit
+%MD2.580	1092616192	          10	CRDriveSpeedControlHighLimitMax	drive speed control high limit max
+%MD2.581	0	           0	CRDriveSpeedShiftSetValue	not used
+%MD2.582	1069547520	         1.5	CRDriveSpeedBoostRedStartPress	drive speed boost current reduce start at high drive pressure [km/h]
+%MD2.583	1050253721	         0.3	CRDriveSpeedBoostRedEndPress	drive speed boost current reduce end at high drive pressure [km/h]
+%MD2.584	1153548288	        1550	CREcoDriveReducedSpeedSpeeder	eco drive reduced speed speeder [rpm]
+%MD2.585	0	           0	CRDriveSpeedShiftSetValueStart	not used
+%MD2.586	1077936128	           3	CRDriveSpeedShiftSetValueEnd	not used
+%MD2.587	1068708659	         1.4	CRDriveSpeedShiftCtrlLimitStart	drive speed shift control limit start [km/h]
+%MD2.588	1069547520	         1.5	CRDriveSpeedShiftCtrlLimitEnd	drive speed shift control limit end [km/h]
+%MD2.589	1112014848	          50	CRDriveCurrentMaxReduce	drive current max reduce [mA]
+%MD2.590	1050253721	         0.3	CRDriveCurrentMaxReduceStart	drive current max reduce start [km/h]
+%MD2.591	1082130432	           4	CRDriveCurrentMaxReduceEnd	drive current max reduce end [km/h]
+%MD2.592	1103626240	          25	CRTravelCurrMaxOffsetTempEnd	travel current offset hyd. oil temp. end [°C]
+%MD2.593	1101004800	          20	CRTravelCurrMaxOffsetTempCurr	travel current offset hyd. oil temp. current [mA]
+%MD2.594	1128792064	         200	CRDriveCurrentMaxReduceSpeeder	drive current max reduce speeder [mA]
+%MD2.595	1130758144	         230	CRHydMotVarCurrentMin	drive hydro motor variable current min [mA]
+%MD2.596	1141309440	         540	CRHydMotVarCurrentMax	drive hydro motor variable current max [mA]
+%MD2.597	1140457472	         500	CRHydMotVarSetValueTest	drive hydro motor variable set value test [permille]
+%MD2.598	1128792064	         200	CREngineTravelPedalStart	engine speed adjustment travel pedal start
+%MD2.599	1147207680	         900	CREngineTravelPedalEnd	engine speed adjustment travel pedal end
+%MD2.600	1153548288	        1550	CREngineDriveHighIdleSpeed	drive mode engine high idle speed [rpm]
+%MD2.601	1148846080	        1000	CRLrPowerLimitModeDrive	Power limit maximal of the drive mode in [permille]
+%MD2.602	1148846080	        1000	CRLrPowerLimitModeDriveMin	Power limit minimal of the drive mode in [permille]
+%MD2.603	1120403456	         100	CRRotDriveDefaultAdjust	Default adjustment of rotatory drive in [%]
+%MD2.604	1120403456	         100	CRSlewGearTorqDefaultAdjust	Default adjustment of slewing gear torque in [%]
+%MD2.605	1084227584	           5	CRFuelLevelSafety	Safety fuel level in [%]
+%MD2.606	1092616192	          10	CRFuelLevelWarning	Warning fuel level in [%]
+%MD2.607	1145569280	         800	CRJoySteerLeftCurrentMax	Joystick steering, maximal current move left in [mA]
+%MD2.608	1140457472	         500	CRJoySteerLeftCurrentMin	Joystick steering, minimal current move left in [mA]
+%MD2.609	1145569280	         800	CRJoySteerRightCurrentMax	Joystick steering, maximal current move right in [mA]
+%MD2.610	1140457472	         500	CRJoySteerRightCurrentMin	Joystick steering, minimal current move right in [mA]
+%MD2.611	2302	2302	CDJoySteerPistonTableID	Joystick steering piston characteristic table ID
+%MD2.612	1065353216	           1	CRJoySteerRampDampDifference	Damp difference from set value in [permille]
+%MD2.613	1120403456	         100	CRJoySteerRampThreshold	Threshold for time switching in [permille]
+%MD2.614	100	100	CDJoySteerRampDampTime	Damp time in [ms]
+%MD2.615	100	100	CDJoySteerRampHighAccelTime	Acceleration time at high difference in [ms]
+%MD2.616	100	100	CDJoySteerRampHighBrakeTime	Brake time at high difference in [ms]
+%MD2.617	100	100	CDJoySteerRampLowAccelTime	Acceleration time at low difference in [ms]
+%MD2.618	100	100	CDJoySteerRampLowBrakeTime	Brake time at low difference in [ms]
+%MD2.619	316	316	CDDriveModeEngDynTorqTable	Table ID of the drive-mode dynamic engine torque characteristic torque = f(engine speed)
+%MD2.620	1112014848	          50	CRHydMotVarQmaxGear1	hydro motor variable Qmax angle gear1 [permille]
+%MD2.621	1141473280	         550	CRHydMotVarQminGear1	hydro motor variable Qmin angle gear1 [permille]
+%MD2.622	1128792064	         200	CRHydMotVarQmaxGear2	hydro motor variable Qmax angle gear2 [per mille]
+%MD2.623	1141063680	         525	CRHydMotVarQminGear2	hydro motor variable Qmin angle gear2 [permille]
+%MD2.624	0	           0	CRHydMotVarQminStartSpeedGear1	hydro motor variable Qmin start speed gear1 [km/h]
+%MD2.625	1080033280	         3.5	CRHydMotVarQminEndSpeedGear1	hydro motor variable Qmin end speed gear1 [km/h]
+%MD2.627	3217031168	        -1.5	CRDriveSpeedDecelerationMax	drive speed deceleration max [km/h]
+%MD2.628	0	           0	CRHydMotVarQminStartSpeedGear2	hydro motor variable Qmin start speed gear2 [km/h]
+%MD2.629	1092616192	          10	CRHydMotVarQminEndSpeedGear2	hydro motor variable Qmin end speed gear2 [km/h]
+%MD2.630	3204448256	        -0.5	CRDriveSpeedDecelerationMin	drive speed deceleration min [km/h]
+%MD2.631	1140457472	         500	CRTravelSpeedCurrMaxForw2Speed1	Drive Mode, Y353 max. current forward gear 2 travel speed output speed1 [mA]
+%MD2.632	1140457472	         500	CRTravelSpeedCurrMaxBackw2Speed1	Drive Mode, Y353 max. current backward gear 2 of travel speed output speed1 [mA]
+%MD2.633	1094713344	          12	CRDriveSpeedMaxSpeedRangeSpeed1	drive speed max speed range speed1 [km/h]
+%MD2.634	3	3	CDAgnSootLevelDPFLampInhibit	Soot level to switch on the DPF-Lamp if regeneration is inhibit [1
+%MD2.635	1100480512	          19	CRAgnSootLevel0Limit	End limit of the soot level 0 in [%]
+%MD2.636	1109131264	          39	CRAgnSootLevel1Limit	End limit of the soot level 1 in [%]
+%MD2.637	1114374144	          59	CRAgnSootLevel2Limit	End limit of the soot level 2 in [%]
+%MD2.638	1117650944	          79	CRAgnSootLevel3Limit	End limit of the soot level 3 in [%]
+%MD2.639	1120272384	          99	CRAgnSootLevel4Limit	End limit of the soot level 4 in [%]
+%MD2.640	1120403456	         100	CRAgnSootLevel5Limit	End limit of the soot level 5 in [%]
+%MD2.641	1073741824	           2	CRDriveSpeedChangeDirGear1	drive speed change direction gear1 [km/h]
+%MD2.642	1086324736	           6	CRDriveSpeedChangeDirGear2	drive speed change direction gear2 [km/h]
+%MD2.643	1142292480	         600	CRHydMotVarSpeedCtrlKp	hydro motor variable drive speed control Kp
+%MD2.644	1169915904	        6000	CRHydMotVarSpeedCtrlKi	hydro motor variable drive speed control Ki
+%MD2.645	1148846080	        1000	CRHydMotVarSpeedCtrlKd	hydro motor variable drive speed control Kd
+%MD2.646	1120403456	         100	CRHydMotVarSpeedCtrlLimit	hydro motor variable drive speed control limit PID
+%MD2.647	1065353216	           1	CREcoDriveDeltaSpeed	eco drive delta speed, enable max. speed [km/h]
+%MD2.648	1088421888	           7	CRGrabClosePressLevel	Clamshell/ grab close pressure level in [bar]
+%MD2.649	50	50	CDLrGlrEngSpeedSetPointAccLow	Load limit control engine speed set point accelleraction delay low time in [ms]
+%MD2.650	100	100	CDLrGlrEngSpeedSetPointAccHigh	Load limit control engine speed set point accelleraction delay high time in [ms]
+%MD2.651	20	20	CDMotorstopDelay	Automatic motorstop delay time in [sec]
+%MD2.652	0	           0	CREngineSpeedIdleReduction	Engine speed reduction in safety lever OFF condition in [rpm]
+%MD2.653	1056964608	         0.5	CRDriveSpeedReversingGear1	Drive speed limit to shift down to gear 1 at reversing [km/h]
+%MD2.654	1073741824	           2	CRSuperstructureAlignmentRange	Superstructure alignment forward tolerance in [degree]
+%MD2.655	1110704128	          45	CRBackupAlarmAngleRange	Contact ring angle range of the backup alarm in [degree]
+%MD2.656	10000	10000	CDDriverAlertTime	Driver alert time in [ms]
+%MD2.657	1142292480	         600	CRBoomUpPreCutoffMaxCurrent	Maximal current of the boom up pre cutoff valve in [mA]
+%MD2.658	1132068864	         250	CRBoomUpPreCutoffMinCurrent	Minimal current of the boom up pre cutoff valve in [mA]
+%MD2.659	0	           0	CRCylCutOffBoomDynOffsetMaxDown	Dynamic characteristic boom down: maximal offset [degree]
+%MD2.660	0	           0	CRCylCutOffBoomDynOffsetMaxUp	Dynamic characteristic boom up: maximal offset [degree]
+%MD2.661	0	           0	CRCylCutOffBoomDynOffsetMinDown	Dynamic characteristic boom down: minimal offset [degree]
+%MD2.662	0	           0	CRCylCutOffBoomDynOffsetMinUp	Dynamic characteristic boom up: minimal offset [degree]
+%MD2.663	1112014848	          50	CRCylCutOffBoomDynSpeedMaxDown	Dynamic characteristic boom down: maximal speed [degree/sec]
+%MD2.664	1112014848	          50	CRCylCutOffBoomDynSpeedMaxUp	Dynamic characteristic boom up: maximal speed [degree/sec]
+%MD2.665	1092616192	          10	CRCylCutOffBoomDynSpeedMinDown	Dynamic characteristic boom down: minimal speed [degree/sec]
+%MD2.666	1092616192	          10	CRCylCutOffBoomDynSpeedMinUp	Dynamic characteristic boom up: minimal speed [degree/sec]
+%MD2.667	1065353216	           1	CRMaxLimitBoomDownEnd	end point angle of the cylinder protection: boom down [°]
+%MD2.668	1077936128	           3	CRMaxLimitBoomDownStart	start point angle of the cylinder protection: boom down [°]
+%MD2.669	1065353216	           1	CRMaxLimitBoomUpEnd	end point angle of the cylinder protection: boom up [°]
+%MD2.670	1090519040	           8	CRMaxLimitBoomUpStart	start point angle of the cylinder protection: boom up [°]
+%MD2.671	2000	2000	CDDrivePressureRampBreak	drive pressure ramp break [ms]
+%MD2.672	4000	4000	CDEngineDriveAutoRampBreak	engine drive automotive ramp break [ms]
+%MD2.673	5	5	CDCoolFanRevFanRamp	fan ramp from maximum current to normal / at 1000 mA difference [sec]
+%MD2.674	3600	3600	CDCoolFanRevIntervalAuto	Automatic interval of cooling fan revers for cleaning [sec]
+%MD2.675	1112014848	          50	CRLrValveOffsetCurrent	Absolut offset of the LR valve current in [mA]
+%MD2.676	4000	4000	CDSlewGearTorqThrottleTimeAccel	Slewing gear torque acceleration time of a throttle control machine in [ms]
+%MD2.677	4000	4000	CDSlewGearTorqThrottleTimeBrake	Slewing gear torque brake time of a throttle control machine in [ms]
+%MD2.678	1140457472	         500	CRSlewGearTorqReduceThrottle	Slewing gear torque reduction of a throttle control machine in [promille]
+%MD2.679	1140457472	         500	CRSlewGearTorqRedSpeedThrottle	Speed level to reduce the slewing gear torque of a throttle control machine in [Hz]
+%MD2.680	1120403456	         100	CRSlewGearTorqRedHystThrottle	Speed hysteresis to increace the slewing gear torque of a throttle control machine in [Hz]
+%MD2.681	3	3	CDCoolDurationPrepare	Duration to prepare the slow down phasis in [sec]
+%MD2.682	0	0	CDShiftCtrlAlternative	Assembling of the alternatve joystick control (EURO, LIEBHERR, ThirdParty)
+%MD2.683	0	0	CDShiftCtrlStandard	Assembling of the standard joystick control (EURO, LIEBHERR, ThirdParty)
+%MD2.684	1132068864	         250	CRLrPowerPumpElecStart	Normed power to adjust the electric start point of the pump in [promille]
+%MD2.685	1128792064	         200	CRHydMotVarSpeedCtrlLimitExt	hydro motor variable drive speed control limit PID extension [promille]
+%MD2.686	1073741824	           2	CRHydMotVarLimitExtStart	hydro motor variable drive speed control limit ext. start [km/h]
+%MD2.687	1082130432	           4	CRHydMotVarLimitExtEnd	hydro motor variable drive speed control limit ext. end [km/h]
+%MD2.688	1120403456	         100	CRLmsToolCtrlPistonFlowAdjust	LMS tool control piston flow for adustments in [liter]
+%MD2.689	0	           0	CRBoomAngleMechanicalStopUp	Mechanical stop position up of the boom in [degree]
+%MD2.690	0	           0	CROlwCamDiscNoSupportAngleX1	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.691	0	           0	CROlwCamDiscNoSupportAngleX2	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.692	0	           0	CROlwCamDiscNoSupportAngleX3	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.693	0	           0	CROlwCamDiscNoSupportAngleX4	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.694	0	           0	CROlwCamDiscNoSupportAngleX5	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.695	0	           0	CROlwCamDiscNoSupportAngleX6	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.696	0	           0	CROlwCamDiscNoSupportAngleX7	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.697	0	           0	CROlwCamDiscNoSupportAngleX8	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.698	0	           0	CROlwCamDiscNoSupportAngleX9	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.699	0	           0	CROlwCamDiscNoSupportAngleX10	Option overload warning cam disc no support characteristic angle in [degree]
+%MD2.700	0	           0	CROlwCamDiscNoSupportPressY1	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.701	0	           0	CROlwCamDiscNoSupportPressY2	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.702	0	           0	CROlwCamDiscNoSupportPressY3	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.703	0	           0	CROlwCamDiscNoSupportPressY4	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.704	0	           0	CROlwCamDiscNoSupportPressY5	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.705	0	           0	CROlwCamDiscNoSupportPressY6	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.706	0	           0	CROlwCamDiscNoSupportPressY7	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.707	0	           0	CROlwCamDiscNoSupportPressY8	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.708	0	           0	CROlwCamDiscNoSupportPressY9	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.709	0	           0	CROlwCamDiscNoSupportPressY10	Option overload warning cam disc no support characteristic pressure in [bar]
+%MD2.710	0	           0	CROlwCamDiscFullSupportAngleX1	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.711	0	           0	CROlwCamDiscFullSupportAngleX2	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.712	0	           0	CROlwCamDiscFullSupportAngleX3	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.713	0	           0	CROlwCamDiscFullSupportAngleX4	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.714	0	           0	CROlwCamDiscFullSupportAngleX5	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.715	0	           0	CROlwCamDiscFullSupportAngleX6	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.716	0	           0	CROlwCamDiscFullSupportAngleX7	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.717	0	           0	CROlwCamDiscFullSupportAngleX8	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.718	0	           0	CROlwCamDiscFullSupportAngleX9	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.719	0	           0	CROlwCamDiscFullSupportAngleX10	Option overload warning cam disc full support characteristic angle in [degree]
+%MD2.720	0	           0	CROlwCamDiscFullSupportPressY1	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.721	0	           0	CROlwCamDiscFullSupportPressY2	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.722	0	           0	CROlwCamDiscFullSupportPressY3	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.723	0	           0	CROlwCamDiscFullSupportPressY4	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.724	0	           0	CROlwCamDiscFullSupportPressY5	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.725	0	           0	CROlwCamDiscFullSupportPressY6	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.726	0	           0	CROlwCamDiscFullSupportPressY7	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.727	0	           0	CROlwCamDiscFullSupportPressY8	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.728	0	           0	CROlwCamDiscFullSupportPressY9	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.729	0	           0	CROlwCamDiscFullSupportPressY10	Option overload warning cam disc full support characteristic pressure in [bar]
+%MD2.730	0	           0	CRFlowLimitPump1OffsetCurrent	Pump1 flow limit offset current in [mA]
+%MD2.731	0	           0	CRFlowLimitPump2OffsetCurrent	Pump2 flow limit offset current in [mA]
+%MD2.732	1146388480	         850	CRCabinLiftUpCurrentMax	Cabin lift, maximal cabin lift up valve control current in [mA]
+%MD2.733	1132068864	         250	CRCabinLiftUpCurrentMin	Cabin lift, minimal cabin lift up valve control current in [mA]
+%MD2.734	0	           0	CRTravelSpeedMaxCurrOffset	travel speed max. current offset [mA]
+%MD2.735	1056964608	         0.5	CRDriveSpeedHydMotVarSetValue	drive speed hyd. motor variable set value speed control [km/h]
+%MD2.736	201	201	CDErgCylTempSensorTableID	ERG cylinder, table ID for temperature sensor characteristic
+%MD2.737	1113325568	          55	CRErgCylCoolingTemp	ERG cylinder cooling temperature [°C]
+%MD2.738	1113325568	          55	CRErgCylNotUsed	ERG cylinder parameter not used
+%MD2.739	1117782016	          80	CRErgCylCriticalTemp	ERG cylinder critical temperature [°C]
+%MD2.740	1112014848	          50	CRErgCylHeatingTemp	ERG cylinder heating temperature [°C]
+%MD2.741	1114636288	          60	CRBrakeAccumulatorPressLevel	Brake accumulator pressure level in [bar]
+%MD2.742	0	           0	CRHydMotVarRedAngleRevGear1	hydro motor variable reduce angle by reversing in gear1
+%MD2.743	0	           0	CRHydMotVarRedAngleRevGear2	hydro motor variable reduce angle by reversing in gear2
+%MD2.744	1148846080	        1000	CREcoDriveEngineLowIdleSpeed	eco drive low idle engine speed
+%MD2.745	0	           0	CRHydMotVarRedAngRevGear2Speeder	hydro motor variable reduce angle by reversing in gear2 speeder [permille]
+%MD2.746	1146388480	         850	CRHydMotVarQminGear2Speeder	hydro motor variable Qmin angle gear2 speeder [permille]
+%MD2.747	3	3	CDGeoConfiguration	geometric calculation: configuration of the geometric data
+%MD2.748	1045220556	         0.2	CRStrokeLimitDepthBuffer	Stroke limitation depth dynamic buffer in [m]
+%MD2.749	1045220556	         0.2	CRStrokeLimitHightBuffer	Stroke limitation height dynamic buffer in [m]
+%MD2.750	1065353216	           1	CRStrokeLimitDepthDelta	Stroke limitation depth delta start point in [m]
+%MD2.751	1065353216	           1	CRStrokeLimitHightDelta	Stroke limitation height delta start point in [m]
+%MD2.752	1092616192	          10	CRStrokeLimitHysteresisDelta	Stroke limitation hysteresis delta in [%]
+%MD2.753	1071644672	        1.75	CRDefaultToolDimensions	Default tool dimensions x,y,z,radius in [m]
+%MD2.754	1133903872	         300	CRCabinLiftResolutionAdjustUp	Cabin lift up resolution adjustmant in [permille]
+%MD2.755	2000	2000	CDGrabLsRampAccelHigh	Grab LS control ramp accel high [ms]
+%MD2.756	2000	2000	CDGrabLsRampAccelLow	Grab LS control ramp accel low [ms]
+%MD2.757	2000	2000	CDGrabLsRampBreakHigh	Grab LS control ramp break high [ms]
+%MD2.758	2000	2000	CDGrabLsRampBreakLow	Grab LS control ramp break low [ms]
+%MD2.759	1143930880	         700	CRGrabLsContolCurrentMax	Maximal LS valve current in [mA]
+%MD2.760	1128792064	         200	CRGrabLsContolCurrentMin	Minimal LS valve current [mA]
+%MD2.761	1147207680	         900	CRGrabLsContolCurrentSat	Off state saturation current in [mA]
+%MD2.762	1128792064	         200	CRGrabLsControlCurrentAdjMin	Highest minimal LS current at full adjustement [mA]
+%MD2.763	1103626240	          25	CRGrabLsPilotPressMax	Maximal pilot pressure in the stick circuit [bar]
+%MD2.764	1092616192	          10	CRGrabLsPilotPressMin	Minimal pilot pressure in the stick circuit [bar]
+%MD2.765	1140457472	         500	CRGrabLsRampThreshold	Grab LS control ramp threshold
+%MD2.766	1120403456	         100	CRGrabLsSuperFinish	Super finish adjustment of the grab LS signal in [%]
+%MD2.767	1084227584	           5	CRStrokeLimitReleaseDelta	Stroke limitation release delta of movments in [%]
+%MD2.768	1028443340	        0.05	CRStrokeLimitAngleAlternatRange	Stroke limitation angle alternation range in [degree]
+%MD2.769	0	           0	CRJoySteerLeftCurMaxOffset	Joystick steering, offset of maximal current move left in [mA]
+%MD2.770	0	           0	CRJoySteerLeftCurMinOffset	Joystick steering, offset of minimal current move left in [mA]
+%MD2.771	0	           0	CRJoySteerRightCurMaxOffset	Joystick steering, offset of maximal current move right in [mA]
+%MD2.772	0	           0	CRJoySteerRightCurMinOffset	Joystick steering, offset of minimal current move right in [mA]
+%MD2.773	701	701	CDJoySteerLimitTableID	Joystick steering, limitation characteristic tabe ID
+%MD2.774	1132068864	         250	CRDriveModeFlowRateMaxGear1	drive mode flow rate max gear1 [liter]
+%MD2.775	1112014848	          50	CRDriveModeFlowRateReduce	drive mode flow rate reduce [liter]
+%MD2.776	1084227584	           5	CRDriveModeFlowRateBoostStart	drive mode flow rate boost start [km/h]
+%MD2.777	1050253721	         0.3	CRDriveModeFlowRateBoostEnd	drive mode flow rate boost end  [km/h]
+%MD2.778	1050253721	         0.3	CRDriveModeFlowRateRedStart	drive mode flow rate reduce start [km/h]
+%MD2.779	1082130432	           4	CRDriveModeFlowRateRedEnd	drive mode flow rate reduce end [km/h]
+%MD2.780	1056964608	         0.5	CRDriveDynDriverRangeMinDecel	drive dynamic driver factor range min deceleration
+%MD2.781	1073741824	           2	CRDriveDynDriverRangeMaxDecel	drive dynamic driver factor range max deceleration
+%MD2.782	1106247680	          30	CRAdjBoomLimitationMinMove	Adjustable Boom limitation minimal movement in [%]
+%MD2.783	1124859904	         140	CRDriveModeFlowRateMaxGear2	drive mode flow rate max gear2 [liter]
+%MD2.784	1125515264	         150	CRDriveModeFlowRateMaxSpeed1	drive mode flow rate max speed1 [liter]
+%MD2.785	1	1	CDOperarorMode	Operator mode of the driver (Basic, Standard, Expert)
+%MD2.786	1145569280	         800	CRLrMaxPumpPower	LR current of maximal pump power in [mA]
+%MD2.787	0	           0	CRNotUsedIndex787	Not Used
+%MD2.788	1056964608	         0.5	CRLrMinKiNegRising	LR: integral parameter of the load limit Control at negativ deviation and rising engine speed
+%MD2.789	1069547520	         1.5	CRLrKiNegRising	LR: integral parameter of the load limit Control at negativ deviation and rising engine speed
+%MD2.790	1084227584	           5	CRLrMinKiPosFalling	LR: integral parameter of the load limit Control at positive deviation and falling engine speed
+%MD2.791	1069547520	         1.5	CRLrKiPosFalling	LR: integral parameter of the load limit Control at positive deviation and falling engine speed
+%MD2.792	10000	10000	CDLrFallingTime2	LR: time rampe at falling power over the threshold level [ms]
+%MD2.793	702	702	CDJoySteerLimit2TableID	Joystick steering, (four wheel steering )second limitation characteristic tabe ID
+%MD2.794	10	10	CDRotDrRamp2DampTime	Rotatory drive digital contol, damp time in [ms]
+%MD2.795	80	80	CDRotDrRamp2HighAccelTime	Rotatory drive digital contol, acceleration time at high difference in [ms]
+%MD2.796	40	40	CDRotDrRamp2HighBrakeTime	Rotatory drive digital contol, brake time at high difference in [ms]
+%MD2.797	20	20	CDRotDrRamp2HighReversTime	Rotatory drive digital contol, reversing time at high difference in [ms]
+%MD2.798	600	600	CDRotDrRamp2LowAccelTime	Rotatory drive digital contol, acceleration time at low difference in [ms]
+%MD2.799	100	100	CDRotDrRamp2LowBrakeTime	Rotatory drive digital contol, brake time at low difference in [ms]
+%MD2.800	50	50	CDRotDrRamp2LowReversTime	Rotatory drive digital contol, reversing time at low difference in [ms]
+%MD2.801	1120403456	         100	CRRotDrRamp2DampDifference	Rotatory drive digital contol, damp difference from set value in [promille]
+%MD2.802	1140457472	         500	CRRotDrRamp2Threshold	Rotatory drive digital contol, threshold for time switching in [promille]
+$checksum X	2635801C
+$checksum B	FFFFFFFF
+$checksum W	FFFFFFFF
+$checksum D	2DF0DAE0

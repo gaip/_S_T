@@ -1,0 +1,6045 @@
+%?version 00011
+%?class lltstpar
+
+%?library lltstsym
+(lltstsym.ps) run
+%?library llouter
+(llouter.ps) run
+%?library llbasic
+(llbasic.ps) run
+
+
+% global varialbes for testsys_ng
+/card_idx	0 def				%?brief card index for pages %?use MEM %?type DINT %?dflt 0
+/language_offset	0	def		%?brief	%?use MEM	%?type DINT	%?dflt 0
+/module_offset	0	def			%?brief	%?use MEM	%?type DINT	%?dflt 0
+/test_var	0	def				%?brief	%?use MEM	%?type DINT	%?dflt 0
+/page_idx	2	def				%?brief	%?use MEM	%?type DINT	%?dflt 2
+/canmodule_idx	0 def			%?brief canmodule_idx %?use MEM %?type DINT %?dflt 1
+/canmodule_nr	0 def			%?brief canmodule_nr %?use MEM %?type DINT %?dflt 9
+/module_channel_nr 0 	def		%?brief	%?use MEM	%?type DINT	%?dflt 0
+/module_timeout 0	def			%?brief	%?use MEM	%?type DINT	%?dflt 0
+/module_forced 0	def			%?brief	%?use MEM	%?type DINT	%?dflt 0
+/module_used 0	def				%?brief	%?use MEM	%?type DINT	%?dflt 0
+/module_rx_time 0 	def			%?brief	%?use MEM	%?type DINT	%?dflt 0
+/module_tx_time 0	def			%?brief	%?use MEM	%?type DINT	%?dflt 0
+/module_type_idx 0	def			%?brief	%?use MEM	%?type DINT	%?dflt 0
+/client.0.priority	0 def		%?brief priority of actual client %?use GLO %?type DINT %?dflt 0
+/client.1.priority	0 def		%?brief priority of client 1 %?use GLO %?type DINT %?dflt 0
+/client.2.priority	0 def		%?brief priority of client 2 %?use GLO %?type DINT %?dflt 0
+/client.3.priority	0 def		%?brief priority of client 3 %?use GLO %?type DINT %?dflt 0
+/client.4.priority	0 def		%?brief priority of client 4 %?use GLO %?type DINT %?dflt 0
+/client.5.priority	0 def		%?brief priority of client 5 %?use GLO %?type DINT %?dflt 0
+/client.6.priority	0 def		%?brief priority of client 6 %?use GLO %?type DINT %?dflt 0
+/client.7.priority	0 def		%?brief priority of client 7 %?use GLO %?type DINT %?dflt 0
+/client.8.priority	0 def		%?brief priority of client 8 %?use GLO %?type DINT %?dflt 0
+/client.0.operator	0 def		%?brief is actual client operator display %?use GLO %?type DINT %?dflt 0
+/client.1.operator	0 def		%?brief is client 1 operator display %?use GLO %?type DINT %?dflt 0
+/client.2.operator	0 def		%?brief is client 2 operator display  %?use GLO %?type DINT %?dflt 0
+/client.3.operator	0 def		%?brief is client 3 operator display  %?use GLO %?type DINT %?dflt 0
+/client.4.operator	0 def		%?brief is client 4 operator display  %?use GLO %?type DINT %?dflt 0
+/client.5.operator	0 def		%?brief is client 5 operator display %?use GLO %?type DINT %?dflt 0
+/client.6.operator	0 def		%?brief is client 6 operator display %?use GLO %?type DINT %?dflt 0
+/client.7.operator	0 def		%?brief is client 7 operator display %?use GLO %?type DINT %?dflt 0
+/client.8.operator	0 def		%?brief is client 8 operator display %?use GLO %?type DINT %?dflt 0
+/client.0.userid    0 def		%?brief user id of actual client %?use GLO %?type DINT %?dflt 0
+/client.0.userids () def		%?brief ID of actual client %?use GLO %?type STRI %?dflt ()
+/client.1.userids () def		%?brief ID of client 1 %?use GLO %?type STRI %?dflt ()
+/client.2.userids () def		%?brief ID of client 2 %?use GLO %?type STRI %?dflt ()
+/client.3.userids () def		%?brief ID of client 3 %?use GLO %?type STRI %?dflt ()
+/client.4.userids () def		%?brief ID of client 4 %?use GLO %?type STRI %?dflt ()
+/client.5.userids () def		%?brief ID of client 5 %?use GLO %?type STRI %?dflt ()
+/client.6.userids () def		%?brief ID of client 6 %?use GLO %?type STRI %?dflt ()
+/client.7.userids () def		%?brief ID of client 7 %?use GLO %?type STRI %?dflt ()
+/client.8.userids () def		%?brief ID of client 8 %?use GLO %?type STRI %?dflt ()
+/immobiliser.valid false def	%?brief immobiliser.valid %?use GLO %?type BOOL %?dflt false
+/immobiliser.userid 0 def		%?brief immobiliser.valid %?use GLO %?type DINT %?dflt 0
+/immobiliser.keyid 0 def		%?brief immobiliser.valid %?use GLO %?type DINT %?dflt 0
+/immobiliser.keypriority 0 def	%?brief immobiliser.valid %?use GLO %?type DINT %?dflt 0
+/immobiliser.keycount 0 def		%?brief immobiliser.valid %?use GLO %?type DINT %?dflt 0
+/immobiliser.progress 0 def		%?brief immobiliser.progress %?use GLO %?type DINT %?dflt 100
+/immobiliser.errno 0 def		%?brief immobiliser.errno %?use GLO %?type DINT %?dflt 0
+/immobiliser.keyreload false def		%?brief immobiliser.keyreload %?use GLO %?type BOOL %?dflt false
+/immobiliser_progress_timeout 0 def	%?brief time duration to hide progress bar %?use MEM %?type DINT %?dflt 0
+/immobiliser_button_timeout 0 def	%?brief time duration to hide touch button %?use MEM %?type DINT %?dflt 0
+/usertime.timezone	0 def		%?brief usertime timezone %?use GLO %?type DINT %?dflt 0
+/usertime.dst	false def		%?brief daylight saving %?use GLO %?type BOOL %?dflt false
+/usertime.localtime	() def		%?brief usertime.localtime %?use GLO %?type STRI %?dflt 
+/usertime.operator_time	() def	%?brief usertime.operator_time %?use GLO %?type STRI %?dflt 
+/usertime.operator_range_up	() def		%?brief usertime.operator_range_up %?use GLO %?type STRI %?dflt 
+/usertime.operator_range_down	() def	%?brief usertime.operator_range_down %?use GLO %?type STRI %?dflt 
+/canquality.1.lec_stuff	0 def	%?brief canquality.1.lec_stuff %?use GLO %?type DINT %?dflt 0
+/canquality.2.lec_stuff	0 def	%?brief canquality.2.lec_stuff %?use GLO %?type DINT %?dflt 0
+/canquality.3.lec_stuff	0 def	%?brief canquality.3.lec_stuff %?use GLO %?type DINT %?dflt 0
+/canquality.4.lec_stuff	0 def	%?brief canquality.4.lec_stuff %?use GLO %?type DINT %?dflt 0
+/canquality.1.lec_form	0 def	%?brief canquality.1.lec_form %?use GLO %?type DINT %?dflt 0
+/canquality.2.lec_form	0 def	%?brief canquality.2.lec_form %?use GLO %?type DINT %?dflt 0
+/canquality.3.lec_form	0 def	%?brief canquality.3.lec_form %?use GLO %?type DINT %?dflt 0
+/canquality.4.lec_form	0 def	%?brief canquality.4.lec_form %?use GLO %?type DINT %?dflt 0
+/canquality.1.lec_ack	0 def	%?brief canquality.1.lec_ackn %?use GLO %?type DINT %?dflt 0
+/canquality.2.lec_ack	0 def	%?brief canquality.2.lec_ackn %?use GLO %?type DINT %?dflt 0
+/canquality.3.lec_ack	0 def	%?brief canquality.3.lec_ackn %?use GLO %?type DINT %?dflt 0
+/canquality.4.lec_ack	0 def	%?brief canquality.4.lec_ackn %?use GLO %?type DINT %?dflt 0
+/canquality.1.lec_bit1	0 def	%?brief canquality.1.lec_bit1 %?use GLO %?type DINT %?dflt 0
+/canquality.2.lec_bit1	0 def	%?brief canquality.2.lec_bit1 %?use GLO %?type DINT %?dflt 0
+/canquality.3.lec_bit1	0 def	%?brief canquality.3.lec_bit1 %?use GLO %?type DINT %?dflt 0
+/canquality.4.lec_bit1	0 def	%?brief canquality.4.lec_bit1 %?use GLO %?type DINT %?dflt 0
+/canquality.1.lec_bit0	0 def	%?brief canquality.1.lec_bit0 %?use GLO %?type DINT %?dflt 0
+/canquality.2.lec_bit0	0 def	%?brief canquality.2.lec_bit0 %?use GLO %?type DINT %?dflt 0
+/canquality.3.lec_bit0	0 def	%?brief canquality.3.lec_bit0 %?use GLO %?type DINT %?dflt 0
+/canquality.4.lec_bit0	0 def	%?brief canquality.4.lec_bit0 %?use GLO %?type DINT %?dflt 0
+/canquality.1.lec_crc	0 def	%?brief canquality.1.lec_crc %?use GLO %?type DINT %?dflt 0
+/canquality.2.lec_crc	0 def	%?brief canquality.2.lec_crc %?use GLO %?type DINT %?dflt 0
+/canquality.3.lec_crc	0 def	%?brief canquality.3.lec_crc %?use GLO %?type DINT %?dflt 0
+/canquality.4.lec_crc	0 def	%?brief canquality.4.lec_crc %?use GLO %?type DINT %?dflt 0
+/canline.baudrate.1		0 def		%?brief can baudrate line1 %?use GLO %?type DINT %?dflt 0
+/canline.baudrate.2		0 def		%?brief can baudrate line2 %?use GLO %?type DINT %?dflt 0
+/canline.baudrate.3		0 def		%?brief can baudrate line3 %?use GLO %?type DINT %?dflt 0
+/canline.baudrate.4		0 def		%?brief can baudrate line4 %?use GLO %?type DINT %?dflt 0
+/canline.slave.1		0 def		%?brief can slave line1 %?use GLO %?type DINT %?dflt 0
+/canline.slave.2		0 def		%?brief can slave line2 %?use GLO %?type DINT %?dflt 0
+/canline.slave.3		0 def		%?brief can slave line3 %?use GLO %?type DINT %?dflt 0
+/canline.slave.4		0 def		%?brief can slave line4 %?use GLO %?type DINT %?dflt 0
+/canquality.1.quality_current	0 def	%?brief canquality.1.quality_current %?use GLO %?type DINT %?dflt 0
+/canquality.2.quality_current	0 def	%?brief canquality.2.quality_current %?use GLO %?type DINT %?dflt 0
+/canquality.3.quality_current	0 def	%?brief canquality.3.quality_current %?use GLO %?type DINT %?dflt 0
+/canquality.4.quality_current	0 def	%?brief canquality.4.quality_current %?use GLO %?type DINT %?dflt 0
+/canquality.1.quality_overall	0 def	%?brief canquality.1.quality_overall %?use GLO %?type DINT %?dflt 0
+/canquality.2.quality_overall	0 def	%?brief canquality.2.quality_overall %?use GLO %?type DINT %?dflt 0
+/canquality.3.quality_overall	0 def	%?brief canquality.3.quality_overall %?use GLO %?type DINT %?dflt 0
+/canquality.4.quality_overall	0 def	%?brief canquality.4.quality_overall %?use GLO %?type DINT %?dflt 0
+/canquality.1.not_connected		0 def		%?brief canquality.1.not_connected %?use GLO %?type DINT %?dflt 0
+/canquality.2.not_connected		0 def		%?brief canquality.2.not_connected %?use GLO %?type DINT %?dflt 0
+/canquality.3.not_connected		0 def		%?brief canquality.3.not_connected %?use GLO %?type DINT %?dflt 0
+/canquality.4.not_connected		0 def		%?brief canquality.4.not_connected %?use GLO %?type DINT %?dflt 0
+/canquality.1.n_good_rx_objects	0 def		%?brief canquality.1.n_good_rx_objects %?use GLO %?type DINT %?dflt 0
+/canquality.2.n_good_rx_objects	0 def		%?brief canquality.2.n_good_rx_objects %?use GLO %?type DINT %?dflt 0
+/canquality.3.n_good_rx_objects	0 def		%?brief canquality.3.n_good_rx_objects %?use GLO %?type DINT %?dflt 0
+/canquality.4.n_good_rx_objects	0 def		%?brief canquality.4.n_good_rx_objects %?use GLO %?type DINT %?dflt 0
+/canline.process_counter_mon_rx.1	0 def	%?brief canline.process_counter_mon_rx.1 %?use GLO %?type DINT %?dflt 0
+/canline.process_counter_mon_rx.2	0 def	%?brief canline.process_counter_mon_rx.2 %?use GLO %?type DINT %?dflt 0
+/canline.process_counter_mon_rx.3	0 def	%?brief canline.process_counter_mon_rx.3 %?use GLO %?type DINT %?dflt 0
+/canline.process_counter_mon_rx.4	0 def	%?brief canline.process_counter_mon_rx.4 %?use GLO %?type DINT %?dflt 0
+/canquality.1.n_good_tx_objects		0 def		%?brief canquality.1.n_good_tx_objects %?use GLO %?type DINT %?dflt 0
+/canquality.2.n_good_tx_objects		0 def		%?brief canquality.2.n_good_tx_objects %?use GLO %?type DINT %?dflt 0
+/canquality.3.n_good_tx_objects		0 def		%?brief canquality.3.n_good_tx_objects %?use GLO %?type DINT %?dflt 0
+/canquality.4.n_good_tx_objects		0 def		%?brief canquality.4.n_good_tx_objects %?use GLO %?type DINT %?dflt 0
+/can.lec_crc 0 def					%?brief can.lec_crc %?use MEM %?type DINT %?dflt 0
+/can.lec_bit0 0 def					%?brief can.lec_bit0 %?use MEM %?type DINT %?dflt 0
+/can.lec_bit1 0 def					%?brief can.lec_bit1 %?use MEM %?type DINT %?dflt 0
+/can.lec_ackn 0 def					%?brief can.lec_ackn %?use MEM %?type DINT %?dflt 0
+/can.lec_form 0 def					%?brief can.lec_form %?use MEM %?type DINT %?dflt 0
+/can.lec_stuff 0 def				%?brief can.lec_stuff %?use MEM %?type DINT %?dflt 0
+/can.n_good_tx_objects 0 def		%?brief can.n_good_tx_objects %?use MEM %?type DINT %?dflt 0
+/can.process_counter_mon_rx 0 def	%?brief can.process_counter_mon_rx %?use MEM %?type DINT %?dflt 0
+/can.n_good_rx_objects 0 def		%?brief can.n_good_rx_objects %?use MEM %?type DINT %?dflt 0
+/can.quality 0 def					%?brief can.quality %?use MEM %?type DINT %?dflt 0
+/can.cur_quality 0 def				%?brief can.cur_quality %?use MEM %?type DINT %?dflt 0
+/can.not_connected 0 def			%?brief can.not_connected %?use MEM %?type DINT %?dflt 0
+/can.baudrate 0 def					%?brief can.baudrate %?use MEM %?type DINT %?dflt 0
+/can_slave 0 def					%?brief can in slave mode %?use MEM %?type DINT %?dflt 0
+/language.system	() def			%?brief language.system %?use GLO %?type STRI %?dflt 
+/language.released.1	() def		%?brief language.released.1 %?use GLO %?type STRI %?dflt 
+/language.released.2	() def		%?brief language.released.2 %?use GLO %?type STRI %?dflt 
+/language.released.3	() def		%?brief language.released.3 %?use GLO %?type STRI %?dflt 
+/language.released.4	() def		%?brief language.released.5 %?use GLO %?type STRI %?dflt 
+/language.released.5	() def		%?brief language.released.5 %?use GLO %?type STRI %?dflt 
+/language.released.6	() def		%?brief language.released.6 %?use GLO %?type STRI %?dflt 
+/language.released.7	() def		%?brief language.released.7 %?use GLO %?type STRI %?dflt 
+/language.released.8	() def		%?brief language.released.8 %?use GLO %?type STRI %?dflt 
+/language.released.9	() def		%?brief language.released.9 %?use GLO %?type STRI %?dflt 
+/language.released.10	() def		%?brief language.released.10 %?use GLO %?type STRI %?dflt 
+/language.released.11	() def		%?brief language.released.11 %?use GLO %?type STRI %?dflt 
+/language.released.12	() def		%?brief language.released.12 %?use GLO %?type STRI %?dflt 
+/language.released.13	() def		%?brief language.released.13 %?use GLO %?type STRI %?dflt 
+/language.released.14	() def		%?brief language.released.14 %?use GLO %?type STRI %?dflt 
+/language.released.15	() def		%?brief language.released.15 %?use GLO %?type STRI %?dflt 
+/language.released.16	() def		%?brief language.released.16 %?use GLO %?type STRI %?dflt 
+/language.released.17	() def		%?brief language.released.17 %?use GLO %?type STRI %?dflt 
+/language.released.18	() def		%?brief language.released.18 %?use GLO %?type STRI %?dflt 
+/language.released.19	() def		%?brief language.released.19 %?use GLO %?type STRI %?dflt 
+/language.released.20	() def		%?brief language.released.20 %?use GLO %?type STRI %?dflt 
+/language.released.21	() def		%?brief language.released.21 %?use GLO %?type STRI %?dflt 
+/language.released.22	() def		%?brief language.released.22 %?use GLO %?type STRI %?dflt 
+/language.released.23	() def		%?brief language.released.23 %?use GLO %?type STRI %?dflt 
+/language.released.24	() def		%?brief language.released.24 %?use GLO %?type STRI %?dflt 
+/language.released.25	() def		%?brief language.released.25 %?use GLO %?type STRI %?dflt 
+/language.released.26	() def		%?brief language.released.26 %?use GLO %?type STRI %?dflt 
+/language.released.27	() def		%?brief language.released.27 %?use GLO %?type STRI %?dflt 
+/language.released.28	() def		%?brief language.released.28 %?use GLO %?type STRI %?dflt 
+/language.released.29	() def		%?brief language.released.29 %?use GLO %?type STRI %?dflt 
+/language.released.30	() def		%?brief language.released.30 %?use GLO %?type STRI %?dflt 
+/language.released.31	() def		%?brief language.released.31 %?use GLO %?type STRI %?dflt 
+/language.released.32	() def		%?brief language.released.32 %?use GLO %?type STRI %?dflt 
+/language.released.33	() def		%?brief language.released.33 %?use GLO %?type STRI %?dflt 
+/language.released.34	() def		%?brief language.released.34 %?use GLO %?type STRI %?dflt 
+/language.released.35	() def		%?brief language.released.35 %?use GLO %?type STRI %?dflt 
+/language.released.36	() def		%?brief language.released.36 %?use GLO %?type STRI %?dflt 
+/language.released.37	() def		%?brief language.released.37 %?use GLO %?type STRI %?dflt 
+/language.released.38	() def		%?brief language.released.38 %?use GLO %?type STRI %?dflt 
+/language.released.39	() def		%?brief language.released.39 %?use GLO %?type STRI %?dflt 
+/language.released.40	() def		%?brief language.released.40 %?use GLO %?type STRI %?dflt 
+/international_timzone_examples	(...) def	%?brief international_timzone_examples %?use MEM %?type STRI %?dflt ...
+/fs.cf1.size 0 def				%?brief fs.cf1.size %?use GLO %?type DINT %?dflt 0
+/fs.cf1.percent 0 def			%?brief fs.cf1.percent %?use GLO %?type REAL %?dflt 0
+/fs.cf1.state 3 def				%?brief fs.cf1.state %?use GLO %?type DINT %?dflt 3
+/fs.cf1.free 0 def				%?brief fs.cf1.free %?use GLO %?type DINT %?dflt 0
+/fs.cf2.size 0 def				%?brief fs.cf2.size %?use GLO %?type DINT %?dflt 0
+/fs.cf2.percent 0 def			%?brief fs.cf2.percent %?use GLO %?type REAL %?dflt 0
+/fs.cf2.state 3 def				%?brief fs.cf2.state %?use GLO %?type DINT %?dflt 3
+/fs.cf2.free 0 def				%?brief fs.cf2.free %?use GLO %?type DINT %?dflt 0
+/gps.position_valid false def	%?brief gps.position_valid %?use GLO %?type BOOL %?dflt false
+/gps.longitude_deg 0 def		%?brief gps.longitude_deg %?use GLO %?type REAL %?dflt 0
+/gps.latitude_deg 0 def			%?brief gps.latitude_deg %?use GLO %?type REAL %?dflt 0
+/systemfile.md_state 0 def		%?brief systemfile.md_state %?use GLO %?type DINT %?dflt 0
+/systemfile.mapped_state 0 def		%?brief systemfile.mapped_state %?use MEM %?type DINT %?dflt 0
+/systemfile.md_error 0 def		%?brief systemfile.md_error %?use GLO %?type DINT %?dflt 0
+/systemfile.md_run 0 def		%?brief systemfile.md_run %?use GLO %?type DINT %?dflt 0
+/MSserviceState	() def			%?brief MSserviceState %?use MEM %?type STRI %?dflt 
+/MXLanguageChanged	false def	%?brief language changed %?use MEM %?type BOOL %?dflt false
+
+% authorization_check
+%!proc sp_authorization_check
+%?subproc
+/sp_authorization_check {
+	/I_action exch def	%?brief language %?use INP %?type STRI %?dflt 0
+	/O_action_allowed  false def	%?brief released	%?use OUT	%?type BOOL	%?dflt false
+	
+	I_action (language_enable) eq {
+		client.0.priority 8 	eq	% litronic 3
+		{	/O_action_allowed true store		} if
+		client.0.priority 64 	eq	% inspector
+		{	/O_action_allowed true store		} if
+		client.0.priority 32768 eq	% supervisor
+		{	/O_action_allowed true store		} if
+	} if
+	I_action (set_time) eq {
+		client.0.priority 8 	eq	% litronic 3
+		{	/O_action_allowed true store		} if
+		client.0.priority 16 	eq	% serice
+		{ 	/O_action_allowed true store		} if
+		client.0.priority 64 	eq	% inspector
+		{	/O_action_allowed true store		} if
+		client.0.priority 32768 eq	% supervisor
+		{	/O_action_allowed true store		} if
+	} if
+	I_action (core_voltages) eq {
+		client.0.priority 32768	eq	% supervisor
+		{	/O_action_allowed true store		} if
+	} if
+	
+	O_action_allowed
+} def
+
+% check_language_released
+%!proc sp_is_language_released
+%?subproc
+/sp_is_language_released {
+	/I_language exch def	%?brief language %?use INP %?type STRI %?dflt 0
+	/O_langage_released false def	%?brief released	%?use OUT	%?type BOOL	%?dflt false
+	
+	language.released.1 I_language eq 	{ /O_langage_released true store } if
+	language.released.2 I_language eq 	{ /O_langage_released true store } if
+	language.released.3 I_language eq 	{ /O_langage_released true store } if
+	language.released.4 I_language eq 	{ /O_langage_released true store } if
+	language.released.5 I_language eq 	{ /O_langage_released true store } if
+	language.released.6 I_language eq 	{ /O_langage_released true store } if
+	language.released.7 I_language eq 	{ /O_langage_released true store } if
+	language.released.8 I_language eq 	{ /O_langage_released true store } if
+	language.released.9 I_language eq 	{ /O_langage_released true store } if
+	language.released.10 I_language eq	{ /O_langage_released true store } if
+	language.released.11 I_language eq 	{ /O_langage_released true store } if
+	language.released.12 I_language eq	{ /O_langage_released true store } if
+	language.released.13 I_language eq	{ /O_langage_released true store } if
+	language.released.14 I_language eq	{ /O_langage_released true store } if
+	language.released.15 I_language eq	{ /O_langage_released true store } if
+	language.released.16 I_language eq	{ /O_langage_released true store } if
+	language.released.17 I_language eq	{ /O_langage_released true store } if
+	language.released.18 I_language eq	{ /O_langage_released true store } if
+	language.released.19 I_language eq	{ /O_langage_released true store } if
+	language.released.20 I_language eq	{ /O_langage_released true store } if
+	language.released.21 I_language eq 	{ /O_langage_released true store } if
+	language.released.22 I_language eq	{ /O_langage_released true store } if
+	language.released.23 I_language eq	{ /O_langage_released true store } if
+	language.released.24 I_language eq	{ /O_langage_released true store } if
+	language.released.25 I_language eq	{ /O_langage_released true store } if
+	language.released.26 I_language eq	{ /O_langage_released true store } if
+	language.released.27 I_language eq	{ /O_langage_released true store } if
+	language.released.28 I_language eq	{ /O_langage_released true store } if
+	language.released.29 I_language eq	{ /O_langage_released true store } if
+	language.released.30 I_language eq	{ /O_langage_released true store } if
+	language.released.31 I_language eq 	{ /O_langage_released true store } if
+	language.released.32 I_language eq	{ /O_langage_released true store } if
+	language.released.33 I_language eq	{ /O_langage_released true store } if
+	language.released.34 I_language eq	{ /O_langage_released true store } if
+	language.released.35 I_language eq	{ /O_langage_released true store } if
+	language.released.36 I_language eq	{ /O_langage_released true store } if
+	language.released.37 I_language eq	{ /O_langage_released true store } if
+	language.released.38 I_language eq	{ /O_langage_released true store } if
+	language.released.39 I_language eq	{ /O_langage_released true store } if
+	language.released.40 I_language eq	{ /O_langage_released true store } if
+	
+	O_langage_released
+	
+} def
+
+% block_language
+%!proc sp_block_language
+%?subproc
+/sp_block_language {
+	/I_language exch def	%?brief language %?use INP %?type STRI %?dflt 0
+	
+	language.released.1 I_language eq 	{ /language.released.1 () store } if
+	language.released.2 I_language eq 	{ /language.released.2 () store } if
+	language.released.3 I_language eq 	{ /language.released.3 () store } if
+	language.released.4 I_language eq 	{ /language.released.4 () store } if
+	language.released.5 I_language eq 	{ /language.released.5 () store } if
+	language.released.6 I_language eq 	{ /language.released.6 () store } if
+	language.released.7 I_language eq 	{ /language.released.7 () store } if
+	language.released.8 I_language eq 	{ /language.released.8 () store } if
+	language.released.9 I_language eq 	{ /language.released.9 () store } if
+	language.released.10 I_language eq	{ /language.released.10 () store } if
+	language.released.11 I_language eq 	{ /language.released.11 () store } if
+	language.released.12 I_language eq	{ /language.released.12 () store } if
+	language.released.13 I_language eq	{ /language.released.13 () store } if
+	language.released.14 I_language eq	{ /language.released.14 () store } if
+	language.released.15 I_language eq	{ /language.released.15 () store } if
+	language.released.16 I_language eq	{ /language.released.16 () store } if
+	language.released.17 I_language eq	{ /language.released.17 () store } if
+	language.released.18 I_language eq	{ /language.released.18 () store } if
+	language.released.19 I_language eq	{ /language.released.19 () store } if
+	language.released.20 I_language eq	{ /language.released.20 () store } if
+	language.released.21 I_language eq 	{ /language.released.21 () store } if
+	language.released.22 I_language eq	{ /language.released.22 () store } if
+	language.released.23 I_language eq	{ /language.released.23 () store } if
+	language.released.24 I_language eq	{ /language.released.24 () store } if
+	language.released.25 I_language eq	{ /language.released.25 () store } if
+	language.released.26 I_language eq	{ /language.released.26 () store } if
+	language.released.27 I_language eq	{ /language.released.27 () store } if
+	language.released.28 I_language eq	{ /language.released.28 () store } if
+	language.released.29 I_language eq	{ /language.released.29 () store } if
+	language.released.30 I_language eq	{ /language.released.30 () store } if
+	language.released.31 I_language eq 	{ /language.released.31 () store } if
+	language.released.32 I_language eq	{ /language.released.32 () store } if
+	language.released.33 I_language eq	{ /language.released.33 () store } if
+	language.released.34 I_language eq	{ /language.released.34 () store } if
+	language.released.35 I_language eq	{ /language.released.35 () store } if
+	language.released.36 I_language eq	{ /language.released.36 () store } if
+	language.released.37 I_language eq	{ /language.released.37 () store } if
+	language.released.38 I_language eq	{ /language.released.38 () store } if
+	language.released.39 I_language eq	{ /language.released.39 () store } if
+	language.released.40 I_language eq	{ /language.released.40 () store } if
+	
+} def
+
+% sp_check_canline_status
+%!proc sp_check_canline_status
+%?subproc
+/sp_check_canline_status {
+	/I_check_to_start exch  def	%?brief check to start %?use INP %?type BOOL %?dflt false
+	/I_check_offset  exch def	%?brief module check offset %?use INP %?type DINT %?dflt 1
+	/I_can_line_idx exch def	%?brief can line index %?use INP %?type DINT %?dflt 1
+	/canproblem 0 def	%?brief can line problem %?use LOC %?type DINT %?dflt 0
+
+	I_can_line_idx	canmodule_get_count 
+	/modules_count exch store 
+
+	I_check_to_start true eq
+	{
+		/idx 1 store
+	} 
+	{
+		I_check_offset 0 eq 
+		{ /idx 1 store 				}
+		{ /idx I_check_offset store	} ifelse
+	} ifelse
+	
+	modules_count idx sub 1 ge {
+	modules_count 
+	{ 
+		% get module information
+		idx I_can_line_idx 
+		canmodule_get_info 
+		/module_tx_time exch store
+		/module_rx_time exch store
+		/module_used exch store
+		/module_forced exch store
+		/module_timeout exch store
+		/module_type_idx exch store
+		/module_nr exch store 
+		
+		module_used 1 eq
+		module_timeout 1 eq and 
+		{
+			/canproblem 1 store
+			exit
+		} if
+		/idx idx 1 add store
+		
+		I_check_to_start true ne
+		idx modules_count ge and
+		{ 
+			exit
+		} if
+		
+		I_check_to_start true eq
+		idx I_check_offset ge and
+		{ 
+			exit
+		} if
+		
+	} repeat
+	} if
+	
+	canproblem
+} def
+
+% sp_Timezone0
+%!proc sp_Timezone0
+%?subproc
+/sp_Timezone0 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP0
+		stroke 
+		1 setlinewidth_nlw 
+	}
+	{
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP0
+			ineofill {
+				/usertime.timezone 0 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP1
+%!proc sp_TimezoneP1
+%?subproc
+/sp_TimezoneP1 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP1
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP1
+			ineofill {
+				/usertime.timezone 1 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP2
+%!proc sp_TimezoneP2
+%?subproc
+/sp_TimezoneP2 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP2
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP2
+			ineofill {
+				/usertime.timezone 2 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP3
+%!proc sp_TimezoneP3
+%?subproc
+/sp_TimezoneP3 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {	
+		3 setlinewidth_nlw 
+		tsTimeZoneP3
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP3
+			ineofill {
+				/usertime.timezone 3 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP3_5
+%!proc sp_TimezoneP3_5
+%?subproc
+/sp_TimezoneP3_5 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP3_5
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP3_5
+			ineofill {
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP4
+%!proc sp_TimezoneP4
+%?subproc
+/sp_TimezoneP4 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP4
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP4
+			ineofill {
+				/usertime.timezone 4 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP4_5
+%!proc sp_TimezoneP4_5
+%?subproc
+/sp_TimezoneP4_5 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP4_5
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP4_5
+			ineofill {
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP5
+%!proc sp_TimezoneP5
+%?subproc
+/sp_TimezoneP5 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	%?manual_beg	
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP5
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP5
+			ineofill {
+				/usertime.timezone 5 3600 mul store
+			} if
+		} if
+	} ifelse
+	%?manual_end
+
+} def
+
+% sp_TimezoneP5_5
+%!proc sp_TimezoneP5_5
+%?subproc
+/sp_TimezoneP5_5 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP5_5
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP5_5
+			ineofill {
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP5_75
+%!proc sp_TimezoneP5_75
+%?subproc
+/sp_TimezoneP5_75 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP5_75
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP5_75
+			ineofill {
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP6
+%!proc sp_TimezoneP6
+%?subproc
+/sp_TimezoneP6 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP6
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP6
+			ineofill {
+				/usertime.timezone 6 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP6_5
+%!proc sp_TimezoneP6_5
+%?subproc
+/sp_TimezoneP6_5 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP6_5
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP6_5
+			ineofill {
+				/usertime.timezone 6.5 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP7
+%!proc sp_TimezoneP7
+%?subproc
+/sp_TimezoneP7 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP7
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP7
+			ineofill {
+				/usertime.timezone 7 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP8
+%!proc sp_TimezoneP8
+%?subproc
+/sp_TimezoneP8 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP8
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP8
+			ineofill {
+				/usertime.timezone 8 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP9
+%!proc sp_TimezoneP9
+%?subproc
+/sp_TimezoneP9 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP9
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP9
+			ineofill {
+				/usertime.timezone 9 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP9_5
+%!proc sp_TimezoneP9_5
+%?subproc
+/sp_TimezoneP9_5 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP9_5
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP9_5
+			ineofill {
+				/usertime.timezone 9.5 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+
+% sp_TimezoneP10
+%!proc sp_TimezoneP10
+%?subproc
+/sp_TimezoneP10 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP10
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP10
+			ineofill {
+				/usertime.timezone 10 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP11
+%!proc sp_TimezoneP11
+%?subproc
+/sp_TimezoneP11 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP11
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP11
+			ineofill {
+				/usertime.timezone 11 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneP12
+%!proc sp_TimezoneP12
+%?subproc
+/sp_TimezoneP12 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneP12
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneP12
+			ineofill {
+				/usertime.timezone 12 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM1
+%!proc sp_TimezoneM1
+%?subproc
+/sp_TimezoneM1 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM1
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM1
+			ineofill {
+				/usertime.timezone -1 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM2
+%!proc sp_TimezoneM2
+%?subproc
+/sp_TimezoneM2 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM2
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM2
+			ineofill {
+				/usertime.timezone -2 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM3
+%!proc sp_TimezoneM3
+%?subproc
+/sp_TimezoneM3 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM3
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM3
+			ineofill {
+				/usertime.timezone -3 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM3_5
+%!proc sp_TimezoneM3_5
+%?subproc
+/sp_TimezoneM3_5 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM3_5
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM3_5
+			ineofill {
+				/usertime.timezone -3.5 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM4
+%!proc sp_TimezoneM4
+%?subproc
+/sp_TimezoneM4 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM4
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM4
+			ineofill {
+				/usertime.timezone -4 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM4_5
+%!proc sp_TimezoneM4_5
+%?subproc
+/sp_TimezoneM4_5 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM4_5
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM4_5
+			ineofill {
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM5
+%!proc sp_TimezoneM5
+%?subproc
+/sp_TimezoneM5 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM5
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM5
+			ineofill {
+				/usertime.timezone -5 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM6
+%!proc sp_TimezoneM6
+%?subproc
+/sp_TimezoneM6 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM6
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM6
+			ineofill {
+				/usertime.timezone -6 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM7
+%!proc sp_TimezoneM7
+%?subproc
+/sp_TimezoneM7 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM7
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM7
+			ineofill {
+				/usertime.timezone -7 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM8
+%!proc sp_TimezoneM8
+%?subproc
+/sp_TimezoneM8 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM8
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM8
+			ineofill {
+				/usertime.timezone -8 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM9
+%!proc sp_TimezoneM9
+%?subproc
+/sp_TimezoneM9 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM9
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM9
+			ineofill {
+				/usertime.timezone -9 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM10
+%!proc sp_TimezoneM10
+%?subproc
+/sp_TimezoneM10 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM10
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM10
+			ineofill {
+				/usertime.timezone -10 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM11
+%!proc sp_TimezoneM11
+%?subproc
+/sp_TimezoneM11 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM11
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM11
+			ineofill {
+				/usertime.timezone -11 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+% sp_TimezoneM12
+%!proc sp_TimezoneM12
+%?subproc
+/sp_TimezoneM12 {
+	/I_showZone exch  def	%?brief show zone %?use INP %?type BOOL %?dflt false
+	I_showZone true eq {
+		3 setlinewidth_nlw 
+		tsTimeZoneM12
+		stroke 
+		1 setlinewidth_nlw 
+	} {
+		_mdown {	
+			_mxposd _myposd itransform 
+			 newpath 
+			tsTimeZoneM12
+			ineofill {
+				/usertime.timezone -12 3600 mul store
+			} if
+		} if
+	} ifelse
+} def
+
+%?partdef tpElementSelected
+%?fn	tpElementSelected
+%?brief	tpElementSelected
+%?bbox	0 0 79 79
+/tpElementSelected {
+	/I_offset exch def	%?brief I_offset %?use INP %?type DINT %?dflt 1
+	/I_height exch def	%?brief I_height %?use INP %?type DINT %?dflt 80
+	/I_width exch def	%?brief I_width %?use INP %?type DINT %?dflt 80
+%?manual_beg
+	/start_pos 8 store
+	/diff 9 store
+	3 setlinewidth_nlw 
+	start_pos 3 I_offset add moveto 
+	I_width diff sub I_offset sub  start_pos I_offset add			5 270	360 arc 
+	I_width diff sub I_offset sub I_height diff I_offset add sub 	5 0 	90 	arc 
+	start_pos I_offset add I_height diff I_offset add sub			5 90	180 arc 
+	start_pos I_offset add start_pos I_offset add					5 180	270 arc stroke
+	1 setlinewidth_nlw 
+%?manual_end 
+	
+} def
+%?partend
+
+
+%?partdef tpProcess
+%?fn	tpProcess
+%?brief	voltages
+%?bbox	0 0 959 579
+/tpProcess {
+	/I_process_interval exch def	%?brief process time interval %?use INP %?type DINT %?dflt 1000
+	/I_process_duration exch def	%?brief in_process_duration %?use INP %?type DINT %?dflt 2200
+	/I_spare_time exch def	%?brief spare time %?use INP %?type DINT %?dflt 19
+	/I_tx_time exch def	%?brief tx time %?use INP %?type DINT %?dflt 6600
+	/I_rx_time exch def	%?brief rx time %?use INP %?type DINT %?dflt 3800
+	/start_pos_y_bar 440 def	%?brief start pos y process bar %?use LOC %?type DINT %?dflt 400
+	/process_view_zoom_factor 0 def	%?brief process_view_zoom_factor %?use LOC %?type DINT %?dflt 20
+	/start_pos_rx_time 0 def	%?brief start position rx time %?use LOC %?type DINT %?dflt 0
+	/start_pos_spare_time 0 def	%?brief start position spare time %?use LOC %?type DINT %?dflt 0
+	/start_pos_tx_time 0 def	%?brief start position tx time %?use LOC %?type DINT %?dflt 0
+	/start_pos_process_duration 0 def	%?brief start position process_duration %?use LOC %?type DINT %?dflt 0
+	/process_duration_calc 0 def	%?brief process_duration calc %?use LOC %?type DINT %?dflt 0
+	/spare_time_calc 0 def	%?brief spare time calc %?use LOC %?type DINT %?dflt 0
+	/tx_time_calc 0 def	%?brief tx time calc %?use LOC %?type DINT %?dflt 0
+	/rx_time_calc 0 def	%?brief rx time calc %?use LOC %?type DINT %?dflt 0
+	/rx_time_ms 0 def	%?brief rx time in ms %?use LOC %?type DINT %?dflt 0
+	/tx_time_ms 0 def	%?brief tx time in ms %?use LOC %?type DINT %?dflt 0
+	/process_duration_ms 0 def	%?brief process_duration in ms %?use LOC %?type DINT %?dflt 0
+	/process_interval_ms 0 def	%?brief process time interval in ms %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	/process_interval_ms I_process_interval 1000 div store
+	/process_duration_ms I_process_duration 1000 div store
+	/rx_time_ms I_rx_time 1000 div store
+	/tx_time_ms I_tx_time 1000 div store
+	
+	process_interval_ms 0 ne {
+		/process_view_zoom_factor MDscreenPixX 180 sub process_interval_ms div store
+	} if
+	process_interval_ms 0 eq {
+		/process_view_zoom_factor 30 store
+	} if
+	
+	/rx_time_calc rx_time_ms process_view_zoom_factor mul store
+	/process_duration_calc process_duration_ms process_view_zoom_factor mul store
+	/tx_time_calc tx_time_ms process_view_zoom_factor mul store
+	%/spare_time_calc in_spare_time process_view_zoom_factor mul store
+	/spare_time_calc 
+	process_interval_ms rx_time_ms sub 
+	process_duration_ms sub 
+	tx_time_ms sub
+	process_view_zoom_factor mul store
+
+	/start_pos_rx_time 80 store
+	/start_pos_process_duration start_pos_rx_time rx_time_calc add store
+	/start_pos_tx_time start_pos_process_duration process_duration_calc add store
+	/start_pos_spare_time start_pos_tx_time tx_time_calc add store
+
+% line for process interval
+	/process_interval_y start_pos_y_bar 50 add store
+	/process_interval_x_end start_pos_rx_time rx_time_calc add
+	process_duration_calc add tx_time_calc add spare_time_calc add store
+	
+	% ----
+	start_pos_rx_time process_interval_y moveto
+	process_interval_x_end	process_interval_y lineto
+	
+	% |
+	start_pos_rx_time start_pos_y_bar 30 sub moveto
+	start_pos_rx_time process_interval_y 20 add lineto
+	
+	% |
+	process_interval_x_end start_pos_y_bar 30 sub  moveto
+	process_interval_x_end process_interval_y 20 add lineto
+	
+	% <
+	start_pos_rx_time  15 add process_interval_y 5 sub moveto
+	newpath
+	start_pos_rx_time process_interval_y lineto
+	start_pos_rx_time  15 add process_interval_y 5 add lineto
+	eofill
+	
+	% >
+	process_interval_x_end  15 sub process_interval_y 5 sub moveto
+	newpath
+	process_interval_x_end process_interval_y lineto
+	process_interval_x_end  15 sub process_interval_y 5 add lineto
+	eofill
+	
+	currentcolor 
+	Green 
+	start_pos_rx_time start_pos_y_bar rx_time_calc -30 rectfill 
+	Blue 
+	start_pos_process_duration start_pos_y_bar 50 sub process_duration_calc -30 rectfill 
+	Yellow 
+	start_pos_tx_time start_pos_y_bar tx_time_calc -30 rectfill 
+	Grey 
+	start_pos_spare_time start_pos_y_bar spare_time_calc -30 rectfill 
+	setcolor 
+	start_pos_process_duration start_pos_y_bar 10 add moveto 
+	start_pos_process_duration start_pos_y_bar 90 sub lineto 
+	stroke 
+	start_pos_tx_time start_pos_y_bar 10 add moveto 
+	start_pos_tx_time start_pos_y_bar 90 sub lineto 
+	stroke 
+	currentcolor 
+	rx_time_calc 20 ge {
+		Blue 
+		start_pos_rx_time 10 add start_pos_y_bar 20 sub moveto 
+		StdFont (rx) 
+		show_utf8 
+	} if
+	tx_time_calc 20 ge {
+		start_pos_tx_time 10 add start_pos_y_bar 20 sub moveto 
+		StdFont (tx) 
+		show_utf8 
+	} if 
+	spare_time_calc 20 ge {
+		start_pos_spare_time 10 add start_pos_y_bar 20 sub moveto 
+		StdFont (spare) 
+		show_utf8 
+	} if
+	setcolor 
+%
+	currentcolor 
+	process_duration_calc 20 ge {
+		Yellow 
+		start_pos_process_duration 10 add 
+		start_pos_y_bar 20 sub 
+		50 sub 
+		moveto 
+		StdFont (plc0) 
+		show_utf8 
+	} if
+	setcolor 
+
+%
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Green
+	start_pos_rx_time 10 add start_pos_y_bar 20 add translate 
+	0 rotate 
+	1 1 scale 
+	rx_time_ms 3.10 (ms) false false 1 1
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	start_pos_process_duration 10 add start_pos_y_bar 110 sub translate 
+	0 rotate 
+	1 1 scale 
+	process_duration_ms 3.10 (ms) false false 1 1
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Yellow
+	start_pos_tx_time 10 add start_pos_y_bar 20 add translate 
+	0 rotate 
+	1 1 scale 
+	tx_time_ms 3.10 (ms) false false 1 1
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+
+%?manual_end
+	20 415 moveto 
+	StdFont (CAN) 
+	show_utf8 
+	20 355 moveto 
+	StdFont (CPU) 
+	show_utf8 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	170 520 translate 
+	0 rotate 
+	1 1 scale 
+	process_interval_ms 3.10 (ms) false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 520 translate 
+	0 rotate 
+	1 1 scale 
+	(process interval:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef tpSysstate
+%?fn	tpSysstate
+%?brief	sysstate
+%?bbox	0 0 239 39
+/tpSysstate {
+	/I_sysstate.state exch def	%?brief sysstate.state %?use INP %?type DINT %?dflt 0
+	I_sysstate.state 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale (booting) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 0 0 translate 
+		0 rotate 
+		1 1 scale (running) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale (power down) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale (power off) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 4 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 0 0 translate 
+		0 rotate 
+		1 1 scale (critical, PLC stopped) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 5 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 0 0 translate 
+		0 rotate 
+		1 1 scale (alert, PLC stopped) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 6 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		Red 1 1 scale (fatal, system stopped) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 7 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale (waiting for master) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 8 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale (no application) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 9 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale (erasing flash) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 10 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale (programming flash) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 11 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale (CAN download) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_sysstate.state 12 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale (process down) 1 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+} def
+%?partend
+
+%?partdef tpMaster4
+%?fn	tpMaster4
+%?brief	master4
+%?bbox	0 0 779 519
+/tpMaster4 {
+	/I_sysstate.state exch def	%?brief sysstate.state %?use INP %?type DINT %?dflt 0
+	/I_boot_machineserial exch def	%?brief I_boot_machineserial %?use INP %?type STRI %?dflt 
+	/I_boot_target exch def	%?brief boot_target %?use INP %?type STRI %?dflt 
+	/I_boot_environment exch def	%?brief boot_environment %?use INP %?type STRI %?dflt 
+	/I_boot_state exch def	%?brief boot_state %?use INP %?type STRI %?dflt 
+	/I_boot_ident_index exch def	%?brief boot_identindex %?use INP %?type STRI %?dflt 
+	/I_boot_ident exch def	%?brief boot_ident %?use INP %?type STRI %?dflt 
+	/I_can4_not_connected exch def	%?brief I_can4_not_connected %?use INP %?type DINT %?dflt 0
+	/I_can3_not_connected exch def	%?brief I_can3_not_connected %?use INP %?type DINT %?dflt 0
+	/I_can2_not_connected exch def	%?brief I_can2_not_connected %?use INP %?type DINT %?dflt 0
+	/I_can1_not_connected exch def	%?brief I_can1_not_connected %?use INP %?type DINT %?dflt 0
+	/I_can4_qual_overall exch def	%?brief I_can4_qual_overall %?use INP %?type DINT %?dflt 0
+	/I_can3_qual_overall exch def	%?brief I_can3_qual_overall %?use INP %?type DINT %?dflt 0
+	/I_can2_qual_overall exch def	%?brief I_can2_qual_overall %?use INP %?type DINT %?dflt 0
+	/I_can1_qual_overall exch def	%?brief I_can1_qual_overall %?use INP %?type DINT %?dflt 0
+	/I_can4_qual_cur exch def	%?brief I_can4_qual_cur %?use INP %?type DINT %?dflt 0
+	/I_can3_qual_cur exch def	%?brief I_can3_qual_cur %?use INP %?type DINT %?dflt 0
+	/I_can2_qual_cur exch def	%?brief I_can2_qual_cur %?use INP %?type DINT %?dflt 0
+	/I_can1_qual_cur exch def	%?brief I_can1_qual_cur %?use INP %?type DINT %?dflt 0
+	/I_link_lan1 exch def	%?brief link status of lan1 %?use INP %?type DINT %?dflt 0
+	/I_link_lan2 exch def	%?brief link status of lan2 %?use INP %?type DINT %?dflt 0
+	/I_link_lan3 exch def	%?brief link status of lan3 %?use INP %?type DINT %?dflt 0
+	matrix currentmatrix_nlw 
+	currentcolor 
+	620 345 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/canline_idx 1 store 
+		/page_idx 0 store 
+		/canmodule_nr 0 store 
+		/_currentpage (canline) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	620 255 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/canline_idx 2 store 
+		/page_idx 0 store 
+		/canmodule_nr 0 store 
+		/_currentpage (canline) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	620 165 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/canline_idx 3 store 
+		/page_idx 0 store 
+		/canmodule_nr 0 store 
+		/_currentpage (canline) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	620 75 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		/canline_idx 4 store 
+		/page_idx 0 store 
+		/canmodule_nr 0 store 
+		/_currentpage (canline) store 
+		/_cpindex -1 store 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	fs.cf2.state 3 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		230 15 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/card_idx 2 store 
+			/page_idx 0 store 
+			/_currentpage (card) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+		fs.cf2.state 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Red 230 15 translate 
+			0 rotate 
+			1 1 scale 
+			82 80 0 
+			tpElementSelected 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		} { 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey 230 15 translate 
+		0 rotate 
+		1 1 scale 
+		82 80 0 
+		tpElementSelected 
+		setcolor 
+		setmatrix_nlw 
+	} ifelse 
+	fs.cf1.state 3 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 15 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/card_idx 1 store 
+			/page_idx 0 store 
+			/_currentpage (card) store 
+			/_cpindex -1 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+		fs.cf1.state 0 ne {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Red 120 15 translate 
+			0 rotate 
+			1 1 scale 
+			82 80 0 
+			tpElementSelected 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+		} { 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		LightGrey 120 15 translate 
+		0 rotate 
+		1 1 scale 
+		82 80 0 
+		tpElementSelected 
+		setcolor 
+		setmatrix_nlw 
+	} ifelse 330 460 moveto 
+	StdFont (LAN1) 
+	show_utf8 
+	230 460 moveto 
+	StdFont (LAN2) 
+	show_utf8 
+	130 460 moveto 
+	StdFont (LAN3) 
+	show_utf8 
+	I_link_lan3 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 150 430 translate 
+		0 rotate 
+		1 1 scale 
+		(link) 1 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_link_lan2 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 250 430 translate 
+		0 rotate 
+		1 1 scale 
+		(link) 1 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_link_lan1 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 350 430 translate 
+		0 rotate 
+		1 1 scale 
+		(link) 1 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 340 translate 
+	0 rotate 
+	1 1 scale 
+	(machine serial no.:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 320 translate 
+	0 rotate 
+	1 1 scale 
+	(machine type:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 300 translate 
+	0 rotate 
+	1 1 scale 
+	(machine sales type:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 260 translate 
+	0 rotate 
+	1 1 scale 
+	(project ident.no.:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 240 translate 
+	0 rotate 
+	1 1 scale 
+	(project ident.no. index:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 220 translate 
+	0 rotate 
+	1 1 scale 
+	(project release state:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	140 70 moveto 
+	StdFont (boot) 
+	show_utf8 
+	140 30 moveto 
+	StdFont (card) 
+	show_utf8 
+	240 70 moveto 
+	StdFont (service) 
+	show_utf8 
+	250 30 moveto 
+	StdFont (card) 
+	show_utf8 
+	55 370 moveto 
+	StdFont (1) 
+	show_utf8 
+	55 275 moveto 
+	StdFont (2) 
+	show_utf8 
+	55 185 moveto 
+	StdFont (3) 
+	show_utf8 
+	55 95 moveto 
+	StdFont (4) 
+	show_utf8 
+	40 390 moveto 
+	StdFont (COM) 
+	show_utf8 
+	40 120 moveto 
+	StdFont (COM) 
+	show_utf8 
+	40 210 moveto 
+	StdFont (COM) 
+	show_utf8 
+	40 300 moveto 
+	StdFont (COM) 
+	show_utf8 
+	640 390 moveto 
+	StdFont (CAN) 
+	show_utf8 
+	640 120 moveto 
+	StdFont (CAN) 
+	show_utf8 
+	640 300 moveto 
+	StdFont (CAN) 
+	show_utf8 
+	640 210 moveto 
+	StdFont (CAN) 
+	show_utf8 
+	680 390 moveto 
+	StdFont (1) 
+	show_utf8 
+	680 300 moveto 
+	StdFont (2) 
+	show_utf8 
+	680 210 moveto 
+	StdFont (3) 
+	show_utf8 
+	680 120 moveto 
+	StdFont (4) 
+	show_utf8 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	588 340 translate 
+	0 rotate 
+	1 1 scale 
+	true 
+	I_can1_qual_cur I_can1_qual_overall (???) true 75 100 true false false false false false 95 90 4 15 70 false false 0 false 0 1 true 1 
+	baBar004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	588 160 translate 
+	0 rotate 
+	1 1 scale 
+	true 
+	I_can3_qual_cur I_can3_qual_overall (???) true 75 100 true false false false false false 95 90 4 15 70 false false 0 false 0 1 true 1 
+	baBar004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	588 70 translate 
+	0 rotate 
+	1 1 scale 
+	true 
+	I_can4_qual_cur I_can4_qual_overall (???) true 75 100 true false false false false false 95 90 4 15 70 false false 0 false 0 1 true 1 
+	baBar004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	588 250 translate 
+	0 rotate 
+	1 1 scale 
+	true 
+	I_can2_qual_cur I_can2_qual_overall (???) true 75 100 true false false false false false 95 90 4 15 70 false false 0 false 0 1 true 1 
+	baBar004 
+	setcolor 
+	setmatrix_nlw 
+	I_can1_qual_cur 80 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 640 350 translate 
+		0 rotate 
+		0.25 0.25 scale 
+		tsFilledCircleBlinking 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_can2_qual_cur 80 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 640 260 translate 
+		0 rotate 
+		0.25 0.25 scale 
+		tsFilledCircleBlinking 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_can3_qual_cur 80 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 640 170 translate 
+		0 rotate 
+		0.25 0.25 scale 
+		tsFilledCircleBlinking 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	I_can4_qual_cur 80 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 640 80 translate 
+		0 rotate 
+		0.25 0.25 scale 
+		tsFilledCircleBlinking 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	380 260 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot_ident 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	380 240 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot_ident_index 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	380 220 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot_state 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	380 200 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot_target 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 200 translate 
+	0 rotate 
+	1 1 scale 
+	(project target:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	380 340 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot_machineserial 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 380 translate 
+	0 rotate 
+	1 1 scale 
+	(system state:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	380 380 translate 
+	0 rotate 
+	1 1 scale 
+	I_sysstate.state 
+	tpSysstate 
+	setcolor 
+	setmatrix_nlw 
+	3 setlinewidth_nlw 
+	90 55 moveto 
+	90 455 lineto 
+	stroke 
+	620 55 moveto 
+	620 455 lineto 
+	stroke 
+	200 60 moveto 
+	230 60 lineto 
+	stroke 
+	310 60 moveto 
+	600 60 lineto 
+	stroke 
+	90 55 moveto 
+	90.10 35 110.10 35 110 55 curveto 
+	stroke 
+	90 455 moveto 
+	90.10 475 110.10 475 110 455 curveto 
+	stroke 
+	600 55 moveto 
+	600.10 35 620.10 35 620 55 curveto 
+	stroke 
+	600 455 moveto 
+	600.10 475 620.10 475 620 455 curveto 
+	stroke 
+	1 setlinewidth_nlw 
+	105 55 moveto 
+	100 55 5 0 360 arc 
+	stroke 
+	105 455 moveto 
+	100 455 5 0 360 arc 
+	stroke 
+	615 54 moveto 
+	610 54 5 0 360 arc 
+	stroke 
+	615 456 moveto 
+	610 456 5 0 360 arc 
+	stroke 
+	3 setlinewidth_nlw 
+	110 60 moveto 
+	120 60 lineto 
+	stroke 
+	110 60 moveto 
+	110 55 lineto 
+	stroke 
+	110 450 moveto 
+	110 455 lineto 
+	stroke 
+	600 60 moveto 
+	600 55 lineto 
+	stroke 
+	600 450 moveto 
+	600 455 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Grey 105 405 translate 
+	-90 rotate 
+	0.47 0.46 scale 
+	tsLiebherr001 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	1 1 false sp_check_canline_status 
+	1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 
+		620 345 translate 
+		0 rotate 
+		80 80 1 tpElementSelected
+%		tsButtonCritical		
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	2 1 false sp_check_canline_status 
+	1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 
+		620 255 translate 
+		0 rotate 
+		80 80 1 tpElementSelected
+%		tsButtonCritical		
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	3 1 false sp_check_canline_status 
+	1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 
+		620 165 translate 
+		0 rotate 
+		80 80 1 tpElementSelected
+%		tsButtonCritical
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	4 1 false sp_check_canline_status 
+	1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 
+		620 75 translate 
+		0 rotate 
+		80 80 1 tpElementSelected
+%		tsButtonCritical
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	/cf1_used_percent 100 fs.cf1.percent sub store
+	/cf2_used_percent 100 fs.cf2.percent sub store
+	
+	fs.cf1.state 0 eq {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		130 60 translate 
+		-90 rotate 
+		1 1 scale 
+		cf1_used_percent 0 100 90 100 10 60 false true false false true 0 
+		baBar005 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	fs.cf2.state 0 eq {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 60 translate 
+		-90 rotate 
+		1 1 scale 
+		cf2_used_percent 0 100 90 100 10 60 false true false false true 0 
+		baBar005 
+		setcolor 
+		setmatrix_nlw 
+	} if
+%?manual_end
+	3 setlinewidth_nlw 
+	110 450 moveto 
+	600 450 lineto 
+	stroke 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef tpTimezones2
+%?fn	tpTimezones2
+%?brief	Zeitzonen
+%?bbox	-320 -116 319 203
+/tpTimezones2 {
+	/irPosY exch def	%?brief Y-Position in Grad %?use INP %?type REAL %?dflt    47.17
+	/irPosX exch def	%?brief X-Position in Grad %?use INP %?type REAL %?dflt    9.75
+	/ixGPSposOk exch def	%?brief GPS position is o.k. %?use INP %?type BOOL %?dflt false
+%?manual_beg
+	/irTimeOffset usertime.timezone 3600 div store
+%?manual_end
+	currentcolor 
+	LightGrey -321 -117 641 321 rectstroke 
+	setcolor 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	tsEarth001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	tsEarth002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	tsEarth003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	tsEarth004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	tsEarth005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	tsEarth006 
+	setcolor 
+	setmatrix_nlw 
+
+	irTimeOffset 13 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+%		tsTimeZoneP13 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 12.75 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+%		tsTimeZoneP12_75 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 12 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP12 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 11.50 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+%		true sp_TimezoneP11_5 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 11 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP11 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 10.50 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+%		tsTimeZoneP10_5 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 10 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP10 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 9.50 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+%		true pop tsTimeZoneP9_5 
+		true sp_TimezoneP9_5
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 9 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP9 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 8 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP8 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 7 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP7 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 6.50 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP6_5
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 6 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP6 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 5.75 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP5_75 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 5.50 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP5_5 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 5 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP5 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 4.50 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP4_5 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 4 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP4 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 3.50 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP3_5 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP3 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP2 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneP1 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_Timezone0 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM1 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM2
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM3
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -3.50 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM3_5
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -4 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM4
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -4.5 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM4_5
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -5 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM5
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -6 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM6
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -7 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM7
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -8 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM8
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -9 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM9
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -9.50 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+%		true sp_TimezoneM9_5
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -10 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM10
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -11 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM11
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	irTimeOffset -12 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		true sp_TimezoneM12
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_beg
+	matrix currentmatrix_nlw 
+	currentcolor 
+	Green
+	3 setlinewidth
+	/LDradius 0 def
+	/LDxFact 1.78 def
+	/LDyFact 1.76 def
+	% Korrektur des Y-Faktor wegen der Prograssion der Landkarte
+	irPosY 15 gt { /LDyFact 1.79 store } if
+	irPosY 30 gt { /LDyFact 1.86 store } if
+	irPosY 45 gt { /LDyFact 1.98 store } if
+	irPosY 60 gt { /LDyFact 2.17 store } if
+	irPosY 75 gt { /LDyFact 2.27 store } if
+	ixGPSposOk {
+		irPosX LDxFact mul irPosY LDyFact mul translate
+		/LDradius MRslide 20 div store
+		newpath
+		LDradius 0 moveto 
+		0 0 LDradius 0 360 arc
+		eofill
+	} if
+	1 setlinewidth
+	setcolor 
+	setmatrix_nlw 
+%?manual_end
+	
+} def
+%?partend
+
+
+
+%?partdef tpTimezoneSetting
+%?fn	tpTimezoneSetting
+%?brief	timezones_settings
+%?bbox	0 0 719 499
+/tpTimezoneSetting {
+	
+%?manual_beg
+	/timezone_hours usertime.timezone 3600 div store
+%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	418 20 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		%?usercode_beg
+		
+		/timezone_offset 1 store 
+		timezone_hours -5 eq 
+		timezone_hours -4.50 eq or 
+		timezone_hours -4 eq or 
+		timezone_hours -3.50 eq or 
+		timezone_hours 3 eq or 
+		timezone_hours 3.50 eq or 
+		timezone_hours 4 eq or 
+		timezone_hours 4.50 eq or 
+		timezone_hours 5 eq or 
+		timezone_hours 6 eq or 
+		timezone_hours 6.50 eq or 
+		timezone_hours 9 eq or 
+		timezone_hours 9.50 eq or {	
+			/timezone_offset 0.50 store 
+		} if 
+		timezone_hours 5.50 eq 
+		timezone_hours 5.75 eq or {	
+			/timezone_offset 0.25 store 
+		} if 
+		/timezone_hours timezone_hours timezone_offset add store 
+		timezone_hours 12 ge {	
+			/timezone_hours 12 store 
+		} if 
+		/usertime.timezone timezone_hours 3600 mul store 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	133 20 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		%?usercode_beg
+		
+		/timezone_offset 1 store 
+		timezone_hours -4.50 eq 
+		timezone_hours -4 eq or 
+		timezone_hours -3 eq or 
+		timezone_hours -3.50 eq or 
+		timezone_hours 3.50 eq or 
+		timezone_hours 4 eq or 
+		timezone_hours 4.50 eq or 
+		timezone_hours 5 eq or 
+		timezone_hours 6.50 eq or 
+		timezone_hours 7 eq or 
+		timezone_hours 5.50 eq or 
+		timezone_hours 10 eq or 
+		timezone_hours 9.50 eq or {	
+			/timezone_offset 0.50 store 
+		} if 
+		timezone_hours 6 eq 
+		timezone_hours 5.75 eq or {	
+			/timezone_offset 0.25 store 
+		} if 
+		/timezone_hours timezone_hours timezone_offset sub store 
+		timezone_hours -12 le {	
+			/timezone_hours -11 store 
+		} if 
+		/usertime.timezone timezone_hours 3600 mul store 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	timezone_hours -12 eq { /international_timzone_examples (...) store } if
+	timezone_hours -11 eq { /international_timzone_examples (Samoa) store } if
+	timezone_hours -10 eq { /international_timzone_examples (Hawaii, Tahiti) store } if
+	timezone_hours -9 eq { /international_timzone_examples (USA Alaska) store } if
+	timezone_hours -8 eq { /international_timzone_examples (USA Pacific (LA, San Francisco)) store } if
+	timezone_hours -7 eq { /international_timzone_examples (USA Mountain (Denver)) store } if
+	timezone_hours -6 eq { /international_timzone_examples (USA Central (Chicago), Costa Rica) store } if
+	timezone_hours -5 eq { /international_timzone_examples (USA Eastern (New York, Washington), Cuba) store } if
+	timezone_hours -4.5 eq { /international_timzone_examples (Venezuela) store } if
+	timezone_hours -4 eq { /international_timzone_examples (Bermuda) store } if
+	timezone_hours -3.5 eq { /international_timzone_examples (Newfoundland) store } if
+	timezone_hours -3 eq { /international_timzone_examples (Argentina, Brazil East (Rio, Sao Paulo)) store } if
+	timezone_hours -2 eq { /international_timzone_examples (South Atlantic) store } if
+	timezone_hours -1 eq { /international_timzone_examples (Greenland-Scorebysund, CapVerde, Azores) store } if
+	timezone_hours 0 eq { /international_timzone_examples (England) store } if
+	timezone_hours 1 eq { /international_timzone_examples (Austria, Germany, France) store } if
+	timezone_hours 2 eq { /international_timzone_examples (Egypt) store } if
+	timezone_hours 3 eq { /international_timzone_examples (Kuwait, Russia (Moscow), Bahrain) store } if
+	timezone_hours 3.5 eq { /international_timzone_examples (Iran) store } if
+	timezone_hours 4 eq { /international_timzone_examples (Oman, Reunion, Arab Emirates, Dubai) store } if
+	timezone_hours 4.5 eq { /international_timzone_examples (Afghanistan) store } if
+	timezone_hours 5 eq { /international_timzone_examples (Pakistan) store } if
+	timezone_hours 5.5 eq { /international_timzone_examples (Indien) store } if
+	timezone_hours 5.75 eq { /international_timzone_examples (Nepal) store } if
+	timezone_hours 6 eq { /international_timzone_examples (Bangladesh) store } if
+	timezone_hours 6.5 eq { /international_timzone_examples (Myanmar) store } if
+	timezone_hours 7 eq { /international_timzone_examples (Vietnam) store } if
+	timezone_hours 8 eq { /international_timzone_examples (China, Hong Kong, West Australia) store } if
+	timezone_hours 9 eq { /international_timzone_examples (Japan, Korea) store } if
+	timezone_hours 9.5 eq { /international_timzone_examples (Australia Central Standard) store } if
+	timezone_hours 10 eq { /international_timzone_examples (Australia (Sydney)) store } if 
+	timezone_hours 11 eq { /international_timzone_examples (New Caledonia) store } if
+	timezone_hours 12 eq { /international_timzone_examples (New Zealand) store } if
+
+%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	410 50 translate 
+	0 rotate 
+	1 1 scale 
+	timezone_hours 3.20 () false false 7 1 
+	baValue012 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	225 50 translate 
+	0 rotate 
+	1 1 scale 
+	(UTC) 7 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 120 translate 
+	0 rotate 
+	1 1 scale 
+	international_timzone_examples 1 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	495 20 translate 
+	90 rotate 
+	1 1 scale 
+	tstgeneral001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	135 100 translate 
+	-90 rotate 
+	1 1 scale 
+	tstgeneral001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	515 20 translate 
+	90 rotate 
+	1 1 scale 
+	symtstframe010 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	115 100 translate 
+	-90 rotate 
+	1 1 scale 
+	symtstframe010 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	380 260 translate 
+	0 rotate 
+	1 1 scale 
+	gps.position_valid gps.longitude_deg gps.latitude_deg 
+	tpTimezones2 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+
+%?partdef tpCanInfoLineX
+%?fn	tpCanInfoLineX
+%?brief	can_info_line_x
+%?bbox	0 0 159 419
+/tpCanInfoLineX {
+	/I_line_number exch def	%?brief line_idx %?use INP %?type DINT %?dflt 0
+%?manual_beg
+	I_line_number 1 eq {
+		/can.lec_crc 					canquality.1.lec_crc store
+		/can.lec_bit0 					canquality.1.lec_bit0 store
+		/can.lec_bit1 					canquality.1.lec_bit1 store
+		/can.lec_ackn 					canquality.1.lec_ack store
+		/can.lec_form 					canquality.1.lec_form  store
+		/can.lec_stuff 					canquality.1.lec_stuff store
+		/can.n_good_tx_objects 			canquality.1.n_good_tx_objects store
+		/can.process_counter_mon_rx 	canline.process_counter_mon_rx.1 store
+		/can.n_good_rx_objects 			canquality.1.n_good_rx_objects store
+		/can.quality  					canquality.1.quality_overall store
+		/can.cur_quality 				canquality.1.quality_current store
+		/can.not_connected 				canquality.1.not_connected store
+		/can.baudrate 					canline.baudrate.1 store
+		/can_slave 						canline.slave.1 store
+	} if
+	I_line_number 2 eq {
+		/can.lec_crc 					canquality.2.lec_crc store
+		/can.lec_bit0 					canquality.2.lec_bit0 store
+		/can.lec_bit1 					canquality.2.lec_bit1 store
+		/can.lec_ackn 					canquality.2.lec_ack store
+		/can.lec_form 					canquality.2.lec_form  store
+		/can.lec_stuff 					canquality.2.lec_stuff store
+		/can.n_good_tx_objects 			canquality.2.n_good_tx_objects store
+		/can.process_counter_mon_rx 	canline.process_counter_mon_rx.2 store
+		/can.n_good_rx_objects 			canquality.2.n_good_rx_objects store
+		/can.quality  					canquality.2.quality_overall store
+		/can.cur_quality 				canquality.2.quality_current store
+		/can.not_connected 				canquality.2.not_connected store
+		/can.baudrate 					canline.baudrate.2 store
+		/can_slave 						canline.slave.2 store
+	} if
+	I_line_number 3 eq {
+		/can.lec_crc 					canquality.3.lec_crc store
+		/can.lec_bit0 					canquality.3.lec_bit0 store
+		/can.lec_bit1 					canquality.3.lec_bit1 store
+		/can.lec_ackn 					canquality.3.lec_ack store
+		/can.lec_form 					canquality.3.lec_form  store
+		/can.lec_stuff 					canquality.3.lec_stuff store
+		/can.n_good_tx_objects 			canquality.3.n_good_tx_objects store
+		/can.process_counter_mon_rx 	canline.process_counter_mon_rx.3 store
+		/can.n_good_rx_objects 			canquality.3.n_good_rx_objects store
+		/can.quality  					canquality.3.quality_overall store
+		/can.cur_quality 				canquality.3.quality_current store
+		/can.not_connected 				canquality.3.not_connected store
+		/can.baudrate 					canline.baudrate.3 store
+		/can_slave 						canline.slave.3 store
+	} if
+	I_line_number 4 eq {
+		/can.lec_crc 					canquality.4.lec_crc store
+		/can.lec_bit0 					canquality.4.lec_bit0 store
+		/can.lec_bit1 					canquality.4.lec_bit1 store
+		/can.lec_ackn 					canquality.4.lec_ack store
+		/can.lec_form 					canquality.4.lec_form  store
+		/can.lec_stuff 					canquality.4.lec_stuff store
+		/can.n_good_tx_objects 			canquality.4.n_good_tx_objects store
+		/can.process_counter_mon_rx 	canline.process_counter_mon_rx.4 store
+		/can.n_good_rx_objects 			canquality.4.n_good_rx_objects store
+		/can.quality  					canquality.4.quality_overall store
+		/can.cur_quality 				canquality.4.quality_current store
+		/can.not_connected 				canquality.4.not_connected store
+		/can.baudrate 					canline.baudrate.4 store
+		/can_slave 						canline.slave.4 store
+	} if
+
+%?manual_end	
+	1 setlinewidth_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 380 translate 
+	0 rotate 
+	1 1 scale 
+	(line) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 380 translate 
+	0 rotate 
+	1 1 scale 
+	can.baudrate 3 (\)) false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	can_slave 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 10 340 translate 
+		0 rotate 
+		1 1 scale 
+		(slave) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	can.not_connected 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 10 360 translate 
+		0 rotate 
+		1 1 scale 
+		(not connected) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 320 translate 
+	-90 rotate 
+	1 1 scale 
+	true 
+	can.quality can.cur_quality (%) true 75 100 true false false false false false 95 90 5 15 120 true false 90 false 0 1 true 1 
+	baBar004 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 230 translate 
+	0 rotate 
+	1 1 scale 
+	can.n_good_rx_objects 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 230 translate 
+	0 rotate 
+	1 1 scale 
+	can.process_counter_mon_rx 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 210 translate 
+	0 rotate 
+	1 1 scale 
+	can.n_good_tx_objects 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	3 setlinewidth_nlw 
+	currentcolor 
+	LightGrey 0 420 moveto 
+	0 50 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 180 translate 
+	0 rotate 
+	1 1 scale 
+	can.lec_stuff 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 210 translate 
+	0 rotate 
+	1 1 scale 
+	0 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 160 translate 
+	0 rotate 
+	1 1 scale 
+	can.lec_form 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 160 translate 
+	0 rotate 
+	1 1 scale 
+	0 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 130 translate 
+	0 rotate 
+	1 1 scale 
+	can.lec_ackn 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 130 translate 
+	0 rotate 
+	1 1 scale 
+	0 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 110 translate 
+	0 rotate 
+	1 1 scale 
+	can.lec_bit1 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 110 translate 
+	0 rotate 
+	1 1 scale 
+	0 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 80 translate 
+	0 rotate 
+	1 1 scale 
+	can.lec_bit0 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 80 translate 
+	0 rotate 
+	1 1 scale 
+	0 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 60 translate 
+	0 rotate 
+	1 1 scale 
+	can.lec_crc 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 60 translate 
+	0 rotate 
+	1 1 scale 
+	0 3 () false false 1 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	50 380 translate 
+	0 rotate 
+	1 1 scale 
+	I_line_number 1 () false false 1 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	60 380 translate 
+	0 rotate 
+	1 1 scale 
+	(- \() 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef tpCanLineInfo
+%?fn	tpCanLineInfo
+%?brief	can line info overview text
+%?bbox	0 0 159 419
+/tpCanLineInfo {
+	1 setlinewidth_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 300 translate 
+	0 rotate 
+	1 1 scale 
+	(quality) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 280 translate 
+	0 rotate 
+	1 1 scale 
+	(cur. qual) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 230 translate 
+	0 rotate 
+	1 1 scale 
+	(msg rx) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 210 translate 
+	0 rotate 
+	1 1 scale 
+	(msg tx) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 180 translate 
+	0 rotate 
+	1 1 scale 
+	(stuff) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 160 translate 
+	0 rotate 
+	1 1 scale 
+	(form) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 130 translate 
+	0 rotate 
+	1 1 scale 
+	(ackn) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 110 translate 
+	0 rotate 
+	1 1 scale 
+	(bit1) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 80 translate 
+	0 rotate 
+	1 1 scale 
+	(bit0) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 60 translate 
+	0 rotate 
+	1 1 scale 
+	(crc) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef tpTimeSettings
+%?fn	tpTimeSettings
+%?brief	time_settings
+%?bbox	0 0 479 579
+/tpTimeSettings {
+	/ixSystemTime exch def	%?brief systemtime or operatortime %?use INP %?type BOOL %?dflt false
+	/sec 0 def	%?brief s %?use LOC %?type DINT %?dflt 0
+	/min 0 def	%?brief m %?use LOC %?type DINT %?dflt 0
+	/hour 0 def	%?brief h %?use LOC %?type DINT %?dflt 0
+	/year 0 def	%?brief year %?use LOC %?type DINT %?dflt 0
+	/mon 0 def	%?brief mon %?use LOC %?type DINT %?dflt 0
+	/day 0 def	%?brief day %?use LOC %?type DINT %?dflt 0
+	/up_hour 0 def	%?brief  %?use LOC %?type DINT %?dflt 0
+	/up_min 0 def	%?brief  %?use LOC %?type DINT %?dflt 0
+	/up_sec 0 def	%?brief  %?use LOC %?type DINT %?dflt 0
+	/down_hour 0 def	%?brief  %?use LOC %?type DINT %?dflt 0
+	/down_min 0 def	%?brief  %?use LOC %?type DINT %?dflt 0
+	/down_sec 0 def	%?brief  %?use LOC %?type DINT %?dflt 0
+	/lxActionAllowed false def	%?brief  %?use LOC %?type BOOL %?dflt false
+	/lsTimeString () def	%?brief  %?use LOC %?type STRI %?dflt 
+%?manual_beg
+	(set_time)
+	sp_authorization_check 
+	/lxActionAllowed exch store
+	
+	ixSystemTime {
+		/lsTimeString usertime.localtime store
+	} 
+	{
+		/lsTimeString usertime.operator_time store
+	} ifelse
+
+	ixSystemTime not
+	ixSystemTime lxActionAllowed and or
+ 	{
+ 		% load actual time and date as default values
+		gettime
+		/hour exch store
+		/min exch store
+		/sec exch store
+		getdate
+		/year exch store
+		/mon exch store
+		/day exch store
+		lsTimeString () ne {
+			lsTimeString
+			splitdtstr
+			/year exch store
+			/mon exch store
+			/day exch store
+			/hour exch store
+			/min exch store
+			/sec exch store
+		} if
+		ixSystemTime  {
+			/up_hour 5 store
+			/up_min 5 store
+			/up_sec 5 store
+			/down_hour 5 store
+			/down_min 5 store
+			/down_sec 5 store
+		}
+		{
+			usertime.operator_range_up () ne {
+				usertime.operator_range_up
+				splitdtstr
+				pop	pop	pop
+				/up_hour exch store
+				/up_min exch store
+				/up_sec exch store
+			} if
+			usertime.operator_range_down () ne {
+				usertime.operator_range_down
+				splitdtstr
+				pop pop pop
+				/down_hour exch store
+				/down_min exch store
+				/down_sec exch store
+			} if
+		} ifelse
+		matrix currentmatrix_nlw 
+		currentcolor 
+		180 390 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		up_min 1 ge 
+		up_hour 1 ge or {
+			baTouchButton001 {	
+				%?usercode_beg
+				min 59 lt {
+					/min min 1 add store 
+				} 
+				{
+					/min 0 store 
+				} ifelse
+				year mon day 
+				hour min sec 
+				catdtstr
+				ixSystemTime {
+					/usertime.localtime exch store 
+				} {
+					/usertime.operator_time exch store 
+					hour min sec
+					settime
+				} ifelse
+				%?usercode_end 
+			} if 
+		} if
+		setcolor 
+		setmatrix_nlw 
+	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		180 320 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		down_min 1 ge 
+		down_hour 1 ge or {
+			baTouchButton001 {	
+				%?usercode_beg
+				min 0 gt {
+					/min min 1 sub store 
+				} 
+				{
+					/min 59 store
+				} ifelse
+				year mon day 
+				hour min sec 
+				catdtstr
+				ixSystemTime {
+					/usertime.localtime exch store 
+				} {
+					/usertime.operator_time exch store 
+					hour min sec
+					settime
+				} ifelse
+				%?usercode_end 
+			} if 
+		} if
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		140 390 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		up_hour 1 ge {
+			baTouchButton001 {	
+				%?usercode_beg
+				hour 23 lt {
+					/hour hour 1 add store 
+				} 
+				{
+					/hour 0 store 
+					
+				} ifelse
+				year mon day 
+				hour min sec 
+				catdtstr
+				ixSystemTime {
+					/usertime.localtime exch store 
+				} {
+					/usertime.operator_time exch store 
+					hour min sec
+					settime
+				} ifelse
+				%?usercode_end 
+			} if 
+		} if
+		setcolor 
+		setmatrix_nlw 
+	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		140 320 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		down_hour 1 ge {
+			baTouchButton001 {	
+				%?usercode_beg
+				hour 0 gt {
+					/hour hour 1 sub store 
+				} 
+				{
+					/hour 23 store
+				} ifelse
+				year mon day 
+				hour min sec 
+				catdtstr
+				ixSystemTime {
+					/usertime.localtime exch store 
+				} {
+					/usertime.operator_time exch store 
+					hour min sec
+					settime
+				} ifelse
+				%?usercode_end 
+			} if 
+		} if
+		setcolor 
+		setmatrix_nlw 
+	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		220 390 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			/sec 0 store 
+			year mon day 
+			hour min sec 
+			catdtstr
+			ixSystemTime {
+				/usertime.localtime exch store 
+			} {
+				/usertime.operator_time exch store 
+				hour min sec
+				settime
+			} ifelse
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	
+	%?manual_end
+	
+	ixSystemTime not {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		195 500 translate 
+		0 rotate 
+		0.50 0.50 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			
+			usertime.dst true eq {	
+				/usertime.dst false store 
+				} { 
+				/usertime.dst true store 
+			} ifelse 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		31 386 translate 
+		0 rotate 
+		1 1 scale 
+		(operator) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		30 525 translate 
+		0 rotate 
+		1 1 scale 
+		(daylight saving:) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+		usertime.dst true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			90 505 translate 
+			0 rotate 
+			1 1 scale 
+			(active) 1 1 
+			baText001 
+			setcolor 
+			setmatrix_nlw 
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 195 500 translate 
+			0 rotate 
+			0.50 0.50 scale 
+			tstsym_ok 
+			setcolor 
+			setmatrix_nlw 
+			} { 
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Invisible 195 500 translate 
+			0 rotate 
+			0.50 0.50 scale 
+			tstsym_ok 
+			setcolor 
+			setmatrix_nlw 
+		} ifelse 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	50 460 translate 
+	0 rotate 
+	1 1 scale 
+	(date:) 1 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	50 370 translate 
+	0 rotate 
+	1 1 scale 
+	(time:) 1 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	1 setlinewidth_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 455 translate 
+	0 rotate 
+	1 1 scale 
+	day mon year 12 7 
+	baDate002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	145 365 translate 
+	0 rotate 
+	1 1 scale 
+	sec min hour true 7 
+	baClock003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	180 320 translate 
+	0 rotate 
+	0.50 0.50 scale 
+	tsGeneral001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	220 430 translate 
+	180 rotate 
+	0.50 0.50 scale 
+	tsGeneral001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	140 320 translate 
+	0 rotate 
+	0.50 0.50 scale 
+	tsGeneral001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	180 430 translate 
+	180 rotate 
+	0.50 0.50 scale 
+	tsGeneral001 
+	setcolor 
+	setmatrix_nlw 
+} if 
+} def
+%?partend
+
+%?partdef tpLanguage
+%?fn	tpLanguage
+%?brief	language_settings
+%?bbox	0 0 959 579
+/tpLanguage {
+	
+%?manual_beg
+	MDscreenPixX 960 eq {
+		/start_pos_y 480 store
+		/language_lines_per_page 6 store
+		/language_max_nr 23 store
+		/text_pos_x 100 store
+	}
+	{
+		/start_pos_y 280 store
+		/language_lines_per_page 4 store
+		/language_max_nr 11 store
+		/text_pos_x 115 store
+	} ifelse
+	
+	language_get_all
+	/counts exch store
+	
+	/text_pos_y start_pos_y store
+	/flag_pos_x text_pos_x 5 add store
+	/flag_pos_y start_pos_y 10 add store
+	/count_idx 0 store
+	/language_cnt	0	store
+	/nr_lng_released	0	store
+
+	(language_enable)
+	sp_authorization_check 
+	/action_allowed exch store
+	
+	counts
+	{
+		/lng_char exch store
+		
+		lng_char
+		sp_is_language_released
+		/language_relased exch store
+		language_relased true eq
+		action_allowed true eq or
+		{
+			/nr_lng_released nr_lng_released 1 add store
+		} if
+		
+		% check language offset (needed for scrolling) and lanuage count
+		language_cnt language_offset ge 
+		count_idx language_max_nr le and
+		{ 
+			matrix currentmatrix_nlw
+			currentcolor
+			% check if language is current system language
+			lng_char language.system eq 
+			{
+%				Blue
+				3 setlinewidth_nlw 
+			}
+			{
+				Grey
+			} ifelse
+
+			action_allowed true eq 
+			language_relased true eq or
+			{	
+				text_pos_x 3 sub text_pos_y 3 sub 170 86 rectstroke
+			} if
+		
+			setcolor
+			setmatrix_nlw
+		
+		
+			% check language release state (released or blocked)		
+			action_allowed true eq 
+			{
+				language_relased true eq 
+				{
+					% is released
+					matrix currentmatrix_nlw 
+					currentcolor 
+					text_pos_x 125 add text_pos_y translate 
+					0 rotate 
+					0.5 0.5 scale 
+					baTouchButton001 {	
+						lng_char
+						sp_block_language
+					} if 
+					Green
+					tstsym_ok
+					setcolor 
+					setmatrix_nlw 
+				}
+				{
+					% is blocked
+					matrix currentmatrix_nlw 
+					currentcolor 
+					text_pos_x 125 add text_pos_y translate 
+					0 rotate 
+					0.5 0.5 scale 
+					baTouchButton001 {	
+						/language.released.40 lng_char store
+					} if 
+					Invisible
+					tstsym_ok
+					setcolor 
+					setmatrix_nlw 
+		
+				} ifelse
+			} if
+
+%-------------------------------------------------
+% draw language touch button if language is released
+%-------------------------------------------------
+			language_relased true eq {
+				matrix currentmatrix_nlw 
+				currentcolor 
+				text_pos_x text_pos_y translate 
+				0 rotate 
+				1.5 1 
+				baTouchButton003 {	
+					/language.system lng_char store
+					/MXLanguageChanged true store
+				} if 
+				setcolor 
+				setmatrix_nlw 
+			} if
+	
+%-------------------------------------------------
+% draw language flags 
+%-------------------------------------------------
+			lng_char (AMERICAN) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag006 
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (DEUTSCH) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag007
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (ENGLISH) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag008 
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (ITALIANO) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag001 
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (RUSSIAN) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag003
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (FRANCAIS) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag002
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (GREEK) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag027
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (DANSK) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag022
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (ESPANOL) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag004
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (TURKISH) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag030
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (PORTUGUE) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag025
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (NEDERLAN) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag015
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (SUOMI) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag020
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (POLSKI) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag028
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (SVENSKA) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag021
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (LIETUVIU) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag013 
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (MAGYAR) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag018
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (NORSK) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag031
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (SLOVENCI) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag016
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (SLOVENSC) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag017
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (ROMANA) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag009
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (LATVIESU) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag019
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (EESTI) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag012
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (CESKY) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag026
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+			lng_char (BULGARIA) eq {
+				action_allowed true eq 
+				language_relased true eq or
+				{
+					matrix currentmatrix_nlw 
+					currentcolor 
+					flag_pos_x flag_pos_y translate 
+					0 rotate 
+					1 1 scale 
+					tsFlag011
+					setcolor 
+					setmatrix_nlw 
+				} if
+			} if
+%-------------------------------------------------
+% print name of language
+%-------------------------------------------------
+			action_allowed true eq 
+			language_relased true eq or
+			{		
+				matrix currentmatrix_nlw 
+				currentcolor 
+				text_pos_x 10 add text_pos_y 10 add translate 
+				lng_char 1 1 baText001 
+				setcolor 
+				setmatrix_nlw 
+			} if
+%-------------------------------------------------
+% calculate position for next language
+%-------------------------------------------------
+			action_allowed true eq 
+			language_relased true eq or
+			{
+				/count_idx count_idx 1 add store
+				text_pos_y 90 ge
+				{
+					/text_pos_y text_pos_y 90 sub store
+					/flag_pos_y flag_pos_y 90 sub store
+				} {
+					/text_pos_y start_pos_y store
+					/text_pos_x text_pos_x 200 add store
+					/flag_pos_x flag_pos_x 200 add store
+					/flag_pos_y start_pos_y 10 add store
+				} ifelse
+			} if
+		}
+		{
+			/language_relased false store
+		} ifelse
+
+		/language_cnt language_cnt 1 add store
+
+	} repeat
+
+%-------------------------------------------------
+% handle offset touch buttons
+%-------------------------------------------------
+	 language_offset 0 gt {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		10 300 translate 
+		0 rotate 
+		baTouchButton001 {	
+			/language_offset language_offset language_lines_per_page sub store
+			language_offset 0 lt {
+				/language_offset 0 store
+			} if
+		} if 
+		White
+		0 80 translate
+		-90 rotate
+		tsArrow
+		setcolor 
+		setmatrix_nlw 
+	} if
+	nr_lng_released language_offset sub language_max_nr gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		MDscreenPixX 90 sub 300 translate 
+		0 rotate 
+		baTouchButton001 {	
+			/language_offset language_offset language_lines_per_page add store
+			language_offset counts ge {
+				/language_offset 0 store
+			} if
+		} if 
+		White
+		80 0 translate
+		90 rotate
+		tsArrow
+		setcolor 
+		setmatrix_nlw 
+	} if
+
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef tpCanlineModules
+%?fn	tpCanlineModules
+%?brief	can line info
+%?bbox	0 0 959 579
+/tpCanlineModules {
+	/I_can_line_idx exch def	%?brief can line index %?use INP %?type DINT %?dflt 1
+	/module_nr 0 def	%?brief module_nr %?use LOC %?type DINT %?dflt 0
+	/modules_count 0 def	%?brief number of modules on selected can line %?use LOC %?type DINT %?dflt 0
+	MDscreenPixX 960 eq 
+	{
+		/init_pos_y 520 store
+		/module_per_line	3	store
+		/max_modules_per_page module_per_line 5 mul store
+		/touch_offset 0 store
+	}
+	{
+		/init_pos_y 330 store
+		/module_per_line	3	store
+		/max_modules_per_page module_per_line 3 mul store
+		/touch_offset 60 store
+	} ifelse
+	
+%?manual_beg
+	I_can_line_idx	canmodule_get_count 
+	/modules_count exch store 
+
+	/init_pos_x 20 store
+	/start_pos_x init_pos_x store 
+	/start_pos_y init_pos_y store
+	/idx 1 store
+	/idx_absolute 0 store
+	modules_count 
+	{ 
+		% get module information
+		idx I_can_line_idx 
+		canmodule_get_info 
+
+		/module_tx_time exch store
+		/module_rx_time exch store
+		/module_used exch store
+		/module_forced exch store
+		/module_timeout exch store
+		/module_type_idx exch store
+		/module_nr exch store 
+
+		idx 1 sub module_offset ge 
+		idx max_modules_per_page module_offset add le 
+		and
+		{
+			% convert rx and tx time from 0.1 ms to 1 ms
+			/module_rx_time module_rx_time 10 div store
+			/module_tx_time module_tx_time 10 div store
+	
+			% draw touch buttons
+			matrix currentmatrix_nlw 
+			currentcolor 
+			start_pos_x start_pos_y translate 
+			
+			%------------------------------------
+			% highlight selected module
+			%------------------------------------
+			canmodule_nr module_nr eq
+			{
+%				0 0 80 80 rectstroke
+				80 80 0 tpElementSelected
+			}
+			{
+				0 rotate 
+				1 1 scale 
+				baTouchButton001 {
+					/canmodule_idx idx store
+					/canmodule_nr module_nr store
+					/page_idx 0 store 
+				} if 
+			} ifelse
+			
+			%------------------------------------
+			% check if module creates an critical shutdown
+			%------------------------------------
+			module_used 1 eq
+			module_timeout 1 eq and
+			{
+				Red
+				80 80 1 tpElementSelected
+%				tsButtonCritical
+			} if
+			
+			setcolor 
+				
+			%------------------------------------	
+			% print module_nr (lightgrey if not used)
+			%------------------------------------
+			currentcolor 
+			module_used 1 ne { LightGrey } if
+			70 40 translate
+			module_nr 3 () false false 7 1
+			baValue002 
+			-20 0 translate
+	
+			%------------------------------------
+			% rx and tx time
+			%------------------------------------
+			module_timeout 1 eq {
+				/module_rx_time 0 store
+				/module_tx_time 0 store
+			} if
+			40 15 translate 
+			module_rx_time 0 gt {
+				module_rx_time 3.10 (ms) false false 1 1
+				baValue003 
+			} if
+			0 -20 translate 
+			module_tx_time 0 gt {
+				module_tx_time 3.10 (ms) false false 1 1
+				baValue003 
+			} if
+			setcolor 
+			setmatrix_nlw 
+			
+			%------------------------------------
+			% show module status
+			%------------------------------------
+			module_timeout 1 eq 
+			{
+				matrix currentmatrix_nlw 
+				currentcolor 
+%				module_used 1 eq 
+%				{ 
+					Red 
+%				}
+%				{ LightGrey } ifelse
+				start_pos_x 30 add start_pos_y 7 add translate
+				0 rotate 
+				0.25 0.25 scale 
+				tstsym_cross
+%				gsGeneral022
+				setcolor 
+				setmatrix_nlw 
+			} if
+			module_forced 1 eq 
+			{
+				matrix currentmatrix_nlw 
+				currentcolor 
+				Blue 
+				start_pos_x 55 add start_pos_y 7 add  translate
+				0 rotate 
+%				start_pos_x 8 add start_pos_y 7 add translate
+				0.25 0.25 scale 
+				tstsym_ok
+%				gsGeneral002
+%				0 0 moveto
+%				FatFont (F) show_utf8
+				setcolor 
+				setmatrix_nlw 
+			} if
+%			module_used 1 eq 
+%			{
+%				matrix currentmatrix_nlw 
+%				currentcolor 
+%				module_timeout 1 ne
+%				{ Green  }
+%				{ LightGrey } ifelse
+%				start_pos_x 8 add start_pos_y 7 add translate
+%				0.25 0.25 scale 
+%				gsGeneral002
+%				setcolor 
+%				setmatrix_nlw 
+%			} if
+	
+			/start_pos_x start_pos_x 150 add store 
+	
+			idx module_per_line mod 0 eq {
+				/start_pos_x init_pos_x store
+				/start_pos_y start_pos_y 90 sub store 
+			} if
+		} if
+		/idx idx 1 add store		
+		/idx_absolute idx_absolute 1 add store
+		
+	} repeat 
+	%----------------------------------
+	% handle offset touch buttons
+	%----------------------------------
+	module_offset 0 gt {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		170 MDscreenPixY 110 sub touch_offset add translate 
+		1 1 scale
+		0 rotate 
+		1 0.5
+		baTouchButton003 {	
+			/module_offset module_offset module_per_line sub store
+			module_offset 0 lt {
+				/module_offset 0 store
+			} if
+		} if 
+		I_can_line_idx module_offset true sp_check_canline_status
+		1 eq
+		{
+			Red
+			80 40 1 tpElementSelected
+%			tsButtonCritical
+		} if
+		White
+		1 0.5 scale
+		80 80 translate
+		180 rotate
+		tsArrow
+		setcolor 
+		setmatrix_nlw 
+	} if
+	
+	modules_count module_offset sub max_modules_per_page gt {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		170 95 translate 
+		1 1 scale
+		0 rotate 
+		1 0.5
+		baTouchButton003 {	
+			/module_offset module_offset module_per_line add store
+			module_offset modules_count gt {
+				/module_offset 0 store
+			} if
+		} if 
+		/new_offset module_offset max_modules_per_page add store
+		I_can_line_idx new_offset false sp_check_canline_status
+		1 eq
+		{
+			Red
+			80 40 1 tpElementSelected
+%			tsButtonCritical
+		} if
+		White
+		1 0.5 scale
+		tsArrow
+
+		setcolor 
+		setmatrix_nlw 
+	} if
+
+%?manual_end 
+	
+} def
+%?partend
+
+%?partdef tpModuleShowIO
+%?fn	tpModuleShowIO
+%?brief	module_show_io
+%?bbox	0 0 959 579
+/tpModuleShowIO {
+	/I_module_idx exch def	%?brief module idx %?use INP %?type DINT %?dflt 0
+	/I_can_line_idx exch def	%?brief can line idx %?use INP %?type DINT %?dflt 0
+	/channel 0 def	%?brief channel %?use LOC %?type REAL %?dflt    0.00
+%?manual_beg
+	%----------------------------------------
+	% get module information
+	%----------------------------------------
+	I_module_idx I_can_line_idx 
+	canmodule_get_info 
+
+	/module_tx_time exch store
+	/module_rx_time exch store
+	/module_used exch store
+	/module_forced exch store
+	/module_timeout exch store
+	/module_type_idx exch store
+	/module_nr exch store 
+	
+	/module_tx_time module_tx_time 10 div store
+	/module_rx_time module_rx_time 10 div store
+	/channel_idx 1 store
+	/start_pos_y 540 store
+
+	%----------------------------------------
+	% mapping module_idx -> channel_nr
+	%----------------------------------------
+	/module_channel_nr 1 store
+%	module_type_idx 24 eq { /module_channel_nr 16 store } if
+%	module_type_idx 4 eq  {	/module_channel_nr 8  store	} if
+
+	matrix currentmatrix_nlw 
+	currentcolor 
+	40 start_pos_y translate 	
+	module_rx_time 0 gt {
+		module_rx_time 3.10 (ms) false false 1 1
+		baValue003 
+	} if
+	0 -20 translate 
+	module_tx_time 0 gt {
+		module_tx_time 3.10 (ms) false false 1 1
+		baValue003 
+	} if
+	setcolor 
+	setmatrix_nlw 
+
+	%----------------------------------------
+	% show module status
+	%----------------------------------------
+	module_timeout 1 eq 
+	{
+		currentcolor 
+		Red 
+		40 start_pos_y 20 sub moveto 
+		StdFont (timeout) 
+		show_utf8 
+		setcolor 
+	} if
+	module_forced 1 eq 
+	{
+		40 start_pos_y 40 sub moveto 
+		StdFont (forced)  
+		show_utf8 
+	} if
+	module_used 1 eq 
+	{
+		40 start_pos_y 60 sub moveto 
+		StdFont (used) 
+		show_utf8 
+	} if
+
+	/start_pos_y 450 store
+
+	module_timeout 1 ne {
+		I_module_idx I_can_line_idx
+		canmodule_get_value
+		module_channel_nr
+		{
+	% momentan nur idx 7
+	%I_module_idx 7 eq {
+			pop pop 3
+			/channel exch store
+	
+			% channel_idx
+			matrix currentmatrix_nlw 
+			currentcolor 
+			40 start_pos_y translate 
+			0 rotate 
+			1 1 scale 
+			channel_idx 3 () false false 1 1
+			baValue003 
+			setcolor 
+			setmatrix_nlw 
+			
+			%----------------------------------------
+			% channel value
+			%----------------------------------------
+			matrix currentmatrix_nlw 
+			currentcolor 
+			80 start_pos_y translate 
+			channel 3.10 () false false 1 1
+			baValue003 
+			setcolor 
+			setmatrix_nlw 
+			matrix currentmatrix_nlw 
+		
+			%----------------------------------------
+			% channel value -> bar
+			%----------------------------------------
+			currentcolor 
+			150 start_pos_y 20 add translate 
+			-90 rotate 
+			1 1 scale 
+	
+			channel (???) 0 
+			20500 false false 
+			false false false 
+			false 90 100 
+			20 10 4 
+			15 60 false 
+			false 0 false 
+			0 0 true 
+			1 
+			baBar006 
+		
+			setcolor 
+			setmatrix_nlw 
+		
+			/channel_idx channel_idx 1 add store
+			/start_pos_y start_pos_y 20 sub store
+	%} if
+		} repeat
+	} if
+%?manual_end 
+	
+} def
+%?partend
+
+%retrieve string representation of priority number
+%syntax  <number> sp_LevelGetString (string)
+/sp_LevelGetString {
+%?manual_beg
+	/x exch def
+	(-)
+	x 1 eq { pop (User) } if
+	x 2 eq { pop (Authorised User) } if
+	x 4 eq { pop (Keyswitch) } if
+	x 8 eq { pop (Litronic 3) } if
+	x 16 eq { pop (Service)	} if
+	x 32 eq { pop (Customer) } if
+	x 64 eq { pop (Inspector) } if
+	x 128 eq { pop (Authorised Customer) } if
+	x 512 eq { pop (Shipping) } if
+	x 32768 eq { pop (Supervisor) } if
+	x 2097152 eq { pop (System)	} if
+%?manual_end
+} def
+
+%?partdef tpLevel
+%?fn	tpLevel
+%?brief	level_settings
+%?bbox	0 0 959 579
+/tpLevel {
+%?manual_beg
+	/priority_string client.0.priority sp_LevelGetString def
+	/priority_string_operator_display 0 sp_LevelGetString def
+	/userid_string client.0.userids def
+	/userid_string_operator_display (-) def
+	client.1.operator 1 eq { /priority_string_operator_display client.1.priority sp_LevelGetString store /userid_string_operator_display client.1.userids store } if
+	client.2.operator 1 eq { /priority_string_operator_display client.2.priority sp_LevelGetString store /userid_string_operator_display client.2.userids store } if
+	client.3.operator 1 eq { /priority_string_operator_display client.3.priority sp_LevelGetString store /userid_string_operator_display client.3.userids store } if
+	client.4.operator 1 eq { /priority_string_operator_display client.4.priority sp_LevelGetString store /userid_string_operator_display client.4.userids store } if
+	client.5.operator 1 eq { /priority_string_operator_display client.5.priority sp_LevelGetString store /userid_string_operator_display client.5.userids store } if
+	client.6.operator 1 eq { /priority_string_operator_display client.6.priority sp_LevelGetString store /userid_string_operator_display client.6.userids store } if
+	client.7.operator 1 eq { /priority_string_operator_display client.7.priority sp_LevelGetString store /userid_string_operator_display client.7.userids store } if
+	client.8.operator 1 eq { /priority_string_operator_display client.8.priority sp_LevelGetString store /userid_string_operator_display client.8.userids store } if
+	FatFont
+	/offset1 ( Priority level ) stringwidth pop def
+	/offset2 ( operator display: ) stringwidth pop offset1 add def
+	/offset3 ( operator display: ) stringwidth pop def
+	matrix currentmatrix_nlw 
+	%current priority
+	0 80 strhl 1.5 mul sub translate
+	0 0 moveto
+	client.0.operator 1 ne {
+		( Priority level) show_utf8
+		offset1 0 moveto
+		(current:) show_utf8
+		offset2 0 moveto
+		priority_string show_utf8
+	} {
+		( Priority level \(operator display\) ) show_utf8
+	} ifelse
+	%operator display priority
+	0 strhl translate
+	offset1 0 moveto
+	client.0.operator 1 ne {
+		(operator display: ) show_utf8
+	} {
+		(current: ) show_utf8
+	} ifelse
+	offset2 0 moveto
+	priority_string_operator_display show_utf8
+	%key priority
+	0 strhl translate
+	offset1 0 moveto
+	(operator key: ) show_utf8
+	immobiliser.valid {
+		offset2 0 moveto
+		immobiliser.keypriority sp_LevelGetString show_utf8
+	} if
+	setmatrix_nlw
+	%reload key
+	offset1 strhl translate
+	immobiliser.valid {
+		immobiliser.userid 0 ne 
+		immobiliser.userid client.0.userid ne and 
+		realtime immobiliser_button_timeout gt and {
+			currentcolor 
+			10 50 moveto
+			FatFont
+			(ID) show_utf8
+			3 setlinewidth_nlw 
+			Red
+			10 45 moveto
+			25 25 rlineto
+			stroke
+			10 70 moveto
+			25 -25 rlineto
+			stroke
+			1 setlinewidth_nlw 
+			setcolor 
+		} if
+		immobiliser.keyid 0 ne
+		immobiliser.keyreload and
+		client.0.userid 0 ne and
+		client.0.priority immobiliser.keypriority eq and
+		realtime immobiliser_button_timeout gt and {
+			matrix currentmatrix_nlw 
+			currentcolor 
+			0 0 translate 
+			baTouchButton001 {	
+				/x immobiliser.userid def
+				/immobiliser.userid realtime store	%write anything to variable (content is not analysed)
+				/immobiliser.userid x store
+				/immobiliser_button_timeout realtime 2000 add store	%hide button 2 seconds
+			} if 
+			setcolor 
+			setmatrix_nlw
+		} if
+		currentcolor 
+		0 90 add strh -2 div 50 add moveto
+		immobiliser.keycount () cvs ( ignition cycles left) strcat show_utf8
+		setcolor 
+		immobiliser.keyreload not immobiliser.progress 0 ge and {
+			immobiliser.progress 100 lt {
+				/immobiliser_progress_timeout realtime 5000 add store	%hide button 5 seconds
+			} if
+			immobiliser_progress_timeout realtime gt {
+				/x immobiliser.progress def
+				x 100 gt { /x 100 store } if
+				x 0 lt { /x 0 store } if
+				90 15 320 x mul 100 div 10 rectfill
+				87 12 326 16 rectstroke
+			} if
+		} if
+	} if
+
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	tsKey001 
+	setcolor 
+	setmatrix_nlw
+	FatFont
+	0 strhl translate
+	0 0 moveto
+	immobiliser.errno	1 eq {
+		currentcolor
+		Red
+		(Wrong layout ID stored on operator key.) show_utf8
+		setcolor
+	} if
+	immobiliser.errno	2 eq {
+		currentcolor
+		Red
+		(Wrong user ID stored on operator key.) show_utf8
+		setcolor
+		%0 strhl moveto
+		%(  stored user ID: ) show_utf8
+		%immobiliser.userid () cvs show_utf8
+		%0 strhl 2 mul moveto
+		%(  actual user ID: ) show_utf8
+		%client.0.userid () cvs show_utf8
+	} if
+	immobiliser.errno	2 gt {
+		currentcolor
+		Red
+		(Internal error detected.) show_utf8
+		setcolor
+	} if
+	
+	%userid (string)
+	0 strhl translate
+	offset1 neg 0 moveto
+	( User ID) show_utf8
+	client.0.operator 1 ne {
+		0 0 moveto
+		(current: ) show_utf8
+		offset3 0 moveto
+		userid_string show_utf8
+		0 strhl translate
+	} if
+	%0 strhl translate
+	0 0 moveto
+	(operator display: ) show_utf8
+	offset3 0 moveto
+	userid_string_operator_display show_utf8
+		
+	
+%?manual_beg
+} def
+%?partend
+
+%?partdef tpModem
+%?fn	tpModem
+%?brief	modem_settings
+%?bbox	0 0 959 579
+/tpModem {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	30 540 translate 
+	0 rotate 
+	1 1 scale (modem type:) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 540 translate 
+	0 rotate 
+	1 1 scale (unknown) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	30 460 translate 
+	0 rotate 
+	1 1 scale (signal quality:) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	150 480 translate 
+	-90 rotate 
+	1 1 scale 
+%	85 (test) 0 100 90 100 10 15 400 90 true true 0 false true false true 1 
+%	baBar006 
+	85 (???) 0 100 false false true false false false 90 100 90 100 4 10 60 false false 0 false 1 0 true 1 
+	baBar006 
+
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	30 500 translate 
+	0 rotate 
+	1 1 scale (client:) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 500 translate 
+	0 rotate 
+	1 1 scale (COM2) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef tpVersions
+%?fn	tpVersions
+%?brief	voltages
+%?bbox	0 0 479 579
+/tpVersions {
+	/I_version.application exch def	%?brief in_version.application %?use INP %?type STRI %?dflt 
+	/I_version.inner exch def	%?brief in_version.inner %?use INP %?type STRI %?dflt 
+	/I_version.outer exch def	%?brief in_version.outer %?use INP %?type STRI %?dflt 
+	/I_boot.target exch def	%?brief I_boot.target %?use INP %?type STRI %?dflt 
+	/I_boot.environment exch def	%?brief I_boot.environment %?use INP %?type STRI %?dflt 
+	/I_boot.state exch def	%?brief I_boot.state %?use INP %?type STRI %?dflt 
+	/I_boot.ident_index exch def	%?brief I_boot.ident_index %?use INP %?type STRI %?dflt 
+	/I_boot.ident exch def	%?brief I_boot.ident %?use INP %?type STRI %?dflt 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 330 translate 
+	0 rotate 
+	1 1 scale 
+	(outer core version:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 310 translate 
+		0 rotate 
+		1 1 scale 
+		(outer core date:) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 540 translate 
+	0 rotate 
+	1 1 scale 
+	(system component versions:) 7 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 280 translate 
+	0 rotate 
+	1 1 scale 
+	(inner core version:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	270 190 translate 
+	0 rotate 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	270 160 translate 
+	0 rotate 
+	1 1 scale 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	270 130 translate 
+	0 rotate 
+	1 1 scale 
+	setcolor 
+	setmatrix_nlw 
+	3 setlinewidth_nlw 
+	currentcolor 
+	Grey 1 setlinewidth_nlw 
+	setcolor 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 380 translate 
+	0 rotate 
+	1 1 scale 
+	(application version:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 260 translate 
+		0 rotate 
+		1 1 scale 
+		(inner core date:) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 360 translate 
+		0 rotate 
+		1 1 scale 
+		(application date:) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 490 translate 
+	0 rotate 
+	1 1 scale 
+	(project ident. no.:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 470 translate 
+	0 rotate 
+	1 1 scale 
+	(project ident. no. index:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 450 translate 
+	0 rotate 
+	1 1 scale 
+	(project release state:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 430 translate 
+	0 rotate 
+	1 1 scale 
+	(project environment:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 490 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot.ident 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 470 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot.ident_index 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 450 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot.state 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 430 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot.environment 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 410 translate 
+	0 rotate 
+	1 1 scale 
+	(project target:) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 410 translate 
+	0 rotate 
+	1 1 scale 
+	I_boot.target 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 280 translate 
+	0 rotate 
+	1 1 scale 
+	I_version.inner 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 330 translate 
+	0 rotate 
+	1 1 scale 
+	I_version.outer 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 380 translate 
+	0 rotate 
+	1 1 scale 
+	I_version.application 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+} def
+%?partend
+
+%?partdef tpSystemTasks
+%?fn	tpSystemTasks
+%?brief	voltages
+%?bbox	0 0 479 579
+/tpSystemTasks {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 470 translate 
+	0 rotate 
+	1 1 scale (message stack) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 450 translate 
+	0 rotate 
+	1 1 scale (CAN system) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 540 translate 
+	0 rotate 
+	1 1 scale (system task information) 7 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 410 translate 
+	0 rotate 
+	1 1 scale (system check) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	270 190 translate 
+	0 rotate 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	270 160 translate 
+	0 rotate 
+	1 1 scale 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	270 130 translate 
+	0 rotate 
+	1 1 scale 
+	setcolor 
+	setmatrix_nlw 
+	3 setlinewidth_nlw 
+	currentcolor 
+	Grey 1 setlinewidth_nlw 
+	setcolor 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 350 translate 
+	0 rotate 
+	1 1 scale (system monitor) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 390 translate 
+	0 rotate 
+	1 1 scale (CAN process) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 330 translate 
+	0 rotate 
+	1 1 scale (system file) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 290 translate 
+	0 rotate 
+	1 1 scale (syslog) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 270 translate 
+	0 rotate 
+	1 1 scale (CAN asynchron) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 240 translate 
+	0 rotate 
+	1 1 scale (datalogger) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 220 translate 
+	0 rotate 
+	1 1 scale (PDE) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 180 translate 
+	0 rotate 
+	1 1 scale (LIDAT) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 520 translate 
+	0 rotate 
+	1 1 scale (last) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	290 520 translate 
+	0 rotate 
+	1 1 scale (last) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 500 translate 
+	0 rotate 
+	1 1 scale (handled) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	290 500 translate 
+	0 rotate 
+	1 1 scale (interval) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	400 520 translate 
+	0 rotate 
+	1 1 scale (max) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	400 500 translate 
+	0 rotate 
+	1 1 scale (interval) 1 1
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	3 setlinewidth_nlw 
+	currentcolor 
+	LightGrey 0 0 moveto 
+	0 580 lineto 
+	stroke 
+	setcolor 
+	1 setlinewidth_nlw 
+} def
+%?partend
+
+%?partdef tpVoltages
+%?fn	tpVoltages
+%?brief	voltages
+%?bbox	0 0 479 339
+/tpVoltages {
+	/core-voltage_max exch def	%?brief .core-voltage_max %?use STATIC %?type REAL
+	/core-voltage_min exch def	%?brief .core-voltage_min %?use STATIC %?type REAL
+	/power-supply-voltage_max exch def	%?brief power-supply-voltage_max %?use STATIC %?type REAL
+	/power-supply-voltage_min exch def	%?brief power-supply-voltage_min %?use STATIC %?type REAL
+	/logic-voltage-3,3_max exch def	%?brief 3.3V-logic-voltage_max %?use STATIC %?type REAL
+	/logic-voltage-3,3_min exch def	%?brief 3.3V-logic-voltage_min %?use STATIC %?type REAL
+	/logic-voltage-5V_max exch def	%?brief 5V-logic-voltage_max %?use STATIC %?type REAL
+	/logic-voltage-5V_min exch def	%?brief 5V-logic-voltage_min %?use STATIC %?type REAL
+	/CPU-battery-voltage_max exch def	%?brief CPU-battery-voltage_max %?use STATIC %?type REAL
+	/CPU-battery-voltage_min exch def	%?brief CPU-battery-voltage_min %?use STATIC %?type REAL
+	/board-temperature_max exch def	%?brief board-temperature_max %?use STATIC %?type REAL
+	/board-temperature_min exch def	%?brief board-temperature_min %?use STATIC %?type REAL
+	/DDR-SDRAM-voltage_max exch def	%?brief DDR-SDRAM-voltage_max %?use STATIC %?type REAL
+	/DDR-SDRAM-voltage_min exch def	%?brief DDR-SDRAM-voltage_min %?use STATIC %?type REAL
+	/I_board-temperature exch def	%?brief board-temperature %?use INP %?type REAL %?dflt   90.00
+	/I_CPU-battery-voltage exch def	%?brief CPU-battery-voltage %?use INP %?type REAL %?dflt   90.00
+	/I_logic-voltage-5V exch def	%?brief 5V-logic-voltage %?use INP %?type REAL %?dflt   90.00
+	/I_logic-voltage-3,3 exch def	%?brief 3.3V-logic-voltage %?use INP %?type REAL %?dflt   90.00
+	/I_power-supply-voltage exch def	%?brief power-supply-voltage %?use INP %?type REAL %?dflt   90.00
+	/I_core-voltage exch def	%?brief .core-voltage %?use INP %?type REAL %?dflt   90.00
+	/lxShowCoreVoltages false def	%?brief  %?use LOC %?type BOOL %?dflt false
+%?manual_beg
+	(core_voltages)
+	sp_authorization_check 
+	/lxShowCoreVoltages exch store
+%?manual_end
+	
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		95 150 translate 
+		-90 rotate 
+		1 1 scale 
+		I_core-voltage (V) 0.80 1.80 true true true true false false 1.30 1.40 1.10 1 4 15 160 true true 90 false 1 1 false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	95 250 translate 
+	-90 rotate 
+	1 1 scale 
+	I_CPU-battery-voltage (V) 2 5 true true true true false false 3.80 3.90 1.80 1.70 4 15 160 true false 90 false 1 1 false 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		10 130 translate 
+		0 rotate 
+		1 1 scale 
+		(core) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 230 translate 
+	0 rotate 
+	1 1 scale 
+	(cpu batt) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	360 230 translate 
+	0 rotate 
+	1 1 scale 
+	I_CPU-battery-voltage 3.10 (V) false false 1 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 130 translate 
+		0 rotate 
+		1 1 scale 
+		I_core-voltage 3.10 (V) false false 1 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	95 290 translate 
+	-90 rotate 
+	1 1 scale 
+	I_power-supply-voltage (V) 5 50 true true true true false false 45 48 10 7 3 15 160 true false 90 false 1 0 false 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 270 translate 
+	0 rotate 
+	1 1 scale 
+	(supply) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	360 270 translate 
+	0 rotate 
+	1 1 scale 
+	I_power-supply-voltage 3.10 (V) false false 1 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	360 190 translate 
+	0 rotate 
+	1 1 scale 
+	I_board-temperature 3.10 (°C) false false 1 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	97 209 translate 
+	-90 rotate 
+	1 1 scale 
+	I_board-temperature ([°C]) -40 80 true true true true false false 65 75 -40 -50 4 15 160 true false 90 false 1 0 false 1 
+	baBar006 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 190 translate 
+	0 rotate 
+	1 1 scale 
+	(board temp) 1 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		95 110 translate 
+		-90 rotate 
+		1 1 scale 
+		I_logic-voltage-3,3 (V) 3.10 3.50 true true true true false false 3.50 3.60 3.20 3.10 4 15 160 true false 90 false 1 1 false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		95 70 translate 
+		-90 rotate 
+		1 1 scale 
+		I_logic-voltage-5V (V) 4 6.50 true true true true false false 5.10 5.20 4.90 4.80 4 15 160 true false 90 false 1 1 false 1 
+		baBar006 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		10 90 translate 
+		0 rotate 
+		1 1 scale 
+		(3,3V) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		10 50 translate 
+		0 rotate 
+		1 1 scale 
+		(5V) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 90 translate 
+		0 rotate 
+		1 1 scale 
+		I_logic-voltage-3,3 3.10 (V) false false 1 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		360 50 translate 
+		0 rotate 
+		1 1 scale 
+		I_logic-voltage-5V 3.10 (V) false false 1 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	15 300 translate 
+	0 rotate 
+	1 1 scale 
+	(board monitoring) 7 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	colorinit 1 setlinewidth_nlw 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		420 130 translate 
+		0 rotate 
+		1 1 scale 
+		core-voltage_min 3.10 (V) false false 1 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	lxShowCoreVoltages {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 130 translate 
+		0 rotate 
+		1 1 scale 
+		core-voltage_max 3.10 (V) false false 1 1 
+		baValue002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	420 190 translate 
+	0 rotate 
+	1 1 scale 
+	board-temperature_min 3.10 (°C) false false 1 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	480 190 translate 
+	0 rotate 
+	1 1 scale 
+	board-temperature_max 3.10 (°C) false false 1 1 
+	baValue002 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	/core-voltage_max I_core-voltage store
+	/core-voltage_min I_core-voltage store
+	/board-temperature_max I_board-temperature store
+	/board-temperature_min I_board-temperature store
+%?manual_end 
+	390 300 moveto 
+	StdFont (min) 
+	show_utf8 
+	440 300 moveto 
+	StdFont (max) 
+	show_utf8 
+	core-voltage_max core-voltage_min power-supply-voltage_max 
+	power-supply-voltage_min logic-voltage-3,3_max logic-voltage-3,3_min logic-voltage-5V_max 
+	logic-voltage-5V_min CPU-battery-voltage_max CPU-battery-voltage_min board-temperature_max 
+	board-temperature_min DDR-SDRAM-voltage_max DDR-SDRAM-voltage_min 
+} def
+%?partend
+
+
+%?partdef tpBoardInfo
+%?fn	tpBoardInfo
+%?brief	voltages
+%?bbox	0 0 479 279
+/tpBoardInfo {
+	/I_board_serial_no exch def	%?brief board serial number %?use INP %?type STRI %?dflt 
+	/I_board_identnumber_index exch def	%?brief board identnumber index %?use INP %?type STRI %?dflt 
+	/I_board_identnumber exch def	%?brief board idnetnumber %?use INP %?type STRI %?dflt 
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 200 translate 
+		0 rotate 
+		1 1 scale 
+		(board identification number:) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 180 translate 
+		0 rotate 
+		1 1 scale 
+		(board identification index:) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	15 250 translate 
+	0 rotate 
+	1 1 scale 
+	(board information) 7 1 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		20 160 translate 
+		0 rotate 
+		1 1 scale 
+		(board serial number:) 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		270 200 translate 
+		0 rotate 
+		1 1 scale 
+		I_board_identnumber 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		270 180 translate 
+		0 rotate 
+		1 1 scale 
+		I_board_identnumber_index 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	false 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		270 160 translate 
+		0 rotate 
+		1 1 scale 
+		I_board_serial_no 1 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 3 setlinewidth_nlw 
+	currentcolor 
+	Grey 1 setlinewidth_nlw 
+	setcolor 
+} def
+%?partend
+
+
+%?partdef tpLanguageSel
+%?fn	tpLanguageSel
+%?brief	tpLanguageSel
+%?bbox	0 0 79 79
+/tpLanguageSel {
+%?manual_beg
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	language.system (AMERICAN) eq 	{	tsFlag006 	} if
+	language.system (DEUTSCH) eq 	{	tsFlag007	} if
+	language.system (ENGLISH) eq 	{	tsFlag008 	} if
+	language.system (ITALIANO) eq 	{	tsFlag001 	} if
+	language.system (RUSSIAN) eq 	{	tsFlag003	} if
+	language.system (FRANCAIS) eq 	{	tsFlag002	} if
+	language.system (GREEK) eq 		{	tsFlag027	} if
+	language.system (DANSK) eq 		{	tsFlag022	} if
+	language.system (ESPANOL) eq 	{	tsFlag004	} if
+	language.system (TURKISH) eq 	{	tsFlag030	} if
+	language.system (PORTUGUE) eq 	{	tsFlag025	} if
+	language.system (NEDERLAN) eq 	{	tsFlag015	} if
+	language.system (SUOMI) eq 		{	tsFlag020	} if
+	language.system (POLSKI) eq 	{	tsFlag028	} if
+	language.system (SVENSKA) eq 	{	tsFlag021	} if
+	language.system (LIETUVIU) eq 	{	tsFlag013 	} if
+	language.system (MAGYAR) eq 	{	tsFlag018	} if
+	language.system (NORSK) eq 		{	tsFlag031	} if
+	language.system (SLOVENCI) eq 	{	tsFlag016	} if
+	language.system (SLOVENSC) eq 	{	tsFlag017	} if
+	language.system (ROMANA) eq 	{	tsFlag009	} if
+	language.system (LATVIESU) eq 	{	tsFlag019	} if
+	language.system (EESTI) eq 		{	tsFlag012	} if
+	language.system (CESKY) eq 		{	tsFlag026	} if
+	language.system (BULGARIA) eq 	{	tsFlag011	} if
+	setcolor 
+	setmatrix_nlw 
+%?manual_end
+
+} def
+%?partend
+
+%?partdef tpCardInfo
+%?fn	tpCardInfo
+%?brief	card info
+%?bbox	0 0 479 279
+/tpCardInfo {
+	matrix currentmatrix_nlw 
+	currentcolor 
+	40 220 translate 
+	0 rotate 
+	1 1 scale 
+	(card size:) 0 2 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	110 190 translate 
+	0 rotate 
+	1 1 scale 
+	(free space in kB:) 0 0 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	40 160 translate 
+	0 rotate 
+	1 1 scale 
+	(free in percent:) 0 2 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	40 250 translate 
+	0 rotate 
+	1 1 scale 
+	(device state:) 0 2 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg	
+	card_idx 1 eq {
+		/card_size fs.cf1.size store
+		/card_free fs.cf1.free store
+		/card_free_percent fs.cf1.percent store
+		/card_state fs.cf1.state store
+	} 
+	{
+		card_idx 2 eq {
+			/card_size fs.cf2.size store
+			/card_free fs.cf2.free store
+			/card_free_percent fs.cf2.percent store
+			/card_state fs.cf2.state store
+		} 
+		{
+			/card_size 0 store
+			/card_free 0 store
+			/card_free_percent 0 store
+			/card_state 0 store
+		} ifelse
+	} ifelse
+	
+	card_state 0 eq { /card_state_text (disc is ready) store } if
+	card_state 1 eq { /card_state_text (device is not available) store } if
+	card_state 2 eq { /card_state_text (disc is not formatted) store } if
+	card_state 3 eq { /card_state_text (card is not inserted) store } if
+	card_state 4 eq { /card_state_text (filesystem is not reachable) store } if
+	card_state 5 eq { /card_state_text (filesystem is damaged) store } if
+	card_state 6 ge { /card_state_text (unknown disk state) store } if
+
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 215 translate 
+	0 rotate 
+	1 1 scale 
+	card_size 3 (kB) false false 0 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 185 translate 
+	0 rotate 
+	1 1 scale 
+	card_free 3 (kB) false false 0 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 155 translate 
+	0 rotate 
+	1 1 scale 
+	card_free_percent 3 (%) false false 0 1 
+	baValue003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 250 translate 
+	0 rotate 
+	1 1 scale 
+	card_state_text 0 2 
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+%?manual_end
+} def
+%?partend
+
+%?partdef tpTimeCorrection
+%?fn	tpTimeCorrection
+%?brief	operator time - system time correction
+%?bbox	0 0 79 79
+/tpTimeCorrection {
+%?manual_beg
+	/hour_operator 0 store
+	/min_operator 0 store
+	gettime
+	/hour exch store
+	/min exch store
+	pop
+	usertime.operator_time () ne {
+		usertime.operator_time
+%		(1) stack pop
+		splitdtstr
+		pop pop pop
+		/hour_operator exch store
+		/min_operator exch store
+		pop
+	} if
+	hour hour_operator ne
+	min min_operator ne or
+	hour_operator 0 ne and
+	min_operator 0 ne and
+	{
+		usertime.operator_time
+		splitdtstr
+		pop pop pop
+%		settime		
+		/hour_operator exch store
+		/min_operator exch store
+		/sec_operator exch store
+		
+		hour_operator min_operator sec_operator
+		settime		
+
+	} if
+%?manual_end
+} def
+%?partend
+
+%?partdef tpSystemfile_Service
+%?fn	tpSystemfile_Service
+%?brief	tpSystemfile_Service
+%?bbox	0 0 639 399
+/tpSystemfile_Service {
+	/LRrotate 0 def	%?brief rotate working symbol %?use LOC %?type REAL %?dflt    0.00
+%?manual_beg
+	systemfile.md_state 0 eq { /systemfile.mapped_state 0 store } if
+	systemfile.md_state 1 eq { /systemfile.mapped_state 1 store } if
+	systemfile.md_state 6 eq { /systemfile.mapped_state 2 store } if
+	systemfile.md_state 2 eq { /systemfile.mapped_state 3 store } if
+	systemfile.md_state 3 eq { /systemfile.mapped_state 4 store } if
+	systemfile.md_state 14 eq { /systemfile.mapped_state 5 store } if
+	systemfile.md_state 4 eq { /systemfile.mapped_state 6 store } if
+	systemfile.md_state 5 eq { /systemfile.mapped_state 7 store } if
+	systemfile.md_state 7 eq { /systemfile.mapped_state 8 store } if
+	systemfile.md_state 8 eq { /systemfile.mapped_state 9 store } if
+	systemfile.md_state 9 eq { /systemfile.mapped_state 10 store } if
+	systemfile.md_state 10 eq { /systemfile.mapped_state 11 store } if
+	systemfile.md_state 11 eq { /systemfile.mapped_state 12 store } if
+	systemfile.md_state 12 eq { /systemfile.mapped_state 13 store } if
+	systemfile.md_state 15 eq { /systemfile.mapped_state 14 store } if
+	systemfile.md_state 16 eq { /systemfile.mapped_state 15 store } if
+	systemfile.md_state 13 eq { /systemfile.mapped_state 16 store } if
+
+	systemfile.mapped_state 0 gt {
+		/LRrotate MRrotate store
+	} {
+		/LRrotate 0 store
+	} ifelse
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 260 translate 
+	0 rotate 
+	1 1 scale 
+	baTouchButton001 {	
+		%?usercode_beg
+		
+		systemfile.md_run 0 eq {	
+			/systemfile.md_run 1 store 
+			} { 
+			/systemfile.md_run 0 store 
+		} ifelse 
+		%?usercode_end 
+	} if 
+	setcolor 
+	setmatrix_nlw 
+	/enableShipping client.0.priority 512 eq client.0.priority 32768 eq or def
+	enableShipping { % only visible with shippinglevel
+		matrix currentmatrix_nlw
+		currentcolor 
+		20 180 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			%?usercode_beg
+			systemfile.md_run 0 eq {	
+				/systemfile.md_run 2 store 
+				} { 
+				/systemfile.md_run 0 store 
+			} ifelse 
+			%?usercode_end 
+		} if 
+		setcolor 
+		setmatrix_nlw
+	} if
+	
+	systemfile.mapped_state 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 320 translate 
+		0 rotate 
+		1 1 scale 
+		systemfile.md_error 0 ne {
+			Red
+			(Idle, no job pending or job failed!) FSstdFont 1 
+		} {
+			(Idle, no job pending or job completed) FSstdFont 1 
+		} ifelse
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 0 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 300 translate 
+		0 rotate 
+		1 1 scale 
+		(Creating directory) 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 1 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 280 translate 
+		0 rotate 
+		1 1 scale 
+		(save message stack to "service.err") 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 2 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 260 translate 
+		0 rotate 
+		1 1 scale 
+		(save versions of the machines components to "service.ver") 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 3 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 240 translate 
+		0 rotate 
+		1 1 scale 
+		(save correction values to "service.cor") 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 4 gt {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 220 translate 
+		0 rotate 
+		1 1 scale 
+		(save retain values to "service.ret") 0 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 5 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 200 translate 
+		0 rotate 
+		1 1 scale 
+		(save global retain values to "service.varx") 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 6 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 180 translate 
+		0 rotate 
+		1 1 scale 
+		(save database to "service.xdb") 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 7 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 160 translate 
+		0 rotate 
+		1 1 scale 
+		(save current MDE state to directory "today.mde") 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 8 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 140 translate 
+		0 rotate 
+		1 1 scale 
+		(copy already backuped MDE data) 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 9 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 120 translate 
+		0 rotate 
+		1 1 scale 
+		(copy message logging pool) 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 10 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 100 translate 
+		0 rotate 
+		1 1 scale 
+		(copy machine logging pool) 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 11 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 80 translate 
+		0 rotate 
+		1 1 scale 
+		(erase modem SMS stack) 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 12 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 60 translate 
+		0 rotate 
+		1 1 scale 
+		(reset MDE maxima and minima) 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	systemfile.mapped_state 13 gt {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 40 translate 
+		0 rotate 
+		1 1 scale 
+		(Export machine certificate to "machinecertificate.crt") 0 1
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	systemfile.mapped_state 14 gt {	
+		enableShipping { % only visible while shippingprocess
+		matrix currentmatrix_nlw 
+		currentcolor 
+		120 20 translate 
+		0 rotate 
+		1 1 scale 
+			(delete msgstack, machine.log and message.log for shipping) 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	} if
+	systemfile.mapped_state 15 gt {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		enableShipping { % only with shippinglevel at this position
+			120 0 translate 
+		} {
+			120 20 translate
+		} ifelse
+		0 rotate 
+		1 1 scale 
+		(generate message to indicate successful finish of execution) 0 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	systemfile.md_run 1 eq {
+		Green 
+	} if
+	60 300 translate 
+	systemfile.md_run 1 eq {
+		LRrotate 
+		rotate 
+	} if
+	1 1 scale 
+	tsGear001 
+	setcolor 
+	setmatrix_nlw 
+	
+	enableShipping { % only visible with shippinglevel
+		matrix currentmatrix_nlw 
+		currentcolor 
+		systemfile.md_run 2 eq {
+			Green 
+		} if
+		60 230 translate 
+		systemfile.md_run 2 eq {
+			LRrotate 
+			rotate 
+		} if
+		1 1 scale 
+		tsGear001 
+		setcolor 
+		setmatrix_nlw 
+		
+		matrix currentmatrix_nlw 
+		currentcolor 
+		systemfile.md_run 2 eq {
+			Green 
+		} if
+		30 190 translate 
+		0 rotate 
+		1 1 scale (shipping) 0 1 baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	20 370 translate 
+	0 rotate 
+	1 1 scale 
+	enableShipping not {
+		(store machine data (click to start/abort)) 0 1 
+	} { %? only visible with shippinglevel
+		(store machine data or start shipping process (click to start/abort)) 0 1 
+	} ifelse
+	baText001 
+	setcolor 
+	setmatrix_nlw 
+	systemfile.mapped_state 0 gt {	
+	matrix currentmatrix_nlw 
+	currentcolor 
+		120 345 translate 
+		-90 rotate 
+	1 1 scale 
+		enableShipping not {
+			systemfile.mapped_state 0 15 30 400 15 false false true 1 
+		} {%? shipping process has 16 steps
+			systemfile.mapped_state 0 16 30 400 16 false false true 1 
+		} ifelse
+		baBar007 
+	setcolor 
+	setmatrix_nlw 
+	} if 
+%?manual_end
+} def
+%?partend

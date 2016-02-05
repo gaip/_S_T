@@ -1,0 +1,7 @@
+x-direction right joystick 1
+start time	2013-10-18T10:39:34
+stop time	2013-10-18T04:50:04
+category			0	1	2	3	4	5	6	7	8	9	10
+x-direction right joystick 1 [%]	%MD1.216	MDpdeGetSubmode	<-80	[-80..-60[	[-60..-40[	[-40..-20[	[-20..-0.2[	[-0.2..0.2[	[0.2..20[	[20..40[	[40..60[	[60..80[	>=80
+
+x-direction right joystick 1 [%]	sum of entries

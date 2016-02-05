@@ -1,0 +1,87 @@
+
+
+rem Simulator LB
+
+rem########### Kabine##########
+
+can_conf /r 1 65 
+can_conf /r 1 66 
+can_conf /r 1 67 
+can_conf /r 1 68 
+can_conf /r 1 77
+can_conf /r 1 78
+can_conf /r 1 79
+can_conf /r 1 80
+can_conf /n 1 79
+can_conf /n 1 80
+                         
+rem ############Oberwagen########
+
+can_conf /r 2 9
+can_conf /r 2 10
+can_conf /r 2 17
+can_conf /r 2 18
+can_conf /r 2 19
+can_conf /r 2 33
+can_conf /r 2 34
+can_conf /r 2 42
+can_conf /r 2 57
+
+rem ############################
+
+force %IX1.077.34 1 rem Einstiegshebel
+force %IX2.033.03 1 rem Speisedruck OK
+force %IX2.033.06 1 rem Rücklauffilter
+force %IX2.033.07 1 rem Hydr. Tankinhalt OK
+force %IX2.033.08 1 rem gear oil temperature OK
+force %IW2.041.01 12000 rem content diesel tank
+force %Qx2.009.19 1 rem engine running
+force %IW2.041.02 4000 rem system pressure cc winch lifting
+force %IW2.041.06 4000 rem system pressure cc winch lowering
+force %IW2.041.07 4000 rem system pressure leader pump
+force %IW2.041.08 12000 rem inclinometer x-axis
+force %IW2.041.09 12000 rem inclinometer y-axis
+force %IW2.041.14 4000 rem system pressure pump1
+force %IW2.041.15 4000 rem system pressure drilling drive
+
+rem ############################
+
+			
+force %IX2.91.5 0
+force %IX2.33.25 1 limit switch Z4 o.k.
+
+force %IW2.41.01  12000
+force %IW2.41.02  4000
+force %IW2.41.07  4000
+force %IW2.41.08  12000
+force %IW2.41.09  12000
+force %IW2.41.10  4000
+force %IW2.41.15  4000
+force %IW2.42.03  4000
+force %IW2.42.04  4000
+force %IW2.42.05  4000
+force %IW2.42.06  4000
+force %IX2.33.07  1
+force %IX2.33.08  1
+force %IX2.91.41  0
+force %IX2.91.03  1
+force %IX2.91.01  1
+force %IX2.91.02  1
+
+rem ########################################
+
+force %IW2.92.01  900
+force %IW2.92.02  0
+force %IW2.92.03  0
+force %IW2.92.04  0
+force %IW2.92.05  270
+force %IW2.92.06  70
+force %IW2.92.07  45
+force %IW2.92.08  50
+force %IW2.92.09  450
+force %IW2.92.10  150
+force %IW2.92.11  0
+
+rem ########################################
+
+rem repaired by LAZ :)

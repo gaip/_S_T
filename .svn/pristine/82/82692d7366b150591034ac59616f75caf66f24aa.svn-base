@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="folders">
+			<Node name="folders"/>
+		</Node>
+		<Node name="logs">
+			<Node name="log0">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="41470.4646593403"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="key" type="S" value="{E151F9C1-8758-4BFA-8E12-9A8E65F3230B}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [CheckPMEInspectorPermission\CheckPMEInspectorPermission]"/>
+				<Prp name="relpath" type="S" value="15_07_2013_11_09_06_565\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log1">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="41470.4649414005"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="1"/>
+				<Prp name="key" type="S" value="{82347047-A603-43C4-ABE6-15A87AAA85BE}"/>
+				<Prp name="nameofroot" type="S" value="CheckPMEPermissions"/>
+				<Prp name="relpath" type="S" value="15_07_2013_11_09_30_933\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log2">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="41470.4656780208"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="2"/>
+				<Prp name="key" type="S" value="{999BF9FB-9B62-4FF3-BC49-87DF64759173}"/>
+				<Prp name="nameofroot" type="S" value="CheckPMEPermissions"/>
+				<Prp name="relpath" type="S" value="15_07_2013_11_10_34_580\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log3">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="41470.4660276968"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="3"/>
+				<Prp name="key" type="S" value="{4577B40B-EF6B-4890-9D93-E778F969DCAA}"/>
+				<Prp name="nameofroot" type="S" value="CheckPMEPermissions"/>
+				<Prp name="relpath" type="S" value="15_07_2013_11_11_04_792\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log4">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="41470.4693468866"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="index" type="I" value="4"/>
+				<Prp name="key" type="S" value="{F111E84E-5F40-4887-8E53-CB94F6338AC9}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [CheckPMEInspectorPermission\CheckPMEInspectorPermission]"/>
+				<Prp name="relpath" type="S" value="15_07_2013_11_15_51_570\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{681DCC69-A39F-4C4D-8E7D-B2D9362FAF4F}"/>
+		<Prp name="version" type="S" value="7.0"/>
+	</Node>
+</Nodes>

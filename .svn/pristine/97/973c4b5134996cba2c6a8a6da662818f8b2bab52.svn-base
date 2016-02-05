@@ -1,0 +1,72 @@
+rem autoexec.frc
+rem  location:		master 4
+rem  direction:	sending data from master 4 to PDE
+
+!version	00130
+
+_if CXadMilOperat EQ 1
+	rem forcen der RX spare time
+	rem "can_rxtime /c <spare in [m]>"
+	can_rxtime /c 6
+_endif
+
+rem define baudrate of CAN line 4
+can_conf /b 4 1000
+
+
+rem  add virtual module to CAN bus (master modules)
+
+can_conf /a 4 109 MA_X
+can_conf /u 4 109
+can_conf /a 4 117 MA_D
+can_conf /u 4 117
+can_conf /a 4 118 MA_D
+can_conf /u 4 118
+can_conf /a 4 119 MA_D
+can_conf /u 4 119
+
+rem set standard configuration (independent of the operation mode)
+rem destination source
+
+force	%QX4.109.1	MXdgcAutomStart
+force	%QX4.109.2	MXdgcHg1PouOnRop
+force	%QX4.109.3	MXdgcHg2PouOnRop
+force	%QX4.109.4	MXdgcActiveHg1
+force	%QX4.109.5	MXdgcActiveHg2
+force	%QX4.109.6	MXdgcHg1SlipFall
+force	%QX4.109.7	MXdgcHg2SlipFall
+force	%QX4.109.8	MXdgcHg1FreeFall
+force	%QX4.109.9	MXdgcHg2FreeFall
+force	%QX4.109.10	MXdgcHg1GtPoToRo
+force	%QX4.109.11	MXdgcHg2GtPoToRo
+force	%QX4.109.12	MXdgcNewPoint
+force	%QX4.109.13	MXenabDgcOperat
+force	%QX4.109.15	MXpdeConnection
+force	%QX4.109.16	MXadLEHydrGrab
+force	%QX4.109.17	MXpdeIgnoreCycle
+
+force	MXpdeStart	%IX4.109.1
+force	MXpdeStop	%IX4.109.2
+force	MXpdeGetBreak	%IX4.109.3
+force	MXpdeDgcActive	%IX4.109.6
+force	MXpdeGetInitOk	%IX4.109.7
+
+force	%QD4.117.1	MDdgcCompaction
+force	%QD4.117.2	MDdgcHg1RelHight
+force	%QD4.117.3	MDdgcHg2RelHight
+force	%QD4.117.4	MDhg1RopeSpeed
+force	%QD4.117.5	MDhg2RopeSpeed
+force	%QD4.117.6	MDdgcBeats
+force	%QD4.117.7	MDdgcGivenBeats
+force	%QD4.117.8	MDdgcGivenCompac
+
+force	%QD4.118.1	MDdgcGivenHight
+force	%QD4.118.2	MDdgcGivSlowDown
+force	%QD4.118.3	MDpdeDepth
+force	%QD4.118.4	MDgrabInclinatiX
+force	%QD4.118.5	MDgrabInclinatiY
+force	%QD4.118.6	CDLEignorePhiTop
+force	%QD4.118.7	CDLEignorePhiBot
+force	%QD4.118.8	MDhg1LastRopeLen
+
+force	%QD4.119.1	CDmachinSerialNr

@@ -1,0 +1,6 @@
+load sensor of the derrick (to main boom) in [kN]
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:30
+date-time	load sensor of the derrick (to main boom) in [kN]	analog pump signal derrick winch in [%]	angle of the main boom in [°]	angle of the main boom in [°]	load radius main boom in [m]	load radius luffing jib in [m]	maximum lifting hight main boom (head hight) in [m]	maximum lifting hight luffing jib (head hight) in [m]	load on the main boom in [to]	load on the luffing jib in [to]	utilization in [%]	utilization backwards in [%] (derrick operation)	number of lml mode
+	%MD1.61	%MD1.69	%MD1.34	%MD1.35	%MD1.39	%MD1.40	%MD1.41	%MD1.42	%MD1.32	%MD1.33	%MD1.30	%MD1.31	%MD1.29
+	MDz4PumpSignal	MDddExtAnalSign	MDvibPumpSignal	MDvibJoySignal	MDspeedHigh	MDaccelLow	MDaccelMedium	MDaccelHigh	MDauxJoySignal	MDauxValvSignal	MDfawExtAnalSign	MDfawValvSignal	MDfawJoySignal

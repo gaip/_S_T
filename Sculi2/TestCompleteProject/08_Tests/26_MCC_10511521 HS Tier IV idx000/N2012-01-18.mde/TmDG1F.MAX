@@ -1,0 +1,6 @@
+temperature distribution gear 1 [°C]
+start time	2012-01-18T16:00:13
+stop time	2012-01-18T16:28:18
+date-time	temperature distribution gear 1 [°C]	temperature hydraulic oil tank 1 [°C]	cooling water temperature diesel engine 1 [°C]
+	%MD1.539	%MD1.26	%MD1.2
+	%MD1.539	MDsgSysPressLe	MDcoolWaterTemp

@@ -1,0 +1,7 @@
+!version	00065
+ioconfig_if08_1_57_00106.bin	crc1.0x95A7	name.IOCONFIG	line.1 mod_nr.57 mod_typ.=IF08
+ioconfig_if08_1_58_00107.bin	crc1.0x6365	name.IOCONFIG	line.1 mod_nr.58 mod_typ.=IF08
+ioconfig_if08_2_57_00108.bin	crc1.0xA758	name.IOCONFIG	line.2 mod_nr.57 mod_typ.=IF08
+ioconfig_if02_4_49_00109.bin	crc1.0x805A	name.IOCONFIG	line.4 mod_nr.49 mod_typ.=IF02
+
+io_compl.cnf	crc.0xb43afe73

@@ -1,0 +1,233 @@
+!version 99999
+
+rem SIMULATE MODULE
+
+can_conf /b 1 500
+can_conf /b 2 500
+can_conf /b 3 500
+can_conf /b 4 500
+
+can_conf /u 1 47
+can_conf /u 1 83
+can_conf /u 1 92
+can_conf /u 1 91
+can_conf /u 1 93
+can_conf /u 1 94
+can_conf /u 1 22
+can_conf /u 1 14
+can_conf /u 1 55
+
+can_conf /u 2 46
+can_conf /u 2 82
+can_conf /u 2 21
+can_conf /u 2 13
+can_conf /u 2 5
+can_conf /u 2 49
+can_conf /u 2 15
+can_conf /u 2 23
+
+can_conf /u 3 45
+can_conf /u 3 93
+can_conf /u 3 94
+can_conf /u 3 95
+can_conf /u 3 96
+can_conf /u 3 97
+can_conf /u 3 106
+can_conf /u 3 85
+
+can_conf /u 4 45
+can_conf /u 4 46
+can_conf /u 4 53
+can_conf /u 4 54
+can_conf /u 4 81
+can_conf /u 4 82
+
+
+rem -----------------------------------------------------------
+rem DISABLE TIMEOUT
+
+can_conf /n 1 91
+can_conf /n 1 92
+can_conf /n 1 93
+can_conf /n 1 94
+
+can_conf /n 2 15
+can_conf /n 2 23
+
+can_conf /n 3 45
+can_conf /n 3 93
+can_conf /n 3 95
+can_conf /n 3 94
+can_conf /n 3 96
+can_conf /n 3 106
+can_conf /n 3 85
+
+
+rem -----------------------------------------------------------
+rem INIT MODUL A164
+
+
+force %ID4.45.1 2500.0 rem IRJsLXm
+force %ID4.45.2 2500.0 rem IRJsLYm
+force %ID4.45.3 2500.0 rem IRJsRXm
+force %ID4.45.4 2500.0 rem IRJsRYm
+force %ID4.45.5 4000.0 rem B354
+force %ID4.45.6 10000.0 rem IRSafetyLeverLockS7_1
+force %ID4.45.7 3500.0 rem B173
+force %ID4.45.9 24000.0 rem IRMeasureKL15A164
+force %ID4.45.10 3500.0 rem IRSensStickByPassB198
+force %ID4.45.11 3500.0 rem B202
+force %ID4.45.12 3500.0 rem B40
+force %ID4.45.14 0.0    rem S57_2
+force %ID4.45.15 5000.0 rem S57_1
+force %ID4.45.16 5000.0 rem IR5VSens
+
+force %ID4.81.1 270.0 rem IRBtConfirm1S497
+
+
+rem -----------------------------------------------------------
+rem INIT MODUL A165
+
+force %ID4.46.1 1200.0 rem IRSensJsRB19R
+force %ID4.46.2 1200.0 rem IRSensJsLB19L
+force %ID4.46.4 3500.0 rem B190
+force %ID4.46.5 0.0    rem S55_2
+force %ID4.46.6 2500.0 rem IRJsLXp
+force %ID4.46.7 5000.0    rem S55_1
+force %ID4.46.9 2500.0 rem IRJsRXp
+force %ID4.46.10 0.0 rem IRJsRYpBtS6M
+force %ID4.46.13 0.0 rem IRJsLYpBtS5M
+force %ID4.46.16 24000.0 rem B318
+
+force %ID4.82.1 270.0 rem IRBtConfirm2S497
+
+rem -----------------------------------------------------------
+rem INIT MODUL A52
+
+force %ID1.47.1 5000.0 rem IRSafety
+force %ID1.47.2 24000.0 rem B26_1
+force %ID1.47.4 4000.0 rem B55_1_2
+force %ID1.47.5 4000.0 rem B55_2_2
+force %ID1.47.7 24000.0 rem B44
+force %ID1.47.8 800.0 rem B3
+force %ID1.47.9 800.0 rem B14
+force %ID1.47.11 6480.0 rem B5
+force %ID1.47.12 4000.0 rem B55_1_2
+force %ID1.47.13 4000.0 rem B55_2_1
+force %ID1.47.14 6480.0 rem B50
+force %ID1.47.15 24000.0 rem IRMeasureKL15A52
+force %ID1.47.16 3500.0 rem B189
+
+force %ID1.83.1 400.0 rem B39
+force %ID1.83.2 1320.0 rem B8
+
+
+rem -----------------------------------------------------------
+rem INIT MODUL A53
+
+force %ID2.46.1 3500.0 rem B170
+force %ID2.46.2 3500.0 rem B171
+force %ID2.46.3 3500.0 rem B172_2
+force %ID2.46.4 3500.0 rem B172_1
+force %ID2.46.5 3500.0 rem B161
+force %ID2.46.6 3500.0 rem B162
+force %ID2.46.7 3500.0 rem B163
+force %ID2.46.8 3500.0 rem B168
+force %ID2.46.9 3500.0 rem B164
+force %ID2.46.10 3500.0 rem B165
+force %ID2.46.11 3500.0 rem B166
+force %ID2.46.12 3500.0 rem B167
+force %ID2.46.13 3500.0 rem B169
+force %ID2.46.14 3500.0 rem B159
+force %ID2.46.15 3500.0 rem B160
+force %ID2.46.16 3500.0 rem B174
+
+force %ID2.82.1 6000.0 rem 
+
+
+rem -----------------------------------------------------------
+rem INIT MODUL A173
+
+force %ID3.45.1 0.0 rem AI1A173
+force %ID3.45.2 0.0 rem AI2A173
+force %ID3.45.3 24000.0 rem AI3A173
+force %ID3.45.4 24000.0 rem AI4A173
+force %ID3.45.9 24000.0 rem AI9A173
+force %ID3.45.10 24000.0 rem AI10A173
+
+
+rem -----------------------------------------------------------
+rem AIR CONDITION
+
+force %ID3.106.7 1 rem IXacStaCompressor
+force %ID3.106.9 1 rem IXacFeatureAutomatic
+force %ID3.106.19 20.0 rem IRacOutTemp
+force %ID3.106.28 7 rem IDacMode
+
+force %MD3.107 7 rem MDacMode
+
+rem -----------------------------------------------------------
+rem FUEL CONS
+
+force %ID1.92.11 100.0 rem IREngFuelCons
+
+rem -----------------------------------------------------------
+rem ENGINE
+
+force %IX1.91.3 1 rem IXEng1Running
+force %IX1.93.5 0 rem IXEng2StartLock
+force %IX1.93.3 1 rem IXEng2Running
+force %ID1.92.7 90.0 rem IREngCoolWatTemp
+force %ID1.92.9 4.0 rem IREngLubOilPress
+force %ID1.92.10 2.0 rem IREngChaAirPress
+
+rem -----------------------------------------------------------
+rem NO ERRROR OD04
+
+force %IX2.13.1 1 rem SwingBrake
+force %IX2.13.9 1 rem SafetyValvePY369
+force %IX2.13.13 1 rem GreasePump
+force %IX1.14.1 1 rem SafetyValveMY370
+force %IX1.14.5 1 rem H33
+force %IX1.14.9 1 rem SafetyShutDown
+force %IX1.14.13 1 rem Y28
+force %IX2.15.1 1 rem Y129
+force %IX2.13.1 1 rem IXSwingBrakeY7
+force %IX2.15.5 1 rem IXReserve2A59
+force %IX2.23.1 0 rem IXOptionAO1A54Bb
+
+rem -----------------------------------------------------------
+rem NO ERRROR OA16
+
+force IXLRY50Bb 0
+force IXEL1Y51Bb 0
+force IXEL2Y52Bb 0
+force IXOptionAO1A59Y354Bb 0
+force IXStickRegY421Bb 0
+force IXFanY347Bb 0
+
+force %ID1.94.10 30.0
+
+
+rem -----------------------------------------------------------
+rem NO ERRROR GREASING
+
+force %ID1.47.11 24000.0 rem B5
+force %ID1.47.11 10000.0 rem B5
+force %ID1.47.11 24000.0 rem B5
+force %ID1.47.11 10000.0 rem B5
+
+
+rem -----------------------------------------------------------
+rem menu diag
+force IXBt8A168 1
+force IXBt9A168 1
+
+
+
+rem -----------------------------------------------------------
+rem RESET sample trace
+
+force /s nvram.D.1 0
+force /s nvram.D.2 0
+force /s nvram.D.3 0

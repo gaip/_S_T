@@ -1,0 +1,18 @@
+Trigger options:																																																																																																									
+Trigger variable	MDhydrOilLevel																																																																																																								
+Trigger level	1																																																																																																								
+Trigger edge	undefined																																																																																																								
+																																																																																																									
+Sample options:																																																																																																									
+Scan time [ms]	25																																																																																																								
+Number of samples	5000																																																																																																								
+Samples after trigger	5000																																																																																																								
+automatic save	CF2:\LoadCycl																																																																																																								
+minimum space	10000																																																																																																								
+maximum space	14000000																																																																																																								
+																																																																																																									
+crc	0xBCD9324D																																																																																																								
+																																																																																																									
+Sample Data:																																																																																																									
+Trigger time	2009-10-13T09:09:37																																																																																																								
+Time [ms]	CDhdLoadLimit	CDndLoadLimit	CDropeUnitWeight	CDtotalRopeLeng	CDwinchWeightOff	CXnrsHigherTower	MDblockValidKF1	MDblockValidKF2	MDcenOfMassWx	MDcenterWx	MDcenterWy	MDcompFilLoad1	MDcompFilLoad2	MDcompLoadW1	MDcompLoadW2	MDdeltaLoadTH	MDdeltaPathTH	MDdeltaTime	MDdesign1A	MDdesign4A	MDforceAtWinch1	MDforceAtWinch2	MDforceSenScaNeg	MDforceSenScaPos	MDfrictionCoeff	MDhgSpeedW1	MDhgSpeedW2	MDjibAngleLML	MDkalLoadPos1	MDkalLoadPos2	MDkalRopeLength1	MDkalRopeLength2	MDkalRopeSpeed1	MDkalRopeSpeed2	MDloadWeight	MDlsmPositionX	MDlsmPositionY	MDlsmPositionZ	MDlsmWeight	MDoperationMode	MDpointBJyA	MDpointBPJxA	MDpointBPJyA	MDpointL1W1xA	MDpointL1W1yA	MDpointL1W2xA	MDpointL1W2yA	MDpointL2Wx	MDpointTPJxA	MDpointTPJyA	MDpointTRJxA	MDpointTRJyA	MDrockerLength	MDropeAngleTPJ	MDropeAngleTRJ	MDropeAngleW1	MDropeAngleW2	MDropeEmodul	MDropeIncW1	MDropeIncW2	MDropeLenP2P1	MDropeLenP3P2	MDropeLenP4P3	MDropeLenW1P4	MDropeLenW2P4	MDropeMcs	MDropeOnW1	MDropeOnW2	MDropeW1Ho	MDropeW2Ho	MDstartPosX	MDstartPosY	MDstartPosZ	MDstartTime	MDstopPosX	MDstopPosY	MDstopPosZ	MDstopTime	MDtorquAtWinch1	MDtorquAtWinch2	MDweightPulley	MDweightRocker	MDwinchDiameter	MDwinchWeightOpp	MDwrapAngleP1	MDwrapAngleP2	MDwrapAngleP3	MDwrapAngleW1P4	MDwrapAngleW2P4	MWerrBitField	MWforceSensorW1	MWforceSensorW2	MWsecForceSensW1	MWsecForceSensW2	MWstartDetected	MWstopDetected	MWvalidCycle	MXblockValidDLC	MXblockvalidLC	MXcrType120to600	MXinitValueOk1	MXselect2Winches	SDsgPosition	%MD2.1000	MDoperationMode

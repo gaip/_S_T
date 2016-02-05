@@ -1,0 +1,9 @@
+force anchoring rod [kN]
+start time	2013-10-06T16:59:57
+stop time	2013-10-07T02:39:36
+date-time	force anchoring rod [kN]	radius hoisting system 1 [m]	load hoisting system 1 [to]	utilisation hoisting system 1 [%]	utilisation operation mode [%]	operation mode 1	rope force winch 1 [kN]	rope force winch 2 [kN]	rope speed winch 1 [m/min]	rope speed winch 2 [m/min]	status brake 1 winch 1	status brake 2 winch 1	status brake 1 winch 2	status brake 2 winch 2	status brake 1 slewing system 1	status brake 1 boom winch 1 	angle slewing system 1 [ø]	pressure pump 1 slewing system 1 [bar]	pressure pump 1 winch 1 [bar]	pressure pump 1 winch 2 [bar]	power diesel engine 1 [kW]	wind speed [m/s]	x-direction left joystick 1 [%]	y-direction left joystick 1 [%]	x-direction right joystick 1 [%]	y-direction right joystick 1 [%]
+	%MD1.249	%MD1.261	%MD1.260	%MD1.219	%MD1.244	%MD1.221	%MD1.253	%MD1.255	%MD1.254	%MD1.256	%MX1.821	%MX1.822	%MX1.823	%MX1.824	%MX1.825	%MX1.820	%MD1.257	%MD1.239	%MD1.224	%MD1.232	%MD1.201	%MD1.204	%MD1.214	%MD1.215	%MD1.216	%MD1.217
+	MDpdeDgcCompDone	MDpdeDgcHg2SpeFt	MDpdeDgcHg1SpeFt	MDpdeLrXaxisInc	MDpdeDgcHg2Speed	MDpdeHamEnergy	MDpdeDgcHightFt	MDpdeDgcGivHigFt	MDpdeDgcHightPre	MDpdeDgcSlowDPre	MXecLudvCutOff	%MX1.822	%MX1.823	%MX1.824	%MX1.825	MXecHg2FawLowTen	MDpdeDgcSlowDoFt	MDpdeHamEnerDept	MDpdePileArea	MDpdeHamEneDepFt	MDpdeDdProgress	MDpdeDrilTimeEff	MDpdeTimePerTrig	MDpdeMaxConFlowM	MDpdeGetSubmode	MDpdeMaxConFlowY
+2013-10-06T17:04:06	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2013-10-06T17:04:06	0	0	0	125	125	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2013-10-06T17:04:06	0	0	0	125	125	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3.965	0	0	0	0

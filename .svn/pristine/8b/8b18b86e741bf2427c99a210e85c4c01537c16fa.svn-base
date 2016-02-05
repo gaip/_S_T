@@ -1,0 +1,7 @@
+!version 00018
+
+CLIENT LAN3
+SERVER bildprog
+
+CLIENT LAN2
+BRIDGE LAN3

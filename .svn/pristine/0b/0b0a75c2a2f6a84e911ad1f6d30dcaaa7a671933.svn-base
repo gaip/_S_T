@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Turkish / Türkisch
+%?language	tur
+
+%section: SCREEN
+/TSoilFlowAuger	(Helezon taşıma miktarı) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Helezon taşıma miktarı)
+/TSoilFlowCase	(Boru taşıma miktarı) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Boru taşıma miktarı)
+/TSoilFlow	(Taşıma miktarı) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Taşıma miktarı)
+/TSnumbOfPumps	(Pompa sayısı) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Pompa sayısı)
+/TSclampJawPress	(Pense basıncı) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Pense basıncı)
+/TSexcAutoTime	(Eksantrik ayarlama süresi) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Eksantrik ayarlama süresi)
+/TSramWeight	(Şahmerdan ağırlığı) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Şahmerdan ağırlığı)
+/TSblowsPerDepthStep	(Darbe / derinlik adımı) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Darbe / derinlik adımı)
+/TSnumbPuPuCylinder	(İtme ve çekme silindiri sayısı) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (İtme ve çekme silindiri sayısı)
+/TSaugerLength	(Helezon uzunluğu) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Helezon uzunluğu)
+/TSconcVolPerImp	(Beton miktarı / impuls) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Beton miktarı / impuls)
+/TSscalConcPresSens	(Beton bas.sens.ölçüm al.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Beton bas.sens.ölçüm al.)
+/TSscalConcPresDisp	(Beton bas.göst.skalası) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Beton bas.göst.skalası)
+/TSpileDiameter	(Kazık çapı) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Kazık çapı)
+/TSmaxPressAuger	(Azami helezon basıncı) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Azami helezon basıncı)
+/TSmaxPressCase	(Azami boru basıncı) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Azami boru basıncı)
+/TSmaxPressure	(Azami basınç) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Azami basınç)
+/TSoilFlowAuger1	(Helezon taşıma mikt.1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Helezon taşıma mikt.1)
+/TSoilFlowAuger2	(Helezon taşıma mikt.2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Helezon taşıma mikt.2)
+/TSoilFlowAuger3	(Helezon taşıma mikt.3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Helezon taşıma mikt.3)
+/TSnumbOfAugers	(Helezon sayısı) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Helezon sayısı)
+/TSoilFlowOscil	(Boru tak.mikt.taş.mikt.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Boru tak.mikt.taş.mikt.)
+/TSoilFlowGrabOpen	(Besl.mikt.kavray.açın) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Besl.mikt.kavray.açın)
+/TSoilFlowGrabClose	(Besl.mikt.kavray.kapatın) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Besl.mikt.kavray.kapatın)
+/TSmaxPressGrabOpen	(Maks basınç kavrayıc. açın) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Maks basınç kavrayıc. açın)
+/TSmaxPressGrabClose	(Maks basınç kavrayıc. kapatın) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Maks basınç kavrayıc. kapatın)
+/TSminOilFlow	(min. taşıma miktarı) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. taşıma miktarı)
+/TSoilFlowOscil2	(Boru tak.mikt.taş.mikt.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Boru tak.mikt.taş.mikt.2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

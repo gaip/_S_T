@@ -1,0 +1,452 @@
+!version	00182
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	LB
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#
+#
+#	File:					MDE_LB28_0012.cnf
+#
+#	File created with program:		MachineDataAnalysis
+#
+#	Version of program:			1.5.58
+#
+#	Date and time of last change:		06.11.2007 11:51:16
+#
+#	Author:					Marent Michael
+#
+#	(c) 2007 Liebherr - Werk Nenzing
+
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	automatic storage
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+AUTOSTORE  30    10000   CF1:\ 25000
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Aggregat
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+#*****************************************************************************************************
+#	Dieselmotor
+#*****************************************************************************************************
+
+GROUPTIME	de1			diesel engine 1
+ELEMENT MDpresenEngSpeed		revolutions diesel engine 1 [rpm]
+LIMIT	500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400 2500
+ELEMENT MDmdeActEngPower		power diesel engine 1 [kW]
+LIMIT	-250 -225 -200 -175 -150 -125 -100 -75 -50 -25 0 25 50 75 100 125 150 175 200 225 250 275 300 325 350 375
+
+GROUPTIME	de2			diesel engine 1
+ELEMENT MDpresenEngSpeed		revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1700 1800 1850 1900 1950 2000 2100 2200 2400
+ELEMENT MDchargeAirPress		charge air pressure diesel engine 1 [bar]
+LIMIT	1 1.5 2 2.25 2.5 2.75 3 3.25 3.5 3.75 4 4.25 4.5 5
+ELEMENT MDmdeEngExploita		engine exploitation diesel engine 1 [%]
+LIMIT	0 10 20 30 40 50 60 70 75 80 82.5 85 87.5 90 95
+
+GROUPTIME	de3			diesel engine 1
+ELEMENT MDpresenEngSpeed		revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+ELEMENT MDchargeAirPress		charge air pressure diesel engine 1 [bar]
+LIMIT	1 1.5 2 2.5 3 3.5 4 4.5 5
+ELEMENT MDchargeAirTemp		charge air temperature diesel engine 1 [°C]
+LIMIT	-10 0 10 20 30 40 50 60 70
+
+GROUPTIME	de4			diesel engine 1
+ELEMENT MDpresenEngSpeed		revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+ELEMENT MDchargeAirPress		charge air pressure diesel engine 1 [bar]
+LIMIT	1 1.5 2 2.5 3 3.5 4 4.5 5
+ELEMENT MDmdeAirFiltPres		air filter negative pressure diesel engine 1 [mbar]
+LIMIT	10 20 30 40 50 60 70 80 90
+
+GROUPTIME	de5			diesel engine 1
+ELEMENT MDpresenEngSpeed		revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+ELEMENT MDcoolWaterTemp		cooling water temperature diesel engine 1 [°C]
+LIMIT	-30 -20 -10 0 10 20 40 60 80 100 120
+ELEMENT MDlubOilPressure		lub oil pressure diesel engine 1 [bar]
+LIMIT	0.5 1 2 3 4 5 6 7 8
+
+GROUPTIME	de8			diesel engine 1
+ELEMENT MDpresenEngSpeed		revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+ELEMENT MDmdeTqDiEn1		torque diesel engine 1 [Nm]
+LIMIT	-2200 -2000 -1800 -1600 -1400 -1200 -1000 -800 -600 -400 -200 0 200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+
+GROUPTIME	de9			diesel Engine 1
+ELEMENT	MDpresenEngSpeed	revolutions diesel engine 1 [rpm]
+LIMIT	800 1000 1200 1400 1600 1800 2000 2200 2400
+ELEMENT	MDmdeFuelConsum	fuel consumption diesel engine 1 [L/h]
+LIMIT	0.25 2.5 5 7.5 10 12.5 15 17.5 20 22.5 25 27.5 30 32.5 35 37.5 40 42.5 45 47.5 50 52.5 55 57.5 60 62.5 65 67.5 70 72.5 75 77.5 80 82.5 85 87.5 90
+
+MAXIMUM	MDpresenEngSpeed	RvDiEn1F	revolutions diesel engine 1 [rpm]
+MAX_ELEMENT		MDmdeActEngPower	power diesel engine 1 [kW]
+MAX_ELEMENT		MDmdeTqDiEn1			torque diesel engine 1 [Nm]
+MAX_ELEMENT		MDmdeFcRoUpCrW1		rope force up  crowd winch 1 [kN]
+MAX_ELEMENT		MDmdeSpRoCrW1			rope speed crowd winch 1 [m/min]
+MAX_ELEMENT		MDmdeFcRoDoCrW1		rope force down  crowd winch 1 [kN]
+MAX_ELEMENT		MDmdeFcRoKW1			rope force kelly winch 1 [kN]
+MAX_ELEMENT		MDmdeSpRoKW1			rope speed kelly winch 1 [m/min]
+MAX_ELEMENT		MDmdePrP1DDr1			pressure P1 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrP2DDr1			pressure P2 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrPu1LE1			pressure pump 1 leader 1 [bar]
+MAX_ELEMENT 	MDmdeSgLxJs1C1		x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgLyJs1C1		y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRxJs1C1		x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRyJs1C1		y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeOm1					operation mode 1
+MAX_ELEMENT		MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT		MXmdeStBk1AW1			status brake 1 auxiliary winch 1
+MAX_ELEMENT		MXmdeStBk1CrW1		status brake 1  crowd winch 1
+MAX_ELEMENT		MXmdeStBk1KW1			status brake 1 kelly winch 1
+MAX_ELEMENT		MDmdeSgFTKW1			free turn kelly winch 1
+MAX_ELEMENT		MXmdeStG1DDr1			status gear box 1 drilling drive 1
+MAX_ELEMENT 	MDmdeReKW1				reeving kelly winch 1
+
+MAXIMUM	MDcoolWaterTemp	TmCWaE1F	cooling water temperature diesel engine 1 [°C]
+MAX_ELEMENT	  MDpresenEngSpeed	revolutions diesel engine 1 [rpm]
+MAX_ELEMENT		MDmdeActEngPower	power diesel engine 1 [kW]
+MAX_ELEMENT		MDmdeTqDiEn1			torque diesel engine 1 [Nm]
+MAX_ELEMENT		MDmdeFcRoUpCrW1		rope force up  crowd winch 1 [kN]
+MAX_ELEMENT		MDmdeSpRoCrW1			rope speed crowd winch 1 [m/min]
+MAX_ELEMENT		MDmdeFcRoDoCrW1		rope force down  crowd winch 1 [kN]
+MAX_ELEMENT		MDmdeFcRoKW1			rope force kelly winch 1 [kN]
+MAX_ELEMENT		MDmdeSpRoKW1			rope speed kelly winch 1 [m/min]
+MAX_ELEMENT		MDmdePrP1DDr1			pressure P1 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrP2DDr1			pressure P2 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrPu1LE1			pressure pump 1 leader 1 [bar]
+MAX_ELEMENT 	MDmdeSgLxJs1C1		x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgLyJs1C1		y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRxJs1C1		x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRyJs1C1		y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeOm1					operation mode 1
+MAX_ELEMENT		MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT		MXmdeStBk1AW1			status brake 1 auxiliary winch 1
+MAX_ELEMENT		MXmdeStBk1CrW1		status brake 1  crowd winch 1
+MAX_ELEMENT		MXmdeStBk1KW1			status brake 1 kelly winch 1
+MAX_ELEMENT		MDmdeSgFTKW1			free turn kelly winch 1
+MAX_ELEMENT		MXmdeStG1DDr1			status gear box 1 drilling drive 1
+MAX_ELEMENT 	MDmdeReKW1				reeving kelly winch 1
+
+#*****************************************************************************************************
+#	Verteilergetriebe
+#*****************************************************************************************************
+
+GROUPTIME	Gr101DG1			input 1 distribution gear 1
+ELEMENT MDmdeRvIn1DG1		revolutions input 1 distribution gear 1 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+ELEMENT MDmdeTqIn1DG1		torque input 1 distribution gear 1 [Nm]
+ABSOLUTE
+LIMIT	200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+
+GROUPTIME	Gr201DG1			input 1 distribution gear 1
+ELEMENT MDmdeRvIn1DG1		revolutions input 1 distribution gear 1 [rpm]
+ABSOLUTE
+LIMIT	2 200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+ELEMENT MDmdeTmDG1		temperature distribution gear 1 [°C]
+LIMIT	-30 -20 -10 0 10 20 30 40 50 60 70 80 90 100 110 120
+
+GROUPCYCLE	Gr401DG1			input 1 distribution gear 1
+BORDER  CATEGORY 1
+HYSTERESE 100
+ELEMENT MDmdeTqIn1DG1		torque input 1 distribution gear 1 [Nm]
+LIMIT	-2200 -2000 -1800 -1600 -1400 -1200 -1000 -800 -600 -400 -200 0 200 400 600 800 1000 1200 1400 1600 1800 2000 2200
+
+MAXIMUM	MDmdeTmDG1	TmDG1F	temperature distribution gear 1 [°C]
+MAX_ELEMENT	MDhydrOilTemp			temperature hydraulic oil tank 1 [°C]
+MAX_ELEMENT	MDcoolWaterTemp			cooling water temperature diesel engine 1 [°C]
+
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Reversierwinde
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+GROUPTIME	Wh101CrW1				 crowd winch 1
+ELEMENT		MDmdeFcRoUpCrW1			rope force up  crowd winch 1 [kN]
+LIMIT		20 40 60 80 100 120 140 160 180 200 220 240 260 280 300 320 340 360 380 400 420 440
+ELEMENT		MDmdeSpRoCrW1			rope speed crowd winch 1 [m/min]
+LIMIT		-72 -64 -56 -48 -40 -32 -24 -16 -8 -0.08 0.08 8 16 24 32 40 48 56 64 72
+
+GROUPTIME	Wh102CrW1				 crowd winch 1
+ELEMENT		MDmdeFcRoDoCrW1			rope force down  crowd winch 1 [kN]
+LIMIT		20 40 60 80 100 120 140 160 180 200 220 240 260 280 300 320 340 360 380 400 420 440
+ELEMENT		MDmdeSpRoCrW1			rope speed crowd winch 1 [m/min]
+LIMIT		-72 -64 -56 -48 -40 -32 -24 -16 -8 -0.08 0.08 8 16 24 32 40 48 56 64 72
+
+MAXIMUM		MDmdeFcRoUpCrW1	FcRoUpCrW1F	rope force up  crowd winch 1 [kN]
+MAX_ELEMENT	  MDpresenEngSpeed			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT		MDmdeActEngPower			power diesel engine 1 [kW]
+MAX_ELEMENT		MDmdeTqDiEn1			torque diesel engine 1 [Nm]
+MAX_ELEMENT		MDmdeSpRoCrW1			rope speed crowd winch 1 [m/min]
+MAX_ELEMENT		MDmdeFcRoDoCrW1		rope force down  crowd winch 1 [kN]
+MAX_ELEMENT		MDmdeFcRoKW1			rope force kelly winch 1 [kN]
+MAX_ELEMENT		MDmdeSpRoKW1			rope speed kelly winch 1 [m/min]
+MAX_ELEMENT		MDmdePrP1DDr1			pressure P1 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrP2DDr1			pressure P2 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrPu1LE1			pressure pump 1 leader 1 [bar]
+MAX_ELEMENT 	MDmdeSgLxJs1C1		x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgLyJs1C1		y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRxJs1C1		x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRyJs1C1		y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeOm1					operation mode 1
+MAX_ELEMENT		MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT		MXmdeStBk1AW1			status brake 1 auxiliary winch 1
+MAX_ELEMENT		MXmdeStBk1CrW1		status brake 1  crowd winch 1
+MAX_ELEMENT		MXmdeStBk1KW1			status brake 1 kelly winch 1
+MAX_ELEMENT		MDmdeSgFTKW1			free turn kelly winch 1
+MAX_ELEMENT		MXmdeStG1DDr1			status gear box 1 drilling drive 1
+MAX_ELEMENT 	MDmdeReKW1				reeving kelly winch 1
+
+MAXIMUM		MDmdeFcRoDoCrW1	FcRoDoCrW1F	rope force down  crowd winch 1 [kN]
+MAX_ELEMENT	  MDpresenEngSpeed			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT		MDmdeActEngPower			power diesel engine 1 [kW]
+MAX_ELEMENT		MDmdeTqDiEn1			torque diesel engine 1 [Nm]
+MAX_ELEMENT		MDmdeFcRoUpCrW1		rope force up  crowd winch 1 [kN]
+MAX_ELEMENT		MDmdeSpRoCrW1			rope speed crowd winch 1 [m/min]
+MAX_ELEMENT		MDmdeFcRoKW1			rope force kelly winch 1 [kN]
+MAX_ELEMENT		MDmdeSpRoKW1			rope speed kelly winch 1 [m/min]
+MAX_ELEMENT		MDmdePrP1DDr1			pressure P1 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrP2DDr1			pressure P2 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrPu1LE1			pressure pump 1 leader 1 [bar]
+MAX_ELEMENT 	MDmdeSgLxJs1C1		x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgLyJs1C1		y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRxJs1C1		x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRyJs1C1		y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeOm1					operation mode 1
+MAX_ELEMENT		MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT		MXmdeStBk1AW1			status brake 1 auxiliary winch 1
+MAX_ELEMENT		MXmdeStBk1CrW1		status brake 1  crowd winch 1
+MAX_ELEMENT		MXmdeStBk1KW1			status brake 1 kelly winch 1
+MAX_ELEMENT		MDmdeSgFTKW1			free turn kelly winch 1
+MAX_ELEMENT		MXmdeStG1DDr1			status gear box 1 drilling drive 1
+MAX_ELEMENT 	MDmdeReKW1				reeving kelly winch 1
+
+
+#.....................................................................................................................................
+#	 crowd winch 1 motors
+#.....................................................................................................................................
+
+GROUPTIME	Vm111CrW1			variable motor 1  crowd winch 1
+ELEMENT		MDmdeRvMo1CrW1			revolutions motor 1  crowd winch 1 [rpm]
+ABSOLUTE
+LIMIT		6 600 1200 1800 2400 3000 3600 4200 4800 5400
+ELEMENT		MDmdePrMo1CrW1			pressure motor 1  crowd winch 1 [bar]
+ABSOLUTE
+LIMIT		40 80 120 160 200 240 280 320 360 400
+ELEMENT		MDmdePvMo1CrW1			pivoting range motor 1  crowd winch 1 [%]
+LIMIT		10 20 30 40 50 60 70 80 90
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Kellywinde
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+GROUPTIME	Wh101KW1				kelly winch 1
+ELEMENT		MDmdeFcRoKW1			rope force kelly winch 1 [kN]
+LIMIT		20 40 60 80 100 120 140 160 180 200 220 240 260 280 300 320 340 360 380 400 420 440
+ELEMENT		MDmdeSpRoKW1			rope speed kelly winch 1 [m/min]
+LIMIT		-144 -128 -112 -96 -80 -64 -48 -32 -16 -0.16 0.16 16 32 48 64 80 96 112 128 144
+
+MAXIMUM		MDmdeFcRoKW1	FcRoKW1F	rope force kelly winch 1 [kN]
+MAX_ELEMENT	  MDpresenEngSpeed			revolutions diesel engine 1 [rpm]
+MAX_ELEMENT		MDmdeActEngPower			power diesel engine 1 [kW]
+MAX_ELEMENT		MDmdeTqDiEn1			torque diesel engine 1 [Nm]
+MAX_ELEMENT		MDmdeFcRoUpCrW1		rope force up  crowd winch 1 [kN]
+MAX_ELEMENT		MDmdeSpRoCrW1			rope speed crowd winch 1 [m/min]
+MAX_ELEMENT		MDmdeSpRoKW1			rope speed kelly winch 1 [m/min]
+MAX_ELEMENT		MDmdePrP1DDr1			pressure P1 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrP2DDr1			pressure P2 drilling drive 1 [bar]
+MAX_ELEMENT		MDmdePrPu1LE1			pressure pump 1 leader 1 [bar]
+MAX_ELEMENT 	MDmdeSgLxJs1C1		x-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgLyJs1C1		y-direction left joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRxJs1C1		x-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeSgRyJs1C1		y-direction right joystick 1 cabin 1 [%]
+MAX_ELEMENT 	MDmdeOm1					operation mode 1
+MAX_ELEMENT		MXmdeStBk1SS1			status brake 1 slewing system 1
+MAX_ELEMENT		MXmdeStBk1AW1			status brake 1 auxiliary winch 1
+MAX_ELEMENT		MXmdeStBk1CrW1		status brake 1  crowd winch 1
+MAX_ELEMENT		MXmdeStBk1KW1			status brake 1 kelly winch 1
+MAX_ELEMENT		MDmdeSgFTKW1			free turn kelly winch 1
+MAX_ELEMENT		MXmdeStG1DDr1			status gear box 1 drilling drive 1
+MAX_ELEMENT 	MDmdeReKW1				reeving kelly winch 1
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Mäklerpumpe
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+GROUPTIME	Vp101LE1			variable pump 1 leader 1
+ELEMENT		MDmdeRvPu1LE1			revolutions pump 1 leader 1 [rpm]
+ABSOLUTE
+LIMIT		300 600 900 1200 1500 1800 2100 2400 2700 3000 3300
+ELEMENT		MDmdePrPu1LE1			pressure pump 1 leader 1 [bar]
+ABSOLUTE
+LIMIT		40 80 120 160 200 240 280 320 360 400
+ELEMENT		MDmdePvPu1LE1			pivoting range pump 1 leader 1 [%]
+LIMIT		10 20 30 40 50 60 70 80 90
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Stahlbau
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#*****************************************************************************************************
+#	Mäkler
+#*****************************************************************************************************
+
+GROUPTIME	Le101				leader 1
+ELEMENT		MDmdeFcRoKW1			rope force kelly winch 1 [kN]
+LIMIT		40 80 120 160 200 240 280 320 360 400 440
+ELEMENT MDmdeReKW1		reeving kelly winch 1
+LIMIT	1 2 3 4
+ELEMENT		MDmdeFcCrW1			force crowd winch 1 [kN]
+LIMIT		-440 -360 -280 -200 -120 -40 40 120 200 280 360 440
+ELEMENT		MDmdePrSuLE1			pressure support leader 1 [bar]
+ABSOLUTE
+LIMIT		40 80 120 160 200 240 280 320 360 400
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Hydraulisches System
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#*****************************************************************************************************
+#	Hydrauliköl
+#*****************************************************************************************************
+
+GROUPTIME	HOILTEMP			hydraulic oil tank 1
+ELEMENT MDhydrOilTemp		temperature hydraulic oil tank 1 [°C]
+LIMIT	-30 -20 -10 0 10 20 30 40 50 60 70 80 90 100 110 120
+
+MAXIMUM	MDhydrOilTemp	TmHOTa1F	temperature hydraulic oil tank 1 [°C]
+MAX_ELEMENT	MDcoolWaterTemp			cooling water temperature diesel engine 1 [°C]
+
+MINIMUM	MDhydrOilTemp	TmHOTa1F	temperature hydraulic oil tank 1 [°C]
+MIN_ELEMENT	MDcoolWaterTemp			cooling water temperature diesel engine 1 [°C]
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#	Elektr. System
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#*****************************************************************************************************
+#	Lichtmaschine / Batterie
+#*****************************************************************************************************
+
+GROUPTIME	Bt101			battery 1
+ELEMENT MDmdeVoBat1		voltage battery 1 [V]
+LIMIT	14 16 18 20 22 24 26 28 30 32 34
+
+#*****************************************************************************************************
+#	Meisterschalter
+#*****************************************************************************************************
+
+#-----------------------------------------------------------------------------------------------------
+#	Meisterschalter links
+#-----------------------------------------------------------------------------------------------------
+
+GROUPTIME	Js101LC1			left joystick 1 cabin 1 
+ELEMENT MDmdeSgLxJs1C1		x-direction left joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+ELEMENT MDmdeSgLyJs1C1		y-direction left joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+GROUPCHANGE	Js201Lx1			x-direction left joystick 1 cabin 1
+ELEMENT MDmdeSgLxJs1C1		x-direction left joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+GROUPCHANGE	Js201Ly1			y-direction left joystick 1 cabin 1
+ELEMENT MDmdeSgLyJs1C1		y-direction left joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+
+#-----------------------------------------------------------------------------------------------------
+#	Meisterschalter rechts
+#-----------------------------------------------------------------------------------------------------
+
+GROUPTIME	Js101RC1			right joystick 1 cabin 1
+ELEMENT MDmdeSgRxJs1C1		x-direction right joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+ELEMENT MDmdeSgRyJs1C1		y-direction right joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+GROUPCHANGE	Js201Rx1			x-direction right joystick 1 cabin 1
+ELEMENT MDmdeSgRxJs1C1		x-direction right joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+GROUPCHANGE	Js201Ry1			y-direction right joystick 1 cabin 1
+ELEMENT MDmdeSgRyJs1C1		y-direction right joystick 1 cabin 1 [%]
+LIMIT	-80 -60 -40 -20 -0.2 0.2 20 40 60 80
+
+
+
+#*****************************************************************************************************
+#	Betriebsarten
+#*****************************************************************************************************
+
+GROUPTIME	Om111				operation mode 1    
+ELEMENT		MDmdeOm1			operation mode 1
+LIMIT		1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+
+GROUPCHANGE	Om211 				operation mode 1
+ELEMENT		MDmdeOm1			operation mode 1
+LIMIT		1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# 	EQUIPMENT
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#.....................................................................................................................................
+# 	drilling drive
+#.....................................................................................................................................
+
+GROUPTIME	As111DDr1			additional system 1 drilling drive 1
+ELEMENT		MDmdePrP1DDr1			pressure P1 drilling drive 1 [bar]
+ABSOLUTE
+LIMIT		40 80 120 160 200 240 280 320 360 400
+ELEMENT		MDmdePrP2DDr1			pressure P2 drilling drive 1 [bar]
+ABSOLUTE
+LIMIT		40 80 120 160 200 240 280 320 360 400
+ELEMENT		MXmdeStG1DDr1		status gear box 1 drilling drive 1
+LIMIT		1    
+ELEMENT		MDmdeDDrOm1			operation mode drilling drive 1
+LIMIT		1 2 3 4
+
+
+GROUPTIME	As221DDr1					additional system 1 drilling drive 1
+ELEMENT		MDmdeRvAuDr1			revolutions auger drive 1 [rpm]
+LIMIT		0.5 4 8 16 24 32 40 48 56 64 72
+ELEMENT		MXmdeStG1DDr1		status gear box 1 drilling drive 1
+LIMIT		1
+ELEMENT		MDmdeDDrOm1			operation mode drilling drive 1
+LIMIT		1 2 3 4
+
+GROUPTIME	As222DDr1					additional system 1 drilling drive 1
+ELEMENT		MDmdeRvCaDr1			revolutions casing drive 1 [rpm]
+LIMIT		0.5 4 8 16 24 32 40 48 56 64 72
+ELEMENT		MXmdeStG1DDr1		status gear box 1 drilling drive 1
+LIMIT		1
+ELEMENT		MDmdeDDrOm1			operation mode drilling drive 1
+LIMIT		1 2 3 4
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child list">
+			<Node name="item0">
+				<Prp name="key" type="S" value="{775E3226-1E42-42A1-A2F4-8FCF1255E250}"/>
+				<Prp name="storage" type="S" value="ManualTest1\ManualTest1.tcMT"/>
+				<Prp name="type" type="S" value="{1C954CF7-8390-4813-A62A-51A10ADBF033}"/>
+				<Prp name="typename" type="S" value="Manual Test"/>
+			</Node>
+			<Prp name="item count" type="I" value="1"/>
+		</Node>
+		<Node name="config">
+			<Prp name="node name" type="S" value="ManualTests"/>
+		</Node>
+		<Node name="data"/>
+		<Node name="folders">
+			<Node name="folders"/>
+		</Node>
+		<Node name="test data"/>
+		<Prp name="key" type="S" value="{C85EEC0B-5444-4714-9457-9F6940BE14CE}"/>
+		<Prp name="signature" type="S" value="{F57E13C5-95C5-4DC4-BE5A-9A456AE18F15}"/>
+		<Prp name="type" type="S" value="{F57E13C5-95C5-4DC4-BE5A-9A456AE18F15}"/>
+		<Prp name="typename" type="S" value="Manual Tests"/>
+		<Prp name="version" type="I" value="1"/>
+	</Node>
+</Nodes>

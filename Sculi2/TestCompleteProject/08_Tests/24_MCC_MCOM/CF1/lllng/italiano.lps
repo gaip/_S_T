@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Italian / Italienisch
+%?language	ita
+
+%section: SCREEN
+/TSoilFlowAuger	(Mandata trivella) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Mandata trivella)
+/TSoilFlowCase	(Mandata tubo) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Mandata tubo)
+/TSoilFlow	(Mandata) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Mandata)
+/TSnumbOfPumps	(N. pompe) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (N. pompe)
+/TSclampJawPress	(Pressione morsa) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Pressione morsa)
+/TSexcAutoTime	(Intervallo regolaz. eccentrico) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Intervallo regolaz. eccentrico)
+/TSramWeight	(Peso battipalo) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Peso battipalo)
+/TSblowsPerDepthStep	(Battute/passo di profondità) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Battute/passo di profondità)
+/TSnumbPuPuCylinder	(N. cilindri Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (N. cilindri Push & Pull)
+/TSaugerLength	(Lunghezza trivella) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Lunghezza trivella)
+/TSconcVolPerImp	(Vol. calcestruzzo/impulso) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Vol. calcestruzzo/impulso)
+/TSscalConcPresSens	(Int. mis. sens. press. calc.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Int. mis. sens. press. calc.)
+/TSscalConcPresDisp	(Scala visual. press. calc.) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Scala visual. press. calc.)
+/TSpileDiameter	(Diametro palo) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Diametro palo)
+/TSmaxPressAuger	(Pressione max. trivella) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Pressione max. trivella)
+/TSmaxPressCase	(Pressione max. tubo) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Pressione max. tubo)
+/TSmaxPressure	(Pressione max.) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Pressione max.)
+/TSoilFlowAuger1	(Mandata trivella 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Mandata trivella 1)
+/TSoilFlowAuger2	(Mandata trivella 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Mandata trivella 2)
+/TSoilFlowAuger3	(Mandata trivella 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Mandata trivella 3)
+/TSnumbOfAugers	(N. trivelle) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (N. trivelle)
+/TSoilFlowOscil	(Mandata perf. verticale) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Mandata perf. verticale)
+/TSoilFlowGrabOpen	(Mandata benna aperta) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Mandata benna aperta)
+/TSoilFlowGrabClose	(Mandata benna chiusa) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Mandata benna chiusa)
+/TSmaxPressGrabOpen	(Pressione max. benna aperta) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Pressione max. benna aperta)
+/TSmaxPressGrabClose	(Pressione max. benna chiusa) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Pressione max. benna chiusa)
+/TSminOilFlow	(Mandata min.) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (Mandata min.)
+/TSoilFlowOscil2	(Mandata perf. verticale 2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Mandata perf. verticale 2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

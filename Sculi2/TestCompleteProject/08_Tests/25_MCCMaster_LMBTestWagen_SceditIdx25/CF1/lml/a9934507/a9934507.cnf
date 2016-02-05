@@ -1,0 +1,208 @@
+!**************************************************************************************************
+! Konfigurationsfile
+!**************************************************************************************************
+!
+! Beschreibung:Diese Datei wurde automatisch erstellt! 
+! Gerät:LRB255
+! LMB-Identnummer:993450714
+! Änderungsnummer:M00000
+! Status:PF
+! Mode:UW LRB255 STD/900MM/3-STEG
+! Erstellt am:04.09.2007 um 17:28:51
+! Quelldateidatum:04.09.2007/17:26:09
+! Quelldateiname:\\LWNSV42005\Traglasttabellen\LMB\onlineLmb\Elektro\lmb_dat\9934507\M00000\993450714_A.txt
+! Zieldateiname:C:\workdir\lmb_projekte\LRB255_UWneu\Lmb\a9934507\M00000\\a9934507.cnf
+! Nachbearbeitet am:           von:    Grund:
+!**************************************************************************************************
+
+
+[Betriebsart_1]
+
+[Vormontage]
+
+!Auslegerteile:
+
+!Vormontage der Hauptauslegerteile:
+#vor_zstk_ha_kurz=HPT_Z_S_K%1/0/0*zstk_ha_kurz(z_e,z_a)
+#vor_zstk_ha_mittel=HPT_Z_S_M%1/0/0*zstk_ha_mittel(z_e,z_a)
+#vor_zstk_ha_lang=HPT_Z_S_L%1/0/0*zstk_ha_lang(z_e,z_a)
+
+#vor_stg_ha_kurz=HPT_Z_S_K%1/0/0*stg_ha_kurz(stg_e,stg_a)
+#vor_stg_ha_mittel=HPT_Z_S_M%1/0/0*stg_ha_mittel(stg_e,stg_a)
+#vor_stg_ha_lang=HPT_Z_S_L%1/0/0*stg_ha_lang(stg_e,stg_a)
+
+!Vormontage Hauptauslegerkopf:
+#kopf_ha=HPT_KOPF_1%1/0/0*kopf_s
+
+!Heckballast:
+#Vor_heckballast=HAUPTBALLAST_1*hb_0_0_T+HAUPTBALLAST_2*hb_12_3_T+HAUPTBALLAST_3*hb_12_5_T+HAUPTBALLAST_4*hb_20_0_T
+
+
+[Montage]
+#GG=ow+rod(rod,ursprung)+uw(uw,ursprung)+Vor_heckballast(gg,ursprung)+hw(hw_1,ursprung)+hw(hw_2,ursprung)
+#HA=anlstk_ha+vor_zstk_ha_kurz(z_e,z_a)+vor_zstk_ha_mittel(z_e,z_a)+vor_zstk_ha_lang(z_e,z_a)+kopf_ha(z_e,kopf_a)
+#HSTG_HA=gehaenge+vor_stg_ha_kurz(stg_e,stg_a)+vor_stg_ha_mittel(stg_e,stg_a)+vor_stg_ha_lang(stg_e,stg_a)+stg_ha_kopf(stg_e,stg_a)
+
+[Kran_Montage]
+#Kran=HA(GG.ow_ursprung,HA.ursp_ha)+ab_1(GG.abock1,ab_1.ursp)+rfs_1(GG.rfs1,rfs_1.anfang)+rfs_1(HA.rfs,rfs_1.ende)+stuetze(GG.stuetz,stuetze.stg_a)+stuetze(ab_1.end,stuetze.stg_e)+HSTG_HA(rp_1.end,HSTG_HA.stg_a)+HSTG_HA(HA.f_hpt,HSTG_HA.stg_e)+rp_1(ab_1.end,rp_1.anfang)+hubseil_ow(GG.anl_hs,hubseil_ow.anfang)+hubseil_ow(HA.o_hs,hubseil_ow.ende)
+
+[Ketten]
+#KETTE_4=HSTG_HA+rp_1+ab_1+GG+HA
+#KETTE_3=ab_1+stuetze+GG
+#KETTE_2=hubseil_ow+GG+HA
+#KETTE_1=rfs_1+GG+HA
+
+[Vorgabewerte]
+
+
+!Vorgabewerte Stahl für Betriebsart 1
+
+#ALPHA_MAX_TLT                          $82             ! Dezimal in Grad
+#MIN_SWL_AUF                            $0.3            ! Min. SWL beim Aufrichten (Standard 0.3 ohne Haken)
+#SMALLEST_VALUE_SWL                     $1              ! minimale SWL welche bei der Traglastabelle noch angezeigt wird
+#SCHLAPPSEIL_HALTESTRANG                $1
+#MOMENT_ROD_FORWARD                     $1
+#MOMENT_ROD_BACKWARD                    $0              ! nur bei Derrick
+#STRUKTUR                               $1
+#KIPPLAST                               $0              ! logisch
+#PROZENT_UNTER_250FT                    $75             ! Prozent fuer den Kipplast bei Auslegerlaenge unter 250ft
+#PROZENT_OBER_250FT                     $75             ! Prozent fuer den Kipplast bei Auslegerlaenge ueber 250ft
+#ISO_4305_TAB_1                         $1              ! logisch
+#ISO_4305_TAB_2_WIND                    $1              ! logisch
+#Q_ISOKI                                $250            ! 0.625*16*16
+#PREN_13000_TAB_1_FORWARDS              $1              ! logisch
+#PREN_13000_TAB_1_BACKWARDS             $1              ! logisch
+#PREN_13000_DER_BACKWARDS               $0              ! logisch
+#DIN_15019_TAB_1_FORWARDS               $1              ! logisch
+#DIN_15019_TAB_2_FORWARDS               $0              ! logisch 
+#ISO_4305_15_PROZENT_BACKWARDS          $1              ! logisch
+#ISO_4305_15_PROZENT_DER_BACKWARDS      $0              ! logisch nur bei Derrick Zahlenwert min.SWL
+#GEW_AUF                                $1.1            ! Gewichtung der Massen beim Aufrichten
+#ALPHA_MIN                              $15             ! Dezimal in Grad
+#RFS1_FKT_ENDSCHALTER                   $0              ! logisch
+#rp_1                                   $12             ! Einscherung Rollenpaket 1, früher "EINZIEHSEIL_HA"
+#HUBWERK_LEISTUNG                       $117            ! Hubwerksleistung in [kW] fuer die Ueberwachung des ROD
+#WIRKUNGSGRAD_SEILROLLE                 $0.98           ! LR=0.99, HS=0.98
+#ZUGKRAFT_WINDE                         $16.5           ! in [t]
+#KIPP_WINKEL                            $4.0
+#HUBSEIL_TANGENTE                       $1              ! logisch (1== hier wird der Rollendurchmesser der HW bei der Berechnung der aktuellen Last beruecksichtigt)
+#MAX_SWL_SCALE                          $100            ! Gewichtung der max. Traglast ( Traglasttabelle )in [%]
+#SLEWING_ANGLE_LIMITATION               $1              ! slewing angle limitation aktiv
+#KML_HPT_1311		 		$350            ! Kraftmesslasche 350kN im HPT 1311 Haltestrang
+#ANGLE_HPT				$90		! Geberbereich	[°]	
+#DIFF_ANGLE_HPT				$6		! Max. zulässige Winkeldifferenz [°]
+#DIFF_KML_HPT                           $5              ! Max. zulässige Kraftdiffernz [%] von #KML_HPT_XXXX 		
+#DIFF_ANG_RFS1                          $5              ! Zulaessige Winkeltoleranz (plus,minus) zum theoretisch berechnetem Eingriffswinkel RFS1
+#KML_HPT_REDUNDANT                      $0
+#ANSI_NORM				$0		! LMB-Überbrückung möglich (USA): 1, LMB-Überbrückung NICHT möglich (EU): 0; Betrifft nur LR!
+#DUTY_CYCLE				$1		! Baggerbetrieb: 1, Kranbetrieb: 0
+
+
+!Vorgabewerte Statik für Betriebsart 1
+
+#HUBLAST_MAX_WERT                       $10.00          ! Maximal zulaessiger Hublastbeiwert fuer die Ueberwachung des ROD	[ MAX_MOMENT_ROD=SWL * psi * Xswl             ]  
+#OFFSET_HUBLAST                         $1.05           ! Offset der Funktion fuer die Berechnung des Hublastbeiwertes		[ psi=OFFSET_HUBLAST + STEIGUNG_HUBLAST * Vh  ]
+#STEIGUNG_HUBLAST                       $0.001417       ! Steigung in [min/m] der Funktion fuer die Berechnung des Hublastbeiwertes [ Vh=(HUBWERK_LEISTUNG*60)/(SWL*g)        ]  
+#MAX_MOMENT_ROD                         $2360           ! Maximal zulassiges Moment um den ROD in [kNm]				[ SWL2                                        ]   
+#INTERPOL_PARAM_ALPHA                   $0.2
+#GEW_ANGLE_HPT                          $1
+#GEW_KML_HPT                            $1
+#MOMENT_AUF                             $2360		!Max. Moment beim Aufrichten
+
+!Vorgabewerte Elektro für Betriebsart 1
+
+#GERAETE_TYP				$LRB255_CE_SP
+#AB_SYSTEM				$AB_FIX
+#SW_VERSION				$1.003
+
+#FEET_RATIO				$3.28084	! Umrechnungskonstante *m
+#LBS_RATIO				$2.20462	! Umrechnungskonstante *t
+#MOMENT_ROLLENDREHKRANZ                 $1
+#EIGENLAST_WERT				$1.1		! Eigenlastwert laut DIN 15018T1
+#hubseil_ow				$1
+
+
+!Vorgabewerte automatisch für Betriebsart 1
+
+#SEILZUGBEGRENZUNG_MAX                  $2
+#SEILZUGBEGRENZUNG_1                    $1
+#SEILZUGBEGRENZUNG_2                    $1
+
+#ZENTRALBALLAST_1                        $0.0
+#ZENTRALBALLAST_MAX                      $1
+
+#HAUPTBALLAST_1                        $0.0
+#HAUPTBALLAST_2                        $12.3
+#HAUPTBALLAST_3                        $12.5
+#HAUPTBALLAST_4                        $20.0
+#HAUPTBALLAST_MAX                       $4
+
+#KIPPKANTE_MAX                          $3
+#KIPPKANTE_1                            $0
+#KIPPKANTE_2                            $1
+#KIPPKANTE_3                            $0
+
+!HB/ZB/KK
+#BALLAST_VAR_MAX                        $4
+#BALLAST_VAR_1                          $1/1/2
+#BALLAST_VAR_2                          $2/1/2
+#BALLAST_VAR_3                          $3/1/2
+#BALLAST_VAR_4                          $4/1/2
+
+!Systemmaß/relLo1/relLo2/relLo3/absLo1/absLo2/absLo3
+#KORREKTUR_TABELLE_MAX                  $1
+#KORREKTUR_TABELLE_1                    $1311/0/0/0/0/0/0
+
+#OFFSET_HPT_ANLSTK_1%0/0/0              $5.5
+#OFFSET_HPT_KOPF_1%1/0/0                $5.5
+#HPT_Z_S_K%1/0/0                        $3.0
+#HPT_Z_S_M%1/0/0                        $6.0
+#HPT_Z_S_L%1/0/0                        $12.0
+
+#SYS_OFFSET_HPT_ANLSTK_1%0/0/0          $1311
+#SYS_OFFSET_HPT_KOPF_1%1/0/0            $1311
+#SYS_HPT_Z_S_K%1/0/0                    $1311
+#SYS_HPT_Z_S_M%1/0/0                    $1311
+#SYS_HPT_Z_S_L%1/0/0                    $1311
+
+#IDENTNR_STRFILE			$a9837085       !MODE_1
+#AENDNR_STRFILE				$00000
+#IDENTNR_LMB				$a9934507
+#AENDNR_LMB				$00000
+#IDENTNR_TLT				$9841801
+#AENDNR_TLT				$00000
+#STATUS					$PF
+
+
+
+!**************************************************************************************************
+
+[Geofiles]
+
+#uw                                                $a9841797
+#ow                                                $a9841798
+#rod                                               $a9833880
+#hw                                                $a9833881
+#ab_1                                              $a9837081
+#stuetze                                           $a9837306
+#rfs_1                                             $a9833935
+#hubseil_ow                                        $a9833897
+#rp_1                                              $a9833936
+#kopf_s                                            $a9832817
+#anlstk_ha                                         $a9834699
+#zstk_ha_kurz                                      $a9832813
+#zstk_ha_mittel                                    $a9832815
+#zstk_ha_lang                                      $a9832920
+#stg_ha_kurz                                       $a9833928
+#stg_ha_mittel                                     $a9833929
+#stg_ha_lang                                       $a9835121
+#stg_ha_kopf                                       $a9834696
+#halteelement komplett__34_mm                      $a9833927
+#gehaenge                                          $a9833934
+#hb_12_5_T                                         $a9841883
+#hb_0_0_T                                          $a9831518
+#hb_12_3_T                                         $a9833891
+#hb_20_0_T                                         $a9835652
+
+
+$CRC32:a9934507.cnf	97827e0b

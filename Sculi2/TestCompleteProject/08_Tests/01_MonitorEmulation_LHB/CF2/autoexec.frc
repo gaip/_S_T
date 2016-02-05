@@ -1,0 +1,52 @@
+canalyser /a 1
+canalyser /a 2
+canalyser /a 3
+canalyser /a 4
+rem sample /r canalyser.smp
+rem #### Moduls ####
+can_conf /r	1	5	          
+can_conf /r	1	21	          
+can_conf /r	1	13	          
+can_conf /r	1	49	          
+can_conf /r	1	22	          
+can_conf /r	1	14	          
+can_conf /r	1	50	          
+rem can_conf /r	1	24	          
+can_conf /r	1	45	          
+can_conf /r	1	53	          
+can_conf /r	1	81	          
+can_conf /r	1	92	          
+can_conf /r	1	93	          
+can_conf /r	1	94	          
+can_conf /r	2	5	          
+can_conf /r	2	21	          
+can_conf /r	2	13	          
+can_conf /r	2	49	          
+can_conf /r	2	22	          
+can_conf /r	2	14	          
+can_conf /r	2	50	          
+can_conf /r	2	23	          
+can_conf /r	2	15	          
+can_conf /r	2	51	          
+can_conf /r	2	45	          
+can_conf /r	2	53	          
+can_conf /r	2	81	          
+can_conf /r	2	46	          
+can_conf /r	2	54	          
+can_conf /r	2	82	          
+rem can_conf /r	2	6	          
+can_conf /u	3	93	          
+can_conf /u	3	94	          
+can_conf /u	3	95	          
+can_conf /u	3	96	          
+can_conf /u	3	97	          
+can_conf /r	3	106	          
+can_conf /r	4	45	          
+can_conf /r	4	46	          
+can_conf /r	4	47	          
+can_conf /r	4	53	          
+can_conf /r	4	54	          
+can_conf /r	4	55	          
+can_conf /r	4	81	          
+can_conf /r	4	82	          
+can_conf /r	4	83	          

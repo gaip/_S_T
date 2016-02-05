@@ -1,0 +1,51 @@
+!ident	993432114
+!ident_index	018
+
+!environment	06300
+!target	MCC01
+!state	release
+!machineserial	CDmachinSerialNr
+
+!machinespecifictype	CDmachinSpecType
+
+!machinesalestype	database.MachineSalesType.1.1
+
+!machinetypeseries	database.MachineTypeSeries.1.1
+
+!machineclass	database.MachineClass.1.1
+
+
+# outer core
+out_mcc01.hex	crc1.0x9633384C	crc2.0xA2E7F6C4	crc3.0x7F790389	crc4.0xE035CC51	crc5.0x2BF1AC14	crc6.0x205521BE	crc7.0xD6F07148	crc8.0x566C63E3	crc9.0xDC90AD32	crc10.0xDA543F5C	crc11.0x724C63EF	crc12.0x7170E498	crc13.0x999F8D12	crc14.0x75F345F5	crc15.0x38D48855	crc16.0x59C05B20	name.out	version.4.315
+system.cnf	crc1.0xE68D15F6	name.include	version.4.315
+applicat_mcc01.out	crc1.0xDA6EE78F	crc2.0xA32ADA16	crc3.0xF358C484	crc4.0xD578B2BE	crc5.0xAC7A2B07	name.applicat
+project.asc	version.01827
+$softctrl.zip
+$tabdat.c
+
+# screen configuration
+bild.hex	crc1.0xD17C2EBE
+$scedit.zip
+
+# monitor
+mon_pikt.s	crc1.0xC42E	version.00124	client.* server.BILD
+$pikto.zip
+mon_init.s	crc1.0x9E42	version.00005	client.* server.BILD
+mon1251.s	crc1.0x3251	name.mon_font	version.00003	client.* server.BILD language.=russian language.=bulgaria
+mon88591.s	crc1.0xDC85	name.mon_font	version.00003	client.* server.BILD language.=american language.=dansk language.=deutsch language.=english language.=espanol language.=francais language.=italiano language.=nederlan language.=norsk language.=portugue language.=suomi language.=svenska
+mon88592.s	crc1.0x718B	name.mon_font	version.00003	client.* server.BILD language.=polski language.=magyar language.=cesky language.=romana language.=slovenci language.=slovensc
+mon88594.s	crc1.0xAD0B	name.mon_font	version.00003	client.* server.BILD language.=lietuviu language.=latviesu language.=eesti
+mon88597.s	crc1.0x8FFD	name.mon_font	version.00003	client.* server.BILD language.=greek
+mon88599.s	crc1.0x44ED	name.mon_font	version.00003	client.* server.BILD language.=turkish
+syslog.cnf	crc1.0x4713EACB	version.00043
+$message
+$language
+mde.cnf	version.00182
+client.cnf	version.00020
+autoexec.frc	version.00103
+database.xml	crc1.0x2BF2DCBF	version.00029
+shutdown.frc	version.00001
+
+
+
+boot.cnf	crc.0x621b7589

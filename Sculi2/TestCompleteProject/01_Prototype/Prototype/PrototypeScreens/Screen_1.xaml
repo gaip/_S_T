@@ -1,0 +1,228 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:pc="http://schemas.microsoft.com/prototyping/2010/controls" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Name="Screen_1_Name"
+	mc:Ignorable="d"
+	x:Class="PrototypeScreens.Screen_1"
+	Width="1024" Height="768">
+	<UserControl.Resources>
+		<Style x:Key="Tile" BasedOn="{StaticResource Button-Sketch}" TargetType="{x:Type Button}">
+			<Setter Property="Margin" Value="5"/>
+			<Setter Property="Height" Value="150"/>
+			<Setter Property="Width" Value="300"/>
+		</Style>
+		<Style x:Key="TileFavorite" BasedOn="{StaticResource Tile}" TargetType="{x:Type Button}">
+			<Setter Property="Visibility" Value="Collapsed"/>
+		</Style>
+		<Style x:Key="TileFavoriteBar" BasedOn="{StaticResource Rectangle-Sketch}" TargetType="{x:Type pc:SketchRectangleUC}">
+			<Setter Property="Visibility" Value="Collapsed"/>
+			<Setter Property="Height" Value="5"/>
+			<Setter Property="Width" Value="950"/>
+		</Style>
+	</UserControl.Resources>
+	<Grid x:Name="LayoutRoot" Background="White" >
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="LidecVisibility">
+				<VisualStateGroup.Transitions>
+					<VisualTransition GeneratedDuration="0:0:1"/>
+				</VisualStateGroup.Transitions>
+				<VisualState x:Name="_default">
+					<Storyboard>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnLidec1">
+							<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+						</DoubleAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="_lidec1Visible">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="btnLidec1">
+							<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+						</ObjectAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnLidec1">
+							<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+						</DoubleAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="btnLidec1">
+							<EasingDoubleKeyFrame KeyTime="0" Value="200"/>
+						</DoubleAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+			<VisualStateGroup x:Name="ChangeConnectionContext" ei:ExtendedVisualStateManager.UseFluidLayout="True">
+				<VisualStateGroup.Transitions>
+					<VisualTransition GeneratedDuration="0:0:1">
+						<VisualTransition.GeneratedEasingFunction>
+							<CubicEase EasingMode="EaseInOut"/>
+						</VisualTransition.GeneratedEasingFunction>
+					</VisualTransition>
+				</VisualStateGroup.Transitions>
+				<VisualState x:Name="_GoHome"/>
+				<VisualState x:Name="_GoLidec">
+					<Storyboard>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Lidec_1">
+							<EasingDoubleKeyFrame KeyTime="0" Value="-1070.524"/>
+						</DoubleAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Home">
+							<EasingDoubleKeyFrame KeyTime="0" Value="-1070.524"/>
+						</DoubleAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<VisualStateManager.CustomVisualStateManager>
+			<ei:ExtendedVisualStateManager/>
+		</VisualStateManager.CustomVisualStateManager>
+		<Grid x:Name="Lidec_1"  HorizontalAlignment="Right" Margin="0,23.993,-1022.041,16.613" d:LayoutOverrides="Height" RenderTransformOrigin="0.5,0.5">
+			<Grid.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Grid.RenderTransform>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<TextBlock HorizontalAlignment="Left" Style="{DynamicResource TitleCenter-Sketch}" Text="Motor D946" Margin="20,0,0,0" Background="#FF30E743"/>
+			<WrapPanel Width="950" Grid.Row="1">
+				<Button Style="{StaticResource Tile}" Content="Variable Editor" Background="#FF1AC41D">
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Variable_Editor"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button Style="{StaticResource Tile}" Content="Message Analyzer" Background="#FF13E917" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Copy_of_Variable_Editor"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button Style="{StaticResource Tile}" Content="Oscilloscope" Background="#FF10D81C" />
+				<Button Style="{StaticResource Tile}" Content="Information" Background="#FF22DE59" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Information"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button Style="{StaticResource Tile}" Content="Click Test" />
+				<Button Style="{StaticResource Tile}" Content="Statistics" />
+				<Button Style="{StaticResource Tile}" Content="DPF" />
+				<Button Style="{StaticResource Tile}" Content="SCR" />
+			</WrapPanel>
+			<WrapPanel Width="950" Grid.Row="1">
+				<Button Style="{StaticResource Tile}" Content="Variable Editor" Background="#FF1AC41D">
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Variable_Editor"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button Style="{StaticResource Tile}" Content="Message Analyzer" Background="#FF13E917" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Copy_of_Variable_Editor"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button Style="{StaticResource Tile}" Content="Oscilloscope" Background="#FF10D81C" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Copy_of_Variable_Editor_1"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button Style="{StaticResource Tile}" Content="Information" Background="#FF22DE59" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Information"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button Style="{StaticResource Tile}" Content="Click Test" />
+				<Button Style="{StaticResource Tile}" Content="Statistics" />
+				<Button Style="{StaticResource Tile}" Content="DPF" />
+				<Button Style="{StaticResource Tile}" Content="SCR" />
+			</WrapPanel>
+		</Grid>
+		<Grid x:Name="Home"  HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+			<Grid.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Grid.RenderTransform>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" Style="{DynamicResource TitleCenter-Sketch}" Text="Home"/>
+			<WrapPanel Width="950" Grid.Row="1">
+				<Button x:Name="btnStartConnection" Style="{StaticResource Tile}" Content="Start connection" Background="#FF69F31E">
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Screen_1_1"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button Style="{StaticResource Tile}" Content="Documentation" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="PrototypeScreens.Screen_1_1"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button Style="{StaticResource Tile}" Content="Licence Info" />
+				<Button Style="{StaticResource Tile}" Content="Update to last version" />
+				<Button Style="{StaticResource Tile}" Content="About Sculi" />
+				<Button Style="{StaticResource Tile}" Content="Contact Sculi Team" />
+				<pc:SketchRectangleUC Style="{StaticResource TileFavoriteBar}" Background="Black"/>
+				<Button  Style="{StaticResource TileFavorite}">
+					<StackPanel HorizontalAlignment="Center">
+						<TextBlock Text="Favorite" HorizontalAlignment="Center"/>
+						<TextBlock Text="UPCR - RS232" HorizontalAlignment="Center"/>
+					</StackPanel>
+				</Button>
+				<Button  Style="{StaticResource TileFavorite}">
+					<StackPanel HorizontalAlignment="Center">
+						<TextBlock Text="Favorite" HorizontalAlignment="Center"/>
+						<TextBlock Text="Master 4 - Ethernet" HorizontalAlignment="Center"/>
+					</StackPanel>
+				</Button>
+			</WrapPanel>
+		</Grid>
+		<Grid Grid.Row="1" Margin="5">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="MouseLeftButtonDown">
+					<pi:ActivateStateAction TargetState="_GoHome"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+			<WrapPanel HorizontalAlignment="Center">
+				<Button x:Name="btnHome" Content="Home" Width="200"  Style="{StaticResource Tile}" Background="LightGray" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:ActivateStateAction TargetState="_GoHome"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+				<Button x:Name="btnLidec1" Content="Lidec 1" Width="0"  Style="{StaticResource Tile}" Opacity="0" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:ActivateStateAction TargetState="_GoLidec"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
+			</WrapPanel>
+		</Grid>
+	</Grid>
+</UserControl>

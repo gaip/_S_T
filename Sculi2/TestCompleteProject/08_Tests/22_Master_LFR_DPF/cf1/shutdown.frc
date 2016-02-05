@@ -1,0 +1,5 @@
+!version	00003
+
+math nvram.D.10 = MDmaInfOpTime * 3600
+msgstack /t 0x93000001 0x93001000 0x93000002 $nvram.D.10$
+msgstack /t 0x8500A2B5 0x85001000 0x0 0x0

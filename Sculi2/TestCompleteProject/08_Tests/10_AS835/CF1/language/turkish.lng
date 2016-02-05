@@ -1,0 +1,539 @@
+!version	00057
+#
+!font	UTF8
+!best-fit-font	iso8859-9
+
+# Language File / Sprachtexte File
+# Turkish / Türkisch
+!language	tur
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	Helezon taşıma miktarı [l/dak]
+2	Helezon taşıma miktarı [g/dak]
+3	Boru taşıma miktarı [l/dak]
+4	Boru taşıma miktarı [g/dak]
+5	Taşıma miktarı [l/dak]
+6	Taşıma miktarı [g/dak]
+7	Pompa sayısı
+8	Pense basıncı [bar]
+9	Eksantrik ayarlama süresi [s]
+10	Ana çıkrık çatallaşması
+11	Şahmerdan ağırlığı [kg]
+12	Şahmerdan ağırlığı [lb]
+13	Darbe / derinlik adımı
+14	İtme ve çekme silindiri sayısı
+15	Helezon uzunluğu [cm]
+16	Helezon uzunluğu [ft]
+17	PDE Grafiği yazıcıda
+18	PDE Grafiği kartta
+19	Derinlik adımı [cm]
+20	Derinlik adımı [in]
+21	PDE Tetikleme süresi [s]
+22	Beton miktarı / impuls [l/imp.]
+23	Beton miktarı / impuls [g/imp.]
+24	Beton bas.sens.ölçüm al. [bar]
+25	Beton bas.göst.skalası [bar]
+26	Kazık çapı [cm]
+27	Kazık çapı [in]
+28	Kazık kesiti [cm]
+29	Kazık kesiti [in]
+30	Göbek borusu çapı [cm]
+31	Göbek borusu çapı [in]
+32	Çukur kazma faktörü [%]
+33	Helezon çıkışı [cm]
+34	Helezon çıkışı [in]
+35	Çekme otom.başlatma bas. [bar]
+36	Çekme otom.durdurma bas. [bar]
+37	iz.veril.fazla bet.miktarı [%]
+38	Ekonomik devir sayısı
+39	Basıncı aşan mikt.ölç. (1=EVET)
+40	Çekme otom.azami basıncı [bar]
+41	Azami helezon basıncı [bar]
+42	Azami boru basıncı [bar]
+43	Azami basınç [bar]
+44	Helezon taşıma mikt.1 [l/dak]
+45	Helezon taşıma mikt.1 [g/dak]
+46	Helezon taşıma mikt.2 [l/dak]
+47	Helezon taşıma mikt.2 [g/dak]
+48	Helezon taşıma mikt.3 [l/dak]
+49	Helezon taşıma mikt.3 [g/dak]
+50	Helezon sayısı
+51	Boru tak.mikt.taş.mikt. [l/dak]
+52	Boru tak.mikt.taş.mikt. [g/dak]
+53	Besl.mikt.kavray.açın [l/dak]
+54	Besl.mikt.kavray.açın [g/dak]
+55	Besl.mikt.kavray.kapatın [l/dak]
+56	Besl.mikt.kavray.kapatın [g/dak]
+57	Maks basınç kavrayıc. açın [bar]
+58	Maks basınç kavrayıc. kapatın [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	Sütun başına bölüm sayısı
+62	Silo 1 özel ağırlığı [kg/dm³]
+63	Silo 1 özel ağırlığı [lb/ft³]
+64	Silo 2 özel ağırlığı [kg/dm³]
+65	Silo 2 özel ağırlığı [lb/ft³]
+66	Derinlik [m]
+67	Derinlik [ft]
+68	İlerleme yükselmesi [cm/dev]
+69	İlerleme yükselmesi [in/dev]
+70	Bağlama maddesi ağırlığı [kg/m]
+71	Bağlama maddesi ağırlığı [lb/ft]
+72	min. taşıma miktarı [%]
+73	torque limitation (1=YES)
+74	Boru tak.mikt.taş.mikt.2 [l/dak]
+75	Boru tak.mikt.taş.mikt.2 [g/dak]
+
+!LOGGER
+1	Başlama tarihi
+2	Başlama saati
+3	Bitiş tarihi
+4	Bitiş saati
+5	Baskı tarihi
+6	Baskı saati
+
+!PDESERV
+# English is fix in the system
+
+!PDE
+1	İşletme türü
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	Sayfa
+4	Kayıt Kaldırma
+5	Kayıt Alçaltma
+6	Kazık yariçapi [cm]
+7	Kazık yariçapi [in]
+8	Stil
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	Kelly delme işlemi
+200	Çift başlı delme
+300	CFA delme işlemi
+400	Sarsma ünitesi
+401	Alçaltmak
+402	Kaldırmak
+403	Alçaltmak/Kaldırmak
+404	Süre aşımı
+411	Sarsma ünitesini alçaltmak
+412	Sarsma ünitesini kaldırmak
+413	Sarsma ünit. Alça.&Kald.
+414	Sarsma ünit. süre aşımı
+500	Çekiç
+600	İtme&Çekme
+700	Hidrolik kepçe
+800	Şahmerdan kumandası
+900	Ekskavatör
+1000	Aktarma
+1100	Toprak karışımı
+1200	elektrikli vibratör
+1201	yedek sütun (sıkıştırma)
+1202	yedek sütun
+1211	el. vib. yedek sıkıştırma sütunu
+1212	el. vib. yedek sütunu
+1300	kuru karıştırma
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	Amplitüd [in/100]
+7	Beton basıncı [bar]
+2	Amplitüd [mm]
+3	Derinlik [cm]
+4	Derinlik [ft]
+5	Darbe sayısı
+6	Darbeler/Derinlik adımı
+8	Delme basıncı Helezon vida [bar]
+9	Delme basıncı Boru [bar]
+10	Delme basıncı [bar]
+11	Basınç Şahmerdan [bar]
+12	Basınç Sarsma ünitesi [bar]
+13	Delme gelişmesi [dev/m]
+14	Delme gelişmesi [dev/ft]
+15	Delme dönme momenti [kip.ft]
+16	Delme dönme momenti [kNm]
+17	Enerji/Darbe [kip.ft]
+18	Enerji/Darbe [kNm]
+19	Enerji/Derinlik adımı [kip.ft]
+20	Enerji/Derinlik adımı [kNm]
+21	Zaman [SS:dd:ss]
+22	Sıkıştırma kuvveti [kN]
+23	Sıkıştırma kuvveti [kip]
+24	İtme hızı [ft/dak]
+25	İtme hızı [m/dak]
+26	Frekans [Hz]
+27	Darbeler/dak
+28	Sarsma ünitesi [AÇIK/KAPALI]
+29	Sapma X [ft]
+30	Sapma X [cm]
+31	Sapma Y [ft]
+32	Sapma Y [cm]
+33	Darbe numarası
+34	Kaldırma yüksekliği [m]
+35	Kaldırma yüksekliği [ft]
+36	Kompresyon/Darbe [ft]
+37	Kompresyon/Darbe [m]
+38	Kompresyon kesin [ft]
+39	Kompresyon kesin [m]
+40	Önayar Frenleme yüksekliği [ft]
+41	Önayar Frenleme yüksekliği [m]
+42	Maks. Hız Vinç 1 [ft/dak]
+43	Maks. Hız Vinç 1 [m/dak]
+44	Maks. Hız Vinç 2 [ft/dak]
+45	Maks. Hız Vinç 2 [m/dak]
+46	Tarih [GG:AA:YY]
+47	Çalışma süresi [s]
+48	Beton miktarı [yd³]
+49	Beton miktarı [m³]
+50	Pozisyon numarası
+51	Şahmerdan halata ulaşıncaya kadarki süre [s]
+52	Kaldırma süresi [s]
+53	Alçaltma süresi [s]
+54	Önayar Darbeler
+55	Önayar Kaldırma yüksekliği [m]
+56	Önayar Kaldırma yüksekliği [ft]
+57	Önayar Kompresyon [m]
+58	Önayar Kompresyon [ft]
+59	Süre Ekskavatör işletimi [s]
+60	Periyod süresi [s]
+61	Yük Dökme malzeme [t]
+62	Toplam Çekme yükü [t]
+63	Süre Aktarma işletimi [s]
+64	Periyod yükü [t]
+65	Toplam Periyod yükü [t]
+66	Periyod yükü Dökme malzeme [t]
+67	Akım [A]
+68	Alçaltma Akım [A]
+69	Yan su [l/m]
+70	Uç su [l/m]
+71	Hava basıncı [bar]
+72	Otomatik AÇIK
+73	Gerilim [V]
+74	Kesinti
+75	Eğim [°]
+76	Devir sayısı [dev/dak]
+77	beton hacmi 1 [yd³]
+78	beton hacmi 1 [m³]
+79	beton hacmi 2 [yd³]
+80	beton hacmi 2 [m³]
+81	beton hacmi 3 [yd³]
+82	beton hacmi 3 [m³]
+83	Devir 1 [dev]
+84	Devir 2 [dev]
+85	Devir 3 [dev]
+86	Zaman [dak]
+87	beton hacmi [l/dak]
+88	beton hacmi [g/dak]
+89	min. sarsma basıncı [bar]
+90	maks. sarsma basıncı [bar]
+91	min. ileri itme hızı [ft/dak]
+92	min. ileri itme hızı [m/dak]
+93	maks. ileri itme hızı [ft/dak]
+94	maks. ileri itme hızı [m/dak]
+95	maks. delme basıncı 1 [bar]
+96	maks. delme basıncı 2 [bar]
+97	maks. delme basıncı 3 [bar]
+98	min. delme ilerlemesi 1 [dev/m]
+99	min. delme ilerlemesi 1 [dev/ft]
+100	min. delme ilerlemesi 2 [dev/m]
+101	min. delme ilerlemesi 2 [dev/ft]
+102	min. delme ilerlemesi 3 [dev/m]
+103	min. delme ilerlemesi 3 [dev/ft]
+104	min. karıştırma [dev]
+105	Karıştırma 1 [dev]
+106	Karıştırma 2 [dev]
+107	Derinlik başına beton hacmi [l/m]
+108	Derinlik başına beton hacmi [g/ft]
+109	Beton miktarı 1 [l/dak]
+110	Beton miktarı 1 [g/dak]
+111	Beton miktarı 2 [l/dak]
+112	Beton miktarı 2 [g/dak]
+113	Beton miktarı 3 [l/dak]
+114	Beton miktarı 3 [g/dak]
+115	Sarsıcı sıcaklığı [°C]
+116	Sarsıcı sıcaklığı [°F]
+117	maks. delme ilerlemesi 1 [dev/m]
+118	maks. delme ilerlemesi 1 [dev/ft]
+119	maks. delme ilerlemesi 2 [dev/m]
+120	maks. delme ilerlemesi 2 [dev/ft]
+121	maks. delme ilerlemesi 3 [dev/m]
+122	maks. delme ilerlemesi 3 [dev/ft]
+123	Karıştırma 3 [dev]
+124	min. ilerleme 1 [cm/dev]
+125	min. ilerleme 1 [in/dev]
+126	min. ilerleme 2 [cm/dev]
+127	min. ilerleme 2 [in/dev]
+128	min. ilerleme 3 [cm/dev]
+129	min. ilerleme 3 [in/dev]
+130	Bağlama maddesi miktarı [kg/dak]
+131	Bağlama maddesi miktarı [lb/dak]
+132	Bağlama maddesi miktarı 1 [kg/dak]
+133	Bağlama maddesi miktarı 1 [lb/dak]
+134	Bağlama maddesi miktarı 2 [kg/dak]
+135	Bağlama maddesi miktarı 2 [lb/dak]
+136	Bağlama maddesi miktarı 3 [kg/dak]
+137	Bağlama maddesi miktarı 3 [lb/dak]
+138	Bağlama maddesi ağırlığı 1 [kg]
+139	Bağlama maddesi ağırlığı 1 [lb]
+140	Bağlama maddesi ağırlığı 2 [kg]
+141	Bağlama maddesi ağırlığı 2 [lb]
+142	Bağlama maddesi ağırlığı 3 [kg]
+143	Bağlama maddesi ağırlığı 3 [lb]
+144	Der.baş.bağl.mad.ağırlığı [kg/m]
+145	Der.baş.bağl.mad.ağırlığı [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	Sarsma bas.Yük. [bar]
+1	Amplitüd [in]
+2	Amplitüd [mm]
+3	Darbeler/%s ft
+4	Darbeler/%s mm
+5	Derinlik [ft]
+6	Derinlik [m]
+7	Kompresyon [m]
+8	Sapma X [cm]
+9	Sapma X [in]
+10	Sapma Y [cm]
+11	Sapma Y [in]
+12	Beton basıncı [bar]
+13	Beton ba.Vida [bar]
+14	Beton bas.Boru [bar]
+15	Delme basıncı [bar]
+16	Sondaj basıncı [bar]
+17	Sondaj bas.Yük. [bar]
+19	Sarsma bas.Aza. [bar]
+20	Delme gelişm. [dev/m]
+21	Delme gelişm. [dev/ft]
+22	Delme dön.mo. [kip.ft]
+23	Delme dön.mo. [kNm]
+24	Enerji [kip.ft]
+25	Enerji [kNm]
+26	Enerji/%s ft [kip.ft]
+27	Enerji/%s mm [kNm]
+28	Sıkıştırma kuv. [kN]
+29	Sıkıştırma kuv. [kip]
+30	İtme hızı [ft/dak]
+31	İtme hızı [m/dak]
+32	Kaldırma hızı [ft/dak]
+33	Kaldırma hızı [m/dak]
+34	Alçaltma hızı [ft/dak]
+35	Alçaltma hızı [m/dak]
+36	Frekans [Hz]
+37	Akım [A]
+38	Akım Alçaltma [A]
+39	Yan su [l/m]
+40	Uç su [l/m]
+41	Zaman [s]
+42	Alçaltma süresi [s]
+43	Darbe [Numara]
+44	Sarsma basıncı [bar]
+45	Amplitüd [%]
+46	Delme basıncı 1 [bar]
+47	Delme basıncı 2 [bar]
+48	Delme basıncı 3 [bar]
+49	Delme gelişm.1 [dev/m]
+50	Delme gelişm.1 [dev/ft]
+51	Delme gelişm.2 [dev/m]
+52	Delme gelişm.2 [dev/ft]
+53	Delme gelişm.3 [dev/m]
+54	Delme gelişm.3 [dev/ft]
+55	Beton basın.1 [bar]
+56	Beton basın.2 [bar]
+57	Beton basın.3 [bar]
+58	beton hacmi [l/m]
+59	beton hacmi [g/ft]
+60	Bet.mikt.1 [l/dak]
+61	Bet.mikt.1 [g/dak]
+62	Bet.mikt.2 [l/dak]
+63	Bet.mikt.2 [g/dak]
+64	Bet.mikt.3 [l/dak]
+65	Bet.mikt.3 [g/dak]
+66	Karıştırma [dev]
+67	Dev.say.1 [dev/dak]
+68	Dev.say.2 [dev/dak]
+69	Dev.say.3 [dev/dak]
+70	Sarsıcı akımı [A]
+71	Giriş [cm/dev]
+72	Giriş [in/dev]
+73	Yüksel.1 [cm/dev]
+74	Yüksel.1 [in/dev]
+75	Yüksel.2 [cm/dev]
+76	Yüksel.2 [in/dev]
+77	Yüksel.3 [cm/dev]
+78	Yüksel.3 [in/dev]
+79	Bağl.mad. [kg/m]
+80	Bağl.mad. [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	İnşaat yeri
+2	Kazık numarası
+3	Kazık tipi(Beton;Tahta;Çelik)
+4	Kazık uzunluğu [m]
+5	Kazık yüzeyi [cm²]
+6	Kazık çapı [cm]
+7	Takma yeri numarası
+8	Kayıt numarası
+9	Sürücü numarası
+10	İş numarası
+11	Kompresyon noktası
+12	Seri numarası
+13	Cihaz numarası
+14	Kazık çapı [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	Derinlik adımı [ft]
+2	Derinlik adımı [mm]
+3	Maksimum derinlik [cm]
+4	Maksimum derinlik [ft]
+5	Darbeler toplam
+6	Enerji toplam [kip.ft]
+7	Enerji toplam [kNm]
+8	Şahmerdan ağırlığı [lb]
+9	Şahmerdan ağırlığı [kg]
+10	Dönme momenti göstergesi
+11	ABD birimleri
+12	ABD birimleri (kip)
+13	Kompresyon noktası
+14	Vinç 1 Etkin
+15	Vinç 2 Etkin
+16	Beton miktarı toplam [yd³]
+17	Beton miktarı toplam [m³]
+18	İmpuls sayısı(Beton pompası)
+19	Litre/İmpuls (Beton pompası)
+20	Önayar Darbeler
+21	Kompresyon toplam [m]
+22	Önayar Kompresyon [m]
+23	Önayar Kaldırma yüksekliği [m]
+24	Önayar Frenleme yüksekliği [m]
+25	Toplam süre [s]
+26	Zaman [s]
+27	Toplam Periyod sayısı
+28	Yük Ekskavatör boş [t]
+29	Toplam Dökme malzemesi [t]
+30	Toplam Ekskavatör dolu [t]
+31	Toplam Tarayıcı sayısı
+32	Boş ağırlık Askı [t]
+33	Toplam Periyod yükü [t]
+34	Toplam Periyod yükü toplam [t]
+35	Toplam Periyod yükü Dökme malzemesi [t]
+36	Süre Alçaltma işlemi [s]
+37	Maks. akım Alçaltma işlemi [A]
+38	Toplam periyoP süresi [s]
+39	Önayar Maks. akım [A]
+40	Derinlik Çekme kriteri [m]
+41	Derinlik Çekme kriteri 1 [m]
+42	Derinlik Çekme kriteri 2 [m]
+43	Önayar Süre 1 maks. [s]
+44	Önayar Yol 1 maks. [m]
+45	Önayar Süre 2 maks. [s]
+46	Önayar Yol 2 maks. [m]
+47	Önayar Süre 3 maks. [s]
+48	Önayar Yol 3 maks. [m]
+49	Toplam Yan su [l]
+50	Toplam Uç su [l]
+51	Ortalama hava basıncı [bar]
+52	Kıskaçlı kepçe işletimi
+53	Çekiç işletimi
+54	Hidr. İtme&Çekme işlet.
+55	Kelly delme işletimi
+56	Çift başlı delme işletimi
+57	CFA delme işletimi
+58	Sarsma ünit. işletimi
+59	Sarsma ünitesi
+60	(kip)
+61	(in / 100)
+62	KAPALI
+63	AÇIK
+64	asiri tüketim [%]
+65	beton hacmi [yd³]
+66	beton hacmi [m³]
+67	gal/In.(b.pmp.)
+68	Maksimum derinlik [m]
+69	Helezon sayısı
+70	Helezon uzunluğu [cm]
+71	Helezon uzunluğu [ft]
+72	gps X konumu [cm]
+73	gps Y konumu [cm]
+74	Tüketim [kWh]
+75	Başlama eğim [°]
+76	Bitiş eğim [°]
+77	Kazık uzunluğu [cm]
+78	Kazık uzunluğu [ft]
+79	Topl.bağl.mad. [kg]
+80	Topl.bağl.mad. [lb]
+81	ort. aralık [mm/dev]
+82	ort. aralık [in/dev]
+83	ort. matkap bas. [bar]
+84	ort. dön. hızı [dev/dak]
+85	ort. bağlayıcı [kg/m]
+86	ort. bağlayıcı [lb/ft]
+87	ort.bağl.akışı [kg/dak]
+88	ort.bağl.akışı [lb/dak]
+89	ambar 1 [kg]
+90	ambar 1 [lb]
+91	ambar 2 [kg]
+92	ambar 2 [lb]
+93	giriş yüksekliği [cm]
+94	giriş yüksekliği [ft]
+95	empty core [cm]
+96	empty core [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	kelly drilling
+200	double rotary drilling
+300	CFA drilling
+400	vibrator
+401	lowering
+402	lifting
+403	lowering/lifting
+404	over time
+411	vibrator lowering
+412	vibrator lifting
+413	vibrator lowering/lifting
+414	vibrator over time
+500	Hammer
+600	push&pull
+700	hydraulic grab
+800	dyn. compaction
+900	dragline
+1000	duty cycle
+1100	soil mixing
+1200	el. vibrator
+1201	repl. column (compaction)
+1202	repl. column
+1211	el. vibro RCC
+1212	el. vibro RC
+1300	dry mixing
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	job site
+2	pile number
+3	pile type(1concrete;2wood;3steel)
+4	pile length [m]
+5	pile area [cm^2]
+6	pile diameter [cm]
+7	slot number
+8	record number
+9	driver number
+10	job number
+11	compaction point
+12	serial number
+13	machine number
+14	pile diameter [in]

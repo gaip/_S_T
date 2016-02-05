@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="10.0">
+	<TestData Description="" Key="{B065A101-A13F-4CB3-8498-E02DC87B37EF}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps>
+					<Bitmap Name="Aliases.explorer" Data="61717A697000000001000000360400007801CD93EF4B535118C7BF417F407F42F4427A53AF428C5E4489D01B21C8A4C440CAFC9116522E7B11982815A2324CB2352DA43453C91F339DDB74DEB5A1A6DBDCF5477ADD0FDDD5ABFBEDE63653D0DBB9672605F6BE039FF33CE73EE7FBE5E1F0DCCBE9C9C7415732D94F134E1C700C274946D6413D7148ECA22842C231508C31E5458A535346BFFDAE4991EB2B80A1FE0C65A1FBF661BDDBE5438EDA066BF379F0FA528AAEF1021E75B420A3770AD70E30379EC5B23A97C2D49C427E572F6AE705E48F2EA2C91D00DB9E0E817902C7600146149750CBA850625945E1E40AEE8CBB60FD900AE7972B58FA9482D18673C8530D21A36F0A85060E2ACF267EE84A11E23EC36B9153BDDCD08F6ABD0A55BA5E3CD374639AF81FA5BF6FB263C41F86DDF402311F8BC82A037EB20EFAE634E895A9D0BF2534A56149958995BEAB14A6310505FD1A5C5759F060CC092614C5925581DD9D2025221811E45AE19D7D8DB5F10AB80D320ACF3C84C430799FA2012D32FBA75132E18271EB27B885CE43BD286E93F7F540DC9B83181A8428B452F6DD4AAC5B6AA9BE583D4CF5A5536EA2DF4167300676A29E62379583631E83D596E0BBEA2E8C3D39603AB3D1D5964BA9D2F520C7E4C48D011B64161E6351A20FC489471C1D8118DABC51BCDF88402184F18ADF44DD72082F1D01542E7A513EEF818C15506476E3A69AA57A5B7C175DA1845EEA43F269F3C7D0E289A2797D0B8AB5301A888F9CF8D438FDA8B4075036B781AC211665D3ABB0C776B0487A306F6EC34290E204F1D392F8D197F07947FA51927E242F391FC6736790E867A83E97CC90941F45B5CD0D7D200AAD7F0B5FBD11B40B213A6F6F56FCC8D2CC4066E551617621C9978D246336F6F6F7118FC70F91EEFC0B69F625EE9119CAFBC6E1966EFE2F9E8E3B68FDCFFFE87FCB7F01C01E500C" />
+					<Bitmap Name="Aliases.explorer.Start_menu" Data="61717A697000000001000000360400007801A5934D48146118C77F4AE0B543976E1D3BF5056EB7040F1146121E3B0549D4250F4B8764D9E8A019511ADB874986B46CA5E05E5283C8D2B6026B13435D5BCDCDB25DD35D77F663F663763EB6773F8C650702EB1D9E776698F9FFE679FECF338D272C3B282E8BD8F78AD8598E1AF6882BB1CACF4B37A53DCFFF1FAD4D16B613E75B1A8AEF6F7DD93BF6043519259788908B87C9C53650A45F28D13594CD10D9F51532C125D2DF7DC8CB33C84BD366BD2CFD95A18457C9AE0548AF7E21F56DD6AC4FC5512B18C958840ECF3487DF0468F89CA07BF127958C42BD95F96BE924A1FE6EA4A94922EE47CCDB2FB2BB6F1486FCF051A76E2A86140EFD6198F41999EC3D3BC6B003ADEB1CFEC6FD9C1EF1C08017DEA6C06B30F83558F4A39047B55ECFA6919F3FC6705E45BFDB4EA8B99EBE01278786DE71616E9D537E992B8BC2D3B2AF26BD92410DAEA0B81CA84F6F225D3E4B60729CE30F3BA91BB552EBEFE2C8AB5BA4A22586499FCBA20B46B32349FB884C4B4F9C0327C739D66BA376B00D7CD760A693F70B1F8AFDADD61B5A0E4355B00D27697A60B0ABCDA0A67E02ABCB05F7CF080F6DF0E336975E3B8B3362D2EB1A0586673EC5C1EB3AFB3A7438BA8CF5C60B5ADD7778199AC51D99A3E7D3186A62D3E45FDED03104232DEAE89F90B13FCB62ED0DE35B08A289DE14FAAB15672426E64C32EBF3621ACA0C4353452D39F4B22785DE5433AAF32FFC03DB894AFDD61CFECBF937F1361B4F" />
+				</NodeBitmaps>
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{A41774FA-ACCE-483C-B514-F3AA3A8769B3}">
+				<Data CheckMode="{73E6B7BF-A94B-4A3F-A056-5E3B503110A3}">
+					<CommonData WaitTimeout="5000" />
+					<ObjectSyntax LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}" Code="Aliases.CMD.Console;" />
+				</Data>
+				<Children>
+					<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+						<Data Description="Performs a single click on the specified button." Action="ClickButton">
+							<ObjectSyntax LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}" Code="Aliases.explorer.Start;" />
+						</Data>
+					</Operation>
+					<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+						<Data Description="Simulates a left-button single click in a window or control as specified (relative position, shift keys)." Action="Click">
+							<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+								<Parameter Name="ClientX" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+								<Parameter Name="ClientY" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+								<Parameter Name="Shift" DefVarType="12" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0">
+									<Values IsEnum="True">
+										<Value Type="1" Value="0" Text="skNoShift" />
+										<Value Type="1" Value="8192" Text="skShift" />
+										<Value Type="1" Value="32768" Text="skAlt" />
+										<Value Type="1" Value="16384" Text="skCtrl" />
+									</Values>
+								</Parameter>
+							</Parameters>
+							<ObjectSyntax LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}" Code="Aliases.explorer.Start_menu.Item.Frequently_used_programs.Command_Prompt;" />
+						</Data>
+					</Operation>
+				</Children>
+			</Operation>
+			<Operation Type="{CAAA7522-FB54-4521-BF2F-29D327FC9341}">
+				<Data Description="Simulates one or several keypresses." Action="Keys">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="Keys" DefVarType="8" VarType="8" ValueType="6" ValueValue="msconfig.exe[Enter]" />
+					</Parameters>
+					<ObjectSyntax LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}" Code="Aliases.CMD.Console;" />
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="getChildObject" Unit="object">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="Aliases.MSConfig" />
+						<Parameter Name="prop_name" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="WndClass" />
+						<Parameter Name="prop_value" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="SysTabControl32" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="clickTab" Unit="tab">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="control" DefVarType="12" DefValueType="0" DefValueValue="0" ParamType="{D44DB91E-FD74-4F67-BE3D-951A1238A9AD}" />
+						<Parameter Name="tab" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="Startup" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{6A1B4CEE-4FB8-46E2-BFBD-403C84342301}">
+				<Data Description="Delays the test execution for the specified time period.">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="ms" DefVarType="3" VarType="3" ValueType="1" ValueValue="5000" />
+						<Parameter Name="Str" DefVarType="8" DefValueType="6" DefValueValue="" VarType="8" ValueType="6" ValueValue="" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="file_storeMSConfigStartup" Unit="file">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="file" DefVarType="12" DefValueType="0" DefValueValue="0" VarType="8" ValueType="6" ValueValue="c:\startup.txt" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{CAAA7522-FB54-4521-BF2F-29D327FC9341}">
+				<Data Description="Terminates the process." Action="Terminate">
+					<ObjectSyntax LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}" Code="Aliases.MSConfig;" />
+				</Data>
+			</Operation>
+			<Operation Type="{CAAA7522-FB54-4521-BF2F-29D327FC9341}">
+				<Data Description="Terminates the process." Action="Terminate">
+					<ObjectSyntax LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}" Code="Aliases.CMD;" />
+				</Data>
+			</Operation>
+			<Operation Type="{66F32D5F-A5DB-420E-9CB4-3DB7CADE2692}">
+				<Data Description="Runs the &quot;Reboot&quot; tested application." TestedApp="Reboot">
+					<Parameters LangId="{E42909F2-4390-4F5D-94B8-FABF59BABFCE}">
+						<Parameter Name="Count" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="IgnoreRunning" DefVarType="11" DefValueType="7" DefValueValue="False" VarType="11" ValueType="7" ValueValue="False" />
+						<Parameter Name="Timeout" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+					</Parameters>
+				</Data>
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{98563641-BCFE-43AF-BA15-D6E6C25C9BA3}" />
+	<Parameters Key="{651881D2-36CC-43A0-827B-0B0E60B07E2C}" />
+</Root>

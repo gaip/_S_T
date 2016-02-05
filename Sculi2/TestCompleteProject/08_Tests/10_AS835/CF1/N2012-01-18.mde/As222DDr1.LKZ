@@ -1,0 +1,9 @@
+additional system 1 drilling drive 1
+start time	2012-01-18T16:00:13
+stop time	2012-01-18T16:28:17
+category			0	1	2	3	4	5	6	7	8	9	10	11
+revolutions casing drive 1 [rpm]	%MD1.528	%MD1.528	<0.5	[0.5..4[	[4..8[	[8..16[	[16..24[	[24..32[	[32..40[	[40..48[	[48..56[	[56..64[	[64..72[	>=72
+status gear box 1 drilling drive 1	%MX1.608	MXecM116Timeout	<1	>=1
+operation mode drilling drive 1	%MD1.547	%MD1.547	<1	[1..2[	[2..3[	[3..4[	>=4
+
+revolutions casing drive 1 [rpm]	status gear box 1 drilling drive 1	operation mode drilling drive 1	sum of time [sek]

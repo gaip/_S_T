@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="9.0">
+	<TestData Description="" Key="{470B6DA1-AD83-40C3-9CF7-CEFD314675ED}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps />
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="StartSCULi" Unit="uStartSCULi" />
+			</Operation>
+			<Operation Type="{206B0810-0B42-45AB-90F5-9F8DF0D669D2}">
+				<Data Description="Runs a script routine." TestName="StopSCULi" Unit="uStopSCULi" />
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{276AB2A1-0B26-4A95-A0FF-DE1814BC716A}" />
+	<Parameters Key="{B861C868-A311-4BBF-81B8-053E0606F5D3}" />
+</Root>

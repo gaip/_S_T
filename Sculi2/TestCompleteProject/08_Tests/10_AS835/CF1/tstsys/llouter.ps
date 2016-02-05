@@ -1,0 +1,89 @@
+%?class llouter
+%?version 99999
+
+% canmodule_get_count
+%!proc	canmodule_get_count
+%?subproc
+/canmodule_get_count {
+	/I_canline exch def	%?brief  %?use INP %?type DINT %?dflt 1
+	/O_module_count 0 def	%?brief  %?use OUT %?type DINT %?dflt 0
+	I_canline 1 eq {
+		0
+	} if
+	I_canline 2 eq {
+		0
+	} if
+	I_canline 3 eq {
+		0
+	} if
+	I_canline 4 eq {
+		0
+	} if
+} def
+
+% canmodule_get_info
+%!proc	canmodule_get_info
+%?subproc
+/canmodule_get_info {
+	/I_canline exch def	%?brief  %?use INP %?type DINT %?dflt 1
+	/I_module_idx exch def	%?brief  %?use INP %?type DINT %?dflt 1
+	/O_module_nr 0 def	%?brief  %?use OUT %?type DINT %?dflt 0
+	/O_channel_cnt 0 def	%?brief  %?use OUT %?type DINT %?dflt 0
+	I_canline 1 eq {
+	} if
+	I_canline 2 eq {
+	} if
+	I_canline 3 eq {
+	} if
+	I_canline 4 eq {
+	} if
+} def
+
+% canmodule_get_ident
+%!proc	canmodule_get_ident
+%?subproc
+/canmodule_get_ident {
+} def
+
+% canmodule_get_doc
+%!proc	canmodule_get_doc
+%?subproc
+/canmodule_get_doc {
+} def
+
+% canmodule_get_value
+%!proc	canmodule_get_value
+%?subproc
+/canmodule_get_value {
+} def
+
+% language_get_all
+%!proc	language_get_all
+%?subproc
+/language_get_all {
+	(TURKISH)
+	(SVENSKA)
+	(SUOMI)
+	(SLOVENSC)
+	(SLOVENCI)
+	(RUSSIAN)
+	(ROMANA)
+	(PORTUGUE)
+	(POLSKI)
+	(NORSK)
+	(NEDERLAN)
+	(MAGYAR)
+	(LIETUVIU)
+	(LATVIESU)
+	(ITALIANO)
+	(GREEK)
+	(FRANCAIS)
+	(ESPANOL)
+	(EESTI)
+	(DEUTSCH)
+	(DANSK)
+	(CESKY)
+	(BULGARIA)
+	(ENGLISH)
+	24
+} def

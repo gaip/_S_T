@@ -1,0 +1,39 @@
+rem autoexec.frc
+rem  location:		master 4
+rem  direction:	sending data from master 4 to PDE
+
+!version	00187
+
+rem Adjustments for external control
+
+_if MXenExtOperMode EQ 1
+
+rem set RX spare time 
+	rem forcen der RX spare time in ms
+	can_rxtime /c $CWecRXspareTime$
+	
+rem  set Baudrate 
+	_if CWecMaxBaudRate EQ 1
+		rem define baudrate of CAN line 3
+		can_conf /b 3 125
+	_endif
+	_if CWecMaxBaudRate EQ 2
+		rem define baudrate of CAN line 3
+		can_conf /b 3 250
+	_endif
+	_if CWecMaxBaudRate EQ 3
+		rem define baudrate of CAN line 3
+		can_conf /b 3 500
+	_endif
+	_if CWecMaxBaudRate EQ 4
+		rem define baudrate of CAN line 3
+		can_conf /b 3 1000
+	_endif
+
+rem set startup directly with adjusted baudrate	
+	_if	CXecBaudrateDire EQ 1
+		rem starts CAN line 3 direct with defined baudrate
+		can_conf /d	3
+	_endif
+_endif
+

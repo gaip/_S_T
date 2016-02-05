@@ -1,0 +1,51 @@
+rem autoexec.frc for Gen.6 Demonstrator
+rem lwtrab0 / 21.09.2010
+rem ***********************************
+
+rem Module config
+rem *************
+rem ECU
+can_conf /n 1 91
+can_conf /n 1 92
+can_conf /n 1 93
+rem digital input
+can_conf /u 2 33
+rem output
+can_conf /u 3 5
+can_conf /u 3 13
+can_conf /u 3 21
+can_conf /u 3 49
+rem fuel level sensor
+can_conf /n 3 105
+
+rem forcing
+rem ************
+rem digital inputs
+force IXSeatContact 1
+force IXBreakOilPressure 1
+force IXReturnFilter 1
+force IXEmergencyStop 1
+force IXErrorECU 1
+force IXFATTempLeft 1
+force IXFATTempRight 1
+force IXReplenishPressure 1
+force IXDriveLevUseInchBreak 1
+rem analog inputs
+force IRFuelSensor 660.0
+rem engine
+force IXLidEngRun 1
+force IXLidEngStaBatCharge 1
+force IREngHydOilTemp 77.0
+force IREngCoolWTemp 83.0
+force IREngOilPress 7.0
+force IREngActualSpeed 1677
+rem bank supply
+force IXDiagVoltBefBackUp 1
+force IXDiagVoltBef2ndPath 1
+force IXDiagVoltBefParkBreak QX2ndPath
+force IXDiagVoltBefOverSpProt QX2ndPath
+rem outputs
+force IXDiagVoltAft2ndPath QX2ndPath
+force IXDiagVoltAftOverSpProt QXOverSpProtect
+force IXDiagVoltAftParkBreak QXParkBreak
+force IXDiagVoltAftBackUp QXBackUpBuzzer

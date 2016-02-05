@@ -1,0 +1,24 @@
+!version 00168
+
+IOCONFIG_IA16_1_47_00057.bin	line.1	name.ioconfig	mod_nr.47	mod_typ.IA16	crc.0xFCDE	condition.%MX2.119=0
+IOCONFIG_IA16_1_47_00095.bin	line.1	name.ioconfig	mod_nr.47	mod_typ.IA16	crc.0x0E43	condition.%MX2.119=1
+IOCONFIG_IR02_1_83_00064.bin	line.1	name.ioconfig	mod_nr.83	mod_typ.IR02	crc.0x4252
+IOCONFIG_OD04_1_14_00071.bin	line.1	name.ioconfig	mod_nr.14	mod_typ.OD04	crc.0xB72D
+IOCONFIG_OA16_1_22_00118.bin	line.1	name.ioconfig	mod_nr.22	mod_typ.OA16	crc.0x1135
+IOCONFIG_IF02_1_55_00061.bin	line.1	name.ioconfig	mod_nr.55	mod_typ.IF02	crc.0x4572
+IOCONFIG_IA16_2_46_00058.bin	line.2	name.ioconfig	mod_nr.46	mod_typ.IA16	crc.0x283F
+IOCONFIG_SFTY_2_5_00074.bin	line.2	name.ioconfig	mod_nr.5	mod_typ.SFTY	crc.0x7686
+IOCONFIG_OD04_2_13_00072.bin	line.2	name.ioconfig	mod_nr.13	mod_typ.OD04	crc.0xB72D
+IOCONFIG_OA16_2_21_00069.bin	line.2	name.ioconfig	mod_nr.21	mod_typ.OA16	crc.0x5621
+IOCONFIG_OA16_2_23_00096.bIN	line.2	name.ioconfig	mod_nr.23	mod_typ.OA16	crc.0x655C
+IOCONFIG_IR02_2_82_00065.bin	line.2	name.ioconfig	mod_nr.82	mod_typ.IR02	crc.0x4252
+IOCONFIG_OD04_2_15_00073.bin	line.2	name.ioconfig	mod_nr.15	mod_typ.OD04	crc.0xB72D
+IOCONFIG_IA16_3_45_00091.bin    line.3	name.ioconfig	mod_nr.45	mod_typ.IA16	crc.0x12B8
+IOCONFIG_IA16_4_46_00060.bin	line.4	name.ioconfig	mod_nr.46	mod_typ.IA16	crc.0x7436
+IOCONFIG_IF02_4_54_00063.bin	line.4	name.ioconfig	mod_nr.54	mod_typ.IF02	crc.0x27E6
+IOCONFIG_IA16_4_45_00121.bin	line.4	name.ioconfig	mod_nr.45	mod_typ.IA16	crc.0x0D00
+IOCONFIG_IF02_4_53_00062.bin	line.4	name.ioconfig	mod_nr.53	mod_typ.IF02	crc.0x27E6
+IOCONFIG_IR02_4_81_00066.bin	line.4	name.ioconfig	mod_nr.81	mod_typ.IR02	crc.0x4252
+IOCONFIG_IR02_4_82_00067.bin	line.4	name.ioconfig	mod_nr.82	mod_typ.IR02	crc.0x4252
+
+io_compl.cnf	crc.0x058e59a8

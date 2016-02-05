@@ -1,0 +1,6 @@
+pressure of the fall back support of the luffing jib in [bar]
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:31
+date-time	pressure of the fall back support of the luffing jib in [bar]	angle of the main boom in [°]	angle of the luffing jib in [°]	load radius main boom in [m]	load radius luffing jib in [m]	maximum lifting hight main boom (head hight) in [m]	maximum lifting hight luffing jib (head hight) in [m]	number of lml mode
+	%MD1.64	%MD1.34	%MD1.35	%MD1.39	%MD1.40	%MD1.41	%MD1.42	%MD1.29
+	MDz6ExtAnalSign	MDvibPumpSignal	MDvibJoySignal	MDspeedHigh	MDaccelLow	MDaccelMedium	MDaccelHigh	MDfawJoySignal

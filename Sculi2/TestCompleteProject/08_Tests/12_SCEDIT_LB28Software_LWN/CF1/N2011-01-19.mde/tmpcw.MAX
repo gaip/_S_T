@@ -1,0 +1,9 @@
+cooling water temperature diesel engine 1 [°C]
+start time	2011-01-11T10:02:03
+stop time	2011-01-19T15:42:12
+date-time	cooling water temperature diesel engine 1 [°C]	engine speed in [rpm]	power diesel engine 1 [kW]	load on the main boom in [to]	operation mode	temperature hydraulic oil tank 1 [°C]	content switch coolant water	content switch coolant water
+	%MD1.2	%MD1.4	%MD1.201	%MD1.32	%MD1.205	%MD1.53	%IX2.91.41	%IX2.89.37
+	MDcoolWaterTemp	MDpresenEngSpeed	MD201	MDauxJoySignal	%MD1.205	MDz6JoySignal	IXengCoolWatLevE	%IX2.89.37
+2011-01-11T10:02:03	45	0	0	0	2	50	0	0
+2011-01-11T10:02:03	45	0	0	0	2	50	0	0
+2011-01-11T10:02:03	45	0	0	0	2	50.00005	0	0

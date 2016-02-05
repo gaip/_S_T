@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Swedish / Schwedisch
+%?language	swe
+
+%section: SCREEN
+/TSoilFlowAuger	(Forslingsvolym matarskruv) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Forslingsvolym matarskruv)
+/TSoilFlowCase	(Forslingsvolym rör) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Forslingsvolym rör)
+/TSoilFlow	(Forslingsvolym) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Forslingsvolym)
+/TSnumbOfPumps	(Pumpantal) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Pumpantal)
+/TSclampJawPress	(Klämtångstryck) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Klämtångstryck)
+/TSexcAutoTime	(Excenterns omställningstid) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Excenterns omställningstid)
+/TSramWeight	(Hejarvikt) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Hejarvikt)
+/TSblowsPerDepthStep	(Slag / djupsteg) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Slag / djupsteg)
+/TSnumbPuPuCylinder	(Antal push-and-pullcylindrar) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Antal push-and-pullcylindrar)
+/TSaugerLength	(Matarskruvslängd) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Matarskruvslängd)
+/TSconcVolPerImp	(Betongmängd / puls) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Betongmängd / puls)
+/TSscalConcPresSens	(Mätområde betongtrycksensor) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Mätområde betongtrycksensor)
+/TSscalConcPresDisp	(Skaldelning betongtrycksindikator) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Skaldelning betongtrycksindikator)
+/TSpileDiameter	(Påldiameter) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Påldiameter)
+/TSmaxPressAuger	(max. tryck snäcka) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (max. tryck snäcka)
+/TSmaxPressCase	(max. tryck rör) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (max. tryck rör)
+/TSmaxPressure	(max. tryck) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (max. tryck)
+/TSoilFlowAuger1	(Forslingsvolym matarskruv 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Forslingsvolym matarskruv 1)
+/TSoilFlowAuger2	(Forslingsvolym matarskruv 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Forslingsvolym matarskruv 2)
+/TSoilFlowAuger3	(Forslingsvolym matarskruv 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Forslingsvolym matarskruv 3)
+/TSnumbOfAugers	(Antal matarskruvar) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Antal matarskruvar)
+/TSoilFlowOscil	(Forslingsvol. höljesoscill.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Forslingsvol. höljesoscill.)
+/TSoilFlowGrabOpen	(öppna gripare bef. kvant.) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (öppna gripare bef. kvant.)
+/TSoilFlowGrabClose	(bef. kvant. stäng gripare) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (bef. kvant. stäng gripare)
+/TSmaxPressGrabOpen	(max. tryck öppna gripare) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (max. tryck öppna gripare)
+/TSmaxPressGrabClose	(max. tryck stäng gripare) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (max. tryck stäng gripare)
+/TSminOilFlow	(min. forslingsvolym) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (min. forslingsvolym)
+/TSoilFlowOscil2	(Forslingsvol. höljesoscill.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Forslingsvol. höljesoscill.2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

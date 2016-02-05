@@ -1,0 +1,10 @@
+hg2 rope speed in [m/min]
+start time	2011-04-12T08:15:53
+stop time	2011-05-03T08:25:31
+date-time	hg2 rope speed in [m/min]	revolutions diesel engine 1 [rpm]	analog pump signal hg2 in [%]	hg2 system pressure in [bar]
+	%MD1.48	%MD1.4	%MD1.17	%MD1.15
+	MDkeybx25Poti3	MDpresenEngSpeed	MDfawRopeSpeed	MDropeLenghtFaw
+2011-04-12T08:21:12	0	0	0	0
+2011-04-12T08:21:12	0	0	0	0
+2011-04-12T08:21:12	0	0	0	0
+2011-04-18T03:46:56	0	900	0	0

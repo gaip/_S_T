@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Spanish / Spanisch
+%?language	spa
+
+%section: SCREEN
+/TSoilFlowAuger	(Capac. caudal barr. sinfín) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Capac. caudal barr. sinfín)
+/TSoilFlowCase	(Capac. caudal tubo) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Capac. caudal tubo)
+/TSoilFlow	(Capac. caudal) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Capac. caudal)
+/TSnumbOfPumps	(Nº de bombas) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Nº de bombas)
+/TSclampJawPress	(Presión de pinzas de apriete) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Presión de pinzas de apriete)
+/TSexcAutoTime	(Tiempo de ajuste de excéntrica) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Tiempo de ajuste de excéntrica)
+/TSramWeight	(Peso de hincado) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Peso de hincado)
+/TSblowsPerDepthStep	(Golpes/paso de profundidad) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Golpes/paso de profundidad)
+/TSnumbPuPuCylinder	(Nº cilindros Push & Pull) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Nº cilindros Push & Pull)
+/TSaugerLength	(Longitud barr. sinfín) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Longitud barr. sinfín)
+/TSconcVolPerImp	(Cantidad de hormigón/imp.) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Cantidad de hormigón/imp.)
+/TSscalConcPresSens	(Ran.medic. sens. pres. horm.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Ran.medic. sens. pres. horm.)
+/TSscalConcPresDisp	(Escal. indic. presión horm.) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Escal. indic. presión horm.)
+/TSpileDiameter	(Diámetro pilote) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Diámetro pilote)
+/TSmaxPressAuger	(Presión máx. barr. sinfín) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Presión máx. barr. sinfín)
+/TSmaxPressCase	(Presión máx. tubo) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Presión máx. tubo)
+/TSmaxPressure	(Presión máx.) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (Presión máx.)
+/TSoilFlowAuger1	(Capac. caud. barr. sinf. 1) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (Capac. caud. barr. sinf. 1)
+/TSoilFlowAuger2	(Capac. caud. barr. sinf. 2) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (Capac. caud. barr. sinf. 2)
+/TSoilFlowAuger3	(Capac. caud. barr. sinf. 3) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (Capac. caud. barr. sinf. 3)
+/TSnumbOfAugers	(Nº barr. sinfín) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Nº barr. sinfín)
+/TSoilFlowOscil	(Capac. caudal máqu. entub.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Capac. caudal máqu. entub.)
+/TSoilFlowGrabOpen	(Caudal abrir pinzas) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Caudal abrir pinzas)
+/TSoilFlowGrabClose	(Caudal cerrar pinzas) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Caudal cerrar pinzas)
+/TSmaxPressGrabOpen	(Presión máx. abrir pinzas) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Presión máx. abrir pinzas)
+/TSmaxPressGrabClose	(Presión máx. cerrar pinzas) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Presión máx. cerrar pinzas)
+/TSminOilFlow	(capacio caudal min.) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (capacio caudal min.)
+/TSoilFlowOscil2	(Capac. caudal máqu. entub.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Capac. caudal máqu. entub.2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

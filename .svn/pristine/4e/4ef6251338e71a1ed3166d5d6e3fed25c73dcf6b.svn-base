@@ -1,0 +1,48 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity" x:Name="Screen_1_1_Name"
+	mc:Ignorable="d"
+	x:Class="Sculi2Screens.Screen_1_1"
+	Width="640" Height="480">
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<TextBlock HorizontalAlignment="Left" Style="{DynamicResource TitleLeft-Sketch}" VerticalAlignment="Top" Margin="50,0,0,0"><Run Language="fr-ch" Text="Motor D946"/></TextBlock>
+		<Button Content="&lt;-" HorizontalAlignment="Left" Style="{DynamicResource Button-Sketch}" VerticalAlignment="Top" Width="50" Height="50" FontSize="48">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<pi:NavigateToScreenAction TargetScreen="Sculi2Screens.Start_connection"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
+		<Button Content="Information" HorizontalAlignment="Left" Style="{DynamicResource Button-Sketch}" VerticalAlignment="Top" Width="189" Margin="50,126,0,0" Height="87.463">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<pi:NavigateToScreenAction TargetScreen="Sculi2Screens.Information"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
+		<Button Content="Messages" Style="{DynamicResource Button-Sketch}" VerticalAlignment="Top" Margin="243,126,208,0" Height="87.463">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<pi:NavigateToScreenAction TargetScreen="Sculi2Screens.Messages"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
+		<Button Content="Variables" Style="{DynamicResource Button-Sketch}" VerticalAlignment="Top" Margin="0,126,15,0" Height="87.463" HorizontalAlignment="Right" Width="189">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<pi:NavigateToScreenAction TargetScreen="Sculi2Screens.Variable_Ed"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
+		<Button Content="Oscilloscope" HorizontalAlignment="Left" Style="{DynamicResource Button-Sketch}" Width="189" Margin="50,217.463,0,175.074">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<pi:NavigateToScreenAction TargetScreen="Sculi2Screens.Oscilloscope"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
+	</Grid>
+</UserControl>

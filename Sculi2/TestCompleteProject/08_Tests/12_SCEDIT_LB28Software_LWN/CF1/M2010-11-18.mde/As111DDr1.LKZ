@@ -1,0 +1,12 @@
+additional system 1 drilling drive 1
+start time	2010-07-22T13:05:45
+stop time	2010-11-18T15:49:36
+category			0	1	2	3	4	5	6	7	8	9	10
+pressure P1 drilling drive 1 [bar]	%MD1.525	MDmdePrP1DDr1	<40	[40..80[	[80..120[	[120..160[	[160..200[	[200..240[	[240..280[	[280..320[	[320..360[	[360..400[	>=400
+pressure P2 drilling drive 1 [bar]	%MD1.526	MDmdePrP2DDr1	<40	[40..80[	[80..120[	[120..160[	[160..200[	[200..240[	[240..280[	[280..320[	[320..360[	[360..400[	>=400
+status gear box 1 drilling drive 1	%MX1.608	MXmdeStG1DDr1	<1	>=1
+operation mode drilling drive 1	%MD1.547	MDmdeDDrOm1	<1	[1..2[	[2..3[	[3..4[	>=4
+
+pressure P1 drilling drive 1 [bar]	pressure P2 drilling drive 1 [bar]	status gear box 1 drilling drive 1	operation mode drilling drive 1	sum of time [sek]
+0	0	0	0	85194.78
+0	0	0	4	57747.30

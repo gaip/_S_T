@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="config">
+			<Node name="resume">
+				<Prp name="enabled" type="B" value="0"/>
+				<Prp name="stepid" type="S" value=""/>
+			</Node>
+			<Node name="stepinfo">
+				<Prp name="caption" type="S" value="Manual Test"/>
+				<Prp name="contentkey" type="S" value="{65469E64-6206-4FD1-9340-4367450C0B36}"/>
+				<Prp name="description" type="S" value="Test description..."/>
+				<Prp name="enabled" type="B" value="-1"/>
+				<Prp name="iconfilename" type="S" value=""/>
+				<Prp name="id" type="S" value="TEST_0"/>
+				<Prp name="instructionsurl" type="S" value="Manual Test.htm"/>
+				<Prp name="kdtconvertfrom" type="S" value="{00000000-0000-0000-0000-000000000000}"/>
+				<Prp name="kdtmoniker" type="S" value=""/>
+				<Prp name="key" type="S" value="{F75C49D9-6B4C-4235-8CCB-B332009D8C70}"/>
+				<Prp name="notes" type="S" value=""/>
+				<Prp name="stepinfocount" type="I" value="0"/>
+				<Prp name="xmlfilename" type="S" value=""/>
+				<Prp name="xslfilename" type="S" value=""/>
+			</Node>
+			<Prp name="node name" type="S" value="ManualTest1"/>
+		</Node>
+		<Node name="data"/>
+		<Node name="settings"/>
+		<Node name="test data"/>
+		<Prp name="key" type="S" value="{775E3226-1E42-42A1-A2F4-8FCF1255E250}"/>
+		<Prp name="signature" type="S" value="{1C954CF7-8390-4813-A62A-51A10ADBF033}"/>
+		<Prp name="type" type="S" value="{1C954CF7-8390-4813-A62A-51A10ADBF033}"/>
+		<Prp name="typename" type="S" value="Manual Test"/>
+		<Prp name="version" type="I" value="2"/>
+	</Node>
+</Nodes>

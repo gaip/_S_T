@@ -1,0 +1,534 @@
+!version	00057
+#
+!font	UTF8
+!best-fit-font	iso8859-1
+
+# Language File / Sprachtexte File
+# English / Englisch
+!language	eng
+
+!SHELL
+# English is fix in the system
+
+!TESTSYS
+# English is fix in the system
+
+!SCREEN
+# !! max. 34 Zeichen !!
+1	flow rate auger [l/min]
+2	flow rate auger [g/min]
+3	flow rate casing [l/min]
+4	flow rate casing [g/min]
+5	flow rate [l/min]
+6	flow rate [g/min]
+7	number of pumps
+8	clamping tong pressure [bar]
+9	eccentric adjustment time [s]
+10	reevings main winch
+11	ram weight [kg]
+12	ram weight [lb]
+13	blows / depth step
+14	number of Push & Pull cylinders
+15	auger length [cm]
+16	auger length [ft]
+17	PDE graphic to printer
+18	PDE graphic to card
+19	depth step [cm]
+20	depth step [in]
+21	PDE triggertime [s]
+22	concrete volume / impulse [l/imp.]
+23	concrete volume / impulse [g/imp.]
+24	range concrete press. sensor [bar]
+25	scale conc. press. indication [bar]
+26	pile diameter [cm]
+27	pile diameter [in]
+28	pile width [cm]
+29	pile width [in]
+30	inner tube diameter [cm]
+31	inner tube diameter [in]
+32	sink factor [%]
+33	auger pitch [cm]
+34	auger pitch [in]
+35	pull-automatic start pressure [bar]
+36	pull-automatic stop pressure [bar]
+37	allowed over-consumption conc. [%]
+38	eco rev. speed
+39	vol. measuring over press. (1=YES)
+40	pull-automatic max. pressure [bar]
+41	max. pressure auger [bar]
+42	max. pressure casing [bar]
+43	max. pressure [bar]
+44	flow rate auger 1 [l/min]
+45	flow rate auger 1 [g/min]
+46	flow rate auger 2 [l/min]
+47	flow rate auger 2 [g/min]
+48	flow rate auger 3 [l/min]
+49	flow rate auger 3 [g/min]
+50	number of augers
+51	flow rate case oscillator [l/min]
+52	flow rate case oscillator [g/min]
+53	flow rate grab open [l/min]
+54	flow rate grab open [g/min]
+55	flow rate grab close [l/min]
+56	flow rate grab close [g/min]
+57	max. pressure grab open [bar]
+58	max. pressure grab close [bar]
+59	suspension volume [l/m]
+60	suspension volume [g/ft]
+61	sections in column
+62	specific weight silo 1 [kg/dm³]
+63	specific weight silo 1 [lb/ft³]
+64	specific weight silo 2 [kg/dm³]
+65	specific weight silo 2 [lb/ft³]
+66	depth [m]
+67	depth [ft]
+68	pitch of drillfeed [cm/r]
+69	pitch of drillfeed [in/r]
+70	binder weight [kg/m]
+71	binder weight [lb/ft]
+72	min. flow rate [%]
+73	torque limitation (1=YES)
+74	flow rate case oscillator 2 [l/min]
+75	flow rate case oscillator 2 [g/min]
+
+!LOGGER
+# English is fix in the system
+
+!PDESERV
+# English is fix in the system
+
+!PDE
+# English is fix in the system
+
+!PDE_GRAPH
+# !! max. 21 Zeichen !!
+1	...
+2	___
+3	page
+4	recording at lifting
+5	recording at lowering
+6	pile radius [cm]
+7	pile radius [in]
+8	style
+
+!PDECNF_MODE
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	kelly drilling
+200	double rotary drilling
+300	CFA drilling
+400	vibrator
+401	lowering
+402	lifting
+403	lowering/lifting
+404	over time
+411	vibrator lowering
+412	vibrator lifting
+413	vibrator lowering/lifting
+414	vibrator over time
+500	hammer
+600	push&pull
+700	hydraulic grab
+800	dyn. compaction
+900	dragline
+1000	duty cycle
+1100	soil mixing
+1200	el. vibrator
+1201	repl. column (compaction)
+1202	repl. column
+1211	el. vibro RCC
+1212	el. vibro RC
+1300	dry mixing
+
+!PDECNF_DATA
+# !! max. 35 UNICODE Zeichen !!
+1	amplitude [in/100]
+7	concrete pressure [bar]
+2	amplitude [mm]
+3	depth [cm]
+4	depth [ft]
+5	blow count
+6	blows/depth step
+8	drill pres.auger [bar]
+9	drill pres.casing [bar]
+10	drill pressure [bar]
+11	ram pressure [bar]
+12	vibrator pressure [bar]
+13	drill progress [r/m]
+14	drill progress [r/ft]
+15	drill torque [kip.ft]
+16	drill torque [kNm]
+17	energy/blow [kip.ft]
+18	energy/blow [kNm]
+19	energy/depth st. [kip.ft]
+20	energy/depth step [kNm]
+21	time [hh:mm:ss]
+22	crowd force [kN]
+23	crowd force [kip]
+24	crowd speed [ft/min]
+25	crowd speed [m/min]
+26	frequency [Hz]
+27	blows/min
+28	vibrator unit [ON/OFF]
+29	deviation X [ft]
+30	deviation X [cm]
+31	deviation Y [ft]
+32	deviation Y [cm]
+33	blow number
+34	hoisting height [m]
+35	hoisting height [ft]
+36	compaction/blow [ft]
+37	compaction/blow [m]
+38	absolute compaction [ft]
+39	absolute compaction [m]
+40	adjusted slow down height [ft]
+41	adjusted slow down height [m]
+42	max. speed winch 1 [ft/min]
+43	max. speed winch 1 [m/min]
+44	max. speed winch 2 [ft/min]
+45	max. speed winch 2 [m/min]
+46	date [dd:mm:yy]
+47	runtime [s]
+48	concrete volume [yd³]
+49	concrete volume [m³]
+50	point number
+51	pounder to rope time [s]
+52	hoisting time [s]
+53	lowering time [s]
+54	adjusted blows
+55	adjusted hoisting height [m]
+56	adjusted hoisting height [ft]
+57	adjusted compaction [m]
+58	adjusted compaction [ft]
+59	drag operation time [s]
+60	cycle time [s]
+61	bulk load [t]
+62	total drag load [t]
+63	cycle operation time [s]
+64	cycle load [t]
+65	total cycle load [t]
+66	bulk cycle load [t]
+67	current [A]
+68	current lowering [A]
+69	side water [l/m]
+70	tip water [l/m]
+71	air pressure [bar]
+72	automatic ON
+73	voltage [V]
+74	break
+75	incline [°]
+76	rev. speed [r/min]
+77	concrete volume 1 [yd³]
+78	concrete volume 1 [m³]
+79	concrete volume 2 [yd³]
+80	concrete volume 2 [m³]
+81	concrete volume 3 [yd³]
+82	concrete volume 3 [m³]
+83	revolution 1 [r]
+84	revolution 2 [r]
+85	revolution 3 [r]
+86	time [min]
+87	concrete flow [l/min]
+88	concrete flow [g/min]
+89	min. vibr. pressure [bar]
+90	max. vibr. pressure [bar]
+91	min. crowd speed [ft/min]
+92	min. crowd speed [m/min]
+93	max. crowd speed [ft/min]
+94	max. crowd speed [m/min]
+95	max. drill pressure 1 [bar]
+96	max. drill pressure 2 [bar]
+97	max. drill pressure 3 [bar]
+98	min. drill progress 1 [r/m]
+99	min. drill progress 1 [r/ft]
+100	min. drill progress 2 [r/m]
+101	min. drill progress 2 [r/ft]
+102	min. drill progress 3 [r/m]
+103	min. drill progress 3 [r/ft]
+104	min. mixing [r]
+105	mixing 1 [r]
+106	mixing 2 [r]
+107	concrete volume per depth [l/m]
+108	concrete volume per depth [g/ft]
+109	concrete flow 1 [l/min]
+110	concrete flow 1 [g/min]
+111	concrete flow 2 [l/min]
+112	concrete flow 2 [g/min]
+113	concrete flow 3 [l/min]
+114	concrete flow 3 [g/min]
+115	vibr. temperature [°C]
+116	vibr. temperature [°F]
+117	max. drill progress 1 [r/m]
+118	max. drill progress 1 [r/ft]
+119	max. drill progress 2 [r/m]
+120	max. drill progress 2 [r/ft]
+121	max. drill progress 3 [r/m]
+122	max. drill progress 3 [r/ft]
+123	mixing 3 [r]
+124	min. pitch 1 [cm/r]
+125	min. pitch 1 [in/r]
+126	min. pitch 2 [cm/r]
+127	min. pitch 2 [in/r]
+128	min. pitch 3 [cm/r]
+129	min. pitch 3 [in/r]
+130	binder flow [kg/min]
+131	binder flow [lb/min]
+132	binder flow 1 [kg/min]
+133	binder flow 1 [lb/min]
+134	binder flow 2 [kg/min]
+135	binder flow 2 [lb/min]
+136	binder flow 3 [kg/min]
+137	binder flow 3 [lb/min]
+138	binder weight 1 [kg]
+139	binder weight 1 [lb]
+140	binder weight 2 [kg]
+141	binder weight 2 [lb]
+142	binder weight 3 [kg]
+143	binder weight 3 [lb]
+144	binder weight per depth [kg/m]
+145	binder weight per depth [lb/ft]
+
+!PDECNF_DATA_SHORT
+# !! max. 18 Zeichen !!
+18	vibr.pr.lift. [bar]
+1	amplitude [in]
+2	amplitude [mm]
+3	blows/%s ft
+4	blows/%s mm
+5	depth [ft]
+6	depth [m]
+7	compaction [m]
+8	deviation X [cm]
+9	deviation X [in]
+10	deviation Y [cm]
+11	deviation Y [in]
+12	conc. press. [bar]
+13	auger press. [bar]
+14	casing press. [bar]
+15	drill press. [bar]
+16	ram pressure [bar]
+17	ram.pr.lift. [bar]
+19	vibr.pr.lower [bar]
+20	drill progr. [r/m]
+21	drill progr. [r/ft]
+22	drill torq. [kip.ft]
+23	drill torq. [kNm]
+24	energy [kip.ft]
+25	energy [kNm]
+26	energy/%s ft [kip.ft]
+27	energy/%s mm [kNm]
+28	crowd force [kN]
+29	crowd force [kip]
+30	crowd speed [ft/min]
+31	crowd speed [m/min]
+32	speed lift. [ft/min]
+33	speed lift. [m/min]
+34	speed lower. [ft/min]
+35	speed lower. [m/min]
+36	frequency [Hz]
+37	current [A]
+38	current lowering [A]
+39	side water [l/m]
+40	tip water [l/m]
+41	time [s]
+42	time lowering [s]
+43	blows [number]
+44	vibr. press. [bar]
+45	amplitude [%]
+46	drill pres.1 [bar]
+47	drill pres.2 [bar]
+48	drill pres.3 [bar]
+49	drill prog.1 [r/m]
+50	drill prog.1 [r/ft]
+51	drill prog.2 [r/m]
+52	drill prog.2 [r/ft]
+53	drill prog.3 [r/m]
+54	drill prog.3 [r/ft]
+55	conc. pres.1 [bar]
+56	conc. pres.2 [bar]
+57	conc. pres.3 [bar]
+58	conc.volume [l/m]
+59	conc.volume [g/ft]
+60	conc.flow1 [l/min]
+61	conc.flow1 [g/min]
+62	conc.flow2 [l/min]
+63	conc.flow2 [g/min]
+64	conc.flow3 [l/min]
+65	conc.flow3 [g/min]
+66	mixing [r]
+67	rev.speed1 [r/min]
+68	rev.speed2 [r/min]
+69	rev.speed3 [r/min]
+70	vibr. current [A]
+71	intrusion [cm/r]
+72	intrusion [in/r]
+73	pitch 1 [cm/r]
+74	pitch 1 [in/r]
+75	pitch 2 [cm/r]
+76	pitch 2 [in/r]
+77	pitch 3 [cm/r]
+78	pitch 3 [in/r]
+79	binder [kg/m]
+80	binder [lb/ft]
+
+!PDECNF_INPUT
+# !! max. 35 UNICODE Zeichen !!
+1	job site
+2	pile number
+3	pile type(1concrete;2wood;3steel)
+4	pile length [m]
+5	pile area [cm²]
+6	pile diameter [cm]
+7	slot number
+8	record number
+9	driver number
+10	job number
+11	compaction point
+12	serial number
+13	machine number
+14	pile diameter [in]
+
+!PDECNF_HEAD
+# !! max. 80 UNICODE Zeichen !!
+1	depth step [ft]
+2	depth step [mm]
+3	maximum depth [cm]
+4	maximum depth [ft]
+5	total blows
+6	total energy [kip.ft]
+7	total energy [kNm]
+8	ram weight [lb]
+9	ram weight [kg]
+10	torque indication
+11	US units
+12	US units (kip)
+13	compaction point
+14	winch 1 active
+15	winch 2 active
+16	total concrete vol. [yd³]
+17	total concrete vol. [m³]
+18	no. imp. (concrete pump)
+19	liter/imp. (concrete pump)
+20	adjusted blows
+21	total compaction [m]
+22	adjusted compaction [m]
+23	adjusted hoisting height [m]
+24	adjusted slow down height [m]
+25	total time [s]
+26	time [s]
+27	total cycles
+28	empty drag load [t]
+29	sum bulk load [t]
+30	sum drag load [t]
+31	total triggers
+32	empty suspension load [t]
+33	sum cycle load [t]
+34	sum complete cycle load [t]
+35	sum bulk cycle load [t]
+36	time lowering process [s]
+37	max. current lowering [A]
+38	total cycle time [s]
+39	adjusted max. current [A]
+40	depth switch [m]
+41	depth switch 1 [m]
+42	depth switch 2 [m]
+43	adjusted time 1 max. [s]
+44	adjusted step 1 max. [m]
+45	adjusted time 2 max. [s]
+46	adjusted step 2 max. [m]
+47	adjusted time 3 max. [s]
+48	adjusted step 3 max. [m]
+49	side water total [l]
+50	tip water total [l]
+51	average air pressure [bar]
+52	grab operation
+53	hammer operation
+54	push-pull press operation
+55	kelly drilling operation
+56	double rotary drilling operation
+57	CFA drilling operation
+58	vibrator operation
+59	vibrator unit
+60	(kip)
+61	(in / 100)
+62	OFF
+63	ON
+64	over consumption [%]
+65	concrete vol. [yd³]
+66	concrete vol. [m³]
+67	gallons/imp. (concrete pump)
+68	maximum depth [m]
+69	used augers
+70	auger length [cm]
+71	auger length [ft]
+72	gps position X [cm]
+73	gps position Y [cm]
+74	consumption [kWh]
+75	start incline [°]
+76	stop incline [°]
+77	pile length [cm]
+78	pile length [ft]
+79	total binder [kg]
+80	total binder [lb]
+81	avg. pitch [mm/r]
+82	avg. pitch [in/r]
+83	avg. drill press. [bar]
+84	avg. rev. speed [r/min]
+85	avg. binder [kg/m]
+86	avg. binder [lb/ft]
+87	avg. binder flow [kg/min]
+88	avg. binder flow [lb/min]
+89	silo 1 [kg]
+90	silo 1 [lb]
+91	silo 2 [kg]
+92	silo 2 [lb]
+93	insertion height [cm]
+94	insertion height [ft]
+95	empty core [cm]
+96	empty core [ft]
+
+!best-fit-font	iso8859-1
+
+!PDECNF_MODE_CONS
+# !! max. 50 UNICODE Zeichen (zusammengesetzte z.B.411 max. 100 Zeichen) !!
+100	kelly drilling
+200	double rotary drilling
+300	CFA drilling
+400	vibrator
+401	lowering
+402	lifting
+403	lowering/lifting
+404	over time
+411	vibrator lowering
+412	vibrator lifting
+413	vibrator lowering/lifting
+414	vibrator over time
+500	hammer
+600	push&pull
+700	hydraulic grab
+800	dyn. compaction
+900	dragline
+1000	duty cycle
+1100	soil mixing
+1200	el. vibrator
+1201	repl. column (compaction)
+1202	repl. column
+1211	el. vibro RCC
+1212	el. vibro RC
+1300	dry mixing
+
+!PDECNF_INPUT_CONS
+# !! max. 35 UNICODE Zeichen !!
+1	job site
+2	pile number
+3	pile type(1concrete;2wood;3steel)
+4	pile length [m]
+5	pile area [cm^2]
+6	pile diameter [cm]
+7	slot number
+8	record number
+9	driver number
+10	job number
+11	compaction point
+12	serial number
+13	machine number
+14	pile diameter [in]

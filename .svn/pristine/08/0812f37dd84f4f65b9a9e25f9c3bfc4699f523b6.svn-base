@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="stack"/>
+		<Node name="item 4">
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value=""/>
+		</Node>
+		<Node name="message 6">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="37"/>
+					<Prp name="object top" type="I" value="31"/>
+					<Prp name="line #" type="I" value="30"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="object right" type="I" value="145"/>
+					<Prp name="datetime" type="D" value="41473.6786484259"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="52"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.SculiForm.ActionMainMenuBar.TStandardMenuButton4"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="130"/>
+					<Prp name="object left" type="I" value="115"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="date" type="D" value="41473.6786507176"/>
+			<Prp name="line no" type="I" value="30"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (15, 6) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.Sculi.SculiForm.ActionMainMenuBar.TStandardMenuButton4&#xA;(Sys.Process(&quot;Sculi&quot;).VCLObject(&quot;SculiForm&quot;).VCLObject(&quot;ActionMainMenuBar&quot;).VCLObject(&quot;TStandardMenuButton_4&quot;))"/>
+		</Node>
+		<Node name="n-0">
+			<Node name="data">
+				<Prp name="d-0" type="D" value="41473.6787823495"/>
+			</Node>
+			<Prp name="countertype" type="I" value="4"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="length" type="I" value="1"/>
+			<Prp name="name" type="S" value="Date&amp;Time"/>
+			<Prp name="isinteger" type="B" value="0"/>
+			<Prp name="color" type="I" value="0"/>
+			<Prp name="id" type="S" value="{5C4EF7C7-C2C9-43CB-85AE-66E5E6E35778}"/>
+			<Prp name="columnindex" type="I" value="0"/>
+			<Prp name="description" type="S" value=""/>
+		</Node>
+		<Node name="message 15">
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="4"/>
+			<Prp name="picture" type="S" value="Picture5.png"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="4"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Script execution was interrupted."/>
+			<Prp name="date" type="D" value="41473.6787823495"/>
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="PME_Customer"/>
+		</Node>
+		<Node name="message 14">
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="3"/>
+			<Prp name="picture" type="S" value="Picture4.png"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="3"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="date" type="D" value="41473.6787808449"/>
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;ClickButton&quot; method or property of the &quot;VCLObject(&quot;LicenseFileManagementForm&quot;).VCLObject(&quot;BtnClose&quot;)&quot; object that does not exist."/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="item 0">
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="PME_Customer"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="500"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="There is (are) 1 running instance(s) of &quot;C:\Program Files (x86)\Liebherr\Sculi\Sculi.exe&quot;. New instances will not be launched."/>
+			<Prp name="date" type="D" value="41473.678433125"/>
+			<Prp name="line no" type="I" value="17"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+		</Node>
+		<Node name="message 9">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="455"/>
+					<Prp name="line #" type="I" value="36"/>
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="object right" type="I" value="595"/>
+					<Prp name="datetime" type="D" value="41473.6787048495"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="470"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.dlgChooseLicenseFileToImport.ComboBoxEx32.ComboBox.Edit"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object left" type="I" value="201"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The text 'C:\Users\lmbtuh0\Desktop\Louis Lantier\LicenseFile-1J PME Customer Pack &amp; EDC Light Pack' was entered in the text editor."/>
+			<Prp name="date" type="D" value="41473.6787054282"/>
+			<Prp name="line no" type="I" value="36"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.Sculi.dlgChooseLicenseFileToImport.ComboBoxEx32.ComboBox.Edit&#xA;(Sys.Process(&quot;Sculi&quot;).Window(&quot;#32770&quot;, &quot;Choose License File to Import...&quot;, 1).Window(&quot;ComboBoxEx32&quot;, &quot;&quot;, 1).Window(&quot;ComboBox&quot;, &quot;&quot;, 1).Window(&quot;Edit&quot;, &quot;&quot;, 1))"/>
+		</Node>
+		<Node name="message 12">
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="stack beginning" type="I" value="1"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Unable to find the object VCLObject(&quot;LicenseFileManagementForm&quot;). See Additional Information for details."/>
+			<Prp name="date" type="D" value="41473.6787776042"/>
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+		</Node>
+		<Node name="message 5">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="40"/>
+					<Prp name="object top" type="I" value="30"/>
+					<Prp name="line #" type="I" value="29"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="object right" type="I" value="873"/>
+					<Prp name="datetime" type="D" value="41473.6786462037"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="53"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.SculiForm.ActionMainMenuBar"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="146"/>
+					<Prp name="object left" type="I" value="8"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="date" type="D" value="41473.6786471759"/>
+			<Prp name="line no" type="I" value="29"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (138, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.Sculi.SculiForm.ActionMainMenuBar&#xA;(Sys.Process(&quot;Sculi&quot;).VCLObject(&quot;SculiForm&quot;).VCLObject(&quot;ActionMainMenuBar&quot;))"/>
+		</Node>
+		<Node name="message 4">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="40"/>
+					<Prp name="object top" type="I" value="31"/>
+					<Prp name="line #" type="I" value="28"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="object right" type="I" value="145"/>
+					<Prp name="datetime" type="D" value="41473.6786426042"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="52"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.SculiForm.ActionMainMenuBar.TStandardMenuButton4"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="133"/>
+					<Prp name="object left" type="I" value="115"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="date" type="D" value="41473.6786451273"/>
+			<Prp name="line no" type="I" value="28"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (18, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.Sculi.SculiForm.ActionMainMenuBar.TStandardMenuButton4&#xA;(Sys.Process(&quot;Sculi&quot;).VCLObject(&quot;SculiForm&quot;).VCLObject(&quot;ActionMainMenuBar&quot;).VCLObject(&quot;TStandardMenuButton_4&quot;))"/>
+		</Node>
+		<Node name="message 13">
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="2"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="date" type="D" value="41473.6787793403"/>
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;VCLObject&quot; method or property of the &quot;VCLObject(&quot;LicenseFileManagementForm&quot;)&quot; object that does not exist."/>
+		</Node>
+		<Node name="message 8">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="241"/>
+					<Prp name="object top" type="I" value="230"/>
+					<Prp name="line #" type="I" value="35"/>
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="object right" type="I" value="589"/>
+					<Prp name="datetime" type="D" value="41473.6787014815"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="252"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.VCLObject(&quot;LicenseFileManagementForm&quot;).VCLObject(&quot;GroupBox2&quot;).VCLObject(&quot;BtnImport&quot;)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="543"/>
+					<Prp name="object left" type="I" value="497"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="date" type="D" value="41473.6787023727"/>
+			<Prp name="line no" type="I" value="35"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys.Process(&quot;Sculi&quot;).VCLObject(&quot;LicenseFileManagementForm&quot;).VCLObject(&quot;GroupBox2&quot;).VCLObject(&quot;BtnImport&quot;)"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="PME_Customer"/>
+		</Node>
+		<Node name="message 10">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="492"/>
+					<Prp name="object top" type="I" value="479"/>
+					<Prp name="line #" type="I" value="38"/>
+					<Prp name="image file name" type="S" value="visImage8.png"/>
+					<Prp name="object right" type="I" value="715"/>
+					<Prp name="datetime" type="D" value="41473.6787193519"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="505"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.dlgChooseLicenseFileToImport.btnOpen"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="671"/>
+					<Prp name="object left" type="I" value="627"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="date" type="D" value="41473.6787200926"/>
+			<Prp name="line no" type="I" value="38"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.Sculi.dlgChooseLicenseFileToImport.btnOpen&#xA;(Sys.Process(&quot;Sculi&quot;).Window(&quot;#32770&quot;, &quot;Choose License File to Import...&quot;, 1).Window(&quot;Button&quot;, &quot;&amp;Open&quot;, 1))"/>
+		</Node>
+		<Node name="message 11">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="134"/>
+					<Prp name="object top" type="I" value="121"/>
+					<Prp name="line #" type="I" value="41"/>
+					<Prp name="image file name" type="S" value="visImage9.png"/>
+					<Prp name="object right" type="I" value="284"/>
+					<Prp name="datetime" type="D" value="41473.6787219444"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="147"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.dlgInformation.btnOK"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="240"/>
+					<Prp name="object left" type="I" value="196"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="date" type="D" value="41473.6787226736"/>
+			<Prp name="line no" type="I" value="41"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.Sculi.dlgInformation.btnOK&#xA;(Sys.Process(&quot;Sculi&quot;).Window(&quot;#32770&quot;, &quot;Information&quot;, 1).Window(&quot;Button&quot;, &quot;OK&quot;, 1))"/>
+		</Node>
+		<Node name="message 7">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="122"/>
+					<Prp name="object top" type="I" value="112"/>
+					<Prp name="line #" type="I" value="32"/>
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="object right" type="I" value="165"/>
+					<Prp name="datetime" type="D" value="41473.6786758565"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="132"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.TStandardMenuPopup.TStandardMenuItem2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="89"/>
+					<Prp name="object left" type="I" value="2"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="date" type="D" value="41473.6786765394"/>
+			<Prp name="line no" type="I" value="32"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (87, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.Sculi.TStandardMenuPopup.TStandardMenuItem2&#xA;(Sys.Process(&quot;Sculi&quot;).Window(&quot;TStandardMenuPopup&quot;, &quot;&quot;, 1).VCLObject(&quot;TStandardMenuItem_7&quot;))"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="0"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The object does not exist. See Additional Information for details."/>
+			<Prp name="date" type="D" value="41473.6785515856"/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Courier New, Arial; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;body&gt;&lt;p&gt;An error occurred while accessing the &quot;DblClickItem&quot; method or property of the &quot;&lt;a href=&quot;lnamemapping://{1E86AF42-E440-4D74-B498-8A70FCCE6E1A}.{40088961-C9BE-4574-B3CE-251D70E689F9}&quot;&gt;lbTokens&lt;/a&gt;&quot; object.&lt;br/&gt;The object or one of its parent objects was not found.&lt;/p&gt;&lt;h4&gt;Object Whose Method or Property Was Accessed&lt;/h4&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; noborder&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Alias:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Aliases.Sculi.TokenChoiceForm.lbTokens&lt;/td&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Name mapping item:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;NameMapping.Sys.Sculi.TokenChoiceForm.lbTokens&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h4&gt;Object That Was Not Found&lt;/h4&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Alias:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;lnamemapping://{1E86AF42-E440-4D74-B498-8A70FCCE6E1A}.{8F78D255-7078-456D-A72E-7503740BB9FE}&quot;&gt;Aliases.Sculi.TokenChoiceForm&lt;/a&gt;&lt;/td&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Name mapping item:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;namemapping://{1E86AF42-E440-4D74-B498-8A70FCCE6E1A}.{A9C960D9-BCA1-4952-A3C7-9B61165F1654}&quot;&gt;NameMapping.Sys.Sculi.TokenChoiceForm&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;Click the link above to view and configure mapping settings for the missing object.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;aqa-help://2201&quot;&gt;Learn about possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+		</Node>
+		<Node name="message 3">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="90"/>
+					<Prp name="object top" type="I" value="79"/>
+					<Prp name="line #" type="I" value="23"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="object right" type="I" value="236"/>
+					<Prp name="datetime" type="D" value="41473.6786171644"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="102"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.WinformsUIAskedOnceAndCachedForm.buttonOk"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="198"/>
+					<Prp name="object left" type="I" value="161"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="date" type="D" value="41473.6786177431"/>
+			<Prp name="line no" type="I" value="23"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.Sculi.WinformsUIAskedOnceAndCachedForm.buttonOk&#xA;(Sys.Process(&quot;Sculi&quot;).WinFormsObject(&quot;WinformsUIAskedOnceAndCachedForm&quot;).WinFormsObject(&quot;buttonOk&quot;))"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="PME_Customer"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{8423B12B-D8E9-4D29-8076-D0B4D8B7D205}"/>
+		</Node>
+		<Node name="message 2">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="45"/>
+					<Prp name="line #" type="I" value="22"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="object right" type="I" value="317"/>
+					<Prp name="datetime" type="D" value="41473.6786099306"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object bottom" type="I" value="65"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.WinformsUIAskedOnceAndCachedForm.PasswordBox"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object left" type="I" value="67"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The text 'Liebherr-2' was entered in the text editor."/>
+			<Prp name="date" type="D" value="41473.6786103472"/>
+			<Prp name="line no" type="I" value="22"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.Sculi.WinformsUIAskedOnceAndCachedForm.PasswordBox&#xA;(Sys.Process(&quot;Sculi&quot;).WinFormsObject(&quot;WinformsUIAskedOnceAndCachedForm&quot;).WinFormsObject(&quot;PasswordBox&quot;))"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+		<Prp name="perfcounterslength" type="I" value="1"/>
+	</Node>
+</Nodes>

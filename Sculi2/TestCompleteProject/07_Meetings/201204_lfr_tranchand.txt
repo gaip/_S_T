@@ -1,0 +1,44 @@
+Company Product Lead
+---------------------
+- LFR --> côté machine, pas discussion côté moteur
+- 
+
+- oscilloscope, outil clé
+- échantillonage
+- zoom, problème de proportion (dans DC-Desk, la proportion est forcée) 
+
+- enregistrement en utilisant un oscilloscope, --> envoie à la centrale
+- remote connection pour configuration de Sculi
+- envoyer un fichier de configuration afin de déterminer ce qui doit être analyser (script?)
+- nom des variables/paramètre est compliqué
+
+- changement d'échelle utilisant le double-click (aujourd'hui, uniquement disponible par F2)
+- configuration des pointillés dans l'oscilloscope de Sculi (perturbation)
+- utilisation générale de l'oscilloscope dans Sculi est compliquée
+- 
+- Ecriture blanc sur fond noir (soleil)
+- customization des fonds
+
+- courbe sur 2 variables (timeline est la vision de la mesure) (une mesure représentée en fonction d'une autre mesure au lieu du temps).
+-
+- 
+- création de rapport d'inspection individuel 
+- rapport de service (control du service réalisé, ....)
+- 
+
+Dc-Desk vs Sculi
+-----------------
+- Oscilloscope est mieux
+- Catégorisation des variables/mesures/fonctions/curves
+- Dans le cas de problème avancé, un niveau expert sera toujours nécessaire (variable editor, message analyzer, oscilloscope)
+- coupure des cylindre, (click-test), 
+
+Tranchand
+-----------
+- oscilloscope remplace un dashboard
+-  
+
+Tests / Outils
+--------------
+- oscilloscope disponible pour tous les outils afin de pouvoir suivre les valeurs en fonctions du temps.
+-

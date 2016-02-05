@@ -1,0 +1,39 @@
+%?version	00004
+%?class	lllng
+
+%font	UTF8
+%Hungarian / Ungarisch
+%?language	hun
+
+%section: SCREEN
+/TSoilFlowAuger	(Csiga száll. mennyisége) def	%?use CONST	%?type STRI	%?brief flow rate auger	%?dflt (Csiga száll. mennyisége)
+/TSoilFlowCase	(Cső száll. mennyisége) def	%?use CONST	%?type STRI	%?brief flow rate casing	%?dflt (Cső száll. mennyisége)
+/TSoilFlow	(Szállított mennyiség) def	%?use CONST	%?type STRI	%?brief flow rate	%?dflt (Szállított mennyiség)
+/TSnumbOfPumps	(Szivattyúk száma) def	%?use CONST	%?type STRI	%?brief number of pumps	%?dflt (Szivattyúk száma)
+/TSclampJawPress	(Megfogó nyomása) def	%?use CONST	%?type STRI	%?brief clamping tong pressure	%?dflt (Megfogó nyomása)
+/TSexcAutoTime	(Excenter beáll. idő) def	%?use CONST	%?type STRI	%?brief eccentric adjustment time	%?dflt (Excenter beáll. idő)
+/TSramWeight	(Döngölő erő) def	%?use CONST	%?type STRI	%?brief ram weight	%?dflt (Döngölő erő)
+/TSblowsPerDepthStep	(Kalapács / mélységi lépés) def	%?use CONST	%?type STRI	%?brief blows / depth step	%?dflt (Kalapács / mélységi lépés)
+/TSnumbPuPuCylinder	(Henger lökés és húzás szám) def	%?use CONST	%?type STRI	%?brief number of Push & Pull cylinders	%?dflt (Henger lökés és húzás szám)
+/TSaugerLength	(Csiga hossza) def	%?use CONST	%?type STRI	%?brief auger length	%?dflt (Csiga hossza)
+/TSconcVolPerImp	(Betonmennyiség/impulzus) def	%?use CONST	%?type STRI	%?brief concrete volume / impulse	%?dflt (Betonmennyiség/impulzus)
+/TSscalConcPresSens	(Betonnyomás érz. mér. tart.) def	%?use CONST	%?type STRI	%?brief range concrete press. sensor	%?dflt (Betonnyomás érz. mér. tart.)
+/TSscalConcPresDisp	(Betonnyomás kijelző skála) def	%?use CONST	%?type STRI	%?brief scale conc. press. indication	%?dflt (Betonnyomás kijelző skála)
+/TSpileDiameter	(Cölöp átmérője) def	%?use CONST	%?type STRI	%?brief pile diameter	%?dflt (Cölöp átmérője)
+/TSmaxPressAuger	(Csiga max. nyomás) def	%?use CONST	%?type STRI	%?brief max. pressure auger	%?dflt (Csiga max. nyomás)
+/TSmaxPressCase	(Cső max. nyomás) def	%?use CONST	%?type STRI	%?brief max. pressure casing	%?dflt (Cső max. nyomás)
+/TSmaxPressure	(max. nyomás) def	%?use CONST	%?type STRI	%?brief max. pressure	%?dflt (max. nyomás)
+/TSoilFlowAuger1	(1. csiga száll. mennyisége) def	%?use CONST	%?type STRI	%?brief flow rate auger 1	%?dflt (1. csiga száll. mennyisége)
+/TSoilFlowAuger2	(2. csiga száll. mennyisége) def	%?use CONST	%?type STRI	%?brief flow rate auger 2	%?dflt (2. csiga száll. mennyisége)
+/TSoilFlowAuger3	(3. csiga száll. mennyisége) def	%?use CONST	%?type STRI	%?brief flow rate auger 3	%?dflt (3. csiga száll. mennyisége)
+/TSnumbOfAugers	(Csigák száma) def	%?use CONST	%?type STRI	%?brief number of augers	%?dflt (Csigák száma)
+/TSoilFlowOscil	(Csőrendszer száll. menny.) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator	%?dflt (Csőrendszer száll. menny.)
+/TSoilFlowGrabOpen	(Áramlásszab. kar nyitás) def	%?use CONST	%?type STRI	%?brief flow rate grab open	%?dflt (Áramlásszab. kar nyitás)
+/TSoilFlowGrabClose	(Áramlásszab. kar zárás) def	%?use CONST	%?type STRI	%?brief flow rate grab close	%?dflt (Áramlásszab. kar zárás)
+/TSmaxPressGrabOpen	(Max. nyomás kar nyitás) def	%?use CONST	%?type STRI	%?brief max. pressure grab open	%?dflt (Max. nyomás kar nyitás)
+/TSmaxPressGrabClose	(Max. nyomás kar zárás) def	%?use CONST	%?type STRI	%?brief max. pressure grab close	%?dflt (Max. nyomás kar zárás)
+/TSminOilFlow	(minimális szállított mennyiség) def	%?use CONST	%?type STRI	%?brief min. flow rate	%?dflt (minimális szállított mennyiség)
+/TSoilFlowOscil2	(Csőrendszer száll. menny.2) def	%?use CONST	%?type STRI	%?brief flow rate case oscillator 2	%?dflt (Csőrendszer száll. menny.2)
+/TStorqueLimitation	(torque limitation) def	%?use CONST	%?type STRI	%?brief torque limitation	%?dflt (torque limitation)
+/TSoilFlow38Hz	(flow rate at 38Hz) def	%?use CONST	%?type STRI	%?brief flow rate at 38Hz	%?dflt (flow rate at 38Hz)
+/TSvibFreq	(vibrator frequency) def	%?use CONST	%?type STRI	%?brief vibrator frequency	%?dflt (vibrator frequency)

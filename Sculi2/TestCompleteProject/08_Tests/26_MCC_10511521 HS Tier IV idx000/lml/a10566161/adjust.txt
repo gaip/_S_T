@@ -1,0 +1,24 @@
+!--- Actual adjusted LML configuration ---
+
+!Description:
+!1st value => Mode number
+!2nd value => Symbol number (1-20)
+!3rd value => Typ of the numerical variable
+!4th value => Value Counter
+!5th value => Actual Value
+!6th value => Symbol name
+
+!Actual size of the intern LML configuration structure: 303892 Byte
+
+!Actual LML configuration number:
+!281608192,134217728,32
+
+1	1	4	2	2			SEILZUGBEGRENZUNG
+1	2	1	1	1			HPT_KOPF
+1	3	2	4	22.000000	HPT_Z_S_K
+1	4	1	1	1			HPT_EINSCHERUNG
+1	5	4	2	2			KIPPKANTE
+1	6	3	1	0.000000	ZENTRALBALLAST
+1	7	3	3	5.900000	HAUPTBALLAST
+
+$CRC32:adjust.txt	ec966beb

@@ -1,0 +1,9 @@
+luffing gear 2 (luffing winch 2)
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:28
+category			0	1	2	3	4	5	6	7	8	9
+analog pump signal lg2 in [%]	%MD1.22	MDlmlAngleBoom	<-80	[-80..-60[	[-60..-40[	[-40..-20[	[-20..0[	[0..20[	[20..40[	[40..60[	[60..80[	>=80
+load sensor of the luffing jib in [kN]	%MD1.73	MDz2CursorSign	<200	[200..400[	[400..600[	[600..800[	[800..1000[	>=1000
+angle of the luffing jib in [°]	%MD1.35	MDvibJoySignal	<10	[10..20[	[20..30[	[30..40[	[40..50[	[50..60[	[60..70[	[70..80[	>=80
+
+analog pump signal lg2 in [%]	load sensor of the luffing jib in [kN]	angle of the luffing jib in [°]	sum of time [sek]

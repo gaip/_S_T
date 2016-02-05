@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="item0000000000">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="78"/>
+					<Prp name="click point y" type="I" value="107"/>
+					<Prp name="datetime" type="D" value="41470.6666666667"/>
+					<Prp name="image file name" type="S" value="tcvi71720.png"/>
+					<Prp name="line #" type="I" value="19"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="188"/>
+					<Prp name="object left" type="I" value="16"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.TokenChoiceForm.lbTokens"/>
+					<Prp name="object right" type="I" value="361"/>
+					<Prp name="object top" type="I" value="101"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi71720.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="0"/>
+			</Node>
+			<Node name="item0000000001">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="103"/>
+					<Prp name="click point y" type="I" value="160"/>
+					<Prp name="datetime" type="D" value="41470.667337963"/>
+					<Prp name="image file name" type="S" value="tcvi717215.png"/>
+					<Prp name="line #" type="I" value="29"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="441"/>
+					<Prp name="object left" type="I" value="9"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.dlgChooseLicenseFileToImport.DUIViewWndClassName.DirectUIHWND.CtrlNotifySink2.NamespaceTreeControl.SysTreeView32"/>
+					<Prp name="object right" type="I" value="165"/>
+					<Prp name="object top" type="I" value="96"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi717215.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="1"/>
+			</Node>
+			<Node name="item0000000002">
+				<Node name="data">
+					<Prp name="click point x" type="I" value="229"/>
+					<Prp name="click point y" type="I" value="142"/>
+					<Prp name="datetime" type="D" value="41470.6674652778"/>
+					<Prp name="image file name" type="S" value="tcvi717228.png"/>
+					<Prp name="line #" type="I" value="30"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object bottom" type="I" value="147"/>
+					<Prp name="object left" type="I" value="196"/>
+					<Prp name="object name" type="S" value="Aliases.Sculi.dlgInformation.btnOK"/>
+					<Prp name="object right" type="I" value="284"/>
+					<Prp name="object top" type="I" value="121"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value="tcvi717228.7z"/>
+					<Prp name="version" type="I" value="1"/>
+				</Node>
+				<Prp name="index" type="I" value="2"/>
+			</Node>
+			<Prp name="key" type="S" value="{55F8B8AC-36C2-4F41-88EC-A78A29C8D99D}"/>
+		</Node>
+		<Prp name="signature" type="S" value="{42D2222C-ACA2-405F-8E67-05D5C42EB839}"/>
+		<Prp name="version" type="I" value="1"/>
+	</Node>
+</Nodes>

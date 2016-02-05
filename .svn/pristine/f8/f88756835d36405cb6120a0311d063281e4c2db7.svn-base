@@ -1,0 +1,32 @@
+diesel engine 1
+start time	2010-07-22T13:05:45
+stop time	2010-12-20T14:50:53
+category			0	1	2	3	4	5	6	7	8	9
+revolutions diesel engine 1 [rpm]	%MD1.4	MDpresenEngSpeed	<800	[800..1000[	[1000..1200[	[1200..1400[	[1400..1600[	[1600..1800[	[1800..2000[	[2000..2200[	[2200..2400[	>=2400
+charge air pressure diesel engine 1 [bar]	%MD1.5	MDchargeAirPress	<1	[1..1.5[	[1.5..2[	[2..2.5[	[2.5..3[	[3..3.5[	[3.5..4[	[4..4.5[	[4.5..5[	>=5
+charge air temperature diesel engine 1 [°C]	%MD1.168	MDchargeAirTemp	<-10	[-10..0[	[0..10[	[10..20[	[20..30[	[30..40[	[40..50[	[50..60[	[60..70[	>=70
+
+revolutions diesel engine 1 [rpm]	charge air pressure diesel engine 1 [bar]	charge air temperature diesel engine 1 [°C]	sum of time [sek]
+0	0	0	0.30
+0	5	0	532.29
+2	5	0	920.97
+6	5	0	24.33
+0	9	0	192141.78
+6	9	0	0.27
+0	0	2	804.42
+0	9	4	8594.88
+0	0	5	80.22
+0	1	5	114.69
+6	1	5	2200.14
+0	9	5	68.82
+0	0	7	0.06
+0	7	7	12343.44
+0	9	7	38.01
+0	2	9	9.33
+1	2	9	110104.83
+2	2	9	9478.02
+3	2	9	1.50
+4	2	9	4.17
+6	2	9	12.87
+9	2	9	72.33
+0	7	9	0.36

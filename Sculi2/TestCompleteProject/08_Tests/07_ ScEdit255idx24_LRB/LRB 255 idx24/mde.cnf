@@ -1,0 +1,322 @@
+!version	00192
+#------------------------------------------------------------------------------
+# MDE for HS
+#------------------------------------------------------------------------------
+#
+#	modification:
+#
+#	version | mod. number | date       | name             | 
+#	--------------------------------------------------------------------------
+#	00004   | 00000       | 20.09.1999 | Schapler Manfred | 
+#	00035   | 00000       | 12.06.2001 | Schapler Manfred |   
+#	00073   | 00000       | 06.02.2004 | Flatscher W.     |   
+#	00090   | 00000       | 30.09.2004 | Flatscher W.     |   
+#	00165   | 64281       | 12.10.2007 | T¸rtscher D.     |   
+#	00192   | 82673       | 05.05.2009 | T¸rtscher D.     |
+#
+
+#------------------------------------------------------------------------------
+# automatische Speicherung
+#------------------------------------------------------------------------------
+AUTOSTORE	30	500	9.0\
+
+#------------------------------------------------------------------------------
+# Gruppen (Wechsel)
+#------------------------------------------------------------------------------
+
+# Dieselmotor starten
+GROUPCHANGE	ENGSTART	diesel Engine start
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+LIMIT	10	500
+ELEMENT	MDcoolWaterTemp	cooling water temperature of the engine in [∞C]
+NO_CHANGE_DETECT
+LIMIT	-30	-20	-10	0	10	20	40	60	80	100	120
+
+#------------------------------------------------------------------------------
+# Gruppen (Zeit)
+#------------------------------------------------------------------------------
+
+# Dieselmotor 1
+GROUPTIME	ENGINE1	diesel Engine 1
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+STEP	500	100	22
+ELEMENT	MDmdeActEngPower	actual engine power [kW]
+STEP	-500	50	27
+
+# Dieselmotor 2
+GROUPTIME	ENGINE2	diesel Engine 2
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+LIMIT	800	1000	1200	1400	1600	1700	1800	1850	1900	1950	2000	2100	2200	2400
+ELEMENT	MDchargeAirPress	charge air pressure absolut [bar]
+LIMIT	1.0	1.5	2.0	2.25	2.5	2.75	3.0	3.25	3.5	3.75	4.0	4.25	4.5	5.0
+ELEMENT	MDmdeEngExploita	diesel engine exploitation (utilization of the engine) in [%]
+LIMIT	0	10	20	30	40	50	60	70	75	80	82.5	85	87.5	90	95
+
+# Dieselmotor 3
+GROUPTIME	ENGINE3	diesel Engine 3
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+STEP	800	200	10
+ELEMENT	MDchargeAirPress	charge air pressure absolut [bar]
+STEP	1.0	0.5	10	
+ELEMENT	MDchargeAirTemp	charge air temperatur [∞C]
+STEP	-10	10	10
+
+# Dieselmotor 4
+GROUPTIME	ENGINE4	diesel Engine 4
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+STEP	800	200	10
+ELEMENT	MDchargeAirPress	charge air pressure absolut [bar]
+STEP	1.0	0.5	10	
+ELEMENT	MDmdeAirFiltPres	air filter underpressure [mbar]
+STEP	10	10	10
+
+# Dieselmotor 5
+GROUPTIME	ENGINE5	diesel Engine 5
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+STEP	800	200	10
+ELEMENT	MDcoolWaterTemp	cooling water temperature of the engine in [∞C]
+LIMIT	-30	-20	-10	0	10	20	40	60	80	100	120
+ELEMENT	MDlubOilPressure	lub oil pressure of the engine in [bar]
+LIMIT	0.5	1	2	3	4	5	6	7	8
+
+# Dieselmotor 6
+GROUPTIME	ENGINE6	diesel Engine 6
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+STEP	800	200	10
+ELEMENT	MDmdeFuelConsum	engine fuel consumption [l/h]
+STEP	20	20	10
+ELEMENT	MDmdeEngExploita	diesel engine exploitation (utilization of the engine) in [%]
+STEP	0	10	11
+
+# Temperatur
+GROUPTIME	HOILTEMP	hydr oil temperature
+ELEMENT	MDhydrOilTemp	hydraulic oil temperature in [∞C]
+STEP	-30	10	17
+
+# Hubwerk 1
+GROUPTIME	HG1 hoisting gear 1
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+STEP	500	250	8
+ELEMENT	MDhg1PumpSignal	analog pump signal hg1 in [%]
+STEP	-80	20	10
+ELEMENT	MDhg1SystemPress	system pressure hg1 in [bar]
+STEP	50	50	8
+ELEMENT	MDhg1RopeSpeed	rope speed hg1 in [m/min]
+LIMIT	-110	-100	-80	-60	-40	-20	-1	1	20	40	60	80	100	110
+
+# Hubwerk 2
+GROUPTIME	HG2 hoisting gear 2
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+STEP	500	250	8
+ELEMENT	MDhg2PumpSignal	analog pump signal hg2 in [%]
+STEP	-80	20	10
+ELEMENT	MDhg2SystemPress	system pressure hg2 in [bar]
+STEP	50	50	8
+ELEMENT	MDhg2RopeSpeed	rope speed hg2 in [m/min]
+LIMIT	-110	-100	-80	-60	-40	-20	-1	1	20	40	60	80	100	110
+
+# Einziehwerk 1 (Haupteinziehwerk) mit Haltestangen
+GROUPTIME	LG	luffing gear (luffing winch 1)
+ELEMENT	MDlgPumpSignal	analog pump signal lg in [%]
+STEP	-80	20	10
+ELEMENT	MDloadSenBoom	load sensor of the main boom in [kN]
+STEP	200	200	8
+ELEMENT MDlmlAngleBoom	angle of the main boom in [∞]
+STEP	10	10	9
+
+# Einziehwerk 2 (Wippspitze-Einziehwerk) mit Haltestangen
+GROUPTIME	LG2	luffing gear 2 (luffing winch 2)
+ELEMENT	MDlg2PumpSignal	analog pump signal lg2 in [%]
+STEP	-80	20	10
+ELEMENT	MDloadSenLuffJib	load sensor of the luffing jib in [kN]
+STEP	200	200	6
+ELEMENT MDlmlAngleLufJib	angle of the luffing jib in [∞]
+STEP	10	10	9
+
+# Einziehwerk 3 (Derrickeinziehwerk) mit Haltestangen
+GROUPTIME	DERRICK	luffing gear for main boom in case of derrick operation
+ELEMENT	MDderrPumpSignal	analog pump signal derrick winch in [%]
+STEP	-80	20	10
+ELEMENT	MDlmlLoadSenDerr	load sensor of the main boom in case of derrick operation in [kN]
+STEP	200	200	8
+ELEMENT MDlmlAngleBoom	angle of the main boom in [∞]
+STEP	10	10	9
+
+# Drehwerk
+GROUPTIME	SG	slewing gear
+ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+STEP	500	250	8
+ELEMENT	MDsgPumpSignal	analog pump signal sg in [%]
+STEP	-80	20	10
+ELEMENT	MDsgPressDiff	pressure difference in the sg right left in [bar] (positive = right > left)
+STEP	50	50	7
+
+# Auslegersystem
+GROUPTIME	BOOMSYS	boom system
+ELEMENT MDlmlAngleBoom	angle of the main boom in [∞]
+LIMIT	20	40	60	70	80
+ELEMENT MDlmlAngleLufJib	angle of the luffing jib in [∞]
+STEP	20	20	5
+ELEMENT	MDpresStabLufJib	pressure of the fall back support of the luffing jib in [bar]
+STEP	125	25	5
+
+# R¸ttler
+GROUPTIME	Vibrator	vibrator system
+ELEMENT	MDvibSysPress	ad vibrator system pressure [bar]
+STEP	100	100	4
+ELEMENT	SDVfawRopeSpeed	ad device faw rope speed [m/min]
+LIMIT	0.01	0.05
+ELEMENT	MDvibrAmplitude	ad vibrator amplitude [mm]
+LIMIT	1	5	20
+ELEMENT	MDvibrFrequency	ad vibrator frequency [Hz]
+LIMIT	12	18	24	28	34	40
+ELEMENT	MDmdeVibGearBoTe	vibrator gearbox max(1or2) temperature [∞C]
+LIMIT	10	80
+ELEMENT	MDfawPresKN	feed action pressure [kN]
+STEP 120	120	4
+	
+
+#------------------------------------------------------------------------------
+# Maxima
+#------------------------------------------------------------------------------
+
+# Dieselmotor
+MAXIMUM	MDpresenEngSpeed	ENGSPEED	engine speed in [rpm]
+MAX_ELEMENT	MDmdeActEngPower	actual engine power [kW]
+MAX_ELEMENT	MDcoolWaterTemp	cooling water temperature of the engine in [∞C]
+MAX_ELEMENT	MDchargeAirPress	charge air pressure in [bar]
+MAX_ELEMENT	MDchargeAirTemp	charge air temperatur [∞C]
+MAX_ELEMENT	MDmdeAirFiltPres	air filter underpressure [mbar]
+MAX_ELEMENT	MDlubOilPressure	lub oil pressure of the engine in [bar]
+MAX_ELEMENT	MDmdeFuelConsum	engine fuel consumption [l/h]
+MAX_ELEMENT	IXswitTravelGear	pressure switch travelling gear
+MAX_ELEMENT	MDmdeOperatMode	operation mode
+MAX_ELEMENT	MDhydrOilTemp	hydraulic oil temperature upper maximum in [∞C]
+
+MAXIMUM	MDmdeActEngPower	ENGPOWER	actual engine power [kW]
+MAX_ELEMENT	MDpresenEngSpeed	engine speed in [rpm]
+MAX_ELEMENT	MDcoolWaterTemp	cooling water temperature of the engine in [∞C]
+MAX_ELEMENT	MDchargeAirPress	charge air pressure in [bar]
+MAX_ELEMENT	MDchargeAirTemp	charge air temperatur [∞C]
+MAX_ELEMENT	MDmdeAirFiltPres	air filter underpressure [mbar]
+MAX_ELEMENT	MDlubOilPressure	lub oil pressure of the engine in [bar]
+MAX_ELEMENT	MDmdeFuelConsum	engine fuel consumption [l/h]
+MAX_ELEMENT	IXswitTravelGear	pressure switch travelling gear
+MAX_ELEMENT	MDmdeOperatMode	operation mode
+MAX_ELEMENT	MDhydrOilTemp	hydraulic oil temperature upper maximum in [∞C]
+
+MAXIMUM	MDcoolWaterTemp	COOLWATE	cooling water temperature of the engine in [∞C]
+MAX_ELEMENT	MDpresenEngSpeed	engine speed in [rpm]
+MAX_ELEMENT	MDmdeActEngPower	actual engine power [kW]
+MAX_ELEMENT	MDchargeAirPress	charge air pressure in [bar]
+MAX_ELEMENT	MDchargeAirTemp	charge air temperatur [∞C]
+MAX_ELEMENT	MDmdeAirFiltPres	air filter underpressure [mbar]
+MAX_ELEMENT	MDlubOilPressure	lub oil pressure of the engine in [bar]
+MAX_ELEMENT	MDmdeFuelConsum	engine fuel consumption [l/h]
+MAX_ELEMENT	IXswitTravelGear	pressure switch travelling gear
+MAX_ELEMENT	MDmdeOperatMode	operation mode
+MAX_ELEMENT	MDhydrOilTemp	hydraulic oil temperature upper maximum in [∞C]
+
+#Hydraulik Temperatur
+MAXIMUM	MDhydrOilTemp	OILTEMPU	hydraulic oil temperature upper maximum in [∞C]
+MAX_TIMEOUT 30000
+MAX_ELEMENT	MDcoolWaterTemp	cooling water temperature of the engine in [∞C]
+MAX_ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+MAX_ELEMENT	MDengExploitatio	diesel engine exploitation (utilization of the engine) in [%]
+MAX_ELEMENT	MDhg1SystemPress	hg1 system pressure in [bar]
+MAX_ELEMENT	MDhg2SystemPress	hg2 system pressure in [bar]
+MAX_ELEMENT	MDlmlMode	number of lml mode
+MAX_ELEMENT	MDlmlRadiusMBoom	load radius main boom in [m]
+MAX_ELEMENT	MDlmlRadiusLJib	load radius luffing jib in [m]
+MAX_ELEMENT	MDlmlMaxHight1	maximum lifting hight main boom (head hight) in [m]
+MAX_ELEMENT	MDlmlMaxHight2	maximum lifting hight luffing jib (head hight) in [m]
+MAX_ELEMENT	MDlmlLoadBoom	load on the main boom in [to]
+MAX_ELEMENT	MDlmlLoadLuffJib	load on the luffing jib in [to]
+MAX_ELEMENT	MDlmlUtilization	utilization in [%]
+MAX_ELEMENT	MDlmlUtilBackwar	utilization backwards in [%] (derrick operation)
+MINIMUM	MDhydrOilTemp	OILTEMPL	hydraulic oil temperature lower minimum in [∞C]
+MIN_TIMEOUT 30000
+MIN_ELEMENT	MDcoolWaterTemp	cooling water temperature of the engine in [∞C]
+MIN_ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+MIN_ELEMENT	MDengExploitatio	diesel engine exploitation (utilization of the engine) in [%]
+
+# Hubwerk 1
+MAXIMUM MDhg1SystemPress	HG1PRESS	hg1 system pressure in [bar]
+MAX_ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+MAX_ELEMENT	MDhg1PumpSignal	analog pump signal hg1 in [%]
+MAX_ELEMENT	MDhg1RopeSpeed	rope speed hg1 in [m/min]
+MAXIMUM	MDhg1RopeSpeed	HG1SPEED	hg1 rope speed in [m/min]
+MAX_ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+MAX_ELEMENT	MDhg1PumpSignal	analog pump signal hg1 in [%]
+MAX_ELEMENT	MDhg1SystemPress	hg1 system pressure in [bar]
+
+# Hubwerk 2
+MAXIMUM MDhg2SystemPress	HG2PRESS	hg2 system pressure in [bar]
+MAX_ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+MAX_ELEMENT	MDhg2PumpSignal	analog pump signal hg2 in [%]
+MAX_ELEMENT	MDhg2RopeSpeed	rope speed hg2 in [m/min]
+MAXIMUM	MDhg2RopeSpeed	HG2SPEED	hg2 rope speed in [m/min]
+MAX_ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+MAX_ELEMENT	MDhg2PumpSignal	analog pump signal hg2 in [%]
+MAX_ELEMENT	MDhg2SystemPress	hg2 system pressure in [bar]
+
+# Einziehwerk 1 (Haupteinziehwerk) Kraftmeﬂlaschen
+MAXIMUM	MDloadSenBoom	LOASENBO	load sensor main boom (by A-frame)
+MAX_ELEMENT	MDlgPumpSignal	analog pump signal lg in [%]
+MAX_ELEMENT	MDlmlAngleBoom	angle of the main boom in [∞]
+MAX_ELEMENT	MDlmlRadiusMBoom	load radius main boom in [m]
+MAX_ELEMENT	MDlmlMaxHight1	maximum lifting hight main boom (head hight) in [m]
+MAX_ELEMENT	MDlmlLoadBoom	load on the main boom in [to]
+MAX_ELEMENT	MDlmlUtilization	utilization in [%]
+MAX_ELEMENT	MDlmlUtilBackwar	utilization backwards in [%] (derrick operation)
+MAX_ELEMENT	MDlmlMode	number of lml mode
+
+# Einziehwerk 2 (Wippspitze-Einziehwerk) Kraftmeﬂlaschen
+MAXIMUM	MDloadSenLuffJib	LOASENLJ	load sensor of the luffing jib in [kN]
+MAX_ELEMENT	MDlg2PumpSignal	analog pump signal lg2 in [%]
+MAX_ELEMENT	MDlmlAngleLufJib	angle of the luffing jib in [∞]
+MAX_ELEMENT	MDlmlRadiusLJib	load radius luffing jib in [m]
+MAX_ELEMENT	MDlmlMaxHight2	maximum lifting hight luffing jib (head hight) in [m]
+MAX_ELEMENT	MDlmlLoadLuffJib	load on the luffing jib in [to]
+MAX_ELEMENT	MDlmlUtilization	utilization in [%]
+MAX_ELEMENT	MDlmlUtilBackwar	utilization backwards in [%] (derrick operation)
+MAX_ELEMENT	MDlmlMode	number of lml mode
+
+# Einziehwerk 3 (Derrickeinziehwerk) Kraftmeﬂlaschen
+MAXIMUM	MDlmlLoadSenDerr	LOASENDR	load sensor of the derrick (to main boom) in [kN]
+MAX_ELEMENT	MDderrPumpSignal	analog pump signal derrick winch in [%]
+MAX_ELEMENT	MDlmlAngleBoom	angle of the main boom in [∞]
+MAX_ELEMENT	MDlmlAngleLufJib	angle of the main boom in [∞]
+MAX_ELEMENT	MDlmlRadiusMBoom	load radius main boom in [m]
+MAX_ELEMENT	MDlmlRadiusLJib	load radius luffing jib in [m]
+MAX_ELEMENT	MDlmlMaxHight1	maximum lifting hight main boom (head hight) in [m]
+MAX_ELEMENT	MDlmlMaxHight2	maximum lifting hight luffing jib (head hight) in [m]
+MAX_ELEMENT	MDlmlLoadBoom	load on the main boom in [to]
+MAX_ELEMENT	MDlmlLoadLuffJib	load on the luffing jib in [to]
+MAX_ELEMENT	MDlmlUtilization	utilization in [%]
+MAX_ELEMENT	MDlmlUtilBackwar	utilization backwards in [%] (derrick operation)
+MAX_ELEMENT	MDlmlMode	number of lml mode
+
+# Drehwerk
+MAXIMUM	MDsgPressDiff	SGPREDIF	pressure difference in the sg in [bar] (absolut)
+MAX_ELEMENT	MDpresenEngSpeed	present engine speed in [rpm]
+MAX_ELEMENT	MDsgPumpSignal	analog pump signal sg in [%]
+MAX_ELEMENT	MDlmlRadiusMBoom	load radius main boom in [m]
+MAX_ELEMENT	MDlmlRadiusLJib	load radius luffing jib in [m]
+MAX_ELEMENT	MDlmlMaxHight1	maximum lifting hight main boom (head hight) in [m]
+MAX_ELEMENT	MDlmlMaxHight2	maximum lifting hight luffing jib (head hight) in [m]
+MAX_ELEMENT	MDlmlLoadBoom	load on the main boom in [to]
+MAX_ELEMENT	MDlmlLoadLuffJib	load on the luffing jib in [to]
+MAX_ELEMENT	MDlmlUtilization	utilization in [%]
+MAX_ELEMENT	MDlmlUtilBackwar	utilization backwards in [%] (derrick operation)
+MAX_ELEMENT	MDlmlMode	number of lml mode
+
+# Auslegersystem
+MAXIMUM	MDpresStabLufJib	JIBPRESS	pressure of the fall back support of the luffing jib in [bar]
+MAX_ELEMENT	MDlmlAngleBoom	angle of the main boom in [∞]
+MAX_ELEMENT	MDlmlAngleLufJib	angle of the luffing jib in [∞]
+MAX_ELEMENT	MDlmlRadiusMBoom	load radius main boom in [m]
+MAX_ELEMENT	MDlmlRadiusLJib	load radius luffing jib in [m]
+MAX_ELEMENT	MDlmlMaxHight1	maximum lifting hight main boom (head hight) in [m]
+MAX_ELEMENT	MDlmlMaxHight2	maximum lifting hight luffing jib (head hight) in [m]
+MAX_ELEMENT	MDlmlMode	number of lml mode

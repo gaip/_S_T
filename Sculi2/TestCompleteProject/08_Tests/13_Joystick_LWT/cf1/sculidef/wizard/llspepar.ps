@@ -1,0 +1,3116 @@
+%?class llspepar
+%?version 00065
+
+%?library llbasic
+(llbasic.ps) run
+%?library llgensym
+(llgensym.ps) run
+%?library llspesym
+(llspesym.ps) run
+
+% ******************************************************************************
+% global variables
+% ******************************************************************************
+
+
+
+% ******************************************************************************
+% part definitions
+% ******************************************************************************
+
+%?partdef spMsgSymbol
+%?fn	spMsgSymbol
+%?brief	message symbol for message page with color change
+%?bbox	0 0 79 79
+/spMsgSymbol {
+%?manual_beg
+	% White when no message active
+	MDmsgValidNr 0 eq {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral044 
+		setcolor 
+		setmatrix_nlw
+	} {
+		% Red blink when not all active messages are acknowledged
+		MDmsgValidNr MDmsgAcknNr gt {
+			matrix currentmatrix_nlw 
+			currentcolor 
+			true setflash
+			Red
+			0 0 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral044 
+			false setflash
+			setcolor 
+			setmatrix_nlw
+		} {
+			% White blink when message active and acknowleded
+			matrix currentmatrix_nlw 
+			currentcolor 
+			true setflash
+			0 0 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral044 
+			false setflash
+			setcolor 
+			setmatrix_nlw
+		} ifelse
+	} ifelse
+%?manual_end 
+} def
+%?partend
+
+%?partdef spMenuBarDefault
+%?fn	spMenuBarDefault
+%?brief	menu bar without aircondition and camera (default)
+%?bbox	0 0 799 79
+/spMenuBarDefault {
+	%?manual_beg
+	%%%%%%%%%%%%%%%%%% show touchbuttons for page switch %%%%%%%%%%%%%%%%%%
+	%%%%% menu position 1
+	MScurrentPage (main) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (main) store
+			/MDcurrPageNumber 1 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral043 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 2
+	MScurrentPage (engine) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (engine) store
+			/MDcurrPageNumber 2 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsEngine001 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 3
+	MScurrentPage (config) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (config) store
+			/MDcurrPageNumber 3 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral032 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 4
+	MScurrentPage (function) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (function) store
+			/MDcurrPageNumber 4 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral021 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 5
+	MScurrentPage (info) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (info) store
+			/MDcurrPageNumber 5 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 3 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral022 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 6
+	MScurrentPage (wiper) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (wiper) store
+			/MDcurrPageNumber 6 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 	
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	405 0 translate 
+	0 rotate 
+	1.25 1.25 scale 
+	gsWiper007 
+	setcolor 
+	setmatrix_nlw 	
+	%%%%% menu position 7
+	% NOT USED
+	%%%%% menu position 8
+	% NOT USED
+	%%%%% menu position 9
+	MScurrentPage (message) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (message) store
+			/MDcurrPageNumber 9 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 	
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	640 0 translate 
+	0 rotate 
+	1 1 scale 
+	spMsgSymbol 
+	setcolor 
+	setmatrix_nlw
+	%%%%% menu position 10
+	% NOT USED
+	%?manual_end 
+} def
+%?partend
+
+%?partdef spMenuBarAircond
+%?fn	spMenuBarAircond
+%?brief	menu bar with aircondition
+%?bbox	0 0 799 79
+/spMenuBarAircond {
+	%?manual_beg
+	%%%%%%%%%%%%%%%%%% show touchbuttons for page switch %%%%%%%%%%%%%%%%%%
+	%%%%% menu position 1
+	MScurrentPage (main) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (main) store
+			/MDcurrPageNumber 1 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral043 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 2
+	MScurrentPage (aircond) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (aircond) store
+			/MDcurrPageNumber 2 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	80 -4 translate 
+	0 rotate 
+	1 1 scale 
+	gsAircond005 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 3
+	MScurrentPage (engine) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (engine) store
+			/MDcurrPageNumber 3 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	160 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsEngine001 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 4
+	MScurrentPage (config) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (config) store
+			/MDcurrPageNumber 4 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	240 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral032 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 5
+	MScurrentPage (function) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (function) store
+			/MDcurrPageNumber 5 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	320 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral021 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 6
+	MScurrentPage (info) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (info) store
+			/MDcurrPageNumber 6 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	400 3 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral022 
+	setcolor 
+	setmatrix_nlw 
+	%%%%% menu position 7
+	MScurrentPage (wiper) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (wiper) store
+			/MDcurrPageNumber 7 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 	
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	485 0 translate 
+	0 rotate 
+	1.25 1.25 scale 
+	gsWiper007 
+	setcolor 
+	setmatrix_nlw 	
+	%%%%% menu position 8
+	% NOT USED
+	%%%%% menu position 9
+	MScurrentPage (message) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (message) store
+			/MDcurrPageNumber 9 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 	
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	640 0 translate 
+	0 rotate 
+	1 1 scale 
+	spMsgSymbol 
+	setcolor 
+	setmatrix_nlw
+	%%%%% menu position 10
+	% NOT USED
+	%?manual_end 
+} def
+%?partend
+
+%?partdef spMenuBarCam
+%?fn	spMenuBarCam
+%?brief	menu bar with camera
+%?bbox	0 0 799 79
+/spMenuBarCam {
+	%?manual_beg
+	%%%%%%%%%%%%%%%%%% show touchbuttons for page switch %%%%%%%%%%%%%%%%%%
+	%%%%% menu position 1
+	MScurrentPage (main) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (main) store
+			/MDcurrPageNumber 1 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral043 
+	setcolor 
+	setmatrix_nlw
+	%%%%% menu position 2
+	MScurrentPage (camera) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (camera) store
+			/MDcurrPageNumber 2 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral034 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 3
+	MScurrentPage (engine) ne
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (engine) store
+			/MDcurrPageNumber 3 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine001 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 4
+	MScurrentPage (config) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (config) store
+			/MDcurrPageNumber 4 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral032 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 5
+	MScurrentPage (function) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (function) store
+			/MDcurrPageNumber 5 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral021 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 6
+	MScurrentPage (info) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (info) store
+			/MDcurrPageNumber 6 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 3 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral022 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 7
+	MScurrentPage (wiper) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (wiper) store
+			/MDcurrPageNumber 7 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 	
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		485 0 translate 
+		0 rotate 
+		1.25 1.25 scale 
+		gsWiper007 
+		setcolor 
+		setmatrix_nlw
+	} if 	
+	%%%%% menu position 8
+	% NOT USED
+	%%%%% menu position 9
+	MScurrentPage (message) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (message) store
+			/MDcurrPageNumber 9 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 	
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 0 translate 
+		0 rotate 
+		1 1 scale 
+		spMsgSymbol 
+		setcolor 
+		setmatrix_nlw
+	} if
+	%%%%% menu position 10
+	% NOT USED
+	%?manual_end 
+} def
+%?partend
+
+%?partdef spMenuBarCamAircond
+%?fn	spMenuBarCamAircond
+%?brief	menu bar with aircondition and with camera
+%?bbox	0 0 799 79
+/spMenuBarCamAircond {
+	%?manual_beg
+	%%%%%%%%%%%%%%%%%% show touchbuttons for page switch %%%%%%%%%%%%%%%%%%
+	%%%%% menu position 1
+	MScurrentPage (main) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (main) store
+			/MDcurrPageNumber 1 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	% overlay symbol
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	gsGeneral043 
+	setcolor 
+	setmatrix_nlw
+	%%%%% menu position 2
+	MScurrentPage (camera) ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (camera) store
+			/MDcurrPageNumber 2 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		80 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral034 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 3
+	MScurrentPage (aircond) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (aircond) store
+			/MDcurrPageNumber 3 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 -4 translate 
+		0 rotate 
+		1 1 scale 
+		gsAircond005 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 4
+	MScurrentPage (engine) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (engine) store
+			/MDcurrPageNumber 4 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		240 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine001 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 5
+	MScurrentPage (config) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (config) store
+			/MDcurrPageNumber 5 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		320 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral032 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 6
+	MScurrentPage (function) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (function) store
+			/MDcurrPageNumber 6 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral021 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 7
+	MScurrentPage (info) ne 
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (info) store
+			/MDcurrPageNumber 7 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		480 3 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral022 
+		setcolor 
+		setmatrix_nlw
+	} if 
+	%%%%% menu position 8
+	MScurrentPage (wiper) ne
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		560 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (wiper) store
+			/MDcurrPageNumber 8 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 	
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		565 0 translate 
+		0 rotate 
+		1.25 1.25 scale 
+		gsWiper007 
+		setcolor 
+		setmatrix_nlw
+	} if 	
+	%%%%% menu position 9
+	MScurrentPage (message) ne 	
+	MScurrentPage (camera) ne and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton002 {
+			/_currentpage (message) store
+			/MDcurrPageNumber 9 store
+			/_cpindex -1 store
+		} if
+		setcolor 
+		setmatrix_nlw 
+	} if 	
+	% overlay symbol
+	MScurrentPage (camera) ne {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		640 0 translate 
+		0 rotate 
+		1 1 scale 
+		spMsgSymbol 
+		setcolor 
+		setmatrix_nlw
+	} if
+	%%%%% menu position 10
+	% NOT USED
+	%?manual_end 
+} def
+%?partend
+
+%?partdef spMenuBar
+%?fn	spMenuBar
+%?brief	configurable menu bar
+%?bbox	0 0 799 479
+/spMenuBar {
+	/ixCCEnabled exch def			%?brief Climate control page enabled %?use INP %?type BOOL %?dflt FALSE
+	/ixCameraEnabled exch def		%?brief Camera page enabled %?use INP %?type BOOL %?dflt FALSE
+	/ixServiceActive exch def		%?brief	Any service function active %?use INP %?type BOOL %?dflt FALSE
+%?manual_beg
+	matrix currentmatrix_nlw 				% menu bar selection
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	ixCCEnabled false eq
+	ixCameraEnabled false eq and {		% aircond disabled / camera disabled
+		spMenuBarDefault
+	} if
+	ixCCEnabled true eq
+	ixCameraEnabled false eq and {		% aircond enabled / camera disabled
+		spMenuBarAircond
+	} if
+	ixCCEnabled false eq
+	ixCameraEnabled true eq and {			% aircond disabled / camera enabled
+		spMenuBarCam
+	} if
+	ixCCEnabled true eq
+	ixCameraEnabled true eq and {			% aircond enabled / camera enabled
+		spMenuBarCamAircond
+	} if
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 				% show page line
+	currentcolor 
+	0 0 translate 
+	0 rotate 
+	1 1 scale 
+	MDcurrPageNumber
+	baPageLine001 
+	setcolor 
+	setmatrix_nlw 
+	ixServiceActive true eq {				% Symbol while service functions are active
+		MXflashing true eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Yellow 200 80 translate 
+			0 rotate 
+			5 5 scale 
+			gsGeneral009 
+			setcolor 
+			setmatrix_nlw 
+		} if 
+	} if
+%?manual_end 
+} def
+%?partend
+
+%?partdef spEnableDrive001
+%?fn	spEnableDrive001
+%?brief	status drive enable "P" and flash "P"
+%?bbox	0 0 79 79
+/spEnableDrive001 {
+	/idStatusDriveEnable exch def	%?brief status drive enable %?use INP %?type DINT %?dflt 0
+%?manual_beg
+	%%%%%%%%%%%%%%% Status drive enable ("P", "N" Symbols) %%%%%%%%%%%%%%%
+	% idStatusDriveEnable:
+	% 0: Emergency stop
+	% 1: Safety switch in park position
+	% 2: No Safety-Enable
+	% 3: Safety-Enable active, no drive enable
+	% 4: Drive enabled/Neutral selected
+	% 5: Forward direction selected
+	% 6: Backward direction selected
+	idStatusDriveEnable 0 eq {			% When emergency stop is pressed "E" is visible
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral058 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	idStatusDriveEnable 1 ge {			% "P" is visible
+		idStatusDriveEnable 2 le {
+			idStatusDriveEnable 2 eq {	% "P" must flash
+				true setflash 
+			} if 
+				matrix currentmatrix_nlw 
+				currentcolor 
+				Yellow 
+				45 40 translate 
+				0 rotate 
+				2.0 2.0 scale 
+				(P) 8 0 
+				baText001 
+				setcolor 
+				setmatrix_nlw 
+				false setflash 
+		} if 
+	} if
+%?manual_end
+
+} def
+%?partend
+
+%?partdef spEnableDrive002
+%?fn	spEnableDrive002
+%?brief	status drive enable "P", flash "P", flash "N"
+%?bbox	0 0 79 79
+/spEnableDrive002 {
+	/idStatusDriveEnable exch def	%?brief status drive enable %?use INP %?type DINT %?dflt 0
+%?manual_beg
+	%%%%%%%%%%%%%%% Status drive enable ("P", "N" Symbols) %%%%%%%%%%%%%%%
+	% idStatusDriveEnable:
+	% 0: Emergency stop
+	% 1: Safety switch in park position
+	% 2: No Safety-Enable
+	% 3: Safety-Enable active, no drive enable
+	% 4: Drive enabled/Neutral selected
+	% 5: Forward direction selected
+	% 6: Backward direction selected
+	idStatusDriveEnable 0 eq {			% When emergency stop is pressed "E" is visible
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 
+		0 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral058 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	idStatusDriveEnable 1 ge {			% "P" is visible
+		idStatusDriveEnable 2 le {
+			idStatusDriveEnable 2 eq {	% "P" must flash
+				true setflash 
+			} if 
+				matrix currentmatrix_nlw 
+				currentcolor 
+				Yellow
+				45 40 translate 
+				0 rotate 
+				2.0 2.0 scale 
+				(P) 8 0 
+				baText001 
+				setcolor 
+				setmatrix_nlw 
+				false setflash 
+		} if 
+	} if
+	idStatusDriveEnable 3 eq 			% "N" is visible and must flash
+	idStatusDriveEnable 5 eq or
+	idStatusDriveEnable 6 eq or {
+			true setflash 
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green 0 0 translate 
+			0 rotate 
+			1 1 scale 
+			gsGeneral025  
+			setcolor 
+			setmatrix_nlw 
+			false setflash 
+	} if
+	%strike through "P"
+	idStatusDriveEnable 1 eq {
+		7 setlinewidth_nlw 	
+		Yellow
+		10 70 moveto 
+		70 10 lineto 
+		stroke 
+		0 0 0 setrgbcolor 
+		3 setlinewidth_nlw 
+		6 81 moveto 
+		81 6 lineto 
+		stroke 
+		0 0 0 setrgbcolor
+		2 71 moveto 
+		71 2 lineto 
+		stroke 
+	} if
+%?manual_end
+	
+} def
+%?partend
+
+%?partdef spEnableDrive003
+%?fn	spEnableDrive003
+%?brief	show complete status drive enable
+%?bbox	0 0 99 99
+/spEnableDrive003 {
+	/idStatusDriveEnable exch def	%?brief status drive enable %?use INP %?type DINT %?dflt 0
+%?manual_beg
+	%%%%%%%%%%%%%%% Status drive enable ("P", "N" Symbols) %%%%%%%%%%%%%%%
+	% idStatusDriveEnable:
+	% 0: Emergency stop
+	% 1: Safety switch in park position
+	% 2: No Safety-Enable
+	% 3: Safety-Enable active, no drive enable
+	% 4: Drive enabled/Neutral selected
+	% 5: Forward direction selected
+	% 6: Backward direction selected
+	idStatusDriveEnable 0 eq {			% When emergency stop is pressed "E" is visible
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Yellow 
+		10 10 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral058 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	idStatusDriveEnable 1 ge {			% "P" is visible
+		idStatusDriveEnable 2 le {
+			idStatusDriveEnable 2 eq {	% "P" must flash
+				true setflash 
+			} if 
+				matrix currentmatrix_nlw 
+				currentcolor 
+				Yellow 
+				58 50 translate 
+				0 rotate 
+				2.50 2.50 scale 
+				(P) 8 0 
+				baText001 
+				setcolor 
+				setmatrix_nlw 
+				false setflash 
+		} if 
+	} if
+	idStatusDriveEnable 3 ge {			% "N" is visible
+		idStatusDriveEnable 4 le {
+			idStatusDriveEnable 3 eq {	% "N" must flash
+				true setflash 
+			} if 
+			matrix currentmatrix_nlw 
+			currentcolor 
+			Green
+			-10 -10 translate 
+			0 rotate 
+			1.50 1.50 scale 
+			gsGeneral025  
+			setcolor 
+			setmatrix_nlw 
+			false setflash 
+		} if 
+	} if
+	idStatusDriveEnable 5 eq { 		% Forward drive selected
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green
+		-10 -10 translate 
+		0 rotate 
+		1.50 1.50 scale 
+		gsGeneral024 
+		setcolor 
+		setmatrix_nlw
+	} if
+	idStatusDriveEnable 6 eq {			% Backward drive active
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green
+		110 105 translate 
+		180 rotate 
+		1.50 1.50 scale 
+		gsGeneral024 
+		setcolor 
+		setmatrix_nlw
+	} if							
+%?manual_end
+
+} def
+%?partend
+
+%?partdef spDashboard
+%?fn	spDashboard
+%?brief	main dozer dashboard
+%?bbox	0 0 639 279
+/spDashboard {
+	/irSpeedLimitBack exch def		%?brief speed limit backward %?use INP %?type REAL %?dflt 0.0
+	/irSpeedLimitForw exch def		%?brief speed limit forward %?use INP %?type REAL %?dflt 0.0
+	/irEngineSpeed exch def			%?brief engine speed %?use INP %?type REAL %?dflt 0.0
+	/irFuelLevel exch def			%?brief fuel level %?use INP %?type REAL %?dflt 0.0
+	/irCoolWaterTemp exch def		%?brief cool water temperature %?use INP %?type REAL %?dflt 0.0
+	/idUnitSpeed exch def			%?brief actual unit speed %?use INP %?type DINT %?dflt 0
+	/idStatusDriveEnable exch def	%?brief status drive enable %?use INP %?type DINT %?dflt 0
+	/idGearSelection exch def		%?brief gear selection %?use INP %?type DINT %?dflt 0
+	/ixCoolWaterTempS exch def		%?brief cool water temperature safety %?use INP %?type BOOL %?dflt FALSE
+	/ixFuelLevelW exch def			%?brief fuel level warning %?use INP %?type BOOL %?dflt FALSE
+	/ixGearSelectEnable exch def	%?brief enable gear selection %?use INP %?type BOOL %?dflt FALSE
+	matrix currentmatrix_nlw 
+	currentcolor 
+	360 130 translate 
+	0 rotate 
+	1 1 scale 
+	irSpeedLimitBack 3.10 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	ixCoolWaterTempS true ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		520 10 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixCoolWaterTempS true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 520 10 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idUnitSpeed 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		380 30 translate 
+		0 rotate 
+		1 1 scale 
+		(rpm) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idUnitSpeed 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		380 30 translate 
+		0 rotate 
+		1 1 scale 
+		(1/min) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	360 180 translate 
+	0 rotate 
+	1 1 scale 
+	irSpeedLimitForw 3.10 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	370 30 translate 
+	0 rotate 
+	1 1 scale 
+	irEngineSpeed 4 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	40 20 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	gsEngine002 
+	setcolor 
+	setmatrix_nlw 
+	ixFuelLevelW true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 40 20 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	500 175 translate 
+	180 rotate 
+	1 1 scale 
+	irCoolWaterTemp 70 (???) 40 120 50 120 0 2 4 8 false 4 1 0 0 0 130 100 -1 110 false 0 
+	baRoundDisplay003 
+	setcolor 
+	setmatrix_nlw 
+	idUnitSpeed 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 160 translate 
+		0 rotate 
+		1 1 scale 
+		(km/h) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idUnitSpeed 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		400 160 translate 
+		0 rotate 
+		1 1 scale 
+		(mph) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	145 175 translate 
+	0 rotate 
+	1 1 scale 
+	irFuelLevel 70 (???) 0 100 15 100 0 4 4 8 false 4 1 0 0 0 230 -100 -1 110 false 0 
+	baRoundDisplay003 
+	setcolor 
+	setmatrix_nlw 
+	ixGearSelectEnable true eq {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		220 155 translate 
+		0 rotate 
+		1 1 scale 
+		idGearSelection 1 () false false 
+		FSbigFatFont 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	matrix currentmatrix_nlw 
+	currentcolor 
+	520 490 translate 
+	180 rotate 
+	1.47 1.67 scale 
+	ssLine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	120 -150 translate 
+	0 rotate 
+	1.47 1.67 scale 
+	ssLine001 
+	setcolor 
+	setmatrix_nlw
+	matrix currentmatrix_nlw 
+	currentcolor 
+	215 120 translate 
+	0 rotate 
+	1 1 scale 
+	idStatusDriveEnable 
+	spEnableDrive003 
+	setcolor 
+	setmatrix_nlw 	
+
+} def
+%?partend
+
+%?partdef spDashboardSmall
+%?fn	spDashboardSmall
+%?brief	main dozer dashboard small
+%?bbox	0 0 319 279
+/spDashboardSmall {
+	/irSpeedLimitBack exch def	%?brief speed limit backward %?use INP %?type REAL %?dflt    0.00
+	/irSpeedLimitForw exch def	%?brief speed limit forward %?use INP %?type REAL %?dflt    0.00
+	/irEngineSpeed exch def	%?brief engine speed %?use INP %?type REAL %?dflt    0.00
+	/irFuelLevel exch def	%?brief fuel level %?use INP %?type REAL %?dflt    0.00
+	/irCoolWaterTemp exch def	%?brief cool water temperature %?use INP %?type REAL %?dflt    0.00
+	/idUnitSpeed exch def	%?brief actual unit speed %?use INP %?type DINT %?dflt 0
+	/idStatusDriveEnable exch def	%?brief status drive enable %?use INP %?type DINT %?dflt 0
+	/idGearSelection exch def	%?brief gear selection %?use INP %?type DINT %?dflt 0
+	/ixCoolWaterTempS exch def	%?brief cool water temperature safety %?use INP %?type BOOL %?dflt false
+	/ixFuelLevelW exch def	%?brief fuel level warning %?use INP %?type BOOL %?dflt false
+	/ixGearSelectEnable exch def	%?brief enable gear selection %?use INP %?type BOOL %?dflt FALSE
+	matrix currentmatrix_nlw 
+	currentcolor 
+	205 90 translate 
+	0 rotate 
+	1 1 scale 
+	irSpeedLimitBack 3.10 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	ixCoolWaterTempS true ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		245 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixCoolWaterTempS true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 245 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idUnitSpeed 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		190 15 translate 
+		0 rotate 
+		1 1 scale 
+		(rpm) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idUnitSpeed 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		180 15 translate 
+		0 rotate 
+		1 1 scale 
+		(1/min) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	205 180 translate 
+	0 rotate 
+	1 1 scale 
+	irSpeedLimitForw 3.10 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	180 15 translate 
+	0 rotate 
+	1 1 scale 
+	irEngineSpeed 4 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	0 10 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	gsEngine002 
+	setcolor 
+	setmatrix_nlw 
+	ixFuelLevelW true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 0 10 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	210 155 translate 
+	180 rotate 
+	1 1 scale 
+	irCoolWaterTemp 70 (???) 40 120 50 120 0 2 4 8 false 4 1 0 0 0 130 100 -1 100 false 0 
+	baRoundDisplay003 
+	setcolor 
+	setmatrix_nlw 
+	idUnitSpeed 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		180 140 translate 
+		0 rotate 
+		1 1 scale 
+		(km/h) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idUnitSpeed 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		180 140 translate 
+		0 rotate 
+		1 1 scale 
+		(mph) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	105 155 translate 
+	0 rotate 
+	1 1 scale 
+	irFuelLevel 70 (???) 0 100 15 100 0 4 4 8 false 4 1 0 0 0 230 -100 -1 100 false 0 
+	baRoundDisplay003 
+	setcolor 
+	setmatrix_nlw 
+	ixGearSelectEnable true eq {
+		matrix currentmatrix_nlw 
+		currentcolor 
+		130 180 translate 
+		0 rotate 
+		1 1 scale 
+		idGearSelection 1 () false false 
+		FSbigFatFont 1 
+		baValue001 
+		setcolor 
+		setmatrix_nlw 
+	} if
+	matrix currentmatrix_nlw 
+	currentcolor 
+	248 425 translate 
+	180 rotate 
+	1 1.40 scale 
+	ssLine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	67 -115 translate 
+	0 rotate 
+	1 1.40 scale 
+	ssLine001 
+	setcolor 
+	setmatrix_nlw 	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	55 80 translate 
+	0 rotate 
+	1 1 scale 
+	idStatusDriveEnable 
+	spEnableDrive003
+	setcolor 
+	setmatrix_nlw 	
+} def
+%?partend
+
+%?partdef spDashboardSmall1
+%?fn	spDashboardSmall1
+%?brief	main dozer dashboard small
+%?bbox	0 0 319 279
+/spDashboardSmall1 {
+	/irSpeedLimitBack exch def	%?brief speed limit backward %?use INP %?type REAL %?dflt    0.00
+	/irSpeedLimitForw exch def	%?brief speed limit forward %?use INP %?type REAL %?dflt    0.00
+	/irEngineSpeed exch def	%?brief engine speed %?use INP %?type REAL %?dflt    0.00
+	/irFuelLevel exch def	%?brief fuel level %?use INP %?type REAL %?dflt    0.00
+	/irCoolWaterTemp exch def	%?brief cool water temperature %?use INP %?type REAL %?dflt    0.00
+	/idUnitSpeed exch def	%?brief actual unit speed %?use INP %?type DINT %?dflt 0
+	/idStatusDriveEnable exch def	%?brief status drive enable %?use INP %?type DINT %?dflt 0
+	/idGearSelection exch def	%?brief gear selection %?use INP %?type DINT %?dflt 0
+	/ixCoolWaterTempS exch def	%?brief cool water temperature safety %?use INP %?type BOOL %?dflt false
+	/ixFuelLevelW exch def	%?brief fuel level warning %?use INP %?type BOOL %?dflt false
+	matrix currentmatrix_nlw 
+	currentcolor 
+	290 80 translate 
+	0 rotate 
+	1 1 scale 
+	irSpeedLimitBack 3.10 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	ixCoolWaterTempS true ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		85 -10 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	ixCoolWaterTempS true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 85 -10 translate 
+		0 rotate 
+		1 1 scale 
+		gsEngine003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idUnitSpeed 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		200 240 translate 
+		0 rotate 
+		1 1 scale 
+		(rpm) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idUnitSpeed 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		190 240 translate 
+		0 rotate 
+		1 1 scale 
+		(1/min) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	290 170 translate 
+	0 rotate 
+	1 1 scale 
+	irSpeedLimitBack 3.10 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	190 240 translate 
+	0 rotate 
+	1 1 scale 
+	irEngineSpeed 4 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	180 0 translate 
+	0 rotate 
+	0.75 0.75 scale 
+	gsEngine002 
+	setcolor 
+	setmatrix_nlw 
+	ixFuelLevelW true eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Red 180 0 translate 
+		0 rotate 
+		0.75 0.75 scale 
+		gsEngine002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	50 145 translate 
+	180 rotate 
+	1 1 scale 
+	irCoolWaterTemp 70 (???) 40 120 50 120 0 2 4 8 false 4 1 0 0 0 130 100 -1 100 false 0 
+	baRoundDisplay003 
+	setcolor 
+	setmatrix_nlw 
+	idUnitSpeed 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		255 130 translate 
+		0 rotate 
+		1 1 scale 
+		(km/h) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idUnitSpeed 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		260 130 translate 
+		0 rotate 
+		1 1 scale 
+		(mph) 
+		FSfatFont 1 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	270 145 translate 
+	0 rotate 
+	1 1 scale 
+	irFuelLevel 70 (???) 0 100 15 100 0 4 4 8 false 4 1 0 0 0 230 -100 -1 100 false 0 
+	baRoundDisplay003 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	60 180 translate 
+	0 rotate 
+	1 1 scale 
+	idGearSelection 1 () false false 
+	FSbigFatFont 1 
+	baValue001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	88 415 translate 
+	180 rotate 
+	1 1.40 scale 
+	ssLine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	232 -125 translate 
+	0 rotate 
+	1 1.40 scale 
+	ssLine001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	-10 70 translate 
+	0 rotate 
+	1 1 scale 
+	idStatusDriveEnable 
+	spEnableDrive003
+	setcolor 
+	setmatrix_nlw 		
+} def
+%?partend
+
+%?partdef spUserPriority
+%?fn	spUserPriority
+%?brief	check if client priority has a given level
+%?bbox	0 0 79 79
+/spUserPriority {
+	/idLevel exch def		%?brief actual client priority %?use INP %?type DINT %?dflt 0
+	/qxIsValid false def	%?brief true when given level is SUPERVISOR or INSPECTOR %?use OUT %?type BOOL %?dflt false
+%?manual_beg
+	idLevel 64 eq
+	idLevel 64.0 eq or {
+		/qxIsValid true store
+	} {
+		idLevel 32768.0 eq
+		idLevel 32768.0 eq or {
+			/qxIsValid true store
+		} {
+			/qxIsValid false store
+		} ifelse
+	} ifelse
+	qxIsValid
+%?manual_end	
+} def
+%?partend
+
+%?partdef spEnabCalib
+%?fn	spEnabCalib
+%?brief	config axis and start calib
+%?bbox	0 0 399 99
+/spEnabCalib {
+	/isSymbolName exch def		%?brief name of the symbol-part which has to be displayed %?use INP %?type STRI %?dflt (gsGeneral001)
+	/idUse exch def				%?brief actual state (activate/deactivate) of the axis %?use INP %?type DINT %?dflt 1
+	/idCtrl exch def			%?brief actual state calib %?use INP %?type DINT %?dflt 0
+	/idAngle exch def			%?brief angle to rotate the symbol %?use INP %?type DINT %?dflt 0
+	/idxOffset exch def			%?brief x offset to place symbol %?use INP %?type DINT %?dflt 0
+	/idyOffset exch def			%?brief y offset to place symbol %?use INP %?type DINT %?dflt 0
+	/idxFactor exch def			%?brief x factor to scale symbol %?use INP %?type REAL %?dflt 1.0
+	/idyFactor exch def			%?brief y factor to scale symbol %?use INP %?type REAL %?dflt 1.0
+	/ixEnableConfig exch def	%?brief when true activate/deactivate axis possible/visible %?use INP %?type BOOL %?dflt false
+	/qdUse 0 def				%?brief output to activate/deactivate axis %?use OUT %?type DINT %?dflt 0
+	/qdCtrl 0 def				%?brief output actual state calib %?use OUT %?type DINT %?dflt 0
+%?manual_beg
+	% preset outputs
+	/qdCtrl idCtrl store
+	/qdUse idUse store
+	% activate/deactivate channel
+	ixEnableConfig true eq {
+		idUse 0 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			205 5 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/qdUse 1 store
+			} { 
+				/qdUse 0 store
+			} ifelse
+			setcolor 
+			setmatrix_nlw 
+			matrix currentmatrix_nlw 
+			currentcolor 
+			205 idxOffset add
+			5 idyOffset add
+			translate 
+			idAngle rotate 
+			idxFactor idyFactor scale 
+			isSymbolName cvx exec
+			setcolor 
+			setmatrix_nlw 
+		} if
+		idUse 1 eq {	
+			matrix currentmatrix_nlw 
+			currentcolor
+			205 5 translate
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/qdUse 0 store
+			} { 
+				/qdUse 1 store
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+			matrix currentmatrix_nlw 
+			currentcolor Green 
+			205 idxOffset add
+			5 idyOffset add
+			translate 
+			idAngle rotate 
+			idxFactor idyFactor scale 
+			isSymbolName cvx exec 
+			setcolor 
+			setmatrix_nlw
+		} if
+	} if
+	% show calib button
+	idUse 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		110 5 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/qdCtrl 1 store 		
+		} if 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		150 45 translate 
+		0 rotate 
+		1 1 scale 
+		(Calib) 7 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_end
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 idxOffset add
+	5 idyOffset add
+	translate 
+	idAngle rotate 
+	idxFactor idyFactor scale 
+	isSymbolName cvx exec 
+	setcolor 
+	setmatrix_nlw 
+	0 0 300 90 rectstroke 
+	qdUse qdCtrl 
+} def
+%?partend
+
+%?partdef spEnabCalibSteerPed
+%?fn	spEnabCalibSteerPed
+%?brief	config axis and start calib
+%?bbox	0 0 399 99
+/spEnabCalibSteerPed {
+	/isSymbolName exch def		%?brief name of the symbol-part which has to be displayed %?use INP %?type STRI %?dflt (gsGeneral001)
+	/idUseLeft exch def			%?brief actual state (activate/deactivate) of the axis %?use INP %?type DINT %?dflt 1
+	/idUseRight exch def		%?brief actual state (activate/deactivate) of the axis %?use INP %?type DINT %?dflt 1
+	/idCtrlLeft exch def		%?brief actual state calib left pedal %?use INP %?type DINT %?dflt 0
+	/idAngle exch def			%?brief angle to rotate the symbol %?use INP %?type DINT %?dflt 0
+	/idxOffset exch def			%?brief x offset to place symbol %?use INP %?type DINT %?dflt 0
+	/idyOffset exch def			%?brief y offset to place symbol %?use INP %?type DINT %?dflt 0
+	/idxFactor exch def			%?brief x factor to scale symbol %?use INP %?type REAL %?dflt 1.0
+	/idyFactor exch def			%?brief y factor to scale symbol %?use INP %?type REAL %?dflt 1.0
+	/ixEnableConfig exch def	%?brief when true activate/deactivate axis possible/visible %?use INP %?type BOOL %?dflt false
+	/qdUseLeft 0 def			%?brief output to activate/deactivate axis %?use OUT %?type DINT %?dflt 0
+	/qdUseRight 0 def			%?brief output to activate/deactivate axis %?use OUT %?type DINT %?dflt 0
+	/qdCtrlLeft 0 def			%?brief output actual state calib %?use OUT %?type DINT %?dflt 0
+	%?manual_beg
+	% preset ctrl output
+	/qdCtrlLeft idCtrlLeft store
+	% activate/deactivate channel
+	ixEnableConfig true eq {
+		idUseLeft 0 eq
+		idUseRight 0 eq and {	
+			matrix currentmatrix_nlw 
+			currentcolor 
+			205 5 translate 
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/qdUseLeft 1 store
+				/qdUseRight 1 store
+			} { 
+				/qdUseLeft 0 store
+				/qdUseRight 0 store
+			} ifelse
+			setcolor 
+			setmatrix_nlw 
+			matrix currentmatrix_nlw 
+			currentcolor 
+			205 idxOffset add
+			5 idyOffset add
+			translate 
+			idAngle rotate 
+			idxFactor idyFactor scale 
+			isSymbolName cvx exec
+			setcolor 
+			setmatrix_nlw 
+		} if
+		idUseLeft 1 eq	
+		idUseRight 1 eq and {
+			matrix currentmatrix_nlw 
+			currentcolor
+			205 5 translate
+			0 rotate 
+			1 1 scale 
+			baTouchButton001 {	
+				/qdUseLeft 0 store
+				/qdUseRight 0 store
+			} { 
+				/qdUseLeft 1 store
+				/qdUseRight 1 store
+			} ifelse 
+			setcolor 
+			setmatrix_nlw 
+			matrix currentmatrix_nlw 
+			currentcolor Green 
+			205 idxOffset add
+			5 idyOffset add
+			translate 
+			idAngle rotate 
+			idxFactor idyFactor scale 
+			isSymbolName cvx exec 
+			setcolor 
+			setmatrix_nlw
+		} if
+	} if
+	% show calib button
+	idUseLeft 1 eq	
+	idUseRight 1 eq and {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		110 5 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/qdCtrlLeft 1 store 				
+		} if 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		150 45 translate 
+		0 rotate 
+		1 1 scale 
+		(Calib) 7 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	10 idxOffset add
+	5 idyOffset add
+	translate 
+	idAngle rotate 
+	idxFactor idyFactor scale  
+	isSymbolName cvx exec 
+	setcolor 
+	setmatrix_nlw 
+	0 0 300 90 rectstroke 
+	qdUseLeft qdUseRight qdCtrlLeft 
+} def
+%?partend
+
+%?partdef sp4QLever
+%?fn	sp4QLever
+%?brief	Show axis value and calibration states of 4Q-lever
+%?bbox	0 0 399 499
+/sp4QLever {
+	/idStateY exch def	%?brief calib state y axis %?use INP %?type DINT %?dflt 0
+	/idStateX exch def	%?brief calib state x axis %?use INP %?type DINT %?dflt 0
+	/idValueY exch def	%?brief channel value y axis %?use INP %?type DINT %?dflt 0
+	/idValueX exch def	%?brief channel value x axis %?use INP %?type DINT %?dflt 0
+	/idCtrlY exch def	%?brief actual state calib x axis %?use INP %?type DINT %?dflt 0
+	/idCtrlX exch def	%?brief actual state calib y axis %?use INP %?type DINT %?dflt 0
+	/qdCtrlY 0 def	%?brief output actual state calib %?use OUT %?type DINT %?dflt 0
+	/qdCtrlX 0 def	%?brief output actual state calib %?use OUT %?type DINT %?dflt 0
+	/mdYneg 0 def	%?brief idValueY negatived %?use LOC %?type DINT %?dflt 0
+	/mdXneg 0 def	%?brief idValueX negatived %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	% preset ctrl outputs
+	/qdCtrlX idCtrlX store
+	/qdCtrlY idCtrlY store
+	% negatived x and y axis values
+%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	5 5 translate 
+	0 rotate 
+	1 1 scale 
+	idValueX -1 
+	FUN_MUL 
+	/mdXneg exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	5 5 translate 
+	0 rotate 
+	1 1 scale 
+	idValueY -1 
+	FUN_MUL 
+	/mdYneg exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	181 341 translate 
+	0 rotate 
+	1 1 scale 
+	idValueY 0 1000 90 100 40 150 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	221 261 translate 
+	180 rotate 
+	1 1 scale 
+	mdYneg 0 1000 90 100 40 150 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	241 321 translate 
+	-90 rotate 
+	1 1 scale 
+	idValueX 0 800 90 100 40 120 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	361 321 translate 
+	-90 rotate 
+	1 1 scale 
+	idValueX 800 1000 90 100 40 30 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	161 281 translate 
+	90 rotate 
+	1 1 scale 
+	mdXneg 0 800 90 100 40 120 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	41 281 translate 
+	90 rotate 
+	1 1 scale 
+	mdXneg 800 1000 0 100 40 30 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	%%%%%%%%%% Confirm, cancel buttons %%%%%%%%%%
+	% Check y axis and make a acknowledge.
+	% This must happen bevor button actions
+	idStateY 4 eq {				% Y axis has 3 points to teach
+		/qdCtrlY 254 store 
+	} if
+	% Confirm button
+%?manual_end
+	
+	idStateY 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+%?manual_beg
+			idStateY 4 lt {		% Y axis has 3 points to teach
+				/qdCtrlY idStateY 1 add store 
+			} if
+%?manual_end
+			
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		250 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/qdCtrlY 255 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		290 40 translate 
+		0 rotate 
+		1 1 scale 
+		(Cancel) 0 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_beg
+	% calib states
+%?manual_end
+	
+	idStateY 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 161 101 translate 
+		0 rotate 
+		1 1 scale 
+		gsLimit003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 241 262 translate 
+		90 rotate 
+		1 1 scale 
+		ssLimit001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 161 421 translate 
+		0 rotate 
+		1 1 scale 
+		gsLimit002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_beg
+	%%%%%%%%%% Confirm, cancel buttons %%%%%%%%%%
+	% Check x axis and make a acknowledge.
+	% This must happen bevor button actions
+	idStateX 6 eq {				%  axis has 5 points to teach
+		/qdCtrlX 254 store 
+	} if
+	% Confirm button
+%?manual_end
+	
+	idStateX 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+%?manual_beg
+			idStateX 6 lt {		%  axis has 5 points to teach
+				/qdCtrlX idStateX 1 add store 
+			} if
+%?manual_end
+			
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateX 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateX 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		250 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/qdCtrlX 255 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateX 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		290 40 translate 
+		0 rotate 
+		1 1 scale 
+		(Cancel) 0 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_beg
+	% calib states
+%?manual_end	
+	
+	idStateX 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 0 261 translate 
+		0 rotate 
+		1 1 scale 
+		gsLimit020 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateX 2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 2 261 translate 
+		0 rotate 
+		1 1 scale 
+		ssLimit001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateX 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 162 261 translate 
+		0 rotate 
+		1 1 scale 
+		ssLimit001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateX 4 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 322 261 translate 
+		0 rotate 
+		1 1 scale 
+		ssLimit001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateX 5 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 324 261 translate 
+		0 rotate 
+		1 1 scale 
+		gsLimit019 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	%?term_beg
+	
+	idStateY 4 eq 
+	idStateX 6 eq or 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 
+		80 160 translate 
+		0 rotate 
+		3 3 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qdCtrlY qdCtrlX 
+} def
+%?partend
+
+%?partdef spVLever
+%?fn	spVLever
+%?brief	Show axis value and calibration states of V-lever
+%?bbox	0 0 399 399
+/spVLever {
+	/idStateY exch def	%?brief calib state y axis %?use INP %?type DINT %?dflt 0
+	/idValueY exch def	%?brief channel value y axis %?use INP %?type DINT %?dflt 0
+	/idCtrlY exch def	%?brief actual state calib x axis %?use INP %?type DINT %?dflt 0
+	/qdCtrlY 0 def	%?brief output actual state calib %?use OUT %?type DINT %?dflt 0
+	/mdYneg 0 def	%?brief idValueY negatived %?use LOC %?type DINT %?dflt 0
+%?manual_beg
+	% preset ctrl outputs
+	/qdCtrlY idCtrlY store
+	% negatived y axis values
+%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	5 5 translate 
+	0 rotate 
+	1 1 scale 
+	idValueY -1 
+	FUN_MUL 
+	/mdYneg exch store 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	229 300 translate 
+	225 rotate 
+	1 1 scale 
+	idValueY 0 1000 90 100 40 160 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	199 272 translate 
+	-225 rotate 
+	1 1 scale 
+	mdYneg 0 1000 90 100 40 160 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	37 190 translate 
+	0 rotate 
+	0.50 0.50 scale 
+	gsDrive009 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	327 190 translate 
+	0 rotate 
+	0.50 0.50 scale 
+	gsDrive009 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	131 287 translate 
+	0 rotate 
+	0.50 0.50 scale 
+	gsDrive008 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	230 287 translate 
+	0 rotate 
+	0.50 0.50 scale 
+	gsDrive008 
+	setcolor 
+	setmatrix_nlw 
+	192 321 moveto 
+	FatFont (N) 
+	show_utf8 
+	51 146 moveto 
+	FatFont (R) 
+	show_utf8 
+	334 147 moveto 
+	FatFont (F) 
+	show_utf8 
+%?manual_beg
+	%%%%%%%%%% Confirm, cancel buttons %%%%%%%%%%
+	% Check y axis and make a acknowledge.
+	% This must happen bevor button actions
+	idStateY 4 eq {				% Y axis has 3 points to teach
+		/qdCtrlY 254 store 
+	} if
+	% Confirm button
+%?manual_end
+	
+	idStateY 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+%?manual_beg
+			idStateY 4 lt {		% Y axis has 3 points to teach
+				/qdCtrlY idStateY 1 add store 
+			} if
+%?manual_end
+			
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		250 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/qdCtrlY 255 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		290 40 translate 
+		0 rotate 
+		1 1 scale 
+		(Cancel) 0 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_beg
+	% calib states
+%?manual_end
+	
+	idStateY 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 37 194 translate 
+		-45 rotate 
+		1 1 scale 
+		gsLimit003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 199 245 translate 
+		45 rotate 
+		1 1 scale 
+		ssLimit002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 307 138 translate 
+		45 rotate 
+		1 1 scale 
+		gsLimit003 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idStateY 4 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 80 120 translate 
+		0 rotate 
+		3 3 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qdCtrlY 
+} def
+%?partend
+
+%?partdef spInchpedal
+%?fn	spInchpedal
+%?brief	Show axis value and calibration states of inchpedal
+%?bbox	0 0 399 399
+/spInchpedal {
+	/idState exch def	%?brief calib state inch axis %?use INP %?type DINT %?dflt 1
+	/idValue exch def	%?brief channel value inch axis %?use INP %?type DINT %?dflt 0
+	/idCtrl exch def	%?brief actual state calib inch axis %?use INP %?type DINT %?dflt 0
+	/qdCtrl 0 def	%?brief output actual state calib %?use OUT %?type DINT %?dflt 0
+%?manual_beg
+	% preset ctrl outputs
+	/qdCtrl idCtrl store
+%?manual_end
+	
+	idState 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 300 translate 
+		0 rotate 
+		1 1 scale 
+		gsDrive012 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		220 290 translate 
+		180 rotate 
+		1 1 scale 
+		idValue 0 800 90 100 40 120 false true false false true 0 
+		baBar005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 0 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		220 170 translate 
+		180 rotate 
+		1 1 scale 
+		idValue 800 1000 90 100 40 30 false true false false true 0 
+		baBar005 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_beg
+	%%%%%%%%%% Confirm, cancel buttons %%%%%%%%%%
+	% Check inch pedal and make a acknowledge.
+	% This must happen bevor button actions
+	idState 4 eq {				% inch axis has 3 points to teach
+		/qdCtrl 254 store 
+	} if
+	% Confirm button	
+%?manual_end
+	
+	idState 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+%?manual_beg
+			idState 4 lt {		% inch axis has 3 points to teach
+				/qdCtrl idState 1 add store 
+			} if
+%?manual_end
+			
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		250 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+			/qdCtrl 255 store 
+		} if 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 0 ne {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		290 40 translate 
+		0 rotate 
+		1 1 scale 
+		(Cancel) 0 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+%?manual_beg
+	% calib states
+%?manual_end
+	
+	idState 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		50 125 translate 
+		0 rotate 
+		3.75 3.75 scale 
+		gsDrive014 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 3 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 16 171 translate 
+		-3 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		50 125 translate 
+		0 rotate 
+		3.75 3.75 scale 
+		gsDrive013 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 110 241 translate 
+		165 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 2 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 27 238 translate 
+		-15 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		50 125 translate 
+		0 rotate 
+		3.75 3.75 scale 
+		gsDrive012 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 1 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 135 318 translate 
+		145 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	idState 4 eq {	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 80 120 translate 
+		0 rotate 
+		3 3 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qdCtrl 
+} def
+%?partend
+
+%?partdef spSteerpedals
+%?fn	spSteerpedals
+%?brief	Show axis value and calibration states of steer pedal
+%?bbox	0 0 399 399
+/spSteerpedals {
+	/idStateLeft exch def	%?brief calib state left pedal axis %?use INP %?type DINT %?dflt 0
+	/idStateRight exch def	%?brief calib state right pedal axis %?use INP %?type DINT %?dflt 0
+	/idValueLeft exch def	%?brief channel value left pedal axis %?use INP %?type DINT %?dflt 0
+	/idValueRight exch def	%?brief channel value right pedal axis %?use INP %?type DINT %?dflt 0
+	/idCtrlLeft exch def	%?brief actual state calib left pedal axis %?use INP %?type DINT %?dflt 0
+	/idCtrlRight exch def	%?brief actual state calib right pedal axis %?use INP %?type DINT %?dflt 0
+	/qdCtrlLeft 0 def	%?brief output actual state left pedal calib %?use OUT %?type DINT %?dflt 0
+	/qdCtrlRight 0 def	%?brief output actual state right pedal calib %?use OUT %?type DINT %?dflt 0
+%?manual_beg
+	% preset ctrl outputs
+	/qdCtrlLeft idCtrlLeft store
+	/qdCtrlRight idCtrlRight store
+	idStateLeft 0 eq	
+	idStateRight 0 eq and {
+%?manual_end
+	
+	matrix currentmatrix_nlw 
+	currentcolor 
+	50 300 translate 
+	0 rotate 
+	0.35 0.35 scale 
+	ssSteerPedalLeft001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	90 290 translate 
+	180 rotate 
+	1 1 scale 
+	idValueLeft 0 1000 90 100 40 150 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	280 300 translate 
+	0 rotate 
+	0.35 0.35 scale 
+	ssSteerPedalRight001 
+	setcolor 
+	setmatrix_nlw 
+	matrix currentmatrix_nlw 
+	currentcolor 
+	350 290 translate 
+	180 rotate 
+	1 1 scale 
+	idValueRight 0 1000 90 100 40 150 false true false false true 0 
+	baBar005 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	} if
+	%%%%%%%%%% Confirm, cancel buttons %%%%%%%%%%
+	% Check steer pedals and make a acknowledge.
+	% This must happen bevor button actions
+	idStateLeft 3 eq				% steer pedal axis has 2 points to teach
+	idStateRight 0 eq and {
+		/qdCtrlLeft 254 store 
+		/qdCtrlRight 1 store
+	} if
+	idStateLeft 0 eq				% steer pedal axis has 2 points to teach
+	idStateRight 3 eq and {
+		/qdCtrlRight 254 store 
+	} if
+	% Confirm button	
+	idStateLeft 0 ne 
+	idStateRight 0 ne or {	
+%?manual_end
+
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+%?manual_beg
+			% switch states to calib both pedals
+			idStateLeft 1 eq
+			idStateRight 0 eq and {
+				/qdCtrlLeft 2 store 
+			} if
+			idStateLeft 2 eq
+			idStateRight 0 eq and {
+				/qdCtrlLeft 3 store 
+			} if
+			idStateLeft 0 eq
+			idStateRight 1 eq and {
+				/qdCtrlRight 2 store 
+			} if
+			idStateLeft 0 eq
+			idStateRight 2 eq and {
+				/qdCtrlRight 3 store 
+			} if
+%?manual_end
+		
+	} if 
+	setcolor 
+	setmatrix_nlw 
+%?manual_beg
+	} if 
+	idStateLeft 0 ne
+	idStateRight 0 ne or {
+%?manual_end
+	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		70 0 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if
+	% Cancel button
+	idStateLeft 0 ne
+	idStateRight 0 ne or {
+%?manual_end
+	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		250 0 translate 
+		0 rotate 
+		1 1 scale 
+		baTouchButton001 {	
+%?manual_beg
+			/qdCtrlLeft 255 store 
+			/qdCtrlRight 255 store 
+%?manual_end
+		
+		} if 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if
+	idStateLeft 0 ne
+	idStateRight 0 ne or {
+%?manual_end
+	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		290 40 translate 
+		0 rotate 
+		1 1 scale 
+		(Cancel) 0 0 
+		baText001 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if 
+	%%%%%%%%%% calib states %%%%%%%%%%
+	idStateLeft 1 eq 
+	idStateRight 0 eq and {	
+%?manual_end
+
+		matrix currentmatrix_nlw 
+		currentcolor 
+		40 120 translate 
+		0 rotate 
+		1 1 scale 
+		ssSteerPedalLeft001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 170 350 translate 
+		180 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 120 translate 
+		0 rotate 
+		1 1 scale 
+		ssSteerPedalRight001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 310 350 translate 
+		180 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if 
+	idStateLeft 2 eq 
+	idStateRight 0 eq and {	
+%?manual_end
+
+		matrix currentmatrix_nlw 
+		currentcolor 
+		40 120 translate 
+		0 rotate 
+		1 1 scale 
+		ssSteerPedalLeft002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 90 195 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 120 translate 
+		0 rotate 
+		1 1 scale 
+		ssSteerPedalRight001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 310 350 translate 
+		180 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if 
+	idStateLeft 0 eq 
+	idStateRight 1 eq and {	
+%?manual_end
+
+		matrix currentmatrix_nlw 
+		currentcolor 
+		40 120 translate 
+		0 rotate 
+		1 1 scale 
+		ssSteerPedalLeft001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 170 350 translate 
+		180 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 120 translate 
+		0 rotate 
+		1 1 scale 
+		ssSteerPedalRight001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 310 350 translate 
+		180 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if 
+	idStateLeft 0 eq 
+	idStateRight 2 eq and {	
+%?manual_end
+	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		160 120 translate 
+		0 rotate 
+		1 1 scale 
+		ssSteerPedalRight002 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 230 195 translate 
+		0 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		40 120 translate 
+		0 rotate 
+		1 1 scale 
+		ssSteerPedalLeft001 
+		setcolor 
+		setmatrix_nlw 
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 170 350 translate 
+		180 rotate 
+		1 1 scale 
+		gsGeneral001 
+		setcolor 
+		setmatrix_nlw 
+%?manual_beg
+	} if 
+%?manual_end
+	
+	%?term_beg
+	
+	idStateLeft 0 eq 
+	idStateRight 3 eq and 
+	%?term_end
+	{	
+		matrix currentmatrix_nlw 
+		currentcolor 
+		Green 80 120 translate 
+		0 rotate 
+		3 3 scale 
+		gsGeneral002 
+		setcolor 
+		setmatrix_nlw 
+	} if 
+	qdCtrlLeft qdCtrlRight 
+} def
+%?partend
+
+%?partdef spPageLine001
+%?fn	spPageLine001
+%?brief	tripline for horizontal separation of the touch buttons for page switch
+%?bbox	0 0 959 79
+/spPageLine001 {
+	/idPageNumber exch def	%?brief number of the active page %?use INP %?type DINT %?dflt 1
+	/LDx MDsymbolGrid idPageNumber 1 sub mul def	
+	3 setlinewidth_nlw 
+	idPageNumber 0 eq {	
+		2 
+		MDsymbolGrid 3 sub 
+		moveto 
+		MDscreenPixX 3 sub 
+		MDsymbolGrid 3 sub 
+		lineto 
+		stroke 
+		} { 
+		2 
+		MDsymbolGrid 3 sub 
+		moveto 
+		idPageNumber 1 ne {	
+			LDx 3 sub 
+			MDsymbolGrid 8 sub 
+			5 90 0 arcn 
+		} if 
+		LDx 7 add 
+		7 5 180 270 arc 
+		LDx MDsymbolGrid 8 sub add 
+		7 5 -90 0 arc 
+		idPageNumber MDscreenPixX MDsymbolGrid div ne {	
+			LDx MDsymbolGrid 2 add add 
+			MDsymbolGrid 8 sub 
+			5 180 90 arcn 
+		} if 
+		MDscreenPixX -316 sub 
+		MDsymbolGrid 3 sub 
+		lineto 
+		stroke 
+	} ifelse 1 setlinewidth_nlw 
+} def
+%?partend

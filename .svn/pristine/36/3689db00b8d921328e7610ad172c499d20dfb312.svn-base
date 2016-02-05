@@ -1,0 +1,6 @@
+load sensor main boom (by A-frame)
+start time	2012-01-17T13:30:01
+stop time	2012-01-17T13:41:30
+date-time	load sensor main boom (by A-frame)	analog pump signal lg in [%]	angle of the main boom in [°]	load radius main boom in [m]	maximum lifting hight main boom (head hight) in [m]	load on the main boom in [to]	utilization in [%]	utilization backwards in [%] (derrick operation)	number of lml mode
+	%MD1.72	%MD1.21	%MD1.34	%MD1.39	%MD1.41	%MD1.32	%MD1.30	%MD1.31	%MD1.29
+	MDz4CursorSign	MDlgPumpSignal	MDvibPumpSignal	MDspeedHigh	MDaccelMedium	MDauxJoySignal	MDfawExtAnalSign	MDfawValvSignal	MDfawJoySignal

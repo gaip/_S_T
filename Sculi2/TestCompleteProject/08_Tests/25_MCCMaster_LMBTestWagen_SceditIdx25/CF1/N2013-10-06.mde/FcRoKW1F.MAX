@@ -1,0 +1,10 @@
+rope force kelly winch 1 [kN]
+start time	2013-10-05T10:26:48
+stop time	2013-10-06T07:09:06
+date-time	rope force kelly winch 1 [kN]	revolutions diesel engine 1 [rpm]	power diesel engine 1 [kW]	torque diesel engine 1 [Nm]	rope force up  crowd winch 1 [kN]	rope speed crowd winch 1 [m/min]	rope speed kelly winch 1 [m/min]	pressure P1 drilling drive 1 [bar]	pressure P2 drilling drive 1 [bar]	pressure pump 1 leader 1 [bar]	x-direction left joystick 1 cabin 1 [%]	y-direction left joystick 1 cabin 1 [%]	x-direction right joystick 1 cabin 1 [%]	y-direction right joystick 1 cabin 1 [%]	operation mode 1	status brake 1 slewing system 1	status brake 1 auxiliary winch 1	status brake 1  crowd winch 1	status brake 1 kelly winch 1	free turn kelly winch 1	status gear box 1 drilling drive 1	reeving kelly winch 1
+	%MD1.511	%MD1.4	%MD1.502	%MD1.501	%MD1.513	%MD1.516	%MD1.512	%MD1.525	%MD1.526	%MD1.522	%MD1.533	%MD1.534	%MD1.535	%MD1.536	%MD1.543	%MX1.700	%MX1.701	%MX1.702	%MX1.703	%MD1.540	%MX1.708	%MD1.545
+	MDsmoClampPress	MDpresenEngSpeed	MDfawRopeSpeed2	MDfawRopeSpeed1	MDfuelCont	MRservHourToNext	MDfawPLimFactSmo	MDmachinSerialNr	%MD1.526	MDdrEngBattVolt	%MD1.533	%MD1.534	%MD1.535	%MD1.536	%MD1.543	MXx25IsMissing	MXconcreFlowRate	MXad3Hg1LockClut	MXad3Hg2LockClut	%MD1.540	MXexitLEHydrGrab	%MD1.545
+2013-10-06T06:47:11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2013-10-06T06:47:11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15	0	0	0	0	0	0	6
+2013-10-06T06:47:11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15	0	0	0	0	0	0	6
+2013-10-05T10:26:48	0	0	0	0	67.5982	0	0	303.075	303.075	0	0	0	0	0	15	0	0	0	0	0	0	6
